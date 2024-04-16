@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`B-Class, Sports Car`B-Class
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 2390
+OBJ_Y_LENGTH 1700
+OBJ_Z_LENGTH 1175
+*DZ_V 50
+*LAT_WC 1500
+*LAT_WC_2 1500
+*HWC 350
+*WHEEL_RATIO 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.75
+SET_OFFSET_Z 0.3325
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.75
+SET_OFFSET_Z 0.3325
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -2.39
+SET_OFFSET_Y 0.75
+SET_OFFSET_Z 0.3325
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -2.39
+SET_OFFSET_Y -0.75
+SET_OFFSET_Z 0.3325
+DZ_OBJECT 0.05
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_200def81-f888-4023-8fd7-89e31b96e498.par
+#BlueLink1 Animator: Shape Assembly`B-Class Convertible` Passenger Cars` , Vehicle Body`ShpGrp_200def81-f888-4023-8fd7-89e31b96e498
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_d5a6d99b-f80e-40a0-bff2-72fa8db928b0.par
+#BlueLink3 Animator: Shape File Link`Sports Car: Brake Lights` Cars: B-Class` , Brake Lights`Shape_d5a6d99b-f80e-40a0-bff2-72fa8db928b0
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_8d96e5f1-d63d-4528-80cb-48d4e9e946a5.par
+#BlueLink10 Animator: Shape File Link`Sports Car: Reverse Lights` Cars: B-Class` , Reverse lights`Shape_8d96e5f1-d63d-4528-80cb-48d4e9e946a5
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_c500746e-28db-47d2-91ed-d32247db7d4d
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { B-Class } B-Class, Sports Car
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : B-Class, Sports Car
+#Category: B-Class
+#FileID  : AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

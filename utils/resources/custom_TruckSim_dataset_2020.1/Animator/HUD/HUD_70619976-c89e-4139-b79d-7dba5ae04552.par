@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName Animator: HUD`Imminent Collision`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+
+#RingCtrl0 2
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 5
+#RingCtrl6 0
+#RingCtrl7 2
+#RingCtrl8 1
+*TITLE_1 Collision: Imminent
+*LOCX_1 2
+*LOCY_1 14.5
+*COLOR_1 1 1 1
+*LOCX_2 12
+*LOCY_2 10.5
+*VAR_NAME_2 FlashCol*ColImt*1.5
+*COLOR_2 1 0.4 0
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Collision: Imminent AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 40 locY 145
+#Selection_4 Fixed: 1 VarName:   ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_
+WRT_
+ADD_ENTITY hud_text Text Output
+location 40 145 18 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is 
+prefix Collision: Imminent
+min_width_prefix 20
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+#Selection 5 for Icon 1
+#Selection_1 5 for Icon
+#Selection_2 Title:  AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 240 locY 105
+#Selection_4 Fixed: 1 VarName: FlashCol*ColImt*1.5  ColorStr: 1 0.4 0
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Brake Fill BG
+location 240 105 100 100
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_OFF.dds
+END_ENTITY hud_image Brake Fill BG
+ANI_FlashCol*ColImt*1.5
+WRT_FlashCol*ColImt*1.5
+ADD_ENTITY hud_image Brake Fill BG
+location 240 105 100 100
+red 1
+green 0.4
+blue 0
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity FlashCol*ColImt*1.5*0.65
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_ON.dds
+END_ENTITY hud_image Brake Fill BG
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Imminent Collision
+#Library : Animator: HUD
+#DataSet : Imminent Collision
+#Category: HUD Groups
+#FileID  : HUD_70619976-c89e-4139-b79d-7dba5ae04552
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

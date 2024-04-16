@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`300 Azm, Trailer Control Point Ref.`Trailer Reference
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_582cdefa-2a82-49d3-88ac-7f702d334fa9
+PARSFILE Animator\Frames\Frame_582cdefa-2a82-49d3-88ac-7f702d334fa9.par
+#BlueLink0 Animator: Reference Frame`Telescopic Trailer Control Point` Tracking: Vehicle` , Reference frame for outside camera`Frame_582cdefa-2a82-49d3-88ac-7f702d334fa9
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_582cdefa-2a82-49d3-88ac-7f702d334fa9
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 1
+SET_AZIMUTH 300
+SET_ELEVATION 10
+SET_DISTANCE 45
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X 0
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 1
+*SET_AZIMUTH 300
+*SET_ELEVATION 10
+*SET_DISTANCE 45
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 70
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Trailer Reference } 300 Azm, Trailer Control Point Ref.
+#Library : Animator: Camera Setup
+#DataSet : 300 Azm, Trailer Control Point Ref.
+#Category: Trailer Reference
+#FileID  : Camera_984a92ac-3309-4b0e-879d-d231a9148ef0
+#Product : TruckSim 2020.1
+#VehCode Camera
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Sphere 0.2 m (Red)`Geometric Shapes
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Spheres\sphere_1m_radius.obj
+#ENDMYellow
+
+SET_COLOR 1 0 0
+SET_SCALE_X 0.1
+SET_SCALE_Y 0.1
+SET_SCALE_Z 0.1
+*SPECULAR 1
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 0    
+
+SET_SPECULAR 1 1 1
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_fc9bb165-03b5-45b2-b0f6-fa17c015d94b.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Video Camera`Camera_fc9bb165-03b5-45b2-b0f6-fa17c015d94b
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.png
+
+#EMBEDDED_NOTES
+#Sphere, used to visualize Tire Reference Points in PBS tests, Motion Sensor locations, and other points of interest on the vehicle.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere 0.2 m (Red)
+#Library : Animator: Shape File Link
+#DataSet : Sphere 0.2 m (Red)
+#Category: Geometric Shapes
+#FileID  : Shape_6a810587-86ad-474b-944b-bb2b4869f951
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

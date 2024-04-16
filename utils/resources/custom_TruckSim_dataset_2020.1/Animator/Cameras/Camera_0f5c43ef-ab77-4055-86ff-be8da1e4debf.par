@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`160 Azm, 7.4 El, 50 m`Trailer Reference
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+SET_CAMERA_REFERENCE_FRAME Frame_7c23fcff-50fd-4065-aa42-071700ea59f8
+PARSFILE Animator\Frames\Frame_7c23fcff-50fd-4065-aa42-071700ea59f8.par
+#BlueLink0 Animator: Reference Frame`Trailer` Trailers` , Reference frame for outside camera`Frame_7c23fcff-50fd-4065-aa42-071700ea59f8
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_7c23fcff-50fd-4065-aa42-071700ea59f8
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 1
+SET_AZIMUTH 160
+SET_ELEVATION 7.4
+SET_DISTANCE 50
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X 0
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 1
+*SET_AZIMUTH 160
+*SET_ELEVATION 7.4
+*SET_DISTANCE 50
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 30
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Trailer Reference } 160 Azm, 7.4 El, 50 m
+#Library : Animator: Camera Setup
+#DataSet : 160 Azm, 7.4 El, 50 m
+#Category: Trailer Reference
+#FileID  : Camera_0f5c43ef-ab77-4055-86ff-be8da1e4debf
+#Product : TruckSim 2020.1
+#VehCode Camera
+
+END

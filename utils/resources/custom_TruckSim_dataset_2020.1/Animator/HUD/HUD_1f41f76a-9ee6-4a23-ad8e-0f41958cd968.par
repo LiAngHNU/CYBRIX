@@ -1,0 +1,145 @@
+PARSFILE
+#FullDataName Animator: HUD`Roll Back Values Text`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox10 1    
+#CheckBox11 1    
+
+#RingCtrl0 4
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 18
+#RingCtrl6 0
+#RingCtrl7 2
+#RingCtrl8 1
+#RingCtrl9 18
+#RingCtrl10 0
+#RingCtrl11 2
+#RingCtrl12 1
+#RingCtrl13 18
+#RingCtrl14 0
+#RingCtrl15 2
+#RingCtrl16 1
+*TITLE_1 Roll-Back Distance
+*LOCX_1 1
+*LOCY_1 35
+*VAR_NAME_1 rbdcheck
+*COLOR_1 1 1 1
+*PREC1 3
+*TITLE_2 Roll-back Check: Initiation
+*LOCX_2 1
+*LOCY_2 32.5
+*VAR_NAME_2 rbinit
+*COLOR_2 1 1 1
+*TITLE_3 Roll-back Check: Pass / Fail
+*LOCX_3 1
+*LOCY_3 30
+*VAR_NAME_3 rbcompl
+*COLOR_3 1 1 1
+*TITLE_4 Roll-back Check: Completed
+*LOCX_4 1
+*LOCY_4 27.5
+*VAR_NAME_4 rbcompl
+*COLOR_4 1 1 1
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Roll-Back Distance AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 20 locY 350
+#Selection_4 Fixed: 1 VarName: rbdcheck  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_rbdcheck
+WRT_rbdcheck
+ADD_ENTITY hud_text Text Output
+location 20 350 18 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is rbdcheck
+prefix Roll-Back Distance
+min_width_prefix 20
+value rbdcheck
+precision 3
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 1
+#Selection_1 18 for Icon
+#Selection_2 Title: Roll-back Check: Initiation AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 20 locY 325
+#Selection_4 Fixed: 1 VarName: rbinit  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_rbinit
+WRT_rbinit
+ADD_ENTITY hud_text Text Output
+location 20 325 18 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is rbinit
+prefix Roll-back Check: Initiation
+min_width_prefix 20
+value rbinit
+precision 0
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 2
+#Selection_1 18 for Icon
+#Selection_2 Title: Roll-back Check: Pass / Fail AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 20 locY 300
+#Selection_4 Fixed: 1 VarName: rbcompl  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_rbcompl
+WRT_rbcompl
+ADD_ENTITY hud_text Text Output
+location 20 300 18 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is rbcompl
+prefix Roll-back Check: Pass / Fail
+min_width_prefix 20
+value rbcompl
+precision 0
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 3
+#Selection_1 18 for Icon
+#Selection_2 Title: Roll-back Check: Completed AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 20 locY 275
+#Selection_4 Fixed: 1 VarName: rbcompl  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_rbcompl
+WRT_rbcompl
+ADD_ENTITY hud_text Text Output
+location 20 275 18 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is rbcompl
+prefix Roll-back Check: Completed
+min_width_prefix 20
+value rbcompl
+precision 0
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Roll Back Values Text
+#Library : Animator: HUD
+#DataSet : Roll Back Values Text
+#Category: HUD Groups
+#FileID  : HUD_1f41f76a-9ee6-4a23-ad8e-0f41958cd968
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Regular Cab: Windows`Trucks: Pickup Cabs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trucks\Pickup_Trucks\Cabs\Regular_Cab_v9\RegCab_Windows.obj
+#ENDMYellow
+
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.375
+*SPECULAR 0.5
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_75fd3836-eb2d-4288-92f1-e6b182ce94d8.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Pickup Cabs } Regular Cab: Windows
+#Library : Animator: Shape File Link
+#DataSet : Regular Cab: Windows
+#Category: Trucks: Pickup Cabs
+#FileID  : Shape_75fd3836-eb2d-4288-92f1-e6b182ce94d8
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

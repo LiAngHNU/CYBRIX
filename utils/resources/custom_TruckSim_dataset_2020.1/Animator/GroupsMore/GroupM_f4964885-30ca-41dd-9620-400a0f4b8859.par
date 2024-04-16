@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Animator: Group (More)`Brakes (Left Rear)`Brake Temperature
+#MiscYellow0
+ADD_REFERENCE_FRAME xl2
+SET_X_NAME X_L2
+SET_Y_NAME Y_L2
+SET_Z_NAME Z_L2
+SET_ROLL_NAME Roll_L2
+SET_YAW_NAME Yaw_L2
+#ENDMYellow
+
+PARSFILE Animator\STL_Groups\ShpGrp_68f93771-8db3-47bf-b5d1-3d1d3fe4c806.par
+#BlueLink11 Animator: Shape Assembly`Brakes (Cool)` Brake Temperature` , Miscellaneous`ShpGrp_68f93771-8db3-47bf-b5d1-3d1d3fe4c806
+
+#MiscYellow1
+ADD_REFERENCE_FRAME xl2_hot
+SET_X_NAME X_L2
+SET_Y_NAME Y_L2
+SET_Z_NAME Z_L2
+SET_ROLL_NAME Roll_L2
+SET_YAW_NAME Yaw_L2
+define_output BkHot_L2
+eq_out BkHot_L2 = t_rtr_L2 * 0.002
+REFERENCE_FRAME_ALPHA_FUNCTION BkHot_L2
+#ENDMYellow
+
+PARSFILE Animator\STL_Groups\ShpGrp_d3c65092-5f82-4939-a89b-0f8c88c15486.par
+#BlueLink12 Animator: Shape Assembly`Brakes (Hot)` Brake Temperature` , Miscellaneous`ShpGrp_d3c65092-5f82-4939-a89b-0f8c88c15486
+
+
+#CheckBox0 0    
+
+
+LOG_ENTRY Used Dataset: Animator: Group (More); { Brake Temperature } Brakes (Left Rear)
+#Library : Animator: Group (More)
+#DataSet : Brakes (Left Rear)
+#Category: Brake Temperature
+#FileID  : GroupM_f4964885-30ca-41dd-9620-400a0f4b8859
+#Product : TruckSim 2020.1
+#VehCode Group (More)
+
+END

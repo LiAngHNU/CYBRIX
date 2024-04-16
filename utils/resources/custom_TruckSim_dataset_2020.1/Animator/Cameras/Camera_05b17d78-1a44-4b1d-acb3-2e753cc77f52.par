@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`140 deg. Azm, 1 El, 48 m`Vehicle Reference
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+SET_CAMERA_REFERENCE_FRAME Frame_df0b0ab3-d04d-4b57-8900-60f2a5b2f1c9
+PARSFILE Animator\Frames\Frame_df0b0ab3-d04d-4b57-8900-60f2a5b2f1c9.par
+#BlueLink0 Animator: Reference Frame`Vehicle X-Y-Z` Tracking: Vehicle` , Reference frame for outside camera`Frame_df0b0ab3-d04d-4b57-8900-60f2a5b2f1c9
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_df0b0ab3-d04d-4b57-8900-60f2a5b2f1c9
+SET_LOOKPOINT_X -2
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0.25
+SET_AZIMUTH 140
+SET_ELEVATION 1
+SET_DISTANCE 48
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X -2
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 0.25
+*SET_AZIMUTH 140
+*SET_ELEVATION 1
+*SET_DISTANCE 48
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 20
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Vehicle Reference } 140 deg. Azm, 1 El, 48 m
+#Library : Animator: Camera Setup
+#DataSet : 140 deg. Azm, 1 El, 48 m
+#Category: Vehicle Reference
+#FileID  : Camera_05b17d78-1a44-4b1d-acb3-2e753cc77f52
+#Product : TruckSim 2020.1
+#VehCode Camera
+
+END

@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Conventional: Steering Wheel`Trucks: Cabs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Conventional\steering_wheel.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.38
+*SPECULAR 0
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0 0 0
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_bf2a4039-0a29-4e96-a3b5-201b9d094019.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Conventional: Steering Wheel
+#Library : Animator: Shape File Link
+#DataSet : Conventional: Steering Wheel
+#Category: Trucks: Cabs
+#FileID  : Shape_bf2a4039-0a29-4e96-a3b5-201b9d094019
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

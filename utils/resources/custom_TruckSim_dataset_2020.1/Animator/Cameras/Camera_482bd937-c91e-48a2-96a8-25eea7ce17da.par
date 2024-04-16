@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`45 Azm, 30 El, 60 m Dist, 50 FoV, No Yaw`Vehicle Reference
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_df0b0ab3-d04d-4b57-8900-60f2a5b2f1c9
+PARSFILE Animator\Frames\Frame_df0b0ab3-d04d-4b57-8900-60f2a5b2f1c9.par
+#BlueLink0 Animator: Reference Frame`Vehicle X-Y-Z` Tracking: Vehicle` , Reference frame for outside camera`Frame_df0b0ab3-d04d-4b57-8900-60f2a5b2f1c9
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_df0b0ab3-d04d-4b57-8900-60f2a5b2f1c9
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 2
+SET_LOOKPOINT_Z 1.2
+SET_AZIMUTH 45
+SET_ELEVATION 30
+SET_DISTANCE 60
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X 0
+*SET_LOOKPOINT_Y 2
+*SET_LOOKPOINT_Z 1.2
+*SET_AZIMUTH 45
+*SET_ELEVATION 30
+*SET_DISTANCE 60
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 45
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Vehicle Reference } 45 Azm, 30 El, 60 m Dist, 50 FoV, No Yaw
+#Library : Animator: Camera Setup
+#DataSet : 45 Azm, 30 El, 60 m Dist, 50 FoV, No Yaw
+#Category: Vehicle Reference
+#FileID  : Camera_482bd937-c91e-48a2-96a8-25eea7ce17da
+#Product : TruckSim 2020.1
+#VehCode Camera
+
+END

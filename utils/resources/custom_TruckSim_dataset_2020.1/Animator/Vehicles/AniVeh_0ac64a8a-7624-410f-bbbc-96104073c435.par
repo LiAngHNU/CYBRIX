@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`E-Class, SUV`E-Class
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 2950
+OBJ_Y_LENGTH 1875
+OBJ_Z_LENGTH 1800
+*DZ_V 0
+*LAT_WC 1700
+*LAT_WC_2 1700
+*HWC 370
+*WHEEL_RATIO 1.35
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_0ac64a8a-7624-410f-bbbc-96104073c435.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.35
+SET_SCALE_Y 1.35
+SET_SCALE_Z 1.35
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.85
+SET_OFFSET_Z 0.3515
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.35
+SET_SCALE_Y 1.35
+SET_SCALE_Z 1.35
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.85
+SET_OFFSET_Z 0.3515
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.35
+SET_SCALE_Y 1.35
+SET_SCALE_Z 1.35
+SET_OFFSET_X -2.95
+SET_OFFSET_Y 0.85
+SET_OFFSET_Z 0.3515
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.35
+SET_SCALE_Y 1.35
+SET_SCALE_Z 1.35
+SET_ANGLE_X 180
+SET_OFFSET_X -2.95
+SET_OFFSET_Y -0.85
+SET_OFFSET_Z 0.3515
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_322dbfa8-39d0-43e4-88c9-abb236c2f6d9.par
+#BlueLink1 Animator: Shape Assembly`E-Class SUV` Passenger Cars` , Vehicle Body`ShpGrp_322dbfa8-39d0-43e4-88c9-abb236c2f6d9
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_5ae32270-f25a-4ada-87ec-a014c9845955.par
+#BlueLink3 Animator: Shape File Link`SUV: Brake Lights` Cars: E-Class` , Brake Lights`Shape_5ae32270-f25a-4ada-87ec-a014c9845955
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_1a5bc28c-b88c-4367-99a2-eb8b3be23434.par
+#BlueLink10 Animator: Shape File Link`SUV: Reverse Lights` Cars: E-Class` , Reverse lights`Shape_1a5bc28c-b88c-4367-99a2-eb8b3be23434
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_c500746e-28db-47d2-91ed-d32247db7d4d
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { E-Class } E-Class, SUV
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : E-Class, SUV
+#Category: E-Class
+#FileID  : AniVeh_0ac64a8a-7624-410f-bbbc-96104073c435
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Control Point Sensor`Tracking: Vehicle
+ADD_REFERENCE_FRAME Frame_7a063968-c27d-493a-a739-3208c201cdb5
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S1
+SET_Y_NAME Y_S1
+SET_Z_NAME Z_S1
+SET_PITCH_NAME sensor_roll
+SET_YAW_NAME sensor_yaw
+SET_FRAME_SCALE_X_NAME sensor_mag
+
+PARSFILE Animator\STL\Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7.par
+#BlueLink0 Animator: Shape File Link`Cube: Sensor Vector` Geometric Shapes` , Animator Data`Shape_67b13483-d0c2-48d7-bef0-4c603104a0d7
+
+WRT_X_S1
+ANI_X_S1
+WRT_Y_S1
+ANI_Y_S1
+WRT_Z_S1
+ANI_Z_S1
+WRT_sensor_roll
+ANI_sensor_roll
+WRT_sensor_yaw
+ANI_sensor_yaw
+WRT_sensor_mag
+ANI_sensor_mag
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Control Point Sensor
+#Library : Animator: Reference Frame
+#DataSet : Control Point Sensor
+#Category: Tracking: Vehicle
+#FileID  : Frame_7a063968-c27d-493a-a739-3208c201cdb5
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

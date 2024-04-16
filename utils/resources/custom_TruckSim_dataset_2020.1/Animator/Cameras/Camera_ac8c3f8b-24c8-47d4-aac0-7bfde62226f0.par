@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`Fixed Rear Follow Camera`Driver View
+#RingCtrl1 1
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+ADD_REFERENCE_FRAME driver_full_motion
+reference_frame_ghosts off
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xo
+SET_Y_NAME Yo
+SET_Z_NAME Zo
+SET_ROLL_NAME Roll_E
+SET_PITCH_NAME pitch
+SET_YAW_NAME Yaw
+add_occupant Occupant view
+set_occupant_reference_frame driver_full_motion
+SET_OCCUPANT_X -16
+SET_OCCUPANT_Y 4
+SET_OCCUPANT_Z 3
+SET_SWIVEL -20
+SET_TILT 10
+SET_FIELD_OF_VIEW_OCCUPANT 70
+*SET_LOOKPOINT_X 2
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 0.25
+*SET_AZIMUTH 13
+*SET_ELEVATION 4.5
+*SET_DISTANCE 60
+FOG_SCALE 0
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Driver View } Fixed Rear Follow Camera
+#Library : Animator: Camera Setup
+#DataSet : Fixed Rear Follow Camera
+#Category: Driver View
+#FileID  : Camera_ac8c3f8b-24c8-47d4-aac0-7bfde62226f0
+#Product : TruckSim 2020.1
+#VehCode Camera
+
+END

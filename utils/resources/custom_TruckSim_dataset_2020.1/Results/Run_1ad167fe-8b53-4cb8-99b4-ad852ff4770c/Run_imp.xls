@@ -1,0 +1,369 @@
+ keyword	Units	Component	Description	Internal
+IMP_AV_D3_F	rpm	Powertrain	Output shaft speed of transfer case to 1st drive-axle differential	0
+IMP_AV_D3_R	rpm	Powertrain	Output shaft speed of transfer case to 2nd drive-axle differential	0
+IMP_AV_ENG	rpm	Powertrain	Engine speed (external engine only)	0
+IMP_AV_TC	rpm	Powertrain	Torque converter speed (external transmission only)	0
+IMP_AV_TRANS	rpm	Powertrain	Transmission output speed	VARIABLE
+IMP_AX_FIELD	m/s2	Environment	Field acceleration in global X direction	0
+IMP_AX_SC	g	Speed controller	Imported acceleration command for speed controller	VARIABLE
+IMP_AY_FIELD	m/s2	Environment	Field acceleration in global Y direction	0
+IMP_AZ_FIELD	m/s2	Environment	Field acceleration in global Z direction	0
+IMP_BK_STAT	-	Brakes	Brake apply status: 0 or 1 (based on control pressure)	VARIABLE
+IMP_CLT_D1_2	-	Powertrain	Clutch control for 1st drive-axle differential (second clutch)	0
+IMP_CLT_D2_2	-	Powertrain	Clutch control for 2nd drive-axle differential (second clutch)	0
+IMP_CLUTCH	-	Powertrain	Clutch control for transmission	VARIABLE
+IMP_CLUTCH_D1	-	Powertrain	Clutch control for 1st drive-axle differential	0
+IMP_CLUTCH_D2	-	Powertrain	Clutch control for 2nd drive-axle differential	0
+IMP_CLUTCH_L1	-	Powertrain	Twin clutch control in left side of 1st drive-axle differential	0
+IMP_CLUTCH_L2	-	Powertrain	Twin clutch control in left side of 2nd drive-axle differential	0
+IMP_CLUTCH_R1	-	Powertrain	Twin clutch control in right side of 1st drive-axle differential	0
+IMP_CLUTCH_R2	-	Powertrain	Twin clutch control in right side of 2nd drive-axle differential	0
+IMP_CMP_EXT_L1	mm	Suspensions	Compression for spring L1	VARIABLE
+IMP_CMP_EXT_L2	mm	Suspensions	Compression for spring L2	VARIABLE
+IMP_CMP_EXT_R1	mm	Suspensions	Compression for spring R1	VARIABLE
+IMP_CMP_EXT_R2	mm	Suspensions	Compression for spring R2	VARIABLE
+IMP_DSTEER_CON_L1	deg/s	Steering	Steering gear angular rate for wheel L1 from external model	VARIABLE
+IMP_DSTEER_CON_L2	deg/s	Steering	Steering gear angular rate for wheel L2 from external model	VARIABLE
+IMP_DSTEER_CON_R1	deg/s	Steering	Steering gear angular rate for wheel R1 from external model	VARIABLE
+IMP_DSTEER_CON_R2	deg/s	Steering	Steering gear angular rate for wheel R2 from external model	VARIABLE
+IMP_DSTEER_L1	deg/s	Steering	Road wheel L1 steer angular rate due to the steering system (NOT ride/roll steer), from external model	VARIABLE
+IMP_DSTEER_L2	deg/s	Steering	Road wheel L2 steer angular rate due to the steering system (NOT ride/roll steer), from external model	VARIABLE
+IMP_DSTEER_R1	deg/s	Steering	Road wheel R1 steer angular rate due to the steering system (NOT ride/roll steer), from external model	VARIABLE
+IMP_DSTEER_R2	deg/s	Steering	Road wheel R2 steer angular rate due to the steering system (NOT ride/roll steer), from external model	VARIABLE
+IMP_DSTEER_RACK_CON_L1	mm/s	Steering	Steering rack speed for wheel L1 from external model	VARIABLE
+IMP_DSTEER_RACK_CON_L2	mm/s	Steering	Steering rack speed for wheel L2 from external model	VARIABLE
+IMP_DSTEER_RACK_CON_R1	mm/s	Steering	Steering rack speed for wheel R1 from external model	VARIABLE
+IMP_DSTEER_RACK_CON_R2	mm/s	Steering	Steering rack speed for wheel R2 from external model	VARIABLE
+IMP_DSTEER_SW	deg/s	Steering	Steering wheel angular rate	VARIABLE
+IMP_DVBK_L1	mm3/s	Brakes	L1 caliper flow rate	VARIABLE
+IMP_DVBK_L2	mm3/s	Brakes	L2 caliper flow rate	VARIABLE
+IMP_DVBK_R1	mm3/s	Brakes	R1 caliper flow rate	VARIABLE
+IMP_DVBK_R2	mm3/s	Brakes	R2 caliper flow rate	VARIABLE
+IMP_DXDMP_EXT_L1	mm/s	Suspensions	Compression rate for damper L1	VARIABLE
+IMP_DXDMP_EXT_L2	mm/s	Suspensions	Compression rate for damper L2	VARIABLE
+IMP_DXDMP_EXT_R1	mm/s	Suspensions	Compression rate for damper R1	VARIABLE
+IMP_DXDMP_EXT_R2	mm/s	Suspensions	Compression rate for damper R2	VARIABLE
+IMP_DXJST_EXT_L1	mm/s	Suspensions	Compression rate for jounce stop L1	VARIABLE
+IMP_DXJST_EXT_L2	mm/s	Suspensions	Compression rate for jounce stop L2	VARIABLE
+IMP_DXJST_EXT_R1	mm/s	Suspensions	Compression rate for jounce stop R1	VARIABLE
+IMP_DXJST_EXT_R2	mm/s	Suspensions	Compression rate for jounce stop R2	VARIABLE
+IMP_DXRST_EXT_L1	mm/s	Suspensions	Compression rate for rebound stop L1	VARIABLE
+IMP_DXRST_EXT_L2	mm/s	Suspensions	Compression rate for rebound stop L2	VARIABLE
+IMP_DXRST_EXT_R1	mm/s	Suspensions	Compression rate for rebound stop R1	VARIABLE
+IMP_DXRST_EXT_R2	mm/s	Suspensions	Compression rate for rebound stop R2	VARIABLE
+IMP_DZDX_L1I	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_L1O	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_L2I	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_L2O	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_R1I	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_R1O	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_R2I	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDX_R2O	-	Tires	Slope of ground in X direction at the tire CTC	VARIABLE
+IMP_DZDY_L1I	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_L1O	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_L2I	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_L2O	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_R1I	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_R1O	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_R2I	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_DZDY_R2O	-	Tires	Slope of ground in Y direction at the tire CTC	VARIABLE
+IMP_ESC_ENGINE_CON_STATE	-	Powertrain	ESC engine torque control state: 0 -> no control, 1 -> reduce torque to ESC request, 2 -> increase torque to ESC request	0
+IMP_FBK_BSTIN	N	Brakes	Brake booster input force	VARIABLE
+IMP_FBK_PDL	N	Brakes	Brake pedal force	VARIABLE
+IMP_FD_L1	N	Suspensions	Compressive force from damper L1	VARIABLE
+IMP_FD_L2	N	Suspensions	Compressive force from damper L2	VARIABLE
+IMP_FD_R1	N	Suspensions	Compressive force from damper R1	VARIABLE
+IMP_FD_R2	N	Suspensions	Compressive force from damper R2	VARIABLE
+IMP_FS_L1	N	Suspensions	Compressive force added to built-in ride spring L1	0
+IMP_FS_L2	N	Suspensions	Compressive force added to built-in ride spring L2	0
+IMP_FS_R1	N	Suspensions	Compressive force added to built-in ride spring R1	0
+IMP_FS_R2	N	Suspensions	Compressive force added to built-in ride spring R2	0
+IMP_FUEL_RT	kg/s	Powertrain	Fuel rate	VARIABLE
+IMP_FX0_L1I	N	Tires	Longitudinal force at wheel center from tire(s)	VARIABLE
+IMP_FX0_L2I	N	Tires	Longitudinal force at wheel center from tire(s)	VARIABLE
+IMP_FX0_R1I	N	Tires	Longitudinal force at wheel center from tire(s)	VARIABLE
+IMP_FX0_R2I	N	Tires	Longitudinal force at wheel center from tire(s)	VARIABLE
+IMP_FXEXA1	N	Suspensions	User-defined [sx] force at axle 1 from the sprung mass	0
+IMP_FXEXA2	N	Suspensions	User-defined [sx] force at axle 2 from the sprung mass	0
+IMP_FXGEXA1	N	Suspensions	User-defined [nx] force at axle 1 from the inertial reference N	0
+IMP_FXGEXA2	N	Suspensions	User-defined [nx] force at axle 2 from the inertial reference N	0
+IMP_FX_AERO	N	Aerodynamics	X component of aerodynamic force at the aero reference point	VARIABLE
+IMP_FX_L1I	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_L1O	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_L2I	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_L2O	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_R1I	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_R1O	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_R2I	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FX_R2O	N	Tires	Long. force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY0_L1I	N	Tires	Lateral force at wheel center from tire(s)	VARIABLE
+IMP_FY0_L2I	N	Tires	Lateral force at wheel center from tire(s)	VARIABLE
+IMP_FY0_R1I	N	Tires	Lateral force at wheel center from tire(s)	VARIABLE
+IMP_FY0_R2I	N	Tires	Lateral force at wheel center from tire(s)	VARIABLE
+IMP_FYEXA1	N	Suspensions	User-defined [sy] force at axle 1 from the sprung mass	0
+IMP_FYEXA2	N	Suspensions	User-defined [sy] force at axle 2 from the sprung mass	0
+IMP_FYGEXA1	N	Suspensions	User-defined [ny] force at axle 1 from the inertial reference N	0
+IMP_FYGEXA2	N	Suspensions	User-defined [ny] force at axle 2 from the inertial reference N	0
+IMP_FY_AERO	N	Aerodynamics	Y component of aerodynamic force at the aero reference point	VARIABLE
+IMP_FY_L1I	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_L1O	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_L2I	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_L2O	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_R1I	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_R1O	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_R2I	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FY_R2O	N	Tires	Lateral force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ0_L1I	N	Tires	Vertical force at wheel center from tire(s)	VARIABLE
+IMP_FZ0_L2I	N	Tires	Vertical force at wheel center from tire(s)	VARIABLE
+IMP_FZ0_R1I	N	Tires	Vertical force at wheel center from tire(s)	VARIABLE
+IMP_FZ0_R2I	N	Tires	Vertical force at wheel center from tire(s)	VARIABLE
+IMP_FZEXA1	N	Suspensions	User-defined [sz] force at axle 1 from the sprung mass	0
+IMP_FZEXA2	N	Suspensions	User-defined [sz] force at axle 2 from the sprung mass	0
+IMP_FZGEXA1	N	Suspensions	User-defined [nz] force at axle 1 from the inertial reference N	0
+IMP_FZGEXA2	N	Suspensions	User-defined [nz] force at axle 2 from the inertial reference N	0
+IMP_FZ_AERO	N	Aerodynamics	Z component of aerodynamic force at the aero reference point	VARIABLE
+IMP_FZ_L1I	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_L1O	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_L2I	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_L2O	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_R1I	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_R1O	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_R2I	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_FZ_R2O	N	Tires	Vertical force at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_F_AUX_EXT_CTR1	N	Suspensions	Ext. aux spring force at axle 1 center	0
+IMP_F_AUX_EXT_CTR2	N	Suspensions	Ext. aux spring force at axle 2 center	0
+IMP_F_AUX_EXT_L1	N	Suspensions	Ext. aux spring force at wheel center L1	0
+IMP_F_AUX_EXT_L2	N	Suspensions	Ext. aux spring force at wheel center L2	0
+IMP_F_AUX_EXT_R1	N	Suspensions	Ext. aux spring force at wheel center R1	0
+IMP_F_AUX_EXT_R2	N	Suspensions	Ext. aux spring force at wheel center R2	0
+IMP_F_BOOST_EXT	N	Steering	Steering rack boost force (applies to internal steer model only)	VARIABLE
+IMP_F_JNC_STOP_L1	N	Suspensions	Jounce-stop force L1	VARIABLE
+IMP_F_JNC_STOP_L2	N	Suspensions	Jounce-stop force L2	VARIABLE
+IMP_F_JNC_STOP_R1	N	Suspensions	Jounce-stop force R1	VARIABLE
+IMP_F_JNC_STOP_R2	N	Suspensions	Jounce-stop force R2	VARIABLE
+IMP_F_REB_STOP_L1	N	Suspensions	Rebound-stop force L1	VARIABLE
+IMP_F_REB_STOP_L2	N	Suspensions	Rebound-stop force L2	VARIABLE
+IMP_F_REB_STOP_R1	N	Suspensions	Rebound-stop force R1	VARIABLE
+IMP_F_REB_STOP_R2	N	Suspensions	Rebound-stop force R2	VARIABLE
+IMP_F_TIEROD_L1	N	Steering	Force on rack at tie rod L1, from external model	VARIABLE
+IMP_F_TIEROD_L2	N	Steering	Force on rack at tie rod L2, from external model	VARIABLE
+IMP_F_TIEROD_R1	N	Steering	Force on rack at tie rod R1, from external model	VARIABLE
+IMP_F_TIEROD_R2	N	Steering	Force on rack at tie rod R2, from external model	VARIABLE
+IMP_GEAR_STATUS	-	Powertrain	Current gear status when min. powertrain is selected.	0
+IMP_GEAR_TRANS	-	Powertrain	Transmission gear	0
+IMP_HEAD_OBJ_1	deg	Targets	Heading angle, object 1	0
+IMP_IENG	kg-m2	Powertrain	Combined spin inertia of engine crankshaft and torque converter input shaft	0
+IMP_INERTIA_TR	kg-m2	Powertrain	Transmission inertia at output shaft (not including torque converter)	VARIABLE
+IMP_INV_CAP_TC	Kinv	Powertrain	Inverse capacity of torque converter	0
+IMP_LAT_OBJ_1	m	Targets	Lateral offset, object 1	VARIABLE
+IMP_MENGINE	N-m	Powertrain	Engine torque applied to crankshaft from pistons	VARIABLE
+IMP_MENGINE_ESC_REQUEST	N-m	Powertrain	Engine torque requested by ESC/TCS	0
+IMP_MENG_REACT	N-m	Powertrain	Reaction torque from the input shaft of torque converter to the engine.	0
+IMP_MODE_TRANS	-	Powertrain	Transmission controller mode : -1->reverse, 0->neutral, 1->open - loop     gear selection, 2 - 18->closed - loop limit(maximum gear available)	0
+IMP_MSG_OBJ_1	-	Targets	Msg code of object 1	0
+IMP_MUX_L1I	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_L1O	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_L2I	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_L2O	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_R1I	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_R1O	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_R2I	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUX_R2O	-	Tires	Ground longitudinal friction at the tire CTC	VARIABLE
+IMP_MUY_L1I	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_L1O	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_L2I	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_L2O	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_R1I	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_R1O	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_R2I	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MUY_R2O	-	Tires	Ground lateral friction at the tire CTC	VARIABLE
+IMP_MX0_L1I	N-m	Tires	Roll moment at wheel center from tire(s)	VARIABLE
+IMP_MX0_L2I	N-m	Tires	Roll moment at wheel center from tire(s)	VARIABLE
+IMP_MX0_R1I	N-m	Tires	Roll moment at wheel center from tire(s)	VARIABLE
+IMP_MX0_R2I	N-m	Tires	Roll moment at wheel center from tire(s)	VARIABLE
+IMP_MXEXA1	N-m	Suspensions	User-defined [sx] moment at axle 1 from the sprung mass	0
+IMP_MXEXA2	N-m	Suspensions	User-defined [sx] moment at axle 2 from the sprung mass	0
+IMP_MXGEXA1	N-m	Suspensions	User-defined [nx] moment at axle 1 from the inertial reference N	0
+IMP_MXGEXA2	N-m	Suspensions	User-defined [nx] moment at axle 2 from the inertial reference N	0
+IMP_MXGEXT	N-m	Sprung mass	User-defined [nx] moment on sprung mass from inertial reference frame	0
+IMP_MX_A1	N-m	Suspensions	Auxiliary roll moment for axle 1	VARIABLE
+IMP_MX_A2	N-m	Suspensions	Auxiliary roll moment for axle 2	VARIABLE
+IMP_MX_AERO	N-m	Aerodynamics	X component of aerodynamic moment	VARIABLE
+IMP_MX_EXT	N-m	Sprung mass	User-defined [sx] moment on sprung mass from inertial reference frame	0
+IMP_MX_L1I	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_L1O	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_L2I	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_L2O	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_R1I	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_R1O	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_R2I	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MX_R2O	N-m	Tires	Overturning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY0_L1I	N-m	Tires	Spin moment at wheel center from tire(s)	VARIABLE
+IMP_MY0_L2I	N-m	Tires	Spin moment at wheel center from tire(s)	VARIABLE
+IMP_MY0_R1I	N-m	Tires	Spin moment at wheel center from tire(s)	VARIABLE
+IMP_MY0_R2I	N-m	Tires	Spin moment at wheel center from tire(s)	VARIABLE
+IMP_MYBK_L1	N-m	Brakes	Brake moment L1	VARIABLE
+IMP_MYBK_L2	N-m	Brakes	Brake moment L2	VARIABLE
+IMP_MYBK_R1	N-m	Brakes	Brake moment R1	VARIABLE
+IMP_MYBK_R2	N-m	Brakes	Brake moment R2	VARIABLE
+IMP_MYEXA1	N-m	Suspensions	User-defined [sy] moment at axle 1 from the sprung mass	0
+IMP_MYEXA2	N-m	Suspensions	User-defined [sy] moment at axle 2 from the sprung mass	0
+IMP_MYGEXA1	N-m	Suspensions	User-defined [ny] moment at axle 1 from the inertial reference N	0
+IMP_MYGEXA2	N-m	Suspensions	User-defined [ny] moment at axle 2 from the inertial reference N	0
+IMP_MYGEXT	N-m	Sprung mass	User-defined [ny] moment on sprung mass from inertial reference frame	0
+IMP_MYSM_L1	N-m	Brakes	Ext. moment applied from sprung mass to wheel L1	0
+IMP_MYSM_L2	N-m	Brakes	Ext. moment applied from sprung mass to wheel L2	0
+IMP_MYSM_R1	N-m	Brakes	Ext. moment applied from sprung mass to wheel R1	0
+IMP_MYSM_R2	N-m	Brakes	Ext. moment applied from sprung mass to wheel R2	0
+IMP_MYUSM_L1	N-m	Brakes	Ext. moment applied from unsprung mass to wheel L1	0
+IMP_MYUSM_L2	N-m	Brakes	Ext. moment applied from unsprung mass to wheel L2	0
+IMP_MYUSM_R1	N-m	Brakes	Ext. moment applied from unsprung mass to wheel R1	0
+IMP_MYUSM_R2	N-m	Brakes	Ext. moment applied from unsprung mass to wheel R2	0
+IMP_MY_AERO	N-m	Aerodynamics	Y component of aerodynamic moment	VARIABLE
+IMP_MY_EXT	N-m	Sprung mass	User-defined [sy] moment on sprung mass from inertial reference frame	0
+IMP_MY_L1I	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_L1O	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_L2I	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_L2O	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_OUT_D1_L	N-m	Powertrain	Left output shaft torque of 1st drive-axle differential	0
+IMP_MY_OUT_D1_R	N-m	Powertrain	Right output shaft torque of 1st drive-axle differential	0
+IMP_MY_OUT_D2_L	N-m	Powertrain	Left output shaft torque of 2nd drive-axle differential	0
+IMP_MY_OUT_D2_R	N-m	Powertrain	Right output shaft torque of 2nd drive-axle differential	0
+IMP_MY_R1I	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_R1O	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_R2I	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MY_R2O	N-m	Tires	Rolling-resistance at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ0_L1I	N-m	Tires	Yaw moment at wheel center from tire(s)	VARIABLE
+IMP_MZ0_L2I	N-m	Tires	Yaw moment at wheel center from tire(s)	VARIABLE
+IMP_MZ0_R1I	N-m	Tires	Yaw moment at wheel center from tire(s)	VARIABLE
+IMP_MZ0_R2I	N-m	Tires	Yaw moment at wheel center from tire(s)	VARIABLE
+IMP_MZEXA1	N-m	Suspensions	User-defined [sz] moment at axle 1 from the sprung mass	0
+IMP_MZEXA2	N-m	Suspensions	User-defined [sz] moment at axle 2 from the sprung mass	0
+IMP_MZGEXA1	N-m	Suspensions	User-defined [nz] moment at axle 1 from the inertial reference N	0
+IMP_MZGEXA2	N-m	Suspensions	User-defined [nz] moment at axle 2 from the inertial reference N	0
+IMP_MZGEXT	N-m	Sprung mass	User-defined [nz] moment on sprung mass from inertial reference frame	0
+IMP_MZ_AERO	N-m	Aerodynamics	Z component of aerodynamic moment	VARIABLE
+IMP_MZ_EXT	N-m	Sprung mass	User-defined [sz] moment on sprung mass from inertial reference frame	0
+IMP_MZ_L1I	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_L1O	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_L2I	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_L2O	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_R1I	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_R1O	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_R2I	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_MZ_R2O	N-m	Tires	Aligning moment at the CTC (if OPT_TIRE_MODEL < 8)	VARIABLE
+IMP_M_BOOST_EXT	N-m	Steering	Steering gear boost torque (applies to internal steer model only)	VARIABLE
+IMP_M_DIFF_D1	N-m	Powertrain	Torque difference of 1st drive-axle differential	0
+IMP_M_DIFF_D2	N-m	Powertrain	Torque difference of 2nd drive-axle differential	0
+IMP_M_KP_L1	N-m	Steering	Additional kingpin torque reacted at sprung mass	0
+IMP_M_KP_L2	N-m	Steering	Additional kingpin torque reacted at sprung mass	0
+IMP_M_KP_R1	N-m	Steering	Additional kingpin torque reacted at sprung mass	0
+IMP_M_KP_R2	N-m	Steering	Additional kingpin torque reacted at sprung mass	0
+IMP_M_LOCKUP_CLUTCH_CAP	N-m	Powertrain	Maximum torque capacity of the torque converter lockup clutch	VARIABLE
+IMP_M_OUT_D3_F	N-m	Powertrain	Output shaft torque of transfer case to 1st drive-axle differential	0
+IMP_M_OUT_D3_R	N-m	Powertrain	Output shaft torque of transfer case to 2nd drive-axle differential	0
+IMP_M_OUT_TC	N-m	Powertrain	Output shaft torque of torque converter	0
+IMP_M_OUT_TR	N-m	Powertrain	Transmission output shaft torque	VARIABLE
+IMP_M_TBAR_EXT	N-m	Steering	Steering column reaction torque from external model	0
+IMP_M_TIEROD_L1	N-m	Steering	Moment at Pitman arm due to load in tie rod L1,from external model	VARIABLE
+IMP_M_TIEROD_L2	N-m	Steering	Moment at Pitman arm due to load in tie rod L2,from external model	VARIABLE
+IMP_M_TIEROD_R1	N-m	Steering	Moment at Pitman arm due to load in tie rod R1,from external model	VARIABLE
+IMP_M_TIEROD_R2	N-m	Steering	Moment at Pitman arm due to load in tie rod R2,from external model	VARIABLE
+IMP_PBK_L1	MPa	Brakes	Brake actuator pressure L1	VARIABLE
+IMP_PBK_L2	MPa	Brakes	Brake actuator pressure L2	VARIABLE
+IMP_PBK_R1	MPa	Brakes	Brake actuator pressure R1	VARIABLE
+IMP_PBK_R2	MPa	Brakes	Brake actuator pressure R2	VARIABLE
+IMP_PCON_BK	MPa	Brakes	Brake master cylinder pressure	VARIABLE
+IMP_PCTL_L1	MPa	Brakes	Control pressure (without dynamics) for brake actuator L1	VARIABLE
+IMP_PCTL_L2	MPa	Brakes	Control pressure (without dynamics) for brake actuator L2	VARIABLE
+IMP_PCTL_R1	MPa	Brakes	Control pressure (without dynamics) for brake actuator R1	VARIABLE
+IMP_PCTL_R2	MPa	Brakes	Control pressure (without dynamics) for brake actuator R2	VARIABLE
+IMP_PDEL_L1	MPa	Brakes	Delivery pressure (after proportioning) for brake L1	VARIABLE
+IMP_PDEL_L2	MPa	Brakes	Delivery pressure (after proportioning) for brake L2	VARIABLE
+IMP_PDEL_R1	MPa	Brakes	Delivery pressure (after proportioning) for brake R1	VARIABLE
+IMP_PDEL_R2	MPa	Brakes	Delivery pressure (after proportioning) for brake R2	VARIABLE
+IMP_PITCH_OBJ_1	deg	Targets	Pitch angle of object 1	0
+IMP_PLIN_L1	MPa	Brakes	Brake line pressure L1 before proportioning	VARIABLE
+IMP_PLIN_L2	MPa	Brakes	Brake line pressure L2 before proportioning	VARIABLE
+IMP_PLIN_R1	MPa	Brakes	Brake line pressure R1 before proportioning	VARIABLE
+IMP_PLIN_R2	MPa	Brakes	Brake line pressure R2 before proportioning	VARIABLE
+IMP_PWR_ENGINE_AV	kW	Powertrain	Available power of external engine, needed for closed-loop speed control.	VARIABLE
+IMP_RM_TC	-	Powertrain	Torque ratio: torque converter output / input	0
+IMP_ROLL_OBJ_1	deg	Targets	Roll angle of object 1	0
+IMP_ROT_D3_F	rev	Powertrain	Output shaft rotation of transfer case to 1st drive-axle differential	0
+IMP_ROT_D3_R	rev	Powertrain	Output shaft rotation of transfer case to 2nd drive-axle differential	0
+IMP_ROT_TRANS	rev	Powertrain	Transmission output rotation (external transfer case or external differential only)	0
+IMP_RRE_L1I	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_L1O	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_L2I	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_L2O	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_R1I	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_R1O	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_R2I	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RRE_R2O	mm	Tires	Effective rolling radius at the tire CTC	VARIABLE
+IMP_RR_SURF_L1I	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_L1O	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_L2I	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_L2O	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_R1I	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_R1O	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_R2I	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_RR_SURF_R2O	-	Tires	Rolling-resistance coefficient for road surface at the tire CTC	VARIABLE
+IMP_R_EFF_D1	-	Powertrain	Efficiency of 1st drive-axle differential	0
+IMP_R_EFF_D2	-	Powertrain	Efficiency of 2nd drive-axle differential	0
+IMP_R_EFF_TR	-	Powertrain	Efficiency of transmission	0
+IMP_R_GEAR_D1	-	Powertrain	Gear ratio of 1st drive-axle differential	0
+IMP_R_GEAR_D2	-	Powertrain	Gear ratio of 2nd drive-axle differential	0
+IMP_R_GEAR_TR	-	Powertrain	Gear ratio of transmission	0
+IMP_R_STR_EXT_L1	-	Steering	Overall steer ratio for wheel L1 with external steer model, used by the closed loop steering controller (driver model)	VARIABLE
+IMP_R_STR_EXT_L2	-	Steering	Overall steer ratio for wheel L2 with external steer model, used by the closed loop steering controller (driver model)	VARIABLE
+IMP_R_STR_EXT_R1	-	Steering	Overall steer ratio for wheel R1 with external steer model, used by the closed loop steering controller (driver model)	VARIABLE
+IMP_R_STR_EXT_R2	-	Steering	Overall steer ratio for wheel R2 with external steer model, used by the closed loop steering controller (driver model)	VARIABLE
+IMP_SPEED	km/h	Speed controller	Imported target speed for speed controller	VARIABLE
+IMP_STEER_CON_L1	deg	Steering	Steering gear output angle for wheel L1 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_CON_L2	deg	Steering	Steering gear output angle for wheel L2 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_CON_R1	deg	Steering	Steering gear output angle for wheel R1 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_CON_R2	deg	Steering	Steering gear output angle for wheel R2 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_L1	deg	Steering	Road wheel L1 steer angle due to the steering system, (NOT ride/roll steer) from external model	VARIABLE
+IMP_STEER_L2	deg	Steering	Road wheel L2 steer angle due to the steering system, (NOT ride/roll steer) from external model	VARIABLE
+IMP_STEER_R1	deg	Steering	Road wheel R1 steer angle due to the steering system, (NOT ride/roll steer) from external model	VARIABLE
+IMP_STEER_R2	deg	Steering	Road wheel R2 steer angle due to the steering system, (NOT ride/roll steer) from external model	VARIABLE
+IMP_STEER_RACK_CON_L1	mm	Steering	Steering rack position for wheel L1 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_RACK_CON_L2	mm	Steering	Steering rack position for wheel L2 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_RACK_CON_R1	mm	Steering	Steering rack position for wheel R1 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_RACK_CON_R2	mm	Steering	Steering rack position for wheel R2 (input to nonlinear steering kinematics table) from external model	VARIABLE
+IMP_STEER_SW	deg	Steering	Steering wheel angle	VARIABLE
+IMP_STEER_T_IN	N-m	Steering	Steering input torque (driver model torque option or open loop)	VARIABLE
+IMP_S_OBJ_1	m	Targets	Station of object 1	0
+IMP_THROTTLE_ENGINE	-	Powertrain	Open loop throttle control	VARIABLE
+IMP_TYPE_OBJ_1	-	Targets	Type code of object 1	0
+IMP_VIS_OBJ_1	-	Targets	Visibility of object 1	0
+IMP_V_OBJ_1	km/h	Targets	V speed of object 1	0
+IMP_WIND_HEADING	deg	Aerodynamics	Heading (yaw) angle of wind relative to global X: when vehicle yaw is zero, then 0 deg -> tailwind, 90 deg -> from right, 180 deg -> headwind	VARIABLE
+IMP_WIND_SPEED	km/h	Aerodynamics	Absolute wind speed	VARIABLE
+IMP_XDMP_EXT_L1	mm	Suspensions	Compression of damper L1	VARIABLE
+IMP_XDMP_EXT_L2	mm	Suspensions	Compression of damper L2	VARIABLE
+IMP_XDMP_EXT_R1	mm	Suspensions	Compression of damper R1	VARIABLE
+IMP_XDMP_EXT_R2	mm	Suspensions	Compression of damper R2	VARIABLE
+IMP_XJST_EXT_L1	mm	Suspensions	Compression for jounce stop L1	VARIABLE
+IMP_XJST_EXT_L2	mm	Suspensions	Compression for jounce stop L2	VARIABLE
+IMP_XJST_EXT_R1	mm	Suspensions	Compression for jounce stop R1	VARIABLE
+IMP_XJST_EXT_R2	mm	Suspensions	Compression for jounce stop R2	VARIABLE
+IMP_XRST_EXT_L1	mm	Suspensions	Compression for rebound stop L1	VARIABLE
+IMP_XRST_EXT_L2	mm	Suspensions	Compression for rebound stop L2	VARIABLE
+IMP_XRST_EXT_R1	mm	Suspensions	Compression for rebound stop R1	VARIABLE
+IMP_XRST_EXT_R2	mm	Suspensions	Compression for rebound stop R2	VARIABLE
+IMP_X_DM	m	Driver model	Global X coordinate of driver preview point	VARIABLE
+IMP_X_OBJ_1	m	Targets	X coordinate of object 1	0
+IMP_YAW_OBJ_1	deg	Targets	Yaw angle of object 1	0
+IMP_Y_DM	m	Driver model	Global Y coordinate of driver preview point	VARIABLE
+IMP_Y_OBJ_1	m	Targets	Y coordinate of object 1	0
+IMP_ZGND_L1I	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_L1O	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_L2I	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_L2O	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_R1I	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_R1O	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_R2I	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_ZGND_R2O	m	Tires	Z coordinate of ground at the tire CTC	VARIABLE
+IMP_Z_OBJ_1	m	Targets	Z coordinate of object 1	0

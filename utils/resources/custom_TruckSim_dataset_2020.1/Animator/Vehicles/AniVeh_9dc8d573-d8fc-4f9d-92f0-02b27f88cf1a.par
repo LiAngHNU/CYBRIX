@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`2A LCF Van`2A Lead Units
+
+PARSFILE Generic\Group\GenGrp_7424269f-b12b-4a28-8135-de11f2f1d496.par
+#BlueLink9 Generic Data Group`LCF Van Rearview Mirror` Rearview Mirror Location` , Misc`GenGrp_7424269f-b12b-4a28-8135-de11f2f1d496
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox6 0    
+#CheckBox8 0    
+
+OBJ_X_LENGTH 5000
+*DZ_V 0
+*LAT_WC 2030
+*LAT_WC_2 1863
+*HWC 520
+*WHEEL_RATIO 0.99
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_9dc8d573-d8fc-4f9d-92f0-02b27f88cf1a.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_OFFSET_X 0
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_OFFSET_X -5
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_ANGLE_X 180
+SET_OFFSET_X -5
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.494
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_989aca92-e840-4f8f-940f-b90e8d87323e.par
+#BlueLink1 Animator: Shape Assembly`2A LCF: Box Trailer` Generic Truck` , Vehicle Body`ShpGrp_989aca92-e840-4f8f-940f-b90e8d87323e
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_7ec24b3e-9e6d-4354-a1b3-2bf8d4187666.par
+#BlueLink3 Animator: Shape File Link`2A LCF: Brake Lights` Trucks: Chassis` , Brake Lights`Shape_7ec24b3e-9e6d-4354-a1b3-2bf8d4187666
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_42fdff45-a2ee-47ab-9b27-ccf09be65a23.par
+#BlueLink7 Animator: Shape Assembly`Generic LCF Truck Cab` Generic Truck` , Vehicle Body`ShpGrp_42fdff45-a2ee-47ab-9b27-ccf09be65a23
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a
+
+EXPORT_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { 2A Lead Units } 2A LCF Van
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 2A LCF Van
+#Category: 2A Lead Units
+#FileID  : AniVeh_9dc8d573-d8fc-4f9d-92f0-02b27f88cf1a
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

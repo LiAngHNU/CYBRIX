@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Animator: HUD`Drive-Off OK Text`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+
+#RingCtrl0 1
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 1
+*TITLE_1 Drive-off: Ok / Not Ok
+*LOCX_1 1
+*LOCY_1 25
+*VAR_NAME_1 drvoff
+*COLOR_1 1 1 1
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Drive-off: Ok / Not Ok AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 20 locY 250
+#Selection_4 Fixed: 1 VarName: drvoff  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_drvoff
+WRT_drvoff
+ADD_ENTITY hud_text Text Output
+location 20 250 18 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is drvoff
+prefix Drive-off: Ok / Not Ok
+min_width_prefix 20
+value drvoff
+precision 0
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Drive-Off OK Text
+#Library : Animator: HUD
+#DataSet : Drive-Off OK Text
+#Category: HUD Groups
+#FileID  : HUD_0ee1f308-cfbb-4147-9493-118963e307bb
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

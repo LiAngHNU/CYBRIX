@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Animator: HUD`Blind Spot Alerts`Alerts
+#CheckBox1 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox6 0    
+
+#RingCtrl0 2
+#RingCtrl1 3
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 4
+#RingCtrl6 2
+#RingCtrl7 2
+#RingCtrl8 1
+*VAR_NAME_1 Alert_L
+*VAR_NAME_2 Alert_R
+
+
+#Selection 3 for Icon 0
+#Selection_1 3 for Icon
+#Selection_2 Title:  AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: Alert_L  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+! Blind Spot Left
+ANI_Alert_L
+WRT_Alert_L
+ADD_ENTITY hud_image Blind Spot Left
+location 0 0 128 128
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity Alert_L
+image_file Resources\Animator\2D_HUD_Icons\Blind_Spot\Left_Blind_spot.png
+END_ENTITY hud_image Blind Spot Left
+#Selection 4 for Icon 1
+#Selection_1 4 for Icon
+#Selection_2 Title:  AlX 2 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: Alert_R  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+! Blind Spot Right
+ANI_Alert_R
+WRT_Alert_R
+ADD_ENTITY hud_image Blind Spot Right
+location 0 0 128 128
+align_x right
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity Alert_R
+image_file Resources\Animator\2D_HUD_Icons\Blind_Spot\Right_Blind_spot.png
+END_ENTITY hud_image Blind Spot Right
+
+LOG_ENTRY Used Dataset: Animator: HUD; { Alerts } Blind Spot Alerts
+#Library : Animator: HUD
+#DataSet : Blind Spot Alerts
+#Category: Alerts
+#FileID  : HUD_5d5f7982-ee80-49a3-98b1-add3ef4a979a
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

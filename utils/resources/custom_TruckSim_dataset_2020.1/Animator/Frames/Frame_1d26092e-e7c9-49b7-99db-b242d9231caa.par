@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Control Point Reference`Tracking: Vehicle
+ADD_REFERENCE_FRAME Frame_1d26092e-e7c9-49b7-99db-b242d9231caa
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S_Ref
+SET_Y_NAME Y_S_Ref
+SET_Z_NAME Z_S_Ref
+
+PARSFILE Animator\STL\Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37.par
+#BlueLink0 Animator: Shape File Link`Sphere 0.2 m (Green)` Geometric Shapes` , Animator Data`Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37
+
+WRT_X_S_Ref
+ANI_X_S_Ref
+WRT_Y_S_Ref
+ANI_Y_S_Ref
+WRT_Z_S_Ref
+ANI_Z_S_Ref
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Control Point Reference
+#Library : Animator: Reference Frame
+#DataSet : Control Point Reference
+#Category: Tracking: Vehicle
+#FileID  : Frame_1d26092e-e7c9-49b7-99db-b242d9231caa
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

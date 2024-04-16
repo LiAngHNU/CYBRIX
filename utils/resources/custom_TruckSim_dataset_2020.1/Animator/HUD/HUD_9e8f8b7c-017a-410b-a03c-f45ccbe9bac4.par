@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Animator: HUD`ESC Alert`Alerts
+#CheckBox1 1    
+#CheckBox3 0    
+
+#RingCtrl0 1
+#RingCtrl1 6
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+*LOCX_1 0
+*VAR_NAME_1 ESC_Active
+
+
+#Selection 6 for Icon 0
+#Selection_1 6 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: ESC_Active  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+! ESC Alert
+ANI_ESC_Active
+WRT_ESC_Active
+ADD_ENTITY hud_image HUD_ESC_Alert
+location 0 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity ESC_Active
+image_file Resources\Animator\2D_HUD_Icons\Stability_Control\Stability_Control.png
+END_ENTITY hud_image HUD_ESC_Alert
+
+LOG_ENTRY Used Dataset: Animator: HUD; { Alerts } ESC Alert
+#Library : Animator: HUD
+#DataSet : ESC Alert
+#Category: Alerts
+#FileID  : HUD_9e8f8b7c-017a-410b-a03c-f45ccbe9bac4
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

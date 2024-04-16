@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`Driver View: Tour Bus`Driver View
+#RingCtrl1 1
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+ADD_REFERENCE_FRAME driver_full_motion
+reference_frame_ghosts off
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xo
+SET_Y_NAME Yo
+SET_Z_NAME Zo
+SET_ROLL_NAME Roll_E
+SET_PITCH_NAME pitch
+SET_YAW_NAME Yaw
+add_occupant Occupant view
+set_occupant_reference_frame driver_full_motion
+SET_OCCUPANT_X 0.85
+SET_OCCUPANT_Y 0.65
+SET_OCCUPANT_Z 2.2
+SET_SWIVEL 0
+SET_TILT 7.5
+SET_FIELD_OF_VIEW_OCCUPANT 70
+*SET_LOOKPOINT_X 1
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 1
+*SET_AZIMUTH 10
+*SET_ELEVATION 2.5
+FOG_SCALE 0
+
+#EMBEDDED_NOTES
+#This dataset shows how to view the vehicle motions from the point of view of the driver. The XYZ coordinates specify the location of the driver head in the sprung-mass coordinate system.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Driver View } Driver View: Tour Bus
+#Library : Animator: Camera Setup
+#DataSet : Driver View: Tour Bus
+#Category: Driver View
+#FileID  : Camera_7938e83e-6116-4453-aacf-1166ee69483b
+#Product : TruckSim 2020.1
+#VehCode Camera
+
+END

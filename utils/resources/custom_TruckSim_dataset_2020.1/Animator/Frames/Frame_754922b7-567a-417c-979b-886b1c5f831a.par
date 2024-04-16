@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Aero Fy`Aero Forces and Moments
+ADD_REFERENCE_FRAME Frame_754922b7-567a-417c-979b-886b1c5f831a
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_RP1
+SET_Y_NAME Y_RP1
+SET_Z_NAME Z_RP1
+SET_ROLL_NAME Roll_E
+SET_PITCH_NAME Pitch
+SET_YAW_NAME Yaw
+SET_OFFSET_VAR_Z 0.05
+SET_FRAME_SCALE_Y_NAME FY_SCALE
+
+#MiscYellow0
+define_output FY_SCALE 0;
+eq_out FY_SCALE = FY_AIR * 5
+#ENDMYellow
+
+WRT_X_RP1
+ANI_X_RP1
+WRT_Y_RP1
+ANI_Y_RP1
+WRT_Z_RP1
+ANI_Z_RP1
+WRT_Roll_E
+ANI_Roll_E
+WRT_Pitch
+ANI_Pitch
+WRT_Yaw
+ANI_Yaw
+WRT_FY_SCALE
+ANI_FY_SCALE
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Aero Forces and Moments } Aero Fy
+#Library : Animator: Reference Frame
+#DataSet : Aero Fy
+#Category: Aero Forces and Moments
+#FileID  : Frame_754922b7-567a-417c-979b-886b1c5f831a
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

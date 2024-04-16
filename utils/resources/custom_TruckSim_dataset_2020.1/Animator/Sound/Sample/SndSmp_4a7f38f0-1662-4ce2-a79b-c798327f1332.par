@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Animator: Sound Sample`Diesel 6 Cyl. - Power On`Diesel Engine Sounds
+
+ADD_3D_SOUND Animator\Audio_All_VS\Engine\12L_Diesel\12L_Diesel_External_Power.WAV
+#CheckBox0 1    
+LOOP_SOUND on
+
+#RingCtrl0 Default
+SOUND_AUTO_START Default
+
+SOUND_VOL_MULT 1.0
+SOUND_VOL_MIN 0.9
+SOUND_VOL_MAX 10.0
+SOUND_FREQ_MULT 1.0
+SOUND_FREQ_MIN 0.0
+SOUND_FREQ_MAX 10.0
+
+PARSFILE Animator\Sound\Modifier\SndMod_a6e64dd8-255b-4411-b607-73af88e995f0.par
+#BlueLink0 Animator: Sound Modifier`Power On Loudness: Load Effect` Diesel Engine Sound Modifiers` , Playback Modification 1`SndMod_a6e64dd8-255b-4411-b607-73af88e995f0
+
+PARSFILE Animator\Sound\Modifier\SndMod_2d78cbd6-2225-4443-aae9-5c22f1dc95a4.par
+#BlueLink1 Animator: Sound Modifier`Power On Loudness: Speed Effect` Diesel Engine Sound Modifiers` , Playback Modification 2`SndMod_2d78cbd6-2225-4443-aae9-5c22f1dc95a4
+
+PARSFILE Animator\Sound\Modifier\SndMod_7a369c15-1849-45cf-84cf-934b70069ed9.par
+#BlueLink2 Animator: Sound Modifier`Frequency with RPM` Diesel Engine Sound Modifiers` , Playback Modification 3`SndMod_7a369c15-1849-45cf-84cf-934b70069ed9
+
+
+LOG_ENTRY Used Dataset: Animator: Sound Sample; { Diesel Engine Sounds } Diesel 6 Cyl. - Power On
+#Library : Animator: Sound Sample
+#DataSet : Diesel 6 Cyl. - Power On
+#Category: Diesel Engine Sounds
+#FileID  : SndSmp_4a7f38f0-1662-4ce2-a79b-c798327f1332
+#Product : TruckSim 2020.1
+#VehCode Sound Sample
+
+END

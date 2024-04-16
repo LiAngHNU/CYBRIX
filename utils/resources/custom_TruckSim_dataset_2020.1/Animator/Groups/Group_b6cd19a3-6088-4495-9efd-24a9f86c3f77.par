@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Animator: Group`River Crossing`Roads
+PARSFILE Roads\3D_Road\Road_4595563c-aa50-4111-8d63-d1dbf4dcff30.par
+#BlueLink0 Road: 3D Surface (All Properties)`River Water` Scenic Roads` , Miscellaneous`Road_4595563c-aa50-4111-8d63-d1dbf4dcff30
+
+PARSFILE Roads\3D_Road\Road_f0846ff6-ab10-494e-8273-d18451ea4851.par
+#BlueLink1 Road: 3D Surface (All Properties)`River Bed` Scenic Roads` , Miscellaneous`Road_f0846ff6-ab10-494e-8273-d18451ea4851
+
+
+#CheckBox0 0    
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2d663007-6b94-4c31-b54e-c41ccb776e71.par
+#BlueLink20 Animator: Camera Setup`180 Azm, 20 El, 229 m` Road Reference` , Video Camera`Camera_2d663007-6b94-4c31-b54e-c41ccb776e71
+
+
+#EMBEDDED_NOTES
+#Two road datasets are linked here to create one road.  The "River Water" road is only used for the animation.  The math model will read the road geometry data from both roads, but only use the data from the last road input.  "River Bed" is the road that the vehicle will actually drive on.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Group; { Roads } River Crossing
+#Library : Animator: Group
+#DataSet : River Crossing
+#Category: Roads
+#FileID  : Group_b6cd19a3-6088-4495-9efd-24a9f86c3f77
+#Product : TruckSim 2020.1
+#VehCode Animator Group
+
+END

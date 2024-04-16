@@ -1,0 +1,557 @@
+Group {
+  DataVariance STATIC
+  name "Scene Root"
+  nodeMask 0xffffffff
+  cullingActive TRUE
+  StateSet {
+    rendering_hint DEFAULT_BIN
+    renderBinMode INHERIT
+    GL_LIGHTING ON
+    GL_NORMALIZE ON
+  }
+  num_children 19
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_01_7"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    description "MapChannel:1 = UVmap_0
+MapChannel:2 = LightMapUV
+"
+    referenceFrame RELATIVE
+    Matrix {
+      0.01 0 0 0
+      0 0.01 0 0
+      0 0 0.01 0
+      0 0 0 1
+    }
+    num_children 1
+    Geode {
+      UniqueID Geode_0
+      DataVariance STATIC
+      name "M_CityBkgrnd_9-GEODE"
+      nodeMask 0xffffffff
+      cullingActive TRUE
+      num_drawables 1
+      Geometry {
+        name "Background_02"
+        StateSet {
+          name "Background_02"
+          rendering_hint TRANSPARENT_BIN
+          renderBinMode USE
+          binNumber 6
+          binName OnOffAlphaBin
+          GL_CULL_FACE ON
+          GL_LIGHTING ON
+          GL_NORMALIZE OVERRIDE|OFF
+          GL_BLEND ON
+          Material {
+            UniqueID Material_1
+            ColorMode OFF
+            ambientColor 0.8 0.8 0.8 1
+            diffuseColor 0.8 0.8 0.8 1
+            specularColor 0 0 0 1
+            emissionColor 0 0 0 1
+            shininess 0
+          }
+          BlendFunc {
+            UniqueID BlendFunc_2
+            source SRC_ALPHA
+            destination ONE_MINUS_SRC_ALPHA
+          }
+          textureUnit 0 {
+            GL_TEXTURE_2D ON
+            Texture2D {
+              UniqueID Texture2D_3
+              file "images\\Background_02_di.dds"
+              wrap_s REPEAT
+              wrap_t REPEAT
+              wrap_r CLAMP_TO_EDGE
+              min_filter LINEAR_MIPMAP_LINEAR
+              mag_filter LINEAR
+              maxAnisotropy 1
+              borderColor 0 0 0 0
+              borderWidth 0
+              useHardwareMipMapGeneration TRUE
+              unRefImageDataAfterApply FALSE
+              internalFormatMode USE_S3TC_DXT5_COMPRESSION
+              resizeNonPowerOfTwo FALSE
+              shadowComparison FALSE
+              shadowCompareFunc GL_LEQUAL
+              shadowTextureMode GL_LUMINANCE
+            }
+          }
+        }
+        useDisplayList TRUE
+        useVertexBufferObjects FALSE
+        PrimitiveSets 5
+        {
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            1 2 0 3 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            2 4 3 5 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            4 6 5 7 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            6 8 7 9 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 14
+          {
+            12 10 11 13 14 15 16 17 18 19
+            20 21 22 23 
+          }
+        }
+        VertexArray Vec3Array 24
+        {
+          9695.63 -4637.95 3028.72
+          9695.63 -4637.95 839.656
+          7245.74 -6070.01 839.656
+          7245.74 -6070.01 3028.72
+          5904.67 -8325.8 839.656
+          5904.67 -8325.8 3028.72
+          5769.76 -11472.5 839.656
+          5769.76 -11472.5 3028.72
+          7036.1 -14157.4 839.656
+          7036.1 -14157.4 3028.72
+          14700.8 -4493.83 882.598
+          10476.1 -3625.21 2711.4
+          14700.8 -4493.83 2711.4
+          10476.1 -3625.21 882.598
+          8383.53 -4493.83 2711.4
+          8383.53 -4493.83 882.598
+          5975.08 -7178.67 2660.49
+          5975.08 -7178.67 831.695
+          5461.8 -11245.4 2546.85
+          5461.8 -11245.4 718.047
+          6448.87 -16299.2 2440.04
+          6448.87 -16299.2 611.236
+          8501.98 -19931.6 2509.77
+          8501.98 -19931.6 680.975
+        }
+        NormalBinding PER_VERTEX
+        NormalArray Vec3Array 24
+        {
+          -0.504648 0.863325 0
+          -0.504648 0.863325 0
+          -0.704488 0.709716 0
+          -0.704488 0.709716 0
+          -0.958356 0.285576 0
+          -0.958356 0.285576 0
+          -0.980278 -0.197624 0
+          -0.980278 -0.197624 0
+          -0.904447 -0.426586 0
+          -0.904447 -0.426586 -0
+          0.201395 0.97951 0
+          -0.0951902 0.995459 0
+          0.201395 0.97951 0
+          -0.0951901 0.995459 0
+          -0.577372 0.816481 0
+          -0.579035 0.815303 0
+          -0.907901 0.419184 0
+          -0.911357 0.411616 0
+          -0.999513 -0.0311909 0
+          -0.999347 -0.0361418 0
+          -0.93818 -0.346148 0
+          -0.938036 -0.346538 0
+          -0.870563 -0.492057 0
+          -0.870563 -0.492057 0
+        }
+        TexCoordArray 0 Vec2Array 24
+        {
+          0.0142822 0.996628
+          0.0139313 0
+          0.24292 0
+          0.243286 0.996628
+          0.471924 0
+          0.472168 0.996628
+          0.737305 0
+          0.737793 0.996628
+          1.00293 0
+          1.00293 0.996628
+          0.0139313 0
+          0.376953 0.996628
+          0.0142822 0.996628
+          0.376465 0
+          0.567383 0.996628
+          0.566895 0
+          0.870605 0.996628
+          0.870117 0
+          1.21484 0.996628
+          1.21484 0
+          1.64844 0.996628
+          1.64746 0
+          1.99902 0.996628
+          1.99902 0
+        }
+      }
+    }
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_10"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      -0.0081908 -0.005735 -0.000143618 0
+      0.00573679 -0.00818823 -0.000205108 0
+      3.11062e-08 -0.000250391 0.00999687 0
+      -59.1159 37.5553 1.99853 1
+    }
+    num_children 1
+    Use Geode_0
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_3"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      -0.00949729 -0.00313074 0 0
+      0.00313074 -0.00949729 0 0
+      0 0 0.0118024 0
+      -22.7913 72.7217 1.92047 1
+    }
+    num_children 1
+    Use Geode_0
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_4"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      -0.00949729 -0.00313074 0 0
+      0.00313074 -0.00949729 0 0
+      0 0 0.0109112 0
+      23.1213 133.248 4.50126 1
+    }
+    num_children 1
+    Use Geode_0
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_5"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      -0.00819081 -0.00573365 -0.000189447 0
+      0.00573678 -0.00818634 -0.000270485 0
+      -8.84756e-10 -0.000330231 0.00999455 0
+      -67.2731 -68.0212 -0.0663831 1
+    }
+    num_children 1
+    Use Geode_0
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_6"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      -0.00819085 -0.00573672 0 0
+      0.00573672 -0.00819085 0 0
+      0 0 0.00919895 0
+      -62.769 -171.339 -0.795684 1
+    }
+    num_children 1
+    Use Geode_0
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_7"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      -0.00531881 -0.00846819 0 0
+      0.00846819 -0.00531881 0 0
+      0 0 0.00861011 0
+      -27.2463 -207.029 -0.795684 1
+    }
+    num_children 1
+    Use Geode_0
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_8"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      0.00218864 -0.00975756 0 0
+      0.00975756 0.00218864 0 0
+      0 0 0.00861011 0
+      13.6796 -141.741 -0.795684 1
+    }
+    num_children 1
+    Use Geode_0
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_9"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      0.00218864 -0.00975756 0 0
+      0.00975756 0.00218864 0 0
+      0 0 0.00861011 0
+      102.783 -129.277 -0.795684 1
+    }
+    num_children 1
+    Use Geode_0
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_02_20"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    description "MapChannel:1 = UVmap_0
+MapChannel:2 = LightMapUV
+"
+    referenceFrame RELATIVE
+    Matrix {
+      0.01 0 0 0
+      0 0.01 0 0
+      0 0 0.01 0
+      57.29 -178 -0.417683 1
+    }
+    num_children 1
+    Geode {
+      UniqueID Geode_4
+      DataVariance STATIC
+      name "M_CityBkgrnd_18-GEODE"
+      nodeMask 0xffffffff
+      cullingActive TRUE
+      num_drawables 1
+      Geometry {
+        name "Background_02"
+        StateSet {
+          name "Background_02"
+          rendering_hint TRANSPARENT_BIN
+          renderBinMode USE
+          binNumber 6
+          binName OnOffAlphaBin
+          GL_CULL_FACE ON
+          GL_LIGHTING ON
+          GL_NORMALIZE OVERRIDE|OFF
+          GL_BLEND ON
+          Use Material_1
+          Use BlendFunc_2
+          textureUnit 0 {
+            GL_TEXTURE_2D ON
+            Use Texture2D_3
+          }
+        }
+        useDisplayList TRUE
+        useVertexBufferObjects FALSE
+        PrimitiveSets 4
+        {
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            1 2 0 3 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            2 4 3 5 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            4 6 5 7 
+          }
+          DrawElementsUShort TRIANGLE_STRIP 4
+          {
+            6 8 7 9 
+          }
+        }
+        VertexArray Vec3Array 10
+        {
+          4373.42 1681.77 3028.72
+          4373.42 1681.77 839.656
+          1923.53 249.712 839.656
+          1923.53 249.712 3028.72
+          582.453 -2006.08 839.656
+          582.453 -2006.08 3028.72
+          447.541 -5152.76 839.656
+          447.541 -5152.76 3028.72
+          1713.89 -7837.66 839.656
+          1713.89 -7837.66 3028.72
+        }
+        NormalBinding PER_VERTEX
+        NormalArray Vec3Array 10
+        {
+          -0.504648 0.863325 0
+          -0.504648 0.863325 0
+          -0.704488 0.709716 0
+          -0.704488 0.709716 0
+          -0.958356 0.285576 0
+          -0.958356 0.285576 0
+          -0.980278 -0.197624 0
+          -0.980278 -0.197624 0
+          -0.904447 -0.426586 0
+          -0.904447 -0.426586 -0
+        }
+        TexCoordArray 0 Vec2Array 10
+        {
+          0.0142822 0.996628
+          0.0139313 0
+          0.24292 0
+          0.243286 0.996628
+          0.471924 0
+          0.472168 0.996628
+          0.737305 0
+          0.737793 0.996628
+          1.00293 0
+          1.00293 0.996628
+        }
+      }
+    }
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_22"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      0.01 0 0 0
+      0 0.00997864 0.000653184 0
+      0 -0.000653184 0.00997864 0
+      102.756 17.6469 4.08225 1
+    }
+    num_children 1
+    Use Geode_4
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_11"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      0.00932316 0.00361608 5.24411e-05 0
+      -0.00360873 0.00929279 0.000788078 0
+      0.000236243 -0.000753662 0.00996876 0
+      112.367 75.4947 8.78328 1
+    }
+    num_children 1
+    Use Geode_4
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_12"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      0.00932322 0.00360752 -0.000251616 0
+      -0.00360857 0.00932621 4.23323e-06 0
+      0.000236189 8.68506e-05 0.00999683 0
+      122.549 141.454 8.42787 1
+    }
+    num_children 1
+    Use Geode_4
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_13"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      0.00859586 0.00510371 -0.000251616 0
+      -0.00510523 0.00859864 4.23315e-06 0
+      0.000218516 0.000124817 0.00999683 0
+      109.689 201.725 8.20506 1
+    }
+    num_children 1
+    Use Geode_4
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_14"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      0.00143846 0.0098928 -0.000251616 0
+      -0.00989592 0.00143902 4.23342e-06 0
+      4.0396e-05 0.000248388 0.00999683 0
+      77.1796 216.42 8.20506 1
+    }
+    num_children 1
+    Use Geode_4
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_15"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      -0.00378493 0.00925262 -0.000251616 0
+      -0.00925559 -0.00378603 4.23381e-06 0
+      -9.13452e-05 0.000234488 0.00999683 0
+      22.2151 234.185 11.3844 1
+    }
+    num_children 1
+    Use Geode_4
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_16"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      0.000173798 0.00999532 -0.000251616 0
+      -0.00999849 0.000173959 4.23394e-06 0
+      8.60905e-06 0.000251504 0.00999683 0
+      45.5423 239.623 10.1165 1
+    }
+    num_children 1
+    Use Geode_4
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_17"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      -0.0050572 0.00862331 -0.000251616 0
+      -0.00862609 -0.00505871 4.23415e-06 0
+      -0.000123634 0.000219187 0.00999683 0
+      -26.479 229.371 10.1165 1
+    }
+    num_children 1
+    Use Geode_4
+  }
+  MatrixTransform {
+    DataVariance STATIC
+    name "M_CityBkgrnd_18"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      -0.00924263 0.00380927 -0.000251611 0
+      -0.00381057 -0.00924551 4.23444e-06 0
+      -0.000231014 9.9792e-05 0.00999683 0
+      -45.7173 214.589 9.30788 1
+    }
+    num_children 1
+    Use Geode_4
+  }
+}

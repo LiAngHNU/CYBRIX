@@ -1,0 +1,612 @@
+Run made by TruckSim 2020.1 at 11:53 on June 29, 2020.
+
+Started with simfile: simfile.sim
+
+Include PARSFILE "Results\Run_e2b368a0-163a-49ab-b2a7-bef16a0aa1d3\Run_all.par"
+Installed keywords into VS Solver for MODEL_LAYOUT S_S__S__DS__S
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Vehicle X-Y-Z
+Used Dataset: Animator: Camera Setup; { Vehicle Reference } 13 Azm, 4.5 El, 35 m
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Steer
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Steer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Steer
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Steer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Driven
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Drive)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Driven
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Drive)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Driven
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Drive)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Driven
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Drive)
+Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Steer / Drive Tires: Internal Table Model } 3000 kg Steer, 3000kg Drive (510 mm)
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Front } Roll Center: 53 mm Below Axle
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Heavy Duty (Steered)
+Used Dataset: Suspension: Solid Axle System Kinematics; { Steer Axle } 5.5t Steer, Single Wheel - Kinematics
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 15 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +150 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 15 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +150 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 8500 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 5.5t Leaf: +150 mm, -150 mm Travel
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 7.5 kN-m, Air
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 7.5 kN-m, Air
+Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 7.5 kN-m Capacity, Air (2 ch. ABS)
+Used Dataset: Steering System: Steer Gain vs. Speed; { Constant } Constant: One (Always Steered)
+Used Dataset: Steering System: Kinematics for One Wheel; { 4 m Wheelbase } Left Wheel, 4 m Wheelbase
+Used Dataset: Steering: Parking Torque; { Constant } Constant: Zero
+Used Dataset: Steering System: Kinematics for One Wheel; { 4 m Wheelbase } Right Wheel, 4 m Wheelbase
+Used Dataset: Steering: Parking Torque; { Constant } Constant: Zero
+Used Dataset: Steering System; { Medium - Heavy Duty Steering } Short (4 m) Wheelbase
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Rear } Roll Center: 195 mm Above Axle
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Heavy Duty (Driven)
+Used Dataset: Suspension: Solid Axle System Kinematics; { Drive Axle } 8.5t Drive, Dual Wheels
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 1500 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 8.5t Leaf: +100 mm, -60 mm Travel
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 10 kN-m Capacity, Air (2 ch. ABS)
+Used Dataset: Vehicle: Lead Unit Sprung Mass; { Tractors } 2A Day Cab
+Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; { Tractor } Conv. Cab w/ Fairings
+Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; { Linear Interpolation } Linear: 0.082 1/deg.
+Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; { Spline Interpolation } Spline: -0.15 at 0 deg.
+Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.064 1/deg.
+Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.2 at 0 deg., 0.38 at 25 deg.
+Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; { Linear Interpolation } Linear: 0.012 1/deg.
+Used Dataset: Aerodynamics: Basic; { Conventional Cab } Conv. Cab w/ Fairings, 4.8 m Ref.
+Used Dataset: Powertrain: Engine; { Engines: 150 kW to 250 kW } 225 kW Diesel (2100 RPM)
+Used Dataset: Powertrain: Clutch Torque; Maximum 2000 N-m (Linear)
+Used Dataset: Powertrain: Shift Schedule; { 7-Speed Shift Schedule, 2100 RPM } 7 Spd. MT, 1-2, 2100 RPM
+Used Dataset: Powertrain: Shift Schedule; { 7-Speed Shift Schedule, 2100 RPM } 7 Spd. MT, 2-3, 2100 RPM
+Used Dataset: Powertrain: Shift Schedule; { 7-Speed Shift Schedule, 2100 RPM } 7 Spd. MT, 3-4, 2100 RPM
+Used Dataset: Powertrain: Shift Schedule; { 7-Speed Shift Schedule, 2100 RPM } 7 Spd. MT, 4-5, 2100 RPM
+Used Dataset: Powertrain: Shift Schedule; { 7-Speed Shift Schedule, 2100 RPM } 7 Spd. MT, 5-6, 2100 RPM
+Used Dataset: Powertrain: Shift Schedule; { 7-Speed Shift Schedule, 2100 RPM } 7 Spd. MT, 6-7, 2100 RPM
+Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 7-Speed } 7 Spd., MT, 2100 RPM
+Used Dataset: Powertrain: Rear Differential; { Open } Open Differential: Gear Ratio 4.4:1
+Used Dataset: Powertrain: Rear-Wheel Drive; { 200 kW - 250 kW Powertrains } 225 kW, 7 Speed MT
+Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Frame Rails
+Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Mudflaps
+Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Brake Lights (Off)
+Used Dataset: Animator: Shape Assembly; { Frame Rails } Lead Unit Frame Rails
+Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Brake Lights (On)
+Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Reverse Lights (On)
+Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Day Cab: Cab Body
+Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Day Cab: Cab Details
+Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Day Cab: Driver (Caucasian Male)
+Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Day Cab: Steering Wheel
+Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Day Cab: Windows
+Used Dataset: Animator: Shape Assembly; { Cabs } Day Cab (Non-scaled)
+Used Dataset: Animator: Vehicles and Sensor Targets; { 2A Lead Units } 2A Day Cab
+Used Dataset: Steering Wheel Torque; Linear: 1/25 (Typical)
+Used Dataset: Hitch: Roll Moment; 100 kN-m/deg (1 deg lash)
+Used Dataset: Hitch: Pitch Moment; 100 kN-m/deg (-11 to 7 deg Lash)
+Used Dataset: Hitch: Yaw Moment; 100 kN-m/deg (180 deg Lash)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Hitches: 5th Wheel (Heavy Duty)
+Used Dataset: Hitch: Joint Assembly; { 5th Wheel Hitches } 5th Wheel
+Used Dataset: Vehicle: Lead Unit with 2 Axles; { 2A Tractors } 2A Day Cab
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Rear } Roll Center: 195 mm Above Axle
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Trailer Axle
+Used Dataset: Suspension: Solid Axle System Kinematics; { Trailer Axle } 15.5t Trailer, Dual Wheels - Kinematics
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 3000 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 15.5t Leaf: +100 mm, -60 mm Travel
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 10 kN-m Capacity, Air (2 ch. ABS)
+Used Dataset: Hitch: Roll Moment; 100 kN-m/deg (+/- 30 deg Lash)
+Used Dataset: Hitch: Pitch Moment; 100 kN-m/deg (180 deg Lash)
+Used Dataset: Hitch: Yaw Moment; 100 kN-m/deg (180 deg Lash)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Hitches: Pintle Hitch
+Used Dataset: Hitch: Joint Assembly; { Pintle Hitches } Pintle Hitch
+Used Dataset: Vehicle: Trailer Sprung Mass; { 1A Trailer } 1A Trailer (Typical)
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Box Trailer: Walls
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Box Trailer: Mudflaps
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Box Trailer: Details
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Box Trailer: Hitch Pin
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Box Trailer: Landing Jacks
+Used Dataset: Animator: Shape Assembly; { Trailers } 1A Box Trailer w/ Logo (Transparent)
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } 1A Box Trl: Brake Lights
+Used Dataset: Animator: Vehicles and Sensor Targets; { Trailers: 1-axle } 1A CBT (Transparent)
+Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; CFx = 0
+Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; CFy = 0
+Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; CFz = 0
+Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; CMx = 0
+Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; CMy = 0
+Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; CMz = 0
+Used Dataset: Aerodynamics: Basic; No Aerodynamics
+Used Dataset: Vehicle: Trailer with 1 Axle; { Van / Container Trailers } 1A Van Trl, Pintle (Transparent)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(1) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 1, Left)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(2) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 1, Right)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(3) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 2, Left)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(4) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 2, Right)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(5) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 3, Left)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(6) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 3, Right)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(7) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 4, Left)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(8) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 4, Right)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Crate, Extra Small
+WARNING: The keyword H_CG_PL(9) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Crate for 1A Van Trailer, Rear
+Used Dataset: Generic Data Group; { Multiple Payloads } 1A Van Trailer: 9 Payloads
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Rear } Roll Center: 195 mm Above Axle
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Trailer Axle
+Used Dataset: Suspension: Solid Axle System Kinematics; { Trailer Axle } 10t Trailer, Dual Wheels
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 50 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 50 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 3000 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 10t Leaf: +100 mm, -60 mm Travel
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 7.5 kN-m, Air
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 7.5 kN-m, Air
+Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 7.5 kN-m Capacity, Air (2 ch. ABS)
+Used Dataset: Vehicle: Trailer Sprung Mass; { Dollies } 1A Dolly
+Used Dataset: Animator: Shape File Link; { Trailers: Dollies } Dolly (Single): Frame
+Used Dataset: Animator: Shape File Link; { Trailers: Dollies } Dolly (Single): Details
+Used Dataset: Animator: Shape File Link; { Trailers: Dollies } Dolly: Pintle Hitch Ring
+Used Dataset: Animator: Shape Assembly; { Dollies } 1-Axle Dolly
+Used Dataset: Hitch: Roll Moment; 100 kN-m/deg (1 deg lash)
+Used Dataset: Hitch: Pitch Moment; 100 kN-m/deg (-11 to 7 deg Lash)
+Used Dataset: Hitch: Yaw Moment; 100 kN-m/deg (180 deg Lash)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Hitches: 5th Wheel (Heavy Duty)
+Used Dataset: Hitch: Joint Assembly; { 5th Wheel Hitches } 5th Wheel
+Used Dataset: Vehicle: Dolly with 1 Axle; 1A Dolly 10T
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Rear } Roll Center: 195 mm Above Axle
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Trailer Axle
+Used Dataset: Suspension: Solid Axle System Kinematics; { Trailer Axle } 15.5t Trailer, Dual Wheels - Kinematics
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 3000 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 15.5t Leaf: +100 mm, -60 mm Travel
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 10 kN-m Capacity, Air (2 ch. ABS)
+Used Dataset: Vehicle: Trailer Sprung Mass; { 1A Trailer } 1A Trailer (Typical 28ft)
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Box Trailer: Walls
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Box Trailer: Mudflaps
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Box Trailer: Details
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Box Trailer: Hitch Pin
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Box Trailer: Landing Jacks
+Used Dataset: Animator: Shape Assembly; { Trailers } 1A Box Trailer w/ Logo (Transparent)
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } 1A Box Trl: Brake Lights
+Used Dataset: Animator: Vehicles and Sensor Targets; { Trailers: 1-axle } 1A CBT (Transparent)
+Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; CFx = 0
+Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; CFy = 0
+Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; CFz = 0
+Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; CMx = 0
+Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; CMy = 0
+Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; CMz = 0
+Used Dataset: Aerodynamics: Basic; No Aerodynamics
+Used Dataset: Vehicle: Trailer with 1 Axle; { Van / Container Trailers } 1A Van Trl, Dolly (Transparent)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(10) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 1, Left)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(11) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 1, Right)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(12) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 2, Left)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(13) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 2, Right)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(14) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 3, Left)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(15) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 3, Right)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(16) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 4, Left)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Drum
+WARNING: The keyword H_CG_PL(17) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Large Drum (Row 4, Right)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Crate, Extra Small
+WARNING: The keyword H_CG_PL(18) has been deprecated
+Used Dataset: Payload: Custom; { Payloads: 1A Van Trailer } Crate for 1A Van Trailer, Rear
+Used Dataset: Generic Data Group; { Multiple Payloads } 1A Van Trailer: 9 Payloads
+Used Dataset: Vehicle: Loaded Combination; { Day-Cab Tractor-Trailers } S_S + S + dS + S, 18 Payloads
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Vehicle Dynamics Tests } Double Lane Change (Quick Start)
+Used Dataset: Control: Braking MC Pressure (Open Loop); { Constant } Constant: 0 MPa
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+ Straight Path East <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Used Dataset: Road: Animator Surface Shapes; { Flat Test Pads } DLC Road
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Used Dataset: Road: Animator Repeated Object; { Cones } DLC Cones
+Used Dataset: Road: Animator Repeated Object; { Trees } Trees (-100, 400)
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Large
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Large
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Large
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Large
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Large
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Large
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Large
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Large
+Used Dataset: Animator: Shape File Link; { Environment: Trees } Elm: Summer, Large
+Used Dataset: Road: 3D Surface (All Properties); { Flat Test Pads } Double Lane Change
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tracking } Lateral Tracking vs. Station
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Steering } Steering Wheel Angle vs. Time
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Steering } Road Wheel Steer (Axle 1)
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Vehicle Motion } Lateral Accel. of CG's vs. Time
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Speed (Vxz_Fwd) vs. Time
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Vehicle Motion } Roll Angle of Sprung Masses vs. Time
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Vehicle Motion } Pitch Angle of Sprung Masses vs. Time
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Vehicle Motion } Yaw Angle of Sprung Masses vs. Time
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Vehicle Motion } Yaw Rate of Sprung Masses vs. Time
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Kinematics } Slip Angles, Lagged (Axle 1 - 4)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Forces } Vertical Axle Forces
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Suspension Motion } Jounce (Axle 1)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Suspension } Jounce (Axle 2)
+Used Dataset: Procedures; { Handling Tests } DLC @ 50 km/h
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (5 Axles) } 5A - Fx Tire Force Arrows
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (5 Axles) } 5A - Fy Tire Force Arrows
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (5 Axles) } 5A - Fz Tire Force Arrows
+Used Dataset: Generic Data Group; { Tire Force Arrows } 5 Axle - Fx, Fy, Fz
+ 2A Tractor, 18 Payloads <Vehicle Configurations>
+Used Dataset: TruckSim Run Control; { Vehicle Configurations } 2A Tractor, 18 Payloads
+
+Time to read input = 0.0770816
+Function F_JNC_STOP_TABLE(4,1,1) extrapolated (out of range LOW) for X = 13.1783 mm at T = 0
+Function F_REB_STOP_TABLE(4,1,1) extrapolated (out of range HIGH) for X = 13.1783 mm at T = 0
+Function F_JNC_STOP_TABLE(4,1,2) extrapolated (out of range LOW) for X = 13.1783 mm at T = 0
+Function F_REB_STOP_TABLE(4,1,2) extrapolated (out of range HIGH) for X = 13.1783 mm at T = 0
+Function F_JNC_STOP_TABLE(3,1,1) extrapolated (out of range LOW) for X = 13.0837 mm at T = 0
+Function F_REB_STOP_TABLE(3,1,1) extrapolated (out of range HIGH) for X = 13.0837 mm at T = 0
+Function F_JNC_STOP_TABLE(3,1,2) extrapolated (out of range LOW) for X = 13.0837 mm at T = 0
+Function F_REB_STOP_TABLE(3,1,2) extrapolated (out of range HIGH) for X = 13.0837 mm at T = 0
+Function F_JNC_STOP_TABLE(2,1,1) extrapolated (out of range LOW) for X = 13.3099 mm at T = 0
+Function F_REB_STOP_TABLE(2,1,1) extrapolated (out of range HIGH) for X = 13.3099 mm at T = 0
+Function F_JNC_STOP_TABLE(2,1,2) extrapolated (out of range LOW) for X = 13.3099 mm at T = 0
+Function F_REB_STOP_TABLE(2,1,2) extrapolated (out of range HIGH) for X = 13.3099 mm at T = 0
+Function F_JNC_STOP_TABLE(1,1,1) extrapolated (out of range LOW) for X = 7.69909 mm at T = 0
+Function F_REB_STOP_TABLE(1,1,1) extrapolated (out of range HIGH) for X = 7.69909 mm at T = 0
+Function F_JNC_STOP_TABLE(1,1,2) extrapolated (out of range LOW) for X = 7.70342 mm at T = 0
+Function F_REB_STOP_TABLE(1,1,2) extrapolated (out of range HIGH) for X = 7.70342 mm at T = 0
+Function F_JNC_STOP_TABLE(1,2,1) extrapolated (out of range LOW) for X = 13.2938 mm at T = 0
+Function F_REB_STOP_TABLE(1,2,1) extrapolated (out of range HIGH) for X = 13.2938 mm at T = 0
+Function F_JNC_STOP_TABLE(1,2,2) extrapolated (out of range LOW) for X = 13.2938 mm at T = 0
+Function F_REB_STOP_TABLE(1,2,2) extrapolated (out of range HIGH) for X = 13.2938 mm at T = 0
+
+Run started: VS output file = Results\Run_e2b368a0-163a-49ab-b2a7-bef16a0aa1d3\LastRun.vsb
+Function INV_CAP_TC_TABLE extrapolated (out of range HIGH) for X = 1.00002 - at T = 0.0005
+
+Run stopped at t = 15. Stop time reached.
+
+Computational time ratio: RTIME = 0.206857 (real time)/(simulation time)
+

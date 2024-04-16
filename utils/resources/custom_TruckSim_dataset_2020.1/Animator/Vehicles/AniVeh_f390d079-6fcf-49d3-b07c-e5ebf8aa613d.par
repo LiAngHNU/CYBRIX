@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`1A B-Train Flatbed`Trailers: 1-axle
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 1
+OBJ_X_LENGTH 8000
+OBJ_Y_LENGTH 2438
+OBJ_Z_LENGTH 180
+*DZ_V 0
+*LAT_WC 1863
+*LAT_WC_2 1863
+*HWC 510
+*WHEEL_RATIO 1
+*LAXLE_1 6700
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_f390d079-6fcf-49d3-b07c-e5ebf8aa613d.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -6.7
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.4845
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -6.7
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.4845
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_53e343da-51f0-4d84-94a7-b570d31e269a.par
+#BlueLink1 Animator: Shape Assembly`B-Train (Scaled)` Trailers` , Vehicle Body`ShpGrp_53e343da-51f0-4d84-94a7-b570d31e269a
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_af54fd0b-bf4b-4274-9e11-b9e39f179d11.par
+#BlueLink3 Animator: Shape File Link`B-Train Flatbed: Brake Lights` Trailers (1 of 2)` , Brake Lights`Shape_af54fd0b-bf4b-4274-9e11-b9e39f179d11
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Trailers: 1-axle } 1A B-Train Flatbed
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 1A B-Train Flatbed
+#Category: Trailers: 1-axle
+#FileID  : AniVeh_f390d079-6fcf-49d3-b07c-e5ebf8aa613d
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

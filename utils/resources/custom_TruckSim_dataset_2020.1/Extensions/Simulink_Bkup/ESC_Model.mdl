@@ -1,0 +1,1146 @@
+Model {
+  Name			  "ESC_Model"
+  Version		  4.0
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Jun 22 11:11:02 2001"
+  Creator		  "pmather"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "ywata"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Aug 04 12:34:03 2008"
+  ModelVersionFormat	  "1.%<AutoIncrement:503>"
+  ConfigurationManager	  "none"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeLogAll		  on
+  BufferReuse		  on
+  Solver		  "ode45"
+  SolverMode		  "SingleTasking"
+  StartTime		  "0"
+  StopTime		  "10"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "0.001"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  Decimation		  "1"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  OptimizeBlockIOStorage  on
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWTemplateMakefile	  "grt_vc.tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  RTWOptions		  "-aEnforceIntegerDowncast=1 -aFoldNonRolledExpr=1 -a"
+"InlineInvariantSignals=0 -aInlineParameters=0 -aLocalBlockOutputs=1 -aRollThr"
+"eshold=5 -aZeroInternalMemoryAtStartup=1 -aZeroExternalMemoryAtStartup=1 -aIn"
+"itFltsAndDblsToZero=1 -aGenerateReport=0 -aGenCodeOnly=0 -aRTWVerbose=1 -aInc"
+"ludeHyperlinkInReport=0 -aLaunchReport=0 -aForceParamTrailComments=0 -aGenera"
+"teComments=1 -aIgnoreCustomStorageClasses=1 -aIncHierarchyInIds=0 -aMaxRTWIdL"
+"en=31 -aShowEliminatedStatements=0 -aPrefixModelToSubsysFcnNames=1 -aIncDataT"
+"ypeInIds=0 -aInsertBlockDesc=0 -aSimulinkBlockComments=1 -aInlinedPrmAccess="
+"\"Literals\"  -aSuppressErrorStatus=0 -aModelReferenceCompliant=1 -aParenthes"
+"esLevel=\"Nominal\" -aModelStepFunctionPrototypeControlCompliant=0 -aPortable"
+"WordSizes=0 -aSupportNonInlinedSFcns=1 -aSupportContinuousTime=1 -aSupportCom"
+"plex=1 -aSupportNonFinite=1 -aSupportAbsoluteTime=1 -aTargetPreCompLibLocatio"
+"n=\"\" -aTargetLibSuffix=\"\" -aTargetFcnLib=\"ansi_tfl_tmw.mat\" -aMultiInst"
+"anceERTCode=0 -aLogVarNameModifier=\"rt_\" -aIsPILTarget=0 -aCombineOutputUpd"
+"ateFcns=0 -aGenerateASAP2=0 -aGenerateClassInterface=0 -aGenerateTestInterfac"
+"es=0 -aGenerateSampleERTMain=0 -aGenerateFullHeader=1 -aUtilityFuncGeneration"
+"=\"Auto\" -aIncludeFileDelimiter=\"Auto\" -aIncludeMdlTerminateFcn=1 -aPurely"
+"IntegerCode=0 -aERTCustomFileBanners=0 -aRTWCAPIStates=0 -aRTWCAPIParams=0 -a"
+"RTWCAPISignals=0 -aMatFileLogging=1 -aGenFloatMathFcnCalls=\"ANSI_C\" -aExtMo"
+"deIntrfLevel=\"Level1\" -aExtModeMexFile=\"ext_comm\" -aExtModeTransport=0 -a"
+"ExtModeStaticAllocSize=1000000 -aExtModeTesting=0 -aExtModeStaticAlloc=0 -aEx"
+"tMode=0  -aPrefixModelToSubsysFcnNames=1 "
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Abs
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Clock
+      DisplayTime	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      DeadZone
+      LowerValue	      "-0.5"
+      UpperValue	      "0.5"
+      SaturateOnIntegerOverflow	on
+      LinearizeAsGain	      on
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+    }
+    Block {
+      BlockType		      MinMax
+      Function		      "min"
+      Inputs		      "1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+    }
+    Block {
+      BlockType		      Scope
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      Signum
+    }
+    Block {
+      BlockType		      SubSystem
+      Permissions	      "ReadWrite"
+      TreatAsAtomicUnit	      off
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Switch
+      		      ""
+      Threshold		      "0"
+      	      
+      	
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "tp340093"
+    Location		    [103, 163, 776, 630]
+    Open		    off
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Clock
+      Name		      "Clock"
+      Position		      [60, 395, 80, 415]
+      Decimation	      "10"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 3]
+      Position		      [365, 23, 370, 97]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "3"
+      Port {
+	PortNumber		1
+	Name			"Steering Angle"
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"Vx"
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"Yaw Rate"
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "ESC Disable"
+      Position		      [15, 42, 65, 58]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Value		      "[0 0 0 0]"
+      Port {
+	PortNumber		1
+	Name			"ESC Disable"
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Electronic Stability Controller"
+      Ports		      [3, 1]
+      Position		      [105, 223, 320, 337]
+      Orientation	      "left"
+      BackgroundColor	      "lightBlue"
+      DropShadow	      on
+      InitFcn		      "Par_M = 1429;\nPar_Lf = 1.05;\nPar_Lr = 1.569;"
+"\nPar_Cf = 79240;\nPar_Cr = 87002;\nPar_Is = 20;\nPar_Kp = 37;\nPar_Mu = 0.85"
+";\nL=Par_Lf+Par_Lr;\nK=Par_M*(Par_Lr*Par_Cr-Par_Lf*Par_Cf)/Par_Cf/Par_Cr/L/L;"
+      FontName		      "Arial"
+      FontSize		      14
+      FontWeight	      "bold"
+      RTWSystemCode	      "Auto"
+      Port {
+	PortNumber		1
+	Name			"ESC Enable"
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Electronic Stability Controller"
+	Location		[461, 410, 1233, 638]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Steering Angle\n(deg)"
+	  Position		  [45, 103, 75, 117]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Vx (km/h)"
+	  Position		  [45, 58, 75, 72]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Yaw Rate\n(deg/s)"
+	  Position		  [45, 168, 75, 182]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Bicycle Model"
+	  Ports			  [2, 1]
+	  Position		  [150, 41, 320, 134]
+	  BackgroundColor	  "lightBlue"
+	  FontName		  "Arial"
+	  FontSize		  14
+	  FontWeight		  "bold"
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "Bicycle Model"
+	    Location		    [564, 424, 1227, 680]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vx(m/s)"
+	      Position		      [45, 28, 75, 42]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Steering Angle"
+	      Position		      [40, 133, 70, 147]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontWeight	      "bold"
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Abs
+	      Name		      "Abs"
+	      Position		      [410, 81, 435, 99]
+	      ShowName		      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Const"
+	      Position		      [250, 111, 270, 129]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "G"
+	      Position		      [325, 185, 355, 205]
+	      Value		      "9.81"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [140, 127, 170, 153]
+	      ShowName		      off
+	      Gain		      "0.01745329/Par_Is"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "K"
+	      Position		      [155, 205, 185, 225]
+	      ShowName		      off
+	      Value		      "K"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "L"
+	      Position		      [220, 91, 240, 109]
+	      ShowName		      off
+	      Value		      "L"
+	    }
+	    Block {
+	      BlockType		      MinMax
+	      Name		      "MinMax"
+	      Ports		      [2, 1]
+	      Position		      [150, 40, 175, 75]
+	      ShowName		      off
+	      Function		      "max"
+	      Inputs		      "2"
+	    }
+	    Block {
+	      BlockType		      MinMax
+	      Name		      "MinMax1"
+	      Ports		      [2, 1]
+	      Position		      [470, 106, 490, 139]
+	      ShowName		      off
+	      Function		      "min"
+	      Inputs		      "2"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Mu"
+	      Position		      [285, 209, 310, 231]
+	      Value		      "Par_Mu"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product2"
+	      Ports		      [3, 1]
+	      Position		      [385, 157, 405, 233]
+	      ShowName		      off
+	      Inputs		      "/**"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product3"
+	      Ports		      [3, 1]
+	      Position		      [245, 164, 265, 226]
+	      ShowName		      off
+	      Inputs		      "3"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product4"
+	      Ports		      [2, 1]
+	      Position		      [525, 78, 545, 107]
+	      ShowName		      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Signum
+	      Name		      "Sign"
+	      Position		      [470, 46, 490, 74]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Vmin"
+	      Position		      [100, 56, 120, 74]
+	      Value		      "0.1"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Yaw Rate_bk"
+	      Ports		      [4, 1]
+	      Position		      [360, 51, 380, 129]
+	      ShowName		      off
+	      Inputs		      "**//"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "sum1"
+	      Ports		      [2, 1]
+	      Position		      [290, 110, 310, 130]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|++"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Yaw Rate\n(rad/s)"
+	      Position		      [585, 85, 615, 105]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	    Line {
+	      SrcBlock		      "Vx(m/s)"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      DstBlock		      "MinMax"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Vmin"
+	      SrcPort		      1
+	      DstBlock		      "MinMax"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Steering Angle"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "MinMax"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		DstBlock		"Yaw Rate_bk"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 95]
+		Branch {
+		  Points		  [0, 20]
+		  Branch {
+		    DstBlock		    "Product3"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 20]
+		    DstBlock		    "Product3"
+		    DstPort		    2
+		  }
+		}
+		Branch {
+		  Points		  [120, 0; 0, 15]
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -60]
+	      DstBlock		      "Yaw Rate_bk"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Const"
+	      SrcPort		      1
+	      DstBlock		      "sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "sum1"
+	      SrcPort		      1
+	      DstBlock		      "Yaw Rate_bk"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Product3"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      DstBlock		      "sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "K"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Product3"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Yaw Rate_bk"
+	      SrcPort		      1
+	      Points		      [0, 0; 5, 0]
+	      Branch {
+		DstBlock		"Abs"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -30]
+		DstBlock		"Sign"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "L"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Yaw Rate_bk"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Product4"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Yaw Rate\n(rad/s)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Abs"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "MinMax1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sign"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, 25]
+	      DstBlock		      "Product4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "MinMax1"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -25]
+	      DstBlock		      "Product4"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "G"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Product2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Mu"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Product2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Product2"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -65]
+	      DstBlock		      "MinMax1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [410, 64, 480, 86]
+	  ShowName		  off
+	  Value			  "[1 0 0.6 0]"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [410, 154, 480, 176]
+	  ShowName		  off
+	  Value			  "[0 -1 0 -0.6]"
+	}
+	Block {
+	  BlockType		  DeadZone
+	  Name			  "Dead Zone"
+	  Position		  [455, 109, 475, 131]
+	  ShowName		  off
+	  LowerValue		  "-2"
+	  UpperValue		  "2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  Position		  [100, 52, 130, 78]
+	  ShowName		  off
+	  Gain			  "1/3.6"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  Position		  [205, 162, 235, 188]
+	  ShowName		  off
+	  Gain			  "0.01745329"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P_Controller"
+	  Position		  [395, 107, 425, 133]
+	  Gain			  "Par_Kp"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [510, 65, 530, 105]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [510, 134, 530, 176]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation1"
+	  Position		  [620, 109, 635, 131]
+	  ShowName		  off
+	  UpperLimit		  "12"
+	  LowerLimit		  "0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [340, 110, 360, 130]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+-"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  Position		  [565, 99, 585, 141]
+	  ShowName		  off
+	  		  
+	   
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Pressure\n(MPa)"
+	  Position		  [670, 110, 700, 130]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  InitialOutput		  "[0 0 0 0]"
+	}
+	Line {
+	  SrcBlock		  "Vx (km/h)"
+	  SrcPort		  1
+	  DstBlock		  "Gain1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Steering Angle\n(deg)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Bicycle Model"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Bicycle Model"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Yaw Rate\n(deg/s)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Gain2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "P_Controller"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P_Controller"
+	  SrcPort		  1
+	  DstBlock		  "Dead Zone"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Bicycle Model"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  Points		  [110, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Dead Zone"
+	  SrcPort		  1
+	  Points		  [0, 0; 15, 0]
+	  Branch {
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Switch2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Product2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 20]
+	  DstBlock		  "Switch2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -20]
+	  DstBlock		  "Switch2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  DstBlock		  "Saturation1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation1"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Pressure\n(MPa)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Product2"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+
+
+      BlockType		      Reference
+      Name		      "Manual Switch"
+      Ports		      [2, 1]
+      Position		      [140, 40, 170, 80]
+      BackgroundColor	      "[1.000000, 0.607843, 0.607843]"
+      ShowName		      off
+      FontName		      "Arial"
+	SourceBlock	"simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sw		      "0"
+      action		      "0"
+      varsize		      off
+    }
+    Block {
+      BlockType		      Memory
+      Name		      "Memory"
+      Position		      [200, 46, 210, 74]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Monitor"
+      Ports		      [3]
+      Position		      [360, 131, 385, 179]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      Floating		      off
+      Location		      [653, 287, 974, 762]
+      Open		      off
+      NumInputPorts	      "3"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+      }
+      TimeRange		      "80"
+      YMin		      "-300~55~-40"
+      YMax		      "300~85~40"
+      SaveName		      "ScopeData5"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "500000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Pressure"
+      Ports		      [1]
+      Position		      [120, 141, 145, 169]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      Floating		      off
+      Location		      [652, 55, 974, 226]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      TimeRange		      "25"
+      YMin		      "0"
+      YMax		      "12"
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "50000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Time (sec)"
+      Ports		      [1]
+      Position		      [100, 391, 210, 419]
+      FontName		      "Arial"
+      FontSize		      14
+      Format		      "bank"
+      Decimation	      "100"
+    }
+    Block {
+
+
+      BlockType		      Reference
+      Name		      "TruckSim S-Function"
+      Ports		      [1, 1]
+      Position		      [230, 29, 330, 91]
+      Priority		      "1"
+      AttributesFormatString  "Vehicle Code: %<VehicleCode>"
+      FontName		      "Arial"
+      FontSize		      12
+	SourceBlock	"Solver_SF/TruckSim S-Function"
+      SourceType	      "Vehicle math model library"
+      VehicleCode	      "???"
+      SIMFILE		      ""
+    }
+    Line {
+      SrcBlock		      "Clock"
+      SrcPort		      1
+      DstBlock		      "Time (sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "TruckSim S-Function"
+      SrcPort		      1
+      DstBlock		      "Demux"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Steering Angle"
+      Labels		      [0, 1]
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [50, 0; 0, 105]
+      Branch {
+	Points			[0, 100]
+	DstBlock		"Electronic Stability Controller"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Monitor"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Yaw Rate"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      Points		      [80, 0; 0, 85]
+      Branch {
+	Points			[0, 150]
+	DstBlock		"Electronic Stability Controller"
+	DstPort			3
+      }
+      Branch {
+	DstBlock		"Monitor"
+	DstPort			3
+      }
+    }
+    Line {
+      Name		      "Vx"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      Points		      [65, 0; 0, 95]
+      Branch {
+	Points			[0, 125]
+	DstBlock		"Electronic Stability Controller"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Monitor"
+	DstPort			2
+      }
+    }
+    Line {
+      Name		      "ESC Enable"
+      Labels		      [-1, 0]
+      SrcBlock		      "Electronic Stability Controller"
+      SrcPort		      1
+      Points		      [-80, 0; 0, -210]
+      DstBlock		      "Manual Switch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Memory"
+      SrcPort		      1
+      DstBlock		      "TruckSim S-Function"
+      DstPort		      1
+    }
+    Line {
+      Name		      "ESC Disable"
+      Labels		      [1, 0]
+      SrcBlock		      "ESC Disable"
+      SrcPort		      1
+      DstBlock		      "Manual Switch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	DstBlock		"Memory"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 95]
+	DstBlock		"Pressure"
+	DstPort			1
+      }
+    }
+    Annotation {
+      Text		      "Simple ESC Example"
+      Position		      [362, 406]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      FontSize		      12
+    }
+    Annotation {
+      Position		      [668, 228]
+    }
+  }
+}

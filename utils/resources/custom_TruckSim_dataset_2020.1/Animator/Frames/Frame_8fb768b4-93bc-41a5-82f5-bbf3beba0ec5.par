@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Vehicle X-Y-Z, Pitch-adjusted Skybox`Tracking: Vehicle
+ADD_REFERENCE_FRAME Frame_8fb768b4-93bc-41a5-82f5-bbf3beba0ec5
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xo
+SET_Y_NAME Yo
+SET_Z_NAME Zo
+SET_PITCH_NAME Pitch_G
+
+PARSFILE Animator\STL\Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6.par
+#BlueLink0 Animator: Shape File Link`Partly Cloudy Sky` Environment: Sky Boxes` , Animator Data`Shape_f49e5d15-b002-46b6-b28e-df6b8d8a40b6
+
+PARSFILE Animator\STL\Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42.par
+#BlueLink1 Animator: Shape File Link`Light Grass` Environment: Land Bowls` , Animator Data`Shape_79cf4b25-5748-487a-8e5c-a602d7f86a42
+
+WRT_Xo
+ANI_Xo
+WRT_Yo
+ANI_Yo
+WRT_Zo
+ANI_Zo
+WRT_Pitch_G
+ANI_Pitch_G
+
+#EMBEDDED_NOTES
+#Animator: Reference Frame with a Pitch-adjusted Skybox.
+#
+#This dataset is intended to be used with the Run and Procedure demonstrating the Acceleration Field import variables. The VS Commands for this example define the variable Pitch_G.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Vehicle X-Y-Z, Pitch-adjusted Skybox
+#Library : Animator: Reference Frame
+#DataSet : Vehicle X-Y-Z, Pitch-adjusted Skybox
+#Category: Tracking: Vehicle
+#FileID  : Frame_8fb768b4-93bc-41a5-82f5-bbf3beba0ec5
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

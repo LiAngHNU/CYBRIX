@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Telescopic Trailer Control Point`Tracking: Vehicle
+ADD_REFERENCE_FRAME Frame_582cdefa-2a82-49d3-88ac-7f702d334fa9
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S1
+SET_Y_NAME Y_S1
+SET_Z_NAME Z_S1
+
+PARSFILE Animator\STL\Shape_ea51ce21-7087-45f6-91b3-659cb2c510fc.par
+#BlueLink0 Animator: Shape File Link`Sphere 0.2 m (Orange)` Geometric Shapes` , Animator Data`Shape_ea51ce21-7087-45f6-91b3-659cb2c510fc
+
+WRT_X_S1
+ANI_X_S1
+WRT_Y_S1
+ANI_Y_S1
+WRT_Z_S1
+ANI_Z_S1
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Telescopic Trailer Control Point
+#Library : Animator: Reference Frame
+#DataSet : Telescopic Trailer Control Point
+#Category: Tracking: Vehicle
+#FileID  : Frame_582cdefa-2a82-49d3-88ac-7f702d334fa9
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName Animator: Group`ACC Sensor: Radar Beam Pyramid`ADAS and Active Safety
+PARSFILE Animator\Frames\Frame_a50ff02f-70cd-46fd-a585-61f693502a5c.par
+#BlueLink10 Animator: Reference Frame`Vehicle X-Y-Z-Yaw (Radar Not Detected)` Tracking: Vehicle` , Miscellaneous`Frame_a50ff02f-70cd-46fd-a585-61f693502a5c
+
+#MiscYellow0
+X_LENGTH 35
+Y_LENGTH 6.12
+Z_LENGTH 5
+DEFINE_OUTPUT NotDetec=IF_GT_0_THEN(detect, 0, 1)
+#ENDMYellow
+
+PARSFILE Animator\STL\Shape_1b279e29-04b1-455a-9f1a-8cb3b0f53607.par
+#BlueLink11 Animator: Shape File Link`Pyramid` Geometric Shapes` , Miscellaneous`Shape_1b279e29-04b1-455a-9f1a-8cb3b0f53607
+
+#MiscYellow1
+ANI_NotDetec
+SET_COLOR green
+set_transparency .3
+#ENDMYellow
+
+PARSFILE Animator\Frames\Frame_4a71113e-e8c1-406c-8af5-a4e9cf77659a.par
+#BlueLink12 Animator: Reference Frame`Vehicle X-Y-Z-Yaw (Radar Detected)` Tracking: Vehicle` , Miscellaneous`Frame_4a71113e-e8c1-406c-8af5-a4e9cf77659a
+
+#MiscYellow2
+X_LENGTH 35
+Y_LENGTH 6.12
+Z_LENGTH 5
+#ENDMYellow
+
+PARSFILE Animator\STL\Shape_1b279e29-04b1-455a-9f1a-8cb3b0f53607.par
+#BlueLink13 Animator: Shape File Link`Pyramid` Geometric Shapes` , Miscellaneous`Shape_1b279e29-04b1-455a-9f1a-8cb3b0f53607
+
+#MiscYellow3
+SET_COLOR red
+set_transparency .3
+#ENDMYellow
+
+*X_REF_LENGTH 2756
+*Y_REF_LENGTH 1988
+*Z_REF_LENGTH 1272
+
+#CheckBox0 0    
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink20 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+
+#EMBEDDED_NOTES
+#This shape is used to represent a radar field.  It is attached to a reference frame and given some reference lengths for sizing purposes.
+#
+#You need manually to synchronize the animation shape sizes with the actual simulation settings in the Simulink model "Radar_Acc_CS8.mdl").
+#
+#Open the above Simulink model and double click "Radar Sensor" block. Then, you will see "View Angle" and "Distance Range".
+#
+#For example, if "Distance Range" is 70 (m), you have to set X_LENGTH to 70.  If "View Angle" is 10 (deg), you have to set Y_LENGTH to 12.25, which can be obtained by the following hand equations:
+#
+#Y_LENGTH = {tan(View Angle/2) * Distance Range} * 2.
+#
+#Z_LENGTH (height of the radar range) is not involved in the simulation. Therefore, you can adopt any number in order to show good looking animation.
+#
+#This screen is set up to change the visibility of two shape, one green and one red. The color indicates that detection has occurred.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Group; { ADAS and Active Safety } ACC Sensor: Radar Beam Pyramid
+#Library : Animator: Group
+#DataSet : ACC Sensor: Radar Beam Pyramid
+#Category: ADAS and Active Safety
+#FileID  : Group_dde7e96a-d5fe-4315-92c6-6df61ea7dedf
+#Product : TruckSim 2020.1
+#VehCode Animator Group
+
+END

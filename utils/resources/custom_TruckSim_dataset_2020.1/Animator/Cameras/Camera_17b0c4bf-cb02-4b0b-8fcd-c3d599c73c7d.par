@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`Top View w/ 5 m Grid`Grid
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+SET_CAMERA_REFERENCE_FRAME Frame_51ba0e88-c5b0-4633-a804-04814ea1368b
+PARSFILE Animator\Frames\Frame_51ba0e88-c5b0-4633-a804-04814ea1368b.par
+#BlueLink0 Animator: Reference Frame`Camera Tracking X-Y` Tracking: Road` , Reference frame for outside camera`Frame_51ba0e88-c5b0-4633-a804-04814ea1368b
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_51ba0e88-c5b0-4633-a804-04814ea1368b
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 90
+SET_ELEVATION 90
+SET_DISTANCE 45
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X 0
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 0
+*SET_AZIMUTH 90
+*SET_ELEVATION 90
+*SET_DISTANCE 45
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 23
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Grid } Top View w/ 5 m Grid
+#Library : Animator: Camera Setup
+#DataSet : Top View w/ 5 m Grid
+#Category: Grid
+#FileID  : Camera_17b0c4bf-cb02-4b0b-8fcd-c3d599c73c7d
+#Product : TruckSim 2020.1
+#VehCode Camera
+
+END

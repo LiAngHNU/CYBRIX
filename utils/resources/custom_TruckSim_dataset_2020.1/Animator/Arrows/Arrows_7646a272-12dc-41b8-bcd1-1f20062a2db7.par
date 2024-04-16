@@ -1,0 +1,241 @@
+PARSFILE
+#FullDataName Animator: Wheel Arrows and Other Indicators`Tire (Outer) Skid Marks (2 Axles)`Skid Marks (2 Axles)
+#CheckBox0 0    
+#CheckBox1 1    
+
+#RingCtrl0 2
+#RingCtrl1 O
+#RingCtrl2 B
+#RingCtrl3 0
+*VISIBLE_NAME Fz_<<o>>o
+*ALPHA_NAME TmTrl<<o>>o
+*DYN_X TMLen<<o>>o
+*DYN_Z TmTrl<<o>>o
+*REF_X 1
+*OFFSET_Z 0.08
+*ID_AXLE 1
+
+#MiscYellow1
+#reference_frame_ghosts on
+#DEFINE_OUTPUT VYaw_<<o>>o = IF_GT_0_THEN(VxCen<<o>>o, Yaw_<<o>> + Alpha<<o>>o, pi + Yaw_<<o>> -Alpha<<o>>o); deg
+#DEFINE_OUTPUT TMLen<<o>>o = SQRT(VyTC_<<o>>o^2 + VxCen<<o>>o^2) * TireMarkLen;
+#DEFINE_OUTPUT TmTrl<<o>>o = min(1.0, TireMarkOffset +TireMarkScale *CmpT_<<o>>o *  sqrt(((VxCen<<o>>o - Vx_<<o>>)^2) + (VyTC_<<o>>o^2))));
+#SET_YAW_NAME VYaw_<<o>>o
+#WRT_VYaw_<<o>>o
+#ANI_VYaw_<<o>>o
+#ENDMYellow
+
+#BlueLink0 Animator: Shape File Link`Tire Mark (Black)` Common Vehicle Assets` , Animator Shape(s)`Shape_edd17fd9-dd40-4e68-91d9-9c482f281706
+
+ADD_REFERENCE_FRAME wheel L1 indicator: Tire (Outer) Skid Marks (2 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L1o
+WRT_Xctc_L1o
+ANI_Xctc_L1o
+SET_Y_NAME Yctc_L1o
+WRT_Yctc_L1o
+ANI_Yctc_L1o
+SET_Z_NAME Zgnd_L1o
+WRT_Zgnd_L1o
+ANI_Zgnd_L1o
+SET_PITCH_NAME PitchGL1
+WRT_PitchGL1
+ANI_PitchGL1
+SET_ROLL_NAME RollGL1
+WRT_RollGL1
+ANI_RollGL1
+SET_YAW_NAME Yaw_L1
+WRT_Yaw_L1
+ANI_Yaw_L1
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L1o = IF_GT_0_THEN(VxCenL1o, Yaw_L1 + AlphaL1o, pi + Yaw_L1 -AlphaL1o); deg
+DEFINE_OUTPUT TMLenL1o = SQRT(VyTC_L1o^2 + VxCenL1o^2) * TireMarkLen;
+DEFINE_OUTPUT TmTrlL1o = min(1.0, TireMarkOffset +TireMarkScale *CmpT_L1o *  sqrt(((VxCenL1o - Vx_L1)^2) + (VyTC_L1o^2))));
+SET_YAW_NAME VYaw_L1o
+WRT_VYaw_L1o
+ANI_VYaw_L1o
+
+SET_FRAME_SCALE_X_NAME TMLenL1o
+WRT_TMLenL1o
+ANI_TMLenL1o
+SET_FRAME_SCALE_Z_NAME TmTrlL1o
+WRT_TmTrlL1o
+ANI_TmTrlL1o
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_L1o
+WRT_Fz_L1o
+ANI_Fz_L1o
+REFERENCE_FRAME_ALPHA_NAME TmTrlL1o
+WRT_TmTrlL1o
+ANI_TmTrlL1o
+
+ADD_REFERENCE_FRAME wheel L2 indicator: Tire (Outer) Skid Marks (2 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L2o
+WRT_Xctc_L2o
+ANI_Xctc_L2o
+SET_Y_NAME Yctc_L2o
+WRT_Yctc_L2o
+ANI_Yctc_L2o
+SET_Z_NAME Zgnd_L2o
+WRT_Zgnd_L2o
+ANI_Zgnd_L2o
+SET_PITCH_NAME PitchGL2
+WRT_PitchGL2
+ANI_PitchGL2
+SET_ROLL_NAME RollGL2
+WRT_RollGL2
+ANI_RollGL2
+SET_YAW_NAME Yaw_L2
+WRT_Yaw_L2
+ANI_Yaw_L2
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L2o = IF_GT_0_THEN(VxCenL2o, Yaw_L2 + AlphaL2o, pi + Yaw_L2 -AlphaL2o); deg
+DEFINE_OUTPUT TMLenL2o = SQRT(VyTC_L2o^2 + VxCenL2o^2) * TireMarkLen;
+DEFINE_OUTPUT TmTrlL2o = min(1.0, TireMarkOffset +TireMarkScale *CmpT_L2o *  sqrt(((VxCenL2o - Vx_L2)^2) + (VyTC_L2o^2))));
+SET_YAW_NAME VYaw_L2o
+WRT_VYaw_L2o
+ANI_VYaw_L2o
+
+SET_FRAME_SCALE_X_NAME TMLenL2o
+WRT_TMLenL2o
+ANI_TMLenL2o
+SET_FRAME_SCALE_Z_NAME TmTrlL2o
+WRT_TmTrlL2o
+ANI_TmTrlL2o
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_L2o
+WRT_Fz_L2o
+ANI_Fz_L2o
+REFERENCE_FRAME_ALPHA_NAME TmTrlL2o
+WRT_TmTrlL2o
+ANI_TmTrlL2o
+
+ADD_REFERENCE_FRAME wheel R1 indicator: Tire (Outer) Skid Marks (2 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R1o
+WRT_Xctc_R1o
+ANI_Xctc_R1o
+SET_Y_NAME Yctc_R1o
+WRT_Yctc_R1o
+ANI_Yctc_R1o
+SET_Z_NAME Zgnd_R1o
+WRT_Zgnd_R1o
+ANI_Zgnd_R1o
+SET_PITCH_NAME PitchGR1
+WRT_PitchGR1
+ANI_PitchGR1
+SET_ROLL_NAME RollGR1
+WRT_RollGR1
+ANI_RollGR1
+SET_YAW_NAME Yaw_R1
+WRT_Yaw_R1
+ANI_Yaw_R1
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R1o = IF_GT_0_THEN(VxCenR1o, Yaw_R1 + AlphaR1o, pi + Yaw_R1 -AlphaR1o); deg
+DEFINE_OUTPUT TMLenR1o = SQRT(VyTC_R1o^2 + VxCenR1o^2) * TireMarkLen;
+DEFINE_OUTPUT TmTrlR1o = min(1.0, TireMarkOffset +TireMarkScale *CmpT_R1o *  sqrt(((VxCenR1o - Vx_R1)^2) + (VyTC_R1o^2))));
+SET_YAW_NAME VYaw_R1o
+WRT_VYaw_R1o
+ANI_VYaw_R1o
+
+SET_FRAME_SCALE_X_NAME TMLenR1o
+WRT_TMLenR1o
+ANI_TMLenR1o
+SET_FRAME_SCALE_Z_NAME TmTrlR1o
+WRT_TmTrlR1o
+ANI_TmTrlR1o
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_R1o
+WRT_Fz_R1o
+ANI_Fz_R1o
+REFERENCE_FRAME_ALPHA_NAME TmTrlR1o
+WRT_TmTrlR1o
+ANI_TmTrlR1o
+
+ADD_REFERENCE_FRAME wheel R2 indicator: Tire (Outer) Skid Marks (2 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R2o
+WRT_Xctc_R2o
+ANI_Xctc_R2o
+SET_Y_NAME Yctc_R2o
+WRT_Yctc_R2o
+ANI_Yctc_R2o
+SET_Z_NAME Zgnd_R2o
+WRT_Zgnd_R2o
+ANI_Zgnd_R2o
+SET_PITCH_NAME PitchGR2
+WRT_PitchGR2
+ANI_PitchGR2
+SET_ROLL_NAME RollGR2
+WRT_RollGR2
+ANI_RollGR2
+SET_YAW_NAME Yaw_R2
+WRT_Yaw_R2
+ANI_Yaw_R2
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R2o = IF_GT_0_THEN(VxCenR2o, Yaw_R2 + AlphaR2o, pi + Yaw_R2 -AlphaR2o); deg
+DEFINE_OUTPUT TMLenR2o = SQRT(VyTC_R2o^2 + VxCenR2o^2) * TireMarkLen;
+DEFINE_OUTPUT TmTrlR2o = min(1.0, TireMarkOffset +TireMarkScale *CmpT_R2o *  sqrt(((VxCenR2o - Vx_R2)^2) + (VyTC_R2o^2))));
+SET_YAW_NAME VYaw_R2o
+WRT_VYaw_R2o
+ANI_VYaw_R2o
+
+SET_FRAME_SCALE_X_NAME TMLenR2o
+WRT_TMLenR2o
+ANI_TMLenR2o
+SET_FRAME_SCALE_Z_NAME TmTrlR2o
+WRT_TmTrlR2o
+ANI_TmTrlR2o
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_R2o
+WRT_Fz_R2o
+ANI_Fz_R2o
+REFERENCE_FRAME_ALPHA_NAME TmTrlR2o
+WRT_TmTrlR2o
+ANI_TmTrlR2o
+
+
+#EMBEDDED_NOTES
+#This dataset adds output variables to locate a rectangle on the ground at each outter tire for 2 axles.
+#
+#The animator ghost option is activated with the animator keyword reference_frame_ghosts. Multiple images of the rectangle then combine to show a path followed by the tire.
+#
+#The X, Y, and Z coordinates of the contact point between each tire and the ground already exist. The VS comand DEFINE_OUTPUT is used to add two variables per tire for the direction of the contact point (VYAW_?o) and the length of the rectangle used to create the path (TMLen?o). The equation for length includes a reference length TireMarkLen that is defined in a different dataset.
+#
+#The darkness of each skid mark is defined by the variable TmTrl?o.
+#
+#To reduce flicker interference between the transparent skid mark and the transparent vehicle shadow, a Z offset of 0.08 m is specified to raise the skid marks above the ground.
+#
+#A feature of this screen is that the variable names in the data fields are repeated twice for each axle. Therefore, the parsfile sent to the math model and animator contains copies of the template for 2 axles. Other datasets are used with nearly identical contents for vehicles with a different number of axles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Wheel Arrows and Other Indicators; { Skid Marks (2 Axles) } Tire (Outer) Skid Marks (2 Axles)
+#Library : Animator: Wheel Arrows and Other Indicators
+#DataSet : Tire (Outer) Skid Marks (2 Axles)
+#Category: Skid Marks (2 Axles)
+#FileID  : Arrows_7646a272-12dc-41b8-bcd1-1f20062a2db7
+#Product : TruckSim 2020.1
+#VehCode Wheel Indicators
+
+END

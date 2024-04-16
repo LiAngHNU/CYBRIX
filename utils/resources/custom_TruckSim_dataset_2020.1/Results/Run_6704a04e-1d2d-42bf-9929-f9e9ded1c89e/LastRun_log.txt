@@ -1,0 +1,57 @@
+Run made by VS Tire Tester for CarSim and TruckSim 2020.1 at 11:48 on June 29, 2020.
+Utility to calculate tire behavior for simulated quasi-static tests
+Started with simfile: simfile.sim
+
+Include PARSFILE "Results\Run_6704a04e-1d2d-42bf-9929-f9e9ded1c89e\Run_all.par"
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 205/60 R14: Tire
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 205/60 R14: Wheel
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 205/60 R14: Stripe
+Used Dataset: Animator: Shape Assembly; { Tires } Big Car
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Extended with Camber Details } Example Mz vs. Alpha
+Used Dataset: Tire: Lateral Force; { Extended with Camber Details } Example Fy vs. Alpha
+Used Dataset: Tire: Longitudinal Force; { Extended with Camber Details } Example Fx vs. Kappa
+Used Dataset: Tire: Lateral Force vs. Inclination; { Extended with Camber Details } Example Fy vs. Gamma
+Used Dataset: Tire: Aligning Moment vs. Inclination; { Extended with Camber Details } Example Mz vs. Gamma
+Used Dataset: Tire: Overturning Moment; { Extended with Camber Details } Example Mx vs. Alpha
+Used Dataset: Tire: Overturning Moment vs. Inclination; { Extended with Camber Details } Example Mx vs. Gamma
+Used Dataset: Tire; { Camber Extensions } Internal Tire
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Lateral Force vs. Alpha
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Longitudinal Force vs. Alpha
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Tangent of Slip Angle vs. Alpha
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Lateral Shift of CTC vs. Alpha
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz due to Fx vs. Alpha
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz: Fy & Pneumatic Trail vs. Alpha
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Pneumatic Trail vs. Alpha
+Used Dataset: Generic VS Commands; { Tire Tester } Derived Outputs vs. Alpha
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Alpha
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester } Mx vs. Alpha
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Tire Tester } Mz vs. Alpha
+Used Dataset: Tire Tester; { Sweep Alpha +/- 10 deg } Sweep Alpha: Fz = 4000 N
+Used Dataset: I/O Channels: Write; { Tire Tester } All Outputs with Tire for Excel
+ Camber Effects - Gamma = 1 deg <Tire Tester: Internal Table Look-up Tire>
+Used Dataset: TruckSim Run Control; { Tire Tester: Internal Table Look-up Tire } Camber Effects - Gamma = 1 deg
+
+Time to read input = 0.00192438
+WARNING: The keyword OPT_SSTOP has been deprecated
+WARNING: The keyword T_EVENT_START has been deprecated
+
+Run started: VS output file = Results\Run_6704a04e-1d2d-42bf-9929-f9e9ded1c89e\LastRun.vsb
+Function FY_TIRE_CARPET extrapolated (out of range HIGH) for X = 10.0025 deg at T = 0.998
+
+Run stopped at t = 1. alpha = 10 deg
+Computational time ratio: RTIME = 0.0842022 (real time)/(simulation time)
+
+WARNING: The keyword OPT_SSTOP has been deprecated
+WARNING: The keyword T_EVENT_START has been deprecated

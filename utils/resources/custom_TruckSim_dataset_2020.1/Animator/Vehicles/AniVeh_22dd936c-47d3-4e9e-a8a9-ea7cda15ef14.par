@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Pickup, Midsize: Regular Cab`Pickup Trucks
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 3261
+OBJ_Y_LENGTH 2152
+OBJ_Z_LENGTH 1418
+*DZ_V 0
+*LAT_WC 1590
+*LAT_WC_2 1590
+*HWC 394
+*WHEEL_RATIO 1.35
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_22dd936c-47d3-4e9e-a8a9-ea7cda15ef14.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_4a230c92-8d40-49c0-896c-70c95124a9fb.par
+SET_SCALE_X 1.35
+SET_SCALE_Y 1.35
+SET_SCALE_Z 1.35
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.795
+SET_OFFSET_Z 0.3743
+TIRE_ANI_PARSFILE Animator\STL\Shape_4a230c92-8d40-49c0-896c-70c95124a9fb.par
+SET_SCALE_X 1.35
+SET_SCALE_Y 1.35
+SET_SCALE_Z 1.35
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.795
+SET_OFFSET_Z 0.3743
+TIRE_ANI_PARSFILE Animator\STL\Shape_4a230c92-8d40-49c0-896c-70c95124a9fb.par
+SET_SCALE_X 1.35
+SET_SCALE_Y 1.35
+SET_SCALE_Z 1.35
+SET_OFFSET_X -3.261
+SET_OFFSET_Y 0.795
+SET_OFFSET_Z 0.3743
+TIRE_ANI_PARSFILE Animator\STL\Shape_4a230c92-8d40-49c0-896c-70c95124a9fb.par
+SET_SCALE_X 1.35
+SET_SCALE_Y 1.35
+SET_SCALE_Z 1.35
+SET_ANGLE_X 180
+SET_OFFSET_X -3.261
+SET_OFFSET_Y -0.795
+SET_OFFSET_Z 0.3743
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_da672bd7-de50-4769-8bdd-2d876c5e8003.par
+#BlueLink1 Animator: Group`Pickup, Midsize: Regular Cab, 6 ft. Bed` Pickup Trucks` , Vehicle Body`Group_da672bd7-de50-4769-8bdd-2d876c5e8003
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_a21c930d-3ba6-45e6-86a8-402a0475d8b2.par
+#BlueLink3 Animator: Shape File Link`5.5 ft. Box: Brake Lights (Regular Cab)` Trucks: Pickup Beds` , Brake Lights`Shape_a21c930d-3ba6-45e6-86a8-402a0475d8b2
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_46414901-6ea4-4ab2-91e8-a2fa6da6f0e6.par
+#BlueLink10 Animator: Shape File Link`5.5 ft. Box: Reverse Lights (Regular Cab)` Trucks: Pickup Beds` , Reverse lights`Shape_46414901-6ea4-4ab2-91e8-a2fa6da6f0e6
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_4a230c92-8d40-49c0-896c-70c95124a9fb.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car - 185 mm Width` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_4a230c92-8d40-49c0-896c-70c95124a9fb
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Pickup Trucks } Pickup, Midsize: Regular Cab
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Pickup, Midsize: Regular Cab
+#Category: Pickup Trucks
+#FileID  : AniVeh_22dd936c-47d3-4e9e-a8a9-ea7cda15ef14
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

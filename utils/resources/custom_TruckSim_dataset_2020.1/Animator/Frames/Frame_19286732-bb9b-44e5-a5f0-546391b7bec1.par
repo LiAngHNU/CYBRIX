@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Overhead Signal Lamp Pair: Green`Traffic Signals
+ADD_REFERENCE_FRAME Frame_19286732-bb9b-44e5-a5f0-546391b7bec1
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_Obj_<<o>>
+SET_Y_NAME Y_Obj_<<o>>
+SET_YAW_NAME YawO_<<o>>
+SET_OFFSET_VAR_Z 5
+SET_FRAME_VISIBLE_NAME Green<<o>>
+
+PARSFILE Animator\STL\Shape_7a8cf8e9-7696-47db-8828-16a4d3afe5ad.par
+#BlueLink0 Animator: Shape File Link`Traffic Signal: Lamp, Green (Right)` Environment: Props (2 of 2)` , Animator Data`Shape_7a8cf8e9-7696-47db-8828-16a4d3afe5ad
+
+PARSFILE Animator\STL\Shape_02e63f14-7af0-4f18-8c8a-6996dd5d5332.par
+#BlueLink1 Animator: Shape File Link`Traffic Signal: Lamp, Green (Left)` Environment: Props (2 of 2)` , Animator Data`Shape_02e63f14-7af0-4f18-8c8a-6996dd5d5332
+
+#MiscYellow0
+define_output Green<<o>> =eq (TypeO_<<o>>, LIGHT_GREEN);-;Show green light
+#ENDMYellow
+
+WRT_X_Obj_<<o>>
+ANI_X_Obj_<<o>>
+WRT_Y_Obj_<<o>>
+ANI_Y_Obj_<<o>>
+WRT_YawO_<<o>>
+ANI_YawO_<<o>>
+WRT_Green<<o>>
+ANI_Green<<o>>
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Traffic Signals } Overhead Signal Lamp Pair: Green
+#Library : Animator: Reference Frame
+#DataSet : Overhead Signal Lamp Pair: Green
+#Category: Traffic Signals
+#FileID  : Frame_19286732-bb9b-44e5-a5f0-546391b7bec1
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

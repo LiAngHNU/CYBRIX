@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Sedan: Steering Wheel`Cars: European Vehicles
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Cars\European_Sedan_Left_Drive\steering_wheel.obj
+#ENDMYellow
+
+SET_COLOR 0.878 0.878 0.878
+*SPECULAR 0.3
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.3 0.3 0.3
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_8a3ea8ee-47e8-4828-911f-e225d57dd4ae.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Cars: European Vehicles } Sedan: Steering Wheel
+#Library : Animator: Shape File Link
+#DataSet : Sedan: Steering Wheel
+#Category: Cars: European Vehicles
+#FileID  : Shape_8a3ea8ee-47e8-4828-911f-e225d57dd4ae
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

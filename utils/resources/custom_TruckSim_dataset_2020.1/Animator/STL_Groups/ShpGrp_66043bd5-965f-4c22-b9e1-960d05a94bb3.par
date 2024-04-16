@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`3A Utility Flatbed Trailer`Trailers
+*SCALE_X 1.084375
+*SCALE_Y 1
+*SCALE_Z 1
+*OFFSET_X 0
+*OFFSET_Y 0
+*OFFSET_Z 0.35
+*X_REF_LENGTH 4800
+*Y_REF_LENGTH 2679
+*Z_REF_LENGTH 1357
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+
+#RingCtrl1 2
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\ShpGrp_66043bd5-965f-4c22-b9e1-960d05a94bb3.png
+PARSFILE Animator\STL\Shape_f58a012e-a20f-450a-a686-f46ede3f0415.par
+#BlueLink0 Animator: Shape File Link`Utility Flatbed Trailer: Floor` Trailers (2 of 2)` , Shape File`Shape_f58a012e-a20f-450a-a686-f46ede3f0415
+
+set_scale_x 1.084375
+set_scale_y 1
+set_scale_z 1
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.35
+PARSFILE Animator\STL\Shape_533b10ba-2115-4a75-aec5-e63106cca4bd.par
+#BlueLink1 Animator: Shape File Link`Utility Flatbed Trailer: Frame` Trailers (2 of 2)` , Shape File`Shape_533b10ba-2115-4a75-aec5-e63106cca4bd
+
+set_scale_x 1.084375
+set_scale_y 1
+set_scale_z 1
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.35
+x_ref_length 4800
+y_ref_length 2679
+z_ref_length 1357
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink17 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+
+#EMBEDDED_NOTES
+#The X-direction scale factor is adjusts the size of the shape up from it's original reference dimension of 4800 mm (the 2A Wheelbase) up to 5205 mm.  The scaling is done here, rather than automatically because the fender is scaled independently and should not be automatically resized.
+#
+#The scaling here stretches the shape in the rearward dimension, so it can be used to adjust the overall length of the trailer.
+#
+#The offsets are designed to properly locate the scaled shapes.  The offsets are set by:
+#X: No adjustment here
+#Y: No adjustment
+#Z: The height of the hitch point from the trailer sprung mass origin
+#
+#The offset to the frame and load floor are applied directly to the shape file links.  This is because the order of operations (offset then scaling vs scaling then offset) makes a difference, and the brake lights are offset first, then scaled.  Maintaining this order of operations makes sure the brake lights stay attached to the trailer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Trailers } 3A Utility Flatbed Trailer
+#Library : Animator: Shape Assembly
+#DataSet : 3A Utility Flatbed Trailer
+#Category: Trailers
+#FileID  : ShpGrp_66043bd5-965f-4c22-b9e1-960d05a94bb3
+#Product : TruckSim 2020.1
+#VehCode Shape Assembly
+
+END

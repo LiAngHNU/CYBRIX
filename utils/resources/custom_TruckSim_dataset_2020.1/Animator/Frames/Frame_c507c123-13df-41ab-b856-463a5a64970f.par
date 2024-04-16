@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`R2 Wheel Pads`K & C Machine
+ADD_REFERENCE_FRAME Frame_c507c123-13df-41ab-b856-463a5a64970f
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R2avg
+SET_Y_NAME Yctc_R2avg
+SET_Z_NAME Zgnd_R2avg
+
+#MiscYellow0
+define_output Xctc_R2avg = (xctc_r2i+xctc_r2o)/2;
+define_output Yctc_R2avg = (yctc_r2i+yctc_r2o)/2;
+define_output Zgnd_R2avg = (Zgnd_r2i+Zgnd_r2o)/2;
+#ENDMYellow
+
+WRT_Xctc_R2avg
+ANI_Xctc_R2avg
+WRT_Yctc_R2avg
+ANI_Yctc_R2avg
+WRT_Zgnd_R2avg
+ANI_Zgnd_R2avg
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { K & C Machine } R2 Wheel Pads
+#Library : Animator: Reference Frame
+#DataSet : R2 Wheel Pads
+#Category: K & C Machine
+#FileID  : Frame_c507c123-13df-41ab-b856-463a5a64970f
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END
