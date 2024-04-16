@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Palm: Tall`Environment: Trees
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Trees\3D_Trees\Palm_B.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_de981e31-4578-4ef4-93b7-107afedfa28b.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Trees } Palm: Tall
+#Library : Animator: Shape File Link
+#DataSet : Palm: Tall
+#Category: Environment: Trees
+#FileID  : Shape_de981e31-4578-4ef4-93b7-107afedfa28b
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

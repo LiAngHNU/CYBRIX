@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Animator: HUD`Parking Brake Engaged Text`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+
+#RingCtrl0 1
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 1
+*TITLE_1 Parking Brake Engaged
+*LOCX_1 1
+*LOCY_1 37.5
+*VAR_NAME_1 pb_plot
+*COLOR_1 1 1 1
+*PREC1 3
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Parking Brake Engaged AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 20 locY 375
+#Selection_4 Fixed: 1 VarName: pb_plot  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_pb_plot
+WRT_pb_plot
+ADD_ENTITY hud_text Text Output
+location 20 375 18 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is pb_plot
+prefix Parking Brake Engaged
+min_width_prefix 20
+value pb_plot
+precision 3
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Parking Brake Engaged Text
+#Library : Animator: HUD
+#DataSet : Parking Brake Engaged Text
+#Category: HUD Groups
+#FileID  : HUD_4a1f8c80-8d4c-4db0-a516-58312aee5751
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

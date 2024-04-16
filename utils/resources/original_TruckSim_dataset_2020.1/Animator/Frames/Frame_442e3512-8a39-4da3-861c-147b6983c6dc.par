@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Motion Sensor 3: LF Corner (sphere)`Animated Trace Lines
+ADD_REFERENCE_FRAME Frame_442e3512-8a39-4da3-861c-147b6983c6dc
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S3
+SET_Y_NAME Y_S3
+SET_Z_NAME Z_S3
+SET_ROLL_NAME roll_e
+SET_PITCH_NAME pitch
+SET_YAW_NAME yaw
+
+PARSFILE Animator\STL\Shape_6a810587-86ad-474b-944b-bb2b4869f951.par
+#BlueLink0 Animator: Shape File Link`Sphere 0.2 m (Red)` Geometric Shapes` , Animator Data`Shape_6a810587-86ad-474b-944b-bb2b4869f951
+
+WRT_X_S3
+ANI_X_S3
+WRT_Y_S3
+ANI_Y_S3
+WRT_Z_S3
+ANI_Z_S3
+WRT_roll_e
+ANI_roll_e
+WRT_pitch
+ANI_pitch
+WRT_yaw
+ANI_yaw
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Animated Trace Lines } Motion Sensor 3: LF Corner (sphere)
+#Library : Animator: Reference Frame
+#DataSet : Motion Sensor 3: LF Corner (sphere)
+#Category: Animated Trace Lines
+#FileID  : Frame_442e3512-8a39-4da3-861c-147b6983c6dc
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`High-Def Cab-Over`Trucks: Cabs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Class_8_Cab_Over\Class_8_CabOver.OSG
+#ENDMYellow
+
+SET_COLOR 0 0.6 0.2
+*SPECULAR 1
+*TRANSPARENCY 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 1    
+
+set_transparency 1
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_93d75fb7-1477-4ff4-a560-b5632e418d88.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } High-Def Cab-Over
+#Library : Animator: Shape File Link
+#DataSet : High-Def Cab-Over
+#Category: Trucks: Cabs
+#FileID  : Shape_93d75fb7-1477-4ff4-a560-b5632e418d88
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

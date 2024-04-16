@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Exotic Car`Sports Cars
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 2650
+OBJ_Y_LENGTH 1909
+OBJ_Z_LENGTH 1146
+*DZ_V 0
+*LAT_WC 1650
+*LAT_WC_2 1650
+*HWC 325
+*WHEEL_RATIO 1.15
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_90a4c63a-dbcb-448e-a6d0-6ac3f4f3be96.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.825
+SET_OFFSET_Z 0.30875
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.825
+SET_OFFSET_Z 0.30875
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_OFFSET_X -2.65
+SET_OFFSET_Y 0.825
+SET_OFFSET_Z 0.30875
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_ANGLE_X 180
+SET_OFFSET_X -2.65
+SET_OFFSET_Y -0.825
+SET_OFFSET_Z 0.30875
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_710958cd-5b7b-4c19-b217-a5bdf14d34cc.par
+#BlueLink1 Animator: Shape Assembly`Exotic Car` Passenger Cars` , Vehicle Body`ShpGrp_710958cd-5b7b-4c19-b217-a5bdf14d34cc
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_958c90e5-1bd6-4f53-b83b-be3833ef85f5.par
+#BlueLink3 Animator: Shape File Link`Sports Car: Brake Lights` Cars: Exotic` , Brake Lights`Shape_958c90e5-1bd6-4f53-b83b-be3833ef85f5
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_79f65e87-4889-4b95-925b-e4cac45cff62.par
+#BlueLink10 Animator: Shape File Link`Sports Car: Reverse Lights` Cars: Exotic` , Reverse lights`Shape_79f65e87-4889-4b95-925b-e4cac45cff62
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_c500746e-28db-47d2-91ed-d32247db7d4d
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Sports Cars } Exotic Car
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Exotic Car
+#Category: Sports Cars
+#FileID  : AniVeh_90a4c63a-dbcb-448e-a6d0-6ac3f4f3be96
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

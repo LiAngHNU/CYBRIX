@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Floor Fan: Motor`Environment: Props (Animated)
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Props\Floor_Fan\FloorFan_Motor.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_3bcb9130-7980-44ae-894c-f1737ddc9e10.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Props (Animated) } Floor Fan: Motor
+#Library : Animator: Shape File Link
+#DataSet : Floor Fan: Motor
+#Category: Environment: Props (Animated)
+#FileID  : Shape_3bcb9130-7980-44ae-894c-f1737ddc9e10
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

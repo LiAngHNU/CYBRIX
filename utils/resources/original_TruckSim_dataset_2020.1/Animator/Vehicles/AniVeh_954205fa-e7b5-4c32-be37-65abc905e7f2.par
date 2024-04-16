@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`3A Conventional Van (Transparent)`3A Lead Units
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 3
+OBJ_X_LENGTH 6500
+*DZ_V 0
+*LAT_WC 2030
+*LAT_WC_2 1863
+*HWC 520
+*WHEEL_RATIO 1
+*LAXLE_1 0
+*LAXLE_2 5230
+*LAXLE_3 6500
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_954205fa-e7b5-4c32-be37-65abc905e7f2.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -5.23
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -5.23
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -6.5
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -6.5
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.494
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_cbeec02f-980b-4c9c-8409-47f400bd0c80.par
+#BlueLink1 Animator: Shape Assembly`3A Conv. Van (Frame + Box, Transparent)` Conventional` , Vehicle Body`ShpGrp_cbeec02f-980b-4c9c-8409-47f400bd0c80
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_688d404a-5285-45df-b9fd-263fa0297433.par
+#BlueLink3 Animator: Shape File Link`3A Conv: Brake Lights` Trucks: Chassis` , Brake Lights`Shape_688d404a-5285-45df-b9fd-263fa0297433
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_dc95e61b-eb28-44a4-b61e-b89262db2aec.par
+#BlueLink7 Animator: Shape Assembly`Conventional (Non-scaled)` Conventional` , Vehicle Body`ShpGrp_dc95e61b-eb28-44a4-b61e-b89262db2aec
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a
+
+EXPORT_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { 3A Lead Units } 3A Conventional Van (Transparent)
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 3A Conventional Van (Transparent)
+#Category: 3A Lead Units
+#FileID  : AniVeh_954205fa-e7b5-4c32-be37-65abc905e7f2
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

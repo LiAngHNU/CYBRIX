@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Tilt Table: Ani. Ref. Frame and Shape`PBS Tests
+ADD_REFERENCE_FRAME Frame_741eefba-1a12-4175-a681-f7def3883805
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_ROLL_NAME Roll_Tab
+SET_OFFSET_VAR_Y -2
+
+PARSFILE Animator\STL\Shape_c05b1b9d-b108-4047-a559-adaa69a00e23.par
+#BlueLink0 Animator: Shape File Link`Tilt Table: Hinged Surface` Test Facilities` , Animator Data`Shape_c05b1b9d-b108-4047-a559-adaa69a00e23
+
+WRT_Roll_Tab
+ANI_Roll_Tab
+
+#EMBEDDED_NOTES
+#This reference frame uses the roll angle of a tilt table, defined with a VS Command for the tilt-table procedures.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { PBS Tests } Tilt Table: Ani. Ref. Frame and Shape
+#Library : Animator: Reference Frame
+#DataSet : Tilt Table: Ani. Ref. Frame and Shape
+#Category: PBS Tests
+#FileID  : Frame_741eefba-1a12-4175-a681-f7def3883805
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

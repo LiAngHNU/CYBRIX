@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Motion Sensor 4: LF Whl Ctr (trace line)`Animated Trace Lines
+ADD_REFERENCE_FRAME Frame_b662d776-65b9-4ae8-a9d4-f3540f05202e
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S4
+SET_Y_NAME Y_S4
+SET_Z_NAME Z_S4
+SET_ROLL_NAME Roll_L1
+SET_PITCH_NAME Pitch_L1
+SET_YAW_NAME Steer_L1
+SET_OFFSET_VAR_Y 0.2
+SET_FRAME_SCALE_X_NAME LFWCLen
+SET_FRAME_VISIBLE_NAME 1
+REFERENCE_FRAME_ALPHA_NAME 1
+
+PARSFILE Animator\STL\Shape_93dd4517-2846-4a7b-97e3-54753236dc04.par
+#BlueLink0 Animator: Shape File Link`Sphere: 0.025m Radius (Light Blue)` Geometric Shapes` , Animator Data`Shape_93dd4517-2846-4a7b-97e3-54753236dc04
+
+#MiscYellow0
+default_ghost off ! disable ghosts for vehicle
+ghost_count 500 ! number of markers
+ghost_period -0.0125
+
+
+reference_frame_ghosts on
+define_output TrcLFWC =  IF_GT_0_THEN(Vxz_fwd, Yaw + Alpha_L1i, pi + Yaw - Alpha_L1i); deg
+set_yaw_name TrcLFWC
+wrt_TrcLFWC
+ani_TrcLFWC
+
+
+define_parameter Trace_LF_WC_Len = 0.25 ; m; Trace marker length, LF Wheel Center
+! define_parameter Trace_LF_WC_Len = 0.1 ; m; Trace marker length, LF Wheel Center
+define_output LFWCLen = SQRT(Vy_SM^2 + Vxz_fwd^2) * Trace_LF_WC_Len; m ; Trace marker length, LF Wheel Center
+#ENDMYellow
+
+WRT_X_S4
+ANI_X_S4
+WRT_Y_S4
+ANI_Y_S4
+WRT_Z_S4
+ANI_Z_S4
+WRT_Roll_L1
+ANI_Roll_L1
+WRT_Pitch_L1
+ANI_Pitch_L1
+WRT_Steer_L1
+ANI_Steer_L1
+WRT_LFWCLen
+ANI_LFWCLen
+WRT_1
+ANI_1
+WRT_1
+ANI_1
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Animated Trace Lines } Motion Sensor 4: LF Whl Ctr (trace line)
+#Library : Animator: Reference Frame
+#DataSet : Motion Sensor 4: LF Whl Ctr (trace line)
+#Category: Animated Trace Lines
+#FileID  : Frame_b662d776-65b9-4ae8-a9d4-f3540f05202e
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

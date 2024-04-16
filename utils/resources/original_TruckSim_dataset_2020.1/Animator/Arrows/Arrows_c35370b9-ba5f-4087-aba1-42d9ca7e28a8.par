@@ -1,0 +1,609 @@
+PARSFILE
+#FullDataName Animator: Wheel Arrows and Other Indicators`Tire (Inner) Skid Marks (6 Axles)`Skid Marks (6 Axles)
+#CheckBox0 0    
+#CheckBox1 1    
+
+#RingCtrl0 6
+#RingCtrl1 T
+#RingCtrl2 B
+#RingCtrl3 0
+*VISIBLE_NAME Fz_<<o>>i
+*ALPHA_NAME TmTrl<<o>>i
+*DYN_X TMLen<<o>>i
+*DYN_Z TmTrl<<o>>i
+*REF_X 1
+*OFFSET_Z 0.08
+*ID_AXLE 1
+
+#MiscYellow1
+#reference_frame_ghosts on
+#DEFINE_OUTPUT VYaw_<<o>>i = IF_GT_0_THEN(VxCen<<o>>i, Yaw_<<o>> + Alpha<<o>>i, pi + Yaw_<<o>> -Alpha<<o>>i); deg ; Yaw angle of tire slip
+#DEFINE_OUTPUT TMLen<<o>>i = SQRT(VyTC_<<o>>i^2 + VxCen<<o>>i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+#DEFINE_OUTPUT TmTrl<<o>>i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_<<o>>i * sqrt(((VxCen<<o>>i - Vx_<<o>>)^2) + (VyTC_<<o>>i^2)))); - ; Darkness of skid mark
+#SET_YAW_NAME VYaw_<<o>>i
+#WRT_VYaw_<<o>>i
+#ANI_VYaw_<<o>>i
+#ENDMYellow
+
+#BlueLink0 Animator: Shape File Link`Tire Mark (Black)` Common Vehicle Assets` , Animator Shape(s)`Shape_edd17fd9-dd40-4e68-91d9-9c482f281706
+
+ADD_REFERENCE_FRAME wheel L1 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L1i
+WRT_Xctc_L1i
+ANI_Xctc_L1i
+SET_Y_NAME Yctc_L1i
+WRT_Yctc_L1i
+ANI_Yctc_L1i
+SET_Z_NAME Zgnd_L1i
+WRT_Zgnd_L1i
+ANI_Zgnd_L1i
+SET_PITCH_NAME PitchGL1
+WRT_PitchGL1
+ANI_PitchGL1
+SET_ROLL_NAME RollGL1
+WRT_RollGL1
+ANI_RollGL1
+SET_YAW_NAME Yaw_L1
+WRT_Yaw_L1
+ANI_Yaw_L1
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L1i = IF_GT_0_THEN(VxCenL1i, Yaw_L1 + AlphaL1i, pi + Yaw_L1 -AlphaL1i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenL1i = SQRT(VyTC_L1i^2 + VxCenL1i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlL1i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_L1i * sqrt(((VxCenL1i - Vx_L1)^2) + (VyTC_L1i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_L1i
+WRT_VYaw_L1i
+ANI_VYaw_L1i
+
+SET_FRAME_SCALE_X_NAME TMLenL1i
+WRT_TMLenL1i
+ANI_TMLenL1i
+SET_FRAME_SCALE_Z_NAME TmTrlL1i
+WRT_TmTrlL1i
+ANI_TmTrlL1i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_L1i
+WRT_Fz_L1i
+ANI_Fz_L1i
+REFERENCE_FRAME_ALPHA_NAME TmTrlL1i
+WRT_TmTrlL1i
+ANI_TmTrlL1i
+
+ADD_REFERENCE_FRAME wheel L2 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L2i
+WRT_Xctc_L2i
+ANI_Xctc_L2i
+SET_Y_NAME Yctc_L2i
+WRT_Yctc_L2i
+ANI_Yctc_L2i
+SET_Z_NAME Zgnd_L2i
+WRT_Zgnd_L2i
+ANI_Zgnd_L2i
+SET_PITCH_NAME PitchGL2
+WRT_PitchGL2
+ANI_PitchGL2
+SET_ROLL_NAME RollGL2
+WRT_RollGL2
+ANI_RollGL2
+SET_YAW_NAME Yaw_L2
+WRT_Yaw_L2
+ANI_Yaw_L2
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L2i = IF_GT_0_THEN(VxCenL2i, Yaw_L2 + AlphaL2i, pi + Yaw_L2 -AlphaL2i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenL2i = SQRT(VyTC_L2i^2 + VxCenL2i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlL2i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_L2i * sqrt(((VxCenL2i - Vx_L2)^2) + (VyTC_L2i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_L2i
+WRT_VYaw_L2i
+ANI_VYaw_L2i
+
+SET_FRAME_SCALE_X_NAME TMLenL2i
+WRT_TMLenL2i
+ANI_TMLenL2i
+SET_FRAME_SCALE_Z_NAME TmTrlL2i
+WRT_TmTrlL2i
+ANI_TmTrlL2i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_L2i
+WRT_Fz_L2i
+ANI_Fz_L2i
+REFERENCE_FRAME_ALPHA_NAME TmTrlL2i
+WRT_TmTrlL2i
+ANI_TmTrlL2i
+
+ADD_REFERENCE_FRAME wheel L3 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L3i
+WRT_Xctc_L3i
+ANI_Xctc_L3i
+SET_Y_NAME Yctc_L3i
+WRT_Yctc_L3i
+ANI_Yctc_L3i
+SET_Z_NAME Zgnd_L3i
+WRT_Zgnd_L3i
+ANI_Zgnd_L3i
+SET_PITCH_NAME PitchGL3
+WRT_PitchGL3
+ANI_PitchGL3
+SET_ROLL_NAME RollGL3
+WRT_RollGL3
+ANI_RollGL3
+SET_YAW_NAME Yaw_L3
+WRT_Yaw_L3
+ANI_Yaw_L3
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L3i = IF_GT_0_THEN(VxCenL3i, Yaw_L3 + AlphaL3i, pi + Yaw_L3 -AlphaL3i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenL3i = SQRT(VyTC_L3i^2 + VxCenL3i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlL3i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_L3i * sqrt(((VxCenL3i - Vx_L3)^2) + (VyTC_L3i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_L3i
+WRT_VYaw_L3i
+ANI_VYaw_L3i
+
+SET_FRAME_SCALE_X_NAME TMLenL3i
+WRT_TMLenL3i
+ANI_TMLenL3i
+SET_FRAME_SCALE_Z_NAME TmTrlL3i
+WRT_TmTrlL3i
+ANI_TmTrlL3i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_L3i
+WRT_Fz_L3i
+ANI_Fz_L3i
+REFERENCE_FRAME_ALPHA_NAME TmTrlL3i
+WRT_TmTrlL3i
+ANI_TmTrlL3i
+
+ADD_REFERENCE_FRAME wheel L4 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L4i
+WRT_Xctc_L4i
+ANI_Xctc_L4i
+SET_Y_NAME Yctc_L4i
+WRT_Yctc_L4i
+ANI_Yctc_L4i
+SET_Z_NAME Zgnd_L4i
+WRT_Zgnd_L4i
+ANI_Zgnd_L4i
+SET_PITCH_NAME PitchGL4
+WRT_PitchGL4
+ANI_PitchGL4
+SET_ROLL_NAME RollGL4
+WRT_RollGL4
+ANI_RollGL4
+SET_YAW_NAME Yaw_L4
+WRT_Yaw_L4
+ANI_Yaw_L4
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L4i = IF_GT_0_THEN(VxCenL4i, Yaw_L4 + AlphaL4i, pi + Yaw_L4 -AlphaL4i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenL4i = SQRT(VyTC_L4i^2 + VxCenL4i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlL4i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_L4i * sqrt(((VxCenL4i - Vx_L4)^2) + (VyTC_L4i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_L4i
+WRT_VYaw_L4i
+ANI_VYaw_L4i
+
+SET_FRAME_SCALE_X_NAME TMLenL4i
+WRT_TMLenL4i
+ANI_TMLenL4i
+SET_FRAME_SCALE_Z_NAME TmTrlL4i
+WRT_TmTrlL4i
+ANI_TmTrlL4i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_L4i
+WRT_Fz_L4i
+ANI_Fz_L4i
+REFERENCE_FRAME_ALPHA_NAME TmTrlL4i
+WRT_TmTrlL4i
+ANI_TmTrlL4i
+
+ADD_REFERENCE_FRAME wheel L5 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L5i
+WRT_Xctc_L5i
+ANI_Xctc_L5i
+SET_Y_NAME Yctc_L5i
+WRT_Yctc_L5i
+ANI_Yctc_L5i
+SET_Z_NAME Zgnd_L5i
+WRT_Zgnd_L5i
+ANI_Zgnd_L5i
+SET_PITCH_NAME PitchGL5
+WRT_PitchGL5
+ANI_PitchGL5
+SET_ROLL_NAME RollGL5
+WRT_RollGL5
+ANI_RollGL5
+SET_YAW_NAME Yaw_L5
+WRT_Yaw_L5
+ANI_Yaw_L5
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L5i = IF_GT_0_THEN(VxCenL5i, Yaw_L5 + AlphaL5i, pi + Yaw_L5 -AlphaL5i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenL5i = SQRT(VyTC_L5i^2 + VxCenL5i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlL5i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_L5i * sqrt(((VxCenL5i - Vx_L5)^2) + (VyTC_L5i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_L5i
+WRT_VYaw_L5i
+ANI_VYaw_L5i
+
+SET_FRAME_SCALE_X_NAME TMLenL5i
+WRT_TMLenL5i
+ANI_TMLenL5i
+SET_FRAME_SCALE_Z_NAME TmTrlL5i
+WRT_TmTrlL5i
+ANI_TmTrlL5i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_L5i
+WRT_Fz_L5i
+ANI_Fz_L5i
+REFERENCE_FRAME_ALPHA_NAME TmTrlL5i
+WRT_TmTrlL5i
+ANI_TmTrlL5i
+
+ADD_REFERENCE_FRAME wheel L6 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L6i
+WRT_Xctc_L6i
+ANI_Xctc_L6i
+SET_Y_NAME Yctc_L6i
+WRT_Yctc_L6i
+ANI_Yctc_L6i
+SET_Z_NAME Zgnd_L6i
+WRT_Zgnd_L6i
+ANI_Zgnd_L6i
+SET_PITCH_NAME PitchGL6
+WRT_PitchGL6
+ANI_PitchGL6
+SET_ROLL_NAME RollGL6
+WRT_RollGL6
+ANI_RollGL6
+SET_YAW_NAME Yaw_L6
+WRT_Yaw_L6
+ANI_Yaw_L6
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L6i = IF_GT_0_THEN(VxCenL6i, Yaw_L6 + AlphaL6i, pi + Yaw_L6 -AlphaL6i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenL6i = SQRT(VyTC_L6i^2 + VxCenL6i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlL6i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_L6i * sqrt(((VxCenL6i - Vx_L6)^2) + (VyTC_L6i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_L6i
+WRT_VYaw_L6i
+ANI_VYaw_L6i
+
+SET_FRAME_SCALE_X_NAME TMLenL6i
+WRT_TMLenL6i
+ANI_TMLenL6i
+SET_FRAME_SCALE_Z_NAME TmTrlL6i
+WRT_TmTrlL6i
+ANI_TmTrlL6i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_L6i
+WRT_Fz_L6i
+ANI_Fz_L6i
+REFERENCE_FRAME_ALPHA_NAME TmTrlL6i
+WRT_TmTrlL6i
+ANI_TmTrlL6i
+
+ADD_REFERENCE_FRAME wheel R1 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R1i
+WRT_Xctc_R1i
+ANI_Xctc_R1i
+SET_Y_NAME Yctc_R1i
+WRT_Yctc_R1i
+ANI_Yctc_R1i
+SET_Z_NAME Zgnd_R1i
+WRT_Zgnd_R1i
+ANI_Zgnd_R1i
+SET_PITCH_NAME PitchGR1
+WRT_PitchGR1
+ANI_PitchGR1
+SET_ROLL_NAME RollGR1
+WRT_RollGR1
+ANI_RollGR1
+SET_YAW_NAME Yaw_R1
+WRT_Yaw_R1
+ANI_Yaw_R1
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R1i = IF_GT_0_THEN(VxCenR1i, Yaw_R1 + AlphaR1i, pi + Yaw_R1 -AlphaR1i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenR1i = SQRT(VyTC_R1i^2 + VxCenR1i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlR1i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_R1i * sqrt(((VxCenR1i - Vx_R1)^2) + (VyTC_R1i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_R1i
+WRT_VYaw_R1i
+ANI_VYaw_R1i
+
+SET_FRAME_SCALE_X_NAME TMLenR1i
+WRT_TMLenR1i
+ANI_TMLenR1i
+SET_FRAME_SCALE_Z_NAME TmTrlR1i
+WRT_TmTrlR1i
+ANI_TmTrlR1i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_R1i
+WRT_Fz_R1i
+ANI_Fz_R1i
+REFERENCE_FRAME_ALPHA_NAME TmTrlR1i
+WRT_TmTrlR1i
+ANI_TmTrlR1i
+
+ADD_REFERENCE_FRAME wheel R2 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R2i
+WRT_Xctc_R2i
+ANI_Xctc_R2i
+SET_Y_NAME Yctc_R2i
+WRT_Yctc_R2i
+ANI_Yctc_R2i
+SET_Z_NAME Zgnd_R2i
+WRT_Zgnd_R2i
+ANI_Zgnd_R2i
+SET_PITCH_NAME PitchGR2
+WRT_PitchGR2
+ANI_PitchGR2
+SET_ROLL_NAME RollGR2
+WRT_RollGR2
+ANI_RollGR2
+SET_YAW_NAME Yaw_R2
+WRT_Yaw_R2
+ANI_Yaw_R2
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R2i = IF_GT_0_THEN(VxCenR2i, Yaw_R2 + AlphaR2i, pi + Yaw_R2 -AlphaR2i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenR2i = SQRT(VyTC_R2i^2 + VxCenR2i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlR2i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_R2i * sqrt(((VxCenR2i - Vx_R2)^2) + (VyTC_R2i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_R2i
+WRT_VYaw_R2i
+ANI_VYaw_R2i
+
+SET_FRAME_SCALE_X_NAME TMLenR2i
+WRT_TMLenR2i
+ANI_TMLenR2i
+SET_FRAME_SCALE_Z_NAME TmTrlR2i
+WRT_TmTrlR2i
+ANI_TmTrlR2i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_R2i
+WRT_Fz_R2i
+ANI_Fz_R2i
+REFERENCE_FRAME_ALPHA_NAME TmTrlR2i
+WRT_TmTrlR2i
+ANI_TmTrlR2i
+
+ADD_REFERENCE_FRAME wheel R3 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R3i
+WRT_Xctc_R3i
+ANI_Xctc_R3i
+SET_Y_NAME Yctc_R3i
+WRT_Yctc_R3i
+ANI_Yctc_R3i
+SET_Z_NAME Zgnd_R3i
+WRT_Zgnd_R3i
+ANI_Zgnd_R3i
+SET_PITCH_NAME PitchGR3
+WRT_PitchGR3
+ANI_PitchGR3
+SET_ROLL_NAME RollGR3
+WRT_RollGR3
+ANI_RollGR3
+SET_YAW_NAME Yaw_R3
+WRT_Yaw_R3
+ANI_Yaw_R3
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R3i = IF_GT_0_THEN(VxCenR3i, Yaw_R3 + AlphaR3i, pi + Yaw_R3 -AlphaR3i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenR3i = SQRT(VyTC_R3i^2 + VxCenR3i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlR3i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_R3i * sqrt(((VxCenR3i - Vx_R3)^2) + (VyTC_R3i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_R3i
+WRT_VYaw_R3i
+ANI_VYaw_R3i
+
+SET_FRAME_SCALE_X_NAME TMLenR3i
+WRT_TMLenR3i
+ANI_TMLenR3i
+SET_FRAME_SCALE_Z_NAME TmTrlR3i
+WRT_TmTrlR3i
+ANI_TmTrlR3i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_R3i
+WRT_Fz_R3i
+ANI_Fz_R3i
+REFERENCE_FRAME_ALPHA_NAME TmTrlR3i
+WRT_TmTrlR3i
+ANI_TmTrlR3i
+
+ADD_REFERENCE_FRAME wheel R4 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R4i
+WRT_Xctc_R4i
+ANI_Xctc_R4i
+SET_Y_NAME Yctc_R4i
+WRT_Yctc_R4i
+ANI_Yctc_R4i
+SET_Z_NAME Zgnd_R4i
+WRT_Zgnd_R4i
+ANI_Zgnd_R4i
+SET_PITCH_NAME PitchGR4
+WRT_PitchGR4
+ANI_PitchGR4
+SET_ROLL_NAME RollGR4
+WRT_RollGR4
+ANI_RollGR4
+SET_YAW_NAME Yaw_R4
+WRT_Yaw_R4
+ANI_Yaw_R4
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R4i = IF_GT_0_THEN(VxCenR4i, Yaw_R4 + AlphaR4i, pi + Yaw_R4 -AlphaR4i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenR4i = SQRT(VyTC_R4i^2 + VxCenR4i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlR4i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_R4i * sqrt(((VxCenR4i - Vx_R4)^2) + (VyTC_R4i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_R4i
+WRT_VYaw_R4i
+ANI_VYaw_R4i
+
+SET_FRAME_SCALE_X_NAME TMLenR4i
+WRT_TMLenR4i
+ANI_TMLenR4i
+SET_FRAME_SCALE_Z_NAME TmTrlR4i
+WRT_TmTrlR4i
+ANI_TmTrlR4i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_R4i
+WRT_Fz_R4i
+ANI_Fz_R4i
+REFERENCE_FRAME_ALPHA_NAME TmTrlR4i
+WRT_TmTrlR4i
+ANI_TmTrlR4i
+
+ADD_REFERENCE_FRAME wheel R5 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R5i
+WRT_Xctc_R5i
+ANI_Xctc_R5i
+SET_Y_NAME Yctc_R5i
+WRT_Yctc_R5i
+ANI_Yctc_R5i
+SET_Z_NAME Zgnd_R5i
+WRT_Zgnd_R5i
+ANI_Zgnd_R5i
+SET_PITCH_NAME PitchGR5
+WRT_PitchGR5
+ANI_PitchGR5
+SET_ROLL_NAME RollGR5
+WRT_RollGR5
+ANI_RollGR5
+SET_YAW_NAME Yaw_R5
+WRT_Yaw_R5
+ANI_Yaw_R5
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R5i = IF_GT_0_THEN(VxCenR5i, Yaw_R5 + AlphaR5i, pi + Yaw_R5 -AlphaR5i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenR5i = SQRT(VyTC_R5i^2 + VxCenR5i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlR5i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_R5i * sqrt(((VxCenR5i - Vx_R5)^2) + (VyTC_R5i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_R5i
+WRT_VYaw_R5i
+ANI_VYaw_R5i
+
+SET_FRAME_SCALE_X_NAME TMLenR5i
+WRT_TMLenR5i
+ANI_TMLenR5i
+SET_FRAME_SCALE_Z_NAME TmTrlR5i
+WRT_TmTrlR5i
+ANI_TmTrlR5i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_R5i
+WRT_Fz_R5i
+ANI_Fz_R5i
+REFERENCE_FRAME_ALPHA_NAME TmTrlR5i
+WRT_TmTrlR5i
+ANI_TmTrlR5i
+
+ADD_REFERENCE_FRAME wheel R6 indicator: Tire (Inner) Skid Marks (6 Axles)
+PARSFILE Animator\STL\Shape_edd17fd9-dd40-4e68-91d9-9c482f281706.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R6i
+WRT_Xctc_R6i
+ANI_Xctc_R6i
+SET_Y_NAME Yctc_R6i
+WRT_Yctc_R6i
+ANI_Yctc_R6i
+SET_Z_NAME Zgnd_R6i
+WRT_Zgnd_R6i
+ANI_Zgnd_R6i
+SET_PITCH_NAME PitchGR6
+WRT_PitchGR6
+ANI_PitchGR6
+SET_ROLL_NAME RollGR6
+WRT_RollGR6
+ANI_RollGR6
+SET_YAW_NAME Yaw_R6
+WRT_Yaw_R6
+ANI_Yaw_R6
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R6i = IF_GT_0_THEN(VxCenR6i, Yaw_R6 + AlphaR6i, pi + Yaw_R6 -AlphaR6i); deg ; Yaw angle of tire slip
+DEFINE_OUTPUT TMLenR6i = SQRT(VyTC_R6i^2 + VxCenR6i^2) * TireMarkLen; m ; Dynamic length of skid mark rectangle
+DEFINE_OUTPUT TmTrlR6i = min(1.0, TireMarkOffset + TireMarkScale *CmpT_R6i * sqrt(((VxCenR6i - Vx_R6)^2) + (VyTC_R6i^2)))); - ; Darkness of skid mark
+SET_YAW_NAME VYaw_R6i
+WRT_VYaw_R6i
+ANI_VYaw_R6i
+
+SET_FRAME_SCALE_X_NAME TMLenR6i
+WRT_TMLenR6i
+ANI_TMLenR6i
+SET_FRAME_SCALE_Z_NAME TmTrlR6i
+WRT_TmTrlR6i
+ANI_TmTrlR6i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+SET_FRAME_VISIBLE_NAME Fz_R6i
+WRT_Fz_R6i
+ANI_Fz_R6i
+REFERENCE_FRAME_ALPHA_NAME TmTrlR6i
+WRT_TmTrlR6i
+ANI_TmTrlR6i
+
+
+#EMBEDDED_NOTES
+#This dataset adds output variables to locate a rectangle on the ground at each inner tire for 6 axles.
+#
+#This dataset was made by copying a similar dataset for 2 axle and then sim[ply changing the number of axles from 2 to 6. All other settings are the same.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Wheel Arrows and Other Indicators; { Skid Marks (6 Axles) } Tire (Inner) Skid Marks (6 Axles)
+#Library : Animator: Wheel Arrows and Other Indicators
+#DataSet : Tire (Inner) Skid Marks (6 Axles)
+#Category: Skid Marks (6 Axles)
+#FileID  : Arrows_c35370b9-ba5f-4087-aba1-42d9ca7e28a8
+#Product : TruckSim 2020.1
+#VehCode Wheel Indicators
+
+END

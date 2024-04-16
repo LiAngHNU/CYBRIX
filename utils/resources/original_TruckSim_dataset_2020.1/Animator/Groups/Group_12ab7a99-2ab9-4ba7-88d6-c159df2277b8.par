@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Group`Crosswind: Fan Speed Arrows`Test Facilities
+#BlueLink0 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink1 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#MiscYellow0
+define_parameter fan_scale 150
+define_output VFANR = if_gt_0_then(yaw_wind, vwind * 3.6, 0) * fan_scale;
+#ENDMYellow
+
+PARSFILE Animator\GroupsMore\GroupM_e1caf5c6-efcd-4360-b979-169a85a15acb.par
+#BlueLink11 Animator: Group (More)`Fan Speed Arrows - Right Side` Crosswind Facility` , Miscellaneous`GroupM_e1caf5c6-efcd-4360-b979-169a85a15acb
+
+#MiscYellow1
+define_output VFANL = if_gt_0_then(yaw_wind, 0, vwind * 3.6) * fan_scale;
+#ENDMYellow
+
+PARSFILE Animator\GroupsMore\GroupM_49939c5a-6f1f-4c7c-b64d-4c6ae5c12b63.par
+#BlueLink12 Animator: Group (More)`Fan Speed Arrows - Left Side` Crosswind Facility` , Miscellaneous`GroupM_49939c5a-6f1f-4c7c-b64d-4c6ae5c12b63
+
+*X_REF_LENGTH 2756
+*Y_REF_LENGTH 1988
+*Z_REF_LENGTH 1272
+
+#CheckBox0 0    
+
+
+LOG_ENTRY Used Dataset: Animator: Group; { Test Facilities } Crosswind: Fan Speed Arrows
+#Library : Animator: Group
+#DataSet : Crosswind: Fan Speed Arrows
+#Category: Test Facilities
+#FileID  : Group_12ab7a99-2ab9-4ba7-88d6-c159df2277b8
+#Product : TruckSim 2020.1
+#VehCode Animator Group
+
+END

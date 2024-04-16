@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`MCity Ground Surface`
+#MiscYellow3
+add_obj Scene_Import\VS_Scene_Builder\Mcity_scene.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 0    
+
+SET_SPECULAR 1 1 1
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_f36740cb-1a36-47cc-b484-6dca934c0114.png
+
+#EMBEDDED_NOTES
+#This .obj files represents the ground surface for the of the MCity scene.
+#
+#Creation of this .obj file was done by using the VS Terrain Utility to convert the MCity_scene.vsterrain file to a .obj, then importing that file into this Animation Shape File Link.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; MCity Ground Surface
+#Library : Animator: Shape File Link
+#DataSet : MCity Ground Surface
+#Category: 
+#FileID  : Shape_f36740cb-1a36-47cc-b484-6dca934c0114
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

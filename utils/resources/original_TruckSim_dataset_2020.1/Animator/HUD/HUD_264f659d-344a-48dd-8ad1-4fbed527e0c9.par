@@ -1,0 +1,177 @@
+PARSFILE
+#FullDataName Animator: HUD`Throt, Brakes, Speed, Gear, Reverse`HUD Groups
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox7 1    
+
+#RingCtrl0 3
+#RingCtrl1 19
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 5
+#RingCtrl6 0
+#RingCtrl7 2
+#RingCtrl8 1
+#RingCtrl9 16
+#RingCtrl10 2
+#RingCtrl11 2
+#RingCtrl12 1
+*TITLE_1 Throttle
+*LOCX_1 .625
+*LOCY_1 1.25
+*COLOR_1 0 1 0
+*TITLE_2 Brake
+*LOCX_2 6.25
+*LOCY_2 15
+*COLOR_2 1 0 0
+*LOCX_3 .625
+*LOCY_3 1.25
+*VAR_NAME_3 Vx
+*LOCX_4 10.5
+*LOCY_4 1.25
+
+PARSFILE Generic\VS_commands\GenVS_d74870c7-6ae5-4a01-b77e-38c104e60d80.par
+#BlueLink0 Generic VS Commands`Reverse Indicator` HUD Gauges` , Miscellaneous`GenVS_d74870c7-6ae5-4a01-b77e-38c104e60d80
+
+
+#Selection 19 for Icon 0
+#Selection_1 19 for Icon
+#Selection_2 Title: Throttle AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 12 locY 12
+#Selection_4 Fixed: 1 VarName: NULL  ColorStr: 0 1 0
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Throttle Fill BG
+location 12 12 100 200
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
+END_ENTITY hud_image Throttle Fill BG
+ADD_ENTITY hud_text Icon Text for Type #19
+prefix Throttle
+location 22 217 100 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+color 1.0 1.0 1.0 1.0
+outline_color .3 .3 .3 0.5
+font VeraMono.ttf
+END_ENTITY hud_text Icon Text for Type #19
+ANI_Throttle
+WRT_Throttle
+ADD_ENTITY hud_image Throttle Fill Bar
+location 34 37 33 149
+red 0
+green 1
+blue 0
+opacity Throttle
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+scale_y Throttle
+center_location 0.0 -0.5
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
+END_ENTITY hud_image Throttle Fill Bar
+#Selection 5 for Icon 1
+#Selection_1 5 for Icon
+#Selection_2 Title: Brake AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 125 locY 150
+#Selection_4 Fixed: 1 VarName: NULL  ColorStr: 1 0 0
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Brake Fill BG
+location 125 150 100 100
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_OFF.dds
+END_ENTITY hud_image Brake Fill BG
+ADD_ENTITY hud_text Icon Text for Type #5
+prefix Brake
+location 150 255 100 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+color 1.0 1.0 1.0 1.0
+outline_color .3 .3 .3 0.5
+font VeraMono.ttf
+END_ENTITY hud_text Icon Text for Type #5
+ANI_Bk_Stat
+WRT_Bk_Stat
+ADD_ENTITY hud_image Brake Fill BG
+location 125 150 100 100
+red 1
+green 0
+blue 0
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity Bk_Stat*0.65
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_ON.dds
+END_ENTITY hud_image Brake Fill BG
+#Selection 16 for Icon 2
+#Selection_1 16 for Icon
+#Selection_2 Title:  AlX 2 AlY 2
+#Selection_3 Scale 1.000000 locX 12 locY 12
+#Selection_4 Fixed: 1 VarName: Vx  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Vx Speedometer w/Gear (RWD)
+location 12 12 200 200
+align_x right
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Dash_Gauges\Speedometer.dds
+END_ENTITY hud_image Vx Speedometer w/Gear (RWD)
+ANI_Vx
+WRT_Vx
+ADD_ENTITY hud_image Vx Speed w/Gear (Needle) (RWD)
+location 12 12 200 200
+align_x right
+align_y bottom
+size_mode absolute
+place_mode absolute
+! Speed calculation for a RWD vehicle.
+rotate MAX(-((Vx)*1.5)+150,-150)
+image_file Resources\Animator\2D_HUD_Icons\Dash_Gauges\Needle.dds
+END_ENTITY hud_image Vx Speed w/Gear (Needle) (RWD)
+ANI_gearstat
+WRT_gearstat
+ADD_ENTITY hud_text Text Output - GearStat
+align_x right
+align_y bottom
+size_mode absolute
+place_mode absolute
+location 102 39 35 35
+value gearstat
+precision 0
+color 1 1 1 1
+outline_color 0 0 0 0.5
+END_ENTITY hud_text Text Output - GearStat
+
+#EMBEDDED_NOTES
+#This dataset provides 5 indicators.
+#
+#Throttle
+#Master Cylinder Pressure command
+#Speedometer w/ transmission gear
+#Reverse Indicator
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Throt, Brakes, Speed, Gear, Reverse
+#Library : Animator: HUD
+#DataSet : Throt, Brakes, Speed, Gear, Reverse
+#Category: HUD Groups
+#FileID  : HUD_264f659d-344a-48dd-8ad1-4fbed527e0c9
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

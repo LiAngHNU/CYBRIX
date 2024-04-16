@@ -1,0 +1,148 @@
+PARSFILE
+#FullDataName Animator: HUD`Accel., SWA, HW Torque Text`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox10 1    
+#CheckBox11 1    
+
+#RingCtrl0 4
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 18
+#RingCtrl6 0
+#RingCtrl7 2
+#RingCtrl8 2
+#RingCtrl9 18
+#RingCtrl10 0
+#RingCtrl11 2
+#RingCtrl12 2
+#RingCtrl13 18
+#RingCtrl14 0
+#RingCtrl15 2
+#RingCtrl16 2
+*TITLE_1 Ax (g's)
+*LOCX_1 2
+*LOCY_1 50
+*VAR_NAME_1 Ax
+*COLOR_1 1 1 0.5
+*PREC1 2
+*TITLE_2 Ay (g's)
+*LOCX_2 2
+*LOCY_2 46
+*VAR_NAME_2 Ay
+*COLOR_2 1 1 0.5
+*PREC2 2
+*TITLE_3 SWA (deg)
+*LOCX_3 2
+*LOCY_3 42
+*VAR_NAME_3 SW
+*COLOR_3 1 1 0.5
+*PREC3 2
+*TITLE_4 Handwheel Torque (Nm)
+*LOCX_4 2
+*LOCY_4 38
+*VAR_NAME_4 M_SW
+*COLOR_4 1 1 0.5
+*PREC4 2
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Ax (g's) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 500
+#Selection_4 Fixed: 1 VarName: Ax  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_Ax
+WRT_Ax
+ADD_ENTITY hud_text Text Output
+location 40 500 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is Ax
+prefix Ax (g's)
+min_width_prefix 20
+value Ax
+precision 2
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 1
+#Selection_1 18 for Icon
+#Selection_2 Title: Ay (g's) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 460
+#Selection_4 Fixed: 1 VarName: Ay  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_Ay
+WRT_Ay
+ADD_ENTITY hud_text Text Output
+location 40 460 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is Ay
+prefix Ay (g's)
+min_width_prefix 20
+value Ay
+precision 2
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 2
+#Selection_1 18 for Icon
+#Selection_2 Title: SWA (deg) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 420
+#Selection_4 Fixed: 1 VarName: SW  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_SW
+WRT_SW
+ADD_ENTITY hud_text Text Output
+location 40 420 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is SW
+prefix SWA (deg)
+min_width_prefix 20
+value SW
+precision 2
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 3
+#Selection_1 18 for Icon
+#Selection_2 Title: Handwheel Torque (Nm) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 380
+#Selection_4 Fixed: 1 VarName: M_SW  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_M_SW
+WRT_M_SW
+ADD_ENTITY hud_text Text Output
+location 40 380 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is M_SW
+prefix Handwheel Torque (Nm)
+min_width_prefix 20
+value M_SW
+precision 2
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Accel., SWA, HW Torque Text
+#Library : Animator: HUD
+#DataSet : Accel., SWA, HW Torque Text
+#Category: HUD Groups
+#FileID  : HUD_9fdb245c-69bf-4e15-8864-a42703838fbc
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

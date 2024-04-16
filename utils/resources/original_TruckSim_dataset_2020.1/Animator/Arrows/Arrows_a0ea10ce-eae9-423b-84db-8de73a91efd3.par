@@ -1,0 +1,360 @@
+PARSFILE
+#FullDataName Animator: Wheel Arrows and Other Indicators`Tire (Inner) Paths (4 Axles)`Tire Paths (4 Axles)
+#CheckBox0 0    
+#CheckBox1 1    
+
+#RingCtrl0 4
+#RingCtrl1 T
+#RingCtrl2 B
+#RingCtrl3 2
+*DYN_X TMLen<<o>>i
+*REF_X 1
+*OFFSET_Z 0.02
+*OFFSET_Z_AXLE 0.02
+*COLOR_1 0 0 0.8
+*COLOR_2 1 0 0
+*COLOR_3 1 1 0
+*COLOR_4 0 1 0
+*COLOR_5 1 1 1
+*ID_AXLE 1
+
+#MiscYellow1
+#reference_frame_ghosts on
+#DEFINE_OUTPUT VYaw_<<o>>i =  IF_GT_0_THEN(VxCen<<o>>i, Yaw_<<o>>+Alpha<<o>>i, pi+Yaw_<<o>>-Alpha<<o>>i); deg
+#DEFINE_OUTPUT TMLen<<o>>i = SQRT(VyTC_<<o>>i^2 + VxCen<<o>>i^2) * TireMarkLen
+#SET_YAW_NAME VYaw_<<o>>i
+#WRT_VYaw_<<o>>i
+#ANI_VYaw_<<o>>i
+#ENDMYellow
+
+#BlueLink0 Animator: Shape File Link`Tire Mark (Maroon)` Common Vehicle Assets` , Animator Shape(s)`Shape_c783ab66-6d03-4c08-94d7-9061d44e1724
+
+ADD_REFERENCE_FRAME wheel L1 indicator: Tire (Inner) Paths (4 Axles)
+SET_RUN_COLOR 0 0 0.8
+PARSFILE Animator\STL\Shape_c783ab66-6d03-4c08-94d7-9061d44e1724.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L1i
+WRT_Xctc_L1i
+ANI_Xctc_L1i
+SET_Y_NAME Yctc_L1i
+WRT_Yctc_L1i
+ANI_Yctc_L1i
+SET_Z_NAME Zgnd_L1i
+WRT_Zgnd_L1i
+ANI_Zgnd_L1i
+SET_PITCH_NAME PitchGL1
+WRT_PitchGL1
+ANI_PitchGL1
+SET_ROLL_NAME RollGL1
+WRT_RollGL1
+ANI_RollGL1
+SET_YAW_NAME Yaw_L1
+WRT_Yaw_L1
+ANI_Yaw_L1
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L1i =  IF_GT_0_THEN(VxCenL1i, Yaw_L1+AlphaL1i, pi+Yaw_L1-AlphaL1i); deg
+DEFINE_OUTPUT TMLenL1i = SQRT(VyTC_L1i^2 + VxCenL1i^2) * TireMarkLen
+SET_YAW_NAME VYaw_L1i
+WRT_VYaw_L1i
+ANI_VYaw_L1i
+
+SET_FRAME_SCALE_X_NAME TMLenL1i
+WRT_TMLenL1i
+ANI_TMLenL1i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.02
+
+ADD_REFERENCE_FRAME wheel L2 indicator: Tire (Inner) Paths (4 Axles)
+SET_RUN_COLOR 1 0 0
+PARSFILE Animator\STL\Shape_c783ab66-6d03-4c08-94d7-9061d44e1724.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L2i
+WRT_Xctc_L2i
+ANI_Xctc_L2i
+SET_Y_NAME Yctc_L2i
+WRT_Yctc_L2i
+ANI_Yctc_L2i
+SET_Z_NAME Zgnd_L2i
+WRT_Zgnd_L2i
+ANI_Zgnd_L2i
+SET_PITCH_NAME PitchGL2
+WRT_PitchGL2
+ANI_PitchGL2
+SET_ROLL_NAME RollGL2
+WRT_RollGL2
+ANI_RollGL2
+SET_YAW_NAME Yaw_L2
+WRT_Yaw_L2
+ANI_Yaw_L2
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L2i =  IF_GT_0_THEN(VxCenL2i, Yaw_L2+AlphaL2i, pi+Yaw_L2-AlphaL2i); deg
+DEFINE_OUTPUT TMLenL2i = SQRT(VyTC_L2i^2 + VxCenL2i^2) * TireMarkLen
+SET_YAW_NAME VYaw_L2i
+WRT_VYaw_L2i
+ANI_VYaw_L2i
+
+SET_FRAME_SCALE_X_NAME TMLenL2i
+WRT_TMLenL2i
+ANI_TMLenL2i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.04
+
+ADD_REFERENCE_FRAME wheel L3 indicator: Tire (Inner) Paths (4 Axles)
+SET_RUN_COLOR 1 1 0
+PARSFILE Animator\STL\Shape_c783ab66-6d03-4c08-94d7-9061d44e1724.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L3i
+WRT_Xctc_L3i
+ANI_Xctc_L3i
+SET_Y_NAME Yctc_L3i
+WRT_Yctc_L3i
+ANI_Yctc_L3i
+SET_Z_NAME Zgnd_L3i
+WRT_Zgnd_L3i
+ANI_Zgnd_L3i
+SET_PITCH_NAME PitchGL3
+WRT_PitchGL3
+ANI_PitchGL3
+SET_ROLL_NAME RollGL3
+WRT_RollGL3
+ANI_RollGL3
+SET_YAW_NAME Yaw_L3
+WRT_Yaw_L3
+ANI_Yaw_L3
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L3i =  IF_GT_0_THEN(VxCenL3i, Yaw_L3+AlphaL3i, pi+Yaw_L3-AlphaL3i); deg
+DEFINE_OUTPUT TMLenL3i = SQRT(VyTC_L3i^2 + VxCenL3i^2) * TireMarkLen
+SET_YAW_NAME VYaw_L3i
+WRT_VYaw_L3i
+ANI_VYaw_L3i
+
+SET_FRAME_SCALE_X_NAME TMLenL3i
+WRT_TMLenL3i
+ANI_TMLenL3i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.06
+
+ADD_REFERENCE_FRAME wheel L4 indicator: Tire (Inner) Paths (4 Axles)
+SET_RUN_COLOR 0 1 0
+PARSFILE Animator\STL\Shape_c783ab66-6d03-4c08-94d7-9061d44e1724.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L4i
+WRT_Xctc_L4i
+ANI_Xctc_L4i
+SET_Y_NAME Yctc_L4i
+WRT_Yctc_L4i
+ANI_Yctc_L4i
+SET_Z_NAME Zgnd_L4i
+WRT_Zgnd_L4i
+ANI_Zgnd_L4i
+SET_PITCH_NAME PitchGL4
+WRT_PitchGL4
+ANI_PitchGL4
+SET_ROLL_NAME RollGL4
+WRT_RollGL4
+ANI_RollGL4
+SET_YAW_NAME Yaw_L4
+WRT_Yaw_L4
+ANI_Yaw_L4
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L4i =  IF_GT_0_THEN(VxCenL4i, Yaw_L4+AlphaL4i, pi+Yaw_L4-AlphaL4i); deg
+DEFINE_OUTPUT TMLenL4i = SQRT(VyTC_L4i^2 + VxCenL4i^2) * TireMarkLen
+SET_YAW_NAME VYaw_L4i
+WRT_VYaw_L4i
+ANI_VYaw_L4i
+
+SET_FRAME_SCALE_X_NAME TMLenL4i
+WRT_TMLenL4i
+ANI_TMLenL4i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+
+ADD_REFERENCE_FRAME wheel R1 indicator: Tire (Inner) Paths (4 Axles)
+SET_RUN_COLOR 0 0 0.8
+PARSFILE Animator\STL\Shape_c783ab66-6d03-4c08-94d7-9061d44e1724.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R1i
+WRT_Xctc_R1i
+ANI_Xctc_R1i
+SET_Y_NAME Yctc_R1i
+WRT_Yctc_R1i
+ANI_Yctc_R1i
+SET_Z_NAME Zgnd_R1i
+WRT_Zgnd_R1i
+ANI_Zgnd_R1i
+SET_PITCH_NAME PitchGR1
+WRT_PitchGR1
+ANI_PitchGR1
+SET_ROLL_NAME RollGR1
+WRT_RollGR1
+ANI_RollGR1
+SET_YAW_NAME Yaw_R1
+WRT_Yaw_R1
+ANI_Yaw_R1
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R1i =  IF_GT_0_THEN(VxCenR1i, Yaw_R1+AlphaR1i, pi+Yaw_R1-AlphaR1i); deg
+DEFINE_OUTPUT TMLenR1i = SQRT(VyTC_R1i^2 + VxCenR1i^2) * TireMarkLen
+SET_YAW_NAME VYaw_R1i
+WRT_VYaw_R1i
+ANI_VYaw_R1i
+
+SET_FRAME_SCALE_X_NAME TMLenR1i
+WRT_TMLenR1i
+ANI_TMLenR1i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.02
+
+ADD_REFERENCE_FRAME wheel R2 indicator: Tire (Inner) Paths (4 Axles)
+SET_RUN_COLOR 1 0 0
+PARSFILE Animator\STL\Shape_c783ab66-6d03-4c08-94d7-9061d44e1724.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R2i
+WRT_Xctc_R2i
+ANI_Xctc_R2i
+SET_Y_NAME Yctc_R2i
+WRT_Yctc_R2i
+ANI_Yctc_R2i
+SET_Z_NAME Zgnd_R2i
+WRT_Zgnd_R2i
+ANI_Zgnd_R2i
+SET_PITCH_NAME PitchGR2
+WRT_PitchGR2
+ANI_PitchGR2
+SET_ROLL_NAME RollGR2
+WRT_RollGR2
+ANI_RollGR2
+SET_YAW_NAME Yaw_R2
+WRT_Yaw_R2
+ANI_Yaw_R2
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R2i =  IF_GT_0_THEN(VxCenR2i, Yaw_R2+AlphaR2i, pi+Yaw_R2-AlphaR2i); deg
+DEFINE_OUTPUT TMLenR2i = SQRT(VyTC_R2i^2 + VxCenR2i^2) * TireMarkLen
+SET_YAW_NAME VYaw_R2i
+WRT_VYaw_R2i
+ANI_VYaw_R2i
+
+SET_FRAME_SCALE_X_NAME TMLenR2i
+WRT_TMLenR2i
+ANI_TMLenR2i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.04
+
+ADD_REFERENCE_FRAME wheel R3 indicator: Tire (Inner) Paths (4 Axles)
+SET_RUN_COLOR 1 1 0
+PARSFILE Animator\STL\Shape_c783ab66-6d03-4c08-94d7-9061d44e1724.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R3i
+WRT_Xctc_R3i
+ANI_Xctc_R3i
+SET_Y_NAME Yctc_R3i
+WRT_Yctc_R3i
+ANI_Yctc_R3i
+SET_Z_NAME Zgnd_R3i
+WRT_Zgnd_R3i
+ANI_Zgnd_R3i
+SET_PITCH_NAME PitchGR3
+WRT_PitchGR3
+ANI_PitchGR3
+SET_ROLL_NAME RollGR3
+WRT_RollGR3
+ANI_RollGR3
+SET_YAW_NAME Yaw_R3
+WRT_Yaw_R3
+ANI_Yaw_R3
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R3i =  IF_GT_0_THEN(VxCenR3i, Yaw_R3+AlphaR3i, pi+Yaw_R3-AlphaR3i); deg
+DEFINE_OUTPUT TMLenR3i = SQRT(VyTC_R3i^2 + VxCenR3i^2) * TireMarkLen
+SET_YAW_NAME VYaw_R3i
+WRT_VYaw_R3i
+ANI_VYaw_R3i
+
+SET_FRAME_SCALE_X_NAME TMLenR3i
+WRT_TMLenR3i
+ANI_TMLenR3i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.06
+
+ADD_REFERENCE_FRAME wheel R4 indicator: Tire (Inner) Paths (4 Axles)
+SET_RUN_COLOR 0 1 0
+PARSFILE Animator\STL\Shape_c783ab66-6d03-4c08-94d7-9061d44e1724.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R4i
+WRT_Xctc_R4i
+ANI_Xctc_R4i
+SET_Y_NAME Yctc_R4i
+WRT_Yctc_R4i
+ANI_Yctc_R4i
+SET_Z_NAME Zgnd_R4i
+WRT_Zgnd_R4i
+ANI_Zgnd_R4i
+SET_PITCH_NAME PitchGR4
+WRT_PitchGR4
+ANI_PitchGR4
+SET_ROLL_NAME RollGR4
+WRT_RollGR4
+ANI_RollGR4
+SET_YAW_NAME Yaw_R4
+WRT_Yaw_R4
+ANI_Yaw_R4
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R4i =  IF_GT_0_THEN(VxCenR4i, Yaw_R4+AlphaR4i, pi+Yaw_R4-AlphaR4i); deg
+DEFINE_OUTPUT TMLenR4i = SQRT(VyTC_R4i^2 + VxCenR4i^2) * TireMarkLen
+SET_YAW_NAME VYaw_R4i
+WRT_VYaw_R4i
+ANI_VYaw_R4i
+
+SET_FRAME_SCALE_X_NAME TMLenR4i
+WRT_TMLenR4i
+ANI_TMLenR4i
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.08
+
+
+#EMBEDDED_NOTES
+#This dataset adds output variables to locate a rectangle on the ground at each inner tire for 4 axles.
+#
+#The animator ghost option is activated with the animator keyword reference_frame_ghosts. Multiple images of the rectangle then combine to show a path followed by the tire.
+#
+#The X, Y, and Z coordinates of the contact point between each tire and the ground already exist. The VS comand DEFINE_OUTPUT is used to add two variables per tire for the direction of the contact point (VYAW_?i) and the length of the rectangle used to create the path (TMLen?i). The equation for length includes a reference length TireMarkLen that is defined in a different dataset.
+#
+#To avoid flicker interference between the tire path and the road shape, a Z offset of 0.02 m is specified to raise the path of the first axle above the ground.
+#
+#Also, the path for each following axle is raised 0.02 m above the path of the previous axle.
+#
+#A feature of this screen is that the variable names in the data fields are repeated twice for each axle. Therefore, the parsfile sent to the math model and animator contains copies of the template for 4 axles. Other datasets are used with nearly identical contents for vehicles with a different number of axles.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Paths (4 Axles) } Tire (Inner) Paths (4 Axles)
+#Library : Animator: Wheel Arrows and Other Indicators
+#DataSet : Tire (Inner) Paths (4 Axles)
+#Category: Tire Paths (4 Axles)
+#FileID  : Arrows_a0ea10ce-eae9-423b-84db-8de73a91efd3
+#Product : TruckSim 2020.1
+#VehCode Wheel Indicators
+
+END

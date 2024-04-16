@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`210 Azm, 10 El, 42 m`Vehicle Reference
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+SET_CAMERA_REFERENCE_FRAME Frame_fbd0098b-8211-4c5f-89ee-1abe2f8475e5
+PARSFILE Animator\Frames\Frame_fbd0098b-8211-4c5f-89ee-1abe2f8475e5.par
+#BlueLink0 Animator: Reference Frame`Camera Tracking X-Y-Z-Yaw` Tracking: Road` , Reference frame for outside camera`Frame_fbd0098b-8211-4c5f-89ee-1abe2f8475e5
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_fbd0098b-8211-4c5f-89ee-1abe2f8475e5
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 1
+SET_AZIMUTH 210
+SET_ELEVATION 10
+SET_DISTANCE 42
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X 0
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 1
+*SET_AZIMUTH 210
+*SET_ELEVATION 10
+*SET_DISTANCE 42
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 37
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Vehicle Reference } 210 Azm, 10 El, 42 m
+#Library : Animator: Camera Setup
+#DataSet : 210 Azm, 10 El, 42 m
+#Category: Vehicle Reference
+#FileID  : Camera_c9608240-5cb8-47f4-a472-157db2431468
+#Product : TruckSim 2020.1
+#VehCode Camera
+
+END

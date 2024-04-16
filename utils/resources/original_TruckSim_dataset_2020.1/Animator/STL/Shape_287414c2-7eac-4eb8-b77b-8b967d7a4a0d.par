@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`LD Utility Truck: Bed`Trucks: Vocational Bodies
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trucks\LD_Utility_Truck\bed.obj
+#ENDMYellow
+
+SET_COLOR 1 0.6 0
+SET_SCALE_X 1.02
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -0.58
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.29
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_287414c2-7eac-4eb8-b77b-8b967d7a4a0d.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Vocational Bodies } LD Utility Truck: Bed
+#Library : Animator: Shape File Link
+#DataSet : LD Utility Truck: Bed
+#Category: Trucks: Vocational Bodies
+#FileID  : Shape_287414c2-7eac-4eb8-b77b-8b967d7a4a0d
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

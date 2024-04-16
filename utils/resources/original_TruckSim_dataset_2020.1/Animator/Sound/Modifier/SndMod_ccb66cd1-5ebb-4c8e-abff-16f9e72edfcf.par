@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Animator: Sound Modifier`Power Off Loudness: Load Effect`Diesel Engine Sound Modifiers
+
+#MiscYellow0
+define_parameter max_brake_torque 250; n-m ; Max engine braking torque for audio
+define_output v_mod2 = if_gt_0_then(m_engout, 0, pow(abs(m_engout/max_brake_torque), 0.5)); ;...
+      Audio control (power off)
+#ENDMYellow
+
+
+#RingCtrl0 VOLUME
+ADD_SOUND_MODIFIER VOLUME
+SOUNDMOD_OPERATION mult
+
+SOUNDMOD_INPUT_NAME v_mod2
+SOUNDMOD_INPUT_MIN 0.0
+SOUNDMOD_INPUT_LOW 1.0
+SOUNDMOD_INPUT_HIGH 1.0
+SOUNDMOD_INPUT_MAX 1.0
+SOUNDMOD_OUTPUT_MIN 0.0
+SOUNDMOD_OUTPUT_LOW 1.0
+SOUNDMOD_OUTPUT_HIGH 1.0
+SOUNDMOD_OUTPUT_MAX 1.0
+
+WRT_v_mod2
+ANI_v_mod2
+
+LOG_ENTRY Used Dataset: Animator: Sound Modifier; { Diesel Engine Sound Modifiers } Power Off Loudness: Load Effect
+#Library : Animator: Sound Modifier
+#DataSet : Power Off Loudness: Load Effect
+#Category: Diesel Engine Sound Modifiers
+#FileID  : SndMod_ccb66cd1-5ebb-4c8e-abff-16f9e72edfcf
+#Product : TruckSim 2020.1
+#VehCode Sound Modifier
+
+END

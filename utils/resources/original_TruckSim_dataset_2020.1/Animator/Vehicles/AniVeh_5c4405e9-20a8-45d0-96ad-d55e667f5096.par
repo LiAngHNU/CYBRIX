@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`2A Heavy Duty Utility Vehicle`2A Utility Trucks and Vans
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 3900
+OBJ_Y_LENGTH 2420
+OBJ_Z_LENGTH 2451
+*DZ_V 0
+*LAT_WC 1975
+*LAT_WC_2 1975
+*HWC 565
+*WHEEL_RATIO 1.07
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_5c4405e9-20a8-45d0-96ad-d55e667f5096.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1.07
+SET_SCALE_Y 1.07
+SET_SCALE_Z 1.07
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.9875
+SET_OFFSET_Z 0.53675
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1.07
+SET_SCALE_Y 1.07
+SET_SCALE_Z 1.07
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.9875
+SET_OFFSET_Z 0.53675
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1.07
+SET_SCALE_Y 1.07
+SET_SCALE_Z 1.07
+SET_OFFSET_X -3.9
+SET_OFFSET_Y 0.9875
+SET_OFFSET_Z 0.53675
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1.07
+SET_SCALE_Y 1.07
+SET_SCALE_Z 1.07
+SET_ANGLE_X 180
+SET_OFFSET_X -3.9
+SET_OFFSET_Y -0.9875
+SET_OFFSET_Z 0.53675
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_88da7789-6e2f-4ea0-824b-6ef70f0f4fd5.par
+#BlueLink1 Animator: Shape Assembly`HD Utility Vehicle` Utility Vehicles` , Vehicle Body`ShpGrp_88da7789-6e2f-4ea0-824b-6ef70f0f4fd5
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_0140d0cb-4767-4dfc-ae55-731713f1084d.par
+#BlueLink3 Animator: Shape File Link`HD Utility Truck: Brake Lights` Trucks: Chassis` , Brake Lights`Shape_0140d0cb-4767-4dfc-ae55-731713f1084d
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_d50a172f-ef99-4806-a39e-9e42a1522643.par
+#BlueLink10 Animator: Shape File Link`HD Utility Truck: Reverse Lights` Trucks: Chassis` , Reverse lights`Shape_d50a172f-ef99-4806-a39e-9e42a1522643
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { 2A Utility Trucks and Vans } 2A Heavy Duty Utility Vehicle
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 2A Heavy Duty Utility Vehicle
+#Category: 2A Utility Trucks and Vans
+#FileID  : AniVeh_5c4405e9-20a8-45d0-96ad-d55e667f5096
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Animator: HUD`FCW Alert (small)`Alerts
+#CheckBox1 1    
+#CheckBox3 1    
+
+#RingCtrl0 1
+#RingCtrl1 9
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+*LOCX_1 0
+*SCALE_1 0.6
+*VAR_NAME_1 Show_FCW
+
+*IMG_NAME_1 Animator\2D_HUD_Icons\Distance_Warning\Distance_Warning.png
+
+#Selection 9 for Icon 0
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: Show_FCW  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\Distance_Warning\Distance_Warning.png
+! General Icon
+ANI_Show_FCW
+WRT_Show_FCW
+ADD_ENTITY hud_image General Icon
+location 0 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity Show_FCW
+image_file Animator\2D_HUD_Icons\Distance_Warning\Distance_Warning.png
+END_ENTITY hud_image General Icon
+
+LOG_ENTRY Used Dataset: Animator: HUD; { Alerts } FCW Alert (small)
+#Library : Animator: HUD
+#DataSet : FCW Alert (small)
+#Category: Alerts
+#FileID  : HUD_bb95272c-4b83-4a10-8334-f8f6097af704
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Animator: HUD`Tilt Lateral Accel. Text`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox6 1    
+
+#RingCtrl0 2
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl4 2
+#RingCtrl5 9
+#RingCtrl6 2
+#RingCtrl7 2
+#RingCtrl8 2
+*TITLE_1 Equivalent Ay (g's)
+*LOCX_1 5
+*LOCY_1 5
+*VAR_NAME_1 Ay_Tilt
+*COLOR_1 1 1 1
+*PREC1 3
+*LOCX_2 0
+*LOCY_2 1
+*VAR_NAME_2 0.33
+*COLOR_2 1 1 1
+*PREC2 2
+*TITLE_3 SWA (deg)
+*LOCX_3 2
+*LOCY_3 42
+*VAR_NAME_3 SW
+*COLOR_3 1 1 0.5
+*PREC3 2
+*TITLE_4 Handwheel Torque (Nm)
+*LOCX_4 2
+*LOCY_4 38
+*VAR_NAME_4 M_SW
+*COLOR_4 1 1 0.5
+*PREC4 2
+
+*IMG_NAME_2 Animator\2D_HUD_Icons\VS_Icons\TSIcon.png
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Equivalent Ay (g's) AlX 0 AlY 0
+#Selection_3 Scale 1.333333 locX 100 locY 50
+#Selection_4 Fixed: 1 VarName: Ay_Tilt  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_Ay_Tilt
+WRT_Ay_Tilt
+ADD_ENTITY hud_text Text Output
+location 100 50 24 24
+align_x left
+align_y top
+size_mode absolute
+place_mode absolute
+# var name is Ay_Tilt
+prefix Equivalent Ay (g's)
+min_width_prefix 20
+value Ay_Tilt
+precision 3
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+#Selection 9 for Icon 1
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 2 AlY 2
+#Selection_3 Scale 1.333333 locX 0 locY 10
+#Selection_4 Fixed: 1 VarName: 0.33  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\VS_Icons\TSIcon.png
+! General Icon
+ANI_0.33
+WRT_0.33
+ADD_ENTITY hud_image General Icon
+location 0 10 170 170
+align_x right
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity 0.33
+image_file Animator\2D_HUD_Icons\VS_Icons\TSIcon.png
+END_ENTITY hud_image General Icon
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Tilt Lateral Accel. Text
+#Library : Animator: HUD
+#DataSet : Tilt Lateral Accel. Text
+#Category: HUD Groups
+#FileID  : HUD_b8be9317-f99c-4bce-b429-dda8cae582ed
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

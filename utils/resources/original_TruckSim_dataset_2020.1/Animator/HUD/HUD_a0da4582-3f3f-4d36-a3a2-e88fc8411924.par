@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Animator: HUD`Lane Departures`Alerts
+#CheckBox1 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox6 0    
+
+#RingCtrl0 2
+#RingCtrl1 10
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 11
+#RingCtrl6 1
+#RingCtrl7 2
+#RingCtrl8 1
+*LOCX_1 -8
+*LOCY_1 0
+*VAR_NAME_1 WARN_L
+*LOCX_2 8
+*LOCY_2 0
+*VAR_NAME_2 WARN_R
+
+
+#Selection 10 for Icon 0
+#Selection_1 10 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX -160 locY 0
+#Selection_4 Fixed: 1 VarName: WARN_L  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+! Lane Departure Left
+ANI_WARN_L
+WRT_WARN_L
+ADD_ENTITY hud_image Lane Departure Left
+location -160 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity WARN_L
+image_file Resources\Animator\2D_HUD_Icons\Lane_Departure\Lane_Departure_Left.png
+END_ENTITY hud_image Lane Departure Left
+#Selection 11 for Icon 1
+#Selection_1 11 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 160 locY 0
+#Selection_4 Fixed: 1 VarName: WARN_R  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+! Lane Departure Right
+ANI_WARN_R
+WRT_WARN_R
+ADD_ENTITY hud_image Lane Departure Right
+location 160 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity WARN_R
+image_file Resources\Animator\2D_HUD_Icons\Lane_Departure\Lane_Departure_Right.png
+END_ENTITY hud_image Lane Departure Right
+
+LOG_ENTRY Used Dataset: Animator: HUD; { Alerts } Lane Departures
+#Library : Animator: HUD
+#DataSet : Lane Departures
+#Category: Alerts
+#FileID  : HUD_a0da4582-3f3f-4d36-a3a2-e88fc8411924
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

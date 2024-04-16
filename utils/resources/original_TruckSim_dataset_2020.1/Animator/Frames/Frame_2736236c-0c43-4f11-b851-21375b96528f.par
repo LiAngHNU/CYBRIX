@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Aero Fx`Aero Forces and Moments
+ADD_REFERENCE_FRAME Frame_2736236c-0c43-4f11-b851-21375b96528f
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_RP1
+SET_Y_NAME Y_RP1
+SET_Z_NAME Z_RP1
+SET_ROLL_NAME Roll_E
+SET_PITCH_NAME Pitch
+SET_YAW_NAME Yaw
+SET_OFFSET_VAR_Z 0.05
+SET_FRAME_SCALE_X_NAME FX_SCALE
+
+#MiscYellow0
+define_output FX_SCALE 0;
+eq_out FX_SCALE = FX_AIR * 5
+#ENDMYellow
+
+WRT_X_RP1
+ANI_X_RP1
+WRT_Y_RP1
+ANI_Y_RP1
+WRT_Z_RP1
+ANI_Z_RP1
+WRT_Roll_E
+ANI_Roll_E
+WRT_Pitch
+ANI_Pitch
+WRT_Yaw
+ANI_Yaw
+WRT_FX_SCALE
+ANI_FX_SCALE
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Aero Forces and Moments } Aero Fx
+#Library : Animator: Reference Frame
+#DataSet : Aero Fx
+#Category: Aero Forces and Moments
+#FileID  : Frame_2736236c-0c43-4f11-b851-21375b96528f
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

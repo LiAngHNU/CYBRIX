@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Sound Sample`Lateral Slip`Tire Sounds
+
+ADD_3D_SOUND Animator\Audio_All_VS\Tire\Generic-Tire-01_Skid-01.wav
+#CheckBox0 1    
+LOOP_SOUND on
+
+#RingCtrl0 Default
+SOUND_AUTO_START Default
+
+SOUND_VOL_MULT 1.0
+SOUND_VOL_MIN 0.0
+SOUND_VOL_MAX 4.0
+SOUND_FREQ_MULT 0.7
+SOUND_FREQ_MIN 0.01
+SOUND_FREQ_MAX 1.0
+
+PARSFILE Animator\Sound\Modifier\SndMod_6a91de50-87dc-4fe0-a184-8f355f2cf9bf.par
+#BlueLink0 Animator: Sound Modifier`Loudness: Lateral Force Effects` Tire Force Sound Modifiers` , Playback Modification 1`SndMod_6a91de50-87dc-4fe0-a184-8f355f2cf9bf
+
+PARSFILE Animator\Sound\Modifier\SndMod_7bf520ef-1c82-4d68-b879-94aabda62ce9.par
+#BlueLink1 Animator: Sound Modifier`Loudness: Lateral Speed Effects` Tire Speed Sound Modifiers` , Playback Modification 2`SndMod_7bf520ef-1c82-4d68-b879-94aabda62ce9
+
+
+LOG_ENTRY Used Dataset: Animator: Sound Sample; { Tire Sounds } Lateral Slip
+#Library : Animator: Sound Sample
+#DataSet : Lateral Slip
+#Category: Tire Sounds
+#FileID  : SndSmp_fb2ab34c-2ec0-4ad7-b093-5e40add694a9
+#Product : TruckSim 2020.1
+#VehCode Sound Sample
+
+END

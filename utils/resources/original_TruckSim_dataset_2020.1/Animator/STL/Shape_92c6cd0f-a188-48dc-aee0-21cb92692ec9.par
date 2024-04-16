@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Shrub G (Set 1, Offset: X=6)`Environment: Shrubbery
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Shrubbery\3D_Shrubbery\Shrub_G.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_OFFSET_X 6
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_92c6cd0f-a188-48dc-aee0-21cb92692ec9.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Shrubbery } Shrub G (Set 1, Offset: X=6)
+#Library : Animator: Shape File Link
+#DataSet : Shrub G (Set 1, Offset: X=6)
+#Category: Environment: Shrubbery
+#FileID  : Shape_92c6cd0f-a188-48dc-aee0-21cb92692ec9
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

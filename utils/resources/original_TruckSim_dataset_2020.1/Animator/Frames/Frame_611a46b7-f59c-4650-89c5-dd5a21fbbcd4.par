@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Motion Sensor 3: LF Corner (trace line)`Animated Trace Lines
+ADD_REFERENCE_FRAME Frame_611a46b7-f59c-4650-89c5-dd5a21fbbcd4
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S3
+SET_Y_NAME Y_S3
+SET_Z_NAME Z_S3
+SET_ROLL_NAME roll_e
+SET_PITCH_NAME pitch
+SET_YAW_NAME yaw
+SET_FRAME_SCALE_X_NAME TrcLFLen
+
+PARSFILE Animator\STL\Shape_634f6eb9-d706-4cb8-a5e9-65b172e749dd.par
+#BlueLink0 Animator: Shape File Link`Sphere: 0.025m Radius (Red)` Geometric Shapes` , Animator Data`Shape_634f6eb9-d706-4cb8-a5e9-65b172e749dd
+
+#MiscYellow0
+default_ghost off ! disable ghosts for vehicle
+ghost_count 500 ! number of markers
+ghost_period -0.0125
+
+
+reference_frame_ghosts on
+define_output Trace_LF =  IF_GT_0_THEN(Vxz_fwd, Yaw + Beta, pi + Yaw - Beta); deg
+set_yaw_name Trace_LF
+wrt_Trace_LF
+ani_Trace_LF
+
+
+define_parameter Trace_LF_Len = 0.25 ; m; Trace marker length, Sprung Mass LF corner
+! define_parameter Trace_LF_Len = 0.1 ; m; Trace marker length, Sprung Mass LF corner
+
+define_output TrcLFLen = SQRT(Vy_SM^2 + Vxz_fwd^2) * Trace_LF_Len; m ; Trace marker length, Sprung Mass LF corner
+#ENDMYellow
+
+WRT_X_S3
+ANI_X_S3
+WRT_Y_S3
+ANI_Y_S3
+WRT_Z_S3
+ANI_Z_S3
+WRT_roll_e
+ANI_roll_e
+WRT_pitch
+ANI_pitch
+WRT_yaw
+ANI_yaw
+WRT_TrcLFLen
+ANI_TrcLFLen
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Animated Trace Lines } Motion Sensor 3: LF Corner (trace line)
+#Library : Animator: Reference Frame
+#DataSet : Motion Sensor 3: LF Corner (trace line)
+#Category: Animated Trace Lines
+#FileID  : Frame_611a46b7-f59c-4650-89c5-dd5a21fbbcd4
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

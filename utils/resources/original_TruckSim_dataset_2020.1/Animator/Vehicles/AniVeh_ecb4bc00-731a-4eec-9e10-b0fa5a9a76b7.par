@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`F-Class, Sedan`F-Class
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 3160
+OBJ_Y_LENGTH 1870
+OBJ_Z_LENGTH 1475
+*DZ_V 0
+*LAT_WC 1550
+*LAT_WC_2 1550
+*HWC 350
+*WHEEL_RATIO 1.25
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.25
+SET_SCALE_Y 1.25
+SET_SCALE_Z 1.25
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.775
+SET_OFFSET_Z 0.3325
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.25
+SET_SCALE_Y 1.25
+SET_SCALE_Z 1.25
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.775
+SET_OFFSET_Z 0.3325
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.25
+SET_SCALE_Y 1.25
+SET_SCALE_Z 1.25
+SET_OFFSET_X -3.16
+SET_OFFSET_Y 0.775
+SET_OFFSET_Z 0.3325
+TIRE_ANI_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+SET_SCALE_X 1.25
+SET_SCALE_Y 1.25
+SET_SCALE_Z 1.25
+SET_ANGLE_X 180
+SET_OFFSET_X -3.16
+SET_OFFSET_Y -0.775
+SET_OFFSET_Z 0.3325
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_48f33ae3-9131-4480-8ff7-b456303b08d1.par
+#BlueLink1 Animator: Shape Assembly`European Sedan` Passenger Cars` , Vehicle Body`ShpGrp_48f33ae3-9131-4480-8ff7-b456303b08d1
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_e8795551-f775-45a8-8a17-23c21aca0ebe.par
+#BlueLink3 Animator: Shape File Link`Sedan: Brake Lights (F-Class)` Cars: European Vehicles` , Brake Lights`Shape_e8795551-f775-45a8-8a17-23c21aca0ebe
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_72c80e7a-b368-4e7f-88a9-9251744811dc.par
+#BlueLink10 Animator: Shape File Link`Sedan: Reverse Lights (F-Class)` Cars: European Vehicles` , Reverse lights`Shape_72c80e7a-b368-4e7f-88a9-9251744811dc
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_c500746e-28db-47d2-91ed-d32247db7d4d.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_c500746e-28db-47d2-91ed-d32247db7d4d
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { F-Class } F-Class, Sedan
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : F-Class, Sedan
+#Category: F-Class
+#FileID  : AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

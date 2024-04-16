@@ -1,0 +1,148 @@
+PARSFILE
+#FullDataName Animator: HUD`Throt, Brake, Gear, RPM Text`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox10 1    
+#CheckBox11 1    
+
+#RingCtrl0 4
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 18
+#RingCtrl6 0
+#RingCtrl7 2
+#RingCtrl8 2
+#RingCtrl9 18
+#RingCtrl10 0
+#RingCtrl11 2
+#RingCtrl12 2
+#RingCtrl13 18
+#RingCtrl14 0
+#RingCtrl15 2
+#RingCtrl16 2
+*TITLE_1 Throttle
+*LOCX_1 2
+*LOCY_1 16
+*VAR_NAME_1 Throttle
+*COLOR_1 1 1 0.5
+*PREC1 2
+*TITLE_2 Brake Press. (MPa)
+*LOCX_2 2
+*LOCY_2 12
+*VAR_NAME_2 Pbk_Con
+*COLOR_2 1 1 0.5
+*PREC2 2
+*TITLE_3 GearStat
+*LOCX_3 2
+*LOCY_3 8
+*VAR_NAME_3 GearStat
+*COLOR_3 1 1 0.5
+*PREC3 0
+*TITLE_4 RPM
+*LOCX_4 2
+*LOCY_4 4
+*VAR_NAME_4 AV_Eng
+*COLOR_4 1 1 0.5
+*PREC4 0
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Throttle AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 160
+#Selection_4 Fixed: 1 VarName: Throttle  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_Throttle
+WRT_Throttle
+ADD_ENTITY hud_text Text Output
+location 40 160 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is Throttle
+prefix Throttle
+min_width_prefix 20
+value Throttle
+precision 2
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 1
+#Selection_1 18 for Icon
+#Selection_2 Title: Brake Press. (MPa) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 120
+#Selection_4 Fixed: 1 VarName: Pbk_Con  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_Pbk_Con
+WRT_Pbk_Con
+ADD_ENTITY hud_text Text Output
+location 40 120 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is Pbk_Con
+prefix Brake Press. (MPa)
+min_width_prefix 20
+value Pbk_Con
+precision 2
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 2
+#Selection_1 18 for Icon
+#Selection_2 Title: GearStat AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 80
+#Selection_4 Fixed: 1 VarName: GearStat  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_GearStat
+WRT_GearStat
+ADD_ENTITY hud_text Text Output
+location 40 80 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is GearStat
+prefix GearStat
+min_width_prefix 20
+value GearStat
+precision 0
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 3
+#Selection_1 18 for Icon
+#Selection_2 Title: RPM AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 40
+#Selection_4 Fixed: 1 VarName: AV_Eng  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_AV_Eng
+WRT_AV_Eng
+ADD_ENTITY hud_text Text Output
+location 40 40 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is AV_Eng
+prefix RPM
+min_width_prefix 20
+value AV_Eng
+precision 0
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Throt, Brake, Gear, RPM Text
+#Library : Animator: HUD
+#DataSet : Throt, Brake, Gear, RPM Text
+#Category: HUD Groups
+#FileID  : HUD_2beea3af-43e0-4473-a9e0-7a36ad733401
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

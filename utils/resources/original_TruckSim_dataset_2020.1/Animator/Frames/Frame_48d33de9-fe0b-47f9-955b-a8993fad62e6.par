@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Camera Rear Point w/ Yaw`Tracking: Road
+ADD_REFERENCE_FRAME Frame_48d33de9-fe0b-47f9-955b-a8993fad62e6
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_camR
+SET_Y_NAME Y_camR
+SET_Z_NAME Z_camR
+SET_YAW_NAME Yaw_CamR
+
+#MiscYellow0
+INSTALL_CAMERA_OUTPUTS 1
+#ENDMYellow
+
+WRT_X_camR
+ANI_X_camR
+WRT_Y_camR
+ANI_Y_camR
+WRT_Z_camR
+ANI_Z_camR
+WRT_Yaw_CamR
+ANI_Yaw_CamR
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Tracking: Road } Camera Rear Point w/ Yaw
+#Library : Animator: Reference Frame
+#DataSet : Camera Rear Point w/ Yaw
+#Category: Tracking: Road
+#FileID  : Frame_48d33de9-fe0b-47f9-955b-a8993fad62e6
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName Animator: HUD`Accel. Only Text`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+
+#RingCtrl0 2
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 18
+#RingCtrl6 0
+#RingCtrl7 2
+#RingCtrl8 2
+*TITLE_1 Ax (g's)
+*LOCX_1 2
+*LOCY_1 40
+*VAR_NAME_1 Ax
+*COLOR_1 1 1 1
+*PREC1 2
+*TITLE_2 Ay (g's)
+*LOCX_2 2
+*LOCY_2 36
+*VAR_NAME_2 Ay
+*COLOR_2 1 1 1
+*PREC2 2
+*TITLE_3 SWA (deg)
+*LOCX_3 2
+*LOCY_3 42
+*VAR_NAME_3 SW
+*COLOR_3 1 1 0.5
+*PREC3 2
+*TITLE_4 Handwheel Torque (Nm)
+*LOCX_4 2
+*LOCY_4 38
+*VAR_NAME_4 M_SW
+*COLOR_4 1 1 0.5
+*PREC4 2
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Ax (g's) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 400
+#Selection_4 Fixed: 1 VarName: Ax  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_Ax
+WRT_Ax
+ADD_ENTITY hud_text Text Output
+location 40 400 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is Ax
+prefix Ax (g's)
+min_width_prefix 20
+value Ax
+precision 2
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 1
+#Selection_1 18 for Icon
+#Selection_2 Title: Ay (g's) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 360
+#Selection_4 Fixed: 1 VarName: Ay  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_Ay
+WRT_Ay
+ADD_ENTITY hud_text Text Output
+location 40 360 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is Ay
+prefix Ay (g's)
+min_width_prefix 20
+value Ay
+precision 2
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Accel. Only Text
+#Library : Animator: HUD
+#DataSet : Accel. Only Text
+#Category: HUD Groups
+#FileID  : HUD_015e402c-4108-43e9-8e43-c703df435031
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

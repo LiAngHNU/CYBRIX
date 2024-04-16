@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`205/70 R15: Brake Rotor`Common Vehicle Assets: Tires
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\205_70R15\rotor.obj
+#ENDMYellow
+
+SET_COLOR .1 .1 .1
+*SPECULAR 0
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0 0 0
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_fc9bb165-03b5-45b2-b0f6-fa17c015d94b.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Video Camera`Camera_fc9bb165-03b5-45b2-b0f6-fa17c015d94b
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_865e0425-2b18-46d5-bb08-7a6534ac9e11.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 205/70 R15: Brake Rotor
+#Library : Animator: Shape File Link
+#DataSet : 205/70 R15: Brake Rotor
+#Category: Common Vehicle Assets: Tires
+#FileID  : Shape_865e0425-2b18-46d5-bb08-7a6534ac9e11
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

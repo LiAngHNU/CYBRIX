@@ -1,0 +1,621 @@
+Run made by TruckSim 2020.1 at 11:04 on June 29, 2020.
+
+Started with simfile: simfile.sim
+
+Include PARSFILE "Results\Run_21b79ecd-3e10-4135-88c5-9250737749ae\Run_all.par"
+Installed keywords into VS Solver for MODEL_LAYOUT S_S
+Used Dataset: Animator: Reference Frame; { Tracking: Road } Camera Tracking X-Y-Z-Yaw
+Used Dataset: Animator: Camera Setup; { Vehicle Reference } 45 Azm, 5 El, 25 m
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Steer
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 2000 kg Load Rated Tire
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 2000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 2000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 2000 kg Rating } 390 mm Radius (Steer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Steer
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 2000 kg Load Rated Tire
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 2000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 2000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 2000 kg Rating } 390 mm Radius (Steer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Driven
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 2000 kg Load Rated Tire
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 2000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 2000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 2000 kg Rating } 390 mm Radius (Drive)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Driven
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 2000 kg Load Rated Tire
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 2000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 2000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 2000 kg Rating } 390 mm Radius (Drive)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Driven
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 2000 kg Load Rated Tire
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 2000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 2000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 2000 kg Rating } 390 mm Radius (Drive)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Driven
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 2000 kg Load Rated Tire
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 2000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 2000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 2000 kg Rating } 390 mm Radius (Drive)
+Used Dataset: Tires: Vehicle Unit with 2 Axles; { TS 2A Steer / Drive Tires: Internal Table Model } 2000 kg Steer, 2000kg Drive (390 mm)
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Front } Roll Center: 53 mm Below Axle
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Heavy Duty (Steered)
+Used Dataset: Suspension: Solid Axle System Kinematics; { Large European Van } 3t Steer, Single Wheel (Euro Van)
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 10 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 10 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 300 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 3t Leaf: +100 mm, -60 mm Travel
+Used Dataset: Brakes: Booster Force; Piecewise Linear, 5.56 Gain
+Used Dataset: Brakes: Caliper Pressure vs Volume; { Large Euro Van } Front Actuator Dynamics
+Used Dataset: Brakes: Cooling Coefficient; { Large Euro Van } Front Brake Cooling Coefficient
+Used Dataset: Brakes: Torque vs. Rotor Temperature; { Large Euro Van } Fr. Torque vs. Pressure & Temp
+Used Dataset: Brakes: Caliper and Rotor Properties; { Large Euro Van } Fr. Caliper & Rotor Properties
+Used Dataset: Brakes: Caliper Pressure vs Volume; { Large Euro Van } Front Actuator Dynamics
+Used Dataset: Brakes: Cooling Coefficient; { Large Euro Van } Front Brake Cooling Coefficient
+Used Dataset: Brakes: Torque vs. Rotor Temperature; { Large Euro Van } Fr. Torque vs. Pressure & Temp
+Used Dataset: Brakes: Caliper and Rotor Properties; { Large Euro Van } Fr. Caliper & Rotor Properties
+Used Dataset: Brakes: Two-Wheel System; { Large European Van } Boost and Thermal, Large Euro Van Front
+Used Dataset: Steering System: Steer Gain vs. Speed; { Constant } Constant: One (Always Steered)
+Used Dataset: Steering System: Kinematics for One Wheel; { 4 m Wheelbase } Left Wheel, 4 m Wheelbase
+Used Dataset: Steering: Parking Torque; { Constant } Constant: Zero
+Used Dataset: Steering System: Kinematics for One Wheel; { 4 m Wheelbase } Right Wheel, 4 m Wheelbase
+Used Dataset: Steering: Parking Torque; { Constant } Constant: Zero
+Used Dataset: Steering System; { Medium - Heavy Duty Steering } Short (4 m) Wheelbase
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Utility Vehicles } Medium Duty Utility Truck - Rear
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Hotchkiss } Rear Hotchkiss - Lateral Movement
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Heavy Duty (Driven)
+Used Dataset: Suspension: Solid Axle System Kinematics; { Large European Van } Large Euro Van - Rear (Dual Wheels)
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 15 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +150 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 15 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +150 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 500 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 5.5t Leaf: +150 mm, -60 mm Travel
+Used Dataset: Brakes: Booster Force; Piecewise Linear, 5.56 Gain
+Used Dataset: Brakes: Caliper Pressure vs Volume; { Large Euro Van } Rear Actuator Dynamics
+Used Dataset: Brakes: Cooling Coefficient; { Large Euro Van } Rear Brake Cooling Coefficient
+Used Dataset: Brakes: Torque vs. Rotor Temperature; { Large Euro Van } Rr. Torque vs. Pressure & Temp
+Used Dataset: Brakes: Caliper and Rotor Properties; { Large Euro Van } Rr. Caliper & Rotor Properties
+Used Dataset: Brakes: Caliper Pressure vs Volume; { Large Euro Van } Rear Actuator Dynamics
+Used Dataset: Brakes: Cooling Coefficient; { Large Euro Van } Rear Brake Cooling Coefficient
+Used Dataset: Brakes: Torque vs. Rotor Temperature; { Large Euro Van } Rr. Torque vs. Pressure & Temp
+Used Dataset: Brakes: Caliper and Rotor Properties; { Large Euro Van } Rr. Caliper & Rotor Properties
+Used Dataset: Brakes: Two-Wheel System; { Large European Van } Boost and Thermal, Large Euro Van Rear
+Used Dataset: Vehicle: Lead Unit Sprung Mass; { 2 Axle Trucks } Large European Van
+Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.30 at 0 deg.
+Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 2 at 90 deg.
+Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.18 at 0 deg.
+Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.3 at 90 deg.
+Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.15 at 0 deg.
+Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.2 at 35 deg.
+Used Dataset: Aerodynamics: Basic; { Large European Van } Large Euro Van Aerodynamics
+Used Dataset: Powertrain: Fuel Consumption Rate; { Fuel Rate Map vs. Engine Speed } 150 kW Diesel
+Used Dataset: Powertrain: Engine; { Engines: 150 kW to 250 kW } 150 kW Diesel (3000 RPM)
+Used Dataset: Powertrain: Torque Converter; { Torque Converters: 150 kW to 250 kW } 150 kW, 3000 RPM Engine
+Used Dataset: Powertrain: Shift Schedule; { 5-Speed Shift Schedule, 3100 RPM } 5 Spd. AT, 1-2, 3100 RPM
+Used Dataset: Powertrain: Shift Schedule; { 5-Speed Shift Schedule, 3100 RPM } 5 Spd. AT, 2-3, 3100 RPM
+Used Dataset: Powertrain: Shift Schedule; { 5-Speed Shift Schedule, 3100 RPM } 5 Spd. AT, 3-4, 3100 RPM
+Used Dataset: Powertrain: Shift Schedule; { 5-Speed Shift Schedule, 3100 RPM } 5 Spd. AT, 4-5, 3100 RPM
+Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 5-Speed } 5 Spd., AT, 3100 RPM
+Used Dataset: Powertrain: Rear Differential; { Open } Open Differential: Gear Ratio 3.92:1
+Used Dataset: Powertrain: Rear-Wheel Drive; { 150 kW Powertrains } 150 kW, 5 Speed AT
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Body
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Lights
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Details
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Windows (Front)
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Window Trim (Front)
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Windows (Rear)
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Window Trim (Rear)
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Seats
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Steering Wheel
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Driver (Caucasian Male)
+Used Dataset: Animator: Shape Assembly; { Vans and Buses } Large European Van
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Brake Lights
+Used Dataset: Animator: Shape File Link; { Trucks: Vans } Large Van: Reverse Lights
+Used Dataset: Animator: Vehicles and Sensor Targets; { 2A Utility Trucks and Vans } 2A Large European Van
+Used Dataset: Steering Wheel Torque; Linear: 1/25 (Typical)
+Used Dataset: Hitch: Roll Moment; 100 kN-m/deg (+/- 20 deg Lash)
+Used Dataset: Hitch: Pitch Moment; 100 kN-m/deg (-10 to 15 deg Lash)
+Used Dataset: Hitch: Yaw Moment; 100 kN-m/deg (180 deg Lash)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Hitches: Ball Hitch
+Used Dataset: Hitch: Joint Assembly; { Ball Hitches } Ball Hitch
+Used Dataset: Vehicle: Lead Unit with 2 Axles; { Large European Van } Euro Van (Boost, Thermal Brakes)
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.6s Single Preview
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 0 N
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Floating Caliper
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Rotor
+Used Dataset: Animator: Shape Assembly; { Brake Temperature } Brakes (Cool)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Rotor (Hot)
+Used Dataset: Animator: Shape Assembly; { Brake Temperature } Brakes (Hot)
+Used Dataset: Animator: Group (More); { Brake Temperature } Brakes (Left Front)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Floating Caliper
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Rotor
+Used Dataset: Animator: Shape Assembly; { Brake Temperature } Brakes (Cool)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Rotor (Hot)
+Used Dataset: Animator: Shape Assembly; { Brake Temperature } Brakes (Hot)
+Used Dataset: Animator: Group (More); { Brake Temperature } Brakes (Left Rear)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Floating Caliper
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Rotor
+Used Dataset: Animator: Shape Assembly; { Brake Temperature } Brakes (Cool)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Rotor (Hot)
+Used Dataset: Animator: Shape Assembly; { Brake Temperature } Brakes (Hot)
+Used Dataset: Animator: Group (More); { Brake Temperature } Brakes (Right Front)
+WARNING: DEFINE_OUTPUT did not add a variable because the keyword "BkHot_R1" was already in use.
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Floating Caliper
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Rotor
+Used Dataset: Animator: Shape Assembly; { Brake Temperature } Brakes (Cool)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Brakes: Rotor (Hot)
+Used Dataset: Animator: Shape Assembly; { Brake Temperature } Brakes (Hot)
+Used Dataset: Animator: Group (More); { Brake Temperature } Brakes (Right Rear)
+Used Dataset: Animator: Group; { Brake System } Temperature Dependent Brakes
+ Straight Path East <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.85
+Used Dataset: Road: Animator Surface Shapes; { Roads } 1200m Road+200m Light Grass
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Used Dataset: Road: 3D Surface (All Properties); { Straight } 1200 m, Two Lanes, Mu = 0.85
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Brake Control: Pedal Force
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Brake Pedal Displacement
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Brake Booster Displacement
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Brake Booster Force In / Out
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Brake Control: Master Cyl. Pressure
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Wheel Cylinder Pressures (Axle 1)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Wheel Cylinder Pressures (Axle 2)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Brake Torque (Axle 1)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Brake Torque (Axle 2)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Locked Brake Status (Axle 1)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Locked Brake Status (Axle 2)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Brake Rotor Temperature
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } ABS Apply Command
+Used Dataset: Generic VS Commands; { Plot Groups } Brake Testing w/ Pedal Force, 2 Axles
+Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Controls: Driver } Throttle: Control Input
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Speed (Vxz_Fwd) vs. Time
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Wheel Speeds
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Speed (Vxz_Fwd) vs. Station
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Accel. of CG's vs. Time
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tracking } Station vs. Time
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { Event Control } Event Count
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Braking } Brake Test Cycle
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Kinematics } Slip Ratios, Lagged (Axle 1)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Kinematics } Slip Ratios, Lagged (Axle 2)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Forces } Longitudinal Forces (Axle 1, Single Tires)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Forces } Longitudinal Forces (Axle 2, Dual Tires)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Forces } Vertical Forces (Axle 1, Single Tires)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Forces } Vertical Forces (Axle 2, Dual Tires)
+Used Dataset: Procedures; { Acceleration and Braking } Brake Fade Test Initialization
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fx Tire Force Arrows
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fy Tire Force Arrows
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fz Tire Force Arrows
+Used Dataset: Generic Data Group; { Tire Force Arrows } 2 Axle - Fx, Fy, Fz
+ Fade Test, Repeated 0-100-0 km/h <Brake Tests>
+Used Dataset: TruckSim Run Control; { Brake Tests } Fade Test, Repeated 0-100-0 km/h
+
+Time to read input = 0.0443726
+Function MY_BRAKE_TEMP_CARPET(1,1) extrapolated (out of range LOW) for XCOL = 30 C at T = 0
+Function MY_BRAKE_TEMP_CARPET(1,2) extrapolated (out of range LOW) for XCOL = 30 C at T = 0
+Function F_JNC_STOP_TABLE(1,1) extrapolated (out of range LOW) for X = 9.50095e-16 mm at T = 0
+Function F_REB_STOP_TABLE(1,1) extrapolated (out of range HIGH) for X = 9.50095e-16 mm at T = 0
+Function F_JNC_STOP_TABLE(1,2) extrapolated (out of range LOW) for X = 8.83291e-16 mm at T = 0
+Function F_REB_STOP_TABLE(1,2) extrapolated (out of range HIGH) for X = 8.83291e-16 mm at T = 0
+Function MY_BRAKE_TEMP_CARPET(2,1) extrapolated (out of range LOW) for XCOL = 30 C at T = 0
+Function MY_BRAKE_TEMP_CARPET(2,2) extrapolated (out of range LOW) for XCOL = 30 C at T = 0
+Function F_JNC_STOP_TABLE(2,1) extrapolated (out of range LOW) for X = 0 mm at T = 0
+Function F_REB_STOP_TABLE(2,1) extrapolated (out of range HIGH) for X = 0 mm at T = 0
+Function F_JNC_STOP_TABLE(2,2) extrapolated (out of range LOW) for X = 0 mm at T = 0
+Function F_REB_STOP_TABLE(2,2) extrapolated (out of range HIGH) for X = 0 mm at T = 0
+
+Run started: VS output file = Results\Run_21b79ecd-3e10-4135-88c5-9250737749ae\LastRun.vsb
+
+Event #1 occurred at t = 2.0005: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_84079665-0586-4c64-9d13-a2294665e8a5.par"
+Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp: Full Throttle in 1.0 sec.
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 0 N
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par"
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.6s Single Preview
+Used Dataset: Events; { Brake Fade Test } B. Reset Position and Accelerate
+Function FUEL_RATE_CARPET extrapolated (out of range HIGH) for X = 2500.1 rpm at T = 3.501
+
+Event #2 occurred at t = 15.207: VX > 27.7778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 0-140N in 0.1s @ 2s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Used Dataset: Events; { Brake Fade Test } C. Brake to Stop
+
+Event #3 occurred at t = 20.071: VX < 0.00277778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 140 N
+Used Dataset: Events; { Brake Fade Test } D. Hold at Stop for 2 seconds
+
+Event #4 occurred at t = 22.0715: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par"
+Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+
+Event #5 occurred at t = 24.072: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_84079665-0586-4c64-9d13-a2294665e8a5.par"
+Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp: Full Throttle in 1.0 sec.
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 0 N
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par"
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.6s Single Preview
+Used Dataset: Events; { Brake Fade Test } B. Reset Position and Accelerate
+
+Event #6 occurred at t = 37.6635: VX > 27.7778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 0-140N in 0.1s @ 2s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Used Dataset: Events; { Brake Fade Test } C. Brake to Stop
+
+Event #7 occurred at t = 42.4955: VX < 0.00277778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 140 N
+Used Dataset: Events; { Brake Fade Test } D. Hold at Stop for 2 seconds
+
+Event #8 occurred at t = 44.4955: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par"
+Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+
+Event #9 occurred at t = 46.4955: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_84079665-0586-4c64-9d13-a2294665e8a5.par"
+Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp: Full Throttle in 1.0 sec.
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 0 N
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par"
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.6s Single Preview
+Used Dataset: Events; { Brake Fade Test } B. Reset Position and Accelerate
+
+Event #10 occurred at t = 60.086: VX > 27.7778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 0-140N in 0.1s @ 2s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Used Dataset: Events; { Brake Fade Test } C. Brake to Stop
+
+Event #11 occurred at t = 64.8805: VX < 0.00277778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 140 N
+Used Dataset: Events; { Brake Fade Test } D. Hold at Stop for 2 seconds
+
+Event #12 occurred at t = 66.8805: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par"
+Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+
+Event #13 occurred at t = 68.8805: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_84079665-0586-4c64-9d13-a2294665e8a5.par"
+Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp: Full Throttle in 1.0 sec.
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 0 N
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par"
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.6s Single Preview
+Used Dataset: Events; { Brake Fade Test } B. Reset Position and Accelerate
+
+Event #14 occurred at t = 82.473: VX > 27.7778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 0-140N in 0.1s @ 2s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Used Dataset: Events; { Brake Fade Test } C. Brake to Stop
+
+Event #15 occurred at t = 87.2065: VX < 0.00277778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 140 N
+Used Dataset: Events; { Brake Fade Test } D. Hold at Stop for 2 seconds
+
+Event #16 occurred at t = 89.2065: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par"
+Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+
+Event #17 occurred at t = 91.2065: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_84079665-0586-4c64-9d13-a2294665e8a5.par"
+Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp: Full Throttle in 1.0 sec.
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 0 N
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par"
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.6s Single Preview
+Used Dataset: Events; { Brake Fade Test } B. Reset Position and Accelerate
+
+Event #18 occurred at t = 104.801: VX > 27.7778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 0-140N in 0.1s @ 2s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Used Dataset: Events; { Brake Fade Test } C. Brake to Stop
+
+Event #19 occurred at t = 109.437: VX < 0.00277778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 140 N
+Used Dataset: Events; { Brake Fade Test } D. Hold at Stop for 2 seconds
+
+Event #20 occurred at t = 111.437: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par"
+Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+
+Event #21 occurred at t = 113.437: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_84079665-0586-4c64-9d13-a2294665e8a5.par"
+Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp: Full Throttle in 1.0 sec.
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 0 N
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par"
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.6s Single Preview
+Used Dataset: Events; { Brake Fade Test } B. Reset Position and Accelerate
+
+Event #22 occurred at t = 127.031: VX > 27.7778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 0-140N in 0.1s @ 2s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Used Dataset: Events; { Brake Fade Test } C. Brake to Stop
+
+Event #23 occurred at t = 131.69: VX < 0.00277778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 140 N
+Used Dataset: Events; { Brake Fade Test } D. Hold at Stop for 2 seconds
+
+Event #24 occurred at t = 133.691: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par"
+Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+
+Event #25 occurred at t = 135.691: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_84079665-0586-4c64-9d13-a2294665e8a5.par"
+Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp: Full Throttle in 1.0 sec.
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 0 N
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par"
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.6s Single Preview
+Used Dataset: Events; { Brake Fade Test } B. Reset Position and Accelerate
+
+Event #26 occurred at t = 149.281: VX > 27.7778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 0-140N in 0.1s @ 2s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Used Dataset: Events; { Brake Fade Test } C. Brake to Stop
+
+Event #27 occurred at t = 154.157: VX < 0.00277778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 140 N
+Used Dataset: Events; { Brake Fade Test } D. Hold at Stop for 2 seconds
+
+Event #28 occurred at t = 156.157: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par"
+Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+
+Event #29 occurred at t = 158.158: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_b21e7efc-7787-40a1-b23e-2fbc025b74ba.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_84079665-0586-4c64-9d13-a2294665e8a5.par"
+Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp: Full Throttle in 1.0 sec.
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_af2fa584-d9cd-4fd4-98f5-b70494bad37e.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 0 N
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Driver\StrDM_e2398fab-b956-498b-8858-93e89178bdf3.par"
+Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.6s Single Preview
+Used Dataset: Events; { Brake Fade Test } B. Reset Position and Accelerate
+
+Event #30 occurred at t = 171.748: VX > 27.7778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_f26032b6-bad6-4cbc-9d3d-40550ee4adfa.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_65b0e223-1667-4f9f-9662-e7f2eba31d33.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 0-140N in 0.1s @ 2s
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Gear_at\GearCL_1765c7ef-4e1a-4ad7-b281-6ce3dd2f4d2f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Int_Shift\ClTime_bc551f7e-c815-4868-965e-a0f251e9cde8.par"
+Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); Clutch Actuation: 0.5s, Gear Change: 0.1s
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } NGEARS, Clutch Act 0.5s, Gear 0.1s
+Used Dataset: Events; { Brake Fade Test } C. Brake to Stop
+
+Event #31 occurred at t = 176.835: VX < 0.00277778
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_901a7ac4-85c3-4fb2-8267-9fc1d63575b2.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 140 N
+Used Dataset: Events; { Brake Fade Test } D. Hold at Stop for 2 seconds
+
+Event #32 occurred at t = 178.835: t_event > 2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_81c14c66-2ca1-4033-878b-2742b0136a9b.par"
+Used Dataset: Events; { Brake Fade Test } A. Begin Brake Fade Test
+
+Event #33 occurred at t = 178.836: bk_cycle > 8
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_b1cd84e3-b882-4147-827a-cc245e0de864.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Control\Brake_pedal\FbkCon_a246a03b-d1d4-4c12-9aa3-de6ced38f8e6.par"
+Used Dataset: Control: Braking Pedal Force (Open Loop); { Constant } Constant: 140 N
+Used Dataset: Events; { Brake Fade Test } E. After 8 Cycles, Hold at Stop
+
+Event #34 occurred at t = 188.836: t_event > 10
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par"
+
+Run stopped at t = 188.836. VS Command STOP_RUN_NOW End event triggered
+Used Dataset: Events; End Events
+
+Computational time ratio: RTIME = 0.131627 (real time)/(simulation time)
+

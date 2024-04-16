@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Pedestrian Walking (Asian Male)`Pedestrians
+ADD_REFERENCE_FRAME Frame_d5b2bc88-2f78-4c3d-9129-d2b759bdf8ab
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_Obj_<<o>>
+SET_Y_NAME Y_Obj_<<o>>
+SET_Z_NAME Z_Obj_<<o>>
+SET_YAW_NAME YawO_<<o>>
+SET_FRAME_VISIBLE_NAME WalkP<<o>>
+
+PARSFILE Animator\STL\Shape_13d0b758-58a1-4679-ab5b-aaffb4451a56.par
+#BlueLink0 Animator: Shape File Link`Asian Male: Walking (5 km/h)` Environment: Pedestrians (Animated)` , Animator Data`Shape_13d0b758-58a1-4679-ab5b-aaffb4451a56
+
+#MiscYellow0
+define_output WalkP<<o>> = not( WaitP<<o>> );-;Visibility of walking pedestrian
+SHAPE_SET_TIME_FUNCTION Time * v_obj_<<o>> / 5.0
+wrt_v_obj_<<o>>
+#ENDMYellow
+
+WRT_X_Obj_<<o>>
+ANI_X_Obj_<<o>>
+WRT_Y_Obj_<<o>>
+ANI_Y_Obj_<<o>>
+WRT_Z_Obj_<<o>>
+ANI_Z_Obj_<<o>>
+WRT_YawO_<<o>>
+ANI_YawO_<<o>>
+WRT_WalkP<<o>>
+ANI_WalkP<<o>>
+
+#EMBEDDED_NOTES
+#Reference frame for walking pedestrian with motion attached to current moving object <<o>>.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Pedestrians } Pedestrian Walking (Asian Male)
+#Library : Animator: Reference Frame
+#DataSet : Pedestrian Walking (Asian Male)
+#Category: Pedestrians
+#FileID  : Frame_d5b2bc88-2f78-4c3d-9129-d2b759bdf8ab
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

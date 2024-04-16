@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Animator: Group`2A Utility Flatbed Trailer`Trailers
+PARSFILE Animator\STL_Groups\ShpGrp_5150bd47-70de-4e1e-a5d1-d8c2e1dff9d8.par
+#BlueLink0 Animator: Shape Assembly`2A Utility Flatbed Trailer` Trailers` , Miscellaneous`ShpGrp_5150bd47-70de-4e1e-a5d1-d8c2e1dff9d8
+
+PARSFILE Animator\STL\Shape_3500d77a-438a-4cc7-acfa-ea5ac2545bd1.par
+#BlueLink1 Animator: Shape File Link`Utility Flatbed Trailer (2A): Fenders` Trailers (2 of 2)` , Miscellaneous`Shape_3500d77a-438a-4cc7-acfa-ea5ac2545bd1
+
+*X_REF_LENGTH 4800
+*Y_REF_LENGTH 2679
+*Z_REF_LENGTH 1357
+
+#CheckBox0 1    
+
+x_ref_length 4800
+y_ref_length 2679
+z_ref_length 1357
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_c5e79413-2624-4043-aa87-f85e8bca62c1.par
+#BlueLink20 Animator: Camera Setup`Shape Preview (XY Plane, No Offsets)` Shape Preview` , Video Camera`Camera_c5e79413-2624-4043-aa87-f85e8bca62c1
+
+
+#EMBEDDED_NOTES
+#There is no scaling on these shapes because they match the original data.
+#
+#The offsets are designed to properly locate the scaled shapes.  The offsets are set by:
+#X: Not set here
+#Y: No adjustment
+#Z: The height of the hitch point from the trailer sprung mass origin
+#
+#The X-direction offsets are applied in the shape links.  This is because the order of operations (offset then scale vs scale then offset) matters and the illuminated brake lights are offset first, then scaled.  In order to keep the lights attached to the trailer, we repeat that order of operations here.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Group; { Trailers } 2A Utility Flatbed Trailer
+#Library : Animator: Group
+#DataSet : 2A Utility Flatbed Trailer
+#Category: Trailers
+#FileID  : Group_8c97837c-8b14-4aa6-8b77-1442009a533e
+#Product : TruckSim 2020.1
+#VehCode Animator Group
+
+END

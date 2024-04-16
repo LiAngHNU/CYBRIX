@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Animator: HUD`Number of Collisions Text`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+
+#RingCtrl0 1
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 1
+*TITLE_1 Number of Collisions:
+*LOCX_1 2
+*LOCY_1 30
+*VAR_NAME_1 iterplot
+*COLOR_1 1 1 1
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Number of Collisions: AlX 0 AlY 2
+#Selection_3 Scale 1.000000 locX 40 locY 300
+#Selection_4 Fixed: 1 VarName: iterplot  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_iterplot
+WRT_iterplot
+ADD_ENTITY hud_text Text Output
+location 40 300 18 18
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is iterplot
+prefix Number of Collisions:
+min_width_prefix 20
+value iterplot
+precision 0
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Number of Collisions Text
+#Library : Animator: HUD
+#DataSet : Number of Collisions Text
+#Category: HUD Groups
+#FileID  : HUD_94a13b72-9cc0-4ea2-a718-4c399879f3bf
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

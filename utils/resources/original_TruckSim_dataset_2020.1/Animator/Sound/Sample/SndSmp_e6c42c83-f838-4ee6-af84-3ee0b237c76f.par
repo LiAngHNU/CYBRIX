@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Sound Sample`Wind Noise`Wind Noise
+
+ADD_3D_SOUND Animator\Audio_All_VS\Environment\Wind_1_Mono.WAV
+#CheckBox0 1    
+LOOP_SOUND on
+
+#RingCtrl0 Default
+SOUND_AUTO_START Default
+
+SOUND_VOL_MULT 0.3
+SOUND_VOL_MIN 0.01
+SOUND_VOL_MAX 9.0
+SOUND_FREQ_MULT 1.0
+SOUND_FREQ_MIN 0.01
+SOUND_FREQ_MAX 9.0
+
+PARSFILE Animator\Sound\Modifier\SndMod_97a77483-8911-44c4-9cbd-5324ecad541e.par
+#BlueLink0 Animator: Sound Modifier`Loudness: Speed Effect` Wind Sound Modifiers` , Playback Modification 1`SndMod_97a77483-8911-44c4-9cbd-5324ecad541e
+
+PARSFILE Animator\Sound\Modifier\SndMod_2cf289a4-c7e5-49c7-84f4-67cd1b3c591c.par
+#BlueLink1 Animator: Sound Modifier`Frequency: Speed Effect` Wind Sound Modifiers` , Playback Modification 2`SndMod_2cf289a4-c7e5-49c7-84f4-67cd1b3c591c
+
+
+LOG_ENTRY Used Dataset: Animator: Sound Sample; { Wind Noise } Wind Noise
+#Library : Animator: Sound Sample
+#DataSet : Wind Noise
+#Category: Wind Noise
+#FileID  : SndSmp_e6c42c83-f838-4ee6-af84-3ee0b237c76f
+#Product : TruckSim 2020.1
+#VehCode Sound Sample
+
+END

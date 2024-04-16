@@ -1,0 +1,452 @@
+$======================================================================
+$ Applikation: CRUISE - Driving Performance, Fuel Consumption and Emissions Calculation
+$ CAE-Strukturinformation
+$ erstellt am: November 22, 2011 - Uhrzeit: 11:19:07 AM
+$======================================================================
+$------------------------------------------------------Engine
+[VERBR_MOTOR] 2
+AUSGABE           = 2
+REFERENZ          = 1
+VERWENDUNG        = 4
+TEMP_MODELL_HAUPTSCHALTER = 1
+TEMPERATURMODELL  = 2
+VERBRAUCHSMODELL  = 2
+REIBMODELL        = 1
+LL_VERBRAUCH_EMISSIONEN = 2
+SCHUBKENNLINIE_1  = 1
+SCHUBKENNLINIE_2  = 1
+STARTANREICHERUNG = 1
+BESCHL_ANREICHERUNG = 1
+VERBR_MASSENSTROM_EXTERN_S = 1
+VERBR_KOEFF_EXTERN_S = 1
+LL_DREHZAHL_ERMITTLUNG = 1
+LL_REGELUNG       = 2
+MAX_DREHZAHL_ERMITTLUNG = 1
+VERLUSTMOMENTKENNLINIE = 1
+ANSPRECHVERHALTEN_TURBO = 1
+TC_PTX_SCHALT     = 1
+LL_LADEDRUCK_SCHALTER = 1
+KORREKTURVERFAHREN = 1
+SPEZ_VERBRAUCHSKENNFELD = 2
+REDUZIERTE_VOLLAST_1 = 1
+REDUZIERTE_VOLLAST_2 = 1
+REDUZIERTE_VOLLAST_3 = 1
+REDUZIERTE_VOLLAST_4 = 1
+REDUZIERTE_VOLLAST_5 = 1
+REDUZ_VOLLASTREDUKTION = 1
+MOTORBREMSKENNLINIE = 1
+ANLASSERSTROM     = 1
+DROSSELKLAPPENKENNFELD = 1
+STEUERGROESSE     = 1
+AUSWAHL_ABGSANLAGE = 1
+{ VERBINDUNG }
+  300       
+  -1        
+  -1        
+LASTSTELLUNG      = '40.6'
+STARTSCHALTER     = '40.20'
+MOTORDREHZAHL     = 3
+MOTORMOMENT_V_SCHEIBE = 20
+VERBRAUCH_MASSENSTROM = 30
+$------------------------------------------------------Clutch
+[KUPPLUNG] 3
+AUSGABE           = 2
+MODELLIERUNG      = 1
+OPERATIONMODE     = 1
+DYNMODE           = 1
+REIBKENNLINIESCHALTER = 1
+{ VERBINDUNG }
+  300       
+  400       
+KUPPLUNGSAUSRUECKUNG = '40.5'
+AUSGANGSDREHZAHL  = 2
+KUPPLUNGSMOMENT   = 3
+$----------------------------------------------------Gear Box
+[GETRIEBE] 4
+AUSGABE           = 2
+GANGWECHSELZEITSCHALTER = 1
+WIDERSTANDSSCHALTER = 3
+GANGWECHSELVERLUSTE = 1
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+UNTERTEILUNG_SCHALTER = 1
+{ MOMENTUNTERTEILUNG <%> }
+  0.0                   
+  100.0                 
+{ DREHZAHLUNTERTEILUNG <%> }
+  0.0                     
+  100.0                   
+{ VERBINDUNG }
+  400       
+  2900      
+GANGPOSITION      = '40.7'
+AUSGANGSDREHZAHL  = 3
+UEBERSETZUNG      = 4
+AUSGANGSMOMENT    = 6
+$-----------------------------------Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 5
+VARIIERT          = 2
+AUSGABE           = 2
+ANGABE            = 1
+WIDERSTANDSSCHALTER = 3
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+UNTERTEILUNG_SCHALTER = 1
+{ MOMENTUNTERTEILUNG <%> }
+  0.0                   
+  100.0                 
+{ DREHZAHLUNTERTEILUNG <%> }
+  0.0                     
+  100.0                   
+{ VERBINDUNG }
+  3601      
+  2800      
+$-----------------------------------Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 6
+VARIIERT          = 2
+AUSGABE           = 2
+ANGABE            = 1
+WIDERSTANDSSCHALTER = 3
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+UNTERTEILUNG_SCHALTER = 1
+{ MOMENTUNTERTEILUNG <%> }
+  0.0                   
+  100.0                 
+{ DREHZAHLUNTERTEILUNG <%> }
+  0.0                     
+  100.0                   
+{ VERBINDUNG }
+  3501      
+  3000      
+$-----------------------------------Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 7
+VARIIERT          = 2
+AUSGABE           = 2
+ANGABE            = 1
+WIDERSTANDSSCHALTER = 3
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+UNTERTEILUNG_SCHALTER = 1
+{ MOMENTUNTERTEILUNG <%> }
+  0.0                   
+  100.0                 
+{ DREHZAHLUNTERTEILUNG <%> }
+  0.0                     
+  100.0                   
+{ VERBINDUNG }
+  3602      
+  3200      
+$-----------------------------------Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 8
+VARIIERT          = 2
+AUSGABE           = 2
+ANGABE            = 1
+WIDERSTANDSSCHALTER = 3
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+UNTERTEILUNG_SCHALTER = 1
+{ MOMENTUNTERTEILUNG <%> }
+  0.0                   
+  100.0                 
+{ DREHZAHLUNTERTEILUNG <%> }
+  0.0                     
+  100.0                   
+{ VERBINDUNG }
+  3401      
+  3100      
+$-----------------------------------Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 9
+VARIIERT          = 2
+AUSGABE           = 2
+ANGABE            = 1
+WIDERSTANDSSCHALTER = 3
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+UNTERTEILUNG_SCHALTER = 1
+{ MOMENTUNTERTEILUNG <%> }
+  0.0                   
+  100.0                 
+{ DREHZAHLUNTERTEILUNG <%> }
+  0.0                     
+  100.0                   
+{ VERBINDUNG }
+  3402      
+  3300      
+$---------------------------------------------------------Hub
+[NABE] 18
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 3
+{ VERBINDUNG }
+  3002      
+WIDERSTANDSMOMENT = '40.11'
+BREMSMOMENT       = '40.24'
+$---------------------------------------------------------Hub
+[NABE] 19
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 2
+{ VERBINDUNG }
+  3001      
+WIDERSTANDSMOMENT = '40.10'
+BREMSMOMENT       = '40.23'
+$---------------------------------------------------------Hub
+[NABE] 20
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 4
+{ VERBINDUNG }
+  3102      
+WIDERSTANDSMOMENT = '40.9'
+BREMSMOMENT       = '40.22'
+$---------------------------------------------------------Hub
+[NABE] 21
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 1
+{ VERBINDUNG }
+  3101      
+WIDERSTANDSMOMENT = '40.8'
+BREMSMOMENT       = '40.21'
+$---------------------------------------------------------Hub
+[NABE] 22
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 15
+{ VERBINDUNG }
+  2802      
+WIDERSTANDSMOMENT = '40.28'
+BREMSMOMENT       = '40.44'
+$---------------------------------------------------------Hub
+[NABE] 23
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 14
+{ VERBINDUNG }
+  2801      
+WIDERSTANDSMOMENT = '40.27'
+BREMSMOMENT       = '40.43'
+$---------------------------------------------------------Hub
+[NABE] 24
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 19
+{ VERBINDUNG }
+  3202      
+WIDERSTANDSMOMENT = '40.32'
+BREMSMOMENT       = '40.48'
+$---------------------------------------------------------Hub
+[NABE] 25
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 18
+{ VERBINDUNG }
+  3201      
+WIDERSTANDSMOMENT = '40.31'
+BREMSMOMENT       = '40.47'
+$---------------------------------------------------------Hub
+[NABE] 26
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 16
+{ VERBINDUNG }
+  3302      
+WIDERSTANDSMOMENT = '40.26'
+BREMSMOMENT       = '40.42'
+$---------------------------------------------------------Hub
+[NABE] 27
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 13
+{ VERBINDUNG }
+  3301      
+WIDERSTANDSMOMENT = '40.25'
+BREMSMOMENT       = '40.41'
+$------------------------------------------------Differential
+[DIFFERENTIAL] 28
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  2800      
+  2801      
+  2802      
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------Differential
+[DIFFERENTIAL] 29
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  2900      
+  3400      
+  3500      
+DREHZAHL_AUSGANG1 = 2
+DREHZAHL_AUSGANG2 = 3
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------Differential
+[DIFFERENTIAL] 30
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  3000      
+  3001      
+  3002      
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------Differential
+[DIFFERENTIAL] 31
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  3100      
+  3101      
+  3102      
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------Differential
+[DIFFERENTIAL] 32
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  3200      
+  3201      
+  3202      
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------Differential
+[DIFFERENTIAL] 33
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  3300      
+  3301      
+  3302      
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------Differential
+[DIFFERENTIAL] 34
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  3400      
+  3401      
+  3402      
+DREHZAHL_AUSGANG1 = 2
+DREHZAHL_AUSGANG2 = 3
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------Differential
+[DIFFERENTIAL] 35
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  3500      
+  3501      
+  3600      
+DREHZAHL_AUSGANG1 = 2
+AUSGANGSMOMENT_1  = 5
+$------------------------------------------------Differential
+[DIFFERENTIAL] 36
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  3600      
+  3601      
+  3602      
+DREHZAHL_AUSGANG1 = 2
+DREHZAHL_AUSGANG2 = 3
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$----------------------------------------------------TruckSim
+[TRUCK_SIM] 40
+AUSGABE           = 2
+{ VERBINDUNG }
+ENG_SPEED         = '2.3'
+ENG_TRQ           = '2.20'
+FUEL_MASS_FLOW    = '2.30'
+TRANSM_SPEED_OUT  = '4.3'
+TRANSM_ACT_RATIO  = '4.4'
+DRIVE_TRQ_FL_1    = '31.5'
+DRIVE_TRQ_FR_1    = '31.6'
+DRIVE_TRQ_RL_1    = '30.5'
+DRIVE_TRQ_RR_1    = '30.6'
+CLUTCH_TC_TRQ_IN  = '3.3'
+CLUTCH_TC_TRQ_OUT = '3.3'
+TRANSF_CASE_OUT_SHAFT_TRQ_FRONT = '29.5'
+TRANSF_CASE_OUT_SHAFT_TRQ_REAR = '29.6'
+TRANSM_TRQ_OUT    = '4.6'
+CLUTCH_TC_SPEED_OUT = '3.2'
+TRANSF_CASE_OUT_SHAFT_SPEED_FRONT = '29.2'
+TRANSF_CASE_OUT_SHAFT_SPEED_REAR = '29.3'
+DRIVE_TRQ_FL_2    = '33.5'
+DRIVE_TRQ_FR_2    = '33.6'
+DRIVE_TRQ_RL_2    = '28.5'
+DRIVE_TRQ_RR_2    = '28.6'
+DRIVE_TRQ_RL_3    = '32.5'
+DRIVE_TRQ_RR_3    = '32.6'
+INTER_1_2_AXLE_DIFF_OUT_SHAFT_TRQ_F = '34.5'
+INTER_1_2_AXLE_DIFF_OUT_SHAFT_TRQ_R = '34.6'
+INTER_3_4OR5_AXLE_DIFF_OUT_SHAFT_TRQ_R = '35.5'
+INTER_4_5_AXLE_DIFF_OUT_SHAFT_TRQ_F = '36.5'
+INTER_4_5_AXLE_DIFF_OUT_SHAFT_TRQ_R = '36.6'
+INTER_1_2_AXLE_DIFF_OUT_SHAFT_SPEED_F = '34.2'
+INTER_1_2_AXLE_DIFF_OUT_SHAFT_SPEED_R = '34.3'
+INTER_3_4OR5_AXLE_DIFF_OUT_SHAFT_SPEED_R = '35.2'
+INTER_4_5_AXLE_DIFF_OUT_SHAFT_SPEED_F = '36.2'
+INTER_4_5_AXLE_DIFF_OUT_SHAFT_SPEED_R = '36.3'
+CLUTCH_REL        = 5
+LOAD_SIG          = 6
+DES_GEAR          = 7
+RES_TRQ_W_FL_1    = 8
+RES_TRQ_W_FR_1    = 9
+RES_TRQ_W_RL_1    = 10
+RES_TRQ_W_RR_1    = 11
+RES_TRQ_W_FL_2    = 25
+RES_TRQ_W_FR_2    = 26
+RES_TRQ_W_RL_2    = 27
+RES_TRQ_W_RR_2    = 28
+RES_TRQ_W_RL_3    = 31
+RES_TRQ_W_RR_3    = 32
+ENG_START_SWITCH  = 20
+BRAKE_TRQ_FL_1    = 21
+BRAKE_TRQ_FR_1    = 22
+BRAKE_TRQ_RL_1    = 23
+BRAKE_TRQ_RR_1    = 24
+BRAKE_TRQ_FL_2    = 41
+BRAKE_TRQ_FR_2    = 42
+BRAKE_TRQ_RL_2    = 43
+BRAKE_TRQ_RR_2    = 44
+BRAKE_TRQ_RL_3    = 47
+BRAKE_TRQ_RR_3    = 48

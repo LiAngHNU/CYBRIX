@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`2A Ballast Trailer`Trailers: 2-axle
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 2
+OBJ_X_LENGTH 4800
+OBJ_Y_LENGTH 2438
+OBJ_Z_LENGTH 543
+*DZ_V 0
+*LAT_WC 2500
+*LAT_WC_2 2500
+*HWC 510
+*WHEEL_RATIO 1
+*LAXLE_1 3700
+*LAXLE_2 4800
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_42cb9f66-375f-45be-be1f-25a9aa85205f.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -3.7
+SET_OFFSET_Y 1.25
+SET_OFFSET_Z 0.4845
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -3.7
+SET_OFFSET_Y -1.25
+SET_OFFSET_Z 0.4845
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -4.8
+SET_OFFSET_Y 1.25
+SET_OFFSET_Z 0.4845
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -4.8
+SET_OFFSET_Y -1.25
+SET_OFFSET_Z 0.4845
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_1868d318-ab10-4604-a8a4-7740973a11bc.par
+#BlueLink1 Animator: Shape Assembly`2A Ballast Trailer` Trailers` , Vehicle Body`ShpGrp_1868d318-ab10-4604-a8a4-7740973a11bc
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_a690b833-6820-4208-8ee3-306800b590fa.par
+#BlueLink3 Animator: Shape File Link`Ballast Trailer: Brake Lights On` Trailers (2 of 2)` , Brake Lights`Shape_a690b833-6820-4208-8ee3-306800b590fa
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Trailers: 2-axle } 2A Ballast Trailer
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 2A Ballast Trailer
+#Category: Trailers: 2-axle
+#FileID  : AniVeh_42cb9f66-375f-45be-be1f-25a9aa85205f
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

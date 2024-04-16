@@ -1,0 +1,30 @@
+$-------------------------------------------------------------------COSIN_HEADER
+[COSIN_HEADER]
+FILE_TYPE  =  'rdf'
+FILE_VERSION  =  5.00
+FILE_FORMAT  =  'ASCII'
+(COMMENTS)
+{comment_string}
+'COSIN style road description'
+$--------------------------------------------------------------------------UNITS
+[UNITS]
+ MASS               = 'kg'
+ LENGTH             = 'mm'
+ TIME               = 'sec'
+ ANGLE              = 'degree'
+ FORCE              = 'newton'
+$--------------------------------------------------------------------------MODEL
+[MODEL]
+ METHOD             = '2D'
+ ROAD_TYPE          = 'plank'
+$---------------------------------------------------------------------PARAMETERS
+[PARAMETERS]
+ OFFSET                  =     0
+ ROTATION_ANGLE_XY_PLANE =     0
+ MU                      =   1.0
+$
+ HEIGHT                  =    100
+ START                   =    106000
+ LENGTH                  =    200
+ BEVEL_EDGE_LENGTH       =     0
+ DIRECTION               =    45

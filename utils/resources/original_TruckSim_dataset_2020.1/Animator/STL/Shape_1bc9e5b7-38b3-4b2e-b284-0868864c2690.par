@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Pedestrian Dummy: Rails (13 m)`Environment: Props (2 of 2)
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Props\Pedestrian_Dummy\Ped_Dummy_Rails.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 13
+SET_OFFSET_Z -0.01
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_1bc9e5b7-38b3-4b2e-b284-0868864c2690.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Pedestrian Dummy: Rails (13 m)
+#Library : Animator: Shape File Link
+#DataSet : Pedestrian Dummy: Rails (13 m)
+#Category: Environment: Props (2 of 2)
+#FileID  : Shape_1bc9e5b7-38b3-4b2e-b284-0868864c2690
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

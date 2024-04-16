@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Overhead Signal Lamp Pair: Red`Traffic Signals
+ADD_REFERENCE_FRAME Frame_c6d9577c-3254-400d-b85b-b1cba2ecf7ea
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_Obj_<<o>>
+SET_Y_NAME Y_Obj_<<o>>
+SET_YAW_NAME YawO_<<o>>
+SET_OFFSET_VAR_Z 5
+SET_FRAME_VISIBLE_NAME Red_<<o>>
+
+PARSFILE Animator\STL\Shape_7e15b93d-f348-41a4-8683-8e6f90fbc39d.par
+#BlueLink0 Animator: Shape File Link`Traffic Signal: Lamp, Red (Right)` Environment: Props (2 of 2)` , Animator Data`Shape_7e15b93d-f348-41a4-8683-8e6f90fbc39d
+
+PARSFILE Animator\STL\Shape_1cd6bdf0-59e2-4fe4-ba97-52c266f59bd6.par
+#BlueLink1 Animator: Shape File Link`Traffic Signal: Lamp, Red (Left)` Environment: Props (2 of 2)` , Animator Data`Shape_1cd6bdf0-59e2-4fe4-ba97-52c266f59bd6
+
+#MiscYellow0
+define_output Red_<<o>> =eq (TypeO_<<o>>, LIGHT_RED);-;Show red light
+#ENDMYellow
+
+WRT_X_Obj_<<o>>
+ANI_X_Obj_<<o>>
+WRT_Y_Obj_<<o>>
+ANI_Y_Obj_<<o>>
+WRT_YawO_<<o>>
+ANI_YawO_<<o>>
+WRT_Red_<<o>>
+ANI_Red_<<o>>
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Traffic Signals } Overhead Signal Lamp Pair: Red
+#Library : Animator: Reference Frame
+#DataSet : Overhead Signal Lamp Pair: Red
+#Category: Traffic Signals
+#FileID  : Frame_c6d9577c-3254-400d-b85b-b1cba2ecf7ea
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

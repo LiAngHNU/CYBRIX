@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`2A Day Cab`2A Lead Units
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 3500
+*DZ_V 0
+*LAT_WC 2030
+*LAT_WC_2 1863
+*HWC 520
+*WHEEL_RATIO 0.99
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_OFFSET_X 0
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_OFFSET_X -3.5
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_ANGLE_X 180
+SET_OFFSET_X -3.5
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.494
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_e7d2eb3b-7ef2-4bc1-be51-3841e82b1f98.par
+#BlueLink1 Animator: Shape Assembly`Lead Unit Frame Rails` Frame Rails` , Vehicle Body`ShpGrp_e7d2eb3b-7ef2-4bc1-be51-3841e82b1f98
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_707c3ddb-9a87-4f39-882f-0ff3bb2390b3.par
+#BlueLink3 Animator: Shape File Link`Lead Unit: Brake Lights (On)` Trucks: Chassis` , Brake Lights`Shape_707c3ddb-9a87-4f39-882f-0ff3bb2390b3
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_1ae9417d-50b0-460f-ab0c-9ab9a7bb5c11.par
+#BlueLink10 Animator: Shape File Link`Lead Unit: Reverse Lights (On)` Trucks: Chassis` , Reverse lights`Shape_1ae9417d-50b0-460f-ab0c-9ab9a7bb5c11
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_84ddea64-f55a-48ef-a27d-d114f1096318.par
+#BlueLink7 Animator: Shape Assembly`Day Cab (Non-scaled)` Cabs` , Vehicle Body`ShpGrp_84ddea64-f55a-48ef-a27d-d114f1096318
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a
+
+EXPORT_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { 2A Lead Units } 2A Day Cab
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 2A Day Cab
+#Category: 2A Lead Units
+#FileID  : AniVeh_135ced7b-75b6-4a58-a554-9ed8958443d3
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Cab Over: Frame Rail (L)`Trucks: Cabs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+#ENDMYellow
+
+SET_COLOR 0.502 0.502 0.502
+SET_SCALE_X 5.8
+SET_SCALE_Y 0.1
+SET_SCALE_Z 0.25
+SET_OFFSET_X 1.25
+SET_OFFSET_Y 0.03
+SET_OFFSET_Z 0.225
+*SPECULAR 0.5
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Video Camera`Camera_4f51a664-0690-47ba-aff2-3a5c29523a33
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_99267e21-f996-4fbd-98aa-bce81ebd2603.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Cab Over: Frame Rail (L)
+#Library : Animator: Shape File Link
+#DataSet : Cab Over: Frame Rail (L)
+#Category: Trucks: Cabs
+#FileID  : Shape_99267e21-f996-4fbd-98aa-bce81ebd2603
+#Product : TruckSim 2020.1
+#VehCode Shape File
+
+END

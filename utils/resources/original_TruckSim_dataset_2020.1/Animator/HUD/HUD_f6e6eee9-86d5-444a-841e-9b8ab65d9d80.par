@@ -1,0 +1,121 @@
+PARSFILE
+#FullDataName Animator: HUD`Speed Text Group White`HUD Groups
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 18
+#RingCtrl6 0
+#RingCtrl7 2
+#RingCtrl8 2
+#RingCtrl9 18
+#RingCtrl10 0
+#RingCtrl11 2
+#RingCtrl12 2
+*TITLE_1 Target Speed (km/h)
+*LOCX_1 2
+*LOCY_1 30
+*VAR_NAME_1 VxTarget
+*COLOR_1 1 1 1
+*PREC1 0
+*TITLE_2 Actual Speed (km/h)
+*LOCX_2 2
+*LOCY_2 26
+*VAR_NAME_2 Vx
+*COLOR_2 1 1 0.5
+*PREC2 0
+*TITLE_3 Speed Error (km/h)
+*LOCX_3 2
+*LOCY_3 22
+*VAR_NAME_3 Vx_ERR
+*COLOR_3 1 1 0.5
+*PREC3 0
+*TITLE_4 Handwheel Torque (Nm)
+*LOCX_4 2
+*LOCY_4 38
+*VAR_NAME_4 M_SW
+*COLOR_4 1 1 0.5
+*PREC4 2
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Target Speed (km/h) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 300
+#Selection_4 Fixed: 1 VarName: VxTarget  ColorStr: 1 1 1
+#Selection_5 ImgName: 
+ANI_VxTarget
+WRT_VxTarget
+ADD_ENTITY hud_text Text Output
+location 40 300 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is VxTarget
+prefix Target Speed (km/h)
+min_width_prefix 20
+value VxTarget
+precision 0
+color 1 1 1 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 1
+#Selection_1 18 for Icon
+#Selection_2 Title: Actual Speed (km/h) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 260
+#Selection_4 Fixed: 1 VarName: Vx  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_Vx
+WRT_Vx
+ADD_ENTITY hud_text Text Output
+location 40 260 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is Vx
+prefix Actual Speed (km/h)
+min_width_prefix 20
+value Vx
+precision 0
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+#Selection 18 for Icon 2
+#Selection_1 18 for Icon
+#Selection_2 Title: Speed Error (km/h) AlX 0 AlY 2
+#Selection_3 Scale 1.333333 locX 40 locY 220
+#Selection_4 Fixed: 1 VarName: Vx_ERR  ColorStr: 1 1 0.5
+#Selection_5 ImgName: 
+ANI_Vx_ERR
+WRT_Vx_ERR
+ADD_ENTITY hud_text Text Output
+location 40 220 24 24
+align_x left
+align_y bottom
+size_mode absolute
+place_mode absolute
+# var name is Vx_ERR
+prefix Speed Error (km/h)
+min_width_prefix 20
+value Vx_ERR
+precision 0
+color 1 1 0.5 1.0
+END_ENTITY hud_text Text Output
+
+LOG_ENTRY Used Dataset: Animator: HUD; { HUD Groups } Speed Text Group White
+#Library : Animator: HUD
+#DataSet : Speed Text Group White
+#Category: HUD Groups
+#FileID  : HUD_f6e6eee9-86d5-444a-841e-9b8ab65d9d80
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

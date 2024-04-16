@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`2A Tour Bus`2A Lead Units
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+#RingCtrl0 2
+OBJ_X_LENGTH 4490
+OBJ_Y_LENGTH 3174
+OBJ_Z_LENGTH 3110
+*DZ_V 0
+*LAT_WC 2030
+*LAT_WC_2 1863
+*HWC 520
+*WHEEL_RATIO 0.99
+*LAXLE_1 0
+*LAXLE_2 4490
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_OFFSET_X 0
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_OFFSET_X -4.49
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.494
+TIRE_ANI_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+SET_SCALE_X 0.99
+SET_SCALE_Y 0.99
+SET_SCALE_Z 0.99
+SET_ANGLE_X 180
+SET_OFFSET_X -4.49
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.494
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_598fe8b0-0645-4652-b140-756449735873.par
+#BlueLink1 Animator: Shape Assembly`2A Tour Bus` Vans and Buses` , Vehicle Body`ShpGrp_598fe8b0-0645-4652-b140-756449735873
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_88fe2909-af25-41a8-8426-97e6153fbadc.par
+#BlueLink3 Animator: Shape File Link`Tour Bus (2A): Brake Lights` Trucks: Buses` , Brake Lights`Shape_88fe2909-af25-41a8-8426-97e6153fbadc
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_294d4e39-8f73-4bb1-b6c0-c08a11df2fdf.par
+#BlueLink10 Animator: Shape File Link`Tour Bus (2A): Reverse Lights` Trucks: Buses` , Reverse lights`Shape_294d4e39-8f73-4bb1-b6c0-c08a11df2fdf
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+EXPORT_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a
+
+EXPORT_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { 2A Lead Units } 2A Tour Bus
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 2A Tour Bus
+#Category: 2A Lead Units
+#FileID  : AniVeh_5cb9979d-3686-4654-8ce0-3c30f81bd36c
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

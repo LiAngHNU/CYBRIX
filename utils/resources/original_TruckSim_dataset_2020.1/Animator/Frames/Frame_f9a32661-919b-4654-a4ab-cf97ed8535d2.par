@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Tire Sidewall`Animator Reference Frame, Unit 1
+ADD_REFERENCE_FRAME Frame_f9a32661-919b-4654-a4ab-cf97ed8535d2
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_Ref
+SET_Y_NAME Y_Ref
+SET_Z_NAME 0.1
+
+PARSFILE Animator\STL\Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37.par
+#BlueLink0 Animator: Shape File Link`Sphere 0.2 m (Green)` Geometric Shapes` , Animator Data`Shape_80c3cdd9-b801-4961-8215-85e40cb0cb37
+
+WRT_X_Ref
+ANI_X_Ref
+WRT_Y_Ref
+ANI_Y_Ref
+WRT_0.1
+ANI_0.1
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Animator Reference Frame, Unit 1 } Tire Sidewall
+#Library : Animator: Reference Frame
+#DataSet : Tire Sidewall
+#Category: Animator Reference Frame, Unit 1
+#FileID  : Frame_f9a32661-919b-4654-a4ab-cf97ed8535d2
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`EVT Target`Sensor Targets
+
+#CheckBox0 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+OBJ_X_LENGTH 1000
+OBJ_Y_LENGTH 1600
+OBJ_Z_LENGTH 1350
+*DZ_V 0
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_aa4b13b1-b0ae-4476-b4c5-699b465d9e43.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_5c7de82f-805d-4c5b-a466-bb5b3b06e7f3.par
+#BlueLink1 Animator: Shape File Link`AEB Dummy Vehicle: Body` Trailers (1 of 2)` , Vehicle Body`Shape_5c7de82f-805d-4c5b-a466-bb5b3b06e7f3
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_fcfdc1b5-ce51-4f79-96dd-76793c77dae1.par
+#BlueLink3 Animator: Shape File Link`AEB Dummy Vehicle: Brake Lights` Trailers (1 of 2)` , Brake Lights`Shape_fcfdc1b5-ce51-4f79-96dd-76793c77dae1
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Video Camera`Camera_2b20a371-b625-45b9-95c7-440e110c021a
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Sensor Targets } EVT Target
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : EVT Target
+#Category: Sensor Targets
+#FileID  : AniVeh_aa4b13b1-b0ae-4476-b4c5-699b465d9e43
+#Product : TruckSim 2020.1
+#VehCode Vehicle Shape
+
+END

@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Motion Sensor 1: SM Origin`Animated Trace Lines
+ADD_REFERENCE_FRAME Frame_47348969-815e-4105-adc7-d9e58c1cf70d
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S1
+SET_Y_NAME Y_S1
+SET_Z_NAME Z_S1
+SET_ROLL_NAME roll_e
+SET_PITCH_NAME pitch
+SET_YAW_NAME yaw
+
+PARSFILE Animator\STL\Shape_474924f3-a4e3-4914-883e-74d3b7bedc90.par
+#BlueLink0 Animator: Shape File Link`Sphere 0.2 m (Purple)` Geometric Shapes` , Animator Data`Shape_474924f3-a4e3-4914-883e-74d3b7bedc90
+
+WRT_X_S1
+ANI_X_S1
+WRT_Y_S1
+ANI_Y_S1
+WRT_Z_S1
+ANI_Z_S1
+WRT_roll_e
+ANI_roll_e
+WRT_pitch
+ANI_pitch
+WRT_yaw
+ANI_yaw
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Animated Trace Lines } Motion Sensor 1: SM Origin
+#Library : Animator: Reference Frame
+#DataSet : Motion Sensor 1: SM Origin
+#Category: Animated Trace Lines
+#FileID  : Frame_47348969-815e-4105-adc7-d9e58c1cf70d
+#Product : TruckSim 2020.1
+#VehCode Reference Frame
+
+END
