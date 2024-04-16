@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName CarSim Run Control`ISO SSC: R = 100, Full Run`Handling and Stability Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c559bd92-64ea-46c6-952f-795a3272b663
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 37 m` Vehicle Reference` , Animator camera`Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_d5e84ddf-cf9c-4adb-a0b7-0ac26b182874.par
+#BlueLink28 Procedures`ISO Steady-State Circle Series` Handling Testing` , Procedure`Proc_d5e84ddf-cf9c-4adb-a0b7-0ac26b182874
+
+PARSFILE Roads\3D_Road\Road_4a352805-f13c-472a-9878-ce32d1ac1fd3.par
+#BlueLink9 Road: 3D Surface (All Properties)`100-m Radius Circle, Mu = 0.9` Circular Roads` , Miscellaneous`Road_4a352805-f13c-472a-9878-ce32d1ac1fd3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title ISO SSC: R = 100, Full Run <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE ISO SSC: R = 100, Full Run
+#MiscYellow0
+WRITE_ALL 1
+OPT_WRITE WRITE_ALL
+IPRINT 50
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example illustrates the measurement of a vehicle's understeer gradient by the constant radius test method as described in ISO 4138.
+#
+#This run records the entire vehicle time history to file for evaluation of the transients between individual tests.
+#
+#Details of the test are covered in the notes for the procedure.
+#
+#The programming of this procedure is described in detail in the tech memo "Making Advanced Procedures with VS Commands." (See Help > Technical Memos.)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Handling and Stability Tests } ISO SSC: R = 100, Full Run
+#Library : CarSim Run Control
+#DataSet : ISO SSC: R = 100, Full Run
+#Category: Handling and Stability Tests
+#FileID  : Run_c559bd92-64ea-46c6-952f-795a3272b663
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

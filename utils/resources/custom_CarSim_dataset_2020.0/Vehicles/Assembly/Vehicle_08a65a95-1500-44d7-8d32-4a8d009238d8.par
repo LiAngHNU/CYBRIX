@@ -1,0 +1,106 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Tractor`Utility Vehicles
+#VehCode SA_SA
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+OPT_PT 0
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 2
+PARSFILE Steering\System2\StrSys2_64ffa9d1-b87b-4da1-94c4-81269337c3d3.par
+#BlueLink7 Steering`D-Class, SUV: Power, Recirc. Ball` CS D-Class` , Steering System`StrSys2_64ffa9d1-b87b-4da1-94c4-81269337c3d3
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_939364eb-c285-40b5-93b4-ed33e5a200d9.par
+#BlueLink27 Suspension: Solid Axle System Kinematics`Tractor - Front` Tractor` , Kinematics`KinSA_939364eb-c285-40b5-93b4-ed33e5a200d9
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_a246f3f5-bf01-42fb-a01e-df7f0b3ed986.par
+#BlueLink26 Suspension: Solid Axle Compliance, Springs, and Dampers`Tractor - Front` Tractor` , Compliance`CmpSA_a246f3f5-bf01-42fb-a01e-df7f0b3ed986
+
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_b2473f9c-c2c4-4190-afb4-9b4fd324dba9.par
+#BlueLink9 Tire`Tractor: Front Tire (Left)` Utility Vehicle Tires` , Left-Front Tire`Tire_b2473f9c-c2c4-4190-afb4-9b4fd324dba9
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_146c733f-e875-4733-b43c-ccc09a3dd459.par
+#BlueLink10 Tire`Tractor: Front Tire (Right)` Utility Vehicle Tires` , Tire`Tire_146c733f-e875-4733-b43c-ccc09a3dd459
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_16980578-a7f8-435f-858a-3dae55940746.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`Tractor - Rear` Tractor` , Kinematics`KinSA_16980578-a7f8-435f-858a-3dae55940746
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_415c9c07-c84c-4841-be53-d7d1a56b7d07.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Tractor - Rear` Tractor` , Compliance`CmpSA_415c9c07-c84c-4841-be53-d7d1a56b7d07
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_66dfaa8f-e1b0-4833-b1b9-8098a004dde6.par
+#BlueLink13 Tire`Tractor: Rear Tire (Left)` Utility Vehicle Tires` , Left-Rear Tire`Tire_66dfaa8f-e1b0-4833-b1b9-8098a004dde6
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_6737d60e-42b0-4560-bc65-f7d5ef676eba.par
+#BlueLink14 Tire`Tractor: Rear Tire (Right)` Utility Vehicle Tires` , Rear Tire`Tire_6737d60e-42b0-4560-bc65-f7d5ef676eba
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_8073c115-d1de-412a-99a3-131af59b13f4.par
+#BlueLink0 Vehicle: Sprung Mass`Tractor` Utility Vehicles: SUVs and Vans` , Sprung Mass`SprMass_8073c115-d1de-412a-99a3-131af59b13f4
+
+PARSFILE Aerodynamics\Aero_Main\Aero_3479bdf1-b57e-4404-97d9-41c21f83ddb4.par
+#BlueLink1 Aerodynamics: Basic`No Aerodynamics` Generic Aerodynamic Properties` , Aerodynamics`Aero_3479bdf1-b57e-4404-97d9-41c21f83ddb4
+
+INSTALL_SPEED_CONTROLLER
+R_REAR_DRIVE_SC 0.5
+PMAX_SC 200
+PARSFILE Brakes\4W_System\Brk4W_5011ad03-3228-4bdc-8aba-aebd0486c2eb.par
+#BlueLink6 Brakes: Four-Wheel System`(SUV), MC Press, No ABS` D-Class` , Brake System`Brk4W_5011ad03-3228-4bdc-8aba-aebd0486c2eb
+
+PARSFILE Animator\Vehicles\AniVeh_9ed68745-af45-4477-afae-d51c4f1e7dc5.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Tractor` Traffic and Moving Objects: Commercial` , Vehicle 3D Shape`AniVeh_9ed68745-af45-4477-afae-d51c4f1e7dc5
+
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_08a65a95-1500-44d7-8d32-4a8d009238d8.png
+
+#EMBEDDED_NOTES
+#This example demonstrates that non-traditional vehicle types are possible with CarSim.
+#
+#The vehicle is a tractor with a centrally pivioted front suspension. The springs and dampers have been applied extremely close to each other so that no roll stiffness is contributed by either. The rear axle, while it does have a suspension, is substantially stiffer in roll than the front axle. This will provide a reasonable simulation of the way a tractor drives, but it is not perfect.
+#
+#This vehicle uses the Minimum Powertrain option. Note that this option will only work with the Closed Loop Speed Controller. Direct throttle and shift controls have no effect without the more detailed powertrain options.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Utility Vehicles } Tractor
+#Library : Vehicle: Assembly
+#DataSet : Tractor
+#Category: Utility Vehicles
+#FileID  : Vehicle_08a65a95-1500-44d7-8d32-4a8d009238d8
+#Product : CarSim 2020.0
+#VehCode SA_SA
+
+END

@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`6-Lane Highway: Right Wall`Many Lanes
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_2a38b4ce-0257-461b-8dfe-91d43833815f.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID right_wall
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 6-Lane Highway: Right Wall
+PARSFILE Roads\Center_XY\PathXY_7b12e040-94c4-4afc-b112-02ea4acca62d.par
+#BlueLink0 Path: X-Y Coordinates`Alt 3 Road from FHWA` Public Road Section` , Reference Path`PathXY_7b12e040-94c4-4afc-b112-02ea4acca62d
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Alt 3 Road from FHWA
+PARSFILE Roads\dZ_Map\RdMapZ_f1ee2cdc-532e-443f-b8b9-bc1679f04013.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`6-Lane Hwy w/ Walls and Access Roads` Highway` , Miscellaneous`RdMapZ_f1ee2cdc-532e-443f-b8b9-bc1679f04013
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_e94041d7-8b9d-4c85-ac7c-c047b6c480d9.par
+#BlueLink4 Road: Animator Surface Shapes`6-Ln Hwy: Right Wall for Access Road` Scenic Road Shapes` , Road shape definitions`RdShape_e94041d7-8b9d-4c85-ac7c-c047b6c480d9
+
+PARSFILE Roads\dZ_Map\RdMapZ_86f99040-045d-4d23-b508-d469a175d0fa.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`6-Lane Highway Road Crown` Highway` , Miscellaneous`RdMapZ_86f99040-045d-4d23-b508-d469a175d0fa
+
+RR_SURF 1.1
+L_CAMERA_FRONT 10
+L_CAMERA_REAR 10
+add_reference_frame road_stuff_6_Right_Wall_Detection_(Segment_1)
+reference_frame_ghosts off
+PARSFILE Sensors_Traffic\Targets\Target_505a35c3-cf25-4a8c-b2d6-e1f7d62caef5.par
+#BlueLink6 Single Moving Object (Custom)`Right Wall Detection (Segment 1)` 6-Lane Highway` , 3D Shapes`Target_505a35c3-cf25-4a8c-b2d6-e1f7d62caef5
+
+
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+add_obj Roads\3D_Road\PolyShape_6_2a38b4ce-0257-461b-8dfe-91d43833815f.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 1.000000 0.400000 1.000000
+add_reference_frame road_stuff_7_Right_Wall_Detection_(Segment_2)
+reference_frame_ghosts off
+PARSFILE Sensors_Traffic\Targets\Target_ef41664c-6c7e-40cb-80e8-8d88ac5fc65e.par
+#BlueLink7 Single Moving Object (Custom)`Right Wall Detection (Segment 2)` 6-Lane Highway` , 3D Shapes`Target_ef41664c-6c7e-40cb-80e8-8d88ac5fc65e
+
+
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+add_obj Roads\3D_Road\PolyShape_7_2a38b4ce-0257-461b-8dfe-91d43833815f.obj
+set_transparency 0.5
+SET_OFFSET_Z 0.5
+SET_COLOR 0.000000 0.000000 0.000000
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Camera`Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af
+
+parsfile Roads\3D_Road\Road_2a38b4ce-0257-461b-8dfe-91d43833815f.ani
+
+#EMBEDDED_NOTES
+#In this dataset only the animator shapes for the road environment and it's surroundings are defined.  The shapes for the wall geometry are defined in other datasets.
+#
+#The dZ geometry includes the definition of the walls - even though they are not drawn here - so that vehicles on this road will be unable to pass through the wall geometry.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Many Lanes } 6-Lane Highway: Right Wall
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 6-Lane Highway: Right Wall
+#Category: Many Lanes
+#FileID  : Road_2a38b4ce-0257-461b-8dfe-91d43833815f
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

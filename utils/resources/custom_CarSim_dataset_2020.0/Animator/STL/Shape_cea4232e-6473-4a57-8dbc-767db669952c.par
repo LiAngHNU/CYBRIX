@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Van: Details`Trucks: Vans
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Cars\European_Van\details.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.35
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e6e4b5e2-348e-42ad-ab7c-62eacd66bb44.par
+#BlueLink2 Animator: Camera Setup`Vehicles and Drivers - Trucks` Shape Preview` , Video Camera`Camera_e6e4b5e2-348e-42ad-ab7c-62eacd66bb44
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_cea4232e-6473-4a57-8dbc-767db669952c.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Vans } Van: Details
+#Library : Animator: Shape File Link
+#DataSet : Van: Details
+#Category: Trucks: Vans
+#FileID  : Shape_cea4232e-6473-4a57-8dbc-767db669952c
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

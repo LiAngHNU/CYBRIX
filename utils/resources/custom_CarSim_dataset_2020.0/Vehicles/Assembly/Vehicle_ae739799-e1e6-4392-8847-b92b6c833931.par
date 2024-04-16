@@ -1,0 +1,114 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`SUV, Full Size`Utility Vehicles
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_cd65aff3-e668-40d7-8437-a8e6484c19a5.par
+#BlueLink7 Steering`SUV, Full Size: Power, R&P` Utility Vehicles: SUVs and Vans` , Steering System`StrSys2_cd65aff3-e668-40d7-8437-a8e6484c19a5
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_f189598e-a459-4423-a6a5-345cbcfb93b7.par
+#BlueLink19 Suspension: Independent System Kinematics`SUV, Full Size - Front` Utility Vehicles: SUVs and Vans` , Kinematics`KinInd_f189598e-a459-4423-a6a5-345cbcfb93b7
+
+PARSFILE Suspensions\Compliance\CmpInd_b73cd89c-fb0a-4bef-a30f-a5d3071d4f2a.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`SUV, Full Size - Front` Utility Vehicles: SUVs and Vans` , Compliance`CmpInd_b73cd89c-fb0a-4bef-a30f-a5d3071d4f2a
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_14ef40d0-1147-42eb-881d-5a9175f0ad17.par
+#BlueLink999 Tire`275/65 R18` Touring Tires` , Tire`Tire_14ef40d0-1147-42eb-881d-5a9175f0ad17
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_14ef40d0-1147-42eb-881d-5a9175f0ad17.par
+#BlueLink10 Tire`275/65 R18` Touring Tires` , Tire`Tire_14ef40d0-1147-42eb-881d-5a9175f0ad17
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_9db24bdb-ec5d-47ba-9a09-69693f8c8ec9.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`SUV, Full Size - Rear` Utility Vehicles: SUVs and Vans` , Kinematics`KinSA_9db24bdb-ec5d-47ba-9a09-69693f8c8ec9
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_3aaf895e-b7cf-47b3-85d5-2d7ca48a9b4a.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`SUV, Full Size - Rear` Utility Vehicles: SUVs and Vans` , Compliance`CmpSA_3aaf895e-b7cf-47b3-85d5-2d7ca48a9b4a
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_14ef40d0-1147-42eb-881d-5a9175f0ad17.par
+#BlueLink999 Tire`275/65 R18` Touring Tires` , Tire`Tire_14ef40d0-1147-42eb-881d-5a9175f0ad17
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_14ef40d0-1147-42eb-881d-5a9175f0ad17.par
+#BlueLink999 Tire`275/65 R18` Touring Tires` , Tire`Tire_14ef40d0-1147-42eb-881d-5a9175f0ad17
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_6dce9e1b-ec33-4150-8a30-a38a987fe406.par
+#BlueLink0 Vehicle: Sprung Mass`SUV, Full Size` Utility Vehicles: SUVs and Vans` , Sprung Mass`SprMass_6dce9e1b-ec33-4150-8a30-a38a987fe406
+
+PARSFILE Aerodynamics\Aero_Main\Aero_fedd58ba-17c5-497e-9c27-e7f697143880.par
+#BlueLink1 Aerodynamics: Basic`SUV, Full Size Aero` Utility Vehicles: SUVs and Vans` , Aerodynamics`Aero_fedd58ba-17c5-497e-9c27-e7f697143880
+
+PARSFILE Powertrain\4wd\4WD_98e7df45-86ba-435a-a020-96dbd26b907b.par
+#BlueLink5 Powertrain: 4-Wheel Drive`250 kW, 7-spd., 2.65 Ratio` 250 kW Powertrains` , Powertrain`4WD_98e7df45-86ba-435a-a020-96dbd26b907b
+
+PARSFILE Brakes\4W_System\Brk4W_ce25937f-c145-44ac-952a-8f974831b753.par
+#BlueLink6 Brakes: Four-Wheel System`SUV (Full): MC Press, ABS` Utility Vehicles: SUVs and Vans` , Brake System`Brk4W_ce25937f-c145-44ac-952a-8f974831b753
+
+PARSFILE Animator\Vehicles\AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`SUV, Full Size` Utility Vehicles: SUVs and Vans` , Vehicle 3D Shape`AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_ae739799-e1e6-4392-8847-b92b6c833931.png
+
+#EMBEDDED_NOTES
+#Generic Full Size SUV with an SLA front and Hotchkiss Solid Axle rear suspension.
+#
+#Full-size SUVs include the Audi Q7, Chevrolet Tahoe, Ford Expedition, Nissan Armada, and Toyota Sequoia.
+#
+#This example vehicle has non-linear front suspension compliance properties. To see how this data was added:
+#
+#(1) Click on the blue link for the front suspension Springs, Dampers, and Compliance.
+#
+#(2) On the Suspension: Independent Compliance screen, click on the blue link "SUV, Full Size - Front Compliance."
+#
+#(3) On the Susp.: Compliance (Nonlinear) screen, note the two Translational Compliance datasets at the bottom of the screen. Both of these datasets are linked to tables showing nonlinear data for the Longitudinal displacement as a function of Fx, and Lateral displacement as a function of Fy.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Utility Vehicles } SUV, Full Size
+#Library : Vehicle: Assembly
+#DataSet : SUV, Full Size
+#Category: Utility Vehicles
+#FileID  : Vehicle_ae739799-e1e6-4392-8847-b92b6c833931
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName CarSim Run Control`Ignition Switch and Transmission Park`Extended Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5afff007-4658-4e3f-89b3-016e9c05d5ce
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 5 El, 30 m` Vehicle Reference` , Animator camera`Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_2ceb7a21-a125-4cdf-884c-111b62a2c7d7.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan (Ign. & Park)` D-Class` , Math Model`Vehicle_2ceb7a21-a125-4cdf-884c-111b62a2c7d7
+
+PARSFILE Procedures\Proc_ba5c4b83-67a5-4d21-89ab-8dc2ad5a03e1.par
+#BlueLink28 Procedures`Start, Drive, Stop, Park, Off` Powertrain, Event-driven Tests` , Procedure`Proc_ba5c4b83-67a5-4d21-89ab-8dc2ad5a03e1
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Ignition Switch and Transmission Park <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Ignition Switch and Transmission Park
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Operation of an ignition switch and transmission park position are not directly supported in CarSim. In most simulations they are unnecessary because the car is moving throughout the entire test.
+#
+#In some applications such as driving simulators and in testing of certain types of controllers, these features are needed.
+#
+#This example implements both, through use of VS commands. Follow the link to the vehicle dataset for more details.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Extended Models } Ignition Switch and Transmission Park
+#Library : CarSim Run Control
+#DataSet : Ignition Switch and Transmission Park
+#Category: Extended Models
+#FileID  : Run_5afff007-4658-4e3f-89b3-016e9c05d5ce
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

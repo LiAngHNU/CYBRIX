@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Generic VS Commands`Available Engine Power`Powertrain
+#VehCode VS Commands
+
+#MiscYellow0
+INSTALL_SPEED_CONTROLLER
+define_table generic 1
+eq_in IMP_PWR_ENGINE_AV = generic(0,AV_Eng*60/2/pi,1)*1000;
+IMPORT IMP_PWR_ENGINE_AV VS_ADD 0.0
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_de0af4c1-d417-4e77-9034-20117cb21752.par
+#BlueLink0 Generic Table`Available Engine Power` Powertrain` , Miscellaneous`GenTab_de0af4c1-d417-4e77-9034-20117cb21752
+
+#BlueLink4 Plot: Setup`Sensor Vx -- Rear Blind Spot` Object Sensors` , Plot`
+
+#BlueLink5 Plot: Setup`Sensor Dist -- Rear Blind Spot` Object Sensors` , Plot`
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Powertrain } Available Engine Power
+#Library : Generic VS Commands
+#DataSet : Available Engine Power
+#Category: Powertrain
+#FileID  : GenVS_f12189c4-f8b3-47f0-8f2f-620980ca27e8
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

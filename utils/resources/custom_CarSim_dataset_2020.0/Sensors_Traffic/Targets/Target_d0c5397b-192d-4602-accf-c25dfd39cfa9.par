@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Mcity: SUV Crossing Main St`Mcity Traffic and Sensor Targets
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Mcity: SUV Crossing Main St
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+#CheckBox0 0    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 1
+#RingCtrl1 1
+H_OBJ 1
+*COLOR 1 0.8 0.2
+*S_INIT 197
+*L_INIT 40
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 5.5
+LENGTH_OBJ 5.5
+WIDTH_OBJ 2
+LX_FRONT_OBJ 1
+*REFLECT 0.8
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0.8
+*SPEED 5.3
+EQ_INIT HeadO_<<o>> 90/DR
+SET_RUN_COLOR 1 0.8 0.2
+PARSFILE Animator\Vehicles\AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`SUV, Full Size` Utility Vehicles: SUVs and Vans` , 3D Shape for Video`AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a
+
+EQ_INIT S_Obj_<<o>> 197
+EQ_INIT LatO_<<o>> 40
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 90/DR;-; Heading vector for ODEs
+EQ_INIT V_CMD_OBJ_<<o>> = 5.3;
+EQ_DIFFERENTIAL LatO_<<o>> = V_CMD_OBJ_<<o>>
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Mcity Traffic and Sensor Targets } Mcity: SUV Crossing Main St
+#Library : Single Moving Object (Custom)
+#DataSet : Mcity: SUV Crossing Main St
+#Category: Mcity Traffic and Sensor Targets
+#FileID  : Target_d0c5397b-192d-4602-accf-c25dfd39cfa9
+#Product : CarSim 2020.0
+#VehCode Moving Object (Custom)
+
+END

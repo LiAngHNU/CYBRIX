@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`E. Write One Time Step`ISO Steady-State Circle Series
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+DELETE_EVENTS_ID 1000
+*NAME1 T
+*NAME2 AY_REF
+*VALUE1 1
+*VALUE2 abs(ay)
+*SET_EVENT_ID 1000
+SET_EVENT_ID 1000
+#MiscYellow0
+OPT_WRITE 1
+#ENDMYellow
+
+DEFINE_EVENT 1 ; Events\Events_37a368e6-a61d-4f05-9aef-fa1acf6e4284.par
+#BlueLink0 Events`C. Go to Next Speed` ISO Steady-State Circle Series` , Events`Events_37a368e6-a61d-4f05-9aef-fa1acf6e4284
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded at the end of a steady state test, with the vehicle lateral acceleration matching the target lateral acceleration. Writing to file is activated so the current vehicle state will be recorded.
+#
+#A pending event to check the lateral acceleration is deleted to avoid triggering it with a future transient response.
+#
+#A pending event is added, using a condition always true, so it will be triggered at the next time step and go back to Event C, to set up another test at a higher speed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
+#Library : Events
+#DataSet : E. Write One Time Step
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_13ce0693-4ddf-4e90-b64c-6b18e6d8ad95
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

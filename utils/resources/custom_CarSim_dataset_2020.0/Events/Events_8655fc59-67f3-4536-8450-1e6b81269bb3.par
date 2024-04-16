@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Events`B. Reset Position and Accelerate`Braking
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 vx
+*VALUE1 100
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_a707549f-09ea-4f2d-86ee-5ccb52597176.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp To Full Throttle in 0.1 sec.` Ramp` , Speed link`Throttle_a707549f-09ea-4f2d-86ee-5ccb52597176
+
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+PARSFILE Control\Brake_pedal\FbkCon_53897d38-3e93-4227-9836-48e894739a3d.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Constant: Zero` Constant` , Miscellaneous`FbkCon_53897d38-3e93-4227-9836-48e894739a3d
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink11 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Miscellaneous`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Driver\StrDM_64f0bbbf-15de-4e5d-a320-46d82e7c4d43.par
+#BlueLink14 Control: Steering by the Closed-loop Driver Model`1.65m Left, 1.5s Preview` Constant Position: Non-Zero Offset` , Miscellaneous`StrDM_64f0bbbf-15de-4e5d-a320-46d82e7c4d43
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT vx > 100 ; Events\Events_a81761f9-a83a-4524-8ee2-242127df9c79.par
+#BlueLink0 Events`C. Brake to Stop` Braking` , Events`Events_a81761f9-a83a-4524-8ee2-242127df9c79
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle's position is reset to the beginning of the road. It then accelerates to 100 km/h.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Braking } B. Reset Position and Accelerate
+#Library : Events
+#DataSet : B. Reset Position and Accelerate
+#Category: Braking
+#FileID  : Events_8655fc59-67f3-4536-8450-1e6b81269bb3
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

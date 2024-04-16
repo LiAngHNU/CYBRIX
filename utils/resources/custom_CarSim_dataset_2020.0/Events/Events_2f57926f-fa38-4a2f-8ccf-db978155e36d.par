@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Events`C. Stop and End Run (Pedal Force)`Braking Distance
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 2
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+PARSFILE Control\Brake_pedal\FbkCon_a19a202c-186d-4e2d-a905-f57d82a3d5b1.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Constant: 155 N` Constant` , Miscellaneous`FbkCon_a19a202c-186d-4e2d-a905-f57d82a3d5b1
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT t_event > 2 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Brake pressure is held until the end of the simulation. The simulation will stop when the event clock time hits 2 sec.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Braking Distance } C. Stop and End Run (Pedal Force)
+#Library : Events
+#DataSet : C. Stop and End Run (Pedal Force)
+#Category: Braking Distance
+#FileID  : Events_2f57926f-fa38-4a2f-8ccf-db978155e36d
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

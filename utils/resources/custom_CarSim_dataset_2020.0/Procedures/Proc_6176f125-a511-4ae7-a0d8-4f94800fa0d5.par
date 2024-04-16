@@ -1,0 +1,100 @@
+PARSFILE
+#FullDataName Procedures`100 - 0 km/h Braking Dist Test (Frc Ctrl)`Accel. and Brake Testing
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 12
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 102
+*TSTOP 12
+*TSTART 0
+*SSTART 0
+*SSTOP 2235
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: 100 - 0 km/h Braking Dist Test (Frc Ctrl)
+SPEED_TARGET_CONSTANT 102
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Brake_pedal\FbkCon_53897d38-3e93-4227-9836-48e894739a3d.par
+#BlueLink28 Control: Braking Pedal Force (Open Loop)`Constant: Zero` Constant` , Braking`FbkCon_53897d38-3e93-4227-9836-48e894739a3d
+
+PARSFILE Control\Gear_at\GearCL_395374af-90fa-4fef-80e1-a8df607bfbef.par
+#BlueLink30 Control: Shifting (Closed Loop)`Neutral` ` , Shifting Control`GearCL_395374af-90fa-4fef-80e1-a8df607bfbef
+
+PARSFILE Roads\3D_Road\Road_c5761baa-2380-4734-9bfe-2a7a1decab71.par
+#BlueLink0 Road: 3D Surface (All Properties)`Braking Distance Test Road` Straight` , Miscellaneous`Road_c5761baa-2380-4734-9bfe-2a7a1decab71
+
+PARSFILE Events\Events_522096b7-3d2b-4f2f-b2ec-18fa637208c2.par
+#BlueLink7 Events`A. Start at 100 km/h (Pedal Force Control)` Braking Distance` , Miscellaneous`Events_522096b7-3d2b-4f2f-b2ec-18fa637208c2
+
+PARSFILE Plot\Setup\Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53.par
+#BlueLink8 Plot: Setup`Brake Torque` Braking` , Plot`Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink9 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink10 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink11 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink12 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink13 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823.par
+#BlueLink14 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823
+
+PARSFILE Plot\Setup\Plot_46729ee2-e96e-4997-a694-fa9ca697aad0.par
+#BlueLink15 Plot: Setup`Spring Compression` Suspension Motion` , Plot`Plot_46729ee2-e96e-4997-a694-fa9ca697aad0
+
+PARSFILE Plot\Setup\Plot_54f319fb-1aa2-48dc-9260-eda2669b08b3.par
+#BlueLink16 Plot: Setup`Spring Force` Suspension Forces and Moments` , Plot`Plot_54f319fb-1aa2-48dc-9260-eda2669b08b3
+
+PARSFILE Plot\Setup\Plot_f4937cea-2692-4dfc-8e17-baabe744f6b6.par
+#BlueLink17 Plot: Setup`Brake Control: Pedal Force vs. Time` Braking` , Plot`Plot_f4937cea-2692-4dfc-8e17-baabe744f6b6
+
+PARSFILE Plot\Setup\Plot_eb50101f-6615-4617-8639-ca7693556ca3.par
+#BlueLink18 Plot: Setup`Locked Brake Status (Axle 1)` Braking` , Plot`Plot_eb50101f-6615-4617-8639-ca7693556ca3
+
+PARSFILE Plot\Setup\Plot_3adb6053-15ab-44c1-adf9-64e31969b810.par
+#BlueLink19 Plot: Setup`Locked Brake Status (Axle 2)` Braking` , Plot`Plot_3adb6053-15ab-44c1-adf9-64e31969b810
+
+
+#EMBEDDED_NOTES
+#This procedure dataset sets up a brake test. The vehicle is initialized is driving at 102 km/h at the start of the run and coasts down to 100 km/h. Using Events, the car repositions to the start of the road (0 m) and simultaneously begins braking. When the car stops, you can use the plot of Station vs. Time to measure the stopping distance.
+#
+#Note that this Procedure uses the Open-Loop Brake Pedal Force control and is designed to work with a vehicle that uses pedal force as the main input for the brake system. Based on a simulation from earlier versions, it does not include ABS control.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Accel. and Brake Testing } 100 - 0 km/h Braking Dist Test (Frc Ctrl)
+#Library : Procedures
+#DataSet : 100 - 0 km/h Braking Dist Test (Frc Ctrl)
+#Category: Accel. and Brake Testing
+#FileID  : Proc_6176f125-a511-4ae7-a0d8-4f94800fa0d5
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

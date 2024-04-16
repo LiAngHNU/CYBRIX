@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Control: Electronic Stability (ESC)`Normally Off ESC for SUV`
+INSTALL_ESC
+VLOW_ESC 15
+PBK_MAX_ESC 12
+PBK_ACTIVE_ESC 3
+AY_LIMIT_ESC 1
+ROLL_LIMIT_ESC 7
+AY_ROLL_LIMIT_ESC .4
+USG_ESC 3.19
+KP_AVZ_ESC 2
+AVZ_DEAD_ESC 4
+R_BRAKE_ESC 0.8
+
+PARSFILE Generic\Group\GenGrp_5548aa72-3665-4e00-abed-7aa3fdbb04fd.par
+#BlueLink0 Generic Data Group`HUD for Normally Off ESC` HUD Gauges` , Miscellaneous`GenGrp_5548aa72-3665-4e00-abed-7aa3fdbb04fd
+
+PARSFILE Plot\Setup\Plot_ea7fb16b-0afb-4e2d-8f08-cf184b4455ef.par
+#BlueLink1 Plot: Setup`AVz_ESC_Preview` ESC` , Plot`Plot_ea7fb16b-0afb-4e2d-8f08-cf184b4455ef
+
+PARSFILE Plot\Setup\Plot_ee949b8a-c7ee-414e-b402-c4e204660c71.par
+#BlueLink2 Plot: Setup`Ay_ESC_Preview` ESC` , Plot`Plot_ee949b8a-c7ee-414e-b402-c4e204660c71
+
+PARSFILE Plot\Setup\Plot_bfaefe2b-552c-4a8c-b52a-6bc48633c960.par
+#BlueLink3 Plot: Setup`ESC_Active` ESC` , Plot`Plot_bfaefe2b-552c-4a8c-b52a-6bc48633c960
+
+PARSFILE Plot\Setup\Plot_ea7fb16b-0afb-4e2d-8f08-cf184b4455ef.par
+#BlueLink4 Plot: Setup`AVz_ESC_Preview` ESC` , Plot`Plot_ea7fb16b-0afb-4e2d-8f08-cf184b4455ef
+
+PARSFILE Plot\Setup\Plot_c2989344-2c82-4c85-9239-a905e62b809d.par
+#BlueLink5 Plot: Setup`Understeer (USG Live)` ESC` , Plot`Plot_c2989344-2c82-4c85-9239-a905e62b809d
+
+
+#EMBEDDED_NOTES
+#This version of the built-in ESC dataset includes a link to the "HUD for Normally Off ESC" dataset that defines the icons for a normally off ESC.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Electronic Stability (ESC); Normally Off ESC for SUV
+#Library : Control: Electronic Stability (ESC)
+#DataSet : Normally Off ESC for SUV
+#Category: 
+#FileID  : ESC_efcdf105-c7df-4153-9ab7-9ab83bd7637c
+#Product : CarSim 2020.0
+#VehCode ESC
+
+END

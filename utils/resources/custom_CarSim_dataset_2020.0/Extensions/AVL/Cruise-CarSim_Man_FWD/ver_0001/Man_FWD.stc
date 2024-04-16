@@ -1,0 +1,177 @@
+$======================================================================
+$ Applikation: CRUISE - Driving Performance, Fuel Consumption and Emissions Calculation
+$ CAE-Strukturinformation
+$ erstellt am: May 9, 2018 - Uhrzeit: 5:07:23 PM
+$======================================================================
+$------------------------------------------------------Engine
+[VERBR_MOTOR] 2
+AUSGABE           = 2
+REFERENZ          = 1
+VERWENDUNG        = 3
+TEMP_MODELL_HAUPTSCHALTER = 1
+TEMPERATURMODELL  = 2
+VERBRAUCHSMODELL  = 2
+REIBMODELL        = 1
+LL_VERBRAUCH_EMISSIONEN = 2
+SCHUBKENNLINIE_1  = 1
+SCHUBKENNLINIE_2  = 1
+STARTANREICHERUNG = 1
+BESCHL_ANREICHERUNG = 1
+VERBR_MASSENSTROM_EXTERN_S = 1
+VERBR_KOEFF_EXTERN_S = 1
+LL_DREHZAHL_ERMITTLUNG = 1
+LL_REGELUNG       = 1
+MAX_DREHZAHL_ERMITTLUNG = 1
+VERLUSTMOMENTKENNLINIE = 1
+ANSPRECHVERHALTEN_TURBO = 1
+TC_PTX_SCHALT     = 1
+LL_LADEDRUCK_SCHALTER = 1
+KORREKTURVERFAHREN = 1
+SPEZ_VERBRAUCHSKENNFELD = 1
+UREA_CONSUMPTION  = 1
+AIR_FUEL_RATIO    = 1
+REDUZIERTE_VOLLAST_1 = 1
+REDUZIERTE_VOLLAST_2 = 1
+REDUZIERTE_VOLLAST_3 = 1
+REDUZIERTE_VOLLAST_4 = 1
+REDUZIERTE_VOLLAST_5 = 1
+REDUZ_VOLLASTREDUKTION = 1
+MOTORBREMSKENNLINIE = 1
+ANLASSERSTROM     = 1
+DROSSELKLAPPENKENNFELD = 1
+STEUERGROESSE     = 1
+AUSWAHL_ABGSANLAGE = 1
+{ VERBINDUNG }
+  300       
+  -1        
+  -1        
+LASTSTELLUNG      = '22.6'
+STARTSCHALTER     = '22.20'
+VERBRAUCH_MASSENSTROM = 30
+MOTORDREHZAHL     = 3
+MOTORMOMENT_V_SCHEIBE = 20
+$------------------------------------------------------Clutch
+[KUPPLUNG] 3
+AUSGABE           = 2
+MODELLIERUNG      = 1
+OPERATIONMODE     = 1
+DYNMODE           = 1
+REIBKENNLINIESCHALTER = 1
+RESIDUALTORQUE_SWITCH = 1
+{ VERBINDUNG }
+  300       
+  400       
+KUPPLUNGSAUSRUECKUNG = '22.5'
+AUSGANGSDREHZAHL  = 2
+KUPPLUNGSMOMENT   = 3
+$----------------------------------------------------Gear Box
+[GETRIEBE] 4
+AUSGABE           = 2
+GANGWECHSELZEITSCHALTER = 1
+WIDERSTANDSSCHALTER = 3
+GANGWECHSELVERLUSTE = 1
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+{ VERBINDUNG }
+  400       
+  500       
+GANGPOSITION      = '22.7'
+AUSGANGSDREHZAHL  = 3
+UEBERSETZUNG      = 4
+AUSGANGSMOMENT    = 6
+$-----------------------------------Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 5
+VARIIERT          = 2
+AUSGABE           = 2
+ANGABE            = 1
+WIDERSTANDSSCHALTER = 3
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+{ VERBINDUNG }
+  500       
+  1800      
+$---------------------------------------------------------Hub
+[NABE] 14
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 4
+{ VERBINDUNG }
+  1802      
+WIDERSTANDSMOMENT = '22.9'
+BREMSMOMENT       = '22.22'
+$---------------------------------------------------------Hub
+[NABE] 15
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 1
+{ VERBINDUNG }
+  1801      
+WIDERSTANDSMOMENT = '22.8'
+BREMSMOMENT       = '22.21'
+$---------------------------------------------------------Hub
+[NABE] 16
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 3
+{ VERBINDUNG }
+  -1        
+WIDERSTANDSMOMENT = '22.11'
+BREMSMOMENT       = '22.24'
+$---------------------------------------------------------Hub
+[NABE] 17
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 2
+{ VERBINDUNG }
+  -1        
+WIDERSTANDSMOMENT = '22.10'
+BREMSMOMENT       = '22.23'
+$------------------------------------------------Differential
+[DIFFERENTIAL] 18
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  1800      
+  1801      
+  1802      
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------------CarSim
+[CAR_SIM] 22
+AUSGABE           = 2
+{ VERBINDUNG }
+ENG_SPEED         = '2.3'
+ENG_TRQ           = '2.20'
+FUEL_MASS_FLOW    = '2.30'
+TRANSM_SPEED_OUT  = '4.3'
+TRANSM_ACT_RATIO  = '4.4'
+DRIVE_TRQ_FL      = '18.5'
+DRIVE_TRQ_FR      = '18.6'
+CLUTCH_TC_TRQ_IN  = '3.3'
+CLUTCH_TC_TRQ_OUT = '3.3'
+TRANSF_CASE_OUT_SHAFT_TRQ_FRONT = '4.6'
+TRANSM_TRQ_OUT    = '4.6'
+CLUTCH_TC_SPEED_OUT = '3.2'
+TRANSF_CASE_OUT_SHAFT_SPEED_FRONT = '4.3'
+CLUTCH_REL        = 5
+LOAD_SIG          = 6
+DES_GEAR          = 7
+RES_TRQ_W_FL      = 8
+RES_TRQ_W_FR      = 9
+RES_TRQ_W_RL      = 10
+RES_TRQ_W_RR      = 11
+ENG_START_SWITCH  = 20
+BRAKE_TRQ_FL      = 21
+BRAKE_TRQ_FR      = 22
+BRAKE_TRQ_RL      = 23
+BRAKE_TRQ_RR      = 24

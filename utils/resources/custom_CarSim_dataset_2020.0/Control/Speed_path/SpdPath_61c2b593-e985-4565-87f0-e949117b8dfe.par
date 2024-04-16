@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, Japan Env.`Intersections
+INSTALL_SPEED_CONTROLLER
+SPEED_AX_THROTTLE_CONSTANT .15
+SPEED_AX_BRAKE_CONSTANT .2
+SPEED_AY_LEFT_CONSTANT 0.2
+SPEED_AY_RIGHT_CONSTANT 0.2
+#RingCtrl0 2
+OPT_SC_SKILL 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 2
+PARSFILE Control\Speed_t\SpdTime_ed17da55-ce56-4d7f-bf3e-40e4c3c10daa.par
+#BlueLink6 Control: Speed (Closed Loop) Using Target Speed`Japanese Environment` Traffic Scenarios` , Speed vs. station`SpdTime_ed17da55-ce56-4d7f-bf3e-40e4c3c10daa
+
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC 4
+#CheckBox0 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox1 0    
+#CheckBox2 1    
+OPT_SC_3D 1
+#CheckBox3 0    
+OPT_SC_2018 0
+
+SPEED_KP 0.3
+SPEED_KI 0.5
+SPEED_KP3 0.3
+BK_PERF_SC 0.15
+FPD_PERF_SC 0.1
+SPEED_PREVIEW_STEP 1
+SPEED_CURV_LENGTH 4
+SPEED_PREVIEW_START 2
+SPEED_PREVIEW 60
+PBK_CON_MAX_SC 10
+
+#EMBEDDED_NOTES
+#Speed control to navigate through Japanese Environment with minimal oscillations in required power.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Intersections } 0.2/0.2 G Max Ax/Ay, Japan Env.
+#Library : Control: Speed (Closed Loop) Using Path Preview
+#DataSet : 0.2/0.2 G Max Ax/Ay, Japan Env.
+#Category: Intersections
+#FileID  : SpdPath_61c2b593-e985-4565-87f0-e949117b8dfe
+#Product : CarSim 2020.0
+#VehCode Speed Using Path Preview
+
+END

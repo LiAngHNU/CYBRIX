@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Tire`275/65 R18`Touring Tires
+FZ_REF 11500
+X_LENGTH 395
+Z_LENGTH 395
+Y_LENGTH 275
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_c244b5ac-251f-4484-a6fa-9d231e333dfa.par
+#BlueLink4 Animator: Shape Assembly`Full Size SUV` Tires` , Animator`ShpGrp_c244b5ac-251f-4484-a6fa-9d231e333dfa
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 275
+RRE 368
+R0 395
+FZ_TIRE_COEFFICIENT 440
+FZ_MAX 100000
+M_TIRE 31
+IT 3.1
+IT_XXZZ 1.8
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000027
+L_CONTACT_X_CONSTANT 105
+L_CONTACT_Y_CONSTANT 265
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 1.1
+PARSFILE Tires\Mz\TireMz_bc0be167-41a3-4159-b2c9-cf4bf2e30b07.par
+#BlueLink0 Tire: Aligning Moment`265/70 R17` Touring Tires` , Aligning Moment`TireMz_bc0be167-41a3-4159-b2c9-cf4bf2e30b07
+
+PARSFILE Tires\Fy\TireFy_25e46adc-5bbb-499e-ba62-c609dd57ba54.par
+#BlueLink1 Tire: Lateral Force`265/70 R17` Touring Tires` , Lateral Force`TireFy_25e46adc-5bbb-499e-ba62-c609dd57ba54
+
+PARSFILE Tires\Fx\TireFx_4f613f38-7467-4751-8690-96d1fe34a410.par
+#BlueLink2 Tire: Longitudinal Force`265/70 R17` Touring Tires` , Longitudinal Force`TireFx_4f613f38-7467-4751-8690-96d1fe34a410
+
+PARSFILE Tires\Camber_Thrust\CamStiff_9841ec0d-fc2f-4ed8-83b3-8c673cb05ace.par
+#BlueLink3 Tire: Camber Thrust Coefficient`265/70 R17` Touring Tires` , Camber Thrust`CamStiff_9841ec0d-fc2f-4ed8-83b3-8c673cb05ace
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 1150 kg
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Touring Tires } 275/65 R18
+#Library : Tire
+#DataSet : 275/65 R18
+#Category: Touring Tires
+#FileID  : Tire_14ef40d0-1147-42eb-881d-5a9175f0ad17
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

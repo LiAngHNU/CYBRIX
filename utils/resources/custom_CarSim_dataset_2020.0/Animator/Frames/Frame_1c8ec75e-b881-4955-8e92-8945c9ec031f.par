@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Vehicle X-Y-Z-Yaw (Radar Detected)`Tracking: Vehicle
+ADD_REFERENCE_FRAME Frame_1c8ec75e-b881-4955-8e92-8945c9ec031f
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xo
+SET_Y_NAME Yo
+SET_Z_NAME Zo
+SET_ROLL_NAME Roll_E
+SET_PITCH_NAME Pitch
+SET_YAW_NAME Yaw
+SET_OFFSET_VAR_Z 0.45
+SET_FRAME_VISIBLE_NAME detect
+
+WRT_Xo
+ANI_Xo
+WRT_Yo
+ANI_Yo
+WRT_Zo
+ANI_Zo
+WRT_Roll_E
+ANI_Roll_E
+WRT_Pitch
+ANI_Pitch
+WRT_Yaw
+ANI_Yaw
+WRT_detect
+ANI_detect
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Vehicle X-Y-Z-Yaw (Radar Detected)
+#Library : Animator: Reference Frame
+#DataSet : Vehicle X-Y-Z-Yaw (Radar Detected)
+#Category: Tracking: Vehicle
+#FileID  : Frame_1c8ec75e-b881-4955-8e92-8945c9ec031f
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

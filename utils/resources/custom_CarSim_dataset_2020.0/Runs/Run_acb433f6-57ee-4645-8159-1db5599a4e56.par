@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Scene Builder: Rural w/ Traffic`Scene Import
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_acb433f6-57ee-4645-8159-1db5599a4e56
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Math Model`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+PARSFILE Procedures\Proc_efdae148-69a4-4ca1-a92b-5b0a2c316962.par
+#BlueLink28 Procedures`Rural Scene` VS Scene Builder` , Procedure`Proc_efdae148-69a4-4ca1-a92b-5b0a2c316962
+
+PARSFILE Generic\Group\GenGrp_33f6cfd5-b4cd-4a14-b608-0f4d3c03e089.par
+#BlueLink9 Generic Data Group`Traffic, Two Lanes, 3.5m lateral offset` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_33f6cfd5-b4cd-4a14-b608-0f4d3c03e089
+
+PARSFILE Animator\HUD\HUD_28a31fcb-503a-4a78-8256-b3516c7e91ca.par
+#BlueLink10 Animator: HUD`Throttle, Speedo w/ Gear, Brakes` Vehicle Status Indicators` , Miscellaneous`HUD_28a31fcb-503a-4a78-8256-b3516c7e91ca
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Scene Builder: Rural w/ Traffic <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE Scene Builder: Rural w/ Traffic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The data representing the X-Y path of the road as well as the animated scenario were created using the VS Scene Builder tool.
+#
+#The VS Scene Builder tool is accessed from the Tools drop-down menu.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Scene Import } Scene Builder: Rural w/ Traffic
+#Library : CarSim Run Control
+#DataSet : Scene Builder: Rural w/ Traffic
+#Category: Scene Import
+#FileID  : Run_acb433f6-57ee-4645-8159-1db5599a4e56
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

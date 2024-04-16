@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName CarSim Run Control`Radar Active Cruise: First Car`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_87ece132-df4b-4285-b10a-244fbda604cb
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_c9f7a84e-f799-4d5f-8a28-7cf08c3fda39.par
+#BlueLink12 Models: Simulink`ACC: First Car (Ext. Sen.)` Active Cruise Control` , Models`Simlink_c9f7a84e-f799-4d5f-8a28-7cf08c3fda39
+
+PARSFILE Animator\Cameras\Camera_6d843d53-9fb1-478e-846d-16cb6e63ce2b.par
+#BlueLink0 Animator: Camera Setup`355 Azm, 20 El, 49 m` Road Reference` , Animator camera`Camera_6d843d53-9fb1-478e-846d-16cb6e63ce2b
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_701439b7-a433-4650-b47a-29cdb58189e4.par
+#BlueLink28 Procedures`Radar Active Cruise Control: First Car` Sensors and Traffic` , Procedure`Proc_701439b7-a433-4650-b47a-29cdb58189e4
+
+
+SPECIAL_PARSFILE Runs\Run_adbaf551-f5e1-4fe6-ae5d-3b735f6b021d.par
+#BlueLink23 CarSim Run Control`Radar Active Cruise: Second Car` Simulink and LabVIEW Models` , Overlay run or ERD file`Run_adbaf551-f5e1-4fe6-ae5d-3b735f6b021d
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Radar Active Cruise: First Car <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Radar Active Cruise: First Car
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This Run Control dataset is linked with another Run Control dataset to support a Simulink model containing two CarSim S-Function blocks in a single Simulink model.
+#
+#The trailing vehicle (overlay) has a radar-based active cruise control system that tracks the vehicle in front of it (this vehicle).
+#
+#In order to run this example with Simulink, follow these steps:
+#
+#1. Click the "Send to Simulink" button from this Run Control screen to launch the Simulink model.
+#
+#2. Go to the overlaid Run Control dataset for the second vehicle -- Radar Active Cruise: Second Car (Ext. Sen.)
+#
+#3. If running a 64-bit version of Simulink, click the "Send to Simulink" button for the second Run Control dataset.
+#
+#If running a 32-bit version of Simulink, an adjustment will have to be made. Please read the Run Control screen notes -- Radar Active Cruise: Second Car (Ext. Sen.) -- for more details.
+#
+#4. Go to Simulink to run the model. Output data are generated for both vehicle models.
+#
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Radar Active Cruise: First Car
+#Library : CarSim Run Control
+#DataSet : Radar Active Cruise: First Car
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_87ece132-df4b-4285-b10a-244fbda604cb
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

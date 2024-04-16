@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Control: Steering Preview Time for the Driver Model`0.2 sec @ 10 kph, 1 sec @ 20 kph`
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+TPREV_TABLE LINEAR_FLAT
+10, 0.2
+20, 1
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#The preview is only 0.2s at low speed, used to make a 90-deg turn with minimal inboard tracking. At normal speeds, the preview is 2s for more stability.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering Preview Time for the Driver Model; 0.2 sec @ 10 kph, 1 sec @ 20 kph
+#Library : Control: Steering Preview Time for the Driver Model
+#DataSet : 0.2 sec @ 10 kph, 1 sec @ 20 kph
+#Category: 
+#FileID  : Tprev_bb983917-6a82-49cb-bff9-9b55d3ce762f
+#Product : CarSim 2020.0
+#VehCode Preview Time vs. Speed
+
+END

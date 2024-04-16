@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Events`A. Come to Stop`Trailer Reverse
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 0.01
+MAKE_EVENT vx < 0.01 ; Events\Events_b5bec9f1-f5d3-48f1-97ca-d846d822dcaa.par
+#BlueLink0 Events`B. Hold at Stop` Trailer Reverse` , Events`Events_b5bec9f1-f5d3-48f1-97ca-d846d822dcaa
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Initial event waiting for the vehicle to almost come to a stop.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reverse } A. Come to Stop
+#Library : Events
+#DataSet : A. Come to Stop
+#Category: Trailer Reverse
+#FileID  : Events_fc2226f9-a9f2-4a14-818b-ec228465f9ee
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

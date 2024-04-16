@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Forces`Tire Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fy_L1, Time
+PLOTCHANNELS Fy_R1, Time
+PLOTCHANNELS Fy_L2, Time
+PLOTCHANNELS Fy_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Forces
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces and Moments } Lateral Forces
+#Library : Plot: Setup
+#DataSet : Lateral Forces
+#Category: Tire Forces and Moments
+#FileID  : Plot_0773e087-151d-42db-a308-f02b7b6ee48d
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

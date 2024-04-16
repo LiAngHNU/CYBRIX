@@ -1,0 +1,148 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`5 Parked Vehicles Facing Forward`Parked Vehicles
+#RingCtrl0 5
+DEFINE_MOVING_OBJECTS 5
+#RingCtrl1 0
+#RingCtrl2 2
+#RingCtrl3 0
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox3 1    
+#CheckBox5 1    
+#CheckBox7 1    
+#CheckBox9 1    
+#CheckBox38 0    
+
+DZ_OBJECT 0
+*L -5
+*LEAD 100
+*TRAIL 50
+*HIDE 10
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Parked Vehicles Facing Forward, Object #1
+OPT_SPEED_OBJ 0
+
+#RingCtrl4 1
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 100
+S_TRAIL_OBJ 50
+S_HIDE_OBJ 10
+*SINIT_1 139
+EQ_INIT S_OBJ_<<o>> = 139
+EQ_INIT LATO_<<o>> = -5
+*COLOR_1 0.878 0.878 0.878
+SET_RUN_COLOR 0.878 0.878 0.878
+*H_TARGET_1 -1
+H_OBJ -1
+PARSFILE Animator\Vehicles\AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`F-Class, Sedan` F-Class` , 3D Shape for Video`AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Parked Vehicles Facing Forward, Object #2
+OPT_SPEED_OBJ 0
+
+#RingCtrl4 1
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 100
+S_TRAIL_OBJ 50
+S_HIDE_OBJ 10
+*SINIT_2 132
+EQ_INIT S_OBJ_<<o>> = 132
+EQ_INIT LATO_<<o>> = -5
+*COLOR_2 0 0.2 0.8
+SET_RUN_COLOR 0 0.2 0.8
+*H_TARGET_2 -1
+H_OBJ -1
+PARSFILE Animator\Vehicles\AniVeh_42e805ac-ceb0-42ad-a482-aed8171ee4c4.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`A-Class, Subcompact` A-Class` , Traffic Vehicle Ani File`AniVeh_42e805ac-ceb0-42ad-a482-aed8171ee4c4
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Parked Vehicles Facing Forward, Object #3
+OPT_SPEED_OBJ 0
+
+#RingCtrl4 1
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 100
+S_TRAIL_OBJ 50
+S_HIDE_OBJ 10
+*SINIT_3 154
+EQ_INIT S_OBJ_<<o>> = 154
+EQ_INIT LATO_<<o>> = -5
+*COLOR_3 0.8 0.2 0.2
+SET_RUN_COLOR 0.8 0.2 0.2
+*H_TARGET_3 -1.2
+H_OBJ -1.2
+PARSFILE Animator\Vehicles\AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`SUV, Full Size` Utility Vehicles: SUVs and Vans` , Traffic Vehicle Ani File`AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Parked Vehicles Facing Forward, Object #4
+OPT_SPEED_OBJ 0
+
+#RingCtrl4 1
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 100
+S_TRAIL_OBJ 50
+S_HIDE_OBJ 10
+*SINIT_4 162
+EQ_INIT S_OBJ_<<o>> = 162
+EQ_INIT LATO_<<o>> = -5
+*H_TARGET_4 -1
+H_OBJ -1
+PARSFILE Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.par
+#BlueLink3 Animator: Vehicles and Sensor Targets`D-Class, Sedan` D-Class` , Traffic Vehicle Ani File`AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 5 Parked Vehicles Facing Forward, Object #5
+OPT_SPEED_OBJ 0
+
+#RingCtrl4 1
+OPT_RECYCLE_OBJ 1
+S_LEAD_OBJ 100
+S_TRAIL_OBJ 50
+S_HIDE_OBJ 10
+*SINIT_5 169
+EQ_INIT S_OBJ_<<o>> = 169
+EQ_INIT LATO_<<o>> = -5
+*COLOR_5 1 1 0
+SET_RUN_COLOR 1 1 0
+*H_TARGET_5 -0.8
+H_OBJ -0.8
+PARSFILE Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.par
+#BlueLink4 Animator: Vehicles and Sensor Targets`B-Class, Sports Car` B-Class` , Traffic Vehicle Ani File`AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Parked Vehicles } 5 Parked Vehicles Facing Forward
+#Library : Multiple Moving Objects
+#DataSet : 5 Parked Vehicles Facing Forward
+#Category: Parked Vehicles
+#FileID  : TMotion_dd9baf3d-f59b-4c75-b76c-0147373f1a2c
+#Product : CarSim 2020.0
+#VehCode Multiple Objects
+
+END

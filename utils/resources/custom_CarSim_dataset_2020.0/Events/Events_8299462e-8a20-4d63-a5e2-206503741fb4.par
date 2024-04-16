@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`1. Lane Drifting Start - Drive Straight`Lane Departure Warning
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T_Event
+*VALUE1 1
+*SPEED 65
+#MiscYellow0
+ltarg_coefficient(1) = 0
+#ENDMYellow
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#MiscYellow1
+TStart_T_Event T
+#ENDMYellow
+
+MAKE_EVENT T_Event > 1 ; Events\Events_e8efaf5f-a81b-470f-a187-09348e0db569.par
+#BlueLink0 Events`2. Drift Left` Lane Departure Warning` , Events`Events_e8efaf5f-a81b-470f-a187-09348e0db569
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This starts an Event chain where the lateral target is a coefficient. The position is set by LTARG_OFFSET elswhere.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Lane Departure Warning } 1. Lane Drifting Start - Drive Straight
+#Library : Events
+#DataSet : 1. Lane Drifting Start - Drive Straight
+#Category: Lane Departure Warning
+#FileID  : Events_8299462e-8a20-4d63-a5e2-206503741fb4
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

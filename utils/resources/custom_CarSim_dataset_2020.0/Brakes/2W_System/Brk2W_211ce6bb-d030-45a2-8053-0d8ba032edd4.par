@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Brakes: Trailer Two-Wheel System`No Brakes`Trailer Brakes
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 1
+
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+*P_L1 0
+PBK_DL_COEFFICIENT 0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0
+TC_BK 0
+OPT_BK_DYN 1
+*TQ_L1 0
+MY_BRAKE_COEFFICIENT 0
+
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TL_L1 0
+TLAG_BK 0
+*MY_FRIC_L 0.5
+MY_FRICTION 0.5
+*P_L1 0
+PBK_DL_COEFFICIENT 0
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0
+TC_BK 0
+OPT_BK_DYN 1
+*TQ_L1 0
+MY_BRAKE_COEFFICIENT 0
+
+#EMBEDDED_NOTES
+#Only bearing friction
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Trailer Two-Wheel System; { Trailer Brakes } No Brakes
+#Library : Brakes: Trailer Two-Wheel System
+#DataSet : No Brakes
+#Category: Trailer Brakes
+#FileID  : Brk2W_211ce6bb-d030-45a2-8053-0d8ba032edd4
+#Product : CarSim 2020.0
+#VehCode Brakes
+
+END

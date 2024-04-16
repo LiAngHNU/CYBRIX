@@ -1,0 +1,106 @@
+PARSFILE
+#FullDataName Brakes: Four-Wheel System`(Hbk): P Frc, ABS`C-Class
+#CheckBox1 0    
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 1
+#RingCtrl4 1
+#RingCtrl6 1
+#RingCtrl8 2
+#RingCtrl10 1
+#RingCtrl12 1
+#RingCtrl14 1
+OPT_BK_PEDAL 1
+TL_L1 0
+TL_L2 0
+R_BK_PEDAL 6
+D_MC 19
+
+iaxle 1
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 250
+MY_BRAKE_COEFFICIENT 250
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+
+INSTALL_ABS_CONTROLLER
+OPT_ABS_CTRL 2
+*OFF_F 0.2
+*ON_F 0.07
+*V_F 1
+ABS_SLIP_OFF 0.2
+ABS_SLIP_ON 0.07
+ABS_VMIN 1
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 250
+MY_BRAKE_COEFFICIENT 250
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+
+iaxle 2
+iside 1
+symbol_add <<ax_bk>> 1
+symbol_set <<side>> L
+TLAG_BK 0
+PARSFILE Brakes\Proportioning\BrkProp_d4fd2e58-f548-4efa-84ea-5988c9801661.par
+#BlueLink6 Brakes: Proportioning / Limiting Valve`Unity until 1.5MPa then 30%` ` , Proportioning`BrkProp_d4fd2e58-f548-4efa-84ea-5988c9801661
+
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 150
+MY_BRAKE_COEFFICIENT 150
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+
+OPT_ABS_CTRL 2
+*OFF_R 0.15
+*ON_R 0.07
+*V_R 1
+ABS_SLIP_OFF 0.15
+ABS_SLIP_ON 0.07
+ABS_VMIN 1
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+PARSFILE Brakes\Proportioning\BrkProp_d4fd2e58-f548-4efa-84ea-5988c9801661.par
+#BlueLink6 Brakes: Proportioning / Limiting Valve`Unity until 1.5MPa then 30%` ` , Proportioning`BrkProp_d4fd2e58-f548-4efa-84ea-5988c9801661
+
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 150
+MY_BRAKE_COEFFICIENT 150
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+
+LOG_ENTRY Used Dataset: Brakes: Four-Wheel System; { C-Class } (Hbk): P Frc, ABS
+#Library : Brakes: Four-Wheel System
+#DataSet : (Hbk): P Frc, ABS
+#Category: C-Class
+#FileID  : Brk4W_11c0cc7e-152b-4bb1-97ee-76db0aba039c
+#Product : CarSim 2020.0
+#VehCode 4-Wheel System
+
+END

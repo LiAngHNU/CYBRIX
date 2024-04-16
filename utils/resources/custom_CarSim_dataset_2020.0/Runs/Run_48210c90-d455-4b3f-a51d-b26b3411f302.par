@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName CarSim Run Control`Torque Input: Manual Apply and Release`Steering Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_48210c90-d455-4b3f-a51d-b26b3411f302
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 37 m` Vehicle Reference` , Animator camera`Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_7a02b743-f753-4b1e-bf93-c18d02cd11d2.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: Manual R&P Steering` E-Class` , Math Model`Vehicle_7a02b743-f753-4b1e-bf93-c18d02cd11d2
+
+PARSFILE Procedures\Proc_b6d33531-e0df-4099-9978-4c80a8fc8055.par
+#BlueLink28 Procedures`Steering Torque Pulse Test` Driver Controls` , Procedure`Proc_b6d33531-e0df-4099-9978-4c80a8fc8055
+
+
+SPECIAL_PARSFILE Runs\Run_8dfd6027-c3e1-43f1-a714-002cfd6aef89.par
+#BlueLink23 CarSim Run Control`Torque Input: Power Apply and Release` Steering Tests` , Overlay run or ERD file`Run_8dfd6027-c3e1-43f1-a714-002cfd6aef89
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Torque Input: Manual Apply and Release <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Torque Input: Manual Apply and Release
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan with a Manual Rack and Pinion Steering system performs a Steering Torque Pulse test at 80 km/h.
+#
+#The control for Open Loop Torque vs. Time is used to apply a steering torque pulse in an apply-and-release test, allowing us to study the vehicle's open-loop response.
+#
+#If we compare the results with the overlay, in which a near-identical vehicle is equipped with power-assisted steering, we can see how the two vehicles respond very differently to the same input.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Tests } Torque Input: Manual Apply and Release
+#Library : CarSim Run Control
+#DataSet : Torque Input: Manual Apply and Release
+#Category: Steering Tests
+#FileID  : Run_48210c90-d455-4b3f-a51d-b26b3411f302
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

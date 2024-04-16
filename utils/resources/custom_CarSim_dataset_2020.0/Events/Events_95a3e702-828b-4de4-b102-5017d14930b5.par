@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`F. Reset Peak Yaw Rate at 0.714s`Sine with Dwell
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T_Event
+*NAME2 T_Stamp
+*VALUE1 1.07
+*VALUE2 0
+*SPEED 80
+#MiscYellow0
+AVZ_PEAK = 0 ! reset
+#ENDMYellow
+
+MAKE_EVENT T_Event >= 1.07 ; Events\Events_c3310a3e-4c3e-4bf1-95a0-d3510d99f768.par
+#BlueLink0 Events`G. Check SWA Amplitude at 1.07s` Sine with Dwell` , Events`Events_c3310a3e-4c3e-4bf1-95a0-d3510d99f768
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Reset the peak yaw rate and set an event for the next checkpoint at 1.06s.
+#
+#Revised 2018.1 because target speed uses new feature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } F. Reset Peak Yaw Rate at 0.714s
+#Library : Events
+#DataSet : F. Reset Peak Yaw Rate at 0.714s
+#Category: Sine with Dwell
+#FileID  : Events_95a3e702-828b-4de4-b102-5017d14930b5
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Parked Red Pickup w/ Nonzero Heading`Parked Vehicles
+#RingCtrl0 1
+DEFINE_MOVING_OBJECTS 1
+#RingCtrl1 0
+#RingCtrl2 2
+#RingCtrl3 3
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox38 0    
+
+DZ_OBJECT 0
+*L -4
+*PATH_ID PATH_ID
+*ROAD_ID CURRENT_ROAD_ID
+*HEADING 25
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Parked Red Pickup w/ Nonzero Heading
+OPT_SPEED_OBJ 0
+
+EQ_INIT HEADO_<<o>> = 25
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_1 230
+EQ_INIT S_OBJ_<<o>> = 230
+EQ_INIT LATO_<<o>> = -4
+*COLOR_1 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_1 -1.9
+H_OBJ -1.9
+PARSFILE Animator\Vehicles\AniVeh_cd94268b-7f46-407b-8ce9-6cdf9dcd6323.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`Pickup, Full Size Crew Cab 6.5 Bed` Pickup Trucks` , 3D Shape for Video`AniVeh_cd94268b-7f46-407b-8ce9-6cdf9dcd6323
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#Vehicle at rest, located using the current path and road.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Parked Vehicles } Parked Red Pickup w/ Nonzero Heading
+#Library : Multiple Moving Objects
+#DataSet : Parked Red Pickup w/ Nonzero Heading
+#Category: Parked Vehicles
+#FileID  : TMotion_a63d669a-55ec-47cb-bebb-341045b150b1
+#Product : CarSim 2020.0
+#VehCode Multiple Objects
+
+END

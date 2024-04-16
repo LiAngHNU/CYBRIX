@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Opt_Engine_Running`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output EngineRun = Opt_Engine_Running
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS EngineRun, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Opt_Engine_Running
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Opt_Engine_Running
+#Library : Plot: Setup
+#DataSet : Opt_Engine_Running
+#Category: Powertrain
+#FileID  : Plot_24623312-0726-4966-8989-a55169cfacb4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

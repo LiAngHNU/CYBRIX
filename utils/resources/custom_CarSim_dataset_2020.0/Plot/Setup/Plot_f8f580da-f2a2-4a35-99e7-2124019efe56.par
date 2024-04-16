@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Sensor Point Tracking`Driver Sensor
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_DRV_1, X_DRV_1
+PLOTCHANNELS Y_DRV_2, X_DRV_2
+PLOTCHANNELS Y_DRV_3, X_DRV_3
+PLOTCHANNELS Y_DRV_4, X_DRV_4
+PLOTCHANNELS Y_DRV_5, X_DRV_5
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Sensor Point Tracking
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#X_Drv_i and Y_Drv_i represent the global X and Y coordinates, respectively, of the driver preview points.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Driver Sensor } Sensor Point Tracking
+#Library : Plot: Setup
+#DataSet : Sensor Point Tracking
+#Category: Driver Sensor
+#FileID  : Plot_f8f580da-f2a2-4a35-99e7-2124019efe56
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

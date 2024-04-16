@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`A-Class, Subcompact`A-Class
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 2350
+OBJ_Y_LENGTH 1800
+OBJ_Z_LENGTH 1240
+*DZ_V 0
+*LAT_WC 1415
+*LAT_WC_2 1375
+*HWC 292
+*WHEEL_RATIO 1
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_42e805ac-ceb0-42ad-a482-aed8171ee4c4.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.7075
+SET_OFFSET_Z 0.2774
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.7075
+SET_OFFSET_Z 0.2774
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -2.35
+SET_OFFSET_Y 0.6875
+SET_OFFSET_Z 0.2774
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -2.35
+SET_OFFSET_Y -0.6875
+SET_OFFSET_Z 0.2774
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_3058e46b-5f58-4074-8f55-63f4eadadfc5.par
+#BlueLink1 Animator: Shape Assembly`A-Class Sub Compact` Passenger Cars` , Vehicle Body`ShpGrp_3058e46b-5f58-4074-8f55-63f4eadadfc5
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_9dcd14c9-a5cd-4cd8-a500-026479d0a16e.par
+#BlueLink3 Animator: Shape File Link`Hatchback: Brake Lights` Cars: A-Class` , Brake Lights`Shape_9dcd14c9-a5cd-4cd8-a500-026479d0a16e
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_067d569d-4bf4-4a98-9c51-6226f8668a3b.par
+#BlueLink10 Animator: Shape File Link`Subcompact: Reverse Lights` Cars: A-Class` , Reverse lights`Shape_067d569d-4bf4-4a98-9c51-6226f8668a3b
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car - Width 175 mm` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { A-Class } A-Class, Subcompact
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : A-Class, Subcompact
+#Category: A-Class
+#FileID  : AniVeh_42e805ac-ceb0-42ad-a482-aed8171ee4c4
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

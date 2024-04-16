@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Payload: Box Shape`1000kg Load`Trailers
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME 1000kg Load
+*X_LENGTH 2000
+*Y_LENGTH 1200
+*Z_LENGTH 1000
+Y_CG_PL 0
+H_BOX_BOTTOM 400
+LX_CG_PL 4300
+M_PL 1000
+*SET_COLOR 0.6 0 0
+
+#CheckBox0 1    
+
+H_CG_PL 900.00
+IXX_PL 203.33
+IYY_PL 416.67
+IZZ_PL 453.33
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+add_obj Payloads\Box\Box_ccda03e2-a722-40f3-a406-81b2c2103af3.obj
+show_front on
+show_back off
+set_color 0.6 0 0
+
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Trailers } 1000kg Load
+#Library : Payload: Box Shape
+#DataSet : 1000kg Load
+#Category: Trailers
+#FileID  : Box_ccda03e2-a722-40f3-a406-81b2c2103af3
+#Product : CarSim 2020.0
+#VehCode Payload: Box
+
+END

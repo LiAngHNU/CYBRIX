@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Longitudinal Accel. of CG's vs. Station`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ax, station
+PLOTCHANNELS Ax_2, station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Longitudinal Accel. of CG's vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Accel. of CG's vs. Station
+#Library : Plot: Setup
+#DataSet : Longitudinal Accel. of CG's vs. Station
+#Category: Vehicle Motion
+#FileID  : Plot_a883e5dc-fa62-4460-8b54-d60ead53be33
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

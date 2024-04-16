@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Radar Active Cruise Control (Ext. Sen.)`RADAR: Active Cruise Control
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_adbaf551-f5e1-4fe6-ae5d-3b735f6b021d\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_THROTTLE_ENGINE Add 0.0! 1
+IMP_PCON_BK Add 0.0! 1
+IMP_DETECT Add 0.0! 0
+#ENDMYellow
+
+#MiscYellow1
+define_import imp_detect;
+define_output detect = imp_detect;
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Radar Active Cruise: Second Car` Simulink and LabVIEW Models` , example run`Run_adbaf551-f5e1-4fe6-ae5d-3b735f6b021d
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { RADAR: Active Cruise Control } Radar Active Cruise Control (Ext. Sen.)
+#Library : I/O Channels: Import
+#DataSet : Radar Active Cruise Control (Ext. Sen.)
+#Category: RADAR: Active Cruise Control
+#FileID  : Import_d871efbf-a0fd-4aab-9a70-0b37d72c1dd4
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed Control: Power Requested`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PwrEngAv, Time
+PLOTCHANNELS Pwr_SC, TIme
+PLOTCHANNELS Pwr_SCrq, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed Control: Power Requested
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Based on the acceleration required to follow a speed profile, the current speed, and vehicle properties, the speed controller calculates power needed to follow the profile.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Speed Control: Power Requested
+#Library : Plot: Setup
+#DataSet : Speed Control: Power Requested
+#Category: Controls: Driver
+#FileID  : Plot_19bd9253-cfa7-481e-96ee-ca702ddf4147
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

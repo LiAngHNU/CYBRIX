@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName CarSim Run Control`Scene Builder: City w/ Traffic`Scene Import
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d1bd67f8-97a6-40ba-b696-7ad1282df5aa
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_e0d053ba-26ec-4fd2-bb2e-84e2f86aa14e.par
+#BlueLink28 Procedures`City Scene` VS Scene Builder` , Procedure`Proc_e0d053ba-26ec-4fd2-bb2e-84e2f86aa14e
+
+PARSFILE Generic\Group\GenGrp_730b8866-4569-4457-8616-220bd947ec0a.par
+#BlueLink9 Generic Data Group`Traffic, Two Lanes, 7.5m Lateral` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_730b8866-4569-4457-8616-220bd947ec0a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Scene Builder: City w/ Traffic <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE Scene Builder: City w/ Traffic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The data representing the X-Y path of the road as well as the animated scenario were created using the VS Scene Builder tool.
+#
+#The VS Scene Builder tool is accessed from the Tools drop-down menu.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Scene Import } Scene Builder: City w/ Traffic
+#Library : CarSim Run Control
+#DataSet : Scene Builder: City w/ Traffic
+#Category: Scene Import
+#FileID  : Run_d1bd67f8-97a6-40ba-b696-7ad1282df5aa
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

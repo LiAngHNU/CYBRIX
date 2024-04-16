@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName Generic VS Commands`Wheel Steer w/ Steer & Jounce (Full 2D)`External Steering
+#VehCode VS Commands
+
+#MiscYellow0
+! The import variables for steer represent ONLY the steer contribution of the
+! steering system. "Passive steer" effects, like ride toe, roll steer, and
+! compliance should NOT be included. Those should still come from the normal
+! sources. If passive effects are included here, the closed-loop steering
+! ("Driver model") will be incorrect.
+
+! Create 2 tables for steer kinematics (only the front will be steered)
+define_table steer_2d 2
+
+! The closed loop steering controller needs the overall ratio at on-center
+! for each wheel
+eq_in imp_r_str_ext_l1 = 18.484
+import imp_r_str_ext_l1 vs_replace 18.484
+eq_in imp_r_str_ext_r1 = 18.484
+import imp_r_str_ext_r1 vs_replace 18.484
+
+! The road wheel steer angles are read from user-created tables
+eq_in imp_steer_l1 = steer_2d(jnc_l1, y_rack1, 1);
+eq_in imp_steer_r1 = steer_2d(jnc_r1, y_rack1, 2);
+
+! VS Commands don't provide a function to obtain derivatives of 2D tables,
+! so work them out here. To do this, perturb the table on each side of
+! the current point to get the partial derivatives
+define_parameter perturb 0.01; mm;
+define_variable dsteer_l_djnc 0
+define_variable dsteer_l_drack 0
+eq_in dsteer_l_djnc = (steer_2d(jnc_l1 + perturb, y_rack1, 1) - ...
+                       steer_2d(jnc_l1 - perturb, y_rack1, 1)) / (2 * perturb);
+eq_in dsteer_l_drack = (steer_2d(jnc_l1, y_rack1 + perturb, 1) - ...
+                        steer_2d(jnc_l1, y_rack1 - perturb, 1)) / (2 * perturb);
+eq_in imp_dsteer_l1 = dsteer_l_djnc * jncr_l1 + dsteer_l_drack * Vy_Rack1;
+
+define_variable dsteer_r_djnc 0
+define_variable dsteer_r_drack 0
+eq_in dsteer_r_djnc = (steer_2d(jnc_r1 + perturb, y_rack1, 2) - ...
+                       steer_2d(jnc_r1 - perturb, y_rack1, 2)) / (2 * perturb);
+eq_in dsteer_r_drack = (steer_2d(jnc_r1, y_rack1 + perturb, 2) - ...
+                        steer_2d(jnc_r1, y_rack1 - perturb, 2)) / (2 * perturb);
+eq_in imp_dsteer_r1 = dsteer_r_djnc * jncr_r1 + dsteer_r_drack * Vy_Rack1;
+
+! the effective steer arm length is the partial of the table wrt rack motion
+! use it to get the tie rod forces from the kingpin torques
+eq_in imp_f_tierod_l1 = - mz_kp_l1 * dsteer_l_drack;
+eq_in imp_f_tierod_r1 = - mz_kp_r1 * dsteer_r_drack;
+
+! Activate the import variables to replace their internal counterparts.
+import imp_steer_l1 vs_replace 0
+import imp_steer_r1 vs_replace 0
+import imp_dsteer_l1 vs_replace 0
+import imp_dsteer_r1 vs_replace 0
+import imp_f_tierod_l1 vs_replace 0
+import imp_f_tierod_r1 vs_replace 0
+
+! Outputs for plotting
+define_output steerKl1 = imp_steer_l1; deg;
+define_output steerKr1 = imp_steer_r1; deg;
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_96e53598-ca8d-4e10-a313-872ec4b7a906.par
+#BlueLink0 Generic Table`Steer Linkage Kinematics - LH (Full 2D)` 2D Steer` , Miscellaneous`GenTab_96e53598-ca8d-4e10-a313-872ec4b7a906
+
+PARSFILE Generic\tables\GenTab_31053e77-932a-4ad8-9743-0f0f033d0d42.par
+#BlueLink1 Generic Table`Steer Linkage Kinematics - RH (Full 2D)` 2D Steer` , Miscellaneous`GenTab_31053e77-932a-4ad8-9743-0f0f033d0d42
+
+#BlueLink4 Plot: Setup`Sensor Vx -- Rear Blind Spot` Object Sensors` , Plot`
+
+#BlueLink5 Plot: Setup`Sensor Dist -- Rear Blind Spot` Object Sensors` , Plot`
+
+
+#EMBEDDED_NOTES
+#This VS Commands dataset obtains road wheel steer angles from user-defined tables and calculates their derivatives. They are then assigned to the import variables for road wheel steer.
+#
+#Read the comments in the dataset for more details.
+#
+#This dataset was linked on the Runs screen to make it easy to find and to make comparisons to a baseline car. Ordinarily, you would link this data on the Vehicle Assembly screen to keep it together with the rest of the vehicle data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { External Steering } Wheel Steer w/ Steer & Jounce (Full 2D)
+#Library : Generic VS Commands
+#DataSet : Wheel Steer w/ Steer & Jounce (Full 2D)
+#Category: External Steering
+#FileID  : GenVS_ea9ddcd4-c36e-4012-ab9a-4b255f66eddf
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Position Sensors Tracking`Position, Accel. and Rate Sensors
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_S1, X_S1
+PLOTCHANNELS Y_S2, X_S2
+PLOTCHANNELS Y_S3, X_S3
+PLOTCHANNELS Y_S4, X_S4
+PLOTCHANNELS Y_S5, X_S5
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Position Sensors Tracking
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Cross plot for five motion sensor posisitons.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Position, Accel. and Rate Sensors } Position Sensors Tracking
+#Library : Plot: Setup
+#DataSet : Position Sensors Tracking
+#Category: Position, Accel. and Rate Sensors
+#FileID  : Plot_6915944a-eb11-4cbc-a1bf-3aea05d9910f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

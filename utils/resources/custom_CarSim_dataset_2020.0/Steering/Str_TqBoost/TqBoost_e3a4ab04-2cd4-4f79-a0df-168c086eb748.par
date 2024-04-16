@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Steering: Power Assist Torque`Linear Coefficient: 200 N-m/N-m`
+#CheckBox0 0    
+
+#RingCtrl0 COEFFICIENT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+M_BOOST_G_COMBINE ADD
+M_BOOST_G_COEFFICIENT 200
+M_BOOST_G_V_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 200
+*SCALAR2 0
+TC_BOOST 2
+M_BOOST_MAX 500
+
+
+LOG_ENTRY Used Dataset: Steering: Power Assist Torque; Linear Coefficient: 200 N-m/N-m
+#Library : Steering: Power Assist Torque
+#DataSet : Linear Coefficient: 200 N-m/N-m
+#Category: 
+#FileID  : TqBoost_e3a4ab04-2cd4-4f79-a0df-168c086eb748
+#Product : CarSim 2020.0
+#VehCode Power Assist Torque
+
+END

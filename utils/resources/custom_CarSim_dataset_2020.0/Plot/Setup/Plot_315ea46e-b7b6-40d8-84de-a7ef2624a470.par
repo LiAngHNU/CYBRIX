@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Tracking vs. Station`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Lat_Targ, Station
+PLOTCHANNELS Lat_Veh, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Tracking vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Lateral Tracking vs. Station
+#Library : Plot: Setup
+#DataSet : Lateral Tracking vs. Station
+#Category: Tracking
+#FileID  : Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

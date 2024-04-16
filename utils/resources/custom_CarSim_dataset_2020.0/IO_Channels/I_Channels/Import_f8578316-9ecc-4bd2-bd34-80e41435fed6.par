@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName I/O Channels: Import`ESC/TCS: Eng. Torque, Whl. Cyl. Pressure`Traction Control for TCS and ESC
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_307779ee-0d75-4e55-985d-0c1653fc4d6e\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_ESC_ENGINE_CON_STATE Add 0.0! 0
+IMP_MENGINE_ESC_REQUEST Add 0.0! 0
+IMP_PBK_L1 Replace 0.0! 1
+IMP_PBK_R1 Replace 0.0! 1
+IMP_PBK_L2 Replace 0.0! 1
+IMP_PBK_R2 Replace 0.0! 1
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`TCS: Low Mu Acceleration` Powertrain Tests` , example run`Run_307779ee-0d75-4e55-985d-0c1653fc4d6e
+
+
+#EMBEDDED_NOTES
+#ESC/TCS import variables involve engine torque management:
+#
+#IMP_ESC_ENGINE_CON_STATE:
+#0: no control,
+#1: engine torque reduced to ESC request, and
+#2: engine torque increased to ESC request.
+#
+#IMP_MENGINE_ESC_REQUEST: ESC requesting engine torque.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Traction Control for TCS and ESC } ESC/TCS: Eng. Torque, Whl. Cyl. Pressure
+#Library : I/O Channels: Import
+#DataSet : ESC/TCS: Eng. Torque, Whl. Cyl. Pressure
+#Category: Traction Control for TCS and ESC
+#FileID  : Import_f8578316-9ecc-4bd2-bd34-80e41435fed6
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

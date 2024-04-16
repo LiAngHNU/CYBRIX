@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`5 Speed MT, 6600 RPM`5-Speed Transmissions
+#RingCtrl0 5
+NGEARS 5
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -5.151
+R_GEAR_TR(1) 5.106
+R_GEAR_TR(2) 3.017
+R_GEAR_TR(3) 1.908
+R_GEAR_TR(4) 1.264
+R_GEAR_TR(5) 1.00
+ITR_REVERSE 0.03
+ITR_NEUTRAL 0.03
+ITR(1) 0.03
+ITR(2) 0.03
+ITR(3) 0.03
+ITR(4) 0.03
+ITR(5) 0.03
+R_EFF_TR_F_REVERSE 0.95
+R_EFF_TR_F(1) 0.95
+R_EFF_TR_F(2) 0.95
+R_EFF_TR_F(3) 0.95
+R_EFF_TR_F(4) 0.95
+R_EFF_TR_F(5) 0.95
+R_EFF_TR_R_REVERSE 0.95
+R_EFF_TR_R(1) 0.95
+R_EFF_TR_R(2) 0.95
+R_EFF_TR_R(3) 0.95
+R_EFF_TR_R(4) 0.95
+R_EFF_TR_R(5) 0.95
+T_SHIFT 0.2
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_b8faaefc-ee63-464f-8c2f-6bc9d4bda3b1.par
+#BlueLink0 Powertrain: Shift Schedule`5-Spd. MT, 1-2, 6600 RPM` 5-Speed MT, 6600 RPM` , Shift schedule`Shift_b8faaefc-ee63-464f-8c2f-6bc9d4bda3b1
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_b7860c95-367a-4467-9b68-14b9c02869e4.par
+#BlueLink1 Powertrain: Shift Schedule`5-Spd. MT, 2-3, 6600 RPM` 5-Speed MT, 6600 RPM` , Shift schedule`Shift_b7860c95-367a-4467-9b68-14b9c02869e4
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_4d42f51a-58d5-4699-8e7c-5920736aa02c.par
+#BlueLink2 Powertrain: Shift Schedule`5-Spd. MT, 3-4, 6600 RPM` 5-Speed MT, 6600 RPM` , Shift schedule`Shift_4d42f51a-58d5-4699-8e7c-5920736aa02c
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_fc7b34df-e948-4134-b0f7-aeac828731d5.par
+#BlueLink3 Powertrain: Shift Schedule`5-Spd. MT, 4-5, 6600 RPM` 5-Speed MT, 6600 RPM` , Shift schedule`Shift_fc7b34df-e948-4134-b0f7-aeac828731d5
+
+
+igear 5
+
+#EMBEDDED_NOTES
+#This manual transmission dataset with five forward speeds was designed to suit the 32 kW engine.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 5-Speed Transmissions } 5 Speed MT, 6600 RPM
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 5 Speed MT, 6600 RPM
+#Category: 5-Speed Transmissions
+#FileID  : Trans18_07b492c8-2329-473b-942e-05128c4ae2fc
+#Product : CarSim 2020.0
+#VehCode Transmission
+
+END

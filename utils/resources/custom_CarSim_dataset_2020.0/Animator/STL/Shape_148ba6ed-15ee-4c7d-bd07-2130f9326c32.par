@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Day Cab: Frame`Trucks: Chassis
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\DayCab\frame.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 0.9
+SET_SCALE_Y 1
+SET_SCALE_Z 1.1
+SET_OFFSET_X -0.916
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_9b4c5cd2-92e8-495b-8821-3533af8d141d.par
+#BlueLink2 Animator: Camera Setup`Vehicles and Drivers - Trucks (Heavy)` Shape Preview` , Video Camera`Camera_9b4c5cd2-92e8-495b-8821-3533af8d141d
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_148ba6ed-15ee-4c7d-bd07-2130f9326c32.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Day Cab: Frame
+#Library : Animator: Shape File Link
+#DataSet : Day Cab: Frame
+#Category: Trucks: Chassis
+#FileID  : Shape_148ba6ed-15ee-4c7d-bd07-2130f9326c32
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

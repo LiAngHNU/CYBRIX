@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Control Point Distance to SM Origin`Driver Sensor
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Lx_Sen_1, Time
+PLOTCHANNELS Lx_Sen_2, Time
+PLOTCHANNELS Lx_Sen_3, Time
+PLOTCHANNELS Lx_Sen_4, Time
+PLOTCHANNELS Lx_Sen_5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Control Point Distance to SM Origin
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Driver Sensor } Control Point Distance to SM Origin
+#Library : Plot: Setup
+#DataSet : Control Point Distance to SM Origin
+#Category: Driver Sensor
+#FileID  : Plot_ba3a7a65-bb33-4dd5-a67f-4310046eb180
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Roll Angle of Sprung Masses vs. Station`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Roll, Station
+PLOTCHANNELS Roll_2, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Roll Angle of Sprung Masses vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Roll Angle of Sprung Masses vs. Station
+#Library : Plot: Setup
+#DataSet : Roll Angle of Sprung Masses vs. Station
+#Category: Vehicle Motion
+#FileID  : Plot_ef39a2c7-73b1-4a60-b806-3c2f6bbb3539
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

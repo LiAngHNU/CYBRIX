@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`East-Center Spots, Facing East`Parking Lot: Straight Trucks
+#RingCtrl0 2
+DEFINE_MOVING_OBJECTS 2
+#RingCtrl1 0
+#RingCtrl2 2
+#RingCtrl3 3
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox3 0    
+#CheckBox38 0    
+
+DZ_OBJECT 0
+*L 13.5
+*PATH_ID 1002
+*ROAD_ID 1002
+*HEADING -90/DR
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME East-Center Spots, Facing East, Object #1
+OPT_SPEED_OBJ 0
+
+EQ_INIT HEADO_<<o>> = -90/DR
+#RingCtrl4 1
+PATH_ID_OBJ 1002
+ROAD_ID_OBJ 1002
+OPT_RECYCLE_OBJ 0
+*SINIT_1 13.9
+EQ_INIT S_OBJ_<<o>> = 13.9
+EQ_INIT LATO_<<o>> = 13.5
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_99370e72-89d9-44c3-a14e-0dedb5201113.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`2A Conventional Van` Traffic and Moving Objects: Commercial` , 3D Shape for Video`AniVeh_99370e72-89d9-44c3-a14e-0dedb5201113
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME East-Center Spots, Facing East, Object #2
+OPT_SPEED_OBJ 0
+
+EQ_INIT HEADO_<<o>> = -90/DR
+#RingCtrl4 1
+PATH_ID_OBJ 1002
+ROAD_ID_OBJ 1002
+OPT_RECYCLE_OBJ 0
+*SINIT_2 22.1
+EQ_INIT S_OBJ_<<o>> = 22.1
+EQ_INIT LATO_<<o>> = 13.5
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_bc8d0eff-31bd-49c0-9bd7-2a3adfb7f614.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`3A Conventional Van` Traffic and Moving Objects: Commercial` , Traffic Vehicle Ani File`AniVeh_bc8d0eff-31bd-49c0-9bd7-2a3adfb7f614
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#This bank of spots is in the center of the eastern end of the parking lot.  The origin (S=0, L=0) is the South-Eastern corner of the lot.  The Path vector is straight north from there.
+#
+#There are 5 parking spots in this bank.
+#
+#The Parking spot locations are (S, L):
+#
+#Spot A - (13.45, 13.5)
+#Spot B - (15.85, 13.5)
+#Spot C - (18.25, 13.5)
+#Spot D - (20.65, 13.5)
+#Spot E - (23.05, 13.5)
+#
+#These locations are reasonably accurate for vehicles of approximately similar dimensions.  To adjust for different wheelbases, it may be necessary to use additional copies of this dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Parking Lot: Straight Trucks } East-Center Spots, Facing East
+#Library : Multiple Moving Objects
+#DataSet : East-Center Spots, Facing East
+#Category: Parking Lot: Straight Trucks
+#FileID  : TMotion_b822bda2-a5a5-4a60-83d6-bd1a7b1b8bba
+#Product : CarSim 2020.0
+#VehCode Multiple Objects
+
+END

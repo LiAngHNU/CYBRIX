@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`Vehicles and Drivers - Trucks`Shape Preview
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+SET_CAMERA_REFERENCE_FRAME Frame_02b47476-96e6-474b-919e-07d03b43f1ec
+PARSFILE Animator\Frames\Frame_02b47476-96e6-474b-919e-07d03b43f1ec.par
+#BlueLink0 Animator: Reference Frame`Yaw for Shape Preview` Shape Preview: Generic` , Reference frame for outside camera`Frame_02b47476-96e6-474b-919e-07d03b43f1ec
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_02b47476-96e6-474b-919e-07d03b43f1ec
+SET_LOOKPOINT_X -1.25
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 1.25
+SET_AZIMUTH 50
+SET_ELEVATION 6
+SET_DISTANCE 15
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X -1.25
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 1.25
+*SET_AZIMUTH 50
+*SET_ELEVATION 6
+*SET_DISTANCE 15
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+
+#EMBEDDED_NOTES
+#Pause the animation at the very start and center the vehicle in the animator to take a picture for the Animator: Vehicle screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Vehicles and Drivers - Trucks
+#Library : Animator: Camera Setup
+#DataSet : Vehicles and Drivers - Trucks
+#Category: Shape Preview
+#FileID  : Camera_e6e4b5e2-348e-42ad-ab7c-62eacd66bb44
+#Product : CarSim 2020.0
+#VehCode Camera
+
+END

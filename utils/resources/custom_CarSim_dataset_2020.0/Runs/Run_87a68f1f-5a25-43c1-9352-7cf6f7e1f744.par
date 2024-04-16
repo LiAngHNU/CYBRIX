@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName CarSim Run Control`Changing Paths: Similar Station`* CS 2020.0 - Lane Change
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_87a68f1f-5a25-43c1-9352-7cf6f7e1f744
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Math Model`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+PARSFILE Procedures\Proc_11c2aca7-84a4-4de3-80ca-9a593fb933b6.par
+#BlueLink28 Procedures`Changing Lanes: Similar Station` Event Triggered Tests` , Procedure`Proc_11c2aca7-84a4-4de3-80ca-9a593fb933b6
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink15 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_3e3b28dc-e304-43c5-815e-d85d7906ed42.par
+#BlueLink16 Plot: Setup`Station vs. t_stamp` Tracking` , Plot`Plot_3e3b28dc-e304-43c5-815e-d85d7906ed42
+
+PARSFILE Plot\Setup\Plot_92e94740-7813-4c8a-9bea-c62fff972287.par
+#BlueLink17 Plot: Setup`Road ID for Tires` Tracking` , Plot`Plot_92e94740-7813-4c8a-9bea-c62fff972287
+
+PARSFILE Plot\Setup\Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f.par
+#BlueLink18 Plot: Setup`Road Station for Tires` Tracking` , Plot`Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f
+
+PARSFILE Plot\Setup\Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470.par
+#BlueLink19 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Changing Paths: Similar Station <* CS 2020.0 - Lane Change>
+CATEGORY * CS 2020.0 - Lane Change 
+DATASET_TITLE Changing Paths: Similar Station
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#In this example, the path used by the driver model (PATH_ID_DM) is changed with an event. The new path (ID = 2000) has a loop, such that the X-Y coordinates of the vehicle can be matched to multiple S-L coordinates on the new path.
+#
+#The S-L value found when the path is switched is for S similar to the station on the previous path, which is not the closest to the vehicle.
+#
+#This causes the vehicle to steer off of the intended road surface, trying to reach the target station.  A road boundary stops the simulation before the vehicle can drive off of the defined area.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Lane Change } Changing Paths: Similar Station
+#Library : CarSim Run Control
+#DataSet : Changing Paths: Similar Station
+#Category: * CS 2020.0 - Lane Change
+#FileID  : Run_87a68f1f-5a25-43c1-9352-7cf6f7e1f744
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

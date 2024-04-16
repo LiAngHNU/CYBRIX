@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Rack Assist vs Torque Sensor Torque`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS f_boost, m_tbar
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Rack Assist vs Torque Sensor Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Rack Assist vs Torque Sensor Torque
+#Library : Plot: Setup
+#DataSet : Rack Assist vs Torque Sensor Torque
+#Category: Steering
+#FileID  : Plot_547382a9-c023-4f99-930e-d5c9b2ff690f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

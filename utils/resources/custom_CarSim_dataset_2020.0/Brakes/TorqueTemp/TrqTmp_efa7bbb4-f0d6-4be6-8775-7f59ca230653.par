@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Brakes: Torque vs. Rotor Temperature`E-Class, Sedan: Rear`
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Rotor temperature (C)
+*3D_YLabel Brake cylinder pressure (MPa)
+*3D_ZLabel Brake torque (N-m)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+MY_BRAKE_TEMP_CARPET 2D_LINEAR
+0, 80, 150, 250
+0, 0, 0, 0
+1, 115, 135, 130
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Brakes: Torque vs. Rotor Temperature; E-Class, Sedan: Rear
+#Library : Brakes: Torque vs. Rotor Temperature
+#DataSet : E-Class, Sedan: Rear
+#Category: 
+#FileID  : TrqTmp_efa7bbb4-f0d6-4be6-8775-7f59ca230653
+#Product : CarSim 2020.0
+#VehCode Brake Torque w/ Temp
+
+END

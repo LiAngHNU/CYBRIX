@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Suspension: Camber Angle`Front Strut - Camber`Strut
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+CAMBER_COMBINE ADD
+#DiagramOne0
+CAMBER_TABLE SPLINE
+-70, 1.16282
+-60, 0.958695
+-50, 0.76676
+-40, 0.58725
+-30, 0.42045
+-20, 0.266701
+-10, 0.126399
+0, 0
+10, -0.111976
+20, -0.208942
+30, -0.290231
+40, -0.355097
+50, -0.402697
+60, -0.432083
+70, -0.442184
+ENDTABLE
+SUSP_CAMBER_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+LOG_ENTRY Used Dataset: Suspension: Camber Angle; { Strut } Front Strut - Camber
+#Library : Suspension: Camber Angle
+#DataSet : Front Strut - Camber
+#Category: Strut
+#FileID  : Camber_31c8e63a-6ec9-4a2b-9249-56e8917ff02b
+#Product : CarSim 2020.0
+#VehCode Camber
+
+END

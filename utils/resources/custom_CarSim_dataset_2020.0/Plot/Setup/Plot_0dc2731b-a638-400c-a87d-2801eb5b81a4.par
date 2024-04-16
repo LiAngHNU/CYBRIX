@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Magnitude -- S1, S2 (2 Objects)`Object Sensors
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MagS1_1, Time
+PLOTCHANNELS MagS1_2, Time
+PLOTCHANNELS MagS2_1, Time
+PLOTCHANNELS MagS2_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Magnitude -- S1, S2 (2 Objects)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Object Sensors } Magnitude -- S1, S2 (2 Objects)
+#Library : Plot: Setup
+#DataSet : Magnitude -- S1, S2 (2 Objects)
+#Category: Object Sensors
+#FileID  : Plot_0dc2731b-a638-400c-a87d-2801eb5b81a4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

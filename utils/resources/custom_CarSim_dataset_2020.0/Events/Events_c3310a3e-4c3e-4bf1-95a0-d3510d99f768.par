@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Events`G. Check SWA Amplitude at 1.07s`Sine with Dwell
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl1 ZERO ~=
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 SWA_MULT
+*NAME2 T
+*VALUE1 5
+*VALUE2 1
+*SPEED 80
+MAKE_EVENT SWA_MULT >= 5 ; Events\Events_8bf69f56-f108-490b-9b95-b904abee8a8f.par
+#BlueLink0 Events`H. Check Lateral Displacement` Sine with Dwell` , Events`Events_8bf69f56-f108-490b-9b95-b904abee8a8f
+
+DEFINE_EVENT 1 ; Events\Events_032750d9-dfe7-47f9-90af-76504706df7a.par
+#BlueLink1 Events`I. Clear Events and Continue to 2.929s` Sine with Dwell` , Events`Events_032750d9-dfe7-47f9-90af-76504706df7a
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded 1.07s after a Sine with Dwell test starts.
+#
+#If SWA_MULT >= 5, then the lateral displacement is checked by loading the event dataset H.
+#
+#Otherwise dataset I is loaded.
+#
+#Revised 2018.1 because target speed uses new feature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } G. Check SWA Amplitude at 1.07s
+#Library : Events
+#DataSet : G. Check SWA Amplitude at 1.07s
+#Category: Sine with Dwell
+#FileID  : Events_c3310a3e-4c3e-4bf1-95a0-d3510d99f768
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

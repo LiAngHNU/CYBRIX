@@ -1,0 +1,119 @@
+PARSFILE
+#FullDataName Suspension: Dive Angle (Caster Change)`Twist Beam - Rear`Twist Beam (Legacy, Pre-CS 2018)
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_DIVE_COMBINE ADD
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_DIVE_TABLE SPLINE
+-86.5, -12.02
+-86.31, -11.99
+-85.38, -11.86
+-83.08, -11.53
+-78.67, -10.91
+-73.23, -10.14
+-67.5, -9.34
+-62.11, -8.59
+-56.79, -7.85
+-51.21, -7.07
+-45.84, -6.33
+-40.49, -5.59
+-34.92, -4.82
+-29.66, -4.09
+-24.31, -3.36
+-18.75, -2.59
+-13.47, -1.86
+-8.2, -1.13
+-2.71, -0.37
+2.58, 0.36
+7.92, 1.09
+13.4, 1.86
+18.62, 2.58
+23.91, 3.31
+29.42, 4.07
+34.65, 4.8
+39.89, 5.53
+45.31, 6.29
+50.45, 7
+55.6, 7.72
+60.9, 8.47
+66.01, 9.17
+71.06, 9.88
+76.21, 10.6
+81.17, 11.3
+85.58, 11.9
+89.69, 12.44
+93.61, 12.97
+96.64, 13.37
+98.19, 13.57
+98.6, 13.62
+ENDTABLE
+SUSP_DIVE_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_DIVE_AXLE_TABLE SPLINE
+-86.5, -12.02
+-86.31, -11.99
+-85.38, -11.86
+-83.08, -11.53
+-78.67, -10.91
+-73.23, -10.14
+-67.5, -9.34
+-62.11, -8.59
+-56.79, -7.85
+-51.21, -7.07
+-45.84, -6.33
+-40.49, -5.59
+-34.92, -4.82
+-29.66, -4.09
+-24.31, -3.36
+-18.75, -2.59
+-13.47, -1.86
+-8.2, -1.13
+-2.71, -0.37
+2.58, 0.36
+7.92, 1.09
+13.4, 1.86
+18.62, 2.58
+23.91, 3.31
+29.42, 4.07
+34.65, 4.8
+39.89, 5.53
+45.31, 6.29
+50.45, 7
+55.6, 7.72
+60.9, 8.47
+66.01, 9.17
+71.06, 9.88
+76.21, 10.6
+81.17, 11.3
+85.58, 11.9
+89.69, 12.44
+93.61, 12.97
+96.64, 13.37
+98.19, 13.57
+98.6, 13.62
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Trailing Arm Length = 609 mm
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Dive Angle (Caster Change); { Twist Beam (Legacy, Pre-CS 2018) } Twist Beam - Rear
+#Library : Suspension: Dive Angle (Caster Change)
+#DataSet : Twist Beam - Rear
+#Category: Twist Beam (Legacy, Pre-CS 2018)
+#FileID  : Dive_30e7b822-bd9a-4798-82f7-e658c005ce5c
+#Product : CarSim 2020.0
+#VehCode Dive
+
+END

@@ -1,0 +1,108 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`1 km Square 10-m Grid w/ Line`3D Grid
+NLANES 5
+#MiscYellow0
+# 1 1 1, Pavement, 1, 10, 100, -500, m, 500, m, 99, 2, -500, 500, 10, 2, 0, Random
+# 1 1 1, Pavement, 1, 10, 99, -500, m, 490, m, 98, 2, -490, 500, 10, 2, 0, Random
+# 1 1 1, Slate (White), 1, 10, 99, -490, m, 500, m, 98, 2, -490, 500, 10, 2, 0, Random
+# 1 1 1, Slate (White), 1, 10, 99, -500, m, 490, m, 98, 2, -500, 500, 10, 2, 0, Random
+# 1 1 1, Ice, 1, 1, 8, -4, m, 4, m, , , 2.75, 3.25, 0.5, , 0.01, Off
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Pavement
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 100
+LIN(1) -500
+LINUNITS(1) m
+LOUT(1) 500
+LOUTUNITS(1) m
+LDIV(1) 99
+LIPRINT(1) 2
+SSTART(1) -500
+SSTOP(1) 500
+SINT(1) 10
+IPRINT(1) 2
+DZ(1) 0
+AUTODETAIL(1) Random
+COLOR(2) 1 1 1
+MATERIAL(2) Pavement
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 99
+LIN(2) -500
+LINUNITS(2) m
+LOUT(2) 490
+LOUTUNITS(2) m
+LDIV(2) 98
+LIPRINT(2) 2
+SSTART(2) -490
+SSTOP(2) 500
+SINT(2) 10
+IPRINT(2) 2
+DZ(2) 0
+AUTODETAIL(2) Random
+COLOR(3) 1 1 1
+MATERIAL(3) Slate (White)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 99
+LIN(3) -490
+LINUNITS(3) m
+LOUT(3) 500
+LOUTUNITS(3) m
+LDIV(3) 98
+LIPRINT(3) 2
+SSTART(3) -490
+SSTOP(3) 500
+SINT(3) 10
+IPRINT(3) 2
+DZ(3) 0
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Slate (White)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 99
+LIN(4) -500
+LINUNITS(4) m
+LOUT(4) 490
+LOUTUNITS(4) m
+LDIV(4) 98
+LIPRINT(4) 2
+SSTART(4) -500
+SSTOP(4) 500
+SINT(4) 10
+IPRINT(4) 2
+DZ(4) 0
+AUTODETAIL(4) Random
+COLOR(5) 1 1 1
+MATERIAL(5) Ice
+SPECULAR(5) 1
+SCALE(5) 1
+LTILES(5) 8
+LIN(5) -4
+LINUNITS(5) m
+LOUT(5) 4
+LOUTUNITS(5) m
+SSTART(5) 2.75
+SSTOP(5) 3.25
+SINT(5) 0.5
+DZ(5) 0.01
+AUTODETAIL(5) Off
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { 3D Grid } 1 km Square 10-m Grid w/ Line
+#Library : Road: Animator Surface Shapes
+#DataSet : 1 km Square 10-m Grid w/ Line
+#Category: 3D Grid
+#FileID  : RdShape_81bb2bfa-e6ad-4464-af5e-d962e6c2edb2
+#Product : CarSim 2020.0
+#VehCode Road Shapes
+
+END

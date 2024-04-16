@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`I. Complete Turn Around`Trailer Reverse
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 vx
+*VALUE1 60
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_d255ae31-e406-444e-8cfa-b0ee0e0923c1.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0.2` Constant` , Speed link`Throttle_d255ae31-e406-444e-8cfa-b0ee0e0923c1
+
+#MiscYellow0
+opt_direction -1
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Driver\StrDM_64f0bbbf-15de-4e5d-a320-46d82e7c4d43.par
+#BlueLink11 Control: Steering by the Closed-loop Driver Model`1.65m Left, 1.5s Preview` Constant Position: Non-Zero Offset` , Miscellaneous`StrDM_64f0bbbf-15de-4e5d-a320-46d82e7c4d43
+
+MAKE_EVENT vx > 60 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle continues accelerating, now in the reverse direction of the road, and switches to a closed-loop driver path follower until 60 km/h is reached.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reverse } I. Complete Turn Around
+#Library : Events
+#DataSet : I. Complete Turn Around
+#Category: Trailer Reverse
+#FileID  : Events_388ce37c-cdc7-41ab-a173-3eee85ca4b89
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

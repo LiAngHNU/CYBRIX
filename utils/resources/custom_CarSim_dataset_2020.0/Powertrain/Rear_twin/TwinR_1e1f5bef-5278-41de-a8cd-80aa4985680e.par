@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Powertrain: Rear Twin-Clutch Differential`Ratio 4.4 w/ External Control`
+
+IDIFF 2
+opt_twin_clutch 1
+
+
+R_GEAR_RD 4.4
+R_EFF_F_RD 1
+R_EFF_R_RD 0.9
+LOCKED_RD_DAMP 0.8
+LOCKED_RD_K 80
+IDS_R 0.05
+IHS_L2 0
+IHS_R2 0
+
+R_GEAR_DIFF 4.4
+R_EFF_F_DIFF 1
+R_EFF_R_DIFF 0.9
+LOCKED_DIFF_DAMP 0.8
+LOCKED_DIFF_K 80
+IDS 0.05
+IHS_L 0
+IHS_R 0
+
+iside 1
+PARSFILE Powertrain\Cl_Visc\ClVisc_18c9e10f-c1a2-436f-91fa-7ac2e9f945c6.par
+#BlueLink0 Powertrain: Clutch with Viscous Differential`External Control` ` , Clutch Left`ClVisc_18c9e10f-c1a2-436f-91fa-7ac2e9f945c6
+
+
+iside 2
+PARSFILE Powertrain\Cl_Visc\ClVisc_18c9e10f-c1a2-436f-91fa-7ac2e9f945c6.par
+#BlueLink1 Powertrain: Clutch with Viscous Differential`External Control` ` , Clutch Right`ClVisc_18c9e10f-c1a2-436f-91fa-7ac2e9f945c6
+
+
+#EMBEDDED_NOTES
+#This is an example of an externally controlled twin clutch type differential.  The clutch control signals are supplied from an external source (such as Simulink, C-Code, etc.).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Rear Twin-Clutch Differential; Ratio 4.4 w/ External Control
+#Library : Powertrain: Rear Twin-Clutch Differential
+#DataSet : Ratio 4.4 w/ External Control
+#Category: 
+#FileID  : TwinR_1e1f5bef-5278-41de-a8cd-80aa4985680e
+#Product : CarSim 2020.0
+#VehCode Twin Clutches
+
+END

@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Animator: Sound Modifier`Loudness: Longitudinal Force Effects`Tires
+
+#MiscYellow0
+define_output mod3_<<tire>> = abs(fx_<<tire>>) /fz_ref * MuX_<<tire>>; ; ...
+      Audio control variable for tire <<tire>>
+#ENDMYellow
+
+
+#RingCtrl0 VOLUME
+ADD_SOUND_MODIFIER VOLUME
+SOUNDMOD_OPERATION mult
+
+SOUNDMOD_INPUT_NAME mod3_<<tire>>
+SOUNDMOD_INPUT_MIN 0.2
+SOUNDMOD_INPUT_LOW 0.4
+SOUNDMOD_INPUT_HIGH 0.6
+SOUNDMOD_INPUT_MAX 0.8
+SOUNDMOD_OUTPUT_MIN 0.0
+SOUNDMOD_OUTPUT_LOW 1.0
+SOUNDMOD_OUTPUT_HIGH 2.0
+SOUNDMOD_OUTPUT_MAX 3.0
+
+WRT_mod3_<<tire>>
+ANI_mod3_<<tire>>
+
+LOG_ENTRY Used Dataset: Animator: Sound Modifier; { Tires } Loudness: Longitudinal Force Effects
+#Library : Animator: Sound Modifier
+#DataSet : Loudness: Longitudinal Force Effects
+#Category: Tires
+#FileID  : SndMod_f3c220e4-3cc3-4009-82a4-ccaa1333ddc1
+#Product : CarSim 2020.0
+#VehCode Sound Modifier
+
+END

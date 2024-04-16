@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`CS 9 Extended Camber: Asym - Acc./Brk`Tire Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6feec103-5b21-45a1-bcde-c2707f3b0a69
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_09439551-c64a-4943-9211-22177923f7cf.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 23 m` Road Reference` , Animator camera`Camera_09439551-c64a-4943-9211-22177923f7cf
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e5f6e76f-e7ea-4158-b656-58b07d8cd23d.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: (Ext. Tires: Asymmetric)` E-Class` , Math Model`Vehicle_e5f6e76f-e7ea-4158-b656-58b07d8cd23d
+
+PARSFILE Procedures\Proc_d895948e-10ee-49da-bc45-cc14e63e6e15.par
+#BlueLink28 Procedures`Accel then Brake` Accel. and Brake Testing` , Procedure`Proc_d895948e-10ee-49da-bc45-cc14e63e6e15
+
+PARSFILE Control\Driver\StrDM_ef938a74-a8af-40b8-945e-8f04ceecdc0f.par
+#BlueLink3 Control: Steering by the Closed-loop Driver Model`3m Left, 1.5s Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_ef938a74-a8af-40b8-945e-8f04ceecdc0f
+
+
+SPECIAL_PARSFILE Runs\Run_7e857b1a-453d-4393-89fc-ea50f3f9bc9b.par
+#BlueLink23 CarSim Run Control`MF-Tyre, Asymmetric: Acc./Brk` Tire Models` , Overlay run or ERD file`Run_7e857b1a-453d-4393-89fc-ea50f3f9bc9b
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title CS 9 Extended Camber: Asym - Acc./Brk <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE CS 9 Extended Camber: Asym - Acc./Brk
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan using the CarSim internal camber extension tire model with asymmetric tire data performs an acceleration and braking test.
+#
+#It is overlaid with the simulation:
+#MF-Tyre, Asymmetric: Acc./Brk
+#
+#The MF-Tyre (Asymmetric) dataset and the CarSim camber extension tire model are based on different tire models, although they share the same tire characteristics.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } CS 9 Extended Camber: Asym - Acc./Brk
+#Library : CarSim Run Control
+#DataSet : CS 9 Extended Camber: Asym - Acc./Brk
+#Category: Tire Models
+#FileID  : Run_6feec103-5b21-45a1-bcde-c2707f3b0a69
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

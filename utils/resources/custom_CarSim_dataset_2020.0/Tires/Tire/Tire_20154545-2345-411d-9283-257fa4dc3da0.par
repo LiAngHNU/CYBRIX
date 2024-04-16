@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Tire`205/55 R16`Touring Tires
+FZ_REF 5500
+X_LENGTH 316
+Z_LENGTH 316
+Y_LENGTH 205
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+#BlueLink4 Animator: Shape Assembly`Sports Car` Tires` , Animator`ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 205
+RRE 308
+R0 316
+FZ_TIRE_COEFFICIENT 240
+FZ_MAX 100000
+M_TIRE 19
+IT 1.2
+IT_XXZZ 0.7
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 85
+L_CONTACT_Y_CONSTANT 205
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_fae1631c-079d-405e-a52b-617c65fd2794.par
+#BlueLink0 Tire: Aligning Moment`205/55 R16 (SAE)` Touring Tires` , Aligning Moment`TireMz_fae1631c-079d-405e-a52b-617c65fd2794
+
+PARSFILE Tires\Fy\TireFy_0a65547f-5321-4421-8629-139f645ab720.par
+#BlueLink1 Tire: Lateral Force`205/55 R16` Touring Tires` , Lateral Force`TireFy_0a65547f-5321-4421-8629-139f645ab720
+
+PARSFILE Tires\Fx\TireFx_d53ad62e-6e31-4141-a6d3-eefd5234cda1.par
+#BlueLink2 Tire: Longitudinal Force`205/55 R16` Touring Tires` , Longitudinal Force`TireFx_d53ad62e-6e31-4141-a6d3-eefd5234cda1
+
+PARSFILE Tires\Camber_Thrust\CamStiff_671ef4d3-9196-4e10-b3eb-82cdfef75986.par
+#BlueLink3 Tire: Camber Thrust Coefficient`205/55 R16` Touring Tires` , Camber Thrust`CamStiff_671ef4d3-9196-4e10-b3eb-82cdfef75986
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 580 kg
+#
+#Note:
+#The Aligning Moment data linked here replaces the previously shipping Aligning Moment data.
+#
+#The Mz values correspond to a pneumatic trail (deg) obtained from the averaged results of SAE Tire Tests.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Touring Tires } 205/55 R16
+#Library : Tire
+#DataSet : 205/55 R16
+#Category: Touring Tires
+#FileID  : Tire_20154545-2345-411d-9283-257fa4dc3da0
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

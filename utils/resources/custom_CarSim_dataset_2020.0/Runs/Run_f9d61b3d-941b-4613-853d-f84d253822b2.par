@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName CarSim Run Control`Trailer: Reversing (Parametric Hitch)`Trailers (Extra License Needed)
+#VEHICLECODE Ind_SA + SS
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f9d61b3d-941b-4613-853d-f84d253822b2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_26cfe213-6f18-49c1-a176-6cc17bd92632.par
+#BlueLink0 Animator: Camera Setup`315 Azm, 15 El, 31 m, No Yaw` Vehicle Reference` , Animator camera`Camera_26cfe213-6f18-49c1-a176-6cc17bd92632
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+SET_RUN_COLOR 1 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Pickup, Full Size w/ 2A Gooseneck Trl.` Pickup, Full Size` , Math Model`VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497
+
+PARSFILE Procedures\Proc_e1a259e1-9c25-44e4-8717-e295b6aeb191.par
+#BlueLink28 Procedures`Trailer Reversing` Event Triggered Tests` , Procedure`Proc_e1a259e1-9c25-44e4-8717-e295b6aeb191
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6ba13624-c527-4355-b1e1-654631d3017e.png
+WRITE_SENSOR_DETECT
+Title Trailer: Reversing (Parametric Hitch) <Trailers (Extra License Needed)>
+CATEGORY Trailers (Extra License Needed) 
+DATASET_TITLE Trailer: Reversing (Parametric Hitch)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A Full-size Pickup Truck with a 2-axle Gooseneck trailer performs an Event-driven trailer reversing maneuver.
+#
+#The vehicle is initially driving down the two-lane road. It comes to a stop, the transmission is shifted into Reverse, and the vehicle backs up into a driveway whose road surface is raised with respect to the main road and separated by a curb.
+#
+#The transmission is shifted into Drive, and the vehicle resumes driving in a direction opposite to when it started.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Trailers (Extra License Needed) } Trailer: Reversing (Parametric Hitch)
+#Library : CarSim Run Control
+#DataSet : Trailer: Reversing (Parametric Hitch)
+#Category: Trailers (Extra License Needed)
+#FileID  : Run_f9d61b3d-941b-4613-853d-f84d253822b2
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

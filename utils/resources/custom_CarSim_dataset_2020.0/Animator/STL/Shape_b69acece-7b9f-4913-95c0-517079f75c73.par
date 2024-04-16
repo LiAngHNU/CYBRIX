@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Wind Turbine: Base`Environment: Props (Animated)
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Props\Wind_Turbine\Wind_Turbine_Base.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_caffd786-778b-4392-9b7d-fdbf9eeb2fc6.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Wind Turbines` Custom Cameras` , Video Camera`Camera_caffd786-778b-4392-9b7d-fdbf9eeb2fc6
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_b69acece-7b9f-4913-95c0-517079f75c73.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Props (Animated) } Wind Turbine: Base
+#Library : Animator: Shape File Link
+#DataSet : Wind Turbine: Base
+#Category: Environment: Props (Animated)
+#FileID  : Shape_b69acece-7b9f-4913-95c0-517079f75c73
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

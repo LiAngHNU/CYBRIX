@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Gooseneck Trailer (2A)`Trailers
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 2
+OBJ_X_LENGTH 6710
+OBJ_Y_LENGTH 2438
+OBJ_Z_LENGTH 1670
+*DZ_V 0
+*LAT_WC 2445
+*LAT_WC_2 2445
+*HWC 325
+*WHEEL_RATIO 1.2
+*LAXLE_1 5895
+*LAXLE_2 6710
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_60c109ee-5c8d-45dd-bfaa-dfba617c42c7.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.2
+SET_SCALE_Y 1.2
+SET_SCALE_Z 1.2
+SET_OFFSET_X -5.895
+SET_OFFSET_Y 1.2225
+SET_OFFSET_Z 0.30875
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.2
+SET_SCALE_Y 1.2
+SET_SCALE_Z 1.2
+SET_ANGLE_X 180
+SET_OFFSET_X -5.895
+SET_OFFSET_Y -1.2225
+SET_OFFSET_Z 0.30875
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.2
+SET_SCALE_Y 1.2
+SET_SCALE_Z 1.2
+SET_OFFSET_X -6.71
+SET_OFFSET_Y 1.2225
+SET_OFFSET_Z 0.30875
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.2
+SET_SCALE_Y 1.2
+SET_SCALE_Z 1.2
+SET_ANGLE_X 180
+SET_OFFSET_X -6.71
+SET_OFFSET_Y -1.2225
+SET_OFFSET_Z 0.30875
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_9b36271b-4640-42ef-9427-c26be4af9282.par
+#BlueLink1 Animator: Shape Assembly`Gooseneck Trailer (2A)` Trailers` , Vehicle Body`ShpGrp_9b36271b-4640-42ef-9427-c26be4af9282
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_f5ea6ff4-02ea-4da6-b416-845ecf3e4018.par
+#BlueLink3 Animator: Shape File Link`Gooseneck: Brake Lights` Trailers` , Brake Lights`Shape_f5ea6ff4-02ea-4da6-b416-845ecf3e4018
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Trailers } Gooseneck Trailer (2A)
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Gooseneck Trailer (2A)
+#Category: Trailers
+#FileID  : AniVeh_60c109ee-5c8d-45dd-bfaa-dfba617c42c7
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

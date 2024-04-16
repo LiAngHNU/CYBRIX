@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName CarSim Run Control`Mcity Proving Grounds: Outside Loop`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_fbdfa24a-0ca6-4031-a880-e55d0a33e064
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Math Model`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+PARSFILE Procedures\Proc_2cd0bae2-a5c9-469d-868c-7dffaa0cf6ea.par
+#BlueLink28 Procedures`Mcity: Outside Loop, 30 km/h` Mcity` , Procedure`Proc_2cd0bae2-a5c9-469d-868c-7dffaa0cf6ea
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink11 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Mcity Proving Grounds: Outside Loop <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Mcity Proving Grounds: Outside Loop
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The roads of this example is updated from loaded table grid to 3D tiles from VS Scene Builder.
+#
+#Mcity environment, with the vehicle following a looped path.
+#
+#The Outside Loop, represented by a dataset from the X-Y Coordinates of Path library, is linked on the Run Control screen and serves as a path for the CarSim Closed-Loop Path Following Driver Model.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Mcity Proving Grounds: Outside Loop
+#Library : CarSim Run Control
+#DataSet : Mcity Proving Grounds: Outside Loop
+#Category: ADAS and Active Safety
+#FileID  : Run_fbdfa24a-0ca6-4031-a880-e55d0a33e064
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

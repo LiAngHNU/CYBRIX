@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Magnitude from Sensor on One Side`ADAS Sensor Detections, Symbol Stack
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MagS<<s>>_1, Time
+
+#ENDMYellow
+
+YAXISLABEL <<side>> distance - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Magnitude from Sensor on One Side
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Use Symbol Stack <<s>> to get closest object to current sensor.
+#
+#<<side>> is Left or Right.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections, Symbol Stack } Magnitude from Sensor on One Side
+#Library : Plot: Setup
+#DataSet : Magnitude from Sensor on One Side
+#Category: ADAS Sensor Detections, Symbol Stack
+#FileID  : Plot_c58df9d1-7b58-4938-acb7-aec9380a5ce8
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

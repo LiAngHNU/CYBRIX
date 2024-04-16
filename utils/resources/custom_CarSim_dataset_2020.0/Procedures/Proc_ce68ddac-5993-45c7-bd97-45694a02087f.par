@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Procedures`Autonomous Driving: City Intersection`Multi-Vehicle
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 25
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 35
+*TSTOP 25
+*TSTART 0
+*SSTART 0
+*SSTOP 2235
+
+PARSFILE Control\Driver\StrDM_aec118d4-46cb-42c7-adc2-1f7a2da4c56c.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`No Offset, 1 sec. Preview` Constant Position` , Steering`StrDM_aec118d4-46cb-42c7-adc2-1f7a2da4c56c
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_07343a37-aaf9-402e-9caa-019f1df7e2cf.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Ax/Ay, SPEED_LIMIT_ID, mi/h` Miscellaneous` , Speed vs. station`SpdPath_07343a37-aaf9-402e-9caa-019f1df7e2cf
+
+#MiscYellow0
+SPEED_TARGET_CONSTANT 25;mi/h
+#ENDMYellow
+
+PARSFILE Roads\Center_XY\PathXY_ee0eac46-5ab8-4979-b7ab-59f9d251780c.par
+#BlueLink0 Path: X-Y Coordinates`Global Y-Axis` Straight` , Miscellaneous`PathXY_ee0eac46-5ab8-4979-b7ab-59f9d251780c
+
+PARSFILE Generic\Links\GenLink_26976038-42f4-4c63-9429-552ceabd97df.par
+#BlueLink1 Generic Group of Links`3 Other Vehicles` Autonomous Detection` , Miscellaneous`GenLink_26976038-42f4-4c63-9429-552ceabd97df
+
+PARSFILE Generic\Group\GenGrp_00397ca3-6af7-412a-94c4-3c0862577b1c.par
+#BlueLink2 Generic Data Group`City: Signs, Pedestrians, Buildings` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_00397ca3-6af7-412a-94c4-3c0862577b1c
+
+PARSFILE Generic\VS_commands\GenVS_e4490c7b-52e6-4d57-8495-f3b906012310.par
+#BlueLink3 Generic VS Commands`Setup for Object Detection` Setup Events` , Miscellaneous`GenVS_e4490c7b-52e6-4d57-8495-f3b906012310
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink8 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_c499b241-04e6-497e-848d-7e1e074bb3b9.par
+#BlueLink9 Plot: Setup`Distance: DisS1_1` ADAS Sensor Detections` , Plot`Plot_c499b241-04e6-497e-848d-7e1e074bb3b9
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink10 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink11 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_91da62f5-6178-444d-89ee-867ef207b685.par
+#BlueLink12 Plot: Setup`Magnitude: MagS1_1` ADAS Sensor Detections` , Plot`Plot_91da62f5-6178-444d-89ee-867ef207b685
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink13 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_0077182d-6cf8-44a9-90d1-da03154afd22.par
+#BlueLink14 Plot: Setup`Speed: SpdS1_1` ADAS Sensor Detections` , Plot`Plot_0077182d-6cf8-44a9-90d1-da03154afd22
+
+PARSFILE Plot\Setup\Plot_274950bb-6467-4738-87b6-000a4d3edbc9.par
+#BlueLink15 Plot: Setup`IDs for Closest 15 Objects, Last Sensor` ADAS Sensor Detections` , Plot`Plot_274950bb-6467-4738-87b6-000a4d3edbc9
+
+
+#EMBEDDED_NOTES
+#The Speed Control dataset uses an identifier to associate speed targets with signs. The imports are set to define sensor targets for three other vehicles. Pedestrians cross the intersection and bulidings occlude each vehicles sensors.
+#
+#VS Command logic to avoid vehicles & pedestrians and obeying sign a& traffic signal logic is defined in 'Setup for Object Detection.'
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Multi-Vehicle } Autonomous Driving: City Intersection
+#Library : Procedures
+#DataSet : Autonomous Driving: City Intersection
+#Category: Multi-Vehicle
+#FileID  : Proc_ce68ddac-5993-45c7-bd97-45694a02087f
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

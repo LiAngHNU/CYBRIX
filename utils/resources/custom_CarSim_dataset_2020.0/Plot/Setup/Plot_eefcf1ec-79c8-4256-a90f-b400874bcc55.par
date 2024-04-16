@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`EQ_DYN vs EQ_OUT: Spring Forces`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS eq_in_IMP_FS_L1, Time
+PLOTCHANNELS eq_dyn_IMP_FS_L1, Time
+PLOTCHANNELS eq_out_IMP_FS_L1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE EQ_DYN vs EQ_OUT: Spring Forces
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset is linked to a VS Command dataset that adds an ESC via VS Commands. The variables listed here are defined with some of those VS Commands.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } EQ_DYN vs EQ_OUT: Spring Forces
+#Library : Plot: Setup
+#DataSet : EQ_DYN vs EQ_OUT: Spring Forces
+#Category: User-Defined Variables
+#FileID  : Plot_eefcf1ec-79c8-4256-a90f-b400874bcc55
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

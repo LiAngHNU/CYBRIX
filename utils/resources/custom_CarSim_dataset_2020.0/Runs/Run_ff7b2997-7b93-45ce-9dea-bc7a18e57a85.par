@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName CarSim Run Control`Crosswind, Low Mu`Aero Effects
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_ff7b2997-7b93-45ce-9dea-bc7a18e57a85
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_dc48416e-5207-488c-ac1e-befb81183b3f.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 15 El, 30 m` Vehicle Reference` , Animator camera`Camera_dc48416e-5207-488c-ac1e-befb81183b3f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_a784163a-f05c-4f73-9d83-f8b678f344f7.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan w/ Aero Ref. Point` D-Class` , Math Model`VehLoad_a784163a-f05c-4f73-9d83-f8b678f344f7
+
+PARSFILE Procedures\Proc_ac80c3c7-723a-4a34-ad4a-bb4b66186f0a.par
+#BlueLink28 Procedures`Crosswind Test` Stability Testing` , Procedure`Proc_ac80c3c7-723a-4a34-ad4a-bb4b66186f0a
+
+*TSTOP 8
+*TSTART 0
+*SSTART 5
+*SSTOP 200
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Crosswind, Low Mu <Aero Effects>
+CATEGORY Aero Effects 
+DATASET_TITLE Crosswind, Low Mu
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan is subjected to two sets of crosswind inputs while driving on a low-mu road surface.
+#
+#The crosswind fans produce 100 km/h wind first from the right side, then from the left side.
+#
+#The aerodynamic forces are displayed as single-headed arrows located at the aerodynamic reference point. The center of pressure is not generally located at the aerodynamic reference point so aerodynamic moments complete the description of aerodynamic effects. Forces at the center of pressure are replaced with forces at the aerodynamic reference point as well as the appropriate moments. The moments are displayed as double-headed arrows located at the sprung mass CG.
+#
+#Because the forces are applied at the aerodynamic reference point which is not located at the vehicle CG, the forces produce torques about the CG.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Aero Effects } Crosswind, Low Mu
+#Library : CarSim Run Control
+#DataSet : Crosswind, Low Mu
+#Category: Aero Effects
+#FileID  : Run_ff7b2997-7b93-45ce-9dea-bc7a18e57a85
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

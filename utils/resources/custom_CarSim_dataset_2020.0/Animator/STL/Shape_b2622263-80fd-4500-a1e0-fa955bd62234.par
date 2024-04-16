@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Shrub F (Set 1, Offset: Y=1)`Environment: Shrubbery
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Shrubbery\3D_Shrubbery\Shrub_F.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_OFFSET_Y 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_614e20f4-a550-401b-86b4-f904a05376d4.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Large Objects` Shape Preview` , Video Camera`Camera_614e20f4-a550-401b-86b4-f904a05376d4
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_b2622263-80fd-4500-a1e0-fa955bd62234.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Shrubbery } Shrub F (Set 1, Offset: Y=1)
+#Library : Animator: Shape File Link
+#DataSet : Shrub F (Set 1, Offset: Y=1)
+#Category: Environment: Shrubbery
+#FileID  : Shape_b2622263-80fd-4500-a1e0-fa955bd62234
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

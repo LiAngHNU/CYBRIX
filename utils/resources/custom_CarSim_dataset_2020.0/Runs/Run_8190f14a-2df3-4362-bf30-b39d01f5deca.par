@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`Ext. Hybrid: EPA Urban Cycle`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8190f14a-2df3-4362-bf30-b39d01f5deca
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_60b85428-0bcb-4bd9-b36a-47f4356a9e16.par
+#BlueLink12 Models: Simulink`External hybrid powertrain` External Powertrain` , Models`Simlink_60b85428-0bcb-4bd9-b36a-47f4356a9e16
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+SET_RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_49b00620-e715-4070-adfc-c4cf755d143e.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback: Ext. Hybrid PT` External Powertrains` , Math Model`Vehicle_49b00620-e715-4070-adfc-c4cf755d143e
+
+PARSFILE Procedures\Proc_b72aff54-cc5c-4024-9ee3-af49dd19730a.par
+#BlueLink28 Procedures`Hybrid/Electric: EPA Urban Cycle` Accel. and Brake Testing` , Procedure`Proc_b72aff54-cc5c-4024-9ee3-af49dd19730a
+
+*TSTOP 1369
+*TSTART 0
+*SSTART 0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.png
+WRITE_SENSOR_DETECT
+Title Ext. Hybrid: EPA Urban Cycle <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Ext. Hybrid: EPA Urban Cycle
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates a hybrid powertrain modeled in Simulink. (Libraries > Models > Models: Simulink)
+#
+#Browse to the Vehicle: Assembly screen and click on the powertrain blue link to see the settings for the externally defined engine through transmission.
+#
+#Click on the blue link "External Hybrid Powertrain" to see how the Simulink model is connected to CarSim, and how to define the import and export variables that allow CarSim and Simulink to communicate.
+#
+#The procedure is EPA urban cycle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Ext. Hybrid: EPA Urban Cycle
+#Library : CarSim Run Control
+#DataSet : Ext. Hybrid: EPA Urban Cycle
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_8190f14a-2df3-4362-bf30-b39d01f5deca
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`Tachometer`HUD Gauges
+#VehCode Generic Group (More)
+#MiscYellow0
+ADD_ENTITY hud_image Tach (BG)
+  location 190 10 150 150
+  align_x right
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  image_file Animator\Hud\Tachometer.dds
+END_ENTITY hud_image Tach (BG)
+#ENDMYellow
+
+
+#MiscYellow1
+ANI_AV_Eng
+WRT_AV_Eng
+ADD_ENTITY hud_image Tachometer (Needle)
+  location 190 10 150 150
+  align_x right
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  rotate -(AV_Eng * 0.03) + 150
+  image_file Animator\Hud\Needle.dds
+END_ENTITY hud_image Tachometer (Needle)
+#ENDMYellow
+
+
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { HUD Gauges } Tachometer
+#Library : Generic Data Group (More)
+#DataSet : Tachometer
+#Category: HUD Gauges
+#FileID  : GenGrpM_277d8d79-9b75-40e4-8895-5d7411236508
+#Product : CarSim 2020.0
+#VehCode Generic Group (More)
+
+END

@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName CarSim Run Control`Variable Effective Rolling Radius`Tire Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c7bcaa2b-2ecf-4342-85e6-0400a3d10db6
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_6d46c903-bdaf-455b-ac4b-913ddd45782a.par
+#BlueLink12 Models: Simulink`Variable Effective Rolling Radius` Tire Kinematics` , Models`Simlink_6d46c903-bdaf-455b-ac4b-913ddd45782a
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_0b641a02-ec98-4cbe-b074-222a78036d64.par
+#BlueLink15 Plot: Setup`RRE` Tire Kinematics` , Plot`Plot_0b641a02-ec98-4cbe-b074-222a78036d64
+
+PARSFILE Plot\Setup\Plot_71df6f9d-5f7f-43e1-a5d7-d556dc8678ab.par
+#BlueLink16 Plot: Setup`Slip Ratios: Lagged` Tire Kinematics` , Plot`Plot_71df6f9d-5f7f-43e1-a5d7-d556dc8678ab
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink17 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+
+SPECIAL_PARSFILE Runs\Run_6cb07365-85a3-4a3b-95f9-c5c844687601.par
+#BlueLink23 CarSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_6cb07365-85a3-4a3b-95f9-c5c844687601
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Variable Effective Rolling Radius <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE Variable Effective Rolling Radius
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback performs a double lane change maneuver at 120 km/h.
+#
+#CarSim supports the capability to change the effective rolling radius of the tires via import variables as the simulation proceeds. In this example, a linked Simulink model is used to calculate the effective rolling radii as a function of the tire vertical forces and inclination angles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } Variable Effective Rolling Radius
+#Library : CarSim Run Control
+#DataSet : Variable Effective Rolling Radius
+#Category: Tire Models
+#FileID  : Run_c7bcaa2b-2ecf-4342-85e6-0400a3d10db6
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

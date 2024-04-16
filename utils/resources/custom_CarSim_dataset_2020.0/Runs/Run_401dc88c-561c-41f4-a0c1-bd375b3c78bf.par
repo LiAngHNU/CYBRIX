@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName CarSim Run Control`AEB  CCRb: - 2 m/s2, 12 m`AEB: Automated Emergency Braking
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_401dc88c-561c-41f4-a0c1-bd375b3c78bf
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_a9a29c8e-4050-45dd-a1b0-68322cea8073.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 10 El, 6.25 m` Vehicle Reference` , Animator camera`Camera_a9a29c8e-4050-45dd-a1b0-68322cea8073
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_4b7f213e-0859-4cc6-a796-7aa65a81b110.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`E-Class, Sedan w/ FCW Sensor` E-Class` , Math Model`VehLoad_4b7f213e-0859-4cc6-a796-7aa65a81b110
+
+PARSFILE Procedures\Proc_296b55a9-0555-409f-85d7-26e551019b18.par
+#BlueLink28 Procedures`AEB Single Test: CCRb` AEB: Automated Emergency Braking` , Procedure`Proc_296b55a9-0555-409f-85d7-26e551019b18
+
+PARSFILE Control\Speed_t\SpdTime_d0416e8a-956a-459b-918e-0dc16c204214.par
+#BlueLink9 Control: Speed (Closed Loop) Using Target Speed`50 to 0, -2 m/s/s, ISPEED = 2` AEB CCRb Target Speed` , Miscellaneous`SpdTime_d0416e8a-956a-459b-918e-0dc16c204214
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_06150ef4-15e0-4019-ba8d-3cb46f38fa95.par
+#BlueLink15 Plot: Setup`AEB: Booleans` ADAS and AEB Alerts and Commands` , Plot`Plot_06150ef4-15e0-4019-ba8d-3cb46f38fa95
+
+PARSFILE Plot\Setup\Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed.par
+#BlueLink16 Plot: Setup`Distances for Closest 2 Objects, Sensor 1` ADAS Sensor Detections` , Plot`Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed
+
+PARSFILE Plot\Setup\Plot_7e3ea4e2-d549-4687-b106-3f1bacbc7a48.par
+#BlueLink17 Plot: Setup`AEB: Longitudinal Speeds` ADAS and AEB Alerts and Commands` , Plot`Plot_7e3ea4e2-d549-4687-b106-3f1bacbc7a48
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title AEB  CCRb: - 2 m/s2, 12 m <AEB: Automated Emergency Braking>
+CATEGORY AEB: Automated Emergency Braking 
+DATASET_TITLE AEB  CCRb: - 2 m/s2, 12 m
+#MiscYellow0
+START_DISTANCE = 12; m
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#AEB : Autonomous Emergency Braking
+#EVT : Euro Vehicle Target
+#VUT : Vehicle Under Test
+#FCW : Forward Collision Warning
+#CCRb : Car-to-Car Rear, Braking EVT
+#
+#This example is based on a test scenario published by Euro NCAP for AEB systems. A target is moving at 50 km/h and decelerates at 2 m/s^2. The VUT is trailing with a distance of 12 m.
+#
+#The EVT speed is defined with an output parameter Vx_EVT that can be set as a constant or managed with an equation.
+#
+#Set START_DISTANCE in the Misc. yellow field on the Run Control screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { AEB: Automated Emergency Braking } AEB  CCRb: - 2 m/s2, 12 m
+#Library : CarSim Run Control
+#DataSet : AEB  CCRb: - 2 m/s2, 12 m
+#Category: AEB: Automated Emergency Braking
+#FileID  : Run_401dc88c-561c-41f4-a0c1-bd375b3c78bf
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

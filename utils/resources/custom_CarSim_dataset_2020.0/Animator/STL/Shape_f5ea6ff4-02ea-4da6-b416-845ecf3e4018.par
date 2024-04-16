@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Gooseneck: Brake Lights`Trailers
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trailers\Gooseneck_Trailer\brakes_on.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_OFFSET_Y 0
+SET_OFFSET_Z -0.2
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_bb0883f7-efd8-4834-88f1-fa714ece34aa.par
+#BlueLink2 Animator: Camera Setup`Rear View - Trailers` Shape Preview` , Video Camera`Camera_bb0883f7-efd8-4834-88f1-fa714ece34aa
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_f5ea6ff4-02ea-4da6-b416-845ecf3e4018.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trailers } Gooseneck: Brake Lights
+#Library : Animator: Shape File Link
+#DataSet : Gooseneck: Brake Lights
+#Category: Trailers
+#FileID  : Shape_f5ea6ff4-02ea-4da6-b416-845ecf3e4018
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

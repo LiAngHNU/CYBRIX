@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Steering Col. Damping Trq vs Steer Angle`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_ColVis, Steer_SW
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steering Col. Damping Trq vs Steer Angle
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steering Col. Damping Trq vs Steer Angle
+#Library : Plot: Setup
+#DataSet : Steering Col. Damping Trq vs Steer Angle
+#Category: Steering
+#FileID  : Plot_e2ac6f8a-ea5d-45ff-9aa2-273d10b05c73
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`N. This Vehicle PASSED the Test`Sine with Dwell
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 t_event
+*VALUE1 3.7
+*SPEED 80
+#MiscYellow0
+ESC_OK = 1;
+! For Simulink/LabVIEW/new Wrapper
+ESC_FAIL = 0;
+#ENDMYellow
+
+PARSFILE Events\Events_7f9cda4f-c5c0-4182-81bc-a0f95ff0366d.par
+#BlueLink15 Events`O. Wait 0.5 s and Stop` Sine with Dwell` , Miscellaneous`Events_7f9cda4f-c5c0-4182-81bc-a0f95ff0366d
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset when the vehicle successfully completes the second sequence of Sine with Dwell tests.
+#
+#It sets a parameter ESC_OK to 1, and sets an export variable ESC_FAIL to 0. ESC_OK is written in the echo file at the end of the run; ESC_FAIL is exported when the Simulink ESC model is used.
+#
+#There can be pending events when this dataset is loaded, so the box is checked to clear them.
+#
+#This includes a link to dataset O, which causes the simulation to run an additional 0.5 s to allow Simulink to display the result.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } N. This Vehicle PASSED the Test
+#Library : Events
+#DataSet : N. This Vehicle PASSED the Test
+#Category: Sine with Dwell
+#FileID  : Events_39c363a3-8a7a-4eb5-9456-c867afe46689
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

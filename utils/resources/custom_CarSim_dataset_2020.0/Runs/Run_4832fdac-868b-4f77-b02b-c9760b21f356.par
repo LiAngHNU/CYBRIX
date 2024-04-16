@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName CarSim Run Control`Scene Builder: OpenDRIVE Preview`Scene Import
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_4832fdac-868b-4f77-b02b-c9760b21f356
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan` D-Class` , Math Model`Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89
+
+PARSFILE Procedures\Proc_3a191b7f-80bd-4e4a-9512-1c56ee7d589f.par
+#BlueLink28 Procedures`OpenDRIVE Procedure` VS Scene Builder` , Procedure`Proc_3a191b7f-80bd-4e4a-9512-1c56ee7d589f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title Scene Builder: OpenDRIVE Preview <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE Scene Builder: OpenDRIVE Preview
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback drives on a road section created using the VS Scene Builder tool (Tools ->VS Scene Builder).
+#
+#The road section is an OpenDRIVE file imported into the VS Scene Builder as a Tile, and the VS Scene Builder data is imported into CarSim using the Scene: External Import screen.
+#
+#Details concerning the road are linked on the Procedure screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Scene Import } Scene Builder: OpenDRIVE Preview
+#Library : CarSim Run Control
+#DataSet : Scene Builder: OpenDRIVE Preview
+#Category: Scene Import
+#FileID  : Run_4832fdac-868b-4f77-b02b-c9760b21f356
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

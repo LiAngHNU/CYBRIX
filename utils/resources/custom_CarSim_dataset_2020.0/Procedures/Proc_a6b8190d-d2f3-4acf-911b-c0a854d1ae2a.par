@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Procedures`Stopping at City Intersection`Road Networks
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 30
+SSTOP 300
+OPT_DIRECTION 0
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+*SSTOP 300
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_f11c27c8-7d18-47ac-9922-9799f383e281.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.25s Single Preview` Constant Position: No Offset` , Steering`StrDM_f11c27c8-7d18-47ac-9922-9799f383e281
+
+PARSFILE Control\Braking\PbkCon_68777c88-3931-4e92-9ce1-871d8f22150a.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Stop while pedestrian crosses` Low Speed Maneuvers` , Braking`PbkCon_68777c88-3931-4e92-9ce1-871d8f22150a
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_t\SpdTime_f68e4202-abaa-46a0-83c4-5967ed9b078a.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`City Intersection, Stop for Pedestrian` Speed vs Station` , Speed vs. time`SpdTime_f68e4202-abaa-46a0-83c4-5967ed9b078a
+
+PARSFILE Roads\3D_Road\Road_34201660-ffbd-4778-81a3-82b34616d43e.par
+#BlueLink0 Road: 3D Surface (All Properties)`City Intersection` VS Scene Builder` , Miscellaneous`Road_34201660-ffbd-4778-81a3-82b34616d43e
+
+PARSFILE Generic\VS_commands\GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3
+
+PARSFILE Generic\VS_commands\GenVS_9adae0f9-c659-4690-8e88-e92525112141.par
+#BlueLink9 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_9adae0f9-c659-4690-8e88-e92525112141
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink10 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+
+LOG_ENTRY Used Dataset: Procedures; { Road Networks } Stopping at City Intersection
+#Library : Procedures
+#DataSet : Stopping at City Intersection
+#Category: Road Networks
+#FileID  : Proc_a6b8190d-d2f3-4acf-911b-c0a854d1ae2a
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

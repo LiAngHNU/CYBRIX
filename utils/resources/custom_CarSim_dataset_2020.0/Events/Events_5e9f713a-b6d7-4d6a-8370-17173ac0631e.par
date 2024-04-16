@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Events`A. Go Into Right Turn`3-Point Turn
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Station
+*VALUE1 4
+MAKE_EVENT Station > 4 ; Events\Events_102b8a52-5383-4954-b95b-6aa6115c03be.par
+#BlueLink0 Events`B. Maintain turn speed` 3-Point Turn` , Events`Events_102b8a52-5383-4954-b95b-6aa6115c03be
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle speed controller with preview will slow down to make the turn. Before it can speed up, an event will be triggered at Station = 4m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { 3-Point Turn } A. Go Into Right Turn
+#Library : Events
+#DataSet : A. Go Into Right Turn
+#Category: 3-Point Turn
+#FileID  : Events_5e9f713a-b6d7-4d6a-8370-17173ac0631e
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

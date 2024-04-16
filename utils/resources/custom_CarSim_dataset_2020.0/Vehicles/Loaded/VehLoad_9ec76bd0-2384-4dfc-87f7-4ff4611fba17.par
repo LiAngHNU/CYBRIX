@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`C-Class (Motion Sensors, Trace Lines)`C-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_4ada0302-e6b8-4e96-9f64-7278777bade8.par
+#BlueLink0 Vehicle: Assembly`C-Class, Hatchback (No Body Shape)` C-Class` , Lead Unit`Vehicle_4ada0302-e6b8-4e96-9f64-7278777bade8
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Output\Sensors\MoSen_89a85f8c-c160-4e32-a461-d07f23eec8c6.par
+#BlueLink1 Positions, Velocities, and Accelerations`SM Origin, SM CG, LF Corner, LF WC` Animated Trace Lines` , Miscellaneous`MoSen_89a85f8c-c160-4e32-a461-d07f23eec8c6
+
+PARSFILE Generic\Links\GenLink_82c7c1bb-c659-4f00-95dc-27582cf68dca.par
+#BlueLink2 Generic Group of Links`Trace Lines: SM CG, LF Corner, LF WC` Animated Trace Lines` , Miscellaneous`GenLink_82c7c1bb-c659-4f00-95dc-27582cf68dca
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_4ada0302-e6b8-4e96-9f64-7278777bade8.png
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { C-Class } C-Class (Motion Sensors, Trace Lines)
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : C-Class (Motion Sensors, Trace Lines)
+#Category: C-Class
+#FileID  : VehLoad_9ec76bd0-2384-4dfc-87f7-4ff4611fba17
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

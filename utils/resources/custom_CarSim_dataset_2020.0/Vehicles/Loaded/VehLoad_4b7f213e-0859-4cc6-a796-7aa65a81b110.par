@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`E-Class, Sedan w/ FCW Sensor`E-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f.par
+#BlueLink0 Vehicle: Assembly`E-Class, Sedan` E-Class` , Lead Unit`Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Sensors_Traffic\Radar\Radar_d421ce7f-d0e2-438a-a2b2-efc39d937166.par
+#BlueLink2 ADAS Sensors for Range and Tracking`FCW & AEB` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_d421ce7f-d0e2-438a-a2b2-efc39d937166
+
+PARSFILE Generic\VS_commands\GenVS_2a807aaf-6495-4810-a89e-064605a3bd3d.par
+#BlueLink3 Generic VS Commands`Euro NCAP: FCW Booleans & Alert` ADAS Support` , Miscellaneous`GenVS_2a807aaf-6495-4810-a89e-064605a3bd3d
+
+PARSFILE Generic\VS_commands\GenVS_12890b1d-e551-4dba-8cc2-f0367f4d4b2d.par
+#BlueLink4 Generic VS Commands`AEB: Sensor Booleans & Pbk_Con` ADAS Support` , Miscellaneous`GenVS_12890b1d-e551-4dba-8cc2-f0367f4d4b2d
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+
+#EMBEDDED_NOTES
+#E-Class Sedan with five acceleration and rate sensors. The acceleration and rate sensors simulate the accelerometers and rate sensors you would instrument a test vehicle with.
+#
+#The Acceleration and Rate Sensors can be placed on the Sprung Mass, Solid Axle, Knuckle (non-spinning unsprung mass), and Engine body (if using the Engine Mount option).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { E-Class } E-Class, Sedan w/ FCW Sensor
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : E-Class, Sedan w/ FCW Sensor
+#Category: E-Class
+#FileID  : VehLoad_4b7f213e-0859-4cc6-a796-7aa65a81b110
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName CarSim Run Control`Animated Pedestrians in City`VS Visualizer Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_885b290e-fb25-42f9-87e5-1b1fc5540587
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_ec31a2ff-059d-4c4b-96ec-bf9e0e1a6040.par
+#BlueLink0 Animator: Camera Setup`176 Azm, 0 El, 14 m` Vehicle Reference` , Animator camera`Camera_ec31a2ff-059d-4c4b-96ec-bf9e0e1a6040
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_a6b8190d-d2f3-4acf-911b-c0a854d1ae2a.par
+#BlueLink28 Procedures`Stopping at City Intersection` Road Networks` , Procedure`Proc_a6b8190d-d2f3-4acf-911b-c0a854d1ae2a
+
+PARSFILE Generic\Links\GenLink_e915cd44-80a1-4324-9f0f-bc1e4491a20d.par
+#BlueLink9 Generic Group of Links`Animated Pedestrians` ADAS: Moving Objects, incl. Pedestrians` , Miscellaneous`GenLink_e915cd44-80a1-4324-9f0f-bc1e4491a20d
+
+PARSFILE Generic\Group\GenGrp_d721139a-706a-49ad-abe0-2f8008aa3b89.par
+#BlueLink10 Generic Data Group`Traffic Lights for 4-way in City` Traffic Lights` , Miscellaneous`GenGrp_d721139a-706a-49ad-abe0-2f8008aa3b89
+
+PARSFILE Plot\Setup\Plot_522baa22-dd84-4eae-85c9-474511c4df92.par
+#BlueLink15 Plot: Setup`Speed of Moving Objects 1-4` ADAS Sensor Target Properties` , Plot`Plot_522baa22-dd84-4eae-85c9-474511c4df92
+
+PARSFILE Plot\Setup\Plot_b946d405-3c49-42ef-831c-633fcbebe670.par
+#BlueLink16 Plot: Setup`Station of Moving Objects 1-4` ADAS Sensor Target Properties` , Plot`Plot_b946d405-3c49-42ef-831c-633fcbebe670
+
+PARSFILE Plot\Setup\Plot_dab104b1-760c-4bff-9907-78fdf386a9b3.par
+#BlueLink17 Plot: Setup`X Coordinate: X_Obj_1` ADAS Sensor Target Properties` , Plot`Plot_dab104b1-760c-4bff-9907-78fdf386a9b3
+
+PARSFILE Plot\Setup\Plot_386bd694-8e5f-43e0-81fe-f4f8a4619685.par
+#BlueLink18 Plot: Setup`Y Coordinate: Y_Obj_1` ADAS Sensor Target Properties` , Plot`Plot_386bd694-8e5f-43e0-81fe-f4f8a4619685
+
+PARSFILE Plot\Setup\Plot_8b77a420-77c9-46d9-97b2-68be7648867a.par
+#BlueLink19 Plot: Setup`Yaw Angle: YawO_1` ADAS Sensor Target Properties` , Plot`Plot_8b77a420-77c9-46d9-97b2-68be7648867a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Animated Pedestrians in City <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE Animated Pedestrians in City
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The city scene is imported from the VS Scene Builder. It includes multiple paths, including one with a lane change and left turn.
+#
+#The intersection has four traffic lights, one for each direction.
+#
+#The elevation data for the sidewalks is provided by VS Terrain information included automatically in the exported files from the VS Scene Builder
+#
+#The target speed data for the ego vehicle is set up to accommodate stopping and starting at an intersection, including waiting for a crossing pedestrian.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { VS Visualizer Examples } Animated Pedestrians in City
+#Library : CarSim Run Control
+#DataSet : Animated Pedestrians in City
+#Category: VS Visualizer Examples
+#FileID  : Run_885b290e-fb25-42f9-87e5-1b1fc5540587
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

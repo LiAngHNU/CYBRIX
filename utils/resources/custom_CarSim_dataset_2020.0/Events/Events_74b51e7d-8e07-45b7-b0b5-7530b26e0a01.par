@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Events`D. Release Brakes, Check for Roll-back`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 t_event
+*NAME2 S_Limit
+*VALUE1 5
+*VALUE2 -rbd_mult*Roll_Back_Distance
+#MiscYellow0
+TSTART_T_EVENT = T 
+TSTART_BRAKES = T
+S_CURRENT = STATION;
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_fd9ef75a-c7fa-48ec-a814-9563f688340e.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Smooth Brake Release: 1 to 0 MPa` Sigmoid` , Miscellaneous`PbkCon_fd9ef75a-c7fa-48ec-a814-9563f688340e
+
+#MiscYellow1
+PBK_CON_GAIN = 1; ! Gain on ouput of Master Cylinder control table
+TSCALE_PBK_CON = 1.5; ! Gain to adjust the Master Cylinder release time
+
+rb_init = 1; ! Roll-back Check Initiated
+! Roll-back Check: Initiated = 1;
+! Roll-back Check: Initiation Complete = 0;
+#ENDMYellow
+
+MAKE_EVENT t_event > 5 ; Events\Events_8bb01dad-4072-4ebe-8449-31d4ea28ab73.par
+#BlueLink0 Events`E. Reapply Brakes, Parking Brake still on` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_8bb01dad-4072-4ebe-8449-31d4ea28ab73
+
+MAKE_EVENT S_Limit < -rbd_mult*Roll_Back_Distance ; Events\Events_815cb264-1ac5-46c8-af3b-f93e6fc4764e.par
+#BlueLink1 Events`M. Roll-back Limit Reached` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_815cb264-1ac5-46c8-af3b-f93e6fc4764e
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } D. Release Brakes, Check for Roll-back
+#Library : Events
+#DataSet : D. Release Brakes, Check for Roll-back
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_74b51e7d-8e07-45b7-b0b5-7530b26e0a01
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

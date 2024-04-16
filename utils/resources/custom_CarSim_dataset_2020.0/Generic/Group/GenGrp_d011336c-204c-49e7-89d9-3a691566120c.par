@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Generic Data Group`3 Lanes Fwd, 3 Traffic Groups for ACC`ADAS: Traffic for ACC & FCW
+#VehCode Generic Group
+#MiscYellow0
+SET_ILTARG_FOR_ID 0
+ltarg_constant = 2
+set_description ltarg_id ...
+  Lateral target for vehicles in the same lane
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_4b4574ee-6a0c-4483-9f6f-3092620bc8b2.par
+#BlueLink0 Multiple Moving Objects`2 Vehicles, Variable Speed for AAC` Traffic Vehicles (Forward)` , Link 1`TMotion_4b4574ee-6a0c-4483-9f6f-3092620bc8b2
+
+
+#MiscYellow1
+SET_ILTARG_FOR_ID 0
+ltarg_constant = -2
+set_description ltarg_id ...
+  Lateral target for slower vehicles
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_0a456a5c-1236-4b54-a1ea-5604ffdc2cfb.par
+#BlueLink1 Multiple Moving Objects`6 Vehicles, Vx * 0.95, w/ Specs` Traffic Vehicles (Forward)` , Link 2`TMotion_0a456a5c-1236-4b54-a1ea-5604ffdc2cfb
+
+
+#MiscYellow2
+SET_ILTARG_FOR_ID 0
+ltarg_constant = 6
+set_description ltarg_id ...
+  Lateral target for passing vehicles
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_057344c9-e7e7-4b08-99a4-4d6b2ca532b5.par
+#BlueLink2 Multiple Moving Objects`6 Vehicles, Vx * 1.1, ILTARG` Traffic Vehicles (Forward)` , Link 3`TMotion_057344c9-e7e7-4b08-99a4-4d6b2ca532b5
+
+
+PARSFILE Control\Speed_t\SpdTime_26c077aa-689c-4a04-9d1f-8d53a9c20b10.par
+#BlueLink3 Control: Speed (Closed Loop) Using Target Speed`Traffic Speed for ACC` Traffic Vehicles and Sensor Targets` , Link 4`SpdTime_26c077aa-689c-4a04-9d1f-8d53a9c20b10
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset assembles some traffic vehicles in the same lane as the Ego vehicle, some in the right lane going slower. and some in the passing lane going faster.
+#
+#The moving objects from link 1 follow a target speed defined in link 4. The other vehicles have speeds based on the current speed of the Ego Vehicle, Vx.
+#
+#The lateral positions of the moving objects are set using the LTARG function, with datasets specified with ltarg_constant. Descriptions are specified that will appear in the Echo file.  A new command SET_ILTARG_FOR_ID adds LTARG datasets.
+#
+#2018.1: Removed ISPEED and N_SPEED_TARGET; use parameters for LTARG IDs.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic for ACC & FCW } 3 Lanes Fwd, 3 Traffic Groups for ACC
+#Library : Generic Data Group
+#DataSet : 3 Lanes Fwd, 3 Traffic Groups for ACC
+#Category: ADAS: Traffic for ACC & FCW
+#FileID  : GenGrp_d011336c-204c-49e7-89d9-3a691566120c
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

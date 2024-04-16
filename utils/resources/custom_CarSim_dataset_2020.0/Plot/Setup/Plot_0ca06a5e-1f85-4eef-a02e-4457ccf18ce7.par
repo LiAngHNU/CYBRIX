@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Sprung Mass Origin Vertical Position`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Zo, Time
+PLOTCHANNELS Zo_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Sprung Mass Origin Vertical Position
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Sprung Mass Origin Vertical Position
+#Library : Plot: Setup
+#DataSet : Sprung Mass Origin Vertical Position
+#Category: Tracking
+#FileID  : Plot_0ca06a5e-1f85-4eef-a02e-4457ccf18ce7
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

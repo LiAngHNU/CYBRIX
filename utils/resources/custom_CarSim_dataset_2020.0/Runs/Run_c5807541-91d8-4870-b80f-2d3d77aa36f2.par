@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName CarSim Run Control`TruckSim Traffic Objects - Tractor Trailers`VS Visualizer Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c5807541-91d8-4870-b80f-2d3d77aa36f2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_7b38c5b4-f86e-418e-8df3-65488b882e05.par
+#BlueLink28 Procedures`Parking Lot: One Lap` Parking Lot` , Procedure`Proc_7b38c5b4-f86e-418e-8df3-65488b882e05
+
+PARSFILE Generic\Links\GenLink_c3455b10-b4db-4216-8223-137e4e84be84.par
+#BlueLink9 Generic Group of Links`Parking Lot: Tractor Trailers` Animator Objects: New and Common Shapes` , Miscellaneous`GenLink_c3455b10-b4db-4216-8223-137e4e84be84
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title TruckSim Traffic Objects - Tractor Trailers <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE TruckSim Traffic Objects - Tractor Trailers
+#MiscYellow0
+PATH_ID_DM = 1001
+CURRENT_ROAD_ID = 1002
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback drives in a parking lot with a variety of animator objects representing commercial vehicles.
+#
+#* Day Cab (2A)
+#* Day Cab (3A)
+#* Sleeper Cab (3A)
+#* European Cab-Over (2A)
+#* European Cab-Over (3A)
+#* Conventional box trailer (2A)
+#* Lowboy Trailer (2A)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { VS Visualizer Examples } TruckSim Traffic Objects - Tractor Trailers
+#Library : CarSim Run Control
+#DataSet : TruckSim Traffic Objects - Tractor Trailers
+#Category: VS Visualizer Examples
+#FileID  : Run_c5807541-91d8-4870-b80f-2d3d77aa36f2
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

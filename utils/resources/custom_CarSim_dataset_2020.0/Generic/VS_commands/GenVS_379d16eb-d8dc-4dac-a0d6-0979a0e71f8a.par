@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Generic VS Commands`FCW  Alert and AEB control Update Path`ADAS Support
+#VehCode VS Commands, FCW
+
+#MiscYellow0
+! Units for acceleration are m/s2 to match Euro NCAP specifications
+DEFINE_PARAMETER Ax_Alert = 3 ;m/s2; Deceleration level to show FCW alert
+
+! Ax_Calc is needed for avoid collision, given relative speed and distance from sensor
+DEFINE_OUTPUT Ax_Calc = MagS<<s>>_1*SpdS<<s>>_1^2/(2*DisS<<s>>_1); m/s2 ; ...
+   Decel needed to avoid collision
+
+! Compare Ax_Calc and Ax_Alert
+DEFINE_OUTPUT Show_FCW = 0; - ;  Boolean: show FCW icon
+EQ_OUT Show_FCW = MagS<<s>>_1 &  SpdS<<s>>_1 < 0 & Ax_Calc > Ax_Alert
+
+! Units for acceleration are m/s2 to match Euro NCAP specifications
+DEFINE_PARAMETER Ax_Brake = 4 ;m/s2; Deceleration level to apply brakes
+
+! Compare Ax_Calc and Ax_Brake
+DEFINE_OUTPUT ApplyAEB = 0; - ;  Boolean: apply brakes
+EQ_OUT ApplyAEB = MagS<<s>>_1 & SpdS<<s>>_1 < 0 & Ax_Calc > Ax_Brake
+
+! Replace master cylinder pressure with equation
+PBK_CON_EQUATION 5000000*ApplyAEB
+
+OPT_VMIN -1 ! never stop
+
+
+EQ_OUT OPT_SC = 3*Not(ApplyAEB) ! turn off speed control if braking
+#ENDMYellow
+
+*MODELCODE VS Commands, FCW
+PARSFILE Animator\HUD\HUD_f962b882-e93b-494f-8154-f035fc781271.par
+#BlueLink0 Animator: HUD`FCW Alert (small) Update path` ADAS Alerts` , Miscellaneous`HUD_f962b882-e93b-494f-8154-f035fc781271
+
+PARSFILE Plot\Setup\Plot_7dadda40-7138-4c4d-bc66-73caadcece25.par
+#BlueLink3 Plot: Setup`AEB: Ax_Calc` ADAS and AEB Alerts and Commands` , Plot`Plot_7dadda40-7138-4c4d-bc66-73caadcece25
+
+PARSFILE Plot\Setup\Plot_06150ef4-15e0-4019-ba8d-3cb46f38fa95.par
+#BlueLink4 Plot: Setup`AEB: Booleans` ADAS and AEB Alerts and Commands` , Plot`Plot_06150ef4-15e0-4019-ba8d-3cb46f38fa95
+
+
+#EMBEDDED_NOTES
+#Logic to generate a forward collision warning (FCW) using the current sensor <<s>> and a parameter for the acceptable deceleration.
+#
+#The output Ax_Calc is an estimate of the deceleration needed to avoid a collision, based on sensor Distance and Speed detection signals. It is also used to calculate the value for another Boolean variable ApplyAEB that is 1 when the brakes should be applied via AEB.
+#
+#Ax_Calc is compared to the threshold parameter Ax_Alert to set a Boolean parameter Show_FCW, which is linked to an HUD icon.
+#Logic to generate a command to intervene to prevent a collision.
+#
+#An equation is included for open-loop brake pressure via the configurable function PBK_CON.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } FCW  Alert and AEB control Update Path
+#Library : Generic VS Commands
+#DataSet : FCW  Alert and AEB control Update Path
+#Category: ADAS Support
+#FileID  : GenVS_379d16eb-d8dc-4dac-a0d6-0979a0e71f8a
+#Product : CarSim 2020.0
+#VehCode VS Commands, FCW
+
+END

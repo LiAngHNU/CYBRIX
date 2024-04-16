@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Events`Ensure Avoidance`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 1    
+
+#RingCtrl0 >
+#RingCtrl1 ZERO ~=
+#RingCtrl10 2
+#RingCtrl11 4
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 t_event
+*NAME2 ObjDtct
+*VALUE1 .005
+*VALUE2 ObjDtct
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT t_event > .005 ; Events\Events_fd627ae8-7976-4d33-877b-60966d2bb401.par
+#BlueLink0 Events`Wait to go` ADAS Detection` , Events`Events_fd627ae8-7976-4d33-877b-60966d2bb401
+
+DEFINE_EVENT ObjDtct ; Events\Events_4453ad56-51ea-4e6f-913b-f7bff8720bed.par
+#BlueLink1 Events`Look for Objects` ADAS Detection` , Events`Events_4453ad56-51ea-4e6f-913b-f7bff8720bed
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#When the sensors switch targets, Sensor Velocity values can spike. This logic attempts to ensure that the detected collision is not a spike in detected values.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Ensure Avoidance
+#Library : Events
+#DataSet : Ensure Avoidance
+#Category: ADAS Detection
+#FileID  : Events_6457ae0f-84a8-416b-a6d9-f376dd0ffd0a
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

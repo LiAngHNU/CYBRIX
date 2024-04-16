@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Highway Scene`VS Scene Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_7c10e381-52d8-46ee-863f-2d01df2eec72.png
+#CheckBox0 0    
+
+PARSFILE Roads\ExScene\SceneImp_605f98cd-2d31-4159-a20f-900e9bfec5f9.par
+#BlueLink0 Scene: External Import`Highway Scene` VS Scene Builder` , Reference Path`SceneImp_605f98cd-2d31-4159-a20f-900e9bfec5f9
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_7c10e381-52d8-46ee-863f-2d01df2eec72.ani
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { VS Scene Builder } Highway Scene
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Highway Scene
+#Category: VS Scene Builder
+#FileID  : Road_7c10e381-52d8-46ee-863f-2d01df2eec72
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

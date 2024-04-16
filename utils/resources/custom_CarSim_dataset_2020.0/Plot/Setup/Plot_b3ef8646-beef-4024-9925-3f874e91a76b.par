@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Speeds`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx_L1, Time
+PLOTCHANNELS Vx_R1, Time
+PLOTCHANNELS Vx_L2, Time
+PLOTCHANNELS Vx_R2, Time
+PLOTCHANNELS Vx_L3, Time
+PLOTCHANNELS Vx_R3, Time
+PLOTCHANNELS Vx_L4, Time
+PLOTCHANNELS Vx_R4, Time
+PLOTCHANNELS Vx, Time
+PLOTCHANNELS Vx_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Speeds
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Wheel Speeds
+#Library : Plot: Setup
+#DataSet : Wheel Speeds
+#Category: Braking
+#FileID  : Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

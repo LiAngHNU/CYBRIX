@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Instant CG`Tire Force and Moment
+ADD_REFERENCE_FRAME Frame_a627d47a-9ed6-4231-80b8-f5461f0a02f3
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xcg_TM
+SET_Y_NAME Ycg_TM
+SET_Z_NAME Zcg_TM
+SET_YAW_NAME acg_tot_yaw_abs
+SET_FRAME_SCALE_X_NAME acg_tot_mag
+
+WRT_Xcg_TM
+ANI_Xcg_TM
+WRT_Ycg_TM
+ANI_Ycg_TM
+WRT_Zcg_TM
+ANI_Zcg_TM
+WRT_acg_tot_yaw_abs
+ANI_acg_tot_yaw_abs
+WRT_acg_tot_mag
+ANI_acg_tot_mag
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Tire Force and Moment } Instant CG
+#Library : Animator: Reference Frame
+#DataSet : Instant CG
+#Category: Tire Force and Moment
+#FileID  : Frame_a627d47a-9ed6-4231-80b8-f5461f0a02f3
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

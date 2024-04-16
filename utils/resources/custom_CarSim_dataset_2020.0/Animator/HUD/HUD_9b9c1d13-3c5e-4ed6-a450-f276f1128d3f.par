@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Animator: HUD`Collision Alert  - Simple Path Planning`Simple Path Planning
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 1    
+
+#RingCtrl0 2
+#RingCtrl1 18
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl4 1
+#RingCtrl5 5
+#RingCtrl6 0
+#RingCtrl7 0
+#RingCtrl8 0
+*TITLE_1 Collision time at:
+*LOCX_1 4.5
+*LOCY_1 2.8
+*SCALE_1 .6
+*VAR_NAME_1 Collision_time
+*PREC1 2
+*LOCX_2 0
+*LOCY_2 0
+*VAR_NAME_2 Collision_time
+*COLOR_2 1 0 0
+*COLOR_4 0 0 0
+*VAR_NAME_5 Station
+
+
+#Selection 18 for Icon 0
+#Selection_1 18 for Icon
+#Selection_2 Title: Collision time at: AlX 0 AlY 0
+#Selection_3 Scale 1.000000 locX 90 locY 28
+#Selection_4 Fixed: 1 VarName: Collision_time  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+ANI_Collision_time
+WRT_Collision_time
+ADD_ENTITY hud_text Text Output
+location 90 28 18 18
+align_x left
+align_y top
+size_mode absolute
+place_mode absolute
+# var name is Collision_time
+prefix Collision time at:
+min_width_prefix 20
+value Collision_time
+precision 2
+red 0
+green 0
+blue 0
+END_ENTITY hud_text Text Output
+#Selection 5 for Icon 1
+#Selection_1 5 for Icon
+#Selection_2 Title:  AlX 0 AlY 0
+#Selection_3 Scale 0.666667 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: Collision_time  ColorStr: 1 0 0
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Brake Fill BG
+location 0 0 66 66
+align_x left
+align_y top
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_OFF.dds
+END_ENTITY hud_image Brake Fill BG
+ANI_Collision_time
+WRT_Collision_time
+ADD_ENTITY hud_image Brake Fill BG
+location 0 0 66 66
+red 1
+green 0
+blue 0
+align_x left
+align_y top
+size_mode absolute
+place_mode absolute
+opacity Collision_time*0.65
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_ON.dds
+END_ENTITY hud_image Brake Fill BG
+
+#EMBEDDED_NOTES
+#Forward collision warning, located on the left edge of the window.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: HUD; { Simple Path Planning } Collision Alert  - Simple Path Planning
+#Library : Animator: HUD
+#DataSet : Collision Alert  - Simple Path Planning
+#Category: Simple Path Planning
+#FileID  : HUD_9b9c1d13-3c5e-4ed6-a450-f276f1128d3f
+#Product : CarSim 2020.0
+#VehCode HUD
+
+END

@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Events`CCRb B. Monitor Speed; OPT_SC = 5`Euro NCAP AEB Testing
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 vx
+*NAME2 vx
+*VALUE1 vx_evt
+*VALUE2 0
+#MiscYellow0
+OPT_SC = 5
+EQ_IN IMP_AX_SC = -20 ! m/s^2
+#ENDMYellow
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+MAKE_EVENT vx < vx_evt ; Events\Events_fb90a8dd-0fe8-475f-bbeb-ad50dd550e2f.par
+#BlueLink0 Events`CCRb C. Apply Brakes and Stop` Euro NCAP AEB Testing` , Events`Events_fb90a8dd-0fe8-475f-bbeb-ad50dd550e2f
+
+MAKE_EVENT vx < 0 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink1 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#In this variant, maximum braking is requested by switching the speed controller to acceleration control mode (OPT_SC = 5) and requesting a large (~2 g) deceleration.
+#
+#The import variable for the acceleration command was activated on the Run Control screen.
+#
+#The simulation will stop if Vx reaches zero.
+#
+#If the Vx is less than Vx_EVT, the vehicle will apply the brakes and stop.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Euro NCAP AEB Testing } CCRb B. Monitor Speed; OPT_SC = 5
+#Library : Events
+#DataSet : CCRb B. Monitor Speed; OPT_SC = 5
+#Category: Euro NCAP AEB Testing
+#FileID  : Events_6eed7c3d-0cd2-4b77-beb0-952b770f6818
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

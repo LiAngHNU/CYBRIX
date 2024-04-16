@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Road Wheel Steer Angles`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_L1, Time
+PLOTCHANNELS Steer_R1, Time
+PLOTCHANNELS Steer_L2, Time
+PLOTCHANNELS Steer_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road Wheel Steer Angles
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Road Wheel Steer Angles
+#Library : Plot: Setup
+#DataSet : Road Wheel Steer Angles
+#Category: Steering
+#FileID  : Plot_6480bda8-8a2c-47e4-af8c-16140f47b086
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

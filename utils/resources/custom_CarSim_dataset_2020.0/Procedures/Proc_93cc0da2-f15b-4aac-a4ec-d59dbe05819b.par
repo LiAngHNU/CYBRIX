@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Procedures`Deer Crossing`Road Networks
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 850
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP 3000
+OPT_DIRECTION 0
+*SPEED 120
+*TSTOP 15
+*TSTART 0
+*SSTART 850
+*SSTOP 3000
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Deer Crossing
+SPEED_TARGET_CONSTANT 120
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_d83f93e2-ff10-4aaa-b6f2-29d55db3b32e.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.5s Preview (No Path Line)` Constant Position: No Offset` , Steering`StrDM_d83f93e2-ff10-4aaa-b6f2-29d55db3b32e
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_7c10e381-52d8-46ee-863f-2d01df2eec72.par
+#BlueLink0 Road: 3D Surface (All Properties)`Highway Scene` VS Scene Builder` , Miscellaneous`Road_7c10e381-52d8-46ee-863f-2d01df2eec72
+
+PARSFILE Generic\VS_commands\GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink9 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+PARSFILE Generic\VS_commands\GenVS_9adae0f9-c659-4690-8e88-e92525112141.par
+#BlueLink10 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_9adae0f9-c659-4690-8e88-e92525112141
+
+PARSFILE Generic\VS_commands\GenVS_9f9685b8-f7ef-4f7b-8a38-e94795d22bb5.par
+#BlueLink11 Generic VS Commands`Sensor and Target Basics` Plot Groups` , Plot`GenVS_9f9685b8-f7ef-4f7b-8a38-e94795d22bb5
+
+
+LOG_ENTRY Used Dataset: Procedures; { Road Networks } Deer Crossing
+#Library : Procedures
+#DataSet : Deer Crossing
+#Category: Road Networks
+#FileID  : Proc_93cc0da2-f15b-4aac-a4ec-d59dbe05819b
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

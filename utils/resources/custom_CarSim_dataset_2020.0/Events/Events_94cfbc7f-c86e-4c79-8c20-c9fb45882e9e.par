@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`A. Wait 2.5 sec.`Opt_Engine_Running: Manual Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*VALUE1 2.5
+MAKE_EVENT T > 2.5 ; Events\Events_5a22a856-f009-461b-b3f7-e174897277cd.par
+#BlueLink0 Events`B. Brake to a Stop` Opt_Engine_Running: Manual Transmission` , Events`Events_5a22a856-f009-461b-b3f7-e174897277cd
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Manual Transmission } A. Wait 2.5 sec.
+#Library : Events
+#DataSet : A. Wait 2.5 sec.
+#Category: Opt_Engine_Running: Manual Transmission
+#FileID  : Events_94cfbc7f-c86e-4c79-8c20-c9fb45882e9e
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

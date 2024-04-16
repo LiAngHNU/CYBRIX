@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Procedures`Reverse: Ramp to 0.1 Throttle`Accel. and Brake Testing
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 500
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 0
+*TSTOP 15
+*TSTART 0
+*SSTART 500
+*SSTOP 2235
+
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_73dd8273-cecc-4a62-afb7-b1a8adae1c0c.par
+#BlueLink30 Control: Shifting (Closed Loop)`Reverse` ` , Shifting Control`GearCL_73dd8273-cecc-4a62-afb7-b1a8adae1c0c
+
+PARSFILE Control\Throttle\Throttle_ed7638f9-d334-48f0-b8a2-42036a26c47f.par
+#BlueLink29 Control: Throttle (Open Loop)`Ramp: 0 to 0.1 in 5 sec.` Ramp` , Throttle`Throttle_ed7638f9-d334-48f0-b8a2-42036a26c47f
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink0 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Roads\3D_Road\Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2.par
+#BlueLink1 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2
+
+PARSFILE Plot\Setup\Plot_07737336-620f-4fa5-baca-5458abaf7d80.par
+#BlueLink8 Plot: Setup`Powers in Hybrid Powertrain` Powertrain (Hybrid)` , Plot`Plot_07737336-620f-4fa5-baca-5458abaf7d80
+
+PARSFILE Plot\Setup\Plot_096991e2-726a-4c37-b0ec-6bfbcc66e0c9.par
+#BlueLink9 Plot: Setup`Torques in Hybrid Powertrain` Powertrain (Hybrid)` , Plot`Plot_096991e2-726a-4c37-b0ec-6bfbcc66e0c9
+
+PARSFILE Plot\Setup\Plot_50f46a40-9207-462f-95eb-1f0a9f7660f8.par
+#BlueLink10 Plot: Setup`Wheel Drive Torques - Rear` Powertrain` , Plot`Plot_50f46a40-9207-462f-95eb-1f0a9f7660f8
+
+PARSFILE Plot\Setup\Plot_f04a944d-07f4-45a4-b417-57ea1d7f7463.par
+#BlueLink11 Plot: Setup`Hybrid powertrain mode` Powertrain (Hybrid)` , Plot`Plot_f04a944d-07f4-45a4-b417-57ea1d7f7463
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink12 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b.par
+#BlueLink13 Plot: Setup`Longitudinal Forces` Tire Forces and Moments` , Plot`Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b
+
+PARSFILE Plot\Setup\Plot_57761f47-ff9c-4a69-b8d6-96910bb80979.par
+#BlueLink14 Plot: Setup`Battery remaining level` Powertrain (Hybrid)` , Plot`Plot_57761f47-ff9c-4a69-b8d6-96910bb80979
+
+PARSFILE Plot\Setup\Plot_77579fdf-3ebb-43be-9ef8-4418316c886a.par
+#BlueLink15 Plot: Setup`Spin Rates in Hybrid Powertrain` Powertrain (Hybrid)` , Plot`Plot_77579fdf-3ebb-43be-9ef8-4418316c886a
+
+PARSFILE Plot\Setup\Plot_7251a722-18c9-43db-a324-bd380d275618.par
+#BlueLink16 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7251a722-18c9-43db-a324-bd380d275618
+
+PARSFILE Plot\Setup\Plot_feb438d6-67a5-4250-a093-b907acb3a479.par
+#BlueLink17 Plot: Setup`Trans. Control: Mode` Controls: Driver` , Plot`Plot_feb438d6-67a5-4250-a093-b907acb3a479
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a simple acceleration with reverse mode using Open-Loop controls for the throttle.
+#
+#The vehicle starts from an initial speed of 0 kph and the throttle is ramped from 0% to 10% over a period of 5 seconds with reverse mode.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Accel. and Brake Testing } Reverse: Ramp to 0.1 Throttle
+#Library : Procedures
+#DataSet : Reverse: Ramp to 0.1 Throttle
+#Category: Accel. and Brake Testing
+#FileID  : Proc_c1b78b5d-a742-47ba-9a85-76e595953a49
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

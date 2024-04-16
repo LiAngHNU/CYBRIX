@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Events`D. Front Rim Digs-in`Wind-tripped Rollover
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 roll
+*NAME2 roll
+*NAME3 roll
+*NAME4 pitch
+*NAME5 pitch
+*VALUE1 40
+*VALUE2 40
+*VALUE3 -40
+*VALUE4 40
+*VALUE5 -40
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+mu_ref_y(1,2) 0.3
+R0(1,2) 310
+RRE(1,2) 325
+#ENDMYellow
+
+PARSFILE Wind\Speed\Wind_a1caacd1-6688-4f0b-a0bf-88090bf82fb0.par
+#BlueLink10 Wind Speed`Constant: Zero` Constant` , Miscellaneous`Wind_a1caacd1-6688-4f0b-a0bf-88090bf82fb0
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT roll > 40 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Tire properties are changed to simulate the tire de-beading and the wheel digging into the road surface.
+#
+#The gust of wind stops. When the vehicle trips and rolls, the simulation is over.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Wind-tripped Rollover } D. Front Rim Digs-in
+#Library : Events
+#DataSet : D. Front Rim Digs-in
+#Category: Wind-tripped Rollover
+#FileID  : Events_db0b3a88-319e-4ad5-80f7-bf7cd1a620db
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

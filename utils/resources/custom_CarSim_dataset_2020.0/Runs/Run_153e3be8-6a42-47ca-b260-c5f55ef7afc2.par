@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName CarSim Run Control`EQ_OUT: External Springs DLC`Extended Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_153e3be8-6a42-47ca-b260-c5f55ef7afc2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_438baec3-aba6-4291-94da-76611d384d0b.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: Ext. Springs` E-Class` , Math Model`Vehicle_438baec3-aba6-4291-94da-76611d384d0b
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Generic\VS_commands\GenVS_37472f85-ee41-46a5-8ede-0940884a3e15.par
+#BlueLink10 Generic VS Commands`External Springs define w/ EQ_OUT` External Springs` , Miscellaneous`GenVS_37472f85-ee41-46a5-8ede-0940884a3e15
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_eefcf1ec-79c8-4256-a90f-b400874bcc55.par
+#BlueLink15 Plot: Setup`EQ_DYN vs EQ_OUT: Spring Forces` User-Defined Variables` , Plot`Plot_eefcf1ec-79c8-4256-a90f-b400874bcc55
+
+
+SPECIAL_PARSFILE Runs\Run_929543f1-d805-4596-b016-c92aaed14f88.par
+#BlueLink23 CarSim Run Control`External Springs, DLC` Simulink and LabVIEW Models` , Overlay run or ERD file`Run_929543f1-d805-4596-b016-c92aaed14f88
+
+
+SPECIAL_PARSFILE Runs\Run_446a2675-48ce-4ffa-a89e-74f6f844df15.par
+#BlueLink24 CarSim Run Control`EQ_DYN: External Springs DLC` Extended Models` , Overlay run or ERD file`Run_446a2675-48ce-4ffa-a89e-74f6f844df15
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title EQ_OUT: External Springs DLC <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE EQ_OUT: External Springs DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The VS Command, EQ_DYN, can be used to insert equations that are processed after kinematical equations and before dynamical equations. This example instead uses EQ_OUT to externally define the springs of an E-Class Sedan. The linear spring rates and initial spring forces for each wheel are approximated from the Simulink model tables used to externally define springs for the same vehicle in the first overlaid example. The second overlaid example uses EQ_DYN to calculate the spring forces.
+#
+#The plot included on this screen compares the effects of using EQ_DYN vs EQ_OUT to define the spring forces. The first plot shows a time delay when using EQ_OUT and indicates when the variable is updated across EQ_IN, EQ_DYN, and EQ_OUT calculations.
+#
+#Note:
+#Kinematical equations are used to calculate variables involving position and velocity, including the derivatives of position state variables (translational coordinates and rotation angles).
+#
+#Dynamical equations are used to calculate forces and moments, derivatives of speed state variables (translational and rotational accelerations), and miscellaneous output variables involving forces, moments, and accelerations.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Extended Models } EQ_OUT: External Springs DLC
+#Library : CarSim Run Control
+#DataSet : EQ_OUT: External Springs DLC
+#Category: Extended Models
+#FileID  : Run_153e3be8-6a42-47ca-b260-c5f55ef7afc2
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

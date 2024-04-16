@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Models: Simulink`External Springs`Suspension and Suspension Controls
+#RunMdlFile Extensions\Simulink\Springs\Ext_Springs_CS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Springs\Ext_Springs_CS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_82d4371e-1b4d-468f-b43d-70ba9e137245.par
+#BlueLink0 I/O Channels: Import`Ride Spring Forces` Suspension System: Control and External Models` , Import`Import_82d4371e-1b4d-468f-b43d-70ba9e137245
+
+PARSFILE IO_Channels\O_Channels\Export_7309da5d-bd3f-4ddf-a7c7-b36c32bb9062.par
+#BlueLink1 I/O Channels: Export`Ride Spring Compression` Suspension System: Control and External Models` , Import/Export`Export_7309da5d-bd3f-4ddf-a7c7-b36c32bb9062
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This “Models: Simulink” dataset is linked to a Simulink model that represents the suspension ride springs.
+#
+#The Simulink model calculates the spring forces and this data is imported into CarSim. CarSim calculates the compression of the springs, and this data is returned to Simulink.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Suspension and Suspension Controls } External Springs
+#Library : Models: Simulink
+#DataSet : External Springs
+#Category: Suspension and Suspension Controls
+#FileID  : Simlink_796caa5b-1559-4dd9-9a9b-ff974526d155
+#Product : CarSim 2020.0
+#VehCode 
+
+END

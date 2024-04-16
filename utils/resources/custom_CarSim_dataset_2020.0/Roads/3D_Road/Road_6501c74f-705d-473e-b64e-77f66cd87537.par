@@ -1,0 +1,285 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Highway Merge Lane`Variable Width Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_6501c74f-705d-473e-b64e-77f66cd87537.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Highway Merge Lane
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map_V_Wdth\VarWidZ_4910c716-79b0-49e6-89f8-e2f4ab572902.par
+#BlueLink2 Road: Off-Center Elevation Map, Variable Width`Highway Merge Lane` Variable Width Roads` , Miscellaneous`VarWidZ_4910c716-79b0-49e6-89f8-e2f4ab572902
+
+PARSFILE Roads\Friction_V_Wdth\VarWidMu_ba8d0e86-1d71-4f6a-8000-d0e2cf9a8726.par
+#BlueLink3 Road: Friction Map, Variable Width`Highway Merge Lane` ` , Friction`VarWidMu_ba8d0e86-1d71-4f6a-8000-d0e2cf9a8726
+
+PARSFILE Roads\Shapes\RdShape_7b09b963-5bb7-40a0-8da7-081c6d22b8d9.par
+#BlueLink4 Road: Animator Surface Shapes`Highway Merge Lane` Roads` , Road shape definitions`RdShape_7b09b963-5bb7-40a0-8da7-081c6d22b8d9
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Mixed_Forest
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_ba5432bd-a816-40b2-87a0-56bb90bebf25.par
+#BlueLink6 Road: Animator Repeated Object`Mixed Forest` Forests` , 3D Shapes`AniRep_ba5432bd-a816-40b2-87a0-56bb90bebf25
+
+add_reference_frame road_stuff_7_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink7 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_6501c74f-705d-473e-b64e-77f66cd87537.ani
+
+add_reference_frame road_stuff_1_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 0
+set_offset_var_y 60
+set_offset_var_z -0.307692307692
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_2_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 0
+set_offset_var_y -60
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_3_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 60
+set_offset_var_y 60
+set_offset_var_z -0.307692307692
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_4_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 80
+set_offset_var_y -54
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_5_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 150
+set_offset_var_y 60
+set_offset_var_z -0.307692307692
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_6_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 160
+set_offset_var_y -50
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_7_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 235
+set_offset_var_y 65
+set_offset_var_z -0.230769230769
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_8_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 250
+set_offset_var_y -54
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_9_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 320
+set_offset_var_y -58
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_10_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 355
+set_offset_var_y 80
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_11_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 380
+set_offset_var_y -58
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_12_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 445
+set_offset_var_y -58
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_13_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 465
+set_offset_var_y 70
+set_offset_var_z -0.153846153846
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_14_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 520
+set_offset_var_y -54
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_15_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 535
+set_offset_var_y 65
+set_offset_var_z -0.230769230769
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_16_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 600
+set_offset_var_y 60
+set_offset_var_z -0.307692307692
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_17_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 615
+set_offset_var_y -52
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_18_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 650
+set_offset_var_y 60
+set_offset_var_z -0.307692307692
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_19_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 710
+set_offset_var_y 60
+set_offset_var_z -0.307692307692
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_20_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 780
+set_offset_var_y 65
+set_offset_var_z -0.230769230769
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_21_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 740
+set_offset_var_y -48
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_22_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 920
+set_offset_var_y 85
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_23_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 820
+set_offset_var_y -52
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_24_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 880
+set_offset_var_y -54
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_25_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 930
+set_offset_var_y -56
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_26_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 985
+set_offset_var_y -58
+set_offset_var_z 0
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_27_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 1050
+set_offset_var_y 70
+set_offset_var_z -0.153846153846
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+add_reference_frame road_stuff_28_1_Mixed_Forest
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 1095
+set_offset_var_y 70
+set_offset_var_z -0.153846153846
+parsfile Animator\STL\Shape_5f235565-63f3-498c-8aa0-abca99ce3850.par
+
+#EMBEDDED_NOTES
+#This dataset uses a variable-width dZ dataset to define the geometry of two merging lanes.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Variable Width Roads } Highway Merge Lane
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Highway Merge Lane
+#Category: Variable Width Roads
+#FileID  : Road_6501c74f-705d-473e-b64e-77f66cd87537
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

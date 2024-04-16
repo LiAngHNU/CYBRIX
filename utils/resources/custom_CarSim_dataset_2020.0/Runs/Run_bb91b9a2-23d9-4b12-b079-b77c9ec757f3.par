@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName CarSim Run Control`Blind Spot Warning, Reverse, Parking Lot`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_bb91b9a2-23d9-4b12-b079-b77c9ec757f3
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_2708f611-a09a-4ce2-8b34-59683b373896.par
+#BlueLink0 Animator: Camera Setup`254 Azm, 30 El, 36 m` Vehicle Reference` , Animator camera`Camera_2708f611-a09a-4ce2-8b34-59683b373896
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_a47e1ae7-1cd2-4ba2-a47e-64aa872ec98f.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Blind Spot Reverse` C-Class` , Math Model`VehLoad_a47e1ae7-1cd2-4ba2-a47e-64aa872ec98f
+
+PARSFILE Procedures\Proc_65b97882-76da-419e-9855-3a0012117871.par
+#BlueLink28 Procedures`Blind Spot Detection, Reversing` ADAS and Active Safety` , Procedure`Proc_65b97882-76da-419e-9855-3a0012117871
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Blind Spot Warning, Reverse, Parking Lot <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Blind Spot Warning, Reverse, Parking Lot
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#2019.1: reverse lights appear.
+#
+#A C-Class Hatchback with two blind-spot sensors is backing out of a parking space between two Sensor Targets, sized to represent pickup trucks.
+#
+#Another Sensor Target, sized to represent a small car, is traveling through the parking lot and crosses the path of the ego vehicle. Since the ego vehicle is between two larger vehicles, the small target is initially occluded.
+#
+#When the blind spot sensors detect the crossing target, the brakes are applied, preventing the ego vehicle from making contact with the target.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Blind Spot Warning, Reverse, Parking Lot
+#Library : CarSim Run Control
+#DataSet : Blind Spot Warning, Reverse, Parking Lot
+#Category: ADAS and Active Safety
+#FileID  : Run_bb91b9a2-23d9-4b12-b079-b77c9ec757f3
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

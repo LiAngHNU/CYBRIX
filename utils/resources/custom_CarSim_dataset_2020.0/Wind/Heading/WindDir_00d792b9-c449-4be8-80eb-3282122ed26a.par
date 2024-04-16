@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Wind Heading`Wind to Left then Right`
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 STEP
+#RingCtrl2 ADD
+WIND_HEADING_COMBINE ADD
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+WIND_HEADING_CONSTANT 0
+#DiagramOne1
+WIND_HEADING_S_TABLE STEP
+0, 0
+20, 90
+50, 0
+80, -90
+110, 0
+ENDTABLE
+*SCALAR 0
+*SCALAR2 1
+
+
+#EMBEDDED_NOTES
+#Wind Heading (deg)
+#
+#This dataset is used to represent a wind heading that experiences a step change in degrees: 0 to 90 to 0, to -90 then back to 0.
+#
+#Please see the CarSim Aerodynamics documentation for more information on how the direction of the Wind Heading influences the behavior of the vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Wind Heading; Wind to Left then Right
+#Library : Wind Heading
+#DataSet : Wind to Left then Right
+#Category: 
+#FileID  : WindDir_00d792b9-c449-4be8-80eb-3282122ed26a
+#Product : CarSim 2020.0
+#VehCode Wind Heading
+
+END

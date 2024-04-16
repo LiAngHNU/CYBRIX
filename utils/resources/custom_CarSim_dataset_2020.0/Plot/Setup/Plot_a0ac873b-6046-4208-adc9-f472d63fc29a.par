@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Alerts: Blind Spot Passing`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS <<alert>>, Time, Alert Signal (Filtered)
+PLOTCHANNELS <<raw>>, Time, Alert Signal (Raw)
+
+#ENDMYellow
+
+YAXISLABEL <<side>> Blind Spot Alert
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Alerts: Blind Spot Passing
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset can be used multiple times to generate plots for blind spot sensors that use VS Commands to low-pass filter a raw signal. The filtered signal has the name specified with the Symbol Stack variable <<alert>>; the raw signal is the variable with the name <<raw>>.
+#
+#The  variable <<side>> is used for the Y axis label.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } Alerts: Blind Spot Passing
+#Library : Plot: Setup
+#DataSet : Alerts: Blind Spot Passing
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_a0ac873b-6046-4208-adc9-f472d63fc29a
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

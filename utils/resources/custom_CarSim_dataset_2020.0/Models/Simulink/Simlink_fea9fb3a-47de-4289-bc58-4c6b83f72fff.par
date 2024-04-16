@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Models: Simulink`Replace Entire System`External Steer
+#RunMdlFile Extensions\Simulink\ext_steer_all.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\ext_steer_all.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_6993ad40-4291-472b-b0f1-1aa9961e66d6.par
+#BlueLink0 I/O Channels: Import`Replace Entire Steering System` Steering System: Control and External Models` , Import`Import_6993ad40-4291-472b-b0f1-1aa9961e66d6
+
+PARSFILE IO_Channels\O_Channels\Export_4b077d75-047f-46e4-8bd3-9dc3973402a4.par
+#BlueLink1 I/O Channels: Export`Replace Entire Steering System` Steering System: Control and External Models` , Import/Export`Export_4b077d75-047f-46e4-8bd3-9dc3973402a4
+
+
+LOG_ENTRY Used Dataset: Models: Simulink; { External Steer } Replace Entire System
+#Library : Models: Simulink
+#DataSet : Replace Entire System
+#Category: External Steer
+#FileID  : Simlink_fea9fb3a-47de-4289-bc58-4c6b83f72fff
+#Product : CarSim 2020.0
+#VehCode 
+
+END

@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName Suspension: Compliance (Nonlinear)`Compliances: Twist-Beam- Rear`Generic Suspension: Twist-Beam (2D)
+#CheckBox0 1    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl8 2
+#RingCtrl9 2
+#RingCtrl10 2
+#RingCtrl11 2
+#RingCtrl14 1
+#RingCtrl15 1
+#RingCtrl16 1
+#RingCtrl17 1
+#RingCtrl18 2
+#RingCtrl19 2
+#RingCtrl20 1
+#RingCtrl21 1
+#RingCtrl22 0
+*CT_FX_L 0.000625777
+*CT_FX_R 0.000625777
+*CS_MZ_L 0
+*CS_MZ_R 0
+*CI_MZ_L 0
+*CI_MZ_R 0
+*C_LONG_L 0.00343994
+*C_LONG_R 0.00343994
+*CD_MY_L 0
+*CD_MY_R 0
+
+iside 1
+CT_FX_COEFFICIENT 0.000625777
+PARSFILE Generic\tables\GenTab_6951c1f6-7fd0-45a9-b99c-9f52dc7f382f.par
+#BlueLink2 Generic Table`CS_FY: Left R (2D)` Generic Suspension Comp.: Twist-Beam (2D)` , `GenTab_6951c1f6-7fd0-45a9-b99c-9f52dc7f382f
+
+CS_MZ_COEFFICIENT 0
+PARSFILE Generic\tables\GenTab_a949f89a-5b08-4c21-831b-76ff7ebf0406.par
+#BlueLink8 Generic Table`CC_FX: Rear (2D)` Generic Suspension Comp.: Twist-Beam (2D)` , Spring force`GenTab_a949f89a-5b08-4c21-831b-76ff7ebf0406
+
+PARSFILE Generic\tables\GenTab_a3cf893f-985f-4f69-bd35-4cbe9fc583ec.par
+#BlueLink10 Generic Table`CI_FY: Left R (2D)` Generic Suspension Comp.: Twist-Beam (2D)` , `GenTab_a3cf893f-985f-4f69-bd35-4cbe9fc583ec
+
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 0.00343994
+PARSFILE Generic\tables\GenTab_d6a77683-3a10-4c68-88f8-e2823929667b.par
+#BlueLink18 Generic Table`C_LAT: Left R (2D)` Generic Suspension Comp.: Twist-Beam (2D)` , `GenTab_d6a77683-3a10-4c68-88f8-e2823929667b
+
+CD_MY_COEFFICIENT 0
+
+iside 2
+CT_FX_COEFFICIENT 0.000625777
+PARSFILE Generic\tables\GenTab_a34437a5-3e48-45bf-a021-eb56156045fc.par
+#BlueLink3 Generic Table`CS_FY: Right R (2D)` Generic Suspension Comp.: Twist-Beam (2D)` , `GenTab_a34437a5-3e48-45bf-a021-eb56156045fc
+
+CS_MZ_COEFFICIENT 0
+PARSFILE Generic\tables\GenTab_a949f89a-5b08-4c21-831b-76ff7ebf0406.par
+#BlueLink9 Generic Table`CC_FX: Rear (2D)` Generic Suspension Comp.: Twist-Beam (2D)` , `GenTab_a949f89a-5b08-4c21-831b-76ff7ebf0406
+
+PARSFILE Generic\tables\GenTab_8c4be60b-4196-49f7-b461-03420dfe5f6b.par
+#BlueLink11 Generic Table`CI_FY: Right R (2D)` Generic Suspension Comp.: Twist-Beam (2D)` , `GenTab_8c4be60b-4196-49f7-b461-03420dfe5f6b
+
+CI_MZ_COEFFICIENT 0
+C_LONG_COEFFICIENT 0.00343994
+PARSFILE Generic\tables\GenTab_e52394c1-7499-487b-b9b6-570f5295a2e4.par
+#BlueLink19 Generic Table`C_LAT: Right R (2D)` Generic Suspension Comp.: Twist-Beam (2D)` , `GenTab_e52394c1-7499-487b-b9b6-570f5295a2e4
+
+CD_MY_COEFFICIENT 0
+
+#EMBEDDED_NOTES
+#New twist-beam suspension compliances in 2018.
+#
+#This twist-beam suspension is set very soft in order to exaggerate the twist-beam characteristics and the data may be too compliant to represent common suspensions.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Compliance (Nonlinear); { Generic Suspension: Twist-Beam (2D) } Compliances: Twist-Beam- Rear
+#Library : Suspension: Compliance (Nonlinear)
+#DataSet : Compliances: Twist-Beam- Rear
+#Category: Generic Suspension: Twist-Beam (2D)
+#FileID  : CmpAll_72487787-1327-4b5e-9a66-c339070dfcab
+#Product : CarSim 2020.0
+#VehCode Springs and Dampers
+
+END

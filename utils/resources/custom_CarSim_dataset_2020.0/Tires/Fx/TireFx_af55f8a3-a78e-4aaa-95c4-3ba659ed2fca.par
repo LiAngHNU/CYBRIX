@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Tire: Longitudinal Force`Fx for One-half Tire`Three-wheeled Vehicle
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip ratio [Kappa] (-)
+*3D_ZLabel Abs. longitudinal tire force Fx (N)
+
+#DiagramTwo0
+*3D_DATA 5, 19 ! columns x rows
+FX_TIRE_CARPET 2D_FROM_ZERO
+0, 1052.5, 1997.5, 3060, 3950, 5050
+0.02, 463.3705, 926.74, 1390.11, 1853.485, 2316.85
+0.04, 850.715, 1701.43, 2552.145, 3402.86, 4253.575
+0.06, 1120.035, 2240.065, 3360.105, 4480.135, 5600.15
+0.08, 1274.475, 2548.96, 3823.44, 5097.9, 6372.4
+0.1, 1344.89, 2689.77, 4034.66, 5379.55, 6724.4
+0.12, 1364.91, 2729.815, 4094.725, 5459.65, 6824.55
+0.14, 1358.68, 2717.365, 4076.045, 5434.7, 6793.4
+0.16, 1340.35, 2680.7, 4021.05, 5361.4, 6701.75
+0.18, 1317.375, 2634.75, 3952.12, 5269.5, 6586.85
+0.2, 1293.445, 2586.89, 3880.34, 5173.8, 6467.2
+0.25, 1238.475, 2476.95, 3715.425, 4953.895, 6192.35
+0.3, 1194.11, 2388.23, 3582.345, 4776.46, 5970.55
+0.4, 1131.47, 2262.935, 3394.41, 4525.88, 5657.35
+0.5, 1090.82, 2181.64, 3272.465, 4363.28, 5454.1
+0.6, 1062.735, 2125.475, 3188.21, 4250.955, 5313.7
+0.7, 1042.29, 2084.58, 3126.875, 4169.165, 5211.45
+0.8, 1026.775, 2053.56, 3080.335, 4107.12, 5133.9
+0.9, 1014.63, 2029.255, 3043.88, 4058.505, 5073.15
+1, 1014.63, 2029.255, 3043.88, 4058.505, 5073.15
+ENDTABLE
+
+MU_REF_X 1.0
+
+
+#EMBEDDED_NOTES
+#To maintain correct non-linear properties (such as cornering stiffness), the tables for each component force and moment are modified, reducing the input vertical force and the output force or moment of each table by half. The result is a "half tire" such that, when the effect of two is combined, is equal to the single front tire.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Longitudinal Force; { Three-wheeled Vehicle } Fx for One-half Tire
+#Library : Tire: Longitudinal Force
+#DataSet : Fx for One-half Tire
+#Category: Three-wheeled Vehicle
+#FileID  : TireFx_af55f8a3-a78e-4aaa-95c4-3ba659ed2fca
+#Product : CarSim 2020.0
+#VehCode Tire: Fx
+
+END

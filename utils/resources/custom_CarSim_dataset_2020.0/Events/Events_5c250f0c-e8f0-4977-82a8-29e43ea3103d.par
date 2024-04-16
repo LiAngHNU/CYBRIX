@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName Events`Run to Finish Line`Optimize Controls for Lap Time
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <=
+#RingCtrl1 >=
+#RingCtrl2 <=
+#RingCtrl3 >=
+#RingCtrl4 <=
+#RingCtrl5 >=
+#RingCtrl6 <=
+#RingCtrl7 >=
+#RingCtrl8 >=
+#RingCtrl10 9
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 lat_pos_L1
+*NAME2 lat_pos_L1
+*NAME3 lat_pos_R1
+*NAME4 lat_pos_R1
+*NAME5 lat_pos_L2
+*NAME6 lat_pos_L2
+*NAME7 lat_pos_L1
+*NAME8 lat_pos_L1
+*NAME9 sv_n_start_cross
+*VALUE1 road_boundary_right
+*VALUE2 road_boundary_left
+*VALUE3 road_boundary_right
+*VALUE4 road_boundary_left
+*VALUE5 road_boundary_right
+*VALUE6 road_boundary_left
+*VALUE7 road_boundary_right
+*VALUE8 road_boundary_left
+*VALUE9 2
+#MiscYellow0
+lap_start_time = T
+#ENDMYellow
+
+MAKE_EVENT lat_pos_L1 <= road_boundary_right ; Events\Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b.par
+#BlueLink0 Events`Evaluate` Optimize Controls for Lap Time` , Events`Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+
+MAKE_EVENT lat_pos_L1 >= road_boundary_left ; Events\Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b.par
+#BlueLink1 Events`Evaluate` Optimize Controls for Lap Time` , Events`Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+
+MAKE_EVENT lat_pos_R1 <= road_boundary_right ; Events\Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b.par
+#BlueLink2 Events`Evaluate` Optimize Controls for Lap Time` , Events`Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+
+MAKE_EVENT lat_pos_R1 >= road_boundary_left ; Events\Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b.par
+#BlueLink3 Events`Evaluate` Optimize Controls for Lap Time` , Events`Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+
+MAKE_EVENT lat_pos_L2 <= road_boundary_right ; Events\Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b.par
+#BlueLink4 Events`Evaluate` Optimize Controls for Lap Time` , Events`Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+
+MAKE_EVENT lat_pos_L2 >= road_boundary_left ; Events\Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b.par
+#BlueLink5 Events`Evaluate` Optimize Controls for Lap Time` , Events`Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+
+MAKE_EVENT lat_pos_L1 <= road_boundary_right ; Events\Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b.par
+#BlueLink6 Events`Evaluate` Optimize Controls for Lap Time` , Events`Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+
+MAKE_EVENT lat_pos_L1 >= road_boundary_left ; Events\Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b.par
+#BlueLink7 Events`Evaluate` Optimize Controls for Lap Time` , Events`Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+
+MAKE_EVENT sv_n_start_cross >= 2 ; Events\Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b.par
+#BlueLink8 Events`Evaluate` Optimize Controls for Lap Time` , Events`Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Monitor road boundaries and whether the car has crossed the finish line.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Optimize Controls for Lap Time } Run to Finish Line
+#Library : Events
+#DataSet : Run to Finish Line
+#Category: Optimize Controls for Lap Time
+#FileID  : Events_5c250f0c-e8f0-4977-82a8-29e43ea3103d
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

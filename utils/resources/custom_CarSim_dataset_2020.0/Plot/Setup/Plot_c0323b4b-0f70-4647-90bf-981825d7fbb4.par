@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`FlashOut`ADAS Sensor Detections: Collision
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FlashOut, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE FlashOut
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections: Collision } FlashOut
+#Library : Plot: Setup
+#DataSet : FlashOut
+#Category: ADAS Sensor Detections: Collision
+#FileID  : Plot_c0323b4b-0f70-4647-90bf-981825d7fbb4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

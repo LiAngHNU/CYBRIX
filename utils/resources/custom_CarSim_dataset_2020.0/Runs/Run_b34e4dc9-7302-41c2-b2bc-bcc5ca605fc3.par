@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName CarSim Run Control`Simple TYDEX/STI Model: DLC`Tire Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b34e4dc9-7302-41c2-b2bc-bcc5ca605fc3
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 6
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_3f7abb51-d5a4-434b-a718-87ec3f4fe7f7.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: Simple TYDEX/STI` External Tire Models` , Math Model`Vehicle_3f7abb51-d5a4-434b-a718-87ec3f4fe7f7
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Plot\Setup\Plot_7f5b891d-1f1e-41be-ae5a-9a8a00cf48c6.par
+#BlueLink15 Plot: Setup`Slip Ratios: Instant` Tire Kinematics` , Plot`Plot_7f5b891d-1f1e-41be-ae5a-9a8a00cf48c6
+
+PARSFILE Plot\Setup\Plot_49899491-d8d8-4ff6-a245-a19f3e895cff.par
+#BlueLink16 Plot: Setup`Tire Compression` Tire Kinematics` , Plot`Plot_49899491-d8d8-4ff6-a245-a19f3e895cff
+
+PARSFILE Plot\Setup\Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b.par
+#BlueLink17 Plot: Setup`Longitudinal Forces` Tire Forces and Moments` , Plot`Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b
+
+PARSFILE Plot\Setup\Plot_0773e087-151d-42db-a308-f02b7b6ee48d.par
+#BlueLink18 Plot: Setup`Lateral Forces` Tire Forces and Moments` , Plot`Plot_0773e087-151d-42db-a308-f02b7b6ee48d
+
+PARSFILE Plot\Setup\Plot_a5884b30-2228-44f6-afe5-eb3fd414c1c3.par
+#BlueLink19 Plot: Setup`Aligning Moments` Tire Forces and Moments` , Plot`Plot_a5884b30-2228-44f6-afe5-eb3fd414c1c3
+
+PARSFILE Plot\Setup\Plot_64cb3336-8c32-4bee-ac86-7a1aead2adec.par
+#BlueLink20 Plot: Setup`Overturning Moments` Tire Forces and Moments` , Plot`Plot_64cb3336-8c32-4bee-ac86-7a1aead2adec
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Simple TYDEX/STI Model: DLC <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE Simple TYDEX/STI Model: DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan using a simple external tire model based on the TYDEX/STI (Standard Tire Interface) format performs a double lane change maneuver at 120 km/h.
+#
+#In CarSim version 2018: Low speed stability was improved, and the longitudinal and lateral tire slips are treated as dynamic for the simple STI tire model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } Simple TYDEX/STI Model: DLC
+#Library : CarSim Run Control
+#DataSet : Simple TYDEX/STI Model: DLC
+#Category: Tire Models
+#FileID  : Run_b34e4dc9-7302-41c2-b2bc-bcc5ca605fc3
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

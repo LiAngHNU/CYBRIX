@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Mz for One-half Tire`Three-wheeled Vehicle
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 5, 21 ! columns x rows
+MZ_TIRE_CARPET 2D_FROM_ZERO
+0, 857.66, 1715.325, 2572.985, 3430.645, 4288.31
+0.5, 2.16063, 8.9806, 19.1076, 31.5801, 45.5687
+1, 3.83525, 15.9908, 34.1105, 56.5515, 81.9455
+1.5, 4.638225, 19.51965, 41.86555, 69.88, 102.1045
+2, 4.66464, 19.94755, 43.1545, 72.764, 107.6405
+2.5, 4.131085, 18.11445, 39.72605, 67.978, 102.326
+3, 3.24887, 14.87085, 33.3181, 58.2895, 89.9275
+3.5, 2.229305, 11.062, 25.68455, 46.47205, 74.201
+4, 1.2837, 7.52785, 18.5793, 35.29385, 58.913
+4.5, 0.575815, 4.94462, 13.36525, 26.94185, 47.0637
+5, 0.095089, 3.24887, 9.94205, 21.2735, 38.58495
+5.5, -0.206026, 2.21874, 7.81315, 17.5703, 32.6419
+6, -0.3856385, 1.61123, 6.49775, 15.10855, 28.3946
+6.5, -0.50186, 1.193895, 5.5046, 13.16455, 25.01895
+7, -0.60223, 0.73958, 4.35296, 11.01975, 21.6697
+7.5, -0.729015, 0.0792405, 2.70475, 8.1671, 17.7605
+8, -0.866365, -0.68147, 0.81354, 5.00275, 13.6611
+8.5, -0.99315, -1.373505, -0.903345, 2.1395, 10.00545
+9, -1.077675, -1.82782, -2.049695, 1.32068, 5.288
+9.5, -1.08824, -1.87008, -2.208175, 0.52827, 2.64136
+10, -1.584815, -2.113085, -2.64136, 0, 0
+11, -1.584815, -2.113085, -2.64136, 0, 0
+ENDTABLE
+
+
+
+#EMBEDDED_NOTES
+#To maintain correct non-linear properties (such as cornering stiffness), the tables for each component force and moment are modified, reducing the input vertical force and the output force or moment of each table by half. The result is a "half tire" such that, when the effect of two is combined, is equal to the single front tire.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { Three-wheeled Vehicle } Mz for One-half Tire
+#Library : Tire: Aligning Moment
+#DataSet : Mz for One-half Tire
+#Category: Three-wheeled Vehicle
+#FileID  : TireMz_13001f44-4c01-471f-b549-6ad8b7e0de00
+#Product : CarSim 2020.0
+#VehCode Tire: Mz
+
+END

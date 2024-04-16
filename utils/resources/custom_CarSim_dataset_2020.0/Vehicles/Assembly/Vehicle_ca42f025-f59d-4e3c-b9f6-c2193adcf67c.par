@@ -1,0 +1,108 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`C-Class, Hatchback: Brk. Pedal, Camera`VS Visualizer Camera Sensor
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 1
+OPT_PT 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_f51dff3d-9be4-4939-8e79-677c4b5da383.par
+#BlueLink7 Steering`C-Class, Hbk: Power, R&P` CS C-Class` , Steering System`StrSys2_f51dff3d-9be4-4939-8e79-677c4b5da383
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_3d40fb5c-6933-466f-9d27-af0107e35cb1.par
+#BlueLink19 Suspension: Independent System Kinematics`C-Class, Hatchback - Front` C-Class` , Kinematics`KinInd_3d40fb5c-6933-466f-9d27-af0107e35cb1
+
+PARSFILE Suspensions\Compliance\CmpInd_6a0a169e-9f67-48f4-8f46-0512eb1a3093.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`C-Class, Hatchback - Front` C-Class` , Compliance`CmpInd_6a0a169e-9f67-48f4-8f46-0512eb1a3093
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7.par
+#BlueLink999 Tire`215/55 R17` Touring Tires` , Tire`Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7.par
+#BlueLink10 Tire`215/55 R17` Touring Tires` , Tire`Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_812044bb-2cf2-448a-bce4-ff8b0e5f7317.par
+#BlueLink20 Suspension: Independent System Kinematics`C-Class, Hatchback - Rear` C-Class` , Kinematics`KinInd_812044bb-2cf2-448a-bce4-ff8b0e5f7317
+
+PARSFILE Suspensions\Compliance\CmpInd_a2a9e445-4dca-47e1-95c0-02120ea7f8f5.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`C-Class, Hatchback - Rear` C-Class` , Compliance`CmpInd_a2a9e445-4dca-47e1-95c0-02120ea7f8f5
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7.par
+#BlueLink999 Tire`215/55 R17` Touring Tires` , Tire`Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7.par
+#BlueLink999 Tire`215/55 R17` Touring Tires` , Tire`Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_a5a1d49d-aa34-4fe2-ab41-d0b0aa798874.par
+#BlueLink0 Vehicle: Sprung Mass`C-Class, Hatchback` C-Class` , Sprung Mass`SprMass_a5a1d49d-aa34-4fe2-ab41-d0b0aa798874
+
+PARSFILE Aerodynamics\Aero_Main\Aero_41a1ac67-ebf1-4758-bf0f-e6dfd9d55c1c.par
+#BlueLink1 Aerodynamics: Basic`C-Class, Hatchback Aero` C-Class` , Aerodynamics`Aero_41a1ac67-ebf1-4758-bf0f-e6dfd9d55c1c
+
+PARSFILE Powertrain\Fwd\FWD_91f1f768-3a4c-4639-af6f-63bbabf63dd5.par
+#BlueLink3 Powertrain: Front-Wheel Drive`125 kW, 6-spd., 4.1 Ratio w/ Visc. Diff.` 75 kW - 125 kW Powertrains` , Powertrain`FWD_91f1f768-3a4c-4639-af6f-63bbabf63dd5
+
+PARSFILE Brakes\4W_System\Brk4W_11c0cc7e-152b-4bb1-97ee-76db0aba039c.par
+#BlueLink6 Brakes: Four-Wheel System`(Hbk): P Frc, ABS` C-Class` , Brake System`Brk4W_11c0cc7e-152b-4bb1-97ee-76db0aba039c
+
+PARSFILE Animator\Vehicles\AniVeh_a2543dd5-6a0a-4346-86a7-c7a0293a72ac.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`C-Class, Hatchback w/ Camera Sensor` C-Class` , Vehicle 3D Shape`AniVeh_a2543dd5-6a0a-4346-86a7-c7a0293a72ac
+
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_ca42f025-f59d-4e3c-b9f6-c2193adcf67c.png
+
+#EMBEDDED_NOTES
+#Generic C-Class hatchback with Strut front and 5-Link rear suspension.
+#
+#C-Class vehicles include the Audi A3, Chevrolet Cruze, Ford Focus, and Opel Astra.
+#
+#The animator dataset includes a dataset with VS Commands that set up a Camera Sensor in VS Visualizer to provide shared memory buffers to Simulink.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { VS Visualizer Camera Sensor } C-Class, Hatchback: Brk. Pedal, Camera
+#Library : Vehicle: Assembly
+#DataSet : C-Class, Hatchback: Brk. Pedal, Camera
+#Category: VS Visualizer Camera Sensor
+#FileID  : Vehicle_ca42f025-f59d-4e3c-b9f6-c2193adcf67c
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

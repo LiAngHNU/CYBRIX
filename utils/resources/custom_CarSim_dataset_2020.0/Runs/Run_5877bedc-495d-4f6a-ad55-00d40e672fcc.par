@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`5 Ref. Points: Rollover Steering Input`Output Options
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5877bedc-495d-4f6a-ad55-00d40e672fcc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_173075a0-4016-49eb-8ce2-c8488776e092.par
+#BlueLink0 Animator: Camera Setup`3 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_173075a0-4016-49eb-8ce2-c8488776e092
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_e277daaf-e68f-4db1-a084-d8e9f2373275.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`E-Class, Sedan w/ 5 Position Points` E-Class` , Math Model`VehLoad_e277daaf-e68f-4db1-a084-d8e9f2373275
+
+PARSFILE Procedures\Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84.par
+#BlueLink28 Procedures`Rollover Steer Input` Stability Testing` , Procedure`Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84
+
+PARSFILE Animator\Arrows\Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887.par
+#BlueLink9 Animator: Wheel Arrows and Other Indicators`Tire Skid Marks (2 Axles)` Skid Marks` , Miscellaneous`Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887
+
+PARSFILE Plot\Setup\Plot_6915944a-eb11-4cbc-a1bf-3aea05d9910f.par
+#BlueLink15 Plot: Setup`Position Sensors Tracking` Position, Accel. and Rate Sensors` , Plot`Plot_6915944a-eb11-4cbc-a1bf-3aea05d9910f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title 5 Ref. Points: Rollover Steering Input <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE 5 Ref. Points: Rollover Steering Input
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class sedan with five reference points performs a rollover steer input maneuver. The reference points are defined with respect to the sprung mass coordinate system origin and can be used to track the Global X-Y positions of these vehicle locations.
+#
+#Use the position sensor tracking plot, linked on this Run Control screen, to track the vehicle's sensor paths throughout the maneuver.
+#
+#You can use this example as a starting point to build your own vehicle and test procedure using the simulated reference points.
+#
+#Note:
+#Reference Points are points specified at up to 10 locations on the sprung mass. Output variables are generated for the global coordinates of each point. Optionally, three forces can be defined at each point to simulate external forces appplied to the sprung mass.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Output Options } 5 Ref. Points: Rollover Steering Input
+#Library : CarSim Run Control
+#DataSet : 5 Ref. Points: Rollover Steering Input
+#Category: Output Options
+#FileID  : Run_5877bedc-495d-4f6a-ad55-00d40e672fcc
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

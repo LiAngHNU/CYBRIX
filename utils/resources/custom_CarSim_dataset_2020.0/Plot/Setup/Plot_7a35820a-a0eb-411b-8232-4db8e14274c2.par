@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Roll Rate (Body-fixed) of Sprung Mass`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AVx, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Roll Rate (Body-fixed) of Sprung Mass
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Roll Rate (Body-fixed) of Sprung Mass
+#Library : Plot: Setup
+#DataSet : Roll Rate (Body-fixed) of Sprung Mass
+#Category: Vehicle Motion
+#FileID  : Plot_7a35820a-a0eb-411b-8232-4db8e14274c2
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`300 kW, 6-spd., 3.44 Ratio (MT)`300 kW Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(2) 1
+
+PARSFILE Powertrain\Engine\Engine_3c07daf9-8263-45ee-8460-aa4cca985fab.par
+#BlueLink0 Powertrain: Engine`300 kW Engine (GT), with Sound` 300 kW Engines` , Engine`Engine_3c07daf9-8263-45ee-8460-aa4cca985fab
+
+PARSFILE Powertrain\Clutch\TrqCl_d863b57d-39cf-4fd9-ac2e-cabe376f0675.par
+#BlueLink6 Powertrain: Clutch Torque`Maximum 1800 N-m (Linear)` Clutch Torque` , Clutch`TrqCl_d863b57d-39cf-4fd9-ac2e-cabe376f0675
+
+PARSFILE Powertrain\TransExt\Trans18_f88bd90d-80bd-45e5-823e-f56ed7c1a380.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`6-Speed Manual (Shift at Max RPM)` 6-Speed Transmissions` , Transmission (Extended)`Trans18_f88bd90d-80bd-45e5-823e-f56ed7c1a380
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_51b96374-b72e-4355-b196-61c49b27def8.par
+#BlueLink5 Powertrain: Rear Differential`Viscous Coupling: Gear Ratio 3.44:1` Limited Slip and Viscous Coupling` , Differential`DiffR_51b96374-b72e-4355-b196-61c49b27def8
+
+
+#EMBEDDED_NOTES
+#Generic 300 kW powertrain with a manual transmission.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { 300 kW Powertrains } 300 kW, 6-spd., 3.44 Ratio (MT)
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 300 kW, 6-spd., 3.44 Ratio (MT)
+#Category: 300 kW Powertrains
+#FileID  : RWD_c4226f55-041b-4436-88cc-addf93534d75
+#Product : CarSim 2020.0
+#VehCode RWD
+
+END

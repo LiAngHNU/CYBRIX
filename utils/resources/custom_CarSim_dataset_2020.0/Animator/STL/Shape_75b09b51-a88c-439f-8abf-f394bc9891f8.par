@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Traffic Signal: Lamp, Green`Environment: Props (2 of 2)
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Props\Traffic_Lights\Green_lens_ON.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 0    
+
+SET_SPECULAR 1 1 1
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_1e1461bd-624d-4b2b-864c-c574c9bb483d.par
+#BlueLink2 Animator: Camera Setup`YZ-Plane, No Offsets - Small Objects` Shape Preview` , Video Camera`Camera_1e1461bd-624d-4b2b-864c-c574c9bb483d
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_75b09b51-a88c-439f-8abf-f394bc9891f8.png
+
+#EMBEDDED_NOTES
+#This is the basic version of the green lamp for a traffic signal.  The coordinate system origin is positioned to work properly with a vertically oriented traffic light.
+#
+#To adjust the lamp to work with a specific traffic light configuration, you will need to rotate the lamp and offset it to match the coordinate origin position of the signal body.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Signal: Lamp, Green
+#Library : Animator: Shape File Link
+#DataSet : Traffic Signal: Lamp, Green
+#Category: Environment: Props (2 of 2)
+#FileID  : Shape_75b09b51-a88c-439f-8abf-f394bc9891f8
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

@@ -1,0 +1,148 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 2 Axles`2A Rental Trailer`
+#VehCode SS
+#CheckBox2 0    
+#CheckBox3 0    
+#RingCtrl0 3
+#RingCtrl1 3
+#RingCtrl2 0
+
+* Trailer front suspension
+iaxle 1
+OPT_STEER_EXT 1
+ADD_REFERENCE_FRAME Axle 3
+SET_EULER_ANGLES yaw_roll_pitch
+SET_X_NAME X_A3
+WRT_X_A3
+ANI_X_A3
+SET_Y_NAME Y_A3
+WRT_Y_A3
+ANI_Y_A3
+SET_Z_NAME Z_A3
+WRT_Z_A3
+ANI_Z_A3
+SET_YAW_NAME Yaw_2
+WRT_Yaw_2
+ANI_Yaw_2
+SET_PITCH_NAME Pitch_A3
+WRT_Pitch_A3
+ANI_Pitch_A3
+SET_ROLL_NAME Roll_A3
+WRT_Roll_A3
+ANI_Roll_A3
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+PARSFILE Suspensions\Compliance_SA\CmpSA_5c19ba2c-6b7b-47bf-9af0-46650f4961eb.par
+#BlueLink10 Suspension: Solid Axle Compliance, Springs, and Dampers`Susp. Compliance: Rental Trailer (2A)` Trailers` , Compliance`CmpSA_5c19ba2c-6b7b-47bf-9af0-46650f4961eb
+
+PARSFILE Suspensions\Kin_Solid\KinSA_e8e55252-21c2-4f04-bc58-295940f2eb4f.par
+#BlueLink15 Suspension: Solid Axle System Kinematics`Susp. Kinematics: Rental Trailer (2A)` Trailers` , Kinematics`KinSA_e8e55252-21c2-4f04-bc58-295940f2eb4f
+
+
+* Trailer rear suspension
+iaxle 2
+OPT_STEER_EXT 1
+ADD_REFERENCE_FRAME Axle 4
+SET_EULER_ANGLES yaw_roll_pitch
+SET_X_NAME X_A4
+WRT_X_A4
+ANI_X_A4
+SET_Y_NAME Y_A4
+WRT_Y_A4
+ANI_Y_A4
+SET_Z_NAME Z_A4
+WRT_Z_A4
+ANI_Z_A4
+SET_YAW_NAME Yaw_2
+WRT_Yaw_2
+ANI_Yaw_2
+SET_PITCH_NAME Pitch_A4
+WRT_Pitch_A4
+ANI_Pitch_A4
+SET_ROLL_NAME Roll_A4
+WRT_Roll_A4
+ANI_Roll_A4
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+PARSFILE Suspensions\Compliance_SA\CmpSA_5c19ba2c-6b7b-47bf-9af0-46650f4961eb.par
+#BlueLink14 Suspension: Solid Axle Compliance, Springs, and Dampers`Susp. Compliance: Rental Trailer (2A)` Trailers` , Compliance`CmpSA_5c19ba2c-6b7b-47bf-9af0-46650f4961eb
+
+PARSFILE Suspensions\Kin_Solid\KinSA_e8e55252-21c2-4f04-bc58-295940f2eb4f.par
+#BlueLink16 Suspension: Solid Axle System Kinematics`Susp. Kinematics: Rental Trailer (2A)` Trailers` , Kinematics`KinSA_e8e55252-21c2-4f04-bc58-295940f2eb4f
+
+symbol_push  <<axle>> 3
+
+* LF tire
+iaxle 1
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_aeea7fd6-3261-4aad-80f6-16487eb69543.par
+#BlueLink9 Tire`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , r`Tire_aeea7fd6-3261-4aad-80f6-16487eb69543
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_aeea7fd6-3261-4aad-80f6-16487eb69543.par
+#BlueLink9 Tire`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , r`Tire_aeea7fd6-3261-4aad-80f6-16487eb69543
+
+symbol_add  <<axle>> 1
+
+* LR tire
+iaxle 2
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_aeea7fd6-3261-4aad-80f6-16487eb69543.par
+#BlueLink9 Tire`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , r`Tire_aeea7fd6-3261-4aad-80f6-16487eb69543
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_aeea7fd6-3261-4aad-80f6-16487eb69543.par
+#BlueLink9 Tire`235/80 R16 (Trailer)` Trailer and Light Truck Tires` , r`Tire_aeea7fd6-3261-4aad-80f6-16487eb69543
+
+
+* sprung mass data
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Trl_Sprung_Mass\TrlSprM_13b5a09e-85a6-407a-b1c2-f827b2fe26ee.par
+#BlueLink0 Vehicle: Trailer Sprung Mass`Rental Trailer (2A)` Rental (box)` , Sprung mass`TrlSprM_13b5a09e-85a6-407a-b1c2-f827b2fe26ee
+
+PARSFILE Aerodynamics\Aero_Main\Aero_3479bdf1-b57e-4404-97d9-41c21f83ddb4.par
+#BlueLink1 Aerodynamics: Basic`No Aerodynamics` Generic Aerodynamic Properties` , Aerodynamics`Aero_3479bdf1-b57e-4404-97d9-41c21f83ddb4
+
+PARSFILE Animator\Vehicles\AniVeh_cd654369-2849-495d-9cc1-67a5bfc98ee9.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Rental Trailer (2A)` Trailers` , Trailer 3D Shape`AniVeh_cd654369-2849-495d-9cc1-67a5bfc98ee9
+
+PARSFILE Brakes\4W_System\Brk4W_eed6147d-3340-4846-b7a5-e1b637c17333.par
+#BlueLink4 Brakes: Four-Wheel System`Trailer (2A): MC Press, No ABS` Trailers` , Brakes`Brk4W_eed6147d-3340-4846-b7a5-e1b637c17333
+
+iunit 1
+iunit 2
+R_TANDEM 0.5
+CFZ_MY_TAND 0
+R_TAND_TRAIL_STATIC 0.5
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Trailer_2A\Trl_2a_0edd2b8f-1fd4-49a7-887a-75e450d5e27d.png
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 2 Axles; 2A Rental Trailer
+#Library : Vehicle: Trailer with 2 Axles
+#DataSet : 2A Rental Trailer
+#Category: 
+#FileID  : Trl_2a_0edd2b8f-1fd4-49a7-887a-75e450d5e27d
+#Product : CarSim 2020.0
+#VehCode SS
+
+END

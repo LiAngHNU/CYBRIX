@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Powertrain: Yaw Control Differential`Capacity = 33 N-m, Ratio = 0.2`
+#RingCtrl0 LINEAR_FLAT
+#RingCtrl1 LINEAR_FLAT
+#DiagramOne0
+CLUTCH_TORQUE_DIFF_TABLE LINEAR_FLAT
+0, 0
+1, 33
+ENDTABLE
+#DiagramOne1
+CLUTCH_TORQUE_DIFF2_TABLE LINEAR_FLAT
+0, 0
+1, 33
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+R_CLUTCH_YAW 0.2
+TC_CL 0.002
+TLAG_CL 0.0
+TC_CL2 0.002
+TLAG_CL2 0.0
+
+
+oPT_CLUTCH_DIFF 2
+CLUTCH_CONTROL_DIFF 0
+
+LOG_ENTRY Used Dataset: Powertrain: Yaw Control Differential; Capacity = 33 N-m, Ratio = 0.2
+#Library : Powertrain: Yaw Control Differential
+#DataSet : Capacity = 33 N-m, Ratio = 0.2
+#Category: 
+#FileID  : DiffYC_46808113-ccc7-4dee-8a8c-96d0b421b4b4
+#Product : CarSim 2020.0
+#VehCode Yaw Control Diff.
+
+END

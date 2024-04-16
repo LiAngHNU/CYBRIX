@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Day Cab: Body`Trucks: Cabs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Day_Cab\cab_body.obj
+#ENDMYellow
+
+SET_COLOR 0 0.2 0.4
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_614e20f4-a550-401b-86b4-f904a05376d4.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Large Objects` Shape Preview` , Video Camera`Camera_614e20f4-a550-401b-86b4-f904a05376d4
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_44d0011f-6b00-42bd-a72d-0d95a176c096.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Day Cab: Body
+#Library : Animator: Shape File Link
+#DataSet : Day Cab: Body
+#Category: Trucks: Cabs
+#FileID  : Shape_44d0011f-6b00-42bd-a72d-0d95a176c096
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

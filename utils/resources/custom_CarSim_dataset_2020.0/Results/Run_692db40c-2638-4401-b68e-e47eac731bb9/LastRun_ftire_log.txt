@@ -1,0 +1,130 @@
+cosin/FTire:  
+cosin/FTire:  
+cosin/FTire: |----------------------------------------------------------------------|
+cosin/FTire: |                                                                      |
+cosin/FTire: |      @@@@@@ @@@@@@@@@@@@@@ @@@@                                      |
+cosin/FTire: |   @@@@@@@@@ @@@@@@@@@@@@@@ @@@@                                      |
+cosin/FTire: |  @@@@            @@@@      @@@@                                      |
+cosin/FTire: |  @@@             @@@@      @@@@      cosin Tire and Road Interface   |
+cosin/FTire: |  @@@@            @@@@      @@@@           connecting FTire and RGR   |
+cosin/FTire: |   @@@@@@@@@@     @@@@      @@@@                             2019-1   |
+cosin/FTire: |     @@@@@@@@@@   @@@@      @@@@                 r18960, 2019-01-09   |
+cosin/FTire: |                                                                      |
+cosin/FTire: |                                                                      |
+cosin/FTire: |  installation directory:       C:\Program Files (x86)\cosin\2019-1   |
+cosin/FTire: |  end-user license agreement:               www.cosin.eu/cosin_EULA   |
+cosin/FTire: |  documentation and software updates:                  www.cosin.eu   |
+cosin/FTire: |  in any support case, please read:       Help -> Support checklist   |
+cosin/FTire: |                                                                      |
+cosin/FTire: |  copyright (c)    1997-2019     cosin scientific software, Germany   |
+cosin/FTire: |                                                                      |
+cosin/FTire: |----------------------------------------------------------------------|
+cosin/FTire:  
+cosin/FTire: | SIMULATION
+cosin/FTire: | started at Dec. 18, 2019, 21:51, on platform win32
+cosin/FTire: | cosin software will use status of version 2019-1 at Dec. 18, 2019
+cosin/FTire: | calling solver: Mechanical Simulation CarSim/TruckSim/BikeSim
+cosin/FTire: |
+cosin/FTire: | RESTRICTED USE OF COSIN LICENSE FEATURE FTIRE
+cosin/FTire: | for 3rd-party interface development only.
+cosin/FTire: | Must not be used for any other purposes!
+cosin/FTire: |
+cosin/FTire: | TIRE MODEL MESSAGES
+cosin/FTire: | opening tire data file passenger_car.tir
+cosin/FTire: | model type FTire, file format TeimOrbit
+cosin/FTire: |
+cosin/FTire: | FTIRE RUN-TIME CONFIGURATION
+cosin/FTire: | - standard speed mode, set by run_time_mode in section [MODEL] of tir-file
+cosin/FTire: |   note: this speed mode might be changed under CTI control at run-time
+cosin/FTire: | - using latest FTire version available at day of execution (see above)
+cosin/FTire: | BTW: you seem to be 3 versions behind the actual cosin software version;
+cosin/FTire: | upgrade recommended
+cosin/FTire: |
+cosin/FTire: | data read in input file are regularly pre-processed
+cosin/FTire: |
+cosin/FTire: | MASS AND INERTIA CORRECTION IN MBS MODEL
+cosin/FTire: | Either *add* the following mass properties to the *rim* in your suspension
+cosin/FTire: | model ('rim-fixed' tire parts which are not accounted for in the tire model):
+cosin/FTire: |   m =           4.662 kg
+cosin/FTire: |   Ixx = Izz =   0.145 kgm^2
+cosin/FTire: |   Iyy =         0.227 kgm^2  (y-axis = wheel spin axis)
+cosin/FTire: |
+cosin/FTire: | or *subtract* the following mass properties from the *wheel* (=rim+tire) in
+cosin/FTire: | your suspension model ('free' tire parts which are accounted for in the tire
+cosin/FTire: | model):
+cosin/FTire: |   m =           4.738 kg
+cosin/FTire: |   Ixx = Izz =   0.220 kgm^2
+cosin/FTire: |   Iyy =         0.439 kgm^2  (y-axis = wheel spin axis)
+cosin/FTire: |
+cosin/FTire: | Estimated wheel moment of inertia about spin axis is 1.035 kgm^2.
+cosin/FTire: |
+cosin/FTire: | If this value differs from the respective value in your MBS model, adjust the
+cosin/FTire: | rim moment of inertia in the tire data file accordingly. This is only
+cosin/FTire: | necessary in real-time mode, to ensure numerical stability.
+cosin/FTire: |
+cosin/FTire: | ROAD MODEL MESSAGES
+cosin/FTire: | tire instance 1 uses road model type User-Defined, statically linked to solver
+cosin/FTire: |
+cosin/FTire: | CTI AND FTIRE STATISTICS
+cosin/FTire: | statistics tire 1
+cosin/FTire: | number of tire initializations: 1
+cosin/FTire: | number of steps: 1213
+cosin/FTire: | number of repeated steps: 1
+cosin/FTire: | number of state array saves: 0
+cosin/FTire: | number of state array retrieves: 0
+cosin/FTire: | number of resets: 0
+cosin/FTire: | no recognized issues with input signals
+cosin/FTire: |
+cosin/FTire: | statistics tire 2
+cosin/FTire: | number of tire initializations: 1
+cosin/FTire: | number of steps: 1213
+cosin/FTire: | number of repeated steps: 1
+cosin/FTire: | number of state array saves: 0
+cosin/FTire: | number of state array retrieves: 0
+cosin/FTire: | number of resets: 0
+cosin/FTire: | no recognized issues with input signals
+cosin/FTire: |
+cosin/FTire: | statistics tire 3
+cosin/FTire: | number of tire initializations: 1
+cosin/FTire: | number of steps: 1207
+cosin/FTire: | number of repeated steps: 1
+cosin/FTire: | number of state array saves: 0
+cosin/FTire: | number of state array retrieves: 0
+cosin/FTire: | number of resets: 0
+cosin/FTire: | no recognized issues with input signals
+cosin/FTire: |
+cosin/FTire: | statistics tire 4
+cosin/FTire: | number of tire initializations: 1
+cosin/FTire: | number of steps: 1207
+cosin/FTire: | number of repeated steps: 1
+cosin/FTire: | number of state array saves: 0
+cosin/FTire: | number of state array retrieves: 0
+cosin/FTire: | number of resets: 0
+cosin/FTire: | no recognized issues with input signals
+cosin/FTire: |
+cosin/FTire: | last speed mode of all tires: 0
+cosin/FTire: | number of road evaluations: 36.5 mio (exactly: 36465724)
+cosin/FTire: | total elapsed time: 36.384 s
+cosin/FTire: | real-time factor vehicle model + FTire: 53.762
+cosin/FTire: | no CTI errors or warnings
+cosin/FTire: |
+cosin/FTire: | FILES AND RESOURCES
+cosin/FTire: | in cosin installation directory = C:\Program Files (x86)\cosin\2019-1
+cosin/FTire: | (l) cosin library:        lib\win32\cti.dll
+cosin/FTire: |
+cosin/FTire: | in private data folder
+cosin/FTire: |     = D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data
+cosin/FTire: | (i) FTire data file:      Extensions\FTire\passenger_car.tir
+cosin/FTire: | (o) diagnosis file:       ftire_diagnosis.txt
+cosin/FTire: | (o) log file:             ftire.log
+cosin/FTire: |
+cosin/FTire: | in home directory = C:\Users\dreichenbach
+cosin/FTire: | (r) cosin ini file:       cosin.ini
+cosin/FTire: |
+cosin/FTire: | in other directories (or resource other than file)
+cosin/FTire: | (e) calling solver:       D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim-
+cosin/FTire: |                           \Core\CarSim_Prog\CarSim.exe
+cosin/FTire: | (n) cosin license server: licenses:80 (defined by CL option -lmserver)
+cosin/FTire: |
+cosin/FTire: | ..all cosin licenses returned, if used any. Bye.
+cosin/FTire: |

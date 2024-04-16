@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName CarSim Run Control`Twist-Beam, Compliances: Opposed Fx`Suspension and Ride Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2bae24de-f9c5-4f4d-ba39-b523d385202f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_67e6fc78-b140-44ed-b9b4-dcf887d1ed0a.par
+#BlueLink0 Animator: Camera Setup`K & C View (Rear)` K & C` , Animator camera`Camera_67e6fc78-b140-44ed-b9b4-dcf887d1ed0a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_2a27720d-b19b-4245-be45-63da7f64bea1.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan (New Twist-Beam): C Test` D-Class` , Math Model`VehLoad_2a27720d-b19b-4245-be45-63da7f64bea1
+
+PARSFILE Procedures\Proc_d1c625f5-4693-49d8-a3e8-f03ba9f0b41b.par
+#BlueLink28 Procedures`K & C Opposed Fx` Test Rigs` , Procedure`Proc_d1c625f5-4693-49d8-a3e8-f03ba9f0b41b
+
+
+SPECIAL_PARSFILE Runs\Run_0004939d-3fe7-4e83-80f5-e0f2ee56fad1.par
+#BlueLink23 CarSim Run Control`Twist-Beam, Compliances: Parallel Fx` Suspension and Ride Tests` , Overlay run or ERD file`Run_0004939d-3fe7-4e83-80f5-e0f2ee56fad1
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Loaded\VehLoad_2a27720d-b19b-4245-be45-63da7f64bea1.png
+WRITE_SENSOR_DETECT
+Title Twist-Beam, Compliances: Opposed Fx <Suspension and Ride Tests>
+CATEGORY Suspension and Ride Tests 
+DATASET_TITLE Twist-Beam, Compliances: Opposed Fx
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan with a Twist Beam rear suspension in a K&C Opposed Longitudinal Force test.
+#
+#The twist beam suspension is modeled using the Generic Suspension option, a variation on the independent suspension model that better captures certain twist beam architectures.
+#
+#The data used for the twist beam suspension is set to be very soft in order to exaggerate the characteristics in this test, but may be too compliant to represent some suspension systems.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Suspension and Ride Tests } Twist-Beam, Compliances: Opposed Fx
+#Library : CarSim Run Control
+#DataSet : Twist-Beam, Compliances: Opposed Fx
+#Category: Suspension and Ride Tests
+#FileID  : Run_2bae24de-f9c5-4f4d-ba39-b523d385202f
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Pickup, Full Size Sup Cab 8 Bed`Pickup Trucks
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 4280
+OBJ_Y_LENGTH 2392
+OBJ_Z_LENGTH 1611
+*DZ_V 0
+*LAT_WC 1700
+*LAT_WC_2 1750
+*HWC 402
+*WHEEL_RATIO 1.4
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_b594e464-1909-4d49-8fdf-b5fd50e1caf3.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.4
+SET_SCALE_Y 1.4
+SET_SCALE_Z 1.4
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.85
+SET_OFFSET_Z 0.3819
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.4
+SET_SCALE_Y 1.4
+SET_SCALE_Z 1.4
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.85
+SET_OFFSET_Z 0.3819
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.4
+SET_SCALE_Y 1.4
+SET_SCALE_Z 1.4
+SET_OFFSET_X -4.28
+SET_OFFSET_Y 0.875
+SET_OFFSET_Z 0.3819
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.4
+SET_SCALE_Y 1.4
+SET_SCALE_Z 1.4
+SET_ANGLE_X 180
+SET_OFFSET_X -4.28
+SET_OFFSET_Y -0.875
+SET_OFFSET_Z 0.3819
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_83f9046b-16ae-441c-bfc3-2ad05e9534d4.par
+#BlueLink1 Animator: Group`Sup Cab, 8 Bed` Pickup Trucks` , Vehicle Body`Group_83f9046b-16ae-441c-bfc3-2ad05e9534d4
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_dd5969f3-1dc2-4d34-a2e6-972b10be3dff.par
+#BlueLink3 Animator: Shape File Link`8-Ft Box: Brake Lights (Super Cab)` Trucks: Pickup Beds` , Brake Lights`Shape_dd5969f3-1dc2-4d34-a2e6-972b10be3dff
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_a53acb57-2965-483d-be42-5ff5342a2381.par
+#BlueLink10 Animator: Shape File Link`8-Ft Box: Reverse Lights (Super Cab)` Trucks: Pickup Beds` , Reverse lights`Shape_a53acb57-2965-483d-be42-5ff5342a2381
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Pickup Trucks } Pickup, Full Size Sup Cab 8 Bed
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Pickup, Full Size Sup Cab 8 Bed
+#Category: Pickup Trucks
+#FileID  : AniVeh_b594e464-1909-4d49-8fdf-b5fd50e1caf3
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

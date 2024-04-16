@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`Large European Van w/ Payload`European Van
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_27c399ec-6a89-4818-90ab-290d201d6a4b.par
+#BlueLink0 Vehicle: Assembly`Large European Van` European Van` , Lead Unit`Vehicle_27c399ec-6a89-4818-90ab-290d201d6a4b
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_96b5d02e-e0e8-4d07-8648-33845df87d19.par
+#BlueLink1 Payload: Custom`Crate for Large Euro. Van` ` , Miscellaneous`Custom_96b5d02e-e0e8-4d07-8648-33845df87d19
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_a8aec856-9536-4ef7-a407-8f78b29909e9.png
+
+#EMBEDDED_NOTES
+#This example shows a Large European Van with a single payload representing a crate in the van's cargo area.
+#
+#The payload type is Custom as opposed to a box shape, meaning the payloads are defined by their mass and inertia properties. Links are then made to an appropriate animation shape to provide a visual representation of the modeled payload.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { European Van } Large European Van w/ Payload
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : Large European Van w/ Payload
+#Category: European Van
+#FileID  : VehLoad_7e0e83ef-877c-4ec4-b598-ec34ab363e23
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Jounce vs. camber - Rear`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CamberL2, Jnc_L2
+PLOTCHANNELS CamberR2, Jnc_R2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Jounce vs. camber - Rear
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Jounce vs. camber - Rear
+#Library : Plot: Setup
+#DataSet : Jounce vs. camber - Rear
+#Category: Suspension Motion
+#FileID  : Plot_91f3aac7-741d-44eb-89be-e431541134d1
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

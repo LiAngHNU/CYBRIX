@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Procedures`Railroad Track Crossing`Driving
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -150
+TSTART_WRITE = 0;
+TSTOP 30
+SSTOP 60
+OPT_DIRECTION 0
+*TSTOP 30
+*TSTART 0
+*SSTART -150
+*SSTOP 60
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_f354f716-9852-47d3-b84f-85521564aa03.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.65m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_f354f716-9852-47d3-b84f-85521564aa03
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_t\SpdTime_ed4f08a5-112d-4ca0-b4e3-b6131e367790.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Railroad Crossing Speed` Speed vs Station` , Speed vs. time`SpdTime_ed4f08a5-112d-4ca0-b4e3-b6131e367790
+
+PARSFILE Roads\3D_Road\Road_669e0aa9-4b00-468e-8189-097e0821422c.par
+#BlueLink0 Road: 3D Surface (All Properties)`Railroad Tracks` Variable Width Roads` , Miscellaneous`Road_669e0aa9-4b00-468e-8189-097e0821422c
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Plot\Setup\Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f.par
+#BlueLink8 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f
+
+PARSFILE Plot\Setup\Plot_d680a116-2530-4566-80e7-0dfa293cd7ae.par
+#BlueLink9 Plot: Setup`Ground Elevation vs. Station` Ground` , Plot`Plot_d680a116-2530-4566-80e7-0dfa293cd7ae
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink10 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink11 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+PARSFILE Plot\Setup\Plot_7251a722-18c9-43db-a324-bd380d275618.par
+#BlueLink12 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7251a722-18c9-43db-a324-bd380d275618
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink13 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470.par
+#BlueLink14 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink15 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink16 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink17 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how to use variable width roads in CarSim to model a ballasted railroad track or similar surface as well as two crossing roads.
+#
+#To see how this was done, click on the 3D road dataset "Railroad Tracks."
+#
+#Another feature demonstrated in this example is using the Target speed vs. station dataset to define both the speed and braking control of the vehicle.
+#
+#Click on the Target speed vs. station dataset "RR Crossing Speed" for more information.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Railroad Track Crossing
+#Library : Procedures
+#DataSet : Railroad Track Crossing
+#Category: Driving
+#FileID  : Proc_25729178-c100-470f-93d3-d0dabb8dcc48
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

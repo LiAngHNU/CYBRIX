@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName CarSim Run Control`Road X-Y-Z Edges`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9c4987a8-32e5-4b71-b80c-fa08f9afeb15
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_616b3c85-df45-4814-a534-59bed114a4ff.par
+#BlueLink0 Animator: Camera Setup`22 Azm, 10 El, 15 m, No Yaw` Vehicle Reference` , Animator camera`Camera_616b3c85-df45-4814-a534-59bed114a4ff
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_ecd964e7-043b-4f1d-95da-b040f68ff482.par
+#BlueLink28 Procedures`Road X-Y-Z Edges` Driving` , Procedure`Proc_ecd964e7-043b-4f1d-95da-b040f68ff482
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Road X-Y-Z Edges <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Road X-Y-Z Edges
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This purpose demonstrates the CarSim Road X-Y-Z Coordinates of Edges screen, a road building technique wherein the user enters data for the X, Y, and Z coordinates of the road edges and CarSim calculates the station position.
+#
+#Road Roughness is also added to this example, linked on the Procedure screen.
+#
+#To learn more about this, click on the Procedures screen blue link "Road X-Y-Z Edges", and browse to the Road: 3D Surface screen by clicking on the road dataset "X-Y-Z Edges".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: 3D Geometry and Terrain } Road X-Y-Z Edges
+#Library : CarSim Run Control
+#DataSet : Road X-Y-Z Edges
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_9c4987a8-32e5-4b71-b80c-fa08f9afeb15
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`City Intersection`VS Scene Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_34201660-ffbd-4778-81a3-82b34616d43e.png
+#CheckBox0 1    
+
+PARSFILE Roads\ExScene\SceneImp_280a13c5-d55a-44f4-b422-5defec3f9e80.par
+#BlueLink0 Scene: External Import`City Intersection` VS Scene Builder` , Reference Path`SceneImp_280a13c5-d55a-44f4-b422-5defec3f9e80
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+#MiscYellow0
+! path_id_dm 1000
+#ENDMYellow
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_dd5e5331-29ec-4950-87b0-01cf28da20e7.par
+#BlueLink5 Animator: Camera Setup`City Intersection; Bird's Eye` Fixed Camera` , Camera`Camera_dd5e5331-29ec-4950-87b0-01cf28da20e7
+
+parsfile Roads\3D_Road\Road_34201660-ffbd-4778-81a3-82b34616d43e.ani
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { VS Scene Builder } City Intersection
+#Library : Road: 3D Surface (All Properties)
+#DataSet : City Intersection
+#Category: VS Scene Builder
+#FileID  : Road_34201660-ffbd-4778-81a3-82b34616d43e
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

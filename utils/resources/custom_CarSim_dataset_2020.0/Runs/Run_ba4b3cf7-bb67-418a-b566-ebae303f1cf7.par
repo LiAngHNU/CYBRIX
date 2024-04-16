@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName CarSim Run Control`Column Assist Power Steering, C-Class`Steering Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_ba4b3cf7-bb67-418a-b566-ebae303f1cf7
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 37 m` Vehicle Reference` , Animator camera`Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 2
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_3e9db06e-abfb-4485-a558-8e452a241231.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS, Col Asst` C-Class` , Math Model`Vehicle_3e9db06e-abfb-4485-a558-8e452a241231
+
+PARSFILE Procedures\Proc_d5e84ddf-cf9c-4adb-a0b7-0ac26b182874.par
+#BlueLink28 Procedures`ISO Steady-State Circle Series` Handling Testing` , Procedure`Proc_d5e84ddf-cf9c-4adb-a0b7-0ac26b182874
+
+PARSFILE Roads\3D_Road\Road_4a352805-f13c-472a-9878-ce32d1ac1fd3.par
+#BlueLink9 Road: 3D Surface (All Properties)`100-m Radius Circle, Mu = 0.9` Circular Roads` , Miscellaneous`Road_4a352805-f13c-472a-9878-ce32d1ac1fd3
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_339055ba-da70-41ce-ae0c-6ee903dfe65f.png
+WRITE_SENSOR_DETECT
+Title Column Assist Power Steering, C-Class <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Column Assist Power Steering, C-Class
+#MiscYellow0
+WRITE_ALL 1
+OPT_WRITE WRITE_ALL
+IPRINT 50
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback with Column Assisted Power Steering performs the ISO 4138 Steady State circle test.
+#
+#Details of the test are covered in the Notes for the linked test Procedure and the Run Control example:
+#Category: Handling and Stability Tests
+#Dataset: ISO Steady-State Circle, R = 100, Full Run
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Tests } Column Assist Power Steering, C-Class
+#Library : CarSim Run Control
+#DataSet : Column Assist Power Steering, C-Class
+#Category: Steering Tests
+#FileID  : Run_ba4b3cf7-bb67-418a-b566-ebae303f1cf7
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

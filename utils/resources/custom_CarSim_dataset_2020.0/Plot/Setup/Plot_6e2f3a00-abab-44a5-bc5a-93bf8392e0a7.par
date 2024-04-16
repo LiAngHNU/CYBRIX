@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Lateral vs. Jounce - Front`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Jnc_L1, Y_L1
+PLOTCHANNELS Jnc_R1, Y_R1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Lateral vs. Jounce - Front
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Wheel Lateral vs. Jounce - Front
+#Library : Plot: Setup
+#DataSet : Wheel Lateral vs. Jounce - Front
+#Category: Suspension Motion
+#FileID  : Plot_6e2f3a00-abab-44a5-bc5a-93bf8392e0a7
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Blind Spot Reverse`C-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink0 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Lead Unit`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Sensors_Traffic\Radar\Radar_4ad3490d-9fae-45ca-bbc5-eba69edc87e6.par
+#BlueLink4 ADAS Sensors for Range and Tracking`Right Blind-Spot, Reverse Vx` Blind-Spot Sensors` , Miscellaneous`Radar_4ad3490d-9fae-45ca-bbc5-eba69edc87e6
+
+PARSFILE Sensors_Traffic\Radar\Radar_6de73f43-ef06-4e62-8ac4-99fb5e44133c.par
+#BlueLink5 ADAS Sensors for Range and Tracking`Left Blind-Spot, Reverse Vx` Blind-Spot Sensors` , Miscellaneous`Radar_6de73f43-ef06-4e62-8ac4-99fb5e44133c
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+
+#EMBEDDED_NOTES
+#C-Class Hatchback with two blind-spot sensors set up for driving in reverse.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { C-Class } C-Class Hatchback w/ Blind Spot Reverse
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : C-Class Hatchback w/ Blind Spot Reverse
+#Category: C-Class
+#FileID  : VehLoad_a47e1ae7-1cd2-4ba2-a47e-64aa872ec98f
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

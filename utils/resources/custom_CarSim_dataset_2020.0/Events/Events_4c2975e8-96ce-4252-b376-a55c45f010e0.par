@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Events`C. Coast Down Before Fishhook`Fishhook with Roll Rate Feedback
+#CheckBox1 1    
+*CLEAR
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 5
+RESET_EVENTS
+*NAME1 Vx
+*VALUE1 VTEST
+*SPEED 1.02*VTEST
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+MAKE_EVENT Vx < VTEST ; Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par
+#BlueLink0 Events`D. Initial Steer Ramp` Fishhook with Roll Rate Feedback` , Events`Events_d76c6a16-ede1-4b13-838a-eab991578e07
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded when it is time to start the coast down before a fishhook test. Writing to file is resumed to support plotting and animation.
+#
+#When the speed drops to VTEST, the fishhook steering begins with the initial ramp.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+#Library : Events
+#DataSet : C. Coast Down Before Fishhook
+#Category: Fishhook with Roll Rate Feedback
+#FileID  : Events_4c2975e8-96ce-4252-b376-a55c45f010e0
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName CarSim Run Control`Powertrain Mounts: FWD Based AWD`* More Examples (Extra License Options)
+#VEHICLECODE E_Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9fdaacb8-2cba-491c-bb31-1dbb9c8394e9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_ac9905a7-bdcd-4fea-906f-a944b16e25cc.par
+#BlueLink0 Animator: Camera Setup`340 Azm, 7 El, 6.6 m` Vehicle Reference` , Animator camera`Camera_ac9905a7-bdcd-4fea-906f-a944b16e25cc
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 8
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_864a0753-40db-4bb7-89e2-f1a704a3bb70.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan w/ PT Mounts, AWD` D-Class` , Math Model`Vehicle_864a0753-40db-4bb7-89e2-f1a704a3bb70
+
+PARSFILE Procedures\Proc_6fa3f33a-1b6a-49cd-918a-1d2adce901f3.par
+#BlueLink28 Procedures`Accel then Brake, 0-100-0 km/h, 5 Spd AT` Accel. and Brake Testing` , Procedure`Proc_6fa3f33a-1b6a-49cd-918a-1d2adce901f3
+
+PARSFILE Roads\3D_Road\Road_e8572ed8-f752-4691-aef8-defbe1fd35dd.par
+#BlueLink9 Road: 3D Surface (All Properties)`500-ft Radius Circle, Mu = 0.85` Circular Roads` , Miscellaneous`Road_e8572ed8-f752-4691-aef8-defbe1fd35dd
+
+PARSFILE Plot\Setup\Plot_05166c0e-70a4-4bb7-865b-76000385a80c.par
+#BlueLink15 Plot: Setup`Engine Angle` Engine Mount` , Plot`Plot_05166c0e-70a4-4bb7-865b-76000385a80c
+
+PARSFILE Plot\Setup\Plot_98286a1e-cd2f-48e1-b47a-cb06213427c3.par
+#BlueLink16 Plot: Setup`Engine CG Height` Engine Mount` , Plot`Plot_98286a1e-cd2f-48e1-b47a-cb06213427c3
+
+PARSFILE Plot\Setup\Plot_606a5edd-54dc-4d6f-99f2-79f93a98fa96.par
+#BlueLink17 Plot: Setup`Engine Mount Compression (Lat.)` Engine Mount` , Plot`Plot_606a5edd-54dc-4d6f-99f2-79f93a98fa96
+
+PARSFILE Plot\Setup\Plot_fc9f7151-2b21-4c73-8423-cfc355145e69.par
+#BlueLink18 Plot: Setup`Engine Mount Compression (Long.)` Engine Mount` , Plot`Plot_fc9f7151-2b21-4c73-8423-cfc355145e69
+
+PARSFILE Plot\Setup\Plot_ec438fbf-14fe-42e8-87f8-25cf26e736fc.par
+#BlueLink19 Plot: Setup`Engine Mount Damper Force` Engine Mount` , Plot`Plot_ec438fbf-14fe-42e8-87f8-25cf26e736fc
+
+PARSFILE Plot\Setup\Plot_b056e541-705f-4448-8287-a7cfda4d49a2.par
+#BlueLink20 Plot: Setup`Engine Mount Spring Force (Vert.)` Engine Mount` , Plot`Plot_b056e541-705f-4448-8287-a7cfda4d49a2
+
+PARSFILE Plot\Setup\Plot_dac658ed-7176-4857-92ad-2910902fa350.par
+#BlueLink21 Plot: Setup`Engine Mount Spring Force (Lat.)` Engine Mount` , Plot`Plot_dac658ed-7176-4857-92ad-2910902fa350
+
+PARSFILE Plot\Setup\Plot_72710f95-1383-47f4-83ca-48f235386307.par
+#BlueLink22 Plot: Setup`Engine Mount Spring Force (Long.)` Engine Mount` , Plot`Plot_72710f95-1383-47f4-83ca-48f235386307
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_864a0753-40db-4bb7-89e2-f1a704a3bb70.png
+WRITE_SENSOR_DETECT
+Title Powertrain Mounts: FWD Based AWD <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE Powertrain Mounts: FWD Based AWD
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan with the optional Engine Mount model performs an acceleration and braking test on a cirlce road. Engine mount forces are visible as the transmission shifts.
+#
+#The engine and any rigid parts which move together with the engine such as the transmission, clutch/torque converter, etc. are treated as one independently sprung rigid body, separate from the vehicle sprung mass.
+#
+#The Engine Mount model requires a separate license (CarSim Engine Mount).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * More Examples (Extra License Options) } Powertrain Mounts: FWD Based AWD
+#Library : CarSim Run Control
+#DataSet : Powertrain Mounts: FWD Based AWD
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_9fdaacb8-2cba-491c-bb31-1dbb9c8394e9
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

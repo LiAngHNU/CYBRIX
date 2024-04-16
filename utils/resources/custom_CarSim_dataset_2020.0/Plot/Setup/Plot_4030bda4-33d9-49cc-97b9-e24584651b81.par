@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Booster Force In/Out`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FBkB_In, Time
+PLOTCHANNELS FBkB_Out, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Booster Force In/Out
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Brake Booster Force In/Out
+#Library : Plot: Setup
+#DataSet : Brake Booster Force In/Out
+#Category: Braking
+#FileID  : Plot_4030bda4-33d9-49cc-97b9-e24584651b81
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

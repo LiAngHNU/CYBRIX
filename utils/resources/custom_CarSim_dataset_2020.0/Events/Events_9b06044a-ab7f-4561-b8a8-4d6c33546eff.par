@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Events`A. Start Steady-State Circle Series`ISO Steady-State Circle Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*NAME2 AY_REF
+*VALUE1 3*T_WAIT
+*VALUE2 abs(ay)
+#MiscYellow0
+DEFINE_PARAMETER WRITE_ALL 0 ; - ;  ...
+  0 - write steady state results, 1 - write everything
+OPT_WRITE WRITE_ALL
+IPRINT 1
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_122d2d34-9541-4f74-b4b6-f3bdc9fbf1d7.par
+#BlueLink10 Generic VS Commands`New Variables for Ackermann Steer` Miscellaneous Custom Output Variables` , Miscellaneous`GenVS_122d2d34-9541-4f74-b4b6-f3bdc9fbf1d7
+
+#MiscYellow1
+DEFINE_PARAMETER AY_STEP 0.02 ; g ; Step in Ay, used to set new Ay targets
+DEFINE_VARIABLE AY_TARG 0; g ; Target lateral acceleration
+DEFINE_PARAMETER T_WAIT 7 ; s ; Time to wait for vehicle to settle
+#ENDMYellow
+
+MAKE_EVENT T > 3*T_WAIT ; Events\Events_af9d66d2-5718-420d-bb2c-039f162ce175.par
+#BlueLink0 Events`B. Save Ackermann Steer` ISO Steady-State Circle Series` , Events`Events_af9d66d2-5718-420d-bb2c-039f162ce175
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#WRITE_ALL is a parameter to write everyting. Normally it's 0, so only a few points of interest are written to file for plotting. It can be set to 1 from the Run Control screen to write the full simulation results if needed.
+#
+#IPRINT is set to 1 to enable writing as soon as OPT_WRITE is set to 1, usually just for one time step.
+#
+#T_WAIT is the time used to wait for the vehicle to settile into a steady-state condition for most of the circle tests. The first one can take longer, so the wait time is multiplied by 3 in the pending event.
+#
+#AY_TARG will be used as a target lateral acceleration and STR_OLD will be used for some optional plot variables to determine if the steering is increasing or decreasing with respect to lateral acceleration.
+#
+#The parameter AY_STEP is used later to set new target speeds.
+#
+#Ackermann-related variables and parameters are defined in a linked VS command dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } A. Start Steady-State Circle Series
+#Library : Events
+#DataSet : A. Start Steady-State Circle Series
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_9b06044a-ab7f-4561-b8a8-4d6c33546eff
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

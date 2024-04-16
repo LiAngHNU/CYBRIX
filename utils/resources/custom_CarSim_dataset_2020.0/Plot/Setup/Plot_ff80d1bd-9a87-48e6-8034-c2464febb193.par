@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Elevation of Closest Target`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS El_S<<s>>_1, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Elevation of Closest Target
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Elevation of Closest Target
+#Library : Plot: Setup
+#DataSet : Elevation of Closest Target
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_ff80d1bd-9a87-48e6-8034-c2464febb193
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

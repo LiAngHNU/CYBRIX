@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`Fy for One-half Tire`Three-wheeled Vehicle
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Abs. lateral tire force Fy (N)
+
+#DiagramTwo0
+*3D_DATA 5, 25 ! columns x rows
+FY_TIRE_CARPET 2D_FROM_ZERO
+0, 862.5, 1750, 3050, 3475, 4502.5
+0.5, 222.1785, 447.093, 646.77, 800.965, 892.195
+1, 421.773, 847.25, 1226.495, 1523.89, 1708.95
+1.5, 581.045, 1163.705, 1686.565, 2107.24, 2390.145
+2, 701.725, 1400.3, 2032.09, 2555.51, 2936.885
+2.5, 790.36, 1571.05, 2282.62, 2889.715, 3365.58
+3, 853.54, 1689.965, 2457.705, 3130.845, 3692.66
+3.5, 897.83, 1771.06, 2576.89, 3299.91, 3934.53
+4, 929.8, 1828.335, 2659.715, 3417.925, 4107.615
+4.5, 946.915, 1856.62, 2701.32, 3484.155, 4219.65
+5, 952.08, 1862.23, 2711.115, 3509.995, 4282.395
+5.5, 948.095, 1850.96, 2697.725, 3505.955, 4306.805
+6, 937.515, 1828.225, 2668.69, 3481.35, 4302.77
+6.5, 922.65, 1798.5, 2630.6, 3443.95, 4278.95
+7, 905.475, 1765.575, 2588.57, 3400.1, 4242.585
+7.5, 887.56, 1732.455, 2546.445, 3354.575, 4199.47
+8, 870.09, 1701.06, 2506.78, 3310.58, 4154.095
+8.5, 853.9, 1672.615, 2471.05, 3270.03, 4109.51
+9, 839.335, 1647.66, 2439.75, 3233.955, 4067.68
+9.5, 826.635, 1626.305, 2412.98, 3202.605, 4029.585
+10, 815.81, 1608.24, 2390.39, 3175.735, 3995.78
+12, 787.265, 1561.685, 2331.48, 3103.835, 3899.465
+14, 773.29, 1539, 2302.3, 3066.975, 3846.86
+16, 765.955, 1527.09, 2286.65, 3046.945, 3817.38
+18, 761.82, 1520.2, 2277.495, 3035.085, 3799.81
+20, 761.82, 1520.2, 2277.495, 3035.085, 3799.81
+ENDTABLE
+
+MU_REF_Y 1.0
+
+
+#EMBEDDED_NOTES
+#To maintain correct non-linear properties (such as cornering stiffness), the tables for each component force and moment are modified, reducing the input vertical force and the output force or moment of each table by half. The result is a "half tire" such that, when the effect of two is combined, is equal to the single front tire.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { Three-wheeled Vehicle } Fy for One-half Tire
+#Library : Tire: Lateral Force
+#DataSet : Fy for One-half Tire
+#Category: Three-wheeled Vehicle
+#FileID  : TireFy_e7d88026-000c-4ef1-9d32-dbce0128fc23
+#Product : CarSim 2020.0
+#VehCode Tire: Fy
+
+END

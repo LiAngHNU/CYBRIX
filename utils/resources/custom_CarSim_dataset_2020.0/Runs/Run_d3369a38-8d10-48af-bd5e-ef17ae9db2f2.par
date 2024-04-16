@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName CarSim Run Control`Events: Shift 2WD to 4WD`Powertrain Tests
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d3369a38-8d10-48af-bd5e-ef17ae9db2f2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 5 El, 30 m` Vehicle Reference` , Animator camera`Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 2
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_1b5706dc-31e1-42c4-8598-c83e6b95d5ef.par
+#BlueLink2 Vehicle: Assembly`Pickup, Midsize: Part-Time 4WD (in 2WD)` Pickup Trucks` , Math Model`Vehicle_1b5706dc-31e1-42c4-8598-c83e6b95d5ef
+
+PARSFILE Procedures\Proc_0639e3dd-6a3c-4593-815f-a6b5c2519da0.par
+#BlueLink28 Procedures`Off-Road Hill Climb: 2WD to 4WD` Powertrain, Event-driven Tests` , Procedure`Proc_0639e3dd-6a3c-4593-815f-a6b5c2519da0
+
+PARSFILE Animator\HUD\HUD_e8a4019c-f151-410f-8935-7c81c6fdffc9.par
+#BlueLink9 Animator: HUD`4x4, Speedo, Tach, Brake, and Throttle` Vehicle Status Indicators` , Miscellaneous`HUD_e8a4019c-f151-410f-8935-7c81c6fdffc9
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_1b5706dc-31e1-42c4-8598-c83e6b95d5ef.png
+WRITE_SENSOR_DETECT
+Title Events: Shift 2WD to 4WD <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Events: Shift 2WD to 4WD
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example simulates an off-road type hill climb test with a 2-axle pickup truck equipped with a part-time 4WD system.
+#
+#The Events are used to monitor the vehicle’s progress up the hill. Once it begins to roll backwards:
+# * The brakes are applied
+# * The transmission is placed in neutral
+# * Parameters are used to switch the vehicle's
+#part-time 4WD from 2WD to 4WD Low-Range
+#
+#The additional traction of the front-driven wheels and the torque provided by the locked differentials and low-range gearing allows the truck to continue to climb the hill.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Events: Shift 2WD to 4WD
+#Library : CarSim Run Control
+#DataSet : Events: Shift 2WD to 4WD
+#Category: Powertrain Tests
+#FileID  : Run_d3369a38-8d10-48af-bd5e-ef17ae9db2f2
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

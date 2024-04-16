@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName CarSim Run Control`Root Locus (Speed Series)`Linearization
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_09c32092-2566-4133-859d-8ea75d41a45f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae.par
+#BlueLink2 Vehicle: Assembly`A-Class, Hatchback, No ABS` A-Class` , Math Model`Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae
+
+PARSFILE Procedures\Proc_4769c1c9-d21a-41b8-a84b-3f15126dd319.par
+#BlueLink28 Procedures`No Steer, Speed Series` Driver Controls` , Procedure`Proc_4769c1c9-d21a-41b8-a84b-3f15126dd319
+
+PARSFILE Generic\VS_commands\GenVS_44f17f63-d827-475c-9c3a-8644fb05fc42.par
+#BlueLink9 Generic VS Commands`33 States to Linearize (Root Locus)` Linearization` , Miscellaneous`GenVS_44f17f63-d827-475c-9c3a-8644fb05fc42
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae.png
+WRITE_SENSOR_DETECT
+Title Root Locus (Speed Series) <Linearization>
+CATEGORY Linearization 
+DATASET_TITLE Root Locus (Speed Series)
+#MiscYellow0
+linear_control IMP_STEER_SW
+linear_output EXP_AVz
+linear_output EXP_AY
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example creates linear matrices of the vehicle model during the simulation run (in steady state). A series of runs with various vehicle speed (from 0 to 180 km/h) is performed by Event.  35 state variables, steer input, yaw rate, and lateral acceleration outputs are specified to linearize the system. The generated matrices can be loaded with MATLAB and analyzed with a frequency-domain bode plot and root locus
+#
+#Please note that the MATLAB Control System Toolbox is required for the bode plot.
+#
+#A similar example (that uses a motorcycle in BikeSim) is explained in a Technical Memo (Help-> Technical Memos -> Linear Analysis in VehicleSim Models).
+#
+#To perform a linear analysis, follow these steps:
+#
+#1) Run this simulation.
+#
+#2) Go to the folder, "CarSimXX_Data\Extensions\ Linearization\" and confirm number of M-Files "Linear_**kph.m" has been created.
+#
+#3) Start Matlab and change the current directory to the folder "CarSimXX_Data\Extensions\ Linearization\."
+#
+#4) Type "root_spd" and hit enter key for root locus plot.
+#
+#5) Type "bdp_spd" and hit enter key for bode plot.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Linearization } Root Locus (Speed Series)
+#Library : CarSim Run Control
+#DataSet : Root Locus (Speed Series)
+#Category: Linearization
+#FileID  : Run_09c32092-2566-4133-859d-8ea75d41a45f
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

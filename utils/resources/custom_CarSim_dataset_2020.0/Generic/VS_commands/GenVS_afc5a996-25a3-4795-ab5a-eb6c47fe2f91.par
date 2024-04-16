@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Generic VS Commands`Increment Sine with Dwell Amplitude`Sine with Dwell
+#VehCode VS Commands
+
+#MiscYellow0
+SWA_MULT = SWA_MULT + 0.5 ! increment the multiplier
+SWA_ABS = DR*SWA_MULT*SWA_REF ! nominal absolute steering wheel amplitude in degrees
+
+! Check: if SWA_MULT > 6.5 and SWA_ABS > 270 deg, then use 270
+SWA_ABS = IF(SWA_MULT > -6.51, MIN(270, SWA_ABS), SWA_ABS)
+
+! Check: never allow SWA_ABS to be > 300 deg
+SWA_ABS = min(300, SWA_ABS)
+
+! Set the proper sign for the configurable function gain
+STEER_SW_GAIN = SWA_SIGN*SWA_ABS
+
+! Reset the peak yaw rate
+AVZ_PEAK = 0 ! reset
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#SWA_MULT is the multiplier. The standards treat levels above 6.5 and above 5 as special, so this count is saved.
+#
+#SWA_ABS is the absolute amplitude. It includes the scale factor DR because the unscaled waveform has an amiplitude of 1 deg (1/57.29... rad).
+#
+#SWA_SIGN is either +1 (first series for sine with dwell tests) or -1 (2nd series).
+#
+#STEER_SW_GAIN is the gain for the configurable function that gives with waveform for the sine with dwell.
+#
+#AVZ_PEAK is the peak yaw rate. It is set to zero here, to clear past results.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Sine with Dwell } Increment Sine with Dwell Amplitude
+#Library : Generic VS Commands
+#DataSet : Increment Sine with Dwell Amplitude
+#Category: Sine with Dwell
+#FileID  : GenVS_afc5a996-25a3-4795-ab5a-eb6c47fe2f91
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

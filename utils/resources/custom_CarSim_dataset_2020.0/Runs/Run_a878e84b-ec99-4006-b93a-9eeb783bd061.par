@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName CarSim Run Control`Rough Road 03 - 66 in/mi (1.04 m/km)`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a878e84b-ec99-4006-b93a-9eeb783bd061
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 5 El, 30 m` Vehicle Reference` , Animator camera`Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+SET_RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf.par
+#BlueLink2 Vehicle: Assembly`D-Class, Minivan` D-Class` , Math Model`Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf
+
+PARSFILE Procedures\Proc_1dc0727a-6406-44a7-9119-9580430ff6fd.par
+#BlueLink28 Procedures`Straight Driving, Constant Speed` Driving` , Procedure`Proc_1dc0727a-6406-44a7-9119-9580430ff6fd
+
+PARSFILE Roads\Profiles\Profile_c8b966b8-259b-4578-8941-bab429b1d6cf.par
+#BlueLink9 Surface: Roughness Profiles`Rough Road 03 - 66 in/mi (1.04 m/km)` Rough Road - Sample Data` , Miscellaneous`Profile_c8b966b8-259b-4578-8941-bab429b1d6cf
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 112.65
+OPT_SC_ENGINE_BRAKING 0
+*SPEED 112.65
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf.png
+WRITE_SENSOR_DETECT
+Title Rough Road 03 - 66 in/mi (1.04 m/km) <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Rough Road 03 - 66 in/mi (1.04 m/km)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Rough Road 03:
+#
+#New Concrete
+#66 in/mi (1.04 m/km) IRI
+#Test Road Speed Limit = 70 mph (112.65 kph)
+#I-94 East, MP 146
+#One year old, Slabs 12.5 meters long
+#
+#IRI = International Roughness Index
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: 3D Geometry and Terrain } Rough Road 03 - 66 in/mi (1.04 m/km)
+#Library : CarSim Run Control
+#DataSet : Rough Road 03 - 66 in/mi (1.04 m/km)
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_a878e84b-ec99-4006-b93a-9eeb783bd061
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

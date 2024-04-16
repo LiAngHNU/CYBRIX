@@ -1,0 +1,116 @@
+PARSFILE
+#FullDataName Procedures`Mcity: ADAS Scenario, 30 km/h`Mcity
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 10
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP 150
+OPT_DIRECTION 0
+*SPEED 30
+*TSTOP 15
+*TSTART 0
+*SSTART 10
+*SSTOP 150
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Mcity: ADAS Scenario, 30 km/h
+SPEED_TARGET_CONSTANT 30
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+#MiscYellow0
+PATH_ID_DM = 1
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_d9d25b26-00e5-4ce4-83fe-60de3320e1cd.par
+#BlueLink0 Road: 3D Surface (All Properties)`Mcity Scene` VS Scene Builder` , Miscellaneous`Road_d9d25b26-00e5-4ce4-83fe-60de3320e1cd
+
+PARSFILE Sensors_Traffic\Targets\Target_68a4fbcf-552d-41ff-9f3d-b13386c31548.par
+#BlueLink2 Single Moving Object (Custom)`Mcity: Main St Crossing, ADAS Target` Mcity Traffic and Sensor Targets` , Miscellaneous`Target_68a4fbcf-552d-41ff-9f3d-b13386c31548
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink8 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_811b0750-5160-4ae1-aa82-2aabb3ab9af2.par
+#BlueLink10 Plot: Setup`Throttle: Closed Loop Speed Control` Controls: Driver` , Plot`Plot_811b0750-5160-4ae1-aa82-2aabb3ab9af2
+
+PARSFILE Plot\Setup\Plot_bb603a0f-832f-4898-a9d8-b54b1ed8d883.par
+#BlueLink11 Plot: Setup`Trans. Control: Gear From Closed-loop` Controls: Driver` , Plot`Plot_bb603a0f-832f-4898-a9d8-b54b1ed8d883
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink12 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e.par
+#BlueLink13 Plot: Setup`Wheel Cylinder Pressures` Braking` , Plot`Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e
+
+PARSFILE Plot\Setup\Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53.par
+#BlueLink14 Plot: Setup`Brake Torque` Braking` , Plot`Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53
+
+PARSFILE Plot\Setup\Plot_71df6f9d-5f7f-43e1-a5d7-d556dc8678ab.par
+#BlueLink15 Plot: Setup`Slip Ratios: Lagged` Tire Kinematics` , Plot`Plot_71df6f9d-5f7f-43e1-a5d7-d556dc8678ab
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink16 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136.par
+#BlueLink17 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink18 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_310b0189-b08d-49fc-a484-ee359eb89744.par
+#BlueLink19 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_310b0189-b08d-49fc-a484-ee359eb89744
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink20 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink21 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b.par
+#BlueLink22 Plot: Setup`Longitudinal Forces` Tire Forces and Moments` , Plot`Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b
+
+PARSFILE Plot\Setup\Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283.par
+#BlueLink23 Plot: Setup`Vertical Forces (Front)` Tire Forces and Moments` , Plot`Plot_de12eea2-c7e6-47ac-a8f6-4f491244b283
+
+PARSFILE Plot\Setup\Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e.par
+#BlueLink24 Plot: Setup`Vertical Forces (Rear)` Tire Forces and Moments` , Plot`Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e
+
+
+#EMBEDDED_NOTES
+#Procedure for Mcity ADAS Scenario, with a constant target speed of 30 km/h.
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mcity } Mcity: ADAS Scenario, 30 km/h
+#Library : Procedures
+#DataSet : Mcity: ADAS Scenario, 30 km/h
+#Category: Mcity
+#FileID  : Proc_d4cbb966-292c-425b-8f0d-c962738bfbb3
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

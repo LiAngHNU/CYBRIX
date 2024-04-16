@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Ramp: 0 to 90 deg. in 0.25 sec.`Ramp
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE LINEAR_FLAT
+0, 0
+0.25, 90
+1, 90
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { Ramp } Ramp: 0 to 90 deg. in 0.25 sec.
+#Library : Control: Steering (Open Loop)
+#DataSet : Ramp: 0 to 90 deg. in 0.25 sec.
+#Category: Ramp
+#FileID  : StrSW_ca34590d-f44c-40ba-a4fb-26f47c98c28d
+#Product : CarSim 2020.0
+#VehCode Open-Loop Steering
+
+END

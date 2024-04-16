@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates`Parking Lot: Back Out of Eastern Spot`Parking Lot
+#RingCtrl0 2
+SET_IPATH_FOR_ID 2001
+SET_ITAB_XY_FOR_ID 2001
+SET_DESCRIPTION PATH_ID Parking Lot: Back Out of Eastern Spot
+SET_DESCRIPTION XY_TABLE_ID Parking Lot: Back Out of Eastern Spot
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox4 0    
+
+#RadioCtrl0 0    
+
+#DiagramOne0
+SEGMENT_XY_TABLE
+-1.5000, 17.1000, 0.0000
+8.0000, 17.1000, 9.5000
+ENDTABLE
+
+#EMBEDDED_NOTES
+#This 40 m line defines the Eastern most boundary of the parking lot.  This was done to make the definition of the lot striping and other lot features as easy as possible (all positive values for L)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates; { Parking Lot } Parking Lot: Back Out of Eastern Spot
+#Library : Path: X-Y Coordinates
+#DataSet : Parking Lot: Back Out of Eastern Spot
+#Category: Parking Lot
+#FileID  : PathXY_9bef44df-efe9-4371-a467-a70fa2fbdcb8
+#Product : CarSim 2020.0
+#VehCode X-Y Coordinates of Path
+
+END

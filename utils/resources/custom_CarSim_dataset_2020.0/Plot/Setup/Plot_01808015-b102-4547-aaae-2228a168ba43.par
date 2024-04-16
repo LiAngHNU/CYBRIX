@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Driver Ratio from External`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#BlueLink2 CarSim Run Control`C-Class: 38 m Roundabout` * CS 2016 - Roundabout` , example run`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS r_dr_l1, time
+PLOTCHANNELS r_dr_r1, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Driver Ratio from External
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Driver Ratio from External
+#Library : Plot: Setup
+#DataSet : Driver Ratio from External
+#Category: Steering
+#FileID  : Plot_01808015-b102-4547-aaae-2228a168ba43
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

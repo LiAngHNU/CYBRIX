@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Tire: Overturning Moment`MF-Tyre Example`MF-Tyre Example
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [alpha] (deg)
+*3D_ZLabel Overturning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 3, 21 ! columns x rows
+MX_TIRE_CARPET 2D_FROM_ZERO
+0, 2000, 4000, 6000
+0.5, 0.78543, 2.52213, 4.30554
+1, 1.55645, 5.03593, 8.64266
+1.5, 2.28562, 7.4859, 12.9649
+2, 2.94792, 9.81034, 17.2125
+2.5, 3.52456, 11.9472, 21.3121
+3, 4.00593, 13.8438, 25.1825
+3.5, 4.39202, 15.4663, 28.7442
+4, 4.69058, 16.8045, 31.9315
+4.5, 4.91386, 17.8703, 34.702
+5, 5.06656, 18.644, 36.8998
+5.5, 5.17363, 19.2184, 38.6808
+6, 5.24793, 19.6418, 40.1173
+6.5, 5.29775, 19.9464, 41.2546
+7, 5.32943, 20.1589, 42.1388
+7.5, 5.34778, 20.3012, 42.8134
+8, 5.3564, 20.3903, 43.3173
+8.5, 5.35797, 20.4396, 43.6841
+9, 5.35445, 20.4592, 43.9419
+9.5, 5.34733, 20.457, 44.1136
+10, 5.34733, 20.457, 44.1136
+10.5, 5.34733, 20.457, 44.1136
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Tire: Overturning Moment; { MF-Tyre Example } MF-Tyre Example
+#Library : Tire: Overturning Moment
+#DataSet : MF-Tyre Example
+#Category: MF-Tyre Example
+#FileID  : TireMx_46e0696f-94d3-4444-8d1b-c2a88ba89efc
+#Product : CarSim 2020.0
+#VehCode Tire: Mx
+
+END

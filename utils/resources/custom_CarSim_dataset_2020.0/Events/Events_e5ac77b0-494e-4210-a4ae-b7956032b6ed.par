@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`CCRb A. Wait for AEB to Intervene`Euro NCAP AEB Testing
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 ApplyAEB
+*VALUE1 ApplyAEB
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+DEFINE_EVENT ApplyAEB ; Events\Events_25cf14e6-6ef3-48d9-8a02-9b3d4cb85d1b.par
+#BlueLink0 Events`CCRb B. Monitor Speed` Euro NCAP AEB Testing` , Events`Events_25cf14e6-6ef3-48d9-8a02-9b3d4cb85d1b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#ApplyAEB is the command to apply the brakes.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Euro NCAP AEB Testing } CCRb A. Wait for AEB to Intervene
+#Library : Events
+#DataSet : CCRb A. Wait for AEB to Intervene
+#Category: Euro NCAP AEB Testing
+#FileID  : Events_e5ac77b0-494e-4210-a4ae-b7956032b6ed
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

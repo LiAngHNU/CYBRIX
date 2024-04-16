@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName CarSim Run Control`VS Terrain File: Manually Defined`* CS 2020.0 - VS Terrain
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_270a350a-75da-4fff-b715-84bc0f250ca6
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_a8e16c51-3a07-4809-b30e-0d6c9a9e698e.par
+#BlueLink0 Animator: Camera Setup`45 Azm, 30 El, 60 m Dist, 50 FoV, No Yaw` Vehicle Reference` , Animator camera`Camera_a8e16c51-3a07-4809-b30e-0d6c9a9e698e
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan` D-Class` , Math Model`Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89
+
+PARSFILE Procedures\Proc_2d697114-48d2-4f34-aa5e-98690baa4af6.par
+#BlueLink28 Procedures`VS Terrain: Manual Path Entry` VS Terrain` , Procedure`Proc_2d697114-48d2-4f34-aa5e-98690baa4af6
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Animator\Frames\Frame_d575d02b-abd4-4b4e-8845-258618d7a755.par
+#BlueLink10 Animator: Reference Frame`Example Animation Environment` ` , Miscellaneous`Frame_d575d02b-abd4-4b4e-8845-258618d7a755
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title VS Terrain File: Manually Defined <* CS 2020.0 - VS Terrain>
+CATEGORY * CS 2020.0 - VS Terrain 
+DATASET_TITLE VS Terrain File: Manually Defined
+#MiscYellow0
+VS_TERRAIN_FILE Scene_Import\VS_Scene_Builder\Mcity_scene.vsterrain
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example using a manual call to a VS Terrain file.  This call is similar to what is found in parsfiles that load VS Terrain files
+#
+#The box is checked for  "Advanced Settings" to define the path and filename of the VS Terrain file to be used in the example.  This file is of type .vsterrain
+#
+#This VS Terrain file includes the full 3D properties of the ground along with the friction and a tire rolling resistance coefficient
+#
+#Additionally, .obj files are manually added to show the ground surface for the of the MCity scene.  This was done by using the VS Terrain Utility to convert the MCity .vsterrain file to a .obj, then importing that file into the Animation Environment.
+#
+#The small red lines in the animation show the normal vectors of the MCity ground surface
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - VS Terrain } VS Terrain File: Manually Defined
+#Library : CarSim Run Control
+#DataSet : VS Terrain File: Manually Defined
+#Category: * CS 2020.0 - VS Terrain
+#FileID  : Run_270a350a-75da-4fff-b715-84bc0f250ca6
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Procedures`K & C Opposed Fy`Test Rigs
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 10
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 0
+*TSTOP 10
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: K & C Opposed Fy
+SPEED_TARGET_CONSTANT 0
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par
+#BlueLink27 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Steering`StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c
+
+PARSFILE Control\Braking\PbkCon_596c5341-5868-427e-a984-e4a4fa39d6f6.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 30 MPa` Constant` , Braking`PbkCon_596c5341-5868-427e-a984-e4a4fa39d6f6
+
+PARSFILE Control\Gear_at\GearCL_395374af-90fa-4fef-80e1-a8df607bfbef.par
+#BlueLink30 Control: Shifting (Closed Loop)`Neutral` ` , Shifting Control`GearCL_395374af-90fa-4fef-80e1-a8df607bfbef
+
+PARSFILE Roads\3D_Road\Road_3d3efdbc-9b94-40d6-aa37-04d5a6fb360d.par
+#BlueLink0 Road: 3D Surface (All Properties)`K & C Test Rig` Test Facilities` , Miscellaneous`Road_3d3efdbc-9b94-40d6-aa37-04d5a6fb360d
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Generic\VS_commands\GenVS_00916918-a2bf-43de-9f1e-8761fbc2a775.par
+#BlueLink5 Generic VS Commands`K & C Opposed Fy Test VS` K & C Testing` , Miscellaneous`GenVS_00916918-a2bf-43de-9f1e-8761fbc2a775
+
+#MiscYellow1
+TSTART_WRITE 0.2
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_eb3cf6a4-5fab-4596-9537-a2969e64ac07.par
+#BlueLink8 Plot: Setup`Fy vs. SuspY - Rear` Suspension Motion` , Plot`Plot_eb3cf6a4-5fab-4596-9537-a2969e64ac07
+
+PARSFILE Plot\Setup\Plot_b94cce77-5f22-4587-b8dd-1aad743b5f74.par
+#BlueLink9 Plot: Setup`Fy vs. camber - Rear` Suspension Motion` , Plot`Plot_b94cce77-5f22-4587-b8dd-1aad743b5f74
+
+PARSFILE Plot\Setup\Plot_40cf6a77-39cb-4a00-b99e-d8a5119712fe.par
+#BlueLink10 Plot: Setup`Fy vs. toe - Rear` Suspension Motion` , Plot`Plot_40cf6a77-39cb-4a00-b99e-d8a5119712fe
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how to set a compliance test with opposed tire lateral forces in left and right tires.
+#
+#Click on the blue links "K & C Opposed Fy Test VS" to see how this was done.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Test Rigs } K & C Opposed Fy
+#Library : Procedures
+#DataSet : K & C Opposed Fy
+#Category: Test Rigs
+#FileID  : Proc_d1377ec7-9561-4ac9-aedc-3d038c896a51
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

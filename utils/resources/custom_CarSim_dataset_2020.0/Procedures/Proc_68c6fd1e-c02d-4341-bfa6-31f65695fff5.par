@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Procedures`Rural Intersection Scene w/ Path Preview`VS Scene Builder
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -180
+TSTART_WRITE = 0;
+TSTOP 30
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 80
+*TSTOP 30
+*TSTART 0
+*SSTART -180
+*SSTOP 200
+
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_f65b2b24-552e-478e-9b66-536a39f83ece.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 80 km/h` Highway Driving` , Speed vs. station`SpdPath_f65b2b24-552e-478e-9b66-536a39f83ece
+
+PARSFILE Roads\3D_Road\Road_f4c98ab7-3e46-4488-8d40-eecf058a83ab.par
+#BlueLink0 Road: 3D Surface (All Properties)`Rural Intersection Scene` VS Scene Builder` , Miscellaneous`Road_f4c98ab7-3e46-4488-8d40-eecf058a83ab
+
+PARSFILE Generic\VS_commands\GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3
+
+PARSFILE Plot\Setup\Plot_a883e5dc-fa62-4460-8b54-d60ead53be33.par
+#BlueLink18 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a883e5dc-fa62-4460-8b54-d60ead53be33
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink19 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+
+#EMBEDDED_NOTES
+#Procedure for the Rural intersection from VS Scene Builder.
+#
+#The built-in closed loop speed and steer controllers are set. However, to avoid conflicts between controller, in this scenario the target speed for the ego vehicle is based on data taken from another simulation.
+#
+#Links are made to groups of plot settings with variables of interest for this type of scenario.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { VS Scene Builder } Rural Intersection Scene w/ Path Preview
+#Library : Procedures
+#DataSet : Rural Intersection Scene w/ Path Preview
+#Category: VS Scene Builder
+#FileID  : Proc_68c6fd1e-c02d-4341-bfa6-31f65695fff5
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

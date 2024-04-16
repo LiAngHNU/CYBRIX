@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance to Sign, Current Object`User-Defined Variables
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Dist_<<o>>, S_Obj_<<o>>
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance to Sign, Current Object
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Distance to Sign, Current Object
+#Library : Plot: Setup
+#DataSet : Distance to Sign, Current Object
+#Category: User-Defined Variables
+#FileID  : Plot_53fc2c16-b0dc-4817-888f-47f24c1dc7a3
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Generic VS Commands`Define Fishhook Variables`Miscellaneous Custom Output Variables
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_PARAMETER SWA_Sign = 1;
+
+DEFINE_PARAMETER VTEST_MAX 50; mi/h; Max test velocity
+DEFINE_PARAMETER VTEST VTEST_MAX; mi/h;
+DEFINE_PARAMETER VINC 1; mi/h;
+DEFINE_PARAMETER ROLL_RATE_CHECK 1.5 ; deg/s;
+DEFINE_PARAMETER Vlimit_L 0; mi/h;
+DEFINE_PARAMETER Vlimit_R 0; mi/h;
+DEFINE_OUTPUT FZ_L = FZ_L1 + FZ_L2;
+DEFINE_OUTPUT FZ_R = FZ_R1 + FZ_R2;
+Set_Units Vx mi/h;
+Set_Units VxTarget mi/h;
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_8f24a66a-c8b7-4189-886e-37ab3f1b8c68.par
+#BlueLink3 Plot: Setup`Vertical Tire Force Sums` User-Defined Variables` , Plot`Plot_8f24a66a-c8b7-4189-886e-37ab3f1b8c68
+
+
+#EMBEDDED_NOTES
+#Define parameters used for Fishhook tests. Speeds are specified by NHTSA in mph, so those units are used for speeds related to this test. The output variables (.e., those than can be plotted) Vx and VxTarget also have their units defined in mph on this screen.
+#
+#The maximum speed where lift-off did not occur for the left-hand start is Vlimit_L; for the right-hand start it is Vlimit_R.
+#
+#Modification for CarSim 9: mi/h units are built in.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Output Variables } Define Fishhook Variables
+#Library : Generic VS Commands
+#DataSet : Define Fishhook Variables
+#Category: Miscellaneous Custom Output Variables
+#FileID  : GenVS_5b1344e6-d752-431f-b09e-328f9b9607ed
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

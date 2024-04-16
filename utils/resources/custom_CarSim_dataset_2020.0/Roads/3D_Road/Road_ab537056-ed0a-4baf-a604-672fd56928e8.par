@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`2 km Square, Mu = 1.0`Flat Test Pads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_ab537056-ed0a-4baf-a604-672fd56928e8.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 2 km Square, Mu = 1.0
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_c8235679-ac14-458f-8e77-28bdd121c095.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 1.0` Constant` , Friction`RdMu_c8235679-ac14-458f-8e77-28bdd121c095
+
+PARSFILE Roads\Shapes\RdShape_b459f304-9bab-40f0-bda2-e09187f305b2.par
+#BlueLink4 Road: Animator Surface Shapes`2 km Square` Roads` , Road shape definitions`RdShape_b459f304-9bab-40f0-bda2-e09187f305b2
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_ab537056-ed0a-4baf-a604-672fd56928e8.ani
+
+#EMBEDDED_NOTES
+#This is a flat level surface. A road is defined going east, such that global X = road station and global Y= road lateral coordinate L.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Flat Test Pads } 2 km Square, Mu = 1.0
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 2 km Square, Mu = 1.0
+#Category: Flat Test Pads
+#FileID  : Road_ab537056-ed0a-4baf-a604-672fd56928e8
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

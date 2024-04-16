@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Generic VS Commands`ABS with Embedded Python`Miscellaneous Custom Controls
+#VehCode VS Commands
+
+#MiscYellow0
+OPT_ENABLE_PYTHON = 1
+
+!SET_PYTHON_INSTALL_32 C:\\Program Files (x86)\\Python36\\python36.dll
+
+RUN_PYTHON_STRING "import abs"
+define_variable pyret
+define_variable pycond
+define_variable tcount = 0
+define_variable pbk_L1 = 0
+define_variable pbk_R1 = 0
+define_variable pbk_L2 = 0
+define_variable pbk_R2 = 0
+
+! Set condition so Python call will always run
+pycond = 1
+
+!Run the routine
+eq_in pyret = python(pycond,"abs.simple_abs_controller_model","OPEN",None,None)
+
+IMP_PBK_L1 vs_replace 
+IMP_PBK_R1 vs_replace 
+IMP_PBK_L2 vs_replace 
+IMP_PBK_R2 vs_replace 
+
+eq_in IMP_PBK_L1 = pbk_L1
+eq_in IMP_PBK_R1 = pbk_R1
+eq_in IMP_PBK_L2 = pbk_L2
+eq_in IMP_PBK_R2 = pbk_R2
+
+*CPAR_INCLUDE Extensions\Python\abs.py
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#These VS Commands for embedded Python steer controller described in:
+#
+#Help > Technical Memos > Example: Extending a Model with Embedded Python Utility
+#
+#abs.py is stored in Extensions\Python\
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Controls } ABS with Embedded Python
+#Library : Generic VS Commands
+#DataSet : ABS with Embedded Python
+#Category: Miscellaneous Custom Controls
+#FileID  : GenVS_7cf560d6-61fe-48b0-b6aa-28cc9d81eaf6
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

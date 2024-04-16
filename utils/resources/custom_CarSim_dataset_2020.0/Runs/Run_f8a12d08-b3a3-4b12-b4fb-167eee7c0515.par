@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName CarSim Run Control`B. QS DLC continue`Restore, Restart, Optimize
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f8a12d08-b3a3-4b12-b4fb-167eee7c0515
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+
+SPECIAL_PARSFILE Runs\Run_71df8512-13a1-42d3-9f4e-a12829bbce2d.par
+#BlueLink1 CarSim Run Control`A. QS DLC stop @ 3s` Restore, Restart, Optimize` , Continue`Run_71df8512-13a1-42d3-9f4e-a12829bbce2d
+
+PARSFILE Results\Run_71df8512-13a1-42d3-9f4e-a12829bbce2d\LastRun_END.PAR
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 1    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 3
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+*TSTOP 10
+*SSTART 210
+OPT_VS_FILETYPE 3
+
+SPECIAL_PARSFILE Runs\Run_71df8512-13a1-42d3-9f4e-a12829bbce2d.par
+#BlueLink23 CarSim Run Control`A. QS DLC stop @ 3s` Restore, Restart, Optimize` , Overlay run or ERD file`Run_71df8512-13a1-42d3-9f4e-a12829bbce2d
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title B. QS DLC continue <Restore, Restart, Optimize>
+CATEGORY Restore, Restart, Optimize 
+DATASET_TITLE B. QS DLC continue
+#MiscYellow0
+sstop = 210
+tstop = 10
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This will continue a run that was stopped. All links that would normally provide information about the vehicle and procedure are cleared.
+#
+#Instead:
+#
+#1. a link is made for the "Continue" option.
+#2. The box "Need animation shapes" is checked.
+#3. The stop time is set to 10, sstop to 210.
+#4. An overlay is linked for the same start run.
+#
+#In this example, all information about the model was obtained from the End file generated at the end of the linked simulation that stopped at 3s. Besides getting all parameters and tables, the state of the math model was used to initialize the second run to maintain continuity.
+#
+#The plots from both runs show continuity in the variables of interest. The video shows both runs with two separate vehicles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Restore, Restart, Optimize } B. QS DLC continue
+#Library : CarSim Run Control
+#DataSet : B. QS DLC continue
+#Category: Restore, Restart, Optimize
+#FileID  : Run_f8a12d08-b3a3-4b12-b4fb-167eee7c0515
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

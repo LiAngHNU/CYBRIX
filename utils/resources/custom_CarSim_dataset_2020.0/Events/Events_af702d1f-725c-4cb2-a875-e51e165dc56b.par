@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Events`B. Check Collision status`ADAS Sensor Collision Recorder
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ==
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Collision_Contact
+*VALUE1 1
+MAKE_EVENT Collision_Contact == 1 ; Events\Events_0927f385-dde0-4828-b5e6-96dc11009bb9.par
+#BlueLink0 Events`C. Increment Collision counter` ADAS Sensor Collision Recorder` , Events`Events_0927f385-dde0-4828-b5e6-96dc11009bb9
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Second Event as part of the Collision Detection example.
+#
+#This Event checks to see when the VS Command-defined variable Collision is evaluated to be 1, corresponding to the Moving Object being within a user-defined distance and magnitude threshold.
+#
+#Once Collision is evaluated to be 1, this Event is triggered and the next Event is loaded.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Sensor Collision Recorder } B. Check Collision status
+#Library : Events
+#DataSet : B. Check Collision status
+#Category: ADAS Sensor Collision Recorder
+#FileID  : Events_af702d1f-725c-4cb2-a875-e51e165dc56b
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

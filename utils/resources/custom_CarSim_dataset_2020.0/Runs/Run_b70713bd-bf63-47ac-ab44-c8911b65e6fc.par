@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName CarSim Run Control`ADAS RP: Scenic Mountain Road`Scene Import
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b70713bd-bf63-47ac-ab44-c8911b65e6fc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_4fa7973b-4469-4759-b0a7-9dae70ed90ec.par
+#BlueLink0 Animator: Camera Setup`Driver View: D-Class Sedan` Driver View` , Animator camera`Camera_4fa7973b-4469-4759-b0a7-9dae70ed90ec
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan` D-Class` , Math Model`Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89
+
+PARSFILE Procedures\Proc_19a50617-f804-483a-a617-c536bdd3fa53.par
+#BlueLink28 Procedures`ADAS RP: Scenic Mountain Road` Driving` , Procedure`Proc_19a50617-f804-483a-a617-c536bdd3fa53
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+PARSFILE Animator\HUD\HUD_be2da55f-e0d2-4547-9074-dfbb79adcf74.par
+#BlueLink10 Animator: HUD`Rearview Mirror` ` , Miscellaneous`HUD_be2da55f-e0d2-4547-9074-dfbb79adcf74
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title ADAS RP: Scenic Mountain Road <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE ADAS RP: Scenic Mountain Road
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example uses a custom Procedure with an imported path from ADAS RP. Follow the blue links with ADAS RP to see the controls.
+#
+#If you have the ADAS RP  database (and a license to use it) please take a moment to reference the Technical Memo for the ADAS RP Path Plugin located in Help->Technical Memos-> ADAS RP Path Plugin.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Scene Import } ADAS RP: Scenic Mountain Road
+#Library : CarSim Run Control
+#DataSet : ADAS RP: Scenic Mountain Road
+#Category: Scene Import
+#FileID  : Run_b70713bd-bf63-47ac-ab44-c8911b65e6fc
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

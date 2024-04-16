@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName CarSim Run Control`Variable Contact Patch Dimensions`Tire Models
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b74ba7e8-0215-416e-80e5-1aba2c9d945e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_779474c3-086b-4e19-abc3-3860107a4c56.par
+#BlueLink0 Animator: Camera Setup`5 Azm, 1 El, 14 m` Vehicle Reference` , Animator camera`Camera_779474c3-086b-4e19-abc3-3860107a4c56
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e98e176c-e871-4ba1-a001-e662183eac1e.par
+#BlueLink2 Vehicle: Assembly`Off-Road Pickup: Ind_SA` Pickup Trucks` , Math Model`Vehicle_e98e176c-e871-4ba1-a001-e662183eac1e
+
+PARSFILE Procedures\Proc_f3c1dc05-292a-4069-aefd-cc6b067b9d05.par
+#BlueLink28 Procedures`Drift into Curb` Driving` , Procedure`Proc_f3c1dc05-292a-4069-aefd-cc6b067b9d05
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_eb06e89d-a83e-4844-b6db-5f71ce5ff9a1.png
+WRITE_SENSOR_DETECT
+Title Variable Contact Patch Dimensions <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE Variable Contact Patch Dimensions
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A pickup truck with off-road-oriented suspension and tire data demonstrates the variable contact patch feature of the Internal Table Look-up Tire Model.
+#
+#Generic tables are linked on the tire data screen for the contact patch: one for the contact patch length (X direction), and one for the contact patch width (Y direction), each changing with tire compression.
+#
+#With the variable contact patch, the tire no longer only contacts the road at the center of tire contact, but instead will move laterally and fore/aft as it contacts a road feature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } Variable Contact Patch Dimensions
+#Library : CarSim Run Control
+#DataSet : Variable Contact Patch Dimensions
+#Category: Tire Models
+#FileID  : Run_b74ba7e8-0215-416e-80e5-1aba2c9d945e
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

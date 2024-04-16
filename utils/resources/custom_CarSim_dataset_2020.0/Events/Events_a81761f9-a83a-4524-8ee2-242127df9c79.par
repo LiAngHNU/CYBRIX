@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`C. Brake to Stop`Braking
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 0.1
+PARSFILE Control\Brake_pedal\FbkCon_af621ba0-6a75-4855-8700-0bf47b6e20e3.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Spike: 140 N @ 2 sec.` Spike` , Miscellaneous`FbkCon_af621ba0-6a75-4855-8700-0bf47b6e20e3
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink11 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Miscellaneous`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink14 Control: Throttle (Open Loop)`Constant: 0` Constant` , Miscellaneous`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+MAKE_EVENT vx < 0.1 ; Events\Events_ab43280f-ce1e-48db-b1f3-2843f31f5d30.par
+#BlueLink0 Events`A. Hold at Stop` Braking` , Events`Events_ab43280f-ce1e-48db-b1f3-2843f31f5d30
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Once the vehicle reaches 100 km/h, it repeates the brake event.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Braking } C. Brake to Stop
+#Library : Events
+#DataSet : C. Brake to Stop
+#Category: Braking
+#FileID  : Events_a81761f9-a83a-4524-8ee2-242127df9c79
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

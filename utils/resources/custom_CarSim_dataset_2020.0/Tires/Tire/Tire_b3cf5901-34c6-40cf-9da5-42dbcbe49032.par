@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Tire`1D Tables, 225/60 R18`Normalized Tires
+FZ_REF 8000
+X_LENGTH 364
+Z_LENGTH 364
+Y_LENGTH 225
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_b46bb8ca-2d76-4ce9-9459-7ed6afac0407.par
+#BlueLink4 Animator: Shape Assembly`Euro Sedan Tire` Tires` , Animator`ShpGrp_b46bb8ca-2d76-4ce9-9459-7ed6afac0407
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 225
+RRE 353
+R0 364
+FZ_TIRE_COEFFICIENT 278
+FZ_MAX 100000
+M_TIRE 25
+IT 2
+IT_XXZZ 1.1
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0041
+RR_V 0.00003
+L_CONTACT_X_CONSTANT 105
+L_CONTACT_Y_CONSTANT 225
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 1.1
+PARSFILE Tires\Mz\TireMz_1abe8a26-87b7-4e48-9580-c42b7da80a71.par
+#BlueLink0 Tire: Aligning Moment`Normalized 1D (11-pt spline)` Normalized Tires` , Aligning Moment`TireMz_1abe8a26-87b7-4e48-9580-c42b7da80a71
+
+PARSFILE Tires\Fy\TireFy_4a47b90a-b302-4824-b1b0-ee2b80db6bbc.par
+#BlueLink1 Tire: Lateral Force`Normalized 1D (5-pt spline)` Normalized Tires` , Lateral Force`TireFy_4a47b90a-b302-4824-b1b0-ee2b80db6bbc
+
+PARSFILE Tires\Fx\TireFx_1ecbd52d-e92e-4e93-a843-85163cbb9226.par
+#BlueLink2 Tire: Longitudinal Force`Normalized 1D (15-pt spline)` Normalized Tires` , Longitudinal Force`TireFx_1ecbd52d-e92e-4e93-a843-85163cbb9226
+
+PARSFILE Tires\Camber_Thrust\CamStiff_578741dd-1251-4c3d-bb6f-be0a0ca93952.par
+#BlueLink3 Tire: Camber Thrust Coefficient`225/60 R18` Touring Tires` , Camber Thrust`CamStiff_578741dd-1251-4c3d-bb6f-be0a0ca93952
+
+
+
+#EMBEDDED_NOTES
+#This tire produces Fx, Fy, and Mz in direct proportion to load. As such, it can be used for any size with reasonable behavior for loads that are within it's design range. However, the normal loss of performance at high load conditions is not provided.
+#
+#This other settings are the same as the 225/60 R18 Touring Tire.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Normalized Tires } 1D Tables, 225/60 R18
+#Library : Tire
+#DataSet : 1D Tables, 225/60 R18
+#Category: Normalized Tires
+#FileID  : Tire_b3cf5901-34c6-40cf-9da5-42dbcbe49032
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Camber - Front`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CamberL1, time
+PLOTCHANNELS CamberR1, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Camber - Front
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Camber - Front
+#Library : Plot: Setup
+#DataSet : Camber - Front
+#Category: Suspension Motion
+#FileID  : Plot_3d5bcde9-1adc-4ef7-a8b9-55222ae10117
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

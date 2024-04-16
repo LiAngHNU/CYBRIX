@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`A. Start Steady-State Straight`Steady-State Speed Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*NAME2 AY_REF
+*VALUE1 T_WAIT
+*VALUE2 abs(ay)
+#MiscYellow0
+DEFINE_PARAMETER T_WAIT 15
+#ENDMYellow
+
+#MiscYellow1
+DEFINE_PARAMETER VX_STEP 10 ; KM/H;
+DEFINE_VARIABLE VX_TARG SPEED_TIME_CONSTANT; KM/H;
+#ENDMYellow
+
+MAKE_EVENT T > T_WAIT ; Events\Events_9c47d12e-9b58-4c59-bfbd-86a47e748c95.par
+#BlueLink0 Events`B. Check Longitudinal Speed` Steady-State Speed Series` , Events`Events_9c47d12e-9b58-4c59-bfbd-86a47e748c95
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#T_WAIT is the time used to wait for the vehicle to settile into a steady-state condition.
+#
+#VX_TARG will be used as a target speed and VX_STEP is used later to set new target speeds.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Steady-State Speed Series } A. Start Steady-State Straight
+#Library : Events
+#DataSet : A. Start Steady-State Straight
+#Category: Steady-State Speed Series
+#FileID  : Events_63a43aa7-5bc8-45a3-b24c-b78d52e69106
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

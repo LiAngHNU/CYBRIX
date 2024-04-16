@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Motion Sensor 3: LF Corner (sphere)`Animated Trace Lines
+ADD_REFERENCE_FRAME Frame_81690028-7d14-4cc0-807f-8e0f7fa0537b
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S3
+SET_Y_NAME Y_S3
+SET_Z_NAME Z_S3
+SET_ROLL_NAME roll_e
+SET_PITCH_NAME pitch
+SET_YAW_NAME yaw
+
+PARSFILE Animator\STL\Shape_65911a6f-83a4-4440-88f3-e573f13be4db.par
+#BlueLink0 Animator: Shape File Link`Sphere: 0.1m Radius (Red)` Geometric Shapes` , Animator Data`Shape_65911a6f-83a4-4440-88f3-e573f13be4db
+
+WRT_X_S3
+ANI_X_S3
+WRT_Y_S3
+ANI_Y_S3
+WRT_Z_S3
+ANI_Z_S3
+WRT_roll_e
+ANI_roll_e
+WRT_pitch
+ANI_pitch
+WRT_yaw
+ANI_yaw
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Animated Trace Lines } Motion Sensor 3: LF Corner (sphere)
+#Library : Animator: Reference Frame
+#DataSet : Motion Sensor 3: LF Corner (sphere)
+#Category: Animated Trace Lines
+#FileID  : Frame_81690028-7d14-4cc0-807f-8e0f7fa0537b
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

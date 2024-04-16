@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName CarSim Run Control`Many Sensors, 5-Lane Road, 3 Lanes Fwd`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f1a527e1-fb13-4b22-8fec-8c7005c62069
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_dc48416e-5207-488c-ac1e-befb81183b3f.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 15 El, 30 m` Vehicle Reference` , Animator camera`Camera_dc48416e-5207-488c-ac1e-befb81183b3f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_c6f60129-516b-4c4b-a43c-56262f03aa6e.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Four Sensors` C-Class` , Math Model`VehLoad_c6f60129-516b-4c4b-a43c-56262f03aa6e
+
+PARSFILE Procedures\Proc_34b5f62d-c384-4643-9c85-c514d81df702.par
+#BlueLink28 Procedures`Lane Departure Using Lat_Veh` ADAS and Active Safety` , Procedure`Proc_34b5f62d-c384-4643-9c85-c514d81df702
+
+PARSFILE Roads\3D_Road\Road_3ffd4401-007b-490b-b434-fd682b3d08ed.par
+#BlueLink9 Road: 3D Surface (All Properties)`5-Lane Section` Many Lanes` , Miscellaneous`Road_3ffd4401-007b-490b-b434-fd682b3d08ed
+
+PARSFILE Generic\Group\GenGrp_d011336c-204c-49e7-89d9-3a691566120c.par
+#BlueLink10 Generic Data Group`3 Lanes Fwd, 3 Traffic Groups for ACC` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_d011336c-204c-49e7-89d9-3a691566120c
+
+PARSFILE Events\Events_8299462e-8a20-4d63-a5e2-206503741fb4.par
+#BlueLink11 Events`1. Lane Drifting Start - Drive Straight` Lane Departure Warning` , Miscellaneous`Events_8299462e-8a20-4d63-a5e2-206503741fb4
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink15 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed.par
+#BlueLink16 Plot: Setup`Distances for Closest 2 Objects, Sensor 1` ADAS Sensor Detections` , Plot`Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink17 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_4ad16d5d-bcbd-4b85-8b72-719dc7096cd1.par
+#BlueLink18 Plot: Setup`Lateral Tracking` Tracking` , Plot`Plot_4ad16d5d-bcbd-4b85-8b72-719dc7096cd1
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Many Sensors, 5-Lane Road, 3 Lanes Fwd <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Many Sensors, 5-Lane Road, 3 Lanes Fwd
+#MiscYellow0
+set_iltarg_for_id ltarg_id_dm ! DM context
+ltarg_offset  = 2
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Lane Detection using ADAS Range and Tracking Sensors with Multiple Moving Objects
+#
+#A C-Class Hatchback has lane edge detection, adaptive cruise control (ACC), and blind-spot sensors, traveling on a road with forward traffic in three lanes.
+#
+#The blind spot detection shows alerts for vehicles in the adjacent lanes, the ACC controls the vehicle speed via throttle and brakes, and an Event sequence is used to control lane departures.
+#
+#The lateral position LTARG_OFFSET is set to -2m in the Miscellaneous yellow field on the Run Control screen. The time gap for the ACC can be set on the ADAS sensor screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Many Sensors, 5-Lane Road, 3 Lanes Fwd
+#Library : CarSim Run Control
+#DataSet : Many Sensors, 5-Lane Road, 3 Lanes Fwd
+#Category: ADAS and Active Safety
+#FileID  : Run_f1a527e1-fb13-4b22-8fec-8c7005c62069
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

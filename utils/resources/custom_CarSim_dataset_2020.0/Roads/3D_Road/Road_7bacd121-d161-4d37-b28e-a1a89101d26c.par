@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Off-Road/City Loop`Self-Contained Scenes
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_7bacd121-d161-4d37-b28e-a1a89101d26c.png
+#RingCtrl0 1
+#CheckBox0 1    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Off-Road/City Loop
+PARSFILE Roads\BuilderSegment\RoadSeg_1bcead36-b1d1-4e1d-83c3-5c9a7683ffb6.par
+#BlueLink0 Path: Segment Builder`City and Off-Road 3D` Looped Roads for Environments` , Reference Path`RoadSeg_1bcead36-b1d1-4e1d-83c3-5c9a7683ffb6
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: City and Off-Road 3D
+PARSFILE Roads\Center_Z\RdRefZ_86a99196-1dd3-4df9-80ae-6161b1a7b1a0.par
+#BlueLink1 Road: Reference Line Elevation`Offroad Baja S v Z` Hills and Valleys` , Path Elevation`RdRefZ_86a99196-1dd3-4df9-80ae-6161b1a7b1a0
+
+PARSFILE Roads\dZ_Map\RdMapZ_3d1f2f5c-e6b5-4b47-a3ca-0146b5e51817.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Small Hills for DS Loop, S 175 to 860` Off-Road Terrain` , Miscellaneous`RdMapZ_3d1f2f5c-e6b5-4b47-a3ca-0146b5e51817
+
+PARSFILE Roads\Friction\RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.9` Constant` , Friction`RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba
+
+PARSFILE Roads\Shapes\RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1.par
+#BlueLink4 Road: Animator Surface Shapes`No Machine-Generated Shapes` ` , Road shape definitions`RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1
+
+PARSFILE Roads\dZ_Map\RdMapZ_f75b3c70-ddca-4d40-9be3-eafb4d81c2b0.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`Offroad Baja Banks` Off-Road Terrain` , Miscellaneous`RdMapZ_f75b3c70-ddca-4d40-9be3-eafb4d81c2b0
+
+RR_SURF 1.5
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+PARSFILE Roads\Boundaries\RdBnd_bc26c93d-e5a8-43d7-9a70-ad1debec20a8.par
+#BlueLink11 Road: Boundaries`Off-Road/City Loop` Road Boundary Stop Conditions` , Miscellaneous`RdBnd_bc26c93d-e5a8-43d7-9a70-ad1debec20a8
+
+add_reference_frame road_stuff_6_Clear_Sky_with_Desert
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_c5e92f90-93cd-46fc-9108-9b98187f1d17.par
+#BlueLink6 Animator: Group`Clear Sky with Desert` Environment Spheres` , 3D Shapes`Group_c5e92f90-93cd-46fc-9108-9b98187f1d17
+
+add_reference_frame road_stuff_7_Environment_City_and_Off-road
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_637e2d52-d912-4a22-9346-0bc57161dad3.par
+#BlueLink7 Animator: Group`Environment City and Off-road` Roads and Environment` , 3D Shapes`Group_637e2d52-d912-4a22-9346-0bc57161dad3
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 39 m` Road Reference` , Camera`Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd
+
+parsfile Roads\3D_Road\Road_7bacd121-d161-4d37-b28e-a1a89101d26c.ani
+
+#EMBEDDED_NOTES
+#This road is built using the road segment builder for X-Y, elevation, and banking.
+#
+#The link for reference elevation is not used to avoid overriding the data from the road builder. Similarly, thje first off-line elevation link is not used, to avoid overriding the banking data.
+#
+#The 2018 update to this example rebuilds the path in the new segment builder, extracting banking and elevation information into separate datasets. The path now follows roads in village portion of the map and is closed-loop.
+#
+#The fourth link for off-line elevation is used to add terrain features.
+#
+#This road uses animation shapes generated from an external source.  There are no CarSim generated shapes used.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Self-Contained Scenes } Off-Road/City Loop
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Off-Road/City Loop
+#Category: Self-Contained Scenes
+#FileID  : Road_7bacd121-d161-4d37-b28e-a1a89101d26c
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

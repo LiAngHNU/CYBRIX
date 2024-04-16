@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Events`C. Engine Off (Opt_Engine_Running = 0)`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 2.5
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_THROTTLE = T
+Opt_Engine_Running = 0; ! Turn the engine off
+#ENDMYellow
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_e4f4c488-bd9c-4426-b937-48917f076c39.par
+#BlueLink0 Events`D. Release Brake, Restart Engine` Opt_Engine_Running: Auto. Transmission` , Events`Events_e4f4c488-bd9c-4426-b937-48917f076c39
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } C. Engine Off (Opt_Engine_Running = 0)
+#Library : Events
+#DataSet : C. Engine Off (Opt_Engine_Running = 0)
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_3442dcd4-aa85-4721-8c46-1f2da66b5201
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

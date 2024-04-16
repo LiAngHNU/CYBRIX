@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Engines: Torque Rod (20 mm Length)`Common Vehicle Assets
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Engines\torque_rod\torque_rod.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 4
+SET_SCALE_Y 2.8
+SET_SCALE_Z 4
+SET_ANGLE_Z 90
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X -0.018
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0
+*SPECULAR 1
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Small Objects` Shape Preview` , Video Camera`Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_c8fd4435-56ff-4a4a-a8c2-112eb7e3eef4.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Engines: Torque Rod (20 mm Length)
+#Library : Animator: Shape File Link
+#DataSet : Engines: Torque Rod (20 mm Length)
+#Category: Common Vehicle Assets
+#FileID  : Shape_c8fd4435-56ff-4a4a-a8c2-112eb7e3eef4
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

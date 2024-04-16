@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Events`B. Start Rollover Steering Input`Rollover Test
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 8
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+PARSFILE Control\Gear_at\GearCL_395374af-90fa-4fef-80e1-a8df607bfbef.par
+#BlueLink10 Control: Shifting (Closed Loop)`Neutral` ` , Miscellaneous`GearCL_395374af-90fa-4fef-80e1-a8df607bfbef
+
+PARSFILE Control\Steer\StrSW_57f7f6fe-756b-40cd-82b3-f3fe72bb3634.par
+#BlueLink11 Control: Steering (Open Loop)`Rollover Steer Input` Ramp` , Miscellaneous`StrSW_57f7f6fe-756b-40cd-82b3-f3fe72bb3634
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT t_event > 8 ; Events\Events_c1b66ba9-2249-4f17-a3a4-1a76868e7446.par
+#BlueLink0 Events`C. Slow to a Stop` Rollover Test` , Events`Events_c1b66ba9-2249-4f17-a3a4-1a76868e7446
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Close the throttle, shift the vehicle into neutral, and start the fishhook-type steering. Reset the clock for the steering.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Rollover Test } B. Start Rollover Steering Input
+#Library : Events
+#DataSet : B. Start Rollover Steering Input
+#Category: Rollover Test
+#FileID  : Events_8321adaa-90ea-4793-8780-5fbf7078e3f6
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName CarSim Run Control`Fishhook Procedure: Van w/ Trailer`Trailers (Extra License Needed)
+#VEHICLECODE Ind_SA + S
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_ee0fded7-92b7-45c4-b54f-6a767405da5b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_de1f5f31-cdc6-45aa-8fad-27588467e961.par
+#BlueLink0 Animator: Camera Setup`350 Azm, 3 El, 49 m` Vehicle Reference` , Animator camera`Camera_de1f5f31-cdc6-45aa-8fad-27588467e961
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.4 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_ee075544-bf54-48bf-b1d7-a3997ac3029b.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Large European Van w/ Trailer` European Van` , Math Model`VehLoad_ee075544-bf54-48bf-b1d7-a3997ac3029b
+
+PARSFILE Procedures\Proc_cf1a1fd9-1945-4bf6-9c74-1c4e519ffcf7.par
+#BlueLink28 Procedures`Fishhook Procedure` Stability Testing` , Procedure`Proc_cf1a1fd9-1945-4bf6-9c74-1c4e519ffcf7
+
+PARSFILE Animator\Arrows\Arrows_18420e1c-c5d6-497f-996a-a8576addf69b.par
+#BlueLink9 Animator: Wheel Arrows and Other Indicators`Tire Skid Marks (3 Axles)` Skid Marks` , Miscellaneous`Arrows_18420e1c-c5d6-497f-996a-a8576addf69b
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_a8aec856-9536-4ef7-a407-8f78b29909e9.png
+WRITE_SENSOR_DETECT
+Title Fishhook Procedure: Van w/ Trailer <Trailers (Extra License Needed)>
+CATEGORY Trailers (Extra License Needed) 
+DATASET_TITLE Fishhook Procedure: Van w/ Trailer
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A Large European Van with a 1-axle trailer performs a slowly increasing steer test, followed by a steer input intended to induce yaw instability.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Trailers (Extra License Needed) } Fishhook Procedure: Van w/ Trailer
+#Library : CarSim Run Control
+#DataSet : Fishhook Procedure: Van w/ Trailer
+#Category: Trailers (Extra License Needed)
+#FileID  : Run_ee0fded7-92b7-45c4-b54f-6a767405da5b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

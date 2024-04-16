@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Plot: Setup`Alerts: Lane Detection`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DisS<<s>>_1, time, Distance to edge
+PLOTCHANNELS Y_S<<s>>_1, time, Y of closest edge
+PLOTCHANNELS WARN_L, time, WARN (left edge)
+PLOTCHANNELS WARN_R, time, WARN (right edge)
+PLOTCHANNELS FixSteer, time, Steering correction
+PLOTCHANNELS ID_S<<s>>_1, time, ID of closest target
+
+#ENDMYellow
+
+YAXISLABEL Command Signal
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Alerts: Lane Detection
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset supports a VS Command dataset that generates warning for left and right edge detections that are too close.
+#
+#It uses the Symbol Stack variable <<s>> to specify names for the current sensor. It also uses three output variables generated with the DEFINE_OUTPUT VS Command:  WARN_L, WARN_R, and FixSteer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } Alerts: Lane Detection
+#Library : Plot: Setup
+#DataSet : Alerts: Lane Detection
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_bb76da62-a83e-4087-b16f-d8159822d828
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Animator: Group`Fan Speed Arrows`Test Facilities
+#BlueLink0 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink1 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#MiscYellow0
+define_parameter fan_scale 150; - ; Scale factor wind arrows from Fans
+define_output VFANR = if(yaw_wind > 0, vwind*3.6 , 0) * fan_scale; ...
+  m;Wind speed arrow, right-side fan
+#ENDMYellow
+
+PARSFILE Animator\GroupsMore\GroupM_10330292-f78b-4d39-9641-fcfa6cb9b842.par
+#BlueLink11 Animator: Group (More)`Fan Speed Arrows - Right Side` Crosswind Facility` , Miscellaneous`GroupM_10330292-f78b-4d39-9641-fcfa6cb9b842
+
+#MiscYellow1
+define_output VFANL = if(yaw_wind > 0, 0, vwind*3.6 ) * fan_scale; ...
+ m;Wind speed arrow, left-side fan
+#ENDMYellow
+
+PARSFILE Animator\GroupsMore\GroupM_cdb3541c-4ee1-46f7-bbbc-a34e5e141d55.par
+#BlueLink12 Animator: Group (More)`Fan Speed Arrows - Left Side` Crosswind Facility` , Miscellaneous`GroupM_cdb3541c-4ee1-46f7-bbbc-a34e5e141d55
+
+
+#CheckBox0 0    
+
+
+LOG_ENTRY Used Dataset: Animator: Group; { Test Facilities } Fan Speed Arrows
+#Library : Animator: Group
+#DataSet : Fan Speed Arrows
+#Category: Test Facilities
+#FileID  : Group_a8489aec-2878-4c67-a66a-e98619f18833
+#Product : CarSim 2020.0
+#VehCode Animator Group
+
+END

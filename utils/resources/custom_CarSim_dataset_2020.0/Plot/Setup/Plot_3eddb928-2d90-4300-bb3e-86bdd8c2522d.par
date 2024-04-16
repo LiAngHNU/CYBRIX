@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Kingpin Torque Vs Road Wheel Angle`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Mz_KP_L1, Steer_l1
+PLOTCHANNELS Mz_KP_R1, Steer_r1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Kingpin Torque Vs Road Wheel Angle
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Kingpin Torque Vs Road Wheel Angle
+#Library : Plot: Setup
+#DataSet : Kingpin Torque Vs Road Wheel Angle
+#Category: Steering
+#FileID  : Plot_3eddb928-2d90-4300-bb3e-86bdd8c2522d
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`150 kW, 5-spd, Rr Twin Clutch w/ Ext Ctrl`External Components
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 0
+R_MDRIVE 0
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 2
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(1) 1
+OPT_DIFF_INTERNAL(2) 1
+OPT_DIFF_INTERNAL(3) 1
+
+PARSFILE Powertrain\Engine\Engine_5fd8cccf-3f87-4967-bf2c-05672393be86.par
+#BlueLink0 Powertrain: Engine`150 kW Engine` 150 kW Engines` , Engine`Engine_5fd8cccf-3f87-4967-bf2c-05672393be86
+
+PARSFILE Powertrain\TConv\TC_6167f7ca-1ba7-4746-98f1-f7e38f6f5f0a.par
+#BlueLink1 Powertrain: Torque Converter`Torque Converter: 150 kW Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_6167f7ca-1ba7-4746-98f1-f7e38f6f5f0a
+
+PARSFILE Powertrain\TransExt\Trans18_ae794f50-f755-4cff-9dea-2c38062c1336.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`5-Speed` 5-Speed Transmissions` , Transmission (Extended)`Trans18_ae794f50-f755-4cff-9dea-2c38062c1336
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_0ab6cd2b-11fd-4926-8409-a93f89357a63.par
+#BlueLink3 Powertrain: Transfer Case`Locked: 50/50, Gear Ratio 1:1` Locked` , Transfer case`XC_0ab6cd2b-11fd-4926-8409-a93f89357a63
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_8dbd1e77-e9a4-4ab6-b615-dee2e0180a36.par
+#BlueLink4 Powertrain: Front Differential`Viscous: Gear Ratio 4.4` Limited Slip and Viscous Coupling` , Differential front`DiffF_8dbd1e77-e9a4-4ab6-b615-dee2e0180a36
+
+
+IDIFF 2
+PARSFILE Powertrain\Rear_twin\TwinR_1e1f5bef-5278-41de-a8cd-80aa4985680e.par
+#BlueLink9 Powertrain: Rear Twin-Clutch Differential`Ratio 4.4 w/ External Control` ` , Twin-clutch rear`TwinR_1e1f5bef-5278-41de-a8cd-80aa4985680e
+
+
+#EMBEDDED_NOTES
+#Generic 150 kW powertrain with an automatic transmission.  The torque converter data has been tuned to work with the 150 kW engine to give reasonable performance.
+#
+#This powertrain uses an externally controlled twin clutch type differential.  The clutch control signals are supplied from an external source (such as Simulink, C-Code, etc.).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { External Components } 150 kW, 5-spd, Rr Twin Clutch w/ Ext Ctrl
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 150 kW, 5-spd, Rr Twin Clutch w/ Ext Ctrl
+#Category: External Components
+#FileID  : 4WD_802b8834-4317-4c97-a4fb-5e01ce81d6f2
+#Product : CarSim 2020.0
+#VehCode 4WD
+
+END

@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Blank (Logo) Sign`* CS 2020.0 - Environment: Custom Road Signs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Road_Signs\Custom_Sign\Sign.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 0.2
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+#MiscYellow0
+tranclucent_fix on
+#ENDMYellow
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink2 Animator: Camera Setup`YZ-Plane, No Offsets (with Yaw)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_5adddd63-2e88-4029-a05c-d738a7a8bbf1.png
+
+#EMBEDDED_NOTES
+#Sample Custom Sign Dataset. The default image is the MechSim logo.
+#
+#As signs vary around the world, it is prohibitive to attempt to design all possible sign images to provide within the VehicleSim product. For Version 2020.0, there is a new feature that enables users to create an '.OSG' Animation Shape File of a sign with a user-defined image to include in their databases. Using this feature, the user can easily apply any image onto a blank sign similar to other sign animation objects provided in the standard product. To be able to do this, the user will need an image editing program that can work with .tga files.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * CS 2020.0 - Environment: Custom Road Signs } Blank (Logo) Sign
+#Library : Animator: Shape File Link
+#DataSet : Blank (Logo) Sign
+#Category: * CS 2020.0 - Environment: Custom Road Signs
+#FileID  : Shape_5adddd63-2e88-4029-a05c-d738a7a8bbf1
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

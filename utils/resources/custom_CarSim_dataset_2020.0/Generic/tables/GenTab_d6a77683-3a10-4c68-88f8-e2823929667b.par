@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Generic Table`C_LAT: Left R (2D)`Generic Suspension Comp.: Twist-Beam (2D)
+#RingCtrl0 2D_SPLINE
+#CheckBox0 1    
+
+*3D_XLabel Fy other side (N)
+*3D_YLabel Fy (N)
+*3D_ZLabel Lateral Displacement (mm)
+
+#DiagramTwo0
+*3D_DATA 3, 21 ! columns x rows
+C_LAT_CARPET 2D_SPLINE
+0, -3000, 0, 3000
+-3000, -16.627, -12.8946, -9.37381
+-2700, -14.8914, -11.1555, -7.62097
+-2400, -13.1816, -9.44156, -5.89265
+-2100, -11.4972, -7.75235, -4.18839
+-1800, -9.83769, -6.08737, -2.50774
+-1500, -8.20253, -4.44612, -0.850222
+-1200, -6.59122, -2.82812, 0.784605
+-900, -5.00327, -1.2329, 2.3972
+-600, -3.43817, 0.34003, 3.98801
+-300, -1.89543, 1.89113, 5.55747
+0, -0.374564, 3.42087, 7.10602
+300, 1.1249, 4.92971, 8.6341
+600, 2.60344, 6.41808, 10.1421
+900, 4.06151, 7.88644, 11.6305
+1200, 5.49956, 9.33521, 13.0997
+1500, 6.91805, 10.7648, 14.55
+1800, 8.3174, 12.1757, 15.9819
+2100, 9.69804, 13.5682, 17.3958
+2400, 11.0604, 14.9428, 18.792
+2700, 12.4049, 16.2999, 20.1709
+3000, 13.7318, 17.6398, 21.5328
+ENDTABLE
+
+_CONSTANT 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD C_LAT
+*X_LABEL Fy (N)
+*Y_LABEL Lateral Displacement (mm)
+*X_LABEL_2 Fy other side (N)
+*SCALAR2 1
+
+
+#EMBEDDED_NOTES
+#Twist-beam suspension compliance from David's SuspensionSim model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Generic Suspension Comp.: Twist-Beam (2D) } C_LAT: Left R (2D)
+#Library : Generic Table
+#DataSet : C_LAT: Left R (2D)
+#Category: Generic Suspension Comp.: Twist-Beam (2D)
+#FileID  : GenTab_d6a77683-3a10-4c68-88f8-e2823929667b
+#Product : CarSim 2020.0
+#VehCode table
+
+END

@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`Roll Stability Test w/ Normally On ESC`Handling and Stability Tests
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_cdd41d8d-86a1-4811-b25f-b508d0636b37
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_688302b4-a915-404c-9d8f-8e9c1dc5682c.par
+#BlueLink0 Animator: Camera Setup`200 Azm, 10 El, 45 m, No Yaw` Vehicle Reference` , Animator camera`Camera_688302b4-a915-404c-9d8f-8e9c1dc5682c
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.4 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_313b8111-3ba3-455f-9fff-4bbd991280e5.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`E-Class, SUV: Outriggers and Roof Load` E-Class` , Math Model`VehLoad_313b8111-3ba3-455f-9fff-4bbd991280e5
+
+PARSFILE Procedures\Proc_383426d2-fb0c-4a06-b4b3-a6fe5b322470.par
+#BlueLink28 Procedures`Rollover Steer Input w/ Norm On ESC` Stability Testing` , Procedure`Proc_383426d2-fb0c-4a06-b4b3-a6fe5b322470
+
+PARSFILE Control\ESC\ESC_1aa97561-756c-4ff0-a3aa-0cf1b9b60163.par
+#BlueLink9 Control: Electronic Stability (ESC)`Normally On ESC for SUV` ` , Miscellaneous`ESC_1aa97561-756c-4ff0-a3aa-0cf1b9b60163
+
+
+SPECIAL_PARSFILE Runs\Run_8fb1e260-b761-42f3-bbb3-bf8b3752e16b.par
+#BlueLink23 CarSim Run Control`Roll Stability Testing w/ ESC` Handling and Stability Tests` , Overlay run or ERD file`Run_8fb1e260-b761-42f3-bbb3-bf8b3752e16b
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+WRITE_SENSOR_DETECT
+Title Roll Stability Test w/ Normally On ESC <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Roll Stability Test w/ Normally On ESC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class SUV with the built-in ESC performs a Rollover Steer Input test.
+#
+#For documentation on the built-in ESC, go to Help -> Technical Memos -> Example:  Electronic Stability Controller or click on the "?" (Help) in the upper right corner of this screen.
+#
+#This example shows a vehicle with an ESC that is normally active, but is deactivated in the middle of the maneuver.  The time that the ESC is turned off can be controlled in the "Rollover Steer Setup w/ Norm On ESC" events dataset that is accessible from the "Rollover Steer Input w/ Norm On ESC" Procedure dataset.
+#
+#HUD icons represent an ESC lamp that is initially off, but turns on once the system is deactivated.  Another HUD icon displays when the ESC system is active.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Handling and Stability Tests } Roll Stability Test w/ Normally On ESC
+#Library : CarSim Run Control
+#DataSet : Roll Stability Test w/ Normally On ESC
+#Category: Handling and Stability Tests
+#FileID  : Run_cdd41d8d-86a1-4811-b25f-b508d0636b37
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

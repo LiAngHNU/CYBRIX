@@ -1,0 +1,297 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Runs\Run_1e464242-7951-454e-b027-a5161d6130a1.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 21:03 on December 18, 2019 by CarSim 2020.0
+
+PRODUCT_NAME CarSim
+
+tstep 0.0005
+iprint 50
+
+ENTER_PARSFILE Runs\Run_1e464242-7951-454e-b027-a5161d6130a1.par
+#FullDataName CarSim Run Control`MF-Tyre Sweep Gamma (Fz = 4000N)`Tire Tester
+VEHICLE_CODE tire
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+RT_WINDOW_CLOSE off
+LIVE_SERVER_MAX_CONNECTIONS 0
+ENTER_PARSFILE Tires\External\TireExt_e621552e-a61c-4879-928c-9d0fcc445622.par
+#FullDataName Tire (External)`225/60 R18 (Tyre 6.2, Static)`MF-Tyre/MF-Swift
+FZ_REF 30000
+Y_LENGTH 225
+OPT_TIRE_MODEL 8
+X_LENGTH 364
+Z_LENGTH 364
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+#FullDataName Animator: Shape Assembly`Sports Car`Tires
+ENTER_PARSFILE Animator\STL\Shape_9e9cf3ff-6a77-4076-a9f0-1b70114e603e.par
+#FullDataName Animator: Shape File Link`195/45 R16: Tire`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\195_45R16\tire.obj
+SET_COLOR 1 1 1
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.3 0.3 0.3
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 195/45 R16: Tire
+EXIT_PARSFILE Animator\STL\Shape_9e9cf3ff-6a77-4076-a9f0-1b70114e603e.par
+
+ENTER_PARSFILE Animator\STL\Shape_e8969a6e-9ef6-43c7-9f40-228c21b5b4a1.par
+#FullDataName Animator: Shape File Link`195/45 R16: Wheel`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\195_45R16\wheel.obj
+SET_COLOR .62 .62 .62
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 195/45 R16: Wheel
+EXIT_PARSFILE Animator\STL\Shape_e8969a6e-9ef6-43c7-9f40-228c21b5b4a1.par
+
+ENTER_PARSFILE Animator\STL\Shape_8ffa6ffc-1b17-4180-964d-d52d768c1b70.par
+#FullDataName Animator: Shape File Link`195/45 R16: Stripe`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\195_45R16\stripe.obj
+SET_COLOR white
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.01
+SET_OFFSET_Z 0.01
+set_lighting on
+set_fogging on
+SET_SPECULAR 0 0 0
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 195/45 R16: Stripe
+EXIT_PARSFILE Animator\STL\Shape_8ffa6ffc-1b17-4180-964d-d52d768c1b70.par
+
+x_ref_length 291
+y_ref_length 195
+z_ref_length 291
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Tires } Sports Car
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+
+WRITE_WHEEL_OFFSET
+SET_OFFSET_Y 0
+KY_TIRE 956.08
+OPT_TIRE_INERTIA_EXTERNAL 1
+IT 25
+M_TIRE 2
+EXTERNAL_TIRE_MODULE_DLL D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Prog\Resources\Extensions\External_Tire_API\win32\DelftTyreWrapper.dll
+INSTALL_EXTERNAL_TIRE_API
+DELFT_TYRE_DATA Extensions\TNO_DelftTyre\CS_car225_60R18.tir
+DELFT_TYRE_DLL D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Prog\Resources\Extensions\TNO_DelftTyre\win32\TNO_DelftTyre.dll
+DELFT_TYRE_SW 1104
+DELFT_TYRE_INIT
+LOG_ENTRY Used Dataset: Tire (External); { MF-Tyre/MF-Swift } 225/60 R18 (Tyre 6.2, Static)
+EXIT_PARSFILE Tires\External\TireExt_e621552e-a61c-4879-928c-9d0fcc445622.par
+
+ENTER_PARSFILE Tire_Tester\TestTire_e75c0ca6-b87c-4651-91a2-d5041991dac1.par
+#FullDataName Tire Tester`Sweep Gamma: Fz = 4000 N`Sweep Gamma +/- 5 deg
+MUX_TEST -1
+MUY_TEST -1
+SPEED_TEST 10
+RR_SURF 1
+OPT_TEST_MODE 3
+GAMMA_LOWER -5
+GAMMA_UPPER 5
+GAMMA_STEP 0.01
+FZ_TEST 4000
+ALPHA_TEST 0
+KAPPA_TEST 0
+ENTER_PARSFILE Plot\Setup\Plot_5ca12ae8-5b1e-45b1-8f48-5268e2bbeb0d.par
+#FullDataName Plot: Setup`Fy vs. Gamma`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS Fy_L1, Gamma_L1
+WRT_FY_L1
+WRT_GAMMA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Fy vs. Gamma
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Gamma
+EXIT_PARSFILE Plot\Setup\Plot_5ca12ae8-5b1e-45b1-8f48-5268e2bbeb0d.par
+
+ENTER_PARSFILE Plot\Setup\Plot_50266de6-a184-4c4d-b724-740cd2c30398.par
+#FullDataName Plot: Setup`Mx vs. Gamma`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS Mx_L1, Gamma_L1
+WRT_MX_L1
+WRT_GAMMA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Mx vs. Gamma
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Mx vs. Gamma
+EXIT_PARSFILE Plot\Setup\Plot_50266de6-a184-4c4d-b724-740cd2c30398.par
+
+ENTER_PARSFILE Plot\Setup\Plot_22cfdc32-ac0b-431f-89b2-cb1afdf3601f.par
+#FullDataName Plot: Setup`My vs. Gamma`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS My_L1, Gamma_L1
+WRT_MY_L1
+WRT_GAMMA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE My vs. Gamma
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } My vs. Gamma
+EXIT_PARSFILE Plot\Setup\Plot_22cfdc32-ac0b-431f-89b2-cb1afdf3601f.par
+
+ENTER_PARSFILE Plot\Setup\Plot_4ae3f689-977d-4b5b-ac54-31cf8326ba52.par
+#FullDataName Plot: Setup`Mz vs. Gamma`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS Mz_L1, Gamma_L1
+WRT_MZ_L1
+WRT_GAMMA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Mz vs. Gamma
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Mz vs. Gamma
+EXIT_PARSFILE Plot\Setup\Plot_4ae3f689-977d-4b5b-ac54-31cf8326ba52.par
+
+LOG_ENTRY Used Dataset: Tire Tester; { Sweep Gamma +/- 5 deg } Sweep Gamma: Fz = 4000 N
+EXIT_PARSFILE Tire_Tester\TestTire_e75c0ca6-b87c-4651-91a2-d5041991dac1.par
+
+ENTER_PARSFILE IO_Channels\W_Channels\Write_71bdebab-1d55-4f21-9f09-6c1936e267ce.par
+#FullDataName I/O Channels: Write`All Outputs with Tire for Excel`
+OPT_ALL_WRITE_CONVERT_CSV 0
+OPT_ALL_WRITE_CONVERT_MAT 0
+WRT_Kappa_L1
+WRTCVT Kappa_L1
+WRT_Alpha_L1
+WRTCVT Alpha_L1
+WRT_Gamma_L1
+WRTCVT Gamma_L1
+WRT_Fx_L1
+WRTCVT Fx_L1
+WRT_Fy_L1
+WRTCVT Fy_L1
+WRT_Fz_L1
+WRTCVT Fz_L1
+WRT_Mx_L1
+WRTCVT Mx_L1
+WRT_My_L1
+WRTCVT My_L1
+WRT_Mz_L1
+WRTCVT Mz_L1
+LOG_ENTRY Used Dataset: I/O Channels: Write; All Outputs with Tire for Excel
+EXIT_PARSFILE IO_Channels\W_Channels\Write_71bdebab-1d55-4f21-9f09-6c1936e267ce.par
+
+WRITE_SENSOR_DETECT
+Title MF-Tyre Sweep Gamma (Fz = 4000N) <Tire Tester>
+CATEGORY Tire Tester
+DATASET_TITLE MF-Tyre Sweep Gamma (Fz = 4000N)
+NUM_CACHED_RUNS 1
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Tester } MF-Tyre Sweep Gamma (Fz = 4000N)
+EXIT_PARSFILE Runs\Run_1e464242-7951-454e-b027-a5161d6130a1.par
+
+
+
+END

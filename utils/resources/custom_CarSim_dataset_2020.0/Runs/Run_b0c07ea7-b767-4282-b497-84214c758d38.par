@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName CarSim Run Control`Road Signs, Pedestrians, Bicyclists`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b0c07ea7-b767-4282-b497-84214c758d38
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9522e6bd-d1bd-4cd7-924f-ff0322ccd5fe.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Sign Detection` C-Class` , Math Model`VehLoad_9522e6bd-d1bd-4cd7-924f-ff0322ccd5fe
+
+PARSFILE Procedures\Proc_bd3d060e-ee98-45e4-b4db-eea80a5c6727.par
+#BlueLink28 Procedures`Intersection, 3-Way, Curbs, Speed Sign` Road Networks` , Procedure`Proc_bd3d060e-ee98-45e4-b4db-eea80a5c6727
+
+PARSFILE Generic\Links\GenLink_7e48836a-4b1f-42a9-8720-03a134b8cea6.par
+#BlueLink9 Generic Group of Links`Pedestrians at Cross Walk, Rural` ADAS: Moving Objects, incl. Pedestrians` , Miscellaneous`GenLink_7e48836a-4b1f-42a9-8720-03a134b8cea6
+
+PARSFILE Generic\VS_commands\GenVS_20e12e9f-430d-481d-9f6d-f9d501d178f0.par
+#BlueLink10 Generic VS Commands`Watch Bike Lane` ADAS Support` , Miscellaneous`GenVS_20e12e9f-430d-481d-9f6d-f9d501d178f0
+
+PARSFILE Sensors_Traffic\Targets\Target_09b9d091-9202-4e08-95aa-623865ce85ec.par
+#BlueLink11 Single Moving Object (Custom)`Stop Sign` Traffic Signs and Lights` , Miscellaneous`Target_09b9d091-9202-4e08-95aa-623865ce85ec
+
+*TSTOP 26
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Road Signs, Pedestrians, Bicyclists <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Road Signs, Pedestrians, Bicyclists
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This intersection of two straight roads (East and North) forms a 3-way intersection. Both roads have curbs on the edges.
+#
+#This simlation uses the following ADAS Sensor Targets:
+#* Stop sign at the intersection
+#* Two pedestrians walking at different speeds
+#* Two bicyclists
+#* A 55 mi/h speed limit sign on the North-bound section.
+#
+#The speed limit for the Speed Controller is set on the Target Speed from Path Preview screen in units of mi/h (mph) to match the USA convention.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Road Signs, Pedestrians, Bicyclists
+#Library : CarSim Run Control
+#DataSet : Road Signs, Pedestrians, Bicyclists
+#Category: ADAS and Active Safety
+#FileID  : Run_b0c07ea7-b767-4282-b497-84214c758d38
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Signs`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Signs
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 1
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_9334732c-ac61-465e-b508-efd373fa9b9a.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`100-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_9334732c-ac61-465e-b508-efd373fa9b9a
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_42135b79-9ed7-4eb0-89a8-d6585aac1027.par
+#BlueLink1 Sensor Elevation Sensitivity`Limit to -30deg (Up)` ` , Elevation Sensitivity`SenElev_42135b79-9ed7-4eb0-89a8-d6585aac1027
+
+X_SENSOR -1250
+Y_SENSOR 0
+Z_SENSOR 1450
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 0 0.2 1
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -45
+BEARING_MAX_SENSOR 2
+
+SPECIAL_PARSFILE Animator\STL\Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc.par
+#BlueLink3 Animator: Shape File Link`Cube: 1m X, 0.1 Y, Z (Sensor Vector)` Geometric Shapes` , Shape for vector`Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc.par
+#MiscYellow0
+ani_global_interpolation off
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_0c2be909-3bbc-48dd-8145-aba6a949df4e.par
+#BlueLink4 Plot: Setup`ID and Message of Closest Object` ADAS Sensor Target Properties` , Plot`Plot_0c2be909-3bbc-48dd-8145-aba6a949df4e
+
+PARSFILE Generic\VS_commands\GenVS_b85f92a2-ccfa-48dd-ad2a-813736846432.par
+#BlueLink12 Generic VS Commands`Setup for Sign Detection` Setup Events` , Miscellaneous`GenVS_b85f92a2-ccfa-48dd-ad2a-813736846432
+
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } Signs
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Signs
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_4b95c614-70c8-4a1a-8ba4-92e35fbd0ce0
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

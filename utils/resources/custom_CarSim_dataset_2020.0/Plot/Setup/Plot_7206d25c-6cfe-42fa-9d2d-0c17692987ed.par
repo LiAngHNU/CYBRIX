@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Path Curvature vs. Station`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink2 CarSim Run Control`Speed Control from Driver Path` Driver Model` , example run`Run_b4187d53-3590-442e-817a-bb6cd1698c56
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_da78ff62-8a42-4f83-9bff-c1e49af95db0\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS RhoPathY, Station
+PLOTCHANNELS RhoPathZ, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 0
+#RingCtrl8 1
+
+
+PTITLE Path Curvature vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Path Curvature vs. Station
+#Library : Plot: Setup
+#DataSet : Path Curvature vs. Station
+#Category: Tracking
+#FileID  : Plot_7206d25c-6cfe-42fa-9d2d-0c17692987ed
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

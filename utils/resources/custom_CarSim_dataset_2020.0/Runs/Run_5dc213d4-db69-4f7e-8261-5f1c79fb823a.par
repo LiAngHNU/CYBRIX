@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName CarSim Run Control`Control w/ Target Acceleration`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5dc213d4-db69-4f7e-8261-5f1c79fb823a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_dc48416e-5207-488c-ac1e-befb81183b3f.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 15 El, 30 m` Vehicle Reference` , Animator camera`Camera_dc48416e-5207-488c-ac1e-befb81183b3f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Assembly\Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf.par
+#BlueLink2 Vehicle: Assembly`D-Class, Minivan` D-Class` , Math Model`Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf
+
+PARSFILE Procedures\Proc_11f10818-fadb-4f43-9945-5f8341d3c25b.par
+#BlueLink28 Procedures`Target Accel. & Steering Wheel Angle` Driver Controls` , Procedure`Proc_11f10818-fadb-4f43-9945-5f8341d3c25b
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_a63d669a-55ec-47cb-bebb-341045b150b1.par
+#BlueLink9 Multiple Moving Objects`Parked Red Pickup w/ Nonzero Heading` Parked Vehicles` , Miscellaneous`TMotion_a63d669a-55ec-47cb-bebb-341045b150b1
+
+PARSFILE Generic\VS_commands\GenVS_9eb57fd9-26fe-4379-bc19-fd314ecffeed.par
+#BlueLink10 Generic VS Commands`LTARG/Vx_Ref Def. for Moving Vehicle(s)` Miscellaneous Custom Controls` , Miscellaneous`GenVS_9eb57fd9-26fe-4379-bc19-fd314ecffeed
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_339b02fc-466d-43cc-856e-3019fd4d3c21.par
+#BlueLink11 Multiple Moving Objects`2 Vehicles, Vx_Ref` Traffic Vehicles (Forward)` , Miscellaneous`TMotion_339b02fc-466d-43cc-856e-3019fd4d3c21
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf.png
+WRITE_SENSOR_DETECT
+Title Control w/ Target Acceleration <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Control w/ Target Acceleration
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example uses VS Commands to demonstrate the speed controller option OPT_SC 5, which enables control of  longitudinal vehicle acceleration with a target acceleration.
+#
+#Steering control is open-loop, using a target steering wheel angle.
+#
+#This highway scenario includes a parked vehicle on the shoulder that the ego vehicle must navigate around, as well as moving vehicles in the adjacent lane.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Control w/ Target Acceleration
+#Library : CarSim Run Control
+#DataSet : Control w/ Target Acceleration
+#Category: ADAS and Active Safety
+#FileID  : Run_5dc213d4-db69-4f7e-8261-5f1c79fb823a
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

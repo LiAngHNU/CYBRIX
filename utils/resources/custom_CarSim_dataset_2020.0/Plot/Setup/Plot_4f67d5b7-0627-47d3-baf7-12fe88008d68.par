@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Gear Selection`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#BlueLink2 CarSim Run Control`Slowly Increasing Speed` Validation of Vehicle Data` , example run`Run_f0971742-efa4-4bdf-a887-cfdafb0ed6f3
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_c8949f3d-766f-4952-ad9a-23d12acccdf5\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS Gear_Del, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 1
+#RingCtrl8 1
+
+
+PTITLE Gear Selection
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Gear Selection
+#Library : Plot: Setup
+#DataSet : Gear Selection
+#Category: Powertrain
+#FileID  : Plot_4f67d5b7-0627-47d3-baf7-12fe88008d68
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

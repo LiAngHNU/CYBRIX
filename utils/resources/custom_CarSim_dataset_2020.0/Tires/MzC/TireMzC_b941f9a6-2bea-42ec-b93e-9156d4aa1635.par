@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment vs. Inclination`MF-Tyre Asymmetric`MF-Tyre Example
+#CheckBox0 0    
+
+#RingCtrl0 2D_SPLINE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Inclination [gamma] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 4, 21 ! columns x rows
+MZG_TIRE_CARPET 2D_SPLINE
+0, 0, 2000, 4000, 6000
+-5, 0, 8.95618, 16.0795, 21.083
+-4.5, 0, 8.13691, 14.501, 18.8488
+-4, 0, 7.31758, 12.9183, 16.5983
+-3.5, 0, 6.49853, 11.3321, 14.3332
+-3, 0, 5.68004, 9.74304, 12.0553
+-2.5, 0, 4.86239, 8.15183, 9.76638
+-2, 0, 4.04583, 6.55907, 7.46808
+-1.5, 0, 3.23059, 4.96538, 5.16218
+-1, 0, 2.41689, 3.37137, 2.8504
+-0.5, 0, 1.60494, 1.77764, 0.534443
+0, 0, 0.794939, 0.184769, -1.78402
+0.5, 0, -0.0131046, -1.40673, -4.10326
+1, 0, -0.818832, -2.99633, -6.42153
+1.5, 0, -1.62209, -4.58348, -8.7372
+2, 0, -2.42271, -6.16768, -11.0486
+2.5, 0, -3.22053, -7.74835, -13.3541
+3, 0, -4.01539, -9.32497, -15.652
+3.5, 0, -4.80716, -10.8969, -17.9405
+4, 0, -5.59569, -12.4637, -20.2179
+4.5, 0, -6.38089, -14.0247, -22.4825
+5, 0, -7.16269, -15.5793, -24.7324
+ENDTABLE
+
+CRO_MZ 1
+
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment vs. Inclination; { MF-Tyre Example } MF-Tyre Asymmetric
+#Library : Tire: Aligning Moment vs. Inclination
+#DataSet : MF-Tyre Asymmetric
+#Category: MF-Tyre Example
+#FileID  : TireMzC_b941f9a6-2bea-42ec-b93e-9156d4aa1635
+#Product : CarSim 2020.0
+#VehCode Tire: Mz
+
+END

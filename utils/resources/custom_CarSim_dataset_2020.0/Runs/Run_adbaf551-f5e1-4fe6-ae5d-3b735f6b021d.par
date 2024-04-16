@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName CarSim Run Control`Radar Active Cruise: Second Car`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_adbaf551-f5e1-4fe6-ae5d-3b735f6b021d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_05c2fa91-7836-4930-b6f2-3ff5d121d2f6.par
+#BlueLink12 Models: Simulink`ACC: Second Car (Ext. Sen.)` Active Cruise Control` , Models`Simlink_05c2fa91-7836-4930-b6f2-3ff5d121d2f6
+
+PARSFILE Animator\Cameras\Camera_dc48416e-5207-488c-ac1e-befb81183b3f.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 15 El, 30 m` Vehicle Reference` , Animator camera`Camera_dc48416e-5207-488c-ac1e-befb81183b3f
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.753 0.753 0.753
+SET_RUN_COLOR 0.753 0.753 0.753
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan` E-Class` , Math Model`Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f
+
+PARSFILE Procedures\Proc_3a04523f-f7be-4a81-b6c8-bcb0e9981d84.par
+#BlueLink28 Procedures`Radar Active Cruise Control: Second Car` Sensors and Traffic` , Procedure`Proc_3a04523f-f7be-4a81-b6c8-bcb0e9981d84
+
+
+SPECIAL_PARSFILE Runs\Run_87ece132-df4b-4285-b10a-244fbda604cb.par
+#BlueLink23 CarSim Run Control`Radar Active Cruise: First Car` Simulink and LabVIEW Models` , Overlay run or ERD file`Run_87ece132-df4b-4285-b10a-244fbda604cb
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Radar Active Cruise: Second Car <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Radar Active Cruise: Second Car
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The Second Car (Ext. Sens.) Blue Link in this example was updated in 2018 to use a modular solver dll.
+#
+#This example, combined with the corresponding overlaid example, demonstrates how to use two CarSim S-Function blocks in a single Simulink model to simulate an Active Cruise Control example.
+#
+#The trailing vehicle (this vehicle) has a radar-based active cruise control system that tracks the vehicle in front of it (overlay).
+#
+#In order to run this example with Simulink, follow these steps:
+#
+#1. If running a 64-bit version of Simulink, then proceed to Step 2.
+#
+#If running a 32-bit version of Simulink, an adjustment will have to be made. Click on the blue link under the "Send to Simulink" button -- Radar Active Cruise: Second Car (Ext. Sen.), read the notes for that dataset, change the DLL file name to identify a 32-bit math model DLL, and then return to this Run Control screen.
+#
+#2. Click the "Send to Simulink" button from this Run Control screen (i.e., the second vehicle)
+#
+#3. Click on the overlaid Run Control blue link for the first vehicle -- "Radar Active Cruise: First Car (Ext. Sen.)" -- to view that Run Control dataset, and click the "Send to Simulink" button.
+#
+#4. Go to Simulink and run the model. Output data are generated for both vehicle models.
+#
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Radar Active Cruise: Second Car
+#Library : CarSim Run Control
+#DataSet : Radar Active Cruise: Second Car
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_adbaf551-f5e1-4fe6-ae5d-3b735f6b021d
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

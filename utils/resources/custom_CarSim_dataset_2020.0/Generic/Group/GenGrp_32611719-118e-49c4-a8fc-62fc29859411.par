@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Generic Data Group`D-Class, Sedan Spring Seat Tables`Suspension Extensions
+#VehCode Generic Group
+#MiscYellow0
+iaxle 1
+iside 1
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_899b074a-9449-4a8a-8a22-d0b9c9050323.par
+#BlueLink0 Generic Table`D-Class, Sedan Front Spring Seat` Non-Linear Suspension Properties` , Link 1`GenTab_899b074a-9449-4a8a-8a22-d0b9c9050323
+
+
+#MiscYellow1
+iside 2
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_899b074a-9449-4a8a-8a22-d0b9c9050323.par
+#BlueLink1 Generic Table`D-Class, Sedan Front Spring Seat` Non-Linear Suspension Properties` , Link 2`GenTab_899b074a-9449-4a8a-8a22-d0b9c9050323
+
+
+
+#MiscYellow3
+iaxle 2
+iside 1
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_2eb4451f-fe53-4a01-8b9e-0c380607dcad.par
+#BlueLink3 Generic Table`D-Class, Sedan Rear Spring Seat` Non-Linear Suspension Properties` , Link 4`GenTab_2eb4451f-fe53-4a01-8b9e-0c380607dcad
+
+
+#MiscYellow4
+iside 2
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_2eb4451f-fe53-4a01-8b9e-0c380607dcad.par
+#BlueLink4 Generic Table`D-Class, Sedan Rear Spring Seat` Non-Linear Suspension Properties` , Link 5`GenTab_2eb4451f-fe53-4a01-8b9e-0c380607dcad
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset links tables to describe a non-linear relationship between suspension travel (jounce) and spring seat displacement.
+#
+#The parameter "iaxle" specifies the axle for which properties are defined, and the parameter "iside" specifies the side. Thus, "iaxle 1" means the tables linked immediately following will apply to the front axle, and "iside 1" means the tables will apply to the left side.
+#
+#Then, when "iside" is reset to 2, the following linked table applies to the right side, and when "iaxle" is reset to 2, the tables apply to the rear axle.
+#
+#On most CarSim screens this index information is supplied by the browser automatically. When you use this Generic screen, you must supply information to tell CarSim where each table is applied.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Suspension Extensions } D-Class, Sedan Spring Seat Tables
+#Library : Generic Data Group
+#DataSet : D-Class, Sedan Spring Seat Tables
+#Category: Suspension Extensions
+#FileID  : GenGrp_32611719-118e-49c4-a8fc-62fc29859411
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

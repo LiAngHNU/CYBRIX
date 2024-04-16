@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Events`E. Revise Reference Steering Wheel Angle`Slowly Increasing Steer Test
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+*NAME1 T_EVENT
+*NAME2 OPT_WRITE
+*VALUE1 1
+*VALUE2 0
+#MiscYellow0
+SWA_REF = (SWA_REF + ABS(STEER_SW))/2
+SLOW_STEER_DONE = 1
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Set SWA_REF to the average of the absolute steer taken to get to 0.3 g and -0.3 g.
+#
+#Indicate that this sequence is done.
+#
+#At this time, the vehicle is travelling at 80 km/h with a lateral acceleration of -0.3 g. Any test sequence that follows should begin with a settling period.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Slowly Increasing Steer Test } E. Revise Reference Steering Wheel Angle
+#Library : Events
+#DataSet : E. Revise Reference Steering Wheel Angle
+#Category: Slowly Increasing Steer Test
+#FileID  : Events_2c9d3292-4fbe-401b-8cfa-520aeb21a109
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

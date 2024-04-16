@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Models: Simulink`TCS Controller`Traction Control for TCS and ESC
+#RunMdlFile Extensions\Simulink\tcs_CS2017.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\tcs_CS2017.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_f8578316-9ecc-4bd2-bd34-80e41435fed6.par
+#BlueLink0 I/O Channels: Import`ESC/TCS: Eng. Torque, Whl. Cyl. Pressure` Traction Control for TCS and ESC` , Import`Import_f8578316-9ecc-4bd2-bd34-80e41435fed6
+
+PARSFILE IO_Channels\O_Channels\Export_3729b0f3-a3ac-4cb6-9e7c-4ea08439af91.par
+#BlueLink1 I/O Channels: Export`ESC/TCS: Vehicle Speeds, Engine Torque` Traction Control for TCS and ESC` , Import/Export`Export_3729b0f3-a3ac-4cb6-9e7c-4ea08439af91
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This “Models: Simulink” dataset links to a Simulink model of a Traction Control System (TCS), which controls excessive wheel spin with modulated brake pressures and engine torque management.
+#
+#The time step is set to 0.0005 sec. (2000 Hz), the method is AB-2, and the option is checked to synchronize the CarSim kinematical exports with force imports.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from CarSim.
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Traction Control for TCS and ESC } TCS Controller
+#Library : Models: Simulink
+#DataSet : TCS Controller
+#Category: Traction Control for TCS and ESC
+#FileID  : Simlink_d4d0df2e-f303-4748-93f5-cf99b8323967
+#Product : CarSim 2020.0
+#VehCode 
+
+END

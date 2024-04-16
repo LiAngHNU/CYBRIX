@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Throt_Ref`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ThrotRef, Time
+PLOTCHANNELS Throttle, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Throt_Ref
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#ThrotRef is a new output variable defined for use with the Opt_Engine_Running and Hill Hold w/ Parking Brake examples.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Throt_Ref
+#Library : Plot: Setup
+#DataSet : Throt_Ref
+#Category: Controls: Driver
+#FileID  : Plot_e50a7869-1ae0-4046-9b80-8e64e63d190f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

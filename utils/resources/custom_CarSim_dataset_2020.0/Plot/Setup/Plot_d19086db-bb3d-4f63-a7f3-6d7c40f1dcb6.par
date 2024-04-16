@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Normalized Longitudinal Force vs. Alpha`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS mu_x_l1, alpha_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Normalized Longitudinal Force vs. Alpha
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Longitudinal Force vs. Alpha
+#Library : Plot: Setup
+#DataSet : Normalized Longitudinal Force vs. Alpha
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_d19086db-bb3d-4f63-a7f3-6d7c40f1dcb6
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

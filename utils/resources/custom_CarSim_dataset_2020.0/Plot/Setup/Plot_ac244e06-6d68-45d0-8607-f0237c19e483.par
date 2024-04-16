@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral force pct utilization`Tire utilization
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FyUseL1, time
+PLOTCHANNELS FyUseR1, time
+PLOTCHANNELS FyUseL2, time
+PLOTCHANNELS FyUseR2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral force pct utilization
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire utilization } Lateral force pct utilization
+#Library : Plot: Setup
+#DataSet : Lateral force pct utilization
+#Category: Tire utilization
+#FileID  : Plot_ac244e06-6d68-45d0-8607-f0237c19e483
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

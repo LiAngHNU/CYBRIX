@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan w/ Aero Ref. Point`D-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_a0cc1ab6-9b6d-402a-8196-52d59f452ebe.par
+#BlueLink0 Vehicle: Assembly`D-Class, Sedan (Transparent)` D-Class` , Lead Unit`Vehicle_a0cc1ab6-9b6d-402a-8196-52d59f452ebe
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Output\Sensors\MoSen_adadcfc9-3356-4974-ac57-1db758def3b6.par
+#BlueLink5 Positions, Velocities, and Accelerations`Aero Reference Point` ` , Miscellaneous`MoSen_adadcfc9-3356-4974-ac57-1db758def3b6
+
+#BlueLink6 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Loaded\VehLoad_a784163a-f05c-4f73-9d83-f8b678f344f7.png
+
+#EMBEDDED_NOTES
+#D-Class Sedan with a transparent body animation shape and no interior animation shapes.
+#
+#An Aerodynamic Reference Point is added on the Custom Forces and Sensors -> Positions, Velocities, and Accelerations dataset, linked below.
+#
+#This vehicle is intended to be used with the Run Control simulation example:
+#Category: Aero Effects
+#Dataset: Crosswind, Low Mu
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { D-Class } D-Class, Sedan w/ Aero Ref. Point
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : D-Class, Sedan w/ Aero Ref. Point
+#Category: D-Class
+#FileID  : VehLoad_a784163a-f05c-4f73-9d83-f8b678f344f7
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

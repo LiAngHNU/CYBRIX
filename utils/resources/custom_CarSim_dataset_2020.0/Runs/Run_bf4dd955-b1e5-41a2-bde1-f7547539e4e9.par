@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName CarSim Run Control`Rescaled Tire Data (C-Class Hatchback)`Tire Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_bf4dd955-b1e5-41a2-bde1-f7547539e4e9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.792 1 0.984
+SET_RUN_COLOR 0.792 1 0.984
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_58545e94-301e-4510-9019-84d36ac9e16a.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback w/ Scaled Tires` C-Class` , Math Model`Vehicle_58545e94-301e-4510-9019-84d36ac9e16a
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+
+SPECIAL_PARSFILE Runs\Run_6cb07365-85a3-4a3b-95f9-c5c844687601.par
+#BlueLink23 CarSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_6cb07365-85a3-4a3b-95f9-c5c844687601
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_58545e94-301e-4510-9019-84d36ac9e16a.png
+WRITE_SENSOR_DETECT
+Title Rescaled Tire Data (C-Class Hatchback) <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE Rescaled Tire Data (C-Class Hatchback)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback with tire data scaled using VS Commands performs a double lane change maneuver at 120 km/h.
+#
+#The VS Commands are linked on the tire data screens and used to rescale the internal CarSim table-based tire model based on the load rating.
+#
+#The agreement with the reference tire — 205/55 R18 — should be almost exact because both use the same original data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } Rescaled Tire Data (C-Class Hatchback)
+#Library : CarSim Run Control
+#DataSet : Rescaled Tire Data (C-Class Hatchback)
+#Category: Tire Models
+#FileID  : Run_bf4dd955-b1e5-41a2-bde1-f7547539e4e9
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

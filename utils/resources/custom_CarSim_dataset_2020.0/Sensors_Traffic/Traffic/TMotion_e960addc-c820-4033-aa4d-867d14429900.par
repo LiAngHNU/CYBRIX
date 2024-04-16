@@ -1,0 +1,107 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`West-Center Spots, Facing West`Parking Lot: Tractor Trailers
+#RingCtrl0 3
+DEFINE_MOVING_OBJECTS 3
+#RingCtrl1 0
+#RingCtrl2 2
+#RingCtrl3 3
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox3 0    
+#CheckBox5 0    
+#CheckBox38 0    
+
+DZ_OBJECT 0
+*L 47
+*PATH_ID 1002
+*ROAD_ID 1002
+*HEADING 90/DR
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME West-Center Spots, Facing West, Object #1
+OPT_SPEED_OBJ 0
+
+EQ_INIT HEADO_<<o>> = 90/DR
+#RingCtrl4 1
+PATH_ID_OBJ 1002
+ROAD_ID_OBJ 1002
+OPT_RECYCLE_OBJ 0
+*SINIT_1 13.6
+EQ_INIT S_OBJ_<<o>> = 13.6
+EQ_INIT LATO_<<o>> = 47
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_eb0d16cf-8c89-4225-a700-5b03b522a3e7.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Sleeper Cab` Traffic and Moving Objects: Commercial` , 3D Shape for Video`AniVeh_eb0d16cf-8c89-4225-a700-5b03b522a3e7
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME West-Center Spots, Facing West, Object #2
+OPT_SPEED_OBJ 0
+
+EQ_INIT HEADO_<<o>> = 90/DR
+#RingCtrl4 1
+PATH_ID_OBJ 1002
+ROAD_ID_OBJ 1002
+OPT_RECYCLE_OBJ 0
+*SINIT_2 18.25
+EQ_INIT S_OBJ_<<o>> = 18.25
+EQ_INIT LATO_<<o>> = 47
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_03e0c1e0-0b64-4d2f-8239-86abc7f46d8c.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`3A Day Cab` Traffic and Moving Objects: Commercial` , Traffic Vehicle Ani File`AniVeh_03e0c1e0-0b64-4d2f-8239-86abc7f46d8c
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME West-Center Spots, Facing West, Object #3
+OPT_SPEED_OBJ 0
+
+EQ_INIT HEADO_<<o>> = 90/DR
+#RingCtrl4 1
+PATH_ID_OBJ 1002
+ROAD_ID_OBJ 1002
+OPT_RECYCLE_OBJ 0
+*SINIT_3 22.7
+EQ_INIT S_OBJ_<<o>> = 22.7
+EQ_INIT LATO_<<o>> = 47
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_679319d9-e74c-43a8-a17d-fc9fab7d9c56.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`2A Day Cab` Traffic and Moving Objects: Commercial` , Traffic Vehicle Ani File`AniVeh_679319d9-e74c-43a8-a17d-fc9fab7d9c56
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#This bank of spots is in the center of the western end of the parking lot.  The origin (S=0, L=0) is the South-Eastern corner of the lot.  The Path vector is straight north from there.
+#
+#There are 5 parking spots in this bank.
+#
+#The Parking spot locations are (S, L):
+#
+#Spot A - (13.45, 47.0)
+#Spot B - (15.85, 47.0)
+#Spot C - (18.25, 47.0)
+#Spot D - (20.65, 47.0)
+#Spot E - (23.05, 47.0)
+#
+#These locations are reasonably accurate for vehicles of approximately similar dimensions.  To adjust for different wheelbases, it may be necessary to use additional copies of this dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Parking Lot: Tractor Trailers } West-Center Spots, Facing West
+#Library : Multiple Moving Objects
+#DataSet : West-Center Spots, Facing West
+#Category: Parking Lot: Tractor Trailers
+#FileID  : TMotion_e960addc-c820-4033-aa4d-867d14429900
+#Product : CarSim 2020.0
+#VehCode Multiple Objects
+
+END

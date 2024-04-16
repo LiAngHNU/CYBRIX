@@ -1,0 +1,128 @@
+PARSFILE
+#FullDataName Animator: HUD`ACC Icon`ACC - Adaptive Cruise Control
+#CheckBox1 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox12 1    
+
+#RingCtrl0 4
+#RingCtrl1 9
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 3
+#RingCtrl5 9
+#RingCtrl6 1
+#RingCtrl7 2
+#RingCtrl8 1
+#RingCtrl9 9
+#RingCtrl10 1
+#RingCtrl11 2
+#RingCtrl12 3
+#RingCtrl13 9
+#RingCtrl14 1
+#RingCtrl15 2
+#RingCtrl16 3
+*LOCX_1 0
+*LOCY_1 0
+*SCALE_1 1
+*VAR_NAME_1 MagS1_1
+*LOCX_2 0
+*LOCY_2 0
+*VAR_NAME_2 MagS<<s>>_1
+*SCALE_3 1
+*VAR_NAME_3 Bk_Stat
+*LOCX_4 -4
+*LOCY_4 7
+*SCALE_4 .45
+
+*IMG_NAME_1 Animator\2D_HUD_Icons\ACC\Base.png
+*IMG_NAME_2 Animator\2D_HUD_Icons\ACC\Car_Detected.png
+*IMG_NAME_3 Animator\2D_HUD_Icons\ACC\Brakes_ON.png
+*IMG_NAME_4 Animator\2D_HUD_Icons\ACC\Active_Cruise_Control.png
+
+#Selection 9 for Icon 0
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: NULL  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\ACC\Base.png
+! General Icon
+ADD_ENTITY hud_image General Icon
+location 0 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Animator\2D_HUD_Icons\ACC\Base.png
+END_ENTITY hud_image General Icon
+#Selection 9 for Icon 1
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: MagS<<s>>_1  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\ACC\Car_Detected.png
+! General Icon
+ANI_MagS<<s>>_1
+WRT_MagS<<s>>_1
+ADD_ENTITY hud_image General Icon
+location 0 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity MagS<<s>>_1
+image_file Animator\2D_HUD_Icons\ACC\Car_Detected.png
+END_ENTITY hud_image General Icon
+#Selection 9 for Icon 2
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: Bk_Stat  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\ACC\Brakes_ON.png
+! General Icon
+ANI_Bk_Stat
+WRT_Bk_Stat
+ADD_ENTITY hud_image General Icon
+location 0 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity Bk_Stat
+image_file Animator\2D_HUD_Icons\ACC\Brakes_ON.png
+END_ENTITY hud_image General Icon
+#Selection 9 for Icon 3
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 0.450000 locX -80 locY 70
+#Selection_4 Fixed: 1 VarName: NULL  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\ACC\Active_Cruise_Control.png
+! General Icon
+ADD_ENTITY hud_image General Icon
+location -80 70 57 57
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Animator\2D_HUD_Icons\ACC\Active_Cruise_Control.png
+END_ENTITY hud_image General Icon
+
+#EMBEDDED_NOTES
+#Target will appear with up to four bars indicating longer following distance.
+#
+#This dataset creates part of the ACC HUD icon which includes the base, lead car, brakes, and  active cruise control icons.  The distance bars are defined in a separate dataset - ACC Bars.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: HUD; { ACC - Adaptive Cruise Control } ACC Icon
+#Library : Animator: HUD
+#DataSet : ACC Icon
+#Category: ACC - Adaptive Cruise Control
+#FileID  : HUD_a0c3575d-f20c-42e5-aa40-6481e560d0ec
+#Product : CarSim 2020.0
+#VehCode HUD
+
+END

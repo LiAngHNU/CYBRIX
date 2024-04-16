@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`C-Class, Hatchback w/ Camera Sensor`C-Class
+
+PARSFILE Generic\VS_commands\GenVS_e7e4db11-111a-4439-ac55-0d712bb0ee5d.par
+#BlueLink9 Generic VS Commands`C-Class Upper Front Window` Camera Sensors` , Misc`GenVS_e7e4db11-111a-4439-ac55-0d712bb0ee5d
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 2910
+OBJ_Y_LENGTH 1916
+OBJ_Z_LENGTH 1610
+*DZ_V 0
+*LAT_WC 1675
+*LAT_WC_2 1675
+*HWC 334
+*WHEEL_RATIO 1.15
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_a2543dd5-6a0a-4346-86a7-c7a0293a72ac.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.8375
+SET_OFFSET_Z 0.3173
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.8375
+SET_OFFSET_Z 0.3173
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_OFFSET_X -2.91
+SET_OFFSET_Y 0.8375
+SET_OFFSET_Z 0.3173
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_ANGLE_X 180
+SET_OFFSET_X -2.91
+SET_OFFSET_Y -0.8375
+SET_OFFSET_Z 0.3173
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_ef00e184-5515-4e79-914f-936acb67167c.par
+#BlueLink1 Animator: Shape Assembly`C-Class Hatchback` Passenger Cars` , Vehicle Body`ShpGrp_ef00e184-5515-4e79-914f-936acb67167c
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_7b5102a0-ed08-41fd-b6e0-2069fb830d0d.par
+#BlueLink3 Animator: Shape File Link`Hatchback: Brake Lights` Cars: C-Class` , Brake Lights`Shape_7b5102a0-ed08-41fd-b6e0-2069fb830d0d
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_236fd9e9-cf64-4b9e-8ffe-e890ce3c3000.par
+#BlueLink10 Animator: Shape File Link`C-Class Hatchback Reverse Lights` Cars: C-Class` , Reverse lights`Shape_236fd9e9-cf64-4b9e-8ffe-e890ce3c3000
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4
+
+
+#EMBEDDED_NOTES
+#This dataset for a C-class Hatchback includes a camera sensor to pass image information to Simulink.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { C-Class } C-Class, Hatchback w/ Camera Sensor
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : C-Class, Hatchback w/ Camera Sensor
+#Category: C-Class
+#FileID  : AniVeh_a2543dd5-6a0a-4346-86a7-c7a0293a72ac
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

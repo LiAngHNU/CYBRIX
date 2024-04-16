@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName CarSim Run Control`Payload: DLC, Loaded 2000 kg`Payloads
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_664ee486-88f4-4888-9c8b-86b136982232
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 8
+#RingCtrl2 1
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_0a552f6e-d626-4fb0-b6a4-e4a75eed5b0b.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Pickup, Full Size w/ 2000 kg Payload` Pickup, Full Size` , Math Model`VehLoad_0a552f6e-d626-4fb0-b6a4-e4a75eed5b0b
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 80
+OPT_SC_ENGINE_BRAKING 0
+OPT_STOP 1
+TSTART -3.6
+SSTART -100
+TSTART_WRITE = 0;
+TSTOP 10
+SSTOP 210
+OPT_DIRECTION 0
+*SPEED 80
+*TSTOP 10
+*TSTART -3.6
+*SSTART -100
+*SSTOP 210
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Loaded\VehLoad_0a552f6e-d626-4fb0-b6a4-e4a75eed5b0b.png
+WRITE_SENSOR_DETECT
+Title Payload: DLC, Loaded 2000 kg <Payloads>
+CATEGORY Payloads 
+DATASET_TITLE Payload: DLC, Loaded 2000 kg
+#MiscYellow0
+tstart_write 0
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A full size pickup with an independent front suspension and a solid axle rear suspension performs a double lane change at 80 km/h.
+#
+#A single 2000 kg payload has been added to the bed of the truck.
+#
+#Start and stop conditions are specified on the Run Control screen, overriding Procedure screen settings. This vehicle starts at negative time and distance, allowing it to come to equilibrium before writing to file is turned at at Time = 0 sec (tstart_write 0).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Payloads } Payload: DLC, Loaded 2000 kg
+#Library : CarSim Run Control
+#DataSet : Payload: DLC, Loaded 2000 kg
+#Category: Payloads
+#FileID  : Run_664ee486-88f4-4888-9c8b-86b136982232
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`L_Edge (L and R) vs. Time`ADAS Sensor Detections: Lane Edges
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS L_Edge_R, Time
+PLOTCHANNELS L_Edge_L, Time
+
+#ENDMYellow
+
+YAXISLABEL Lateral Position (m)
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE L_Edge (L and R) vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections: Lane Edges } L_Edge (L and R) vs. Time
+#Library : Plot: Setup
+#DataSet : L_Edge (L and R) vs. Time
+#Category: ADAS Sensor Detections: Lane Edges
+#FileID  : Plot_77783ae2-8644-4da9-84e1-9a9dd3370ac7
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

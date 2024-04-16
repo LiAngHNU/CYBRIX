@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`B-Class Hbk: 160 deg Sensor (Yellow)`Sensor Color Variations
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.par
+#BlueLink0 Vehicle: Assembly`B-Class, Hatchback` B-Class` , Lead Unit`Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Generic\VS_commands\GenVS_1e0e0e3e-4182-45f6-b1f3-6711c0b07997.par
+#BlueLink1 Generic VS Commands`Parameters for Signs and Pedestrians` ADAS Support` , Miscellaneous`GenVS_1e0e0e3e-4182-45f6-b1f3-6711c0b07997
+
+PARSFILE Sensors_Traffic\Radar\Radar_09f36988-2ea9-43a0-a85e-cb4682f3d734.par
+#BlueLink2 ADAS Sensors for Range and Tracking`160 Deg Sensor (Yellow)` 160 Deg Sensor` , Miscellaneous`Radar_09f36988-2ea9-43a0-a85e-cb4682f3d734
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.png
+
+#EMBEDDED_NOTES
+#B-Class Hatchback with a 160 deg sensor used in the City Environment examples.
+#
+#Sensor parameters defined for signs, traffic lights, pedestrians, and vehicles.
+#
+#The sensor location is set 1.5 m in front of the vehicle origin to act as the point for collision avoidance.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { Sensor Color Variations } B-Class Hbk: 160 deg Sensor (Yellow)
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : B-Class Hbk: 160 deg Sensor (Yellow)
+#Category: Sensor Color Variations
+#FileID  : VehLoad_b057b0c4-fd1a-4c0c-a631-1ca64d0965da
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

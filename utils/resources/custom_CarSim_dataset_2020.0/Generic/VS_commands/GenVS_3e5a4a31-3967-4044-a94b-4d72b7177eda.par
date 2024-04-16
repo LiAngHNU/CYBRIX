@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Generic VS Commands`Suspension Scaling for Front Suspension`CS Three-wheeled Vehicle
+#VehCode VS Commands
+
+#MiscYellow0
+! Left side
+! Suspension forces
+FS_COMP_GAIN(1,1) 0.5
+FS_EXT_GAIN(1,1) 0.5
+FD_GAIN(1,1) 0.5
+F_JNC_STOP_GAIN(1,1) 0.5
+F_REB_STOP_GAIN(1,1) 0.5
+CT_FX_GAIN(1,1) 0.5
+CS_FY_GAIN(1,1) 0.5
+CS_MZ_GAIN(1,1) 0.5
+CC_FX_GAIN(1,1) 0.5
+CI_FY_GAIN(1,1) 0.5
+CI_MZ_GAIN(1,1) 0.5
+C_LONG_GAIN(1,1) 0.5
+C_LAT_GAIN(1,1) 0.5
+
+! Brake torque
+MY_BRAKE_GAIN(1,1) 0.5
+
+! Tire vertical stiffness
+FZ_TIRE_GAIN(1,1) 0.5
+! Tire forces and moments are handled in the table data, to preserve non-linear relationships such as cornering stiffness.
+
+! Right side
+! Suspension forces
+FS_COMP_GAIN(1,2) 0.5
+FS_EXT_GAIN(1,2) 0.5
+FD_GAIN(1,2) 0.5
+F_JNC_STOP_GAIN(1,2) 0.5
+F_REB_STOP_GAIN(1,2) 0.5
+CT_FX_GAIN(1,2) 0.5
+CS_FY_GAIN(1,2) 0.5
+CS_MZ_GAIN(1,2) 0.5
+CC_FX_GAIN(1,2) 0.5
+CI_FY_GAIN(1,2) 0.5
+CI_MZ_GAIN(1,2) 0.5
+C_LONG_GAIN(1,2) 0.5
+C_LAT_GAIN(1,2) 0.5
+
+! Brake torque
+MY_BRAKE_GAIN(1,2) 0.5
+
+! Tire vertical stiffness
+FZ_TIRE_GAIN(1,2) 0.5
+! Tire forces and moments are handled in the table data, to preserve non-linear relationships such as cornering stiffness.
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#These commands scale the front suspension and tire properties to represent a three-wheeled vehicle with a single front wheel.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { CS Three-wheeled Vehicle } Suspension Scaling for Front Suspension
+#Library : Generic VS Commands
+#DataSet : Suspension Scaling for Front Suspension
+#Category: CS Three-wheeled Vehicle
+#FileID  : GenVS_3e5a4a31-3967-4044-a94b-4d72b7177eda
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Generic VS Commands`Steer Controller`Custom Steering Controls
+#VehCode VS Commands
+
+#MiscYellow0
+! Define new units for control parameter
+define_units deg/m DR
+
+! Define 3 new parameters. Changed July 15 to include descriptions for Echo file.
+define_parameter L_FORWARD 20; m; Distance to view point
+define_parameter LAT_TRACK -1.6; m; Distance vehicle is offset from road centerline
+define_parameter GAIN_STEER_CTRL 10; deg/m; Control gain
+
+! Define 2 new outputs. Extended July 2015 to include long names.
+define_output Xpreview = XCG_TM + L_FORWARD*cos(YAW); m ; X coordinate of preview point
+define_output Ypreview = YCG_TM + L_FORWARD*sin(YAW); m ; Y coordinate of preview point
+
+! Activate steering import
+IMP_STEER_SW vs_replace
+
+! Add equation for imported steering wheel angle. Start at 0 when T = 0.
+eq_in IMP_STEER_SW = if (t, (LAT_TRACK - road_l(Xpreview, Ypreview))*GAIN_STEER_CTRL, 0) ;
+
+! Define labels for ovelay plots (32 character limit)
+set_output_component Xpreview Steer control preview point
+set_output_component Ypreview Steer control preview point
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#These VS commands are for the example steer controller described in the tech memo "Example: Extending a Model with VS commands and the API."
+#
+#Updated July 2015 to include a second semicolon in some commands.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Custom Steering Controls } Steer Controller
+#Library : Generic VS Commands
+#DataSet : Steer Controller
+#Category: Custom Steering Controls
+#FileID  : GenVS_81a52563-002e-4f79-9d78-0d8c29709b76
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

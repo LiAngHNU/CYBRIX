@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Constant: 0 km/h`Constant
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Constant: 0 km/h
+#CheckBox2 0    
+#CheckBox3 1    
+*SCALAR 0
+*SCALAR2 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 1    
+#RadioCtrl1 0    
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 1
+SPEED_ID_SC SPEED_TARGET_ID
+#CheckBox0 1    
+OPT_BK_SC 1
+#CheckBox1 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox4 0    
+OPT_SC_2018 0
+SPEED_KI 1
+SPEED_KP 1
+VLOW_STOP -1
+BK_PERF_SC 1
+FPD_PERF_SC 0.1
+PBK_CON_MAX_SC 10
+SPEED_KP3 0
+SPEED_TARGET_CONSTANT 0
+SPEED_TARGET_S_CONSTANT 0
+
+#EMBEDDED_NOTES
+#This dataset sets up the closed-loop speed controller fro a sequence of constant-speed intervals used to generate a root-locus plot using a set of linearized A matrices.
+#
+#It starts at zero speed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Constant } Constant: 0 km/h
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Constant: 0 km/h
+#Category: Constant
+#FileID  : SpdTime_05520538-4611-46ce-8c7b-303dea426d90
+#Product : CarSim 2020.0
+#VehCode Target Speed
+
+END

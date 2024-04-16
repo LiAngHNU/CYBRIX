@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName I/O Channels: Export`Total Powertrain`Powertrain: Sub-System Controls and External Models
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_5bc168fc-c04f-4fe2-9bf8-68b25a5cd6f9\Run_out_tab.txt
+
+
+EXPORT Throttle
+EXPORT ModeTran
+EXPORT Gear_OL
+EXPORT AVy_L1
+EXPORT AVy_R1
+EXPORT AVy_L2
+EXPORT AVy_R2
+EXPORT Vx_L1
+EXPORT Vx_R1
+EXPORT Vx_L2
+EXPORT Vx_R2
+EXPORT Vx
+#MiscYellow0
+#Number of Selected Channels: 12
+#CHN_NAME: Throttle
+#CHN_NAME: ModeTran
+#CHN_NAME: Gear_OL
+#CHN_NAME: AVy_L1
+#CHN_NAME: AVy_R1
+#CHN_NAME: AVy_L2
+#CHN_NAME: AVy_R2
+#CHN_NAME: Vx_L1
+#CHN_NAME: Vx_R1
+#CHN_NAME: Vx_L2
+#CHN_NAME: Vx_R2
+#CHN_NAME: Vx
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`External Powertrain, Acceleration` Simulink and LabVIEW Models` , example run`Run_5bc168fc-c04f-4fe2-9bf8-68b25a5cd6f9
+
+
+#EMBEDDED_NOTES
+#Total Powertrain
+#
+#Note that for CarSim 8.2, the export variable Gear_Man has been dropped and there are two new Export variables:
+#
+#Gear_CL = Closed Loop Transmission Gear
+#Gear_OL = Open Loop Transmission Gear
+#
+#For more information, please right-click on the variables in the fields on this screen, or search the "Outputs from math model file", available on the Run Control screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Powertrain: Sub-System Controls and External Models } Total Powertrain
+#Library : I/O Channels: Export
+#DataSet : Total Powertrain
+#Category: Powertrain: Sub-System Controls and External Models
+#FileID  : Export_42ba9dac-23b7-426b-bef7-84437ffb601e
+#Product : CarSim 2020.0
+#VehCode Export Channels
+
+END

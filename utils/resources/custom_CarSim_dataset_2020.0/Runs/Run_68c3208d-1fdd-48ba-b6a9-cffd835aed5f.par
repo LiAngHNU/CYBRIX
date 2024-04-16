@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName CarSim Run Control`Alley Dock (Extra License)`* CS 2020.0 - Low Speed Behavior
+#VEHICLECODE Ind_SA + SS
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_68c3208d-1fdd-48ba-b6a9-cffd835aed5f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b5fc5904-0e8d-4e14-a39b-9cfc9a4a0b22.par
+#BlueLink0 Animator: Camera Setup`View for Alley Dock` Fixed Camera` , Animator camera`Camera_b5fc5904-0e8d-4e14-a39b-9cfc9a4a0b22
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Loaded\VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Pickup, Full Size w/ 2A Gooseneck Trl.` Pickup, Full Size` , Math Model`VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497
+
+PARSFILE Procedures\Proc_46ee7190-d1d4-4031-b2c7-a8f12fb4d114.par
+#BlueLink28 Procedures`Alley Dock` Driver Model, Extended and External` , Procedure`Proc_46ee7190-d1d4-4031-b2c7-a8f12fb4d114
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6ba13624-c527-4355-b1e1-654631d3017e.png
+WRITE_SENSOR_DETECT
+Title Alley Dock (Extra License) <* CS 2020.0 - Low Speed Behavior>
+CATEGORY * CS 2020.0 - Low Speed Behavior 
+DATASET_TITLE Alley Dock (Extra License)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#In this example, a pickup with trailer performs an alley dock maneuver; i.e., it backs into a parking spot which is behind and perpendicular.
+#
+#Steering control is closed loop, using a custom preview point and custom I-PD control logic.
+#
+#NOTE: The CarSim Trailers license is required to run this example. You may still view video and plots without it.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Low Speed Behavior } Alley Dock (Extra License)
+#Library : CarSim Run Control
+#DataSet : Alley Dock (Extra License)
+#Category: * CS 2020.0 - Low Speed Behavior
+#FileID  : Run_68c3208d-1fdd-48ba-b6a9-cffd835aed5f
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

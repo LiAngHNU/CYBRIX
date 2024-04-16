@@ -1,0 +1,105 @@
+PARSFILE
+#FullDataName Procedures`City Environment: Cars 2-4`Multi-Vehicle
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 25
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 35
+*TSTOP 25
+*TSTART 0
+*SSTART 0
+*SSTOP 2235
+
+PARSFILE Control\Driver\StrDM_aec118d4-46cb-42c7-adc2-1f7a2da4c56c.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`No Offset, 1 sec. Preview` Constant Position` , Steering`StrDM_aec118d4-46cb-42c7-adc2-1f7a2da4c56c
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_07343a37-aaf9-402e-9caa-019f1df7e2cf.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Ax/Ay, SPEED_LIMIT_ID, mi/h` Miscellaneous` , Speed vs. station`SpdPath_07343a37-aaf9-402e-9caa-019f1df7e2cf
+
+#MiscYellow0
+SPEED_TARGET_CONSTANT 25;mi/h
+VS_TERRAIN_FILE Scene_Import\VS_Scene_Builder\City_Intersection_Many_Paths.vsterrain
+#ENDMYellow
+
+PARSFILE Roads\Center_XY\PathXY_f324b822-1a23-4d9e-9b66-d382a902d1b8.par
+#BlueLink0 Path: X-Y Coordinates`City Intersection: 1000` Scene Builder Paths` , Miscellaneous`PathXY_f324b822-1a23-4d9e-9b66-d382a902d1b8
+
+PARSFILE Roads\Center_XY\PathXY_2f498e25-ebf8-4791-b530-a4aa4454a095.par
+#BlueLink1 Path: X-Y Coordinates`City Intersection: 1002` Scene Builder Paths` , Miscellaneous`PathXY_2f498e25-ebf8-4791-b530-a4aa4454a095
+
+PARSFILE Roads\Center_XY\PathXY_fc27fa4c-9039-46a9-b486-77f26290265b.par
+#BlueLink2 Path: X-Y Coordinates`City Intersection: 1003` Scene Builder Paths` , Miscellaneous`PathXY_fc27fa4c-9039-46a9-b486-77f26290265b
+
+PARSFILE Roads\Center_XY\PathXY_13c0c236-70d1-4645-813e-39c446079ee0.par
+#BlueLink3 Path: X-Y Coordinates`City Intersection: 1004` Scene Builder Paths` , Miscellaneous`PathXY_13c0c236-70d1-4645-813e-39c446079ee0
+
+PARSFILE Generic\Group\GenGrp_eadbd1c2-bd05-4fee-8dd9-3c1892c914f8.par
+#BlueLink4 Generic Data Group`City Intersection` ADAS: Building Occlusion` , Miscellaneous`GenGrp_eadbd1c2-bd05-4fee-8dd9-3c1892c914f8
+
+PARSFILE Roads\Center_XY\PathXY_ee0eac46-5ab8-4979-b7ab-59f9d251780c.par
+#BlueLink5 Path: X-Y Coordinates`Global Y-Axis` Straight` , Miscellaneous`PathXY_ee0eac46-5ab8-4979-b7ab-59f9d251780c
+
+PARSFILE Generic\Links\GenLink_1febc398-73e0-4b69-bfba-c5d04174f2b9.par
+#BlueLink6 Generic Group of Links`City Intersection` VS Scene Builder Paths` , Miscellaneous`GenLink_1febc398-73e0-4b69-bfba-c5d04174f2b9
+
+PARSFILE Generic\VS_commands\GenVS_e4490c7b-52e6-4d57-8495-f3b906012310.par
+#BlueLink7 Generic VS Commands`Setup for Object Detection` Setup Events` , Miscellaneous`GenVS_e4490c7b-52e6-4d57-8495-f3b906012310
+
+PARSFILE Generic\Group\GenGrp_00397ca3-6af7-412a-94c4-3c0862577b1c.par
+#BlueLink34 Generic Data Group`City: Signs, Pedestrians, Buildings` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_00397ca3-6af7-412a-94c4-3c0862577b1c
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink8 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_c499b241-04e6-497e-848d-7e1e074bb3b9.par
+#BlueLink9 Plot: Setup`Distance: DisS1_1` ADAS Sensor Detections` , Plot`Plot_c499b241-04e6-497e-848d-7e1e074bb3b9
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink10 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink11 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_91da62f5-6178-444d-89ee-867ef207b685.par
+#BlueLink12 Plot: Setup`Magnitude: MagS1_1` ADAS Sensor Detections` , Plot`Plot_91da62f5-6178-444d-89ee-867ef207b685
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink13 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_0077182d-6cf8-44a9-90d1-da03154afd22.par
+#BlueLink14 Plot: Setup`Speed: SpdS1_1` ADAS Sensor Detections` , Plot`Plot_0077182d-6cf8-44a9-90d1-da03154afd22
+
+PARSFILE Plot\Setup\Plot_274950bb-6467-4738-87b6-000a4d3edbc9.par
+#BlueLink15 Plot: Setup`IDs for Closest 15 Objects, Last Sensor` ADAS Sensor Detections` , Plot`Plot_274950bb-6467-4738-87b6-000a4d3edbc9
+
+
+#EMBEDDED_NOTES
+#This Procedure is used for Cars 2, 3, & 4 in the City Environment Multiple Vehicle example. It is also used for Car 2 in the City Env. (2-Car) example.
+#
+#Because the visulaization of this City Intersection .vsscene file is intensive and we do not want each of the Runs to draw these shapes, the actual VS Scene Builder asset is only included in the Procedure for Car 1.
+#
+#However, the same terrain data is imported using the VS_TERRAIN_FILE command, achieving the goal of using the same terrain information without the GPU intensive animation assets. This does not import the path information, so the paths from the Scene Builder asset have been included as X-Y Coordinate Path datasets.
+#
+#Additionally, invisible sensor shapes are placed around the building perimeters to occlude the sensors of each vehicle from detecting through buildings.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Multi-Vehicle } City Environment: Cars 2-4
+#Library : Procedures
+#DataSet : City Environment: Cars 2-4
+#Category: Multi-Vehicle
+#FileID  : Proc_712f690c-c81f-4be3-a48a-b510fbadf7c0
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

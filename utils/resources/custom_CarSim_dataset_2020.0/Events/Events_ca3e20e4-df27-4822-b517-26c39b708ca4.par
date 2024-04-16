@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`A1. Look for Station`Lane Change
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 station
+*VALUE1 50
+MAKE_EVENT station > 50 ; Events\Events_0533ad2e-2c26-41e0-86a1-fce6e7f9e7dd.par
+#BlueLink0 Events`A2. Change Lanes (Finds Local Min.)` Lane Change` , Events`Events_0533ad2e-2c26-41e0-86a1-fce6e7f9e7dd
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Lane Change } A1. Look for Station
+#Library : Events
+#DataSet : A1. Look for Station
+#Category: Lane Change
+#FileID  : Events_ca3e20e4-df27-4822-b517-26c39b708ca4
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

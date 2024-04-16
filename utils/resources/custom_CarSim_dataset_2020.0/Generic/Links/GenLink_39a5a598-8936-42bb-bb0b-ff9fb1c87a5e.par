@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Generic Group of Links`Sensor Target: Collision Detection`ADAS: Moving Objects, incl. Pedestrians
+#VehCode Generic Links
+PARSFILE Sensors_Traffic\Traffic\TMotion_066a5b16-c4d0-40e1-b62b-74b048db57fd.par
+#BlueLink0 Multiple Moving Objects`F-Class Sedan, VS Commands control` ADAS Sensor: Collision Detection` , Miscellaneous`TMotion_066a5b16-c4d0-40e1-b62b-74b048db57fd
+
+PARSFILE Generic\VS_commands\GenVS_4793850b-76d7-471d-aa0b-4ecbbb9b3326.par
+#BlueLink1 Generic VS Commands`Sensor Target: Collision Detection` ADAS Support` , Miscellaneous`GenVS_4793850b-76d7-471d-aa0b-4ecbbb9b3326
+
+
+#EMBEDDED_NOTES
+#Generic Group of Links dataset, used to assemble a Moving Object and a Generic VS Commands dataset that are part of a Collision Detection method based on the ADAS Range and Detection Sensors.
+#
+#Since the Generic VS Commands dataset uses information about the Moving Object, the Moving Object must be linked first.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Moving Objects, incl. Pedestrians } Sensor Target: Collision Detection
+#Library : Generic Group of Links
+#DataSet : Sensor Target: Collision Detection
+#Category: ADAS: Moving Objects, incl. Pedestrians
+#FileID  : GenLink_39a5a598-8936-42bb-bb0b-ff9fb1c87a5e
+#Product : CarSim 2020.0
+#VehCode Generic Links
+
+END

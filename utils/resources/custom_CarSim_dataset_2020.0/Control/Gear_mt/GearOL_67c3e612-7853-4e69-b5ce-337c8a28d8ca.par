@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Control: Shifting (Open Loop)`Time-based Upshift for 6-Speed MT`Open-Loop Gearshift Control
+
+MODE_TRANS_CONSTANT 1
+#CheckBox0 0    
+
+#RingCtrl0 STEP
+#DiagramOne0
+GEAR_TRANS_TABLE STEP
+0, 1
+4, 2
+9.5, 3
+15, 4
+20, 5
+25, 6
+ENDTABLE
+#RadioCtrl0 0    
+
+PARSFILE Control\Clutch\ClCon_c3bda42a-2285-442e-a9d7-d87d06d6b5de.par
+#BlueLink0 Control: Clutch (Open Loop)`Time-Based for 6-Speed MT` Open Loop Shift Profiles` , Clutch Control`ClCon_c3bda42a-2285-442e-a9d7-d87d06d6b5de
+
+
+
+LOG_ENTRY Used Dataset: Control: Shifting (Open Loop); { Open-Loop Gearshift Control } Time-based Upshift for 6-Speed MT
+#Library : Control: Shifting (Open Loop)
+#DataSet : Time-based Upshift for 6-Speed MT
+#Category: Open-Loop Gearshift Control
+#FileID  : GearOL_67c3e612-7853-4e69-b5ce-337c8a28d8ca
+#Product : CarSim 2020.0
+#VehCode Open-Loop Shift Control
+
+END

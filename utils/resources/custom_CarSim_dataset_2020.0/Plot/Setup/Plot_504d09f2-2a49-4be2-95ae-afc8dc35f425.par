@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Custom Vars: Speed Controller Gains`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#BlueLink2 CarSim Run Control`HUD, Exotic Racecar, Sound` VS Visualizer Examples` , example run`Run_8b0b94ef-e500-4488-8dab-ea8d8ca56e30
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_8b0b94ef-e500-4488-8dab-ea8d8ca56e30\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS Kp_Vx, Time
+PLOTCHANNELS Ki_Vx, Time
+PLOTCHANNELS K3_Vx, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 1
+#RingCtrl8 1
+
+
+PTITLE Custom Vars: Speed Controller Gains
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Custom Vars: Speed Controller Gains
+#Library : Plot: Setup
+#DataSet : Custom Vars: Speed Controller Gains
+#Category: User-Defined Variables
+#FileID  : Plot_504d09f2-2a49-4be2-95ae-afc8dc35f425
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

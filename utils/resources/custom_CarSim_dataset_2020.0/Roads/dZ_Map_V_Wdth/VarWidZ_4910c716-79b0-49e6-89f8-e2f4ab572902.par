@@ -1,0 +1,68 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, Variable Width`Highway Merge Lane`Variable Width Roads
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Highway Merge Lane
+set_description ROAD_DZ_ID Highway Merge Lane
+#RingCtrl0 CARPET
+#RingCtrl1 1
+*3D_DATA 23, 2 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+0, 0, 0, -0.5, -1, -0.5, 0, 0, 0.1, 0, 0, -0.5, -1, -0.5, 0, 0, 0.1, 0, 0, -0.5, -1, -0.5, 0, 0
+1000, 0, 0, -0.5, -1, -0.5, 0, 0, 0.1, 0, 0, -0.5, -1, -0.5, 0, 0, 0.1, 0, 0, -0.5, -1, -0.5, 0, 0
+ENDDATA
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+0, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 33.9, 34.9, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+100, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 33.9, 34.9, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+150, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 33.9, 34.9, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+200, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 33.9, 34.9, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+600, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 30, 31, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+1000, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 30, 31, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 23, 2 ! columns x rows
+RdTb1_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+0, 0, 0, -0.5, -1, -0.5, 0, 0, 0.1, 0, 0, -0.5, -1, -0.5, 0, 0, 0.1, 0, 0, -0.5, -1, -0.5, 0, 0
+1000, 0, 0, -0.5, -1, -0.5, 0, 0, 0.1, 0, 0, -0.5, -1, -0.5, 0, 0, 0.1, 0, 0, -0.5, -1, -0.5, 0, 0
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 23, 6 ! columns x rows
+RdTb2_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+0, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 33.9, 34.9, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+100, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 33.9, 34.9, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+150, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 33.9, 34.9, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+200, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 33.9, 34.9, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+600, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 30, 31, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+1000, -50, 2, 2.5, 5, 7.5, 10, 11, 15, 19, 20, 22.5, 25, 27.5, 30, 31, 35, 39, 40, 42.5, 45, 47.5, 80, 100
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SET_IROAD_DZ_FOR_ID 0
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Variable Width Roads } Highway Merge Lane
+#Library : Road: Off-Center Elevation Map, Variable Width
+#DataSet : Highway Merge Lane
+#Category: Variable Width Roads
+#FileID  : VarWidZ_4910c716-79b0-49e6-89f8-e2f4ab572902
+#Product : CarSim 2020.0
+#VehCode dZ via S-L, Variable Width
+
+END

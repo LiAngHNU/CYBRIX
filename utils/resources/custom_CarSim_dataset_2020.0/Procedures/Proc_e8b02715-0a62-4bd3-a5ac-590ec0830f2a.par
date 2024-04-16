@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Procedures`Off-Road/City Loop, Aggressive Driving`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 258.48
+TSTART_WRITE = 0;
+TSTOP 85
+SSTOP 1500
+OPT_DIRECTION 0
+*SPEED 130
+*TSTOP 85
+*TSTART 0
+*SSTART 258.48
+*SSTOP 1500
+
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_15e26d6c-a666-4829-9009-755f41880c0e.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`Baja Driving` Aggressive Driving` , Speed vs. station`SpdPath_15e26d6c-a666-4829-9009-755f41880c0e
+
+PARSFILE Roads\3D_Road\Road_7bacd121-d161-4d37-b28e-a1a89101d26c.par
+#BlueLink0 Road: 3D Surface (All Properties)`Off-Road/City Loop` Self-Contained Scenes` , Miscellaneous`Road_7bacd121-d161-4d37-b28e-a1a89101d26c
+
+PARSFILE Roads\Profiles\Profile_3bff0c88-84c1-408a-843d-956a1e2abe43.par
+#BlueLink1 Surface: Roughness Profiles`Example Road Roughness` ` , Miscellaneous`Profile_3bff0c88-84c1-408a-843d-956a1e2abe43
+
+#MiscYellow1
+z_profile_gain(1) = 2.5
+z_profile_gain(2) = z_profile_gain(1)
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59.par
+#BlueLink10 Plot: Setup`Jounce - Front` Suspension Motion` , Plot`Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59
+
+PARSFILE Plot\Setup\Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d.par
+#BlueLink11 Plot: Setup`Jounce - Rear` Suspension Motion` , Plot`Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d
+
+PARSFILE Plot\Setup\Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470.par
+#BlueLink13 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink14 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_e668490c-d100-4918-9a87-bd4f37109845.par
+#BlueLink16 Plot: Setup`Spring Force (Axle 1)` Suspension Forces and Moments` , Plot`Plot_e668490c-d100-4918-9a87-bd4f37109845
+
+PARSFILE Plot\Setup\Plot_2e1b296b-d80b-4172-abee-621f3b37e4de.par
+#BlueLink17 Plot: Setup`Spring Force (Axle 2)` Suspension Forces and Moments` , Plot`Plot_2e1b296b-d80b-4172-abee-621f3b37e4de
+
+
+#EMBEDDED_NOTES
+#In 2019.1, adjusted to use single preview point for this example.
+#
+#Target speed from path preview: the "Target speed from path preview" calculates a speed target over a preview distance to maintain the lateral and longitudinal acceleration with specified limits. Both the preview distance and acceleration limits are defined in the linked dataset.
+#
+#The road input includes roughness profiles that follow the tires. The linked profiles are amplified by settings gains for each to 2.5.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Off-Road/City Loop, Aggressive Driving
+#Library : Procedures
+#DataSet : Off-Road/City Loop, Aggressive Driving
+#Category: Driver Controls
+#FileID  : Proc_e8b02715-0a62-4bd3-a5ac-590ec0830f2a
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

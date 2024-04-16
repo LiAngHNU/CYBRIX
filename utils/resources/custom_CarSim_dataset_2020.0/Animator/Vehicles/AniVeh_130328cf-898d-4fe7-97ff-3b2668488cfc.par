@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Rental Trailer (1A)`Trailers
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 1
+OBJ_X_LENGTH 3000
+OBJ_Y_LENGTH 2024
+OBJ_Z_LENGTH 1757
+*DZ_V 0
+*LAT_WC 1800
+*LAT_WC_2 1800
+*HWC 600
+*WHEEL_RATIO 1.5
+*LAXLE_1 3000
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_130328cf-898d-4fe7-97ff-3b2668488cfc.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.5
+SET_SCALE_Y 1.5
+SET_SCALE_Z 1.5
+SET_OFFSET_X -3
+SET_OFFSET_Y 0.9
+SET_OFFSET_Z 0.57
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 1.5
+SET_SCALE_Y 1.5
+SET_SCALE_Z 1.5
+SET_ANGLE_X 180
+SET_OFFSET_X -3
+SET_OFFSET_Y -0.9
+SET_OFFSET_Z 0.57
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_78f0de31-347a-4495-a57c-3f3a8a3698fc.par
+#BlueLink1 Animator: Shape Assembly`Rental Trailer (1A)` Trailers` , Vehicle Body`ShpGrp_78f0de31-347a-4495-a57c-3f3a8a3698fc
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_efbd0f33-a16b-49cb-953a-0e6a3dc7b0ff.par
+#BlueLink3 Animator: Shape File Link`Rental Trailer (1A): Brake Lights` Trailers` , Brake Lights`Shape_efbd0f33-a16b-49cb-953a-0e6a3dc7b0ff
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Trailers } Rental Trailer (1A)
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Rental Trailer (1A)
+#Category: Trailers
+#FileID  : AniVeh_130328cf-898d-4fe7-97ff-3b2668488cfc
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

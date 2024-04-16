@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Procedures`DLC w/ Preview Speed Control`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP 210
+OPT_DIRECTION 0
+*SPEED 120
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+PARSFILE Control\Driver\StrDM_8597394d-a68f-46f7-992e-beb4bd86bc2e.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Double Lane Change (Quick Start)` Vehicle Dynamics Tests` , Steering`StrDM_8597394d-a68f-46f7-992e-beb4bd86bc2e
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_108bdc4f-b575-4a8e-8b6d-d06501ea7043.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.7/0.3 G Max Ax/Ay, 120 km/h` Aggressive Driving` , Speed vs. station`SpdPath_108bdc4f-b575-4a8e-8b6d-d06501ea7043
+
+PARSFILE Roads\3D_Road\Road_c76ab0d9-60d9-4781-bd32-84e57bf8316e.par
+#BlueLink0 Road: 3D Surface (All Properties)`DLC, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_c76ab0d9-60d9-4781-bd32-84e57bf8316e
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Plot\Setup\Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470.par
+#BlueLink8 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470
+
+PARSFILE Plot\Setup\Plot_28157809-95ed-4de0-9113-82d4a0dd0b42.par
+#BlueLink9 Plot: Setup`Steering Wheel Angle vs Station` Steering` , Plot`Plot_28157809-95ed-4de0-9113-82d4a0dd0b42
+
+PARSFILE Plot\Setup\Plot_57fbe53b-9356-4cb1-9fd0-29f3e70d3894.par
+#BlueLink10 Plot: Setup`Road Wheel Steer Angle - Front` Steering` , Plot`Plot_57fbe53b-9356-4cb1-9fd0-29f3e70d3894
+
+PARSFILE Plot\Setup\Plot_3c5f8bac-e2f6-4ebc-ab48-a1828a269fd4.par
+#BlueLink11 Plot: Setup`Slip Angles: Instant` Tire Kinematics` , Plot`Plot_3c5f8bac-e2f6-4ebc-ab48-a1828a269fd4
+
+PARSFILE Plot\Setup\Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink13 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_310b0189-b08d-49fc-a484-ee359eb89744.par
+#BlueLink14 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_310b0189-b08d-49fc-a484-ee359eb89744
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink15 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink17 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+
+#EMBEDDED_NOTES
+#The "Target speed from path preview" calculates a speed target over a preview distance to maintain the lateral and longitudinal acceleration with specified limits. Both the preview distance and acceleration limits can be defined by the user on the screen.
+#
+#Control over throttle, brakes, and steering is still accomplished through the CarSim closed loop speed controller and closed-loop path follower steering controller. The preview feature just calculates a target speed profile.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } DLC w/ Preview Speed Control
+#Library : Procedures
+#DataSet : DLC w/ Preview Speed Control
+#Category: Driver Controls
+#FileID  : Proc_cb3bccad-52e1-464c-9947-0a4e2972a793
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

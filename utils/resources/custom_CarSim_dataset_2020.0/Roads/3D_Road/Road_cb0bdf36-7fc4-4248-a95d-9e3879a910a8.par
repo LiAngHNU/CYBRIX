@@ -1,0 +1,220 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Crosswind Facility - Low Mu`Test Facilities
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_cb0bdf36-7fc4-4248-a95d-9e3879a910a8.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Crosswind Facility - Low Mu
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_768ec581-1517-41bd-8911-6bb9a2ace0a8.par
+#BlueLink3 Road: Friction Map, S-L Grid`Mu = 0.2 Test Pad; 0.85 Everywhere Else` Split Mu` , Friction`RdMu_768ec581-1517-41bd-8911-6bb9a2ace0a8
+
+PARSFILE Roads\Shapes\RdShape_9df9351b-5f1f-453f-a6a6-a14948540754.par
+#BlueLink4 Road: Animator Surface Shapes`Low Mu Road Surface` Roads` , Road shape definitions`RdShape_9df9351b-5f1f-453f-a6a6-a14948540754
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+add_reference_frame road_stuff_7_Crosswind_Test_Fans
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_56efe413-52b1-4520-b39a-dbcc348a4bb5.par
+#BlueLink7 Road: Animator Repeated Object`Crosswind Test Fans` Large Structures` , 3D Shapes`AniRep_56efe413-52b1-4520-b39a-dbcc348a4bb5
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_cb0bdf36-7fc4-4248-a95d-9e3879a910a8.ani
+
+add_reference_frame road_stuff_1_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 20
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_2_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 23
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_3_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 26
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_4_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 29
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_5_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 32
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_6_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 35
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_7_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 38
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_8_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 41
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_9_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 44
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_10_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 90
+set_offset_var_x 47
+set_offset_var_y -5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_11_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 80
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_12_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 83
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_13_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 86
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_14_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 89
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_15_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 92
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_16_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 95
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_17_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 98
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_18_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 101
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_19_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 104
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+add_reference_frame road_stuff_20_2_Floor_Fan
+reference_frame_ghosts off
+set_offset_var_yaw 270
+set_offset_var_x 107
+set_offset_var_y 5
+set_offset_var_z 0
+parsfile Animator\STL_Groups\ShpGrp_1af34e92-5ac3-48c5-a813-6056249095f7.par
+
+#EMBEDDED_NOTES
+#This is a low-mu test pad with animator shapes set to show fans for generating cross wind.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Test Facilities } Crosswind Facility - Low Mu
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Crosswind Facility - Low Mu
+#Category: Test Facilities
+#FileID  : Road_cb0bdf36-7fc4-4248-a95d-9e3879a910a8
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

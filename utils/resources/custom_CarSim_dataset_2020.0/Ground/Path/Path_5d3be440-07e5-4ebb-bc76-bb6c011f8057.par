@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Path: X-Y Coordinates (Deprecated)`No Data`Empty (You should edit or delete this)
+#RingCtrl0 1
+SET_IPATH_FOR_ID 0
+DEFINE_XY_TABLES 1
+ITAB_XY = NTAB_XY
+XY_TABLE_ID = ITAB_XY
+SET_DESCRIPTION PATH_ID No Data
+SET_DESCRIPTION XY_TABLE_ID No Data
+IPATHSEG = 1
+PATH_ID_DM = PATH_ID
+SEGMENT_TYPE = 1
+XY_SEGMENT_ID = XY_TABLE_ID
+
+#CheckBox0 0    
+OPT_PATH_LOOP 0
+
+#RadioCtrl0 0    
+
+#DiagramOne0
+SEGMENT_XY_TABLE
+0.0000, 0.0000, 0.000
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Path: X-Y Coordinates (Deprecated); { Empty (You should edit or delete this) } No Data
+#Library : Path: X-Y Coordinates (Deprecated)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Path_5d3be440-07e5-4ebb-bc76-bb6c011f8057
+#Product : CarSim 2020.0
+#VehCode Target Path
+
+END

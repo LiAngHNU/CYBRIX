@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`ADAS Sensor:  Animated location`ADAS Sensors
+ADD_REFERENCE_FRAME Frame_620196e9-044c-4cae-bbc3-a534b5be2872
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S1
+SET_Y_NAME Y_S1
+SET_Z_NAME Z_S1
+SET_ROLL_NAME roll_e
+SET_PITCH_NAME pitch
+SET_YAW_NAME yaw
+
+PARSFILE Animator\STL\Shape_d62ae365-7e5a-4fbc-91ff-c56a28cc6386.par
+#BlueLink0 Animator: Shape File Link`Sphere: 0.05m Radius` Geometric Shapes` , Animator Data`Shape_d62ae365-7e5a-4fbc-91ff-c56a28cc6386
+
+WRT_X_S1
+ANI_X_S1
+WRT_Y_S1
+ANI_Y_S1
+WRT_Z_S1
+ANI_Z_S1
+WRT_roll_e
+ANI_roll_e
+WRT_pitch
+ANI_pitch
+WRT_yaw
+ANI_yaw
+
+#EMBEDDED_NOTES
+#An Animator: Reference Frame whose position (X, Y, Z) and angular orientation (Roll, Pitch, Yaw) are set to match the first Motion Sensor.
+#
+#An Animator: Shape File Link consisting of a small sphere is linked to aid in the placement of the Animator Reference Frame.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { ADAS Sensors } ADAS Sensor:  Animated location
+#Library : Animator: Reference Frame
+#DataSet : ADAS Sensor:  Animated location
+#Category: ADAS Sensors
+#FileID  : Frame_620196e9-044c-4cae-bbc3-a534b5be2872
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

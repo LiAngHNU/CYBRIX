@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`FCW and ACC, No Display`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME FCW and ACC, No Display
+#CheckBox0 0    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 0    
+
+#RingCtrl0 0
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_ffc93407-0e02-4f9d-8ab4-5dd50505b3d8.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`50-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_ffc93407-0e02-4f9d-8ab4-5dd50505b3d8
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b
+
+X_SENSOR -1250
+Y_SENSOR 0
+Z_SENSOR 1450
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -1
+BEARING_MAX_SENSOR 1
+#BlueLink12 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+
+#EMBEDDED_NOTES
+#The sensor looks forward and is located near rear view mirror. It has a narrow field of view of 2 deg, and a range of 50 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } FCW and ACC, No Display
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : FCW and ACC, No Display
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_2c746cd8-d0de-4b24-b062-d4fdea17796c
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

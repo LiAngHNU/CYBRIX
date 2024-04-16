@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Events`B. Launch`MT Acceleration
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 av_eng
+*VALUE1 6000
+PARSFILE Control\Gear_mt\GearOL_dee9d4f0-1186-4f83-8295-da88c783383e.par
+#BlueLink10 Control: Shifting (Open Loop)`Constant: 1st w/ Open Loop Clutch` Constant` , Miscellaneous`GearOL_dee9d4f0-1186-4f83-8295-da88c783383e
+
+MAKE_EVENT av_eng > 6000 ; Events\Events_d556bb69-da08-4168-9f16-7f7ef6cc4afa.par
+#BlueLink0 Events`C. Closed-loop Shifting` MT Acceleration` , Events`Events_d556bb69-da08-4168-9f16-7f7ef6cc4afa
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { MT Acceleration } B. Launch
+#Library : Events
+#DataSet : B. Launch
+#Category: MT Acceleration
+#FileID  : Events_e5d8b7ee-0074-4c30-b247-66395e7dbe49
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Procedures`6-Lane Highway w/ Wall Objects`ADAS and Active Safety
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 10
+TSTART_WRITE = 0;
+TSTOP 60
+SSTOP 1000
+OPT_DIRECTION 0
+*SPEED 120
+*TSTOP 60
+*TSTART 0
+*SSTART 10
+*SSTOP 1000
+
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 100 km/h` Highway Driving` , Speed vs. station`SpdPath_b525f579-b67b-4db2-8cca-9d4215c6901d
+
+#MiscYellow0
+LTARG_CONSTANT -7.3
+#ENDMYellow
+
+PARSFILE Animator\Groups\Group_45ecfb37-6d3c-41bd-adfc-dbb2efdc82fd.par
+#BlueLink0 Animator: Group`6-Lane Hwy w/ Walls and Access Roads` Roads and Environment` , Miscellaneous`Group_45ecfb37-6d3c-41bd-adfc-dbb2efdc82fd
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_61e77837-86f0-461c-a234-2a4ece92ee0b.par
+#BlueLink1 Multiple Moving Objects`2 Vehicles, Vx * 0.95` Traffic Vehicles (Forward)` , Miscellaneous`TMotion_61e77837-86f0-461c-a234-2a4ece92ee0b
+
+PARSFILE Sensors_Traffic\Targets\Target_e04e49a5-8c31-40c7-8768-e9f398e13efd.par
+#BlueLink2 Single Moving Object (Custom)`Single Vehicle on Right Access Road` 6-Lane Highway` , Miscellaneous`Target_e04e49a5-8c31-40c7-8768-e9f398e13efd
+
+PARSFILE Plot\Setup\Plot_014f489a-21b4-449d-baec-e4ca98337e08.par
+#BlueLink9 Plot: Setup`Bearing Angles: Sensor 1 - Objects 1 to 5` ADAS Sensor Detections` , Plot`Plot_014f489a-21b4-449d-baec-e4ca98337e08
+
+PARSFILE Plot\Setup\Plot_b4f7b5e2-0df6-4225-a140-4907152a1dcc.par
+#BlueLink10 Plot: Setup`Distance: Sensor 1 - Objects 1 to 5` ADAS Sensor Detections` , Plot`Plot_b4f7b5e2-0df6-4225-a140-4907152a1dcc
+
+PARSFILE Plot\Setup\Plot_e75cfdb5-2550-4a7d-9ebb-bee2502de0a9.par
+#BlueLink11 Plot: Setup`Magnitude: Sensor 1 - Objects 1 to 5` ADAS Sensor Detections` , Plot`Plot_e75cfdb5-2550-4a7d-9ebb-bee2502de0a9
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates one way of making a curved wall along the edge of the road.  The 3D Road screens used to create the wall geometry for the animation also feature a detectable object dataset which makes the wall visible to ADAS sensors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { ADAS and Active Safety } 6-Lane Highway w/ Wall Objects
+#Library : Procedures
+#DataSet : 6-Lane Highway w/ Wall Objects
+#Category: ADAS and Active Safety
+#FileID  : Proc_52341aff-82d5-46b8-86f6-e1387e0f3635
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

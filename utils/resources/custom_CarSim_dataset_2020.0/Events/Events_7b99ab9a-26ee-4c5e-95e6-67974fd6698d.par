@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Events`A. Determine Lateral Position`Highway Merge
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 yo
+*NAME2 yo
+*VALUE1 45
+*VALUE2 28
+MAKE_EVENT yo > 45 ; Events\Events_5b167f41-963a-4f64-9c12-a16e479c298d.par
+#BlueLink0 Events`B. Off Throttle and Brake` Highway Merge` , Events`Events_5b167f41-963a-4f64-9c12-a16e479c298d
+
+MAKE_EVENT yo < 28 ; Events\Events_5b167f41-963a-4f64-9c12-a16e479c298d.par
+#BlueLink1 Events`B. Off Throttle and Brake` Highway Merge` , Events`Events_5b167f41-963a-4f64-9c12-a16e479c298d
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Determine where the lateral position of the vehicle is on the road.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Highway Merge } A. Determine Lateral Position
+#Library : Events
+#DataSet : A. Determine Lateral Position
+#Category: Highway Merge
+#FileID  : Events_7b99ab9a-26ee-4c5e-95e6-67974fd6698d
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

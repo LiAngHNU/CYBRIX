@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Events`D. Apply Throttle`Shift 2WD to 4WD
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 30
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_d9aef4b8-066c-4379-b85d-fb1730492eb7.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp: 0 to 0.4 in 2.5 sec.` Ramp` , Speed link`Throttle_d9aef4b8-066c-4379-b85d-fb1730492eb7
+
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT t_event > 30 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Shift 2WD to 4WD } D. Apply Throttle
+#Library : Events
+#DataSet : D. Apply Throttle
+#Category: Shift 2WD to 4WD
+#FileID  : Events_bd51c9d8-5932-4a64-8272-22a030aabac0
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

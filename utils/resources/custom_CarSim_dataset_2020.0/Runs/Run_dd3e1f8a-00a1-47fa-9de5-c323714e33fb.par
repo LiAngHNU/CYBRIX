@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName CarSim Run Control`GT-Suite: Accel. and Brake on Circle`* More Examples (Extra License Options)
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_dd3e1f8a-00a1-47fa-9de5-c323714e33fb
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\FMU\Fmu_d3853c64-bb81-4663-a3b7-767ca4e57464.par
+#BlueLink12 Models: Export FMU/FMI`CarSim/GT-Suite: RWD` ` , Models`Fmu_d3853c64-bb81-4663-a3b7-767ca4e57464
+
+PARSFILE Animator\Cameras\Camera_5feacfa5-2cee-4705-8aee-f5baa805e553.par
+#BlueLink0 Animator: Camera Setup`21 Azm, 5 El, 25 m` Road Reference` , Animator camera`Camera_5feacfa5-2cee-4705-8aee-f5baa805e553
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_8d423951-23f0-4a3d-b1f3-f66501756ded.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan: Ext. Full Powertrain` External Powertrains` , Math Model`Vehicle_8d423951-23f0-4a3d-b1f3-f66501756ded
+
+PARSFILE Procedures\Proc_2a2cc6a0-7f4f-458c-9eff-e51be8ffa1e4.par
+#BlueLink28 Procedures`Accel then Brake, 0-100-0 km/h, 8 Spd AT` Accel. and Brake Testing` , Procedure`Proc_2a2cc6a0-7f4f-458c-9eff-e51be8ffa1e4
+
+PARSFILE Roads\3D_Road\Road_e8572ed8-f752-4691-aef8-defbe1fd35dd.par
+#BlueLink9 Road: 3D Surface (All Properties)`500-ft Radius Circle, Mu = 0.85` Circular Roads` , Miscellaneous`Road_e8572ed8-f752-4691-aef8-defbe1fd35dd
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title GT-Suite: Accel. and Brake on Circle <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE GT-Suite: Accel. and Brake on Circle
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan with a powertrain model in GT-Suite is run in a co-simulation via FMI performing an acceleration and braking maneuver.
+#
+#This CarSim Run Control example only generates the FMU file. To run the simulation, the GT-suite software and a separate license are required from Gamma Technologies.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * More Examples (Extra License Options) } GT-Suite: Accel. and Brake on Circle
+#Library : CarSim Run Control
+#DataSet : GT-Suite: Accel. and Brake on Circle
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_dd3e1f8a-00a1-47fa-9de5-c323714e33fb
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

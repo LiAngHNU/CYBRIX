@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Generic Table`Suspension Damper, Front (2D, Full)`2D Dampers
+#RingCtrl0 2D_SPLINE
+#CheckBox0 1    
+
+#MiscYellow0
+iDamper_2D_Full 1
+set_units Damper_2D_Full_carpet N
+set_units_table_row Damper_2D_Full_carpet mm/s
+set_units_table_col Damper_2D_Full_carpet mm
+#ENDMYellow
+
+*3D_XLabel Comp. (mm)
+*3D_YLabel Comp. Rate (mm/s)
+*3D_ZLabel Damper Force (N)
+
+#DiagramTwo0
+*3D_DATA 14, 13 ! columns x rows
+Damper_2D_Full_CARPET 2D_SPLINE
+0, 0, 1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 45
+-1410, -5008, -5008, -5008, -5008, -5008, -5008, -5258.4, -5308.48, -5358.56, -5408.64, -5458.72, -5508.8, -5558.88, -5608.96
+-720, -3436, -3436, -3436, -3436, -3436, -3436, -3607.8, -3642.16, -3676.52, -3710.88, -3745.24, -3779.6, -3813.96, -3848.32
+-390, -2324, -2324, -2324, -2324, -2324, -2324, -2440.2, -2463.44, -2486.68, -2509.92, -2533.16, -2556.4, -2579.64, -2602.88
+-210, -1792, -1792, -1792, -1792, -1792, -1792, -1881.6, -1899.52, -1917.44, -1935.36, -1953.28, -1971.2, -1989.12, -2007.04
+-90, -1008, -1008, -1008, -1008, -1008, -1008, -1058.4, -1068.48, -1078.56, -1088.64, -1098.72, -1108.8, -1118.88, -1128.96
+-20, -228, -228, -228, -228, -228, -228, -239.4, -241.68, -243.96, -246.24, -248.52, -250.8, -253.08, -255.36
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+20, 228, 228, 228, 228, 228, 228, 239.4, 241.68, 243.96, 246.24, 248.52, 250.8, 253.08, 255.36
+90, 596, 596, 596, 596, 596, 596, 625.8, 631.76, 637.72, 643.68, 649.64, 655.6, 661.56, 667.52
+200, 784, 784, 784, 784, 784, 784, 823.2, 831.04, 838.88, 846.72, 854.56, 862.4, 870.24, 878.08
+390, 1100, 1100, 1100, 1100, 1100, 1100, 1155, 1166, 1177, 1188, 1199, 1210, 1221, 1232
+760, 1796, 1796, 1796, 1796, 1796, 1796, 1885.8, 1903.76, 1921.72, 1939.68, 1957.64, 1975.6, 1993.56, 2011.52
+1160, 2560, 2560, 2560, 2560, 2560, 2560, 2688, 2713.6, 2739.2, 2764.8, 2790.4, 2816, 2841.6, 2867.2
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD Damper_2D_Full
+*X_LABEL Comp. Rate (mm/s)
+*Y_LABEL Damper Force (N)
+*X_LABEL_2 Comp. (mm)
+
+
+#EMBEDDED_NOTES
+#Generic Table representing a suspension damper with two independent variables:
+#* Damper Compression Rate
+#* Damper Compression
+#
+#Different data is used for the compression positions, and all data passes through zero.
+#
+#Units are defined for the:
+#* Table output
+#* Table Row
+#* Table Column
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { 2D Dampers } Suspension Damper, Front (2D, Full)
+#Library : Generic Table
+#DataSet : Suspension Damper, Front (2D, Full)
+#Category: 2D Dampers
+#FileID  : GenTab_7d9eb6dc-4e5f-463e-9109-85fc29b14e8d
+#Product : CarSim 2020.0
+#VehCode table
+
+END

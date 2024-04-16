@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`Reset to S = 0`Infinity road
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t
+*VALUE1 1
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+DEFINE_EVENT 1 ; Events\Events_72d170af-7b13-45ad-aa79-7b9004596caa.par
+#BlueLink0 Events`Reset vehicle location when s = 1000` Infinity road` , Events`Events_72d170af-7b13-45ad-aa79-7b9004596caa
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Infinity road } Reset to S = 0
+#Library : Events
+#DataSet : Reset to S = 0
+#Category: Infinity road
+#FileID  : Events_e7bd4636-b5d2-4748-903a-59012cfd6412
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

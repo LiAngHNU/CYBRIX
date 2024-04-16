@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Peak Yaw Rate`Sine with Dwell
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AVZ_PEAK, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Peak Yaw Rate
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset defines a plot setup for a variable that was created with VS Commands. You can plot this variable only when your model uses VS Commands to create it.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Sine with Dwell } Peak Yaw Rate
+#Library : Plot: Setup
+#DataSet : Peak Yaw Rate
+#Category: Sine with Dwell
+#FileID  : Plot_a54b3901-1398-43ff-bed9-7623668c94ae
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

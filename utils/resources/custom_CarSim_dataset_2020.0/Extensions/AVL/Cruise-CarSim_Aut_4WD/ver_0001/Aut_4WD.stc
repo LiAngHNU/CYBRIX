@@ -1,0 +1,296 @@
+$======================================================================
+$ Applikation: CRUISE - Driving Performance, Fuel Consumption and Emissions Calculation
+$ CAE-Strukturinformation
+$ erstellt am: May 9, 2018 - Uhrzeit: 4:48:46 PM
+$======================================================================
+$------------------------------------------------------Engine
+[VERBR_MOTOR] 1
+AUSGABE           = 2
+REFERENZ          = 1
+VERWENDUNG        = 3
+TEMP_MODELL_HAUPTSCHALTER = 1
+TEMPERATURMODELL  = 2
+VERBRAUCHSMODELL  = 2
+REIBMODELL        = 1
+LL_VERBRAUCH_EMISSIONEN = 2
+SCHUBKENNLINIE_1  = 1
+SCHUBKENNLINIE_2  = 1
+STARTANREICHERUNG = 1
+BESCHL_ANREICHERUNG = 1
+VERBR_MASSENSTROM_EXTERN_S = 1
+VERBR_KOEFF_EXTERN_S = 1
+LL_DREHZAHL_ERMITTLUNG = 1
+LL_REGELUNG       = 1
+MAX_DREHZAHL_ERMITTLUNG = 1
+VERLUSTMOMENTKENNLINIE = 1
+ANSPRECHVERHALTEN_TURBO = 1
+TC_PTX_SCHALT     = 1
+LL_LADEDRUCK_SCHALTER = 1
+KORREKTURVERFAHREN = 1
+SPEZ_VERBRAUCHSKENNFELD = 1
+UREA_CONSUMPTION  = 1
+AIR_FUEL_RATIO    = 1
+REDUZIERTE_VOLLAST_1 = 1
+REDUZIERTE_VOLLAST_2 = 1
+REDUZIERTE_VOLLAST_3 = 1
+REDUZIERTE_VOLLAST_4 = 1
+REDUZIERTE_VOLLAST_5 = 1
+REDUZ_VOLLASTREDUKTION = 1
+MOTORBREMSKENNLINIE = 1
+ANLASSERSTROM     = 1
+DROSSELKLAPPENKENNFELD = 1
+STEUERGROESSE     = 1
+AUSWAHL_ABGSANLAGE = 1
+{ VERBINDUNG }
+  200       
+  1700      
+  -1        
+LASTSTELLUNG      = '16.1'
+STARTSCHALTER     = '19.20'
+BETRIEBSKONTROLLE = 1
+VERBRAUCH_MASSENSTROM = 30
+MOTORDREHZAHL     = 3
+MOTORMOMENT_N_SCHEIBE = 21
+LASTSTELLUNG_AKT  = 24
+$--------------------------------------------Torque Converter
+[WANDLER] 2
+AUSGABE           = 2
+REFERENZ          = 1
+MODELLIERUNG      = 1
+{ VERBINDUNG }
+  200       
+  300       
+TURBINENDREHZAHL  = 2
+TURBINENMOMENT    = 5
+$----------------------------------------------------Gear Box
+[GETRIEBE] 3
+AUSGABE           = 2
+GANGWECHSELZEITSCHALTER = 1
+WIDERSTANDSSCHALTER = 3
+GANGWECHSELVERLUSTE = 1
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+{ VERBINDUNG }
+  300       
+  1200      
+GANGPOSITION      = '14.1'
+GANG_AKTUELL      = 1
+AUSGANGSDREHZAHL  = 3
+UEBERSETZUNG      = 4
+AUSGANGSMOMENT    = 6
+$-----------------------------------Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 4
+VARIIERT          = 2
+AUSGABE           = 2
+ANGABE            = 1
+WIDERSTANDSSCHALTER = 3
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+{ VERBINDUNG }
+  1202      
+  1000      
+$-----------------------------------Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 5
+VARIIERT          = 2
+AUSGABE           = 2
+ANGABE            = 1
+WIDERSTANDSSCHALTER = 3
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+{ VERBINDUNG }
+  1201      
+  1100      
+$---------------------------------------------------------Hub
+[NABE] 6
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 4
+{ VERBINDUNG }
+  1102      
+WIDERSTANDSMOMENT = '19.9'
+BREMSMOMENT       = '19.22'
+$---------------------------------------------------------Hub
+[NABE] 7
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 1
+{ VERBINDUNG }
+  1101      
+WIDERSTANDSMOMENT = '19.8'
+BREMSMOMENT       = '19.21'
+$---------------------------------------------------------Hub
+[NABE] 8
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 3
+{ VERBINDUNG }
+  1002      
+WIDERSTANDSMOMENT = '19.11'
+BREMSMOMENT       = '19.24'
+$---------------------------------------------------------Hub
+[NABE] 9
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 2
+{ VERBINDUNG }
+  1001      
+WIDERSTANDSMOMENT = '19.10'
+BREMSMOMENT       = '19.23'
+$------------------------------------------------Differential
+[DIFFERENTIAL] 10
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  1000      
+  1001      
+  1002      
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------Differential
+[DIFFERENTIAL] 11
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  1100      
+  1101      
+  1102      
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$------------------------------------------------Differential
+[DIFFERENTIAL] 12
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  1200      
+  1201      
+  1202      
+DREHZAHL_AUSGANG1 = 2
+DREHZAHL_AUSGANG2 = 3
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$-----------------------------------------------------Cockpit
+[COCKPIT] 13
+AUSGABE           = 2
+EXTERNE_VORGABE   = 1
+EXTERNE_SOLLGESCHW = 1
+FAHRPEDAL_AUSWAHL = 1
+FAHRZUSTAND_AUSWAHL = 1
+{ VERBINDUNG }
+DREHZAHL          = '1.3'
+BETRIEBSKONTROLLE0 = '1.1'
+GANGANZEIGE       = '3.1'
+GANGPOSITION      = 4
+BETRIEBSKONTROLLE = 18
+$--------------------------------------------Gear Box Control
+[GETRIEBESTEUERUNG] 14
+AUSGABE           = 2
+SCHALTVERZUGSCHALTER = 1
+GANGSPRUNGSCHALTER_HOCH = 1
+GANGSPRUNGSCHALTER_RUNTER = 1
+SAM_STEUER_PROG   = 1
+SAM_GANGWAHL_HOCH = 2
+SAM_GANGWAHL_RUNTER = 2
+{ VERBINDUNG }
+GANG_SOLL         = '13.4'
+GANG_AKTUELL      = '3.1'
+FAHRGESCHWINDIGKEIT = '19.3'
+DREHZAHL          = '2.2'
+BETRIEBSKONTROLLE = '13.18'
+GANG_PROG         = '15.1'
+GANGPOSITION_NEU  = 1
+$--------------------------------------------Gear Box Program
+[GETRIEBEPROGRAMM] 15
+AUSGABE           = 2
+SCHALTPROGRAMM_VERWENDUNG = 1
+SCHALTPROGRAMM_SP2 = 1
+SCHALTPROGRAMM_SP3 = 1
+SCHALTPROGRAMM_SP4 = 1
+SCHALTPROGRAMM_SP5 = 1
+KICKDOWNTABELLE   = 1
+VERWEILDAUER      = 1
+GANGSPRUNGSCHALTER_HOCH_GBP = 2
+GANGSPRUNGSCHALTER_RUNTER_GBP = 2
+{ VERBINDUNG }
+GANG_AKTUELL      = '3.1'
+LASTSTELLUNG      = '19.6'
+DREHZAHL          = '3.3'
+FAHRGESCHWINDIGKEIT = '19.3'
+GANGPOSITION_NEU  = 1
+$-------------------------------------------Anti-Slip Control
+[SCHLUPFREGELUNG] 16
+AUSGABE           = 2
+SIMULATIONSAKTIVIERUNG = 1
+{ VERBINDUNG }
+LASTSIGNAL_EIN    = '19.6'
+SCHLUPFSIGNAL0    = '19.14'
+SCHLUPFSIGNAL1    = '19.16'
+SCHLUPFSIGNAL2    = '19.17'
+SCHLUPFSIGNAL3    = '19.15'
+LASTSIGNAL_AUS    = 1
+$----------------------------------------------Exhaust System
+[ABGASANLAGE] 17
+AUSGABE           = 2
+TEMPERATURMODELL_KAT = 1
+{ VERBINDUNG }
+  1700      
+$-----------------------------------------------------Monitor
+[MONITOR] 18
+AUSGABE           = 2
+{ VERBINDUNG }
+INPUT0            = '19.12'
+INPUT1            = '19.3'
+INPUT3            = '1.24'
+INPUT4            = '1.3'
+$------------------------------------------------------CarSim
+[CAR_SIM] 19
+AUSGABE           = 2
+{ VERBINDUNG }
+ENG_SPEED         = '1.3'
+ENG_TRQ           = '1.21'
+FUEL_MASS_FLOW    = '1.30'
+TRANSM_SPEED_OUT  = '3.3'
+TRANSM_ACT_RATIO  = '3.4'
+TRANSM_ACT_GEARNO = '3.1'
+DRIVE_TRQ_FL      = '11.5'
+DRIVE_TRQ_FR      = '11.6'
+DRIVE_TRQ_RL      = '10.5'
+DRIVE_TRQ_RR      = '10.6'
+CLUTCH_TC_TRQ_IN  = '1.21'
+CLUTCH_TC_TRQ_OUT = '2.5'
+TRANSF_CASE_OUT_SHAFT_TRQ_FRONT = '12.5'
+TRANSF_CASE_OUT_SHAFT_TRQ_REAR = '12.6'
+TRANSM_TRQ_OUT    = '3.6'
+CLUTCH_TC_SPEED_OUT = '2.2'
+TRANSF_CASE_OUT_SHAFT_SPEED_FRONT = '12.2'
+TRANSF_CASE_OUT_SHAFT_SPEED_REAR = '12.3'
+CAR_VEL           = 3
+LOAD_SIG          = 6
+RES_TRQ_W_FL      = 8
+RES_TRQ_W_FR      = 9
+RES_TRQ_W_RL      = 10
+RES_TRQ_W_RR      = 11
+ACC               = 12
+LONG_SLIP_FL      = 14
+LONG_SLIP_FR      = 15
+LONG_SLIP_RL      = 16
+LONG_SLIP_RR      = 17
+ENG_START_SWITCH  = 20
+BRAKE_TRQ_FL      = 21
+BRAKE_TRQ_FR      = 22
+BRAKE_TRQ_RL      = 23
+BRAKE_TRQ_RR      = 24

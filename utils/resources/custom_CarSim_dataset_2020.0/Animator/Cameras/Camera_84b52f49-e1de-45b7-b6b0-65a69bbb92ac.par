@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`Driver View: Pickup, Compact`Driver View
+#RingCtrl1 1
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+ADD_REFERENCE_FRAME driver_full_motion
+reference_frame_ghosts off
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xo
+SET_Y_NAME Yo
+SET_Z_NAME Zo
+SET_ROLL_NAME Roll_E
+SET_PITCH_NAME pitch
+SET_YAW_NAME Yaw
+add_occupant Occupant view
+set_occupant_reference_frame driver_full_motion
+SET_OCCUPANT_X -1.4
+SET_OCCUPANT_Y 0.38
+SET_OCCUPANT_Z 1.4
+SET_SWIVEL 0
+SET_TILT 0
+SET_FIELD_OF_VIEW_OCCUPANT 55
+*SET_LOOKPOINT_X 0
+*SET_LOOKPOINT_Y .5
+*SET_LOOKPOINT_Z 0
+*SET_AZIMUTH 270
+*SET_ELEVATION 90
+FOG_SCALE 0
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Driver View } Driver View: Pickup, Compact
+#Library : Animator: Camera Setup
+#DataSet : Driver View: Pickup, Compact
+#Category: Driver View
+#FileID  : Camera_84b52f49-e1de-45b7-b6b0-65a69bbb92ac
+#Product : CarSim 2020.0
+#VehCode Camera
+
+END

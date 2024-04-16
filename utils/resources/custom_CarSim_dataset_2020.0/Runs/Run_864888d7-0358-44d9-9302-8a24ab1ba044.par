@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName CarSim Run Control`Payload: Driver and Fuel Loads`Payloads
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_864888d7-0358-44d9-9302-8a24ab1ba044
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_af0efc73-060e-42fb-a84e-f9e58904ce7e.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Sports Car: Driver & Fuel Payloads` B-Class` , Math Model`VehLoad_af0efc73-060e-42fb-a84e-f9e58904ce7e
+
+PARSFILE Procedures\Proc_59aac561-fc66-42a0-b3c0-08074697f758.par
+#BlueLink28 Procedures`Double Lane Change, Tight` Handling Testing` , Procedure`Proc_59aac561-fc66-42a0-b3c0-08074697f758
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Payload: Driver and Fuel Loads <Payloads>
+CATEGORY Payloads 
+DATASET_TITLE Payload: Driver and Fuel Loads
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Sports Car with two payloads performs a tight double lane change maneuver.
+#
+#The sprung mass properties specified in CarSim represent the Design Load Condition, without consideration of payloads (i.e., driver, passengers, and cargo are not included). To bring the car to the desired test mass and mass distribution, payloads are used to either add (+mass) or subtract (-mass) from the core properties specified on the Sprung Mass screen.
+#
+#See Help -> Technical Memos -> The Design Load Condition in CarSim and TruckSim.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Payloads } Payload: Driver and Fuel Loads
+#Library : CarSim Run Control
+#DataSet : Payload: Driver and Fuel Loads
+#Category: Payloads
+#FileID  : Run_864888d7-0358-44d9-9302-8a24ab1ba044
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Control: Steering by the Closed-loop Driver Model`Drifts to the Right`Avoidance, Merges, and Drifiting
+SET_ILTARG_FOR_ID 0
+set_description LTARG_ID Drifts to the Right
+#RingCtrl0 0
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 1
+#DiagramOne0
+LTARG_TABLE LINEAR_FLAT
+0, -1.6
+253, -3.25
+300, -3.25
+ENDTABLE
+#RadioCtrl0 0    
+
+#CheckBox2 0    
+#CheckBox3 1    
+LTARG_ID_DM LTARG_ID
+#CheckBox0 1    
+#CheckBox1 0    
+CREATE_PATH_OBJ off
+#CheckBox4 0    
+#CheckBox5 0    
+OPT_STR_BY_TRQ 0
+OPT_DM 2
+#CheckBox6 1    
+#CheckBox7 0    
+OPT_DM_2019 0
+TLAG_DM 0
+AV_SW_MAX_DM 1200
+A_SW_MAX_DM 720
+*TPREV 1.0
+VLOW_DM 10
+TPREV_CONSTANT 1.0
+
+LOG_ENTRY Used Dataset: Control: Steering by the Closed-loop Driver Model; { Avoidance, Merges, and Drifiting } Drifts to the Right
+#Library : Control: Steering by the Closed-loop Driver Model
+#DataSet : Drifts to the Right
+#Category: Avoidance, Merges, and Drifiting
+#FileID  : StrDM_44de3e9b-90aa-4f9c-a2c8-991d1842a398
+#Product : CarSim 2020.0
+#VehCode Driver Path Follower
+
+END

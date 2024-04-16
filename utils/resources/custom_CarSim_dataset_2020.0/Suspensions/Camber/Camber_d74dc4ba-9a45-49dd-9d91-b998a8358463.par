@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Suspension: Camber Angle`Rear Tri-Link Strut - Camber Change`Tri-Link Strut
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+CAMBER_COMBINE ADD
+#DiagramOne0
+CAMBER_TABLE SPLINE
+-150, 5.44524
+-135, 4.65501
+-120, 3.92781
+-105, 3.25928
+-90, 2.64586
+-75, 2.08471
+-60, 1.5736
+-45, 1.11074
+-30, 0.694784
+-15, 0.32476
+0, 0
+15, -0.279867
+30, -0.514945
+45, -0.705085
+60, -0.849884
+75, -0.948682
+90, -1.00053
+105, -1.00416
+120, -0.957857
+135, -0.85927
+150, -0.705008
+ENDTABLE
+SUSP_CAMBER_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+#EMBEDDED_NOTES
+#Rear Tri-Link Strut Suspension Camber change vs. Jounce.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Camber Angle; { Tri-Link Strut } Rear Tri-Link Strut - Camber Change
+#Library : Suspension: Camber Angle
+#DataSet : Rear Tri-Link Strut - Camber Change
+#Category: Tri-Link Strut
+#FileID  : Camber_d74dc4ba-9a45-49dd-9d91-b998a8358463
+#Product : CarSim 2020.0
+#VehCode Camber
+
+END

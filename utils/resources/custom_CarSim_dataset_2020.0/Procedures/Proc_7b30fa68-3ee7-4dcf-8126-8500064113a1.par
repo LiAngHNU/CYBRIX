@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName Procedures`Braking from 80 km/h, 250 N Pedal Force`Accel. and Brake Testing
+#CheckBox3 0    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 8
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 80
+*TSTOP 8
+*TSTART 0
+*SSTART 0
+*SSTOP 2235
+
+OPT_SC 0
+SV_VXS 80
+PARSFILE Control\Driver\StrDM_f354f716-9852-47d3-b84f-85521564aa03.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.65m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_f354f716-9852-47d3-b84f-85521564aa03
+
+PARSFILE Control\Brake_pedal\FbkCon_28aaa3c6-8857-4ab9-a045-78b4c8bd3123.par
+#BlueLink28 Control: Braking Pedal Force (Open Loop)`Spike: 250 N @ 0.1 sec.` Spike` , Braking`FbkCon_28aaa3c6-8857-4ab9-a045-78b4c8bd3123
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 0` Constant` , Throttle`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Plot\Setup\Plot_c5ffea24-7e51-4de8-897e-1c95bc68bbbc.par
+#BlueLink8 Plot: Setup`Brake Booster Displacement` Braking` , Plot`Plot_c5ffea24-7e51-4de8-897e-1c95bc68bbbc
+
+PARSFILE Plot\Setup\Plot_4030bda4-33d9-49cc-97b9-e24584651b81.par
+#BlueLink9 Plot: Setup`Brake Booster Force In/Out` Braking` , Plot`Plot_4030bda4-33d9-49cc-97b9-e24584651b81
+
+PARSFILE Plot\Setup\Plot_0c2e606e-8f9d-46b0-8d35-c7d85066ab0a.par
+#BlueLink10 Plot: Setup`Brake Pedal Displacement` Braking` , Plot`Plot_0c2e606e-8f9d-46b0-8d35-c7d85066ab0a
+
+PARSFILE Plot\Setup\Plot_f4937cea-2692-4dfc-8e17-baabe744f6b6.par
+#BlueLink11 Plot: Setup`Brake Control: Pedal Force vs. Time` Braking` , Plot`Plot_f4937cea-2692-4dfc-8e17-baabe744f6b6
+
+PARSFILE Plot\Setup\Plot_54cc51ff-e81a-4580-9722-317a4cbf3505.par
+#BlueLink12 Plot: Setup`Brake Rotor Temperature` Braking` , Plot`Plot_54cc51ff-e81a-4580-9722-317a4cbf3505
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink13 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e.par
+#BlueLink14 Plot: Setup`Wheel Cylinder Pressures` Braking` , Plot`Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e
+
+PARSFILE Plot\Setup\Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53.par
+#BlueLink15 Plot: Setup`Brake Torque` Braking` , Plot`Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53
+
+PARSFILE Plot\Setup\Plot_eb50101f-6615-4617-8639-ca7693556ca3.par
+#BlueLink16 Plot: Setup`Locked Brake Status (Axle 1)` Braking` , Plot`Plot_eb50101f-6615-4617-8639-ca7693556ca3
+
+PARSFILE Plot\Setup\Plot_3adb6053-15ab-44c1-adf9-64e31969b810.par
+#BlueLink17 Plot: Setup`Locked Brake Status (Axle 2)` Braking` , Plot`Plot_3adb6053-15ab-44c1-adf9-64e31969b810
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a simple braking test using Open-Loop controls for the throttle and brakes.
+#
+#The vehicle starts from an initial speed of 80 kph but with the throttle closed. Using Brake Pedal Force control, 250 N of brake pedal force is applied at 0.1 seconds.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Accel. and Brake Testing } Braking from 80 km/h, 250 N Pedal Force
+#Library : Procedures
+#DataSet : Braking from 80 km/h, 250 N Pedal Force
+#Category: Accel. and Brake Testing
+#FileID  : Proc_7b30fa68-3ee7-4dcf-8126-8500064113a1
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

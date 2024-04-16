@@ -1,0 +1,801 @@
+Run made by CarSim 2020.0 at 16:37 on December 18, 2019.
+Vehicle Configuration: I_S
+Started with simfile: simfile.sim
+
+Include PARSFILE "Results\Run_715baaa8-7dbc-481f-8cfa-14b84bb1e1b7\Run_all.par"
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Vehicle X-Y-Z
+Used Dataset: Animator: Camera Setup; { Vehicle Reference } 350 Azm, 3 El, 49 m
+Used Dataset: Steering System: Compliance; Constant: Zero
+Used Dataset: Steering System: Kinematics for 2 Wheels (Rack & Pinion); { CS E-Class } E-Class, SUV
+Used Dataset: Steering: Power Assist Force; { E-Class } E-Class SUV: Not Speed Sensitive
+Used Dataset: Steering System: Compliance; { Linear } 0.002 deg/N-m
+Used Dataset: Steering: Parking Torque for 2 Wheels; { E-Class } E-Class SUV
+Used Dataset: Steering; { CS E-Class } E-Class, SUV: Power, R&P
+Used Dataset: Suspension: Dive Angle (Caster Change); { SLA } Front SLA - Dive Angle
+Used Dataset: Suspension: Longitudinal Movement; { SLA } Front SLA - Longitudinal Movement
+Used Dataset: Suspension: Camber Angle; { SLA } Front SLA - Camber Change
+Used Dataset: Suspension: Lateral Movement Due to Jounce; { SLA } Front SLA - Lateral Movement
+Used Dataset: Suspension: Toe Angle; { SLA } Front SLA - Toe Change
+Used Dataset: Suspension: Dive Angle (Caster Change); { SLA } Front SLA - Dive Angle
+Used Dataset: Suspension: Longitudinal Movement; { SLA } Front SLA - Longitudinal Movement
+Used Dataset: Suspension: Camber Angle; { SLA } Front SLA - Camber Change
+Used Dataset: Suspension: Lateral Movement Due to Jounce; { SLA } Front SLA - Lateral Movement
+Used Dataset: Suspension: Toe Angle; { SLA } Front SLA - Toe Change
+Used Dataset: Suspension: Independent System Kinematics; { E-Class } E-Class, SUV - Front
+Used Dataset: Suspension: Shock Absorber; { SUV and Light Truck } Big SUV
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 50 mm to 99 mm } +70 mm / -50 mm
+Used Dataset: Suspension: Shock Absorber; { SUV and Light Truck } Big SUV
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 50 mm to 99 mm } +70 mm / -50 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 384 N-m/deg
+Used Dataset: Suspension: Independent Compliance, Springs, and Dampers; { E-Class } E-Class, SUV - Front
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Tire
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Wheel
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Stripe
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Brake Rotor
+Used Dataset: Animator: Shape Assembly; { Tires } Big SUV
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Lateral Force; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Longitudinal Force; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Camber Thrust Coefficient; { Touring Tires } 265/75 R16
+Used Dataset: Tire; { Touring Tires } 265/75 R16 (Dynamic)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Tire
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Wheel
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Stripe
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Brake Rotor
+Used Dataset: Animator: Shape Assembly; { Tires } Big SUV
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Lateral Force; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Longitudinal Force; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Camber Thrust Coefficient; { Touring Tires } 265/75 R16
+Used Dataset: Tire; { Touring Tires } 265/75 R16 (Dynamic)
+Used Dataset: Suspension: Longitudinal Movement; { Hotchkiss Rear Axle } Rear Hotchkiss - Longitudinal Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Hotchkiss } Rear Hotchkiss - Lateral Movement
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Light Duty (Driven)
+Used Dataset: Suspension: Solid Axle System Kinematics; { E-Class } E-Class, SUV - Rear
+Used Dataset: Suspension: Shock Absorber; { SUV and Light Truck } Big SUV
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +120 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { SUV and Light Truck } Big SUV
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +120 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 510 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { E-Class } E-Class, SUV - Rear
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Tire
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Wheel
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Stripe
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Brake Rotor
+Used Dataset: Animator: Shape Assembly; { Tires } Big SUV
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Lateral Force; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Longitudinal Force; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Camber Thrust Coefficient; { Touring Tires } 265/75 R16
+Used Dataset: Tire; { Touring Tires } 265/75 R16 (Dynamic)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Tire
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Wheel
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Stripe
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 275/70 R16: Brake Rotor
+Used Dataset: Animator: Shape Assembly; { Tires } Big SUV
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Lateral Force; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Longitudinal Force; { Touring Tires } 265/75 R16
+Used Dataset: Tire: Camber Thrust Coefficient; { Touring Tires } 265/75 R16
+Used Dataset: Tire; { Touring Tires } 265/75 R16 (Dynamic)
+Used Dataset: Vehicle: Sprung Mass; { E-Class } E-Class, SUV
+Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.30 at 0 deg.
+Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 2 at 90 deg.
+Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.18 at 0 deg.
+Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.3 at 90 deg.
+Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.15 at 0 deg.
+Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.2 at 35 deg.
+Used Dataset: Aerodynamics: Basic; { E-Class } E-Class, SUV Aero
+Used Dataset: Powertrain: Engine; { 200 kW - 270 kW Engines } 200 kW Engine
+Used Dataset: Powertrain: Torque Converter; { Torque Converters: 150 kW to 250 kW } Torque Converter: 200 kW Engine
+Used Dataset: Powertrain: Shift Schedule; { 6-speed } 6-speed, 1-2 Shift
+Used Dataset: Powertrain: Shift Schedule; { 6-speed } 6-speed, 2-3 Shift
+Used Dataset: Powertrain: Shift Schedule; { 6-speed } 6-speed, 3-4 Shift
+Used Dataset: Powertrain: Shift Schedule; { 6-speed } 6-speed, 4-5 Shift
+Used Dataset: Powertrain: Shift Schedule; { 6-speed } 6-speed, 5-6 Shift
+Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 6-Speed Transmissions } 6-Speed
+Used Dataset: Powertrain: Transfer Case; { Limited Slip and Viscous Coupling } Viscous Coupling: 50/50, Gear Ratio 1:1
+Used Dataset: Powertrain: Front Differential; { Limited Slip and Viscous Coupling } Viscous Coupling: Gear Ratio 4.1:1
+Used Dataset: Powertrain: Rear Differential; { Limited Slip and Viscous Coupling } Viscous Coupling: Gear Ratio 4.1:1
+Used Dataset: Powertrain: 4-Wheel Drive; { 200 kW Powertrains } 200 kW, 6-spd, 4.1 Ratio
+Used Dataset: Brakes: Four-Wheel System; { E-Class } (SUV): MC Press, ABS
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Body
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Details
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Interior
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Windows
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Body Trim
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Seats
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Steering Wheel
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Driver (Caucasian Male)
+Used Dataset: Animator: Shape Assembly; { Passenger Cars } E-Class SUV
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Brake Lights
+Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Reverse Lights
+Used Dataset: Animator: Vehicles and Sensor Targets; { E-Class } E-Class, SUV
+Used Dataset: Vehicle: Assembly; { E-Class } E-Class, SUV
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Payloads } Roof Cargo Box
+WARNING: The keyword H_CG_PL(1) has been deprecated
+Used Dataset: Payload: Custom; Roof Cargo Box
+Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { E-Class } E-Class, SUV: Roof Load
+ Straight East <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight East
+Used Dataset: Road: Friction Map, S-L Grid; { Constant } Constant: 0.9
+Used Dataset: Road: Animator Surface Shapes; { Roads } 1 km Square w/ Line
+Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
+Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
+Used Dataset: Road: Animator Repeated Object; { Cones } 2 Cones at S=3
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
+Used Dataset: Road: 3D Surface (All Properties); { Flat Test Pads } 1 km Square w/ Cones, Mu = 0.9
+Used Dataset: Road: Friction Map, S-L Grid; { Constant } Constant: 0.9
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (X-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (X-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (X-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (X-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fx 3D Arrow (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fx Tire Force Arrows
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Y-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Y-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Y-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy 3D Arrow (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Y-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fy 3D Arrow (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fy Tire Force Arrows
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Z-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz 3D, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Z-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz 3D, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Z-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz 3D, Offset (Tail Origin)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 3D Pyramid: Tail Org (Z-Axis)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz 3D, Offset (Tail Origin)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fz Tire Force Arrows
+Used Dataset: Generic Data Group; { Tire Force Arrows } 2 Axle - Fx, Fy, Fz
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0.5
+Used Dataset: Control: Braking MC Pressure (Open Loop); { Constant } Constant: 0 MPa
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } AT (All Available Gears)
+Used Dataset: Events; { Go to Constant Speed } A. Go to 80 km/h Speed and Settle
+Used Dataset: Events; { Slowly Increasing Steer Test } A. Wait to Start Slowly Increasing Steer
+Used Dataset: Plot: Format; Lines without Symbols
+Used Dataset: Plot: Setup; { User-Defined Variables } Vertical Tire Force Sums
+Used Dataset: Generic VS Commands; { Miscellaneous Custom Output Variables } Define Fishhook Variables
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } A. Wait to start Fishhook
+Used Dataset: Plot: Format; Lines without Symbols
+Used Dataset: Plot: Setup; { Sine with Dwell } Steer Angle vs. Event Elapsed Time
+Used Dataset: Plot: Format; Lines without Symbols
+Used Dataset: Plot: Setup; { Vehicle Motion } Roll Rate vs. T_Event
+Used Dataset: Plot: Format; Lines without Symbols
+Used Dataset: Plot: Setup; { Vehicle Motion } Roll Angle vs. T_Event
+Used Dataset: Plot: Format; Lines without Symbols
+Used Dataset: Plot: Setup; { Steering } Steering: Handwheel Angle
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Forces and Moments } Vertical Forces
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Speed (Vxz_Fwd) vs. Time
+Used Dataset: Procedures; { Stability Testing } Fishhook Procedure
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Tire Mark (Black)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Tire Mark (Black)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Tire Mark (Black)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Tire Mark (Black)
+Used Dataset: Animator: Wheel Arrows and Other Indicators; { Skid Marks } Tire Skid Marks (2 Axles)
+ Fishhook: E-Class SUV w/ Roof Load <Handling and Stability Tests>
+Used Dataset: CarSim Run Control; { Handling and Stability Tests } Fishhook: E-Class SUV w/ Roof Load
+
+Time to read input = 0.019
+Function F_REB_STOP_TABLE(1,1) extrapolated (out of range HIGH) for X = 2.10578 mm at T = 0
+Function F_JNC_STOP_TABLE(1,1) extrapolated (out of range LOW) for X = 2.10578 mm at T = 0
+Function F_REB_STOP_TABLE(1,2) extrapolated (out of range HIGH) for X = 2.10578 mm at T = 0
+Function F_JNC_STOP_TABLE(1,2) extrapolated (out of range LOW) for X = 2.10578 mm at T = 0
+Function F_JNC_STOP_TABLE(2,1) extrapolated (out of range LOW) for X = 22.5835 mm at T = 0
+Function F_REB_STOP_TABLE(2,1) extrapolated (out of range HIGH) for X = 22.5835 mm at T = 0
+Function F_JNC_STOP_TABLE(2,2) extrapolated (out of range LOW) for X = 22.5835 mm at T = 0
+Function F_REB_STOP_TABLE(2,2) extrapolated (out of range HIGH) for X = 22.5835 mm at T = 0
+
+Run started: VS output file = Results\Run_715baaa8-7dbc-481f-8cfa-14b84bb1e1b7\LastRun.vsb
+Function FY_TIRE_CARPET(1,1) extrapolated (out of range HIGH) for X = 26.0007 deg at T = 0.3445
+Function MZ_TIRE_CARPET(1,1) extrapolated (out of range HIGH) for X = 26.0007 deg at T = 0.3445
+
+Event #1 occurred at t = 6.384: VX > 22.2222
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_f0085771-0c61-4aad-be3a-1843ce02cd1f.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Go to Constant Speed } B. Let Speed Settle
+
+Event #2 occurred at t = 9.384: T_EVENT > 3
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_5377f4e6-2fc4-40eb-bdc6-095e7c1efd79.par"
+Used Dataset: Events; { Go to Constant Speed } C. Speed Initialization is Done
+
+Event #3 occurred at t = 9.3845: INIT_DONE
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_491832b9-0178-41d1-9090-683cf90e1c82.par"
+Used Dataset: Events; { Slowly Increasing Steer Test } B. Slowly Increasing Steer to Ay = 0.3 g
+
+Event #4 occurred at t = 12.3255: AY >= 2.94199
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d366896b-3b28-42cf-b222-ec2cfa87ba74.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Slowly Increasing Steer Test } C. Set Reference Steering Wheel Angle
+Function F_BOOST_R_TABLE extrapolated (out of range LOW) for X = -75.8577 N-m at T = 12.326
+
+Event #5 occurred at t = 15.3255: T_EVENT > 3
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1574a9da-70d2-4a3a-b0e6-816d7f7d1d59.par"
+Used Dataset: Events; { Slowly Increasing Steer Test } D. Slowly Decreasing Steer to Ay = -0.3g
+
+Event #6 occurred at t = 18.2615: AY <=  -2.94199
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_2c9d3292-4fbe-401b-8cfa-520aeb21a109.par"
+Used Dataset: Events; { Slowly Increasing Steer Test } E. Revise Reference Steering Wheel Angle
+
+Event #7 occurred at t = 18.262: SLOW_STEER_DONE
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #8 occurred at t = 18.2625: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #9 occurred at t = 44.0765: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #10 occurred at t = 44.1605: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #11 occurred at t = 44.6905: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+Function L_RELAX_X_FZ_TABLE(1,1) extrapolated (out of range HIGH) for X = 1.00011 N at T = 45.617
+
+Event #12 occurred at t = 45.62: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #13 occurred at t = 45.6205: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+Function L_RELAX_X_FZ_TABLE(2,1) extrapolated (out of range HIGH) for X = 1.00028 N at T = 45.6235
+
+Event #14 occurred at t = 46.3225: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #15 occurred at t = 48.53: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #16 occurred at t = 48.6145: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #17 occurred at t = 49.146: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #18 occurred at t = 50.069: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #19 occurred at t = 50.0695: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #20 occurred at t = 50.6625: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #21 occurred at t = 53.0485: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #22 occurred at t = 53.1335: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #23 occurred at t = 53.6645: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #24 occurred at t = 54.576: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #25 occurred at t = 54.5765: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #26 occurred at t = 55.1205: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #27 occurred at t = 57.595: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #28 occurred at t = 57.6805: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #29 occurred at t = 58.211: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #30 occurred at t = 59.112: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #31 occurred at t = 59.1125: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #32 occurred at t = 59.621: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #33 occurred at t = 62.1585: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #34 occurred at t = 62.2445: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #35 occurred at t = 62.774: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #36 occurred at t = 63.6655: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #37 occurred at t = 63.666: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #38 occurred at t = 64.147: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #39 occurred at t = 66.769: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #40 occurred at t = 66.8555: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #41 occurred at t = 67.384: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #42 occurred at t = 68.268: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #43 occurred at t = 68.2685: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #44 occurred at t = 68.799: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #45 occurred at t = 73.9415: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #46 occurred at t = 74.029: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #47 occurred at t = 74.555: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #48 occurred at t = 75.4355: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #49 occurred at t = 75.436: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #50 occurred at t = 75.9385: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #51 occurred at t = 81.1985: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #52 occurred at t = 81.2865: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #53 occurred at t = 81.8105: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #54 occurred at t = 82.6985: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #55 occurred at t = 82.699: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #56 occurred at t = 83.1795: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #57 occurred at t = 88.531: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #58 occurred at t = 88.62: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #59 occurred at t = 89.1405: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #60 occurred at t = 92.857: T_STAMP > TSTART_STEER + 3 + ABS(STEER_SW_GAIN/720)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_b73f53f2-3ede-4689-acea-c3c269721e6c.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } G. Check for Reversing Steer Direction
+
+Event #61 occurred at t = 92.8575: SWA_Sign > 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_c10dd0d8-5c0e-4d0d-bbe5-84c458eaa65a.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } I. Finished 1st Set (Left-Hand Starts)
+
+Event #62 occurred at t = 92.858: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #63 occurred at t = 94.7035: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #64 occurred at t = 99.1975: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #65 occurred at t = 99.2815: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #66 occurred at t = 99.811: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+Function L_RELAX_X_FZ_TABLE(1,2) extrapolated (out of range HIGH) for X = 1.00009 N at T = 100.742
+
+Event #67 occurred at t = 100.744: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #68 occurred at t = 100.745: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+Function L_RELAX_X_FZ_TABLE(2,2) extrapolated (out of range HIGH) for X = 1.00008 N at T = 100.747
+
+Event #69 occurred at t = 101.352: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #70 occurred at t = 103.991: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #71 occurred at t = 104.076: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #72 occurred at t = 104.605: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #73 occurred at t = 105.527: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #74 occurred at t = 105.528: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #75 occurred at t = 106.093: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #76 occurred at t = 108.667: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #77 occurred at t = 108.752: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #78 occurred at t = 109.281: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #79 occurred at t = 110.191: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #80 occurred at t = 110.192: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #81 occurred at t = 110.724: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #82 occurred at t = 113.296: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #83 occurred at t = 113.381: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #84 occurred at t = 113.91: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #85 occurred at t = 114.81: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #86 occurred at t = 114.81: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #87 occurred at t = 115.315: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #88 occurred at t = 117.909: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #89 occurred at t = 117.995: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #90 occurred at t = 118.523: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #91 occurred at t = 119.414: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #92 occurred at t = 119.414: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #93 occurred at t = 119.894: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #94 occurred at t = 122.525: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #95 occurred at t = 122.612: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #96 occurred at t = 123.138: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #97 occurred at t = 124.022: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #98 occurred at t = 124.022: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #99 occurred at t = 124.544: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #100 occurred at t = 129.815: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #101 occurred at t = 129.903: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #102 occurred at t = 130.427: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #103 occurred at t = 131.308: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #104 occurred at t = 131.308: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #105 occurred at t = 131.807: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #106 occurred at t = 137.141: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #107 occurred at t = 137.229: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #108 occurred at t = 137.752: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #109 occurred at t = 138.641: FZ_L < 0.1 | FZ_R < 0.1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+
+Event #110 occurred at t = 138.641: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par"
+Used Dataset: Control: Steering (Open Loop); { Constant } Constant: 0 deg.
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } B. Let Vehicle Settle for Next Fishhook
+
+Event #111 occurred at t = 139.121: Vx > 1.02*VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_4c2975e8-96ce-4252-b376-a55c45f010e0.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par"
+Used Dataset: Control: Throttle (Open Loop); { Constant } Constant: 0
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } C. Coast Down Before Fishhook
+
+Event #112 occurred at t = 144.518: Vx < VTEST
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_d76c6a16-ede1-4b13-838a-eab991578e07.par"
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par"
+Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+
+Event #113 occurred at t = 144.607: ROLL_RATE_CHECK < ABS(AVX)/2
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } E. Watch for Peak Roll
+
+Event #114 occurred at t = 145.126: ROLL_RATE_CHECK > ABS(AVX)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_07572f0d-b5b7-4fe6-b03a-44c880c25973.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+
+Event #115 occurred at t = 148.842: T_STAMP > TSTART_STEER + 3 + ABS(STEER_SW_GAIN/720)
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_b73f53f2-3ede-4689-acea-c3c269721e6c.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } G. Check for Reversing Steer Direction
+
+Event #116 occurred at t = 148.842: SWA_Sign < 0
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_5c4a06ba-3bae-4ebf-8c08-508560468d0b.par"
+Used Dataset: Events; { Fishhook with Roll Rate Feedback } J. Finished 2nd Set (Right-Hand Starts)
+
+Event #117 occurred at t = 148.843: 1
+Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par"
+
+Run stopped at t = 148.843. VS Command STOP_RUN_NOW End event triggered
+Used Dataset: Events; End Events
+
+Computational time ratio: RTIME = 0.117587 (real time)/(simulation time)
+

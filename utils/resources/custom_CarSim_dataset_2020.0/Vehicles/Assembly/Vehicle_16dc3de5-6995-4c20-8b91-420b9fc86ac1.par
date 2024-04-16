@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Pickup, Full Size Reg Cab DRW`Pickup Trucks
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 3
+PARSFILE Steering\System2\StrSys2_c860e0c1-118a-40e7-b9f7-f714f0e5b5af.par
+#BlueLink7 Steering`Pickup, Full: Power, Recirc. Ball` Pickup Trucks` , Steering System`StrSys2_c860e0c1-118a-40e7-b9f7-f714f0e5b5af
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_4178cfb1-4a83-4c8b-91bb-aaa0048730b5.par
+#BlueLink19 Suspension: Independent System Kinematics`Pickup, Full Size - Front (HD)` Pickup Trucks` , Kinematics`KinInd_4178cfb1-4a83-4c8b-91bb-aaa0048730b5
+
+PARSFILE Suspensions\Compliance\CmpInd_739f4cdc-de82-450c-8cf7-8e1eeef48dc2.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Pickup, Full Size - Front (HD)` Pickup Trucks` , Compliance`CmpInd_739f4cdc-de82-450c-8cf7-8e1eeef48dc2
+
+PARSFILE Tires\Group_2a\Tire2a_167ccb83-cf7c-42bf-9475-7478fe40e90a.par
+#BlueLink33 Tires for Any Vehicle Unit`265/75 R16 for Duals` ` , Duals`Tire2a_167ccb83-cf7c-42bf-9475-7478fe40e90a
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_57b4b2e6-2c32-42e7-99a3-cf386c27ffa6.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`Pickup, Full Size - Rear (HD DRW)` Pickup Trucks` , Kinematics`KinSA_57b4b2e6-2c32-42e7-99a3-cf386c27ffa6
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_2b052e56-5b5f-4c85-a43d-77dd8e2e8bb8.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Full Size - Rear (HD DRW)` Pickup Trucks` , Compliance`CmpSA_2b052e56-5b5f-4c85-a43d-77dd8e2e8bb8
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_5ee5721f-b2b6-4417-8c07-71757360d0cc.par
+#BlueLink0 Vehicle: Sprung Mass`Pickup, Reg. Cab 8 ft Bed DRW` Pickup Trucks` , Sprung Mass`SprMass_5ee5721f-b2b6-4417-8c07-71757360d0cc
+
+PARSFILE Aerodynamics\Aero_Main\Aero_0c28be43-1b7c-472a-a189-6b5cc39287e6.par
+#BlueLink1 Aerodynamics: Basic`Full-Size Pickup (3390 mm wheelbase)` Pickup Trucks` , Aerodynamics`Aero_0c28be43-1b7c-472a-a189-6b5cc39287e6
+
+PARSFILE Powertrain\4wd\4WD_fbfcb4f0-fd26-461e-bb78-c894e72a61fa.par
+#BlueLink5 Powertrain: 4-Wheel Drive`270 kW Diesel, 6-spd., 4.1 Ratio` 270 kW Powertrains` , Powertrain`4WD_fbfcb4f0-fd26-461e-bb78-c894e72a61fa
+
+PARSFILE Brakes\4W_System\Brk4W_1cac803a-e36c-431b-b18e-ee34e2087187.par
+#BlueLink6 Brakes: Four-Wheel System`Pickup (Full): MC Press, ABS` Pickup Trucks` , Brake System`Brk4W_1cac803a-e36c-431b-b18e-ee34e2087187
+
+PARSFILE Animator\Vehicles\AniVeh_94681f71-cfc4-4053-bfd1-1d2ed6e4fd10.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Pickup, Full Size Reg Cab 8 Bed DRW` Pickup Trucks` , Vehicle 3D Shape`AniVeh_94681f71-cfc4-4053-bfd1-1d2ed6e4fd10
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_94681f71-cfc4-4053-bfd1-1d2ed6e4fd10.png
+
+#EMBEDDED_NOTES
+#This is a diesel, 4WD full-size pickup with regular cab, long (8 ft) bed, and dual rear wheels (DRW).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Pickup Trucks } Pickup, Full Size Reg Cab DRW
+#Library : Vehicle: Assembly
+#DataSet : Pickup, Full Size Reg Cab DRW
+#Category: Pickup Trucks
+#FileID  : Vehicle_16dc3de5-6995-4c20-8b91-420b9fc86ac1
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

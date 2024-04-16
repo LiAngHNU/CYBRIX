@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Events`C. Go to Next Speed`ISO Steady-State Circle Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T_EVENT
+*NAME2 AY_REF
+*VALUE1 T_WAIT
+*VALUE2 abs(ay)
+#MiscYellow0
+AY_TARG = AY_TARG + AY_STEP
+SPEED_TIME_CONSTANT = SQRT(R*AY_TARG)
+T_EVENT_START = T
+OPT_WRITE WRITE_ALL
+#ENDMYellow
+
+#MiscYellow1
+!Save current values for optional plots
+STR_OLD = STEER_SW
+AY_OLD = AY
+ROLL_OLD = ROLL
+BETA_OLD = BETA
+#ENDMYellow
+
+MAKE_EVENT T_EVENT > T_WAIT ; Events\Events_3c5e0846-379b-4da1-a4cc-6995f56bf8ad.par
+#BlueLink0 Events`D. Check Lateral Acceleration` ISO Steady-State Circle Series` , Events`Events_3c5e0846-379b-4da1-a4cc-6995f56bf8ad
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Set up the next steady-state test.
+#
+#Increment the target lateral acceleration AY_TARG and calculate the corresponding target speed SPEED_TIME_CONSTANT.
+#
+#Reset the local event time T_EVENT by setting the offset T_EVENT_START to the current time. Then set a pending event to trigger when the local time reaches T_WAIT.
+#
+#Set OPT_WRITE to WRITE_ALL, which is usually 0 (i.e, stop writing results to the ERD file).
+#
+#The misc. field on the right is used to determine whether steering is increasing or decreasing relative to the previous test.
+#
+#Four variables are updated here that are used for some plot descriptions that are still being developed at the time of this software release.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
+#Library : Events
+#DataSet : C. Go to Next Speed
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_37a368e6-a61d-4f05-9aef-fa1acf6e4284
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`FCW & AEB`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME FCW & AEB
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_ffc93407-0e02-4f9d-8ab4-5dd50505b3d8.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`50-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_ffc93407-0e02-4f9d-8ab4-5dd50505b3d8
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_594e7ef9-3c2d-4d4e-99a8-dd535dbab2d7.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 20 deg FOV` Common Vehicle Assets` , Shape for Detection Field`Shape_594e7ef9-3c2d-4d4e-99a8-dd535dbab2d7
+
+SET_COLOR 1 0 0
+SET_TRANSPARENCY 0.15
+X_LENGTH 50
+Y_LENGTH 1.7
+Z_LENGTH 2
+X_SENSOR 750
+Y_SENSOR 0
+Z_SENSOR H_CG_SU
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -1
+BEARING_MAX_SENSOR 1
+
+SPECIAL_PARSFILE Animator\STL\Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829.par
+#BlueLink3 Animator: Shape File Link`Square: 1m (Scale: Y = 0.1)` Geometric Shapes` , Shape for vector`Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829.par
+#BlueLink12 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+
+#EMBEDDED_NOTES
+#The sensor looks forward, is located near the front bumper, and has a narrow field of view of 2 deg, and a range of 50 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } FCW & AEB
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : FCW & AEB
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_d421ce7f-d0e2-438a-a2b2-efc39d937166
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

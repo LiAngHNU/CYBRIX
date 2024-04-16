@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`Speedometer`HUD Gauges
+#VehCode Generic Group (More)
+#MiscYellow0
+ADD_ENTITY hud_image Vx (Back Ground)
+  location 10 10 200 200
+  align_x right
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  image_file Animator\Hud\Speedometer.dds
+END_ENTITY hud_image Vx (Back Ground)
+#ENDMYellow
+
+
+#MiscYellow1
+ANI_Vx_R2
+WRT_Vx_R2
+ANI_Vx_L2
+WRT_Vx_L2
+ADD_ENTITY hud_image Vx (Needle)
+  location 10 10 200 200
+  align_x right
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  ! Speed calculation for a RWD vehicle.  For FWD or AWD, adjust accordingly.
+  rotate -((Vx_R2+Vx_L2) / 2.0 * 1.5) + 150
+  image_file Animator\Hud\Needle.dds
+END_ENTITY hud_image Vx (Needle)
+#ENDMYellow
+
+
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { HUD Gauges } Speedometer
+#Library : Generic Data Group (More)
+#DataSet : Speedometer
+#Category: HUD Gauges
+#FileID  : GenGrpM_89fc0a6f-b10d-40d0-98a1-b2ffbdbe5d30
+#Product : CarSim 2020.0
+#VehCode Generic Group (More)
+
+END

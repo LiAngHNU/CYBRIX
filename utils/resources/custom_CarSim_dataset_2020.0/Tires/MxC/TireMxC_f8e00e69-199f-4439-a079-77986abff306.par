@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Tire: Overturning Moment vs. Inclination`MF-Tyre Example`MF-Tyre Example
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Overturning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 3, 12 ! columns x rows
+MXG_TIRE_CARPET 2D_FROM_ZERO
+0, 2000, 4000, 6000
+0.5, -5.87052, -11.6292, -17.2388
+1, -11.7424, -23.261, -34.4814
+1.5, -17.6169, -34.898, -51.7316
+2, -23.4955, -46.5429, -68.9932
+2.5, -29.3794, -58.1981, -86.27
+3, -35.27, -69.8665, -103.566
+3.5, -41.1686, -81.5505, -120.884
+4, -47.0766, -93.2528, -138.23
+4.5, -52.9955, -104.976, -155.605
+5, -58.9264, -116.723, -173.015
+5.5, -58.9264, -116.723, -173.015
+6, -58.9264, -116.723, -173.015
+ENDTABLE
+
+CRO_MX 1
+
+
+LOG_ENTRY Used Dataset: Tire: Overturning Moment vs. Inclination; { MF-Tyre Example } MF-Tyre Example
+#Library : Tire: Overturning Moment vs. Inclination
+#DataSet : MF-Tyre Example
+#Category: MF-Tyre Example
+#FileID  : TireMxC_f8e00e69-199f-4439-a079-77986abff306
+#Product : CarSim 2020.0
+#VehCode Tire: Mx
+
+END

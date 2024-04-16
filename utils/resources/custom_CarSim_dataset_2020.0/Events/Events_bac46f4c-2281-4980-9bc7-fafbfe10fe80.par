@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`A. Rev Engine to Launch RPM`MT Acceleration
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 0
+*NAME1 av_eng
+*VALUE1 3500
+*SPEED 0
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Throttle\Throttle_a707549f-09ea-4f2d-86ee-5ccb52597176.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp To Full Throttle in 0.1 sec.` Ramp` , Speed link`Throttle_a707549f-09ea-4f2d-86ee-5ccb52597176
+
+PARSFILE Control\Clutch\ClCon_605aad24-35e9-45eb-82f9-7d1a35269e09.par
+#BlueLink10 Control: Clutch (Open Loop)`Always Disengaged` Single Engagement / Disengagement` , Miscellaneous`ClCon_605aad24-35e9-45eb-82f9-7d1a35269e09
+
+MAKE_EVENT av_eng > 3500 ; Events\Events_e5d8b7ee-0074-4c30-b247-66395e7dbe49.par
+#BlueLink0 Events`B. Launch` MT Acceleration` , Events`Events_e5d8b7ee-0074-4c30-b247-66395e7dbe49
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { MT Acceleration } A. Rev Engine to Launch RPM
+#Library : Events
+#DataSet : A. Rev Engine to Launch RPM
+#Category: MT Acceleration
+#FileID  : Events_bac46f4c-2281-4980-9bc7-fafbfe10fe80
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

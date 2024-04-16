@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Events`D. Check Lateral Acceleration`ISO Steady-State Circle Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+
+#RingCtrl0 <
+#RingCtrl1 ZERO ~=
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 AY_STEP
+*NAME2 T
+*VALUE1 ABS(ABS(AY) - AY_TARG)
+*VALUE2 1
+*SET_EVENT_ID 1000
+SET_EVENT_ID 1000
+MAKE_EVENT AY_STEP < ABS(ABS(AY) - AY_TARG) ; Events\Events_1d005d14-e306-4b68-8bd0-51aadba92b68.par
+#BlueLink0 Events`Stop Due to Lateral Acceleration Error` Stop Run Now` , Events`Events_1d005d14-e306-4b68-8bd0-51aadba92b68
+
+DEFINE_EVENT 1 ; Events\Events_13ce0693-4ddf-4e90-b64c-6b18e6d8ad95.par
+#BlueLink1 Events`E. Write One Time Step` ISO Steady-State Circle Series` , Events`Events_13ce0693-4ddf-4e90-b64c-6b18e6d8ad95
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Add two pending events for mutually exclusive options.
+#
+#The first event checks to see if the actual vehicle lateral acceleration is close to the target lateral acceleration. If it is not, the event will trigger and the run will stop.
+#
+#Otherwise, the second event will be triggered becuase the condition is always true.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
+#Library : Events
+#DataSet : D. Check Lateral Acceleration
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_3c5e0846-379b-4da1-a4cc-6995f56bf8ad
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

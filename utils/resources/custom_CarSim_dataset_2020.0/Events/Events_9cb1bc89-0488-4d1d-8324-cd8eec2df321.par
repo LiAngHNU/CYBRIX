@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Events`Update Delta`Optimize Controls for Lap Time
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 delta
+*NAME2 delta
+*VALUE1 delta_tol
+*VALUE2 delta_tol
+#MiscYellow0
+tprev_constant = tprev_constant+delta*initial_pvw_time
+delta = 0.5*delta
+#ENDMYellow
+
+MAKE_EVENT delta >= delta_tol ; Events\Events_708087d0-d3fd-4de2-8dbb-adf79fbb83c4.par
+#BlueLink0 Events`Set 1` Optimize Controls for Lap Time` , Events`Events_708087d0-d3fd-4de2-8dbb-adf79fbb83c4
+
+MAKE_EVENT delta < delta_tol ; Events\Events_b53e5378-5af8-4d36-bcf4-ce4b5c876e3e.par
+#BlueLink1 Events`Rerun Last Lap for Outputs` Optimize Controls for Lap Time` , Events`Events_b53e5378-5af8-4d36-bcf4-ce4b5c876e3e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Undecrement tprev_constant.
+#
+#Cut delta in half and repeat the search process.
+#
+#Stop if delta is sufficiently small.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Optimize Controls for Lap Time } Update Delta
+#Library : Events
+#DataSet : Update Delta
+#Category: Optimize Controls for Lap Time
+#FileID  : Events_9cb1bc89-0488-4d1d-8324-cd8eec2df321
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

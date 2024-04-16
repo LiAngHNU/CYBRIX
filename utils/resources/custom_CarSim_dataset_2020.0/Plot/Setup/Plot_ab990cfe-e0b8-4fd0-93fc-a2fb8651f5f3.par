@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Ignition Switch Information`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#BlueLink2 CarSim Run Control`Outrigger for Roll Stability Testing` Extended Models` , example run`Run_756d0204-ba6a-45dc-8a4d-3cabfb558523
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_756d0204-ba6a-45dc-8a4d-3cabfb558523\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS keyask, time
+PLOTCHANNELS keypos, time
+PLOTCHANNELS ign, time
+PLOTCHANNELS warn, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 0
+#RingCtrl8 1
+
+
+PTITLE Ignition Switch Information
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Ignition Switch Information
+#Library : Plot: Setup
+#DataSet : Ignition Switch Information
+#Category: User-Defined Variables
+#FileID  : Plot_ab990cfe-e0b8-4fd0-93fc-a2fb8651f5f3
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

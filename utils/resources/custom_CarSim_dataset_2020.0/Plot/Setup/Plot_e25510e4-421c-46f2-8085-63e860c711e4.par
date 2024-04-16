@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Spring Force (Axles 3 - 5)`Suspension Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fs_L3, Time
+PLOTCHANNELS Fs_R3, Time
+PLOTCHANNELS Fs_L4, Time
+PLOTCHANNELS Fs_R4, Time
+PLOTCHANNELS Fs_L5, Time
+PLOTCHANNELS Fs_R5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Spring Force (Axles 3 - 5)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Forces and Moments } Spring Force (Axles 3 - 5)
+#Library : Plot: Setup
+#DataSet : Spring Force (Axles 3 - 5)
+#Category: Suspension Forces and Moments
+#FileID  : Plot_e25510e4-421c-46f2-8085-63e860c711e4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

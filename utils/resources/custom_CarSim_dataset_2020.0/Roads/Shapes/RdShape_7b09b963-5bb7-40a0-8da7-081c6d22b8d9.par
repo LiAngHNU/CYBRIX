@@ -1,0 +1,178 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Highway Merge Lane`Roads
+NLANES 11
+OPTTHRESHOLD 2
+#MiscYellow0
+# 1 1 1, Grass (Light), 1, 10, 4, 1, edge, 6, edge, 100, , -500, 1200, , , 0, Foliage
+# 1 1 1, Road Transition (Light), 1, 10, -1, 6, edge, 7, edge, , , -500, 1200, , , 0, Foliage
+# 1 1 1, Road (One Lane), 1, 10, 1, 7, edge, 9, edge, 10, , -500, 1200, , , , Road
+# 1 1 1, Road Transition (Light), 1, 10, 1, 9, edge, 10, edge, , , -500, 1200, , , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 4, 10, edge, 14, edge, 50, , -500, 1200, , , , Foliage
+# 1 1 1, Road Transition (Light), 1, 10, -1, 14, edge, 15, edge, , , -500, 1200, , , , Foliage
+# 1 1 1, Road (One Lane), 1, 10, 1, 15, edge, 17, edge, 10, , -500, 1200, , , , Road
+# 1 1 1, Road Transition (Light), 1, 10, 1, 17, edge, 18, edge, , , -500, 1200, , , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 8, 18, edge, 23, edge, 100, , -500, 1200, , , , Foliage
+# 1 1 1, Snow, 1, 10, 10, 15, m, 15.1, m, , , -500, 1200, 5, 2, 0.02, Random
+# 1 1 1, Snow, 1, 10, 10, 35, m, 35.1, m, , , 375, 1200, 5, 2, 0.02, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Grass (Light)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 4
+LIN(1) 1
+LINUNITS(1) edge
+LOUT(1) 6
+LOUTUNITS(1) edge
+LDIV(1) 100
+SSTART(1) -500
+SSTOP(1) 1200
+DZ(1) 0
+AUTODETAIL(1) Foliage
+COLOR(2) 1 1 1
+MATERIAL(2) Road Transition (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) -1
+LIN(2) 6
+LINUNITS(2) edge
+LOUT(2) 7
+LOUTUNITS(2) edge
+SSTART(2) -500
+SSTOP(2) 1200
+DZ(2) 0
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Road (One Lane)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 1
+LIN(3) 7
+LINUNITS(3) edge
+LOUT(3) 9
+LOUTUNITS(3) edge
+LDIV(3) 10
+SSTART(3) -500
+SSTOP(3) 1200
+AUTODETAIL(3) Road
+COLOR(4) 1 1 1
+MATERIAL(4) Road Transition (Light)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) 9
+LINUNITS(4) edge
+LOUT(4) 10
+LOUTUNITS(4) edge
+SSTART(4) -500
+SSTOP(4) 1200
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Grass (Light)
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 4
+LIN(5) 10
+LINUNITS(5) edge
+LOUT(5) 14
+LOUTUNITS(5) edge
+LDIV(5) 50
+SSTART(5) -500
+SSTOP(5) 1200
+AUTODETAIL(5) Foliage
+COLOR(6) 1 1 1
+MATERIAL(6) Road Transition (Light)
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) -1
+LIN(6) 14
+LINUNITS(6) edge
+LOUT(6) 15
+LOUTUNITS(6) edge
+SSTART(6) -500
+SSTOP(6) 1200
+AUTODETAIL(6) Foliage
+COLOR(7) 1 1 1
+MATERIAL(7) Road (One Lane)
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 1
+LIN(7) 15
+LINUNITS(7) edge
+LOUT(7) 17
+LOUTUNITS(7) edge
+LDIV(7) 10
+SSTART(7) -500
+SSTOP(7) 1200
+AUTODETAIL(7) Road
+COLOR(8) 1 1 1
+MATERIAL(8) Road Transition (Light)
+SPECULAR(8) 1
+SCALE(8) 10
+LTILES(8) 1
+LIN(8) 17
+LINUNITS(8) edge
+LOUT(8) 18
+LOUTUNITS(8) edge
+SSTART(8) -500
+SSTOP(8) 1200
+AUTODETAIL(8) Foliage
+COLOR(9) 1 1 1
+MATERIAL(9) Grass (Light)
+SPECULAR(9) 1
+SCALE(9) 10
+LTILES(9) 8
+LIN(9) 18
+LINUNITS(9) edge
+LOUT(9) 23
+LOUTUNITS(9) edge
+LDIV(9) 100
+SSTART(9) -500
+SSTOP(9) 1200
+AUTODETAIL(9) Foliage
+COLOR(10) 1 1 1
+MATERIAL(10) Snow
+SPECULAR(10) 1
+SCALE(10) 10
+LTILES(10) 10
+LIN(10) 15
+LINUNITS(10) m
+LOUT(10) 15.1
+LOUTUNITS(10) m
+SSTART(10) -500
+SSTOP(10) 1200
+SINT(10) 5
+IPRINT(10) 2
+DZ(10) 0.02
+AUTODETAIL(10) Random
+COLOR(11) 1 1 1
+MATERIAL(11) Snow
+SPECULAR(11) 1
+SCALE(11) 10
+LTILES(11) 10
+LIN(11) 35
+LINUNITS(11) m
+LOUT(11) 35.1
+LOUTUNITS(11) m
+SSTART(11) 375
+SSTOP(11) 1200
+SINT(11) 5
+IPRINT(11) 2
+DZ(11) 0.02
+AUTODETAIL(11) Random
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roads } Highway Merge Lane
+#Library : Road: Animator Surface Shapes
+#DataSet : Highway Merge Lane
+#Category: Roads
+#FileID  : RdShape_7b09b963-5bb7-40a0-8da7-081c6d22b8d9
+#Product : CarSim 2020.0
+#VehCode Road Shapes
+
+END

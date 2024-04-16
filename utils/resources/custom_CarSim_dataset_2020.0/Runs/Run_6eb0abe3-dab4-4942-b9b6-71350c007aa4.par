@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName CarSim Run Control`Sprung Mass from Whole Vehicle: i_i`Sprung Mass (Whole Vehicle)
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6eb0abe3-dab4-4942-b9b6-71350c007aa4
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.4 0 0
+SET_RUN_COLOR 0.4 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_661336e9-b268-4eb9-b69d-320da1549161.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan: Whole Veh. Spr. Mass` D-Class` , Math Model`Vehicle_661336e9-b268-4eb9-b69d-320da1549161
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Sprung Mass from Whole Vehicle: i_i <Sprung Mass (Whole Vehicle)>
+CATEGORY Sprung Mass (Whole Vehicle) 
+DATASET_TITLE Sprung Mass from Whole Vehicle: i_i
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan performs a double lane change maneuver at 120 km/h.
+#
+#The Sprung Mass is represented using properties measured from the whole vehicle. Mass and inertia data are entered that represent a total vehicle measurement, from which CarSim extracts the Sprung Mass properties and uses those in the vehicle simulation.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Sprung Mass (Whole Vehicle) } Sprung Mass from Whole Vehicle: i_i
+#Library : CarSim Run Control
+#DataSet : Sprung Mass from Whole Vehicle: i_i
+#Category: Sprung Mass (Whole Vehicle)
+#FileID  : Run_6eb0abe3-dab4-4942-b9b6-71350c007aa4
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

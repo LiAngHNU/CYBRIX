@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Engines: Torque Rod Bushing (YZ-Plane)`Common Vehicle Assets
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Engines\torque_rod\torque_rod_bushing.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 2
+SET_SCALE_Y 2
+SET_SCALE_Z 2
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 90
+SET_OFFSET_X 0.1
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0
+*SPECULAR 1
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Small Objects` Shape Preview` , Video Camera`Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_4e378233-87c0-4e25-a433-4b5e76d87e82.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Engines: Torque Rod Bushing (YZ-Plane)
+#Library : Animator: Shape File Link
+#DataSet : Engines: Torque Rod Bushing (YZ-Plane)
+#Category: Common Vehicle Assets
+#FileID  : Shape_4e378233-87c0-4e25-a433-4b5e76d87e82
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

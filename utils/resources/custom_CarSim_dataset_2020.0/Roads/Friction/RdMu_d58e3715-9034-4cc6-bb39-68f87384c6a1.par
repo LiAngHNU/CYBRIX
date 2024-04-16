@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Road: Friction Map, S-L Grid`Step: Mu 0.3 @ 8 m`Split Mu
+#CheckBox0 0    
+
+#RingCtrl0 2D_STEP
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Friction coefficient Mu (-)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+MU_ROAD_CARPET 2D_STEP
+0, -5, 0, 5
+0, 1, 1, 1
+8, 0.3, 0.3, 0.3
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Road: Friction Map, S-L Grid; { Split Mu } Step: Mu 0.3 @ 8 m
+#Library : Road: Friction Map, S-L Grid
+#DataSet : Step: Mu 0.3 @ 8 m
+#Category: Split Mu
+#FileID  : RdMu_d58e3715-9034-4cc6-bb39-68f87384c6a1
+#Product : CarSim 2020.0
+#VehCode Mu via S-L Grid
+
+END

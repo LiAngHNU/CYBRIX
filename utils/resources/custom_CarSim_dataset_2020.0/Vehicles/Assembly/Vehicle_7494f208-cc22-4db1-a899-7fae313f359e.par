@@ -1,0 +1,113 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Three-wheeled Vehicle`Utility Vehicles
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 1    
+
+#RingCtrl0 0
+OPT_PT 0
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 1
+PARSFILE Steering\System2\StrSys2_11151f45-566c-4c48-b4c1-db70d745b7b8.par
+#BlueLink7 Steering`Three-Wheel Vehicle Steering (Front)` Utility Vehicles: SUVs and Vans` , Steering System`StrSys2_11151f45-566c-4c48-b4c1-db70d745b7b8
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_b0f73ee4-b980-4364-97b0-96440b972236.par
+#BlueLink19 Suspension: Independent System Kinematics`Three-wheeled Vehicle - Front` Utility Vehicles: SUVs and Vans` , Kinematics`KinInd_b0f73ee4-b980-4364-97b0-96440b972236
+
+PARSFILE Suspensions\Compliance\CmpInd_65cef7c2-8144-4d0e-9863-9a59e6e3c10a.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Three-wheeled Vehicle - Front` Utility Vehicles: SUVs and Vans` , Compliance`CmpInd_65cef7c2-8144-4d0e-9863-9a59e6e3c10a
+
+PARSFILE Generic\VS_commands\GenVS_3e5a4a31-3967-4044-a94b-4d72b7177eda.par
+#BlueLink11 Generic VS Commands`Suspension Scaling for Front Suspension` CS Three-wheeled Vehicle` , Misc. Front Data`GenVS_3e5a4a31-3967-4044-a94b-4d72b7177eda
+
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_41eb696b-2a5a-41eb-881f-8fa43c55a49f.par
+#BlueLink999 Tire`Three-wheeled Vehicle - Front Tire` Utility Vehicle Tires` , Tire`Tire_41eb696b-2a5a-41eb-881f-8fa43c55a49f
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_41eb696b-2a5a-41eb-881f-8fa43c55a49f.par
+#BlueLink10 Tire`Three-wheeled Vehicle - Front Tire` Utility Vehicle Tires` , Tire`Tire_41eb696b-2a5a-41eb-881f-8fa43c55a49f
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_7fb725fb-7a8c-4872-a679-15c2adb034d2.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`Three-wheeled Vehicle - Rear` Utility Vehicles: SUVs and Vans` , Kinematics`KinSA_7fb725fb-7a8c-4872-a679-15c2adb034d2
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_d3f43276-14e2-4344-939d-f0244a07d458.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Three-wheeled Vehicle - Rear` Utility Vehicles: SUVs and Vans` , Compliance`CmpSA_d3f43276-14e2-4344-939d-f0244a07d458
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_da64cc7f-7294-47b9-b28a-7bbb92aecf79.par
+#BlueLink999 Tire`Three-wheeled Vehicle - Rear Tire` Utility Vehicle Tires` , Rear Tire`Tire_da64cc7f-7294-47b9-b28a-7bbb92aecf79
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_da64cc7f-7294-47b9-b28a-7bbb92aecf79.par
+#BlueLink14 Tire`Three-wheeled Vehicle - Rear Tire` Utility Vehicle Tires` , Rear Tire`Tire_da64cc7f-7294-47b9-b28a-7bbb92aecf79
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_a1b83ad7-61f8-4fae-b2ff-46d44fd5edc0.par
+#BlueLink0 Vehicle: Sprung Mass`Three-wheeled Vehicle` Utility Vehicles: SUVs and Vans` , Sprung Mass`SprMass_a1b83ad7-61f8-4fae-b2ff-46d44fd5edc0
+
+PARSFILE Aerodynamics\Aero_Main\Aero_3479bdf1-b57e-4404-97d9-41c21f83ddb4.par
+#BlueLink1 Aerodynamics: Basic`No Aerodynamics` Generic Aerodynamic Properties` , Aerodynamics`Aero_3479bdf1-b57e-4404-97d9-41c21f83ddb4
+
+INSTALL_SPEED_CONTROLLER
+R_REAR_DRIVE_SC 1
+PMAX_SC 50
+PARSFILE Brakes\4W_System\Brk4W_044b657b-9fb8-46a9-8e58-5726bfdc457a.par
+#BlueLink6 Brakes: Four-Wheel System`3-Whl Vehicle: MC Press, No ABS` Utility Vehicles: SUVs and Vans` , Brake System`Brk4W_044b657b-9fb8-46a9-8e58-5726bfdc457a
+
+PARSFILE Animator\Vehicles\AniVeh_20e27b7c-d1a2-442f-817e-d4e7a1c0989d.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Three-wheeled Vehicle` Utility Vehicles: SUVs and Vans` , Vehicle 3D Shape`AniVeh_20e27b7c-d1a2-442f-817e-d4e7a1c0989d
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_7494f208-cc22-4db1-a899-7fae313f359e.png
+
+#EMBEDDED_NOTES
+#The CarSim math model equations all include four wheels. Conceptually, a three-wheeled model can be created by placing both wheels at the same location. If all the component properties are reduced by half, the effect is 2 * 1/2, or 1 wheel.
+#
+#The single-wheeled suspension is a "degenerate" two-wheeled suspension.
+#
+#Properties still need to be defined for the left front and right front sides. To make the task easier, VS Commands are used to reduce the stiffnesses, forces, and so forth by half, so actual component properties can be put in the data screens.
+#
+#The actual properties for the single front suspension, tires, and brakes are entered twice - once each for the left and right sides.
+#
+#The VS Commands dataset linked under the front suspension scales everything down to a single wheel.
+#
+#The independent suspension model is always used to describe a suspension reduced to one-wheel.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Utility Vehicles } Three-wheeled Vehicle
+#Library : Vehicle: Assembly
+#DataSet : Three-wheeled Vehicle
+#Category: Utility Vehicles
+#FileID  : Vehicle_7494f208-cc22-4db1-a899-7fae313f359e
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Sensor Vertical Acceleration w/ G`Position, Accel. and Rate Sensors
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AzG_S1, Time
+PLOTCHANNELS AzG_S2, Time
+PLOTCHANNELS AzG_S3, Time
+PLOTCHANNELS AzG_S4, Time
+PLOTCHANNELS AzG_S5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Sensor Vertical Acceleration w/ G
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Position, Accel. and Rate Sensors } Sensor Vertical Acceleration w/ G
+#Library : Plot: Setup
+#DataSet : Sensor Vertical Acceleration w/ G
+#Category: Position, Accel. and Rate Sensors
+#FileID  : Plot_43d9b2ae-0bc8-4112-ad93-ef6e25eed1a4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

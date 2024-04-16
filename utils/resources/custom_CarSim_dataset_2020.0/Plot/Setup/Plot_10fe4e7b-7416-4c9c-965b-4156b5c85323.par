@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Visibility (2 Objects)`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS VisO_1, Time
+PLOTCHANNELS VisO_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Visibility (2 Objects)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Visibility (2 Objects)
+#Library : Plot: Setup
+#DataSet : Visibility (2 Objects)
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_10fe4e7b-7416-4c9c-965b-4156b5c85323
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

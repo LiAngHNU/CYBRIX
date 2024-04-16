@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Generic Table`Available Engine Power`Powertrain
+#RingCtrl0 LINEAR
+#CheckBox0 0    
+
+#MiscYellow0
+igeneric 1
+#ENDMYellow
+
+#DiagramOne0
+generic_TABLE LINEAR
+750, 13.16085419
+1000, 16.60382402
+1500, 42.55057913
+2000, 64.95408897
+2500, 82.40162958
+3000, 98.73717834
+3500, 115.4845925
+4000, 132.7532419
+4500, 149.2740159
+5000, 157.6323593
+5500, 162.802028
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD generic
+*X_LABEL Engine speed (RPM)
+*Y_LABEL Available power (kW)
+
+
+LOG_ENTRY Used Dataset: Generic Table; { Powertrain } Available Engine Power
+#Library : Generic Table
+#DataSet : Available Engine Power
+#Category: Powertrain
+#FileID  : GenTab_de0af4c1-d417-4e77-9034-20117cb21752
+#Product : CarSim 2020.0
+#VehCode table
+
+END

@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`B-Class, Sports Car - Rear`B-Class
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0
+*DIVE_L 0
+L_TRACK 1485
+Y_CL_SUSP 0
+M_US 62.6
+*IW_L 0.08
+*JNC_DESIGN_L 0
+*TOE_L 0.2
+*CAMBER_L -1.5
+*IWXXZZ_L 0.04
+*M_US_IND_L 31.3
+*M_US_STR_L 0
+SUSP_DIVE_COEFFICIENT 0
+PARSFILE Suspensions\Longitudinal\SusX_e3f77dbd-5cb0-44bf-93cc-55b9d64b4fcc.par
+#BlueLink1 Suspension: Longitudinal Movement`Rear 5-Link - Longitudinal Movement` 5-Link Rear` , Left wheel X`SusX_e3f77dbd-5cb0-44bf-93cc-55b9d64b4fcc
+
+PARSFILE Suspensions\Camber\Camber_5362347d-a2fe-48dc-a2b8-c7e05be1078c.par
+#BlueLink2 Suspension: Camber Angle`Rear 5-Link - Camber Change` 5-Link Rear` , Left wheel camber`Camber_5362347d-a2fe-48dc-a2b8-c7e05be1078c
+
+PARSFILE Suspensions\Lateral\LatJnc_9c40fac2-9372-4ba7-a351-6bbc84d4a87e.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Rear 5-Link - Lateral Movement` 5-Link Rear` , Left wheel lateral (-Y)`LatJnc_9c40fac2-9372-4ba7-a351-6bbc84d4a87e
+
+PARSFILE Suspensions\Toe\Toe_c758daa6-a546-495a-878e-3ce95045fce1.par
+#BlueLink4 Suspension: Toe Angle`Rear 5-Link - Toe Change` 5-Link Rear` , Left wheel toe`Toe_c758daa6-a546-495a-878e-3ce95045fce1
+
+M_US_IND 31.3
+M_US_STR 0
+IW 0.08
+IW_XXZZ 0.04
+JNC_DESIGN 0
+A_TOE 0.2
+A_CAMBER -1.5
+
+iside 2
+SUSP_DIVE_COEFFICIENT 0
+PARSFILE Suspensions\Longitudinal\SusX_e3f77dbd-5cb0-44bf-93cc-55b9d64b4fcc.par
+#BlueLink1 Suspension: Longitudinal Movement`Rear 5-Link - Longitudinal Movement` 5-Link Rear` , Left wheel X`SusX_e3f77dbd-5cb0-44bf-93cc-55b9d64b4fcc
+
+PARSFILE Suspensions\Camber\Camber_5362347d-a2fe-48dc-a2b8-c7e05be1078c.par
+#BlueLink2 Suspension: Camber Angle`Rear 5-Link - Camber Change` 5-Link Rear` , Left wheel camber`Camber_5362347d-a2fe-48dc-a2b8-c7e05be1078c
+
+PARSFILE Suspensions\Lateral\LatJnc_9c40fac2-9372-4ba7-a351-6bbc84d4a87e.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Rear 5-Link - Lateral Movement` 5-Link Rear` , Left wheel lateral (-Y)`LatJnc_9c40fac2-9372-4ba7-a351-6bbc84d4a87e
+
+PARSFILE Suspensions\Toe\Toe_c758daa6-a546-495a-878e-3ce95045fce1.par
+#BlueLink4 Suspension: Toe Angle`Rear 5-Link - Toe Change` 5-Link Rear` , Left wheel toe`Toe_c758daa6-a546-495a-878e-3ce95045fce1
+
+M_US_IND 31.3
+M_US_STR 0
+IW 0.08
+IW_XXZZ 0.04
+JNC_DESIGN 0
+A_TOE 0.2
+A_CAMBER -1.5
+
+#EMBEDDED_NOTES
+#Generic 5-Link rear suspension kinematics
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { B-Class } B-Class, Sports Car - Rear
+#Library : Suspension: Independent System Kinematics
+#DataSet : B-Class, Sports Car - Rear
+#Category: B-Class
+#FileID  : KinInd_c0d795fd-e1d1-4736-9b6d-e4054101246e
+#Product : CarSim 2020.0
+#VehCode Independent
+
+END

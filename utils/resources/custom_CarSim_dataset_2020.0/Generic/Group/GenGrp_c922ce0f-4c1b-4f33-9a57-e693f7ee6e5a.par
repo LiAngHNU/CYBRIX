@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Generic Data Group`C-Class Hatchback EPAS`Generic EPAS
+#VehCode Generic Group
+#MiscYellow0
+! units and motor gear ratio
+define_units mm/rev 1000*2*pi
+! ratio is rack displacement per motor revolution
+define_parameter motor_ratio = 4; mm/rev;
+
+
+
+
+!
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_dcb47c9d-bab3-4c20-9de6-1af75c92850f.par
+#BlueLink0 Generic Table`C-Class EPAS motor torque` EPAS motor torque` , Link 1`GenTab_dcb47c9d-bab3-4c20-9de6-1af75c92850f
+
+
+#MiscYellow1
+define_variable m_motor
+eq_in m_motor = m_epas(0, m_tbar, 1);
+eq_in imp_f_boost_ext = m_motor / motor_ratio;
+import imp_f_boost_ext vs_replace
+
+define_output motor_torque = m_motor; N-m;
+
+
+!
+#ENDMYellow
+
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#Units are defined for a gear ratio to transform motor torque to rack force, and a ratio is specified.
+#
+#A generic table is linked to provide motor torque as a function of torsion bar (torque sensor) torque.
+#
+#VS Commands are used to look up the table value, divide by ratio, apply the rack force as an import variable, and set an output variable for the motor torque.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Generic EPAS } C-Class Hatchback EPAS
+#Library : Generic Data Group
+#DataSet : C-Class Hatchback EPAS
+#Category: Generic EPAS
+#FileID  : GenGrp_c922ce0f-4c1b-4f33-9a57-e693f7ee6e5a
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

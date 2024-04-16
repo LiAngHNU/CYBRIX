@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName Animator: Wheel Arrows and Other Indicators`2A - Fx Wheel-center Force Arrows Left`Wheel-center Force Arrows (2 Axles)
+#CheckBox1 0    
+#CheckBox4 0    
+
+#RingCtrl0 2
+#RingCtrl1 W
+#RingCtrl2 L
+#RingCtrl3 0
+*DYN_X Fx_<<o>>
+*REF_X 2000
+*ID_AXLE 1
+
+#BlueLink0 Animator: Shape Assembly`Fx Double (Tail Origin) for WCs Left` Arrows` , Animator Shape(s)`ShpGrp_68bbb248-300f-483c-846a-6acef3a8ad0c
+
+ADD_REFERENCE_FRAME wheel L1 indicator: 2A - Fx Wheel-center Force Arrows Left
+PARSFILE Animator\STL_Groups\ShpGrp_68bbb248-300f-483c-846a-6acef3a8ad0c.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_L1
+WRT_X_L1
+ANI_X_L1
+SET_Y_NAME Y_L1
+WRT_Y_L1
+ANI_Y_L1
+SET_Z_NAME Z_L1
+WRT_Z_L1
+ANI_Z_L1
+SET_PITCH_NAME Pitch_L1
+WRT_Pitch_L1
+ANI_Pitch_L1
+SET_ROLL_NAME Roll_L1
+WRT_Roll_L1
+ANI_Roll_L1
+SET_YAW_NAME Yaw_L1
+WRT_Yaw_L1
+ANI_Yaw_L1
+SET_FRAME_SCALE_X_NAME Fx_L1
+WRT_Fx_L1
+ANI_Fx_L1
+X_REF_LENGTH 2000
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+
+ADD_REFERENCE_FRAME wheel L2 indicator: 2A - Fx Wheel-center Force Arrows Left
+PARSFILE Animator\STL_Groups\ShpGrp_68bbb248-300f-483c-846a-6acef3a8ad0c.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_L2
+WRT_X_L2
+ANI_X_L2
+SET_Y_NAME Y_L2
+WRT_Y_L2
+ANI_Y_L2
+SET_Z_NAME Z_L2
+WRT_Z_L2
+ANI_Z_L2
+SET_PITCH_NAME Pitch_L2
+WRT_Pitch_L2
+ANI_Pitch_L2
+SET_ROLL_NAME Roll_L2
+WRT_Roll_L2
+ANI_Roll_L2
+SET_YAW_NAME Yaw_L2
+WRT_Yaw_L2
+ANI_Yaw_L2
+SET_FRAME_SCALE_X_NAME Fx_L2
+WRT_Fx_L2
+ANI_Fx_L2
+X_REF_LENGTH 2000
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+
+
+LOG_ENTRY Used Dataset: Animator: Wheel Arrows and Other Indicators; { Wheel-center Force Arrows (2 Axles) } 2A - Fx Wheel-center Force Arrows Left
+#Library : Animator: Wheel Arrows and Other Indicators
+#DataSet : 2A - Fx Wheel-center Force Arrows Left
+#Category: Wheel-center Force Arrows (2 Axles)
+#FileID  : Arrows_317fcd2e-823b-47cd-89ac-5270254de124
+#Product : CarSim 2020.0
+#VehCode Wheel Indicators
+
+END

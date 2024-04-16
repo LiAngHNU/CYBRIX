@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Ax_SCrq: Ax Request (g)`Speed Controller
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ax_SCrq, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Ax_SCrq: Ax Request (g)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Speed Controller } Ax_SCrq: Ax Request (g)
+#Library : Plot: Setup
+#DataSet : Ax_SCrq: Ax Request (g)
+#Category: Speed Controller
+#FileID  : Plot_185d1aa7-45f6-439e-96ba-0a3e707a9dfe
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

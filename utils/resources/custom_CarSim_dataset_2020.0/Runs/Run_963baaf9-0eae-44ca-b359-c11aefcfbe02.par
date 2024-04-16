@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName CarSim Run Control`Braking - Split Mu: ABS`Brake Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_963baaf9-0eae-44ca-b359-c11aefcfbe02
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 5 El, 27 m` Road Reference` , Animator camera`Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback` B-Class` , Math Model`Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac
+
+PARSFILE Procedures\Proc_af7b7a9d-340b-49a4-ae1a-008e5c2b5b38.par
+#BlueLink28 Procedures`Split Mu from 65 km/h` Accel. and Brake Testing` , Procedure`Proc_af7b7a9d-340b-49a4-ae1a-008e5c2b5b38
+
+PARSFILE Plot\Setup\Plot_eb50101f-6615-4617-8639-ca7693556ca3.par
+#BlueLink15 Plot: Setup`Locked Brake Status (Axle 1)` Braking` , Plot`Plot_eb50101f-6615-4617-8639-ca7693556ca3
+
+PARSFILE Plot\Setup\Plot_3adb6053-15ab-44c1-adf9-64e31969b810.par
+#BlueLink16 Plot: Setup`Locked Brake Status (Axle 2)` Braking` , Plot`Plot_3adb6053-15ab-44c1-adf9-64e31969b810
+
+
+SPECIAL_PARSFILE Runs\Run_5b3d86e9-3bdc-4863-b51d-fa00438bded3.par
+#BlueLink23 CarSim Run Control`Braking - Split Mu: No ABS` Brake Tests` , Overlay run or ERD file`Run_5b3d86e9-3bdc-4863-b51d-fa00438bded3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.png
+WRITE_SENSOR_DETECT
+Title Braking - Split Mu: ABS <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Braking - Split Mu: ABS
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with the CarSim internal ABS model performs a split mu stopping test from an initial speed of 65 km/h.
+#
+#The Closed-Loop Driver Model is used to maintain the vehicle's lateral position as it attempts to follow a straight path along the center of the road.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Brake Tests } Braking - Split Mu: ABS
+#Library : CarSim Run Control
+#DataSet : Braking - Split Mu: ABS
+#Category: Brake Tests
+#FileID  : Run_963baaf9-0eae-44ca-b359-c11aefcfbe02
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

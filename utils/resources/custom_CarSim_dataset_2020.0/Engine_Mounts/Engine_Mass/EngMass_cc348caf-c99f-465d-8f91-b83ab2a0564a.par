@@ -1,0 +1,177 @@
+PARSFILE
+#FullDataName Engine Mounts: Engine Mass and Geometry`Engine Body, 2 Mounts w/ Torq. Rod`
+OPT_SUSP_ENGINE 1
+N_ENGINE_MOUNTS 2
+OPT_ENGINE_TORQUE_ROD 1
+
+#RingCtrl0 2
+#CheckBox0 1    
+#CheckBox1 1    
+
+X_CG_ENGINE 170
+Y_CG_ENGINE -13
+Z_CG_ENGINE 480
+M_ENGINE 240
+IXX_ENGINE 16.78
+IYY_ENGINE 8.73
+IZZ_ENGINE 14.89
+IXY_ENGINE 0.91
+IXZ_ENGINE -0.34
+IYZ_ENGINE 1.25
+*IXX_ENGINE_E 8.4
+*IYY_ENGINE_E 17
+*IZZ_ENGINE_E 15
+*IXY_ENGINE_E 0
+*IXZ_ENGINE_E 0
+*IYZ_ENGINE_E 0
+*IXX_COSINE -0.0993
+*IXY_COSINE -0.9781
+*IXZ_COSINE -0.1832
+*IZX_COSINE -0.2577
+*IZY_COSINE -0.1525
+*IZZ_COSINE 0.9541
+X_CG_ENGINE_ROD 350
+Y_CG_ENGINE_ROD -200
+Z_CG_ENGINE_ROD 200
+M_ENGINE_ROD 1.2
+IXX_ENGINE_ROD 0.1
+IYY_ENGINE_ROD 0.1
+IZZ_ENGINE_ROD 0.1
+IXY_ENGINE_ROD 0
+IXZ_ENGINE_ROD 0
+IYZ_ENGINE_ROD 0
+X_MOUNT_1 147
+X_MOUNT_2 82
+X_MOUNT_5 450
+X_MOUNT_6 250
+Y_MOUNT_1 383
+Y_MOUNT_2 -525
+Y_MOUNT_5 -200
+Y_MOUNT_6 -200
+Z_MOUNT_1 585
+Z_MOUNT_2 722
+Z_MOUNT_5 200
+Z_MOUNT_6 200
+ROLL_MOUNT_1 0
+ROLL_MOUNT_2 0
+ROLL_MOUNT_5 0
+ROLL_MOUNT_6 0
+PITCH_MOUNT_1 0
+PITCH_MOUNT_2 0
+PITCH_MOUNT_5 0
+PITCH_MOUNT_6 0
+YAW_MOUNT_1 0
+YAW_MOUNT_2 0
+YAW_MOUNT_5 0
+YAW_MOUNT_6 0
+
+IENGINE_MOUNT 1
+X_ENGINE_MOUNT 147
+Y_ENGINE_MOUNT 383
+Z_ENGINE_MOUNT 585
+A_ROLL_ENGINE_MOUNT 0
+A_PITCH_ENGINE_MOUNT 0
+A_YAW_ENGINE_MOUNT 0
+PARSFILE Engine_Mounts\Mount_Assembly\EngMount_206ef159-fe7d-4d46-ba7d-e22a1c6e493d.par
+#BlueLink0 Engine Mounts: Mount Characteristics`Left High` ` , Mount`EngMount_206ef159-fe7d-4d46-ba7d-e22a1c6e493d
+
+
+IENGINE_MOUNT 2
+X_ENGINE_MOUNT 82
+Y_ENGINE_MOUNT -525
+Z_ENGINE_MOUNT 722
+A_ROLL_ENGINE_MOUNT 0
+A_PITCH_ENGINE_MOUNT 0
+A_YAW_ENGINE_MOUNT 0
+PARSFILE Engine_Mounts\Mount_Assembly\EngMount_71d1144f-770d-4d9e-a0bd-ed58cf31ecc2.par
+#BlueLink1 Engine Mounts: Mount Characteristics`Right High` ` , Mount`EngMount_71d1144f-770d-4d9e-a0bd-ed58cf31ecc2
+
+
+IENGINE_MOUNT 5
+X_ENGINE_MOUNT 450
+Y_ENGINE_MOUNT -200
+Z_ENGINE_MOUNT 200
+A_ROLL_ENGINE_MOUNT 0
+A_PITCH_ENGINE_MOUNT 0
+A_YAW_ENGINE_MOUNT 0
+PARSFILE Engine_Mounts\Mount_Assembly\EngMount_43cf7810-e23e-4ea9-90e8-aa93c0467da3.par
+#BlueLink4 Engine Mounts: Mount Characteristics`Rod at Body` ` , Mount`EngMount_43cf7810-e23e-4ea9-90e8-aa93c0467da3
+
+
+IENGINE_MOUNT 6
+X_ENGINE_MOUNT 250
+Y_ENGINE_MOUNT -200
+Z_ENGINE_MOUNT 200
+A_ROLL_ENGINE_MOUNT 0
+A_PITCH_ENGINE_MOUNT 0
+A_YAW_ENGINE_MOUNT 0
+PARSFILE Engine_Mounts\Mount_Assembly\EngMount_65f9684e-1d73-4308-93d6-d585158c065c.par
+#BlueLink5 Engine Mounts: Mount Characteristics`Rod at Engine` ` , Mount`EngMount_65f9684e-1d73-4308-93d6-d585158c065c
+
+ADD_REFERENCE_FRAME Engine Torque Rod Body
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME XCG_ERod
+WRT_XCG_ERod
+ANI_XCG_ERod
+SET_Y_NAME YCG_ERod
+WRT_YCG_ERod
+ANI_YCG_ERod
+SET_Z_NAME ZCG_ERod
+WRT_ZCG_ERod
+ANI_ZCG_ERod
+SET_YAW_NAME Yaw_ERod
+WRT_Yaw_ERod
+ANI_Yaw_ERod
+SET_PITCH_NAME PtchERod
+WRT_PtchERod
+ANI_PtchERod
+SET_ROLL_NAME RollERod
+WRT_RollERod
+ANI_RollERod
+PARSFILE Animator\STL_Groups\ShpGrp_c8693e86-9fe4-4986-b6d4-7825dc5c14b7.par
+#BlueLink7 Animator: Shape Assembly`Torque Rod (90 deg)` Engine Mount` , Torque Rod 3D Shape`ShpGrp_c8693e86-9fe4-4986-b6d4-7825dc5c14b7
+
+ADD_REFERENCE_FRAME Engine Mass Body
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME XCG_Eng
+WRT_XCG_Eng
+ANI_XCG_Eng
+SET_Y_NAME YCG_Eng
+WRT_YCG_Eng
+ANI_YCG_Eng
+SET_Z_NAME ZCG_Eng
+WRT_ZCG_Eng
+ANI_ZCG_Eng
+SET_YAW_NAME Yaw_EngG
+WRT_Yaw_EngG
+ANI_Yaw_EngG
+SET_PITCH_NAME PtchEngG
+WRT_PtchEngG
+ANI_PtchEngG
+SET_ROLL_NAME RollEngG
+WRT_RollEngG
+ANI_RollEngG
+PARSFILE Animator\STL_Groups\ShpGrp_b07266e6-7d11-4882-8b83-1970e0572e29.par
+#BlueLink6 Animator: Shape Assembly`Transverse V-Engine and Transmission` Engine Mount` , Engine 3D Shape`ShpGrp_b07266e6-7d11-4882-8b83-1970e0572e29
+
+PARSFILE Animator\Groups\Group_c11041ca-28c9-4ffd-8e13-575025a596d1.par
+#BlueLink8 Animator: Group`2 Mount Force Arrows w/ Torque Rod` Powertrain Engine Mount` , Miscellaneous`Group_c11041ca-28c9-4ffd-8e13-575025a596d1
+
+
+#EMBEDDED_NOTES
+#Example V-engine, which is supposed to be mounted on the front of the vehicle. The locations of the central gravity of the engine body (involving any other rigid parts which move together with the engine, e.g. transmission, clutch/torque converter) as well as the torque rod are specified by the sprung mass coordinate system.
+#
+#The engine inertia can be specified in one of two ways: one is by the sprung mass coordinate system and the other is the engine's local coordinate system namely the principal axes of inertia. In this particular example, the engine inertia is set by the local coordinate whose orientation with the sprung mass coordinate is specified by the direction cosine matrix. The matrix consists of nine elements (3 x 3 matrix). However, only six of those need to be specified on this screen (the other three elements are automatically derived.)
+#
+#The engine can be suspended or hung by mounts whose location and orientations are specified by the sprung mass coordinate system. In this particular example, the engine is hung by two mounts and its rotation is controlled by a torque rod whose joints locations (mount bushes) are also specified.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Engine Mounts: Engine Mass and Geometry; Engine Body, 2 Mounts w/ Torq. Rod
+#Library : Engine Mounts: Engine Mass and Geometry
+#DataSet : Engine Body, 2 Mounts w/ Torq. Rod
+#Category: 
+#FileID  : EngMass_cc348caf-c99f-465d-8f91-b83ab2a0564a
+#Product : CarSim 2020.0
+#VehCode Engine Mass
+
+END

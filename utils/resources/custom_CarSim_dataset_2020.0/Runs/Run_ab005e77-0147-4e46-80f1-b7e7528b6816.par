@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName CarSim Run Control`Sine with Dwell (ECE R13H) w/ ESC`Handling and Stability Tests
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_ab005e77-0147-4e46-80f1-b7e7528b6816
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_713acd75-07db-4091-886c-04893f966296.par
+#BlueLink0 Animator: Camera Setup`210 Azm, 5 El, 49 m` Vehicle Reference` , Animator camera`Camera_713acd75-07db-4091-886c-04893f966296
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.753 0.753 0.753
+SET_RUN_COLOR 0.753 0.753 0.753
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276.par
+#BlueLink2 Vehicle: Assembly`E-Class, SUV` E-Class` , Math Model`Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276
+
+PARSFILE Procedures\Proc_7c34592b-427e-4e75-9873-1893b1bde8f0.par
+#BlueLink28 Procedures`Sine with Dwell (ECE R13H, FMVSS 126)` Stability Testing` , Procedure`Proc_7c34592b-427e-4e75-9873-1893b1bde8f0
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Control\ESC\ESC_7c83e406-8fbe-4de3-8a54-cf7a2e0c5ea3.par
+#BlueLink11 Control: Electronic Stability (ESC)`ESC for SUV` ` , Miscellaneous`ESC_7c83e406-8fbe-4de3-8a54-cf7a2e0c5ea3
+
+PARSFILE Plot\Setup\Plot_302cd958-868f-45cb-80cf-e4055eab6bb7.par
+#BlueLink15 Plot: Setup`Yaw Rate vs. Event Elapsed Time` Sine with Dwell` , Plot`Plot_302cd958-868f-45cb-80cf-e4055eab6bb7
+
+PARSFILE Plot\Setup\Plot_57031bd3-2bd2-4a97-9dd2-07cdda99d69e.par
+#BlueLink16 Plot: Setup`Y vs.Time` Sine with Dwell` , Plot`Plot_57031bd3-2bd2-4a97-9dd2-07cdda99d69e
+
+
+SPECIAL_PARSFILE Runs\Run_675e64f3-4bf5-42a2-95e1-fc894a958c9c.par
+#BlueLink23 CarSim Run Control`Sine with Dwell (ECE R13H) w/o ESC` Handling and Stability Tests` , Overlay run or ERD file`Run_675e64f3-4bf5-42a2-95e1-fc894a958c9c
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+WRITE_SENSOR_DETECT
+Title Sine with Dwell (ECE R13H) w/ ESC <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Sine with Dwell (ECE R13H) w/ ESC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class SUV performs a Sine with Dwell test series, as required in regulations such as FMVSS 126 and ECE Regulation 13H.
+#
+#Details of the test are covered in the notes for the Procedure and the Tech Memo, "Example: Sine with Dwell ESC Test" (Help -> Technical Memos).
+#
+#The run makes use of a built-in electronic stability controller (ESC) introduced in v2019.0.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Handling and Stability Tests } Sine with Dwell (ECE R13H) w/ ESC
+#Library : CarSim Run Control
+#DataSet : Sine with Dwell (ECE R13H) w/ ESC
+#Category: Handling and Stability Tests
+#FileID  : Run_ab005e77-0147-4e46-80f1-b7e7528b6816
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

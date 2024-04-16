@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName I/O Channels: Export`ABS (A): Veh. Speed, M/C Pressure`Brake System: Control and External Models
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_a51cebc0-6291-46c6-a66f-e7abf4c8035a\Run_out_tab.txt
+
+
+EXPORT Vx_L1
+EXPORT Vx_R1
+EXPORT Vx_L2
+EXPORT Vx_R2
+EXPORT Vx_SM
+EXPORT Pbk_Con
+#MiscYellow0
+#Number of Selected Channels: 6
+#CHN_NAME: Vx_L1
+#CHN_NAME: Vx_R1
+#CHN_NAME: Vx_L2
+#CHN_NAME: Vx_R2
+#CHN_NAME: Vx_SM
+#CHN_NAME: Pbk_Con
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Braking: Advanced, Type A Ext. ABS` Brake Tests` , example run`Run_a51cebc0-6291-46c6-a66f-e7abf4c8035a
+
+
+#EMBEDDED_NOTES
+#This example dataset has been included in past versions of CarSim as part of some examples using a "Type A" external ABS controller.
+#
+#It exports the master cylinder pressure Pbk_Con to the external controller, along with vehicle speed and equivalent forward speeds of the four wheels.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Brake System: Control and External Models } ABS (A): Veh. Speed, M/C Pressure
+#Library : I/O Channels: Export
+#DataSet : ABS (A): Veh. Speed, M/C Pressure
+#Category: Brake System: Control and External Models
+#FileID  : Export_ea3b81d6-3bfa-401b-92af-699e467f1917
+#Product : CarSim 2020.0
+#VehCode Export Channels
+
+END

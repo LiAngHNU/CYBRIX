@@ -1,0 +1,343 @@
+$======================================================================
+$ Application: Project Data
+$ Object:      Driver
+$ created:     May 09, 2018 17:07:23
+$================================================================Driver
+[FAHRER] 10
+DATENSATZ_VERANTWORTLICHER = 'AVL Cruise Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Standard Driver'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#FAH_ID                   = 
+#FAH_ENTW_DATUM           = "Jan 14, 2005 10:07:11"
+SM_ID                     = 
+NAME                      = 'Standard'
+BREMSKRAFT_MAX <N>        = 100.0
+BREMSPEDAL_STAND <%>      = 50.0
+ANFAHRDREHZAHL_GES_DEF    = 1
+ANFAHRDREHZAHL_GES <1/min> = 4000.0
+ANF_KUPPL_SCHLIESSZEIT <s> = 0.25
+ANFAHRDREHZAHL_GER_DEF    = 1
+ANFAHRDREHZAHL_GER <1/min> = 1200.0
+SCHALTZEIT <s>            = 0.3
+GANGWECHSEL <%>           = 50.0
+GAS_STEP_OUT <%>          = 28.0
+GAS_STEP_IN <%>           = 72.0
+KUPPL_STEP_IN <%>         = 30.0
+KUPPL_STEP_OUT <%>        = 80.0
+EXPERTENMODUS             = 1
+VORSCHAUMODUS             = 1
+VORSCHAU_ZEIT <s>         = 1.0
+COASTING_ACTIVE           = 1
+COASTING_BANDWIDTH <%>    = 50.0
+SWITCHING_TIME <s>        = 0.5
+FAHRERTYP                 = 1
+PROPORTIONAL_FAKTOR_FR    = 0.01
+DIFFERENTIAL_FAKTOR_FR <rad/s> = 15.0
+INTEGRAL_FAKTOR_FR <1/s>  = 0.2
+PROPORTIONAL_FAKTOR_AR    = 2.0
+DIFFERENTIAL_FAKTOR_AR <m/s> = 10.0
+INTEGRAL_FAKTOR_AR <%>    = 10.0
+ADV_PROPORTIONAL_PARA_FR  = 0.075
+ADV_DIFFERENTIAL_PARA_FR <rad/s> = 10.0
+ADV_INTEGRAL_PARA_FR <1/s> = 0.2
+ADV_PROPORTIONAL_PARA_AR  = 1.6
+ADV_DIFFERENTIAL_PARA_AR <1/s> = 0.6
+ADV_INTEGRAL_PARA_AR <->  = 0.1
+SAM_GANGWAHL_HOCH         = 2
+SAM_GANGWAHL_RUNTER       = 2
+GANGSPRUNGSCHALTER        = 0
+#FAH_ID                   = 
+#FAH_ENTW_DATUM           = "Jan 14, 2005 10:07:11"
+TPH_ID                    = 
+TPR_ID                    = 
+GANGSPRUNG_HOCH_SCHALTER  = 2
+GANGSPRUNG_RUNTER_SCHALTER = 2
+SCHALTMODELL              = 1
+#FAH_ID                   = 
+#FAH_ENTW_DATUM           = "Jan 14, 2005 10:07:11"
+TP_ID                     = 
+SM1A_ID                   = 
+SM1B_ID                   = 
+SM2A_ID                   = 
+SM2B_ID                   = 
+SM3A_ID                   = 
+SM3B_ID                   = 
+SM4A_ID                   = 
+SM4B_ID                   = 
+SM5A_ID                   = 
+SM5B_ID                   = 
+SM6A_ID                   = 
+SM6B_ID                   = 
+{ GANG_COL HOCHSCHALTEN_COL RUNTERSCHALTEN_COL }
+#FAH_ID                   = 
+#FAH_ENTW_DATUM           = "Jan 14, 2005 10:07:11"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$------------------------------Shifting According to Velocity
+(FAHRGESCHWINDIGKEITEN)
+#FAH_ID                   = 
+#FAH_ENTW_DATUM           = "Jan 14, 2005 10:07:11"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 38
+GR_EINH_ABH1              = 'km/h'
+GR_NAME_ABH2              = 37
+GR_EINH_ABH2              = 'km/h'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+  1             25.744       23.0         
+  2             40.225       38.0         
+  3             64.36        60.0         
+  4             74.014       70.0         
+$---------------------------------Shifting According to Speed
+(DREHZAHLEN)
+#FAH_ID                   = 
+#FAH_ENTW_DATUM           = "Jan 14, 2005 10:07:11"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 38
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 37
+GR_EINH_ABH2              = '1/min'
+GR_NAME_ABH3              = 103
+GR_EINH_ABH3              = '-'
+GR_NAME_ABH4              = 104
+GR_EINH_ABH4              = '-'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 GR_WERT_ABH3 GR_WERT_ABH4 }
+  1             3000.0       1500.0       1            1            
+  2             3000.0       1500.0       1            1            
+  3             3000.0       1500.0       1            1            
+  4             3000.0       1500.0       1            1            
+$----------------Shifting According to Speed in the next Gear
+(ANSCHLUSSDREHZAHLEN)
+#FAH_ID                   = 
+#FAH_ENTW_DATUM           = "Jan 14, 2005 10:07:11"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 38
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 37
+GR_EINH_ABH2              = '1/min'
+GR_NAME_ABH3              = 103
+GR_EINH_ABH3              = '-'
+GR_NAME_ABH4              = 104
+GR_EINH_ABH4              = '-'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 GR_WERT_ABH3 GR_WERT_ABH4 }
+  1             2000.0       2500.0       1            1            
+  2             2000.0       2500.0       1            1            
+  3             2000.0       2500.0       1            1            
+  4             2000.0       2500.0       1            1            
+$---------------------------------------Skip Gears Upshifting
+(GANGSPRUNG_HOCH)
+{ GANG_COL }
+$-------------------------------------Skip Gears Downshifting
+(GANGSPRUNG_RUNTER)
+{ GANG_COL }
+$-------------------------------------Standard Gear Dependent
+(SCHALTVORGANG_GANGABHAENGIG)
+SCHALTVORGANG_GANGABHAENGIG = 1
+#FAH_ID                   = 
+#FAH_ENTW_DATUM           = "Jan 14, 2005 10:07:11"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 62
+GR_EINH_ABH1              = 's'
+GR_NAME_ABH2              = 117
+GR_EINH_ABH2              = '%'
+GR_NAME_ABH3              = 118
+GR_EINH_ABH3              = '%'
+GR_NAME_ABH4              = 119
+GR_EINH_ABH4              = '%'
+GR_NAME_ABH5              = 120
+GR_EINH_ABH5              = '%'
+GR_NAME_ABH6              = 121
+GR_EINH_ABH6              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 GR_WERT_ABH3 GR_WERT_ABH4 GR_WERT_ABH5 GR_WERT_ABH6 }
+$========================================================Free Definable
+(SCHALTVORGANG_MODELLIERT)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 1a
+(SCHALTVORGANG_MODELLIERT1A)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 1b
+(SCHALTVORGANG_MODELLIERT1B)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 2a
+(SCHALTVORGANG_MODELLIERT2A)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 2b
+(SCHALTVORGANG_MODELLIERT2B)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 3a
+(SCHALTVORGANG_MODELLIERT3A)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 3b
+(SCHALTVORGANG_MODELLIERT3B)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 4a
+(SCHALTVORGANG_MODELLIERT4A)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 4b
+(SCHALTVORGANG_MODELLIERT4B)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 5a
+(SCHALTVORGANG_MODELLIERT5A)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 5b
+(SCHALTVORGANG_MODELLIERT5B)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 6a
+(SCHALTVORGANG_MODELLIERT6A)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==============================================================Table 6b
+(SCHALTVORGANG_MODELLIERT6B)
+#SM_ID                    = 
+BEMERKUNG                 = ''
+SCHALTPUNKT <s>           = 
+FAHRPEDAL_ABS             = 1
+GR_NAME_UNABH             = 62
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 122
+GR_EINH_ABH1              = '%'
+GR_NAME_ABH2              = 123
+GR_EINH_ABH2              = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }

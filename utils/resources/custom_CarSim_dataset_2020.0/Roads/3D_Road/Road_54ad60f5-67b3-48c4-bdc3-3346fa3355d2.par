@@ -1,0 +1,188 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Alley Dock Test Pad`Flat Test Pads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_54ad60f5-67b3-48c4-bdc3-3346fa3355d2.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Alley Dock Test Pad
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_4058acf0-6e14-4af6-a5b0-660d3c6188e7.par
+#BlueLink4 Road: Animator Surface Shapes`1 km Square` Roads` , Road shape definitions`RdShape_4058acf0-6e14-4af6-a5b0-660d3c6188e7
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+add_reference_frame road_stuff_7_Alley_Dock_Cones
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_9161b021-f3ee-47c5-be2e-83d49e5e6b18.par
+#BlueLink7 Road: Animator Repeated Object`Alley Dock Cones` Cones` , 3D Shapes`AniRep_9161b021-f3ee-47c5-be2e-83d49e5e6b18
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_54ad60f5-67b3-48c4-bdc3-3346fa3355d2.ani
+
+add_reference_frame road_stuff_1_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 0
+set_offset_var_y 0
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_2_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 0
+set_offset_var_y 1.22
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_3_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 0
+set_offset_var_y 2.44
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_4_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 0
+set_offset_var_y 3.66
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_5_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 3
+set_offset_var_y 0
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_6_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 3
+set_offset_var_y 3.66
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_7_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 6
+set_offset_var_y 0
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_8_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 6
+set_offset_var_y 3.66
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_9_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 9
+set_offset_var_y 0
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_10_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 9
+set_offset_var_y 3.66
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_11_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 12
+set_offset_var_y 0
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_12_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 12
+set_offset_var_y 3.66
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_13_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 33.5
+set_offset_var_y 0
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_14_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 33.5
+set_offset_var_y 1.22
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_15_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 33.5
+set_offset_var_y 2.44
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_16_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 33.5
+set_offset_var_y 3.66
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+#EMBEDDED_NOTES
+#This is a flat level surface. A road is defined going east, such that global X = road station and global Y= road lateral coordinate L.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Flat Test Pads } Alley Dock Test Pad
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Alley Dock Test Pad
+#Category: Flat Test Pads
+#FileID  : Road_54ad60f5-67b3-48c4-bdc3-3346fa3355d2
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

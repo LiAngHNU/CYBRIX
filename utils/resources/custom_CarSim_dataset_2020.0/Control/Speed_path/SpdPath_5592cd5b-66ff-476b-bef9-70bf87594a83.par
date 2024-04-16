@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`Race Driving (GT w/ Var. Gains)`Aggressive Driving
+INSTALL_SPEED_CONTROLLER
+SPEED_AX_THROTTLE_CONSTANT 1.75
+SPEED_AX_BRAKE_CONSTANT 1.7
+SPEED_AY_LEFT_CONSTANT 1.8
+SPEED_AY_RIGHT_CONSTANT 1.8
+#RingCtrl0 2
+OPT_SC_SKILL 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+SET_ISPEED_FOR_ID 0
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Path Preview: Race Driving (GT w/ Var. Gains)
+SPEED_TARGET_CONSTANT 200
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC 4
+#CheckBox0 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox1 0    
+#CheckBox2 1    
+OPT_SC_3D 1
+#CheckBox3 0    
+OPT_SC_2018 0
+
+SPEED_KP Kp_Vx
+SPEED_KI Ki_Vx
+SPEED_KP3 K3_Vx
+BK_PERF_SC 2
+FPD_PERF_SC 0.0036
+SPEED_PREVIEW_STEP 1
+SPEED_CURV_LENGTH 20
+SPEED_PREVIEW_START 10
+SPEED_PREVIEW 200
+PBK_CON_MAX_SC 15
+
+#EMBEDDED_NOTES
+#The settings here are for an exotic race car, with tires capable of acceleration much larger than normal road tires (1.8!) .
+#
+#The closed-loop speed controllers are overriden with VS Commands, using the symbols shown in the yelllow fields. The names are used to ensure that the variables have been defined (an error will be reported if they don't exist when the Parsfile for this dataset is scanned).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Aggressive Driving } Race Driving (GT w/ Var. Gains)
+#Library : Control: Speed (Closed Loop) Using Path Preview
+#DataSet : Race Driving (GT w/ Var. Gains)
+#Category: Aggressive Driving
+#FileID  : SpdPath_5592cd5b-66ff-476b-bef9-70bf87594a83
+#Product : CarSim 2020.0
+#VehCode Speed Using Path Preview
+
+END

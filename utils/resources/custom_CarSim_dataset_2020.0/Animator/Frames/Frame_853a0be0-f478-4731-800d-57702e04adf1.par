@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Motion Sensor 2: SM CG (trace line)`Animated Trace Lines
+ADD_REFERENCE_FRAME Frame_853a0be0-f478-4731-800d-57702e04adf1
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S2
+SET_Y_NAME Y_S2
+SET_Z_NAME Z_S2
+SET_ROLL_NAME roll_e
+SET_PITCH_NAME pitch
+SET_YAW_NAME yaw
+SET_FRAME_SCALE_X_NAME TrcCGLen
+SET_FRAME_VISIBLE_NAME 1
+REFERENCE_FRAME_ALPHA_NAME 1
+
+PARSFILE Animator\STL\Shape_3780fd3f-02df-4fb7-a04e-d15cf05da7b4.par
+#BlueLink0 Animator: Shape File Link`Tire Mark: White` Common Vehicle Assets` , Animator Data`Shape_3780fd3f-02df-4fb7-a04e-d15cf05da7b4
+
+#MiscYellow0
+default_ghost off ! disable ghosts for vehicle
+ghost_count 250 ! number of markers
+ghost_period -0.05
+
+reference_frame_ghosts on
+define_output Trace_CG =  IF_GT_0_THEN(Vxz_fwd, Yaw + Beta, pi + Yaw - Beta); deg
+set_yaw_name Trace_CG
+wrt_Trace_CG
+ani_Trace_CG
+
+define_parameter Trace_CG_Len = 0.06 ; m; Trace marker length, Sprung Mass Origin
+define_output TrcCGLen = SQRT(Vy_SM^2 + Vxz_fwd^2) * Trace_CG_Len; m ; Trace marker length, Sprung Mass Origin
+#ENDMYellow
+
+WRT_X_S2
+ANI_X_S2
+WRT_Y_S2
+ANI_Y_S2
+WRT_Z_S2
+ANI_Z_S2
+WRT_roll_e
+ANI_roll_e
+WRT_pitch
+ANI_pitch
+WRT_yaw
+ANI_yaw
+WRT_TrcCGLen
+ANI_TrcCGLen
+WRT_1
+ANI_1
+WRT_1
+ANI_1
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Animated Trace Lines } Motion Sensor 2: SM CG (trace line)
+#Library : Animator: Reference Frame
+#DataSet : Motion Sensor 2: SM CG (trace line)
+#Category: Animated Trace Lines
+#FileID  : Frame_853a0be0-f478-4731-800d-57702e04adf1
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

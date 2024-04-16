@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName Procedures`3-Point Turn`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -75
+TSTART_WRITE = 0;
+TSTOP 60
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 120
+*TSTOP 60
+*TSTART 0
+*SSTART -75
+*SSTOP 210
+
+PARSFILE Control\Driver\StrDM_ed2a95fa-cdad-460f-a4b4-e29a3b439a89.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.8m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_ed2a95fa-cdad-460f-a4b4-e29a3b439a89
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_7d37aa09-b6ad-4fd2-af15-1adb2daa7acb.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Ax/Ay, 60km/h` Miscellaneous` , Speed vs. station`SpdPath_7d37aa09-b6ad-4fd2-af15-1adb2daa7acb
+
+PARSFILE Generic\Links\GenLink_98aaf07b-e6f4-42d6-8af2-471a140c28da.par
+#BlueLink0 Generic Group of Links`Intersection, 3-Way, Curbs, Reverse Drv.` Roads and Paths` , Miscellaneous`GenLink_98aaf07b-e6f4-42d6-8af2-471a140c28da
+
+#MiscYellow1
+path_id_dm = 1001
+current_road_id = 1001
+#ENDMYellow
+
+PARSFILE Events\Events_5e9f713a-b6d7-4d6a-8370-17173ac0631e.par
+#BlueLink7 Events`A. Go Into Right Turn` 3-Point Turn` , Miscellaneous`Events_5e9f713a-b6d7-4d6a-8370-17173ac0631e
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink9 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_185d1aa7-45f6-439e-96ba-0a3e707a9dfe.par
+#BlueLink10 Plot: Setup`Ax_SCrq: Ax Request (g)` Speed Controller` , Plot`Plot_185d1aa7-45f6-439e-96ba-0a3e707a9dfe
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink11 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_7251a722-18c9-43db-a324-bd380d275618.par
+#BlueLink12 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7251a722-18c9-43db-a324-bd380d275618
+
+PARSFILE Plot\Setup\Plot_21f6e1cd-f399-4b25-8d21-7b5875fab760.par
+#BlueLink14 Plot: Setup`Steering Wheel Angle vs. t_stamp` Steering` , Plot`Plot_21f6e1cd-f399-4b25-8d21-7b5875fab760
+
+PARSFILE Plot\Setup\Plot_84cf249c-520a-44d4-965b-f2a898a45ad5.par
+#BlueLink15 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_84cf249c-520a-44d4-965b-f2a898a45ad5
+
+PARSFILE Plot\Setup\Plot_50f46a40-9207-462f-95eb-1f0a9f7660f8.par
+#BlueLink16 Plot: Setup`Wheel Drive Torques - Rear` Powertrain` , Plot`Plot_50f46a40-9207-462f-95eb-1f0a9f7660f8
+
+PARSFILE Plot\Setup\Plot_19310881-e0f6-4f37-af13-994798cd606c.par
+#BlueLink17 Plot: Setup`Slip Ratios: Lagged - Rear` Tire Kinematics` , Plot`Plot_19310881-e0f6-4f37-af13-994798cd606c
+
+PARSFILE Plot\Setup\Plot_59f74859-7f34-4878-a9b5-3ba45cf252ae.par
+#BlueLink18 Plot: Setup`Event Count` Event Control` , Plot`Plot_59f74859-7f34-4878-a9b5-3ba45cf252ae
+
+PARSFILE Plot\Setup\Plot_865ec648-7e13-4974-803c-86946399ea5b.par
+#BlueLink19 Plot: Setup`Event Elapsed Time` Event Control` , Plot`Plot_865ec648-7e13-4974-803c-86946399ea5b
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink20 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_78cefe03-dc69-4bb9-beee-3de2007bce26.par
+#BlueLink21 Plot: Setup`Path_ID_DM vs. Time` IDs: Driver Model, Paths, Roads` , Plot`Plot_78cefe03-dc69-4bb9-beee-3de2007bce26
+
+PARSFILE Plot\Setup\Plot_99e51dec-24d0-480e-8a3b-dfa37c3d6a2a.par
+#BlueLink22 Plot: Setup`Road_ID_DM vs. Time` IDs: Driver Model, Paths, Roads` , Plot`Plot_99e51dec-24d0-480e-8a3b-dfa37c3d6a2a
+
+
+#EMBEDDED_NOTES
+#The path preview speed control is used, which limits acceleration. Path 1001 will turn to the right at the intersection.
+#
+#A series of Events will be used to change controls during the run.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } 3-Point Turn
+#Library : Procedures
+#DataSet : 3-Point Turn
+#Category: Driver Controls
+#FileID  : Proc_fc3b1684-8fb6-4fdb-a93d-9ee7e62b99af
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

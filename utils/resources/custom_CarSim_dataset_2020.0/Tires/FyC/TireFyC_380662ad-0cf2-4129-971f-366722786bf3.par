@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Tire: Lateral Force vs. Inclination`MF-Tyre Asymmetric`MF-Tyre Example
+#CheckBox0 0    
+
+#RingCtrl0 2D_SPLINE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Inclination [gamma] (deg)
+*3D_ZLabel Lateral force (N)
+
+#DiagramTwo0
+*3D_DATA 4, 21 ! columns x rows
+FYG_TIRE_CARPET 2D_SPLINE
+0, 0, 2000, 4000, 6000
+-5, 0, 199.498, 376.267, 593.838
+-4.5, 0, 186.472, 345.557, 541.092
+-4, 0, 173.435, 314.847, 488.35
+-3.5, 0, 160.387, 284.135, 435.611
+-3, 0, 147.329, 253.42, 382.873
+-2.5, 0, 134.259, 222.702, 330.136
+-2, 0, 121.179, 191.979, 277.4
+-1.5, 0, 108.088, 161.253, 224.663
+-1, 0, 94.9866, 130.522, 171.926
+-0.5, 0, 81.8756, 99.7868, 119.19
+0, 0, 68.7554, 69.0478, 66.4552
+0.5, 0, 54.882, 37.691, 13.7023
+1, 0, 40.9997, 6.3317, -39.0471
+1.5, 0, 27.1097, -25.0287, -91.7919
+2, 0, 13.213, -56.3887, -144.531
+2.5, 0, -0.688933, -87.7464, -197.265
+3, 0, -14.5947, -119.1, -249.994
+3.5, 0, -28.5027, -150.45, -302.716
+4, 0, -42.4111, -181.793, -355.434
+4.5, 0, -56.3183, -213.13, -408.147
+5, 0, -70.2226, -244.459, -460.857
+ENDTABLE
+
+CRO_FY 1
+
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force vs. Inclination; { MF-Tyre Example } MF-Tyre Asymmetric
+#Library : Tire: Lateral Force vs. Inclination
+#DataSet : MF-Tyre Asymmetric
+#Category: MF-Tyre Example
+#FileID  : TireFyC_380662ad-0cf2-4129-971f-366722786bf3
+#Product : CarSim 2020.0
+#VehCode Tire: Fy
+
+END

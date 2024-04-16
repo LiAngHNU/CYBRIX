@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Z Wheel Centers rel. to SM`Vehicle Motion
+
+ADD_ENTITY Plot
+
+#BlueLink2 CarSim Run Control`Double Lane Change, Low Mu` Handling and Stability Tests` , example run`Run_2856146d-b1be-47b8-ac08-6ebab3ca95c3
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_2856146d-b1be-47b8-ac08-6ebab3ca95c3\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS Zrel_L1, Time
+PLOTCHANNELS Zrel_L2, Time
+PLOTCHANNELS Zrel_R1, Time
+PLOTCHANNELS Zrel_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 0
+#RingCtrl8 1
+
+
+PTITLE Z Wheel Centers rel. to SM
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Z Wheel Centers rel. to SM
+#Library : Plot: Setup
+#DataSet : Z Wheel Centers rel. to SM
+#Category: Vehicle Motion
+#FileID  : Plot_4fbf8847-ef84-4e1c-af32-921805f932af
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

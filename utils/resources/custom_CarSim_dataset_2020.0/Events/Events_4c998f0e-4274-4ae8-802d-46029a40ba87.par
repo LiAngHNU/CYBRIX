@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`Set 3`Optimize Controls for Lap Time
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*VALUE1 1
+#MiscYellow0
+speed_curv_length = speed_curv_length+delta*initial_arc_length
+tprev_constant = tprev_constant+delta*initial_pvw_time
+next_search_dir = 4
+restore_state 0
+#ENDMYellow
+
+DEFINE_EVENT 1 ; Events\Events_b6d38bfb-223d-4308-b2e4-4b00fcf4ab3b.par
+#BlueLink0 Events`Run to Start Line` Optimize Controls for Lap Time` , Events`Events_b6d38bfb-223d-4308-b2e4-4b00fcf4ab3b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Third search direction: undecrement speed_curv_length and increment tprev_constant.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Optimize Controls for Lap Time } Set 3
+#Library : Events
+#DataSet : Set 3
+#Category: Optimize Controls for Lap Time
+#FileID  : Events_4c998f0e-4274-4ae8-802d-46029a40ba87
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed Control: Long. Accl. Requested`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ax_SCrq, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed Control: Long. Accl. Requested
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The speed controller calculates a target acceleration to follow a given speed profile.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Speed Control: Long. Accl. Requested
+#Library : Plot: Setup
+#DataSet : Speed Control: Long. Accl. Requested
+#Category: Controls: Driver
+#FileID  : Plot_2f41f24a-e544-4695-9d85-aeff60b6f35e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

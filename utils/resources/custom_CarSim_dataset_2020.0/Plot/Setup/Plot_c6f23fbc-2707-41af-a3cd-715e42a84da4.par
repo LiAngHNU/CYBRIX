@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Fx vs. Slip`Tire Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fx_L1, KappL_L1
+PLOTCHANNELS Fx_R1, KappL_R1
+PLOTCHANNELS Fx_L2, KappL_L2
+PLOTCHANNELS Fx_R2, KappL_R2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fx vs. Slip
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces and Moments } Fx vs. Slip
+#Library : Plot: Setup
+#DataSet : Fx vs. Slip
+#Category: Tire Forces and Moments
+#FileID  : Plot_c6f23fbc-2707-41af-a3cd-715e42a84da4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

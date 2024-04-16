@@ -1,0 +1,105 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`A-Class, Hatchback, No ABS`A-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 1
+OPT_PT 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_15589801-d4e7-488f-9884-031d53c5d85c.par
+#BlueLink7 Steering`A-Class, Hbk: Manual, R&P` CS A-Class` , Steering System`StrSys2_15589801-d4e7-488f-9884-031d53c5d85c
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_b7b4c1ff-1166-46f3-9e3e-d7e6ddac1a19.par
+#BlueLink19 Suspension: Independent System Kinematics`A-Class, Hatchback - Front` A-Class` , Kinematics`KinInd_b7b4c1ff-1166-46f3-9e3e-d7e6ddac1a19
+
+PARSFILE Suspensions\Compliance\CmpInd_33af22ab-8d37-457c-81cc-2dd54103e211.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`A-Class, Hatchback - Front` A-Class` , Compliance`CmpInd_33af22ab-8d37-457c-81cc-2dd54103e211
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f.par
+#BlueLink999 Tire`175/65 R14` Touring Tires` , Tire`Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f.par
+#BlueLink10 Tire`175/65 R14` Touring Tires` , Tire`Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_174caf3e-4460-480f-995c-e35070edfe57.par
+#BlueLink20 Suspension: Independent System Kinematics`A-Class, Hatchback - Rear` A-Class` , Kinematics`KinInd_174caf3e-4460-480f-995c-e35070edfe57
+
+PARSFILE Suspensions\Compliance\CmpInd_13763e89-46c0-4596-bfe8-3c54875493f7.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`A-Class, Hatchback - Rear` A-Class` , Compliance`CmpInd_13763e89-46c0-4596-bfe8-3c54875493f7
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f.par
+#BlueLink999 Tire`175/65 R14` Touring Tires` , Tire`Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f.par
+#BlueLink999 Tire`175/65 R14` Touring Tires` , Tire`Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_9a03ed72-c0cc-4785-95d9-05b3ad80463d.par
+#BlueLink0 Vehicle: Sprung Mass`A-Class, Hatchback` A-Class` , Sprung Mass`SprMass_9a03ed72-c0cc-4785-95d9-05b3ad80463d
+
+PARSFILE Aerodynamics\Aero_Main\Aero_48d30a48-3cc4-46fd-be0c-77e1d8b465f8.par
+#BlueLink1 Aerodynamics: Basic`A-Class, Hatchback Aero` A-Class` , Aerodynamics`Aero_48d30a48-3cc4-46fd-be0c-77e1d8b465f8
+
+PARSFILE Powertrain\Fwd\FWD_53113d09-c94c-461b-891c-1e585c8b4d02.par
+#BlueLink3 Powertrain: Front-Wheel Drive`75 kW, 5-spd., 4.1 Ratio` 75 kW - 125 kW Powertrains` , Powertrain`FWD_53113d09-c94c-461b-891c-1e585c8b4d02
+
+PARSFILE Brakes\4W_System\Brk4W_fe782403-49f0-41fe-9d31-b3b1cb8e31da.par
+#BlueLink6 Brakes: Four-Wheel System`(Hbk): MC Press, No ABS` A-Class` , Brake System`Brk4W_fe782403-49f0-41fe-9d31-b3b1cb8e31da
+
+PARSFILE Animator\Vehicles\AniVeh_42e805ac-ceb0-42ad-a482-aed8171ee4c4.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`A-Class, Subcompact` A-Class` , Vehicle 3D Shape`AniVeh_42e805ac-ceb0-42ad-a482-aed8171ee4c4
+
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae.png
+
+#EMBEDDED_NOTES
+#Generic A-Class (Sub-compact) hatchback with Strut front and Tri-Link Strut rear suspension.
+#
+#A-Class vehicles include the Citroen C1, Fiat 500, Honda Fit, Renault Twingo, and Tata Nano.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { A-Class } A-Class, Hatchback, No ABS
+#Library : Vehicle: Assembly
+#DataSet : A-Class, Hatchback, No ABS
+#Category: A-Class
+#FileID  : Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

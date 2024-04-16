@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Power Steering Assist Force`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS f_boost, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Power Steering Assist Force
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Power Steering Assist Force
+#Library : Plot: Setup
+#DataSet : Power Steering Assist Force
+#Category: Steering
+#FileID  : Plot_3faaeb69-0190-43f5-aae7-f451bd194537
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Procedures`OpenDRIVE Procedure`VS Scene Builder
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 5
+TSTART_WRITE = 0;
+TSTOP 80
+SSTOP 1069
+OPT_DIRECTION 0
+*SPEED 120
+*TSTOP 80
+*TSTART 0
+*SSTART 5
+*SSTOP 1069
+
+PARSFILE Control\Driver\StrDM_d83f93e2-ff10-4aaa-b6f2-29d55db3b32e.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.5s Preview (No Path Line)` Constant Position: No Offset` , Steering`StrDM_d83f93e2-ff10-4aaa-b6f2-29d55db3b32e
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_bdc101bb-1d1a-4e65-b680-120792335cca.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, Entry/Exit` Intersections` , Speed vs. station`SpdPath_bdc101bb-1d1a-4e65-b680-120792335cca
+
+PARSFILE Roads\3D_Road\Road_932a64ac-5320-4e51-8349-b4b24f9e6a74.par
+#BlueLink0 Road: 3D Surface (All Properties)`OpenDRIVE Scene` VS Scene Builder` , Miscellaneous`Road_932a64ac-5320-4e51-8349-b4b24f9e6a74
+
+PARSFILE Generic\VS_commands\GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3
+
+PARSFILE Generic\VS_commands\GenVS_9adae0f9-c659-4690-8e88-e92525112141.par
+#BlueLink9 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_9adae0f9-c659-4690-8e88-e92525112141
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink10 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+
+#EMBEDDED_NOTES
+#The built-in closed loop speed and steer controllers are set. Gear selection is automatic, and there is no open-loop braking.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { VS Scene Builder } OpenDRIVE Procedure
+#Library : Procedures
+#DataSet : OpenDRIVE Procedure
+#Category: VS Scene Builder
+#FileID  : Proc_3a191b7f-80bd-4e4a-9512-1c56ee7d589f
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

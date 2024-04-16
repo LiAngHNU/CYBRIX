@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Moving Object Speed: V_Obj_1`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS V_Obj_1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Moving Object Speed: V_Obj_1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Moving Object Speed: V_Obj_1
+#Library : Plot: Setup
+#DataSet : Moving Object Speed: V_Obj_1
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_c6b2cfb1-80b0-4f98-be7a-7b62486f55d4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

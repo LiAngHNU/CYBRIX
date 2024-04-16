@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Steer Torque`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_SW, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steer Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steer Torque
+#Library : Plot: Setup
+#DataSet : Steer Torque
+#Category: Steering
+#FileID  : Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

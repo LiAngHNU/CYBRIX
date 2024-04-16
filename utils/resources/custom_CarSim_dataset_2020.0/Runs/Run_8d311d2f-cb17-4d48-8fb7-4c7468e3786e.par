@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName CarSim Run Control`VS Terrain File: Man. Defined - Curb Hop`* CS 2020.0 - VS Terrain
+#VEHICLECODE SA_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8d311d2f-cb17-4d48-8fb7-4c7468e3786e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_a8e16c51-3a07-4809-b30e-0d6c9a9e698e.par
+#BlueLink0 Animator: Camera Setup`45 Azm, 30 El, 60 m Dist, 50 FoV, No Yaw` Vehicle Reference` , Animator camera`Camera_a8e16c51-3a07-4809-b30e-0d6c9a9e698e
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+SET_RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b840ee4e-e79f-4208-886e-649036d1d9a3.par
+#BlueLink2 Vehicle: Assembly`Pickup, Full Size: Lifted (SA_SA)` Pickup Trucks` , Math Model`Vehicle_b840ee4e-e79f-4208-886e-649036d1d9a3
+
+PARSFILE Procedures\Proc_9ae79f01-e607-4b0f-95b2-e9cf608030af.par
+#BlueLink28 Procedures`VS Terrain: Man. Path Entry w/Curb Hop` VS Terrain` , Procedure`Proc_9ae79f01-e607-4b0f-95b2-e9cf608030af
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Animator\Frames\Frame_d575d02b-abd4-4b4e-8845-258618d7a755.par
+#BlueLink10 Animator: Reference Frame`Example Animation Environment` ` , Miscellaneous`Frame_d575d02b-abd4-4b4e-8845-258618d7a755
+
+
+SPECIAL_PARSFILE Runs\Run_270a350a-75da-4fff-b715-84bc0f250ca6.par
+#BlueLink23 CarSim Run Control`VS Terrain File: Manually Defined` * CS 2020.0 - VS Terrain` , Overlay run or ERD file`Run_270a350a-75da-4fff-b715-84bc0f250ca6
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9eaaef41-90b6-4bab-988c-23d84c8adabf.png
+WRITE_SENSOR_DETECT
+Title VS Terrain File: Man. Defined - Curb Hop <* CS 2020.0 - VS Terrain>
+CATEGORY * CS 2020.0 - VS Terrain 
+DATASET_TITLE VS Terrain File: Man. Defined - Curb Hop
+#MiscYellow0
+VS_TERRAIN_FILE Scene_Import\VS_Scene_Builder\Mcity_scene.vsterrain
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example using a manual call to a VS Terrain file.  This call is similar to what is found in parsfiles that load VS Terrain files
+#
+#The box is checked for  "Advanced Settings" to define the path and filename of the VS Terrain file to be used in the example.  This file is of type .vsterrain
+#
+#This VS Terrain file includes the full 3D properties of the ground along with the friction and a tire rolling resistance coefficient
+#
+#Additionally, .obj files are manually added to show the ground surface for the of the MCity scene.  This was done by using the VS Terrain Utility to convert the MCity .vsterrain file to a .obj, then importing that file into the Animation Environment.
+#
+#The small red lines in the animation show the normal vectors of the MCity ground surface
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - VS Terrain } VS Terrain File: Man. Defined - Curb Hop
+#Library : CarSim Run Control
+#DataSet : VS Terrain File: Man. Defined - Curb Hop
+#Category: * CS 2020.0 - VS Terrain
+#FileID  : Run_8d311d2f-cb17-4d48-8fb7-4c7468e3786e
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

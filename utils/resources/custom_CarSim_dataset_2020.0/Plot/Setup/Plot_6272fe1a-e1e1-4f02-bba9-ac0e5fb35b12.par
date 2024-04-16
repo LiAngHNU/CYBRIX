@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Road Wheel Steer (Front) vs. Lat Accel`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_L1, Ay
+PLOTCHANNELS Steer_R1, Ay
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road Wheel Steer (Front) vs. Lat Accel
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Road Wheel Steer (Front) vs. Lat Accel
+#Library : Plot: Setup
+#DataSet : Road Wheel Steer (Front) vs. Lat Accel
+#Category: Steering
+#FileID  : Plot_6272fe1a-e1e1-4f02-bba9-ac0e5fb35b12
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Elevation: El_S1_1`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS El_S1_1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Elevation: El_S1_1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Elevation: El_S1_1
+#Library : Plot: Setup
+#DataSet : Elevation: El_S1_1
+#Category: ADAS Sensor Detections
+#FileID  : Plot_71e8c86c-e575-495b-9bb5-9e28d1c70bbf
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

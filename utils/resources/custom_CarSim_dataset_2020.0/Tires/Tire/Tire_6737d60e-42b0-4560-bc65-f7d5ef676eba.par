@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName Tire`Tractor: Rear Tire (Right)`Utility Vehicle Tires
+FZ_REF 6000
+X_LENGTH 750
+Z_LENGTH 750
+Y_LENGTH 429
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL\Shape_3238e828-9a95-47da-a7c2-cd97b539543a.par
+#BlueLink4 Animator: Shape File Link`Tractor: Tire (Right Rear)` Cars: Other Vehicles` , Animator`Shape_3238e828-9a95-47da-a7c2-cd97b539543a
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 429
+RRE 745
+R0 750
+FZ_TIRE_COEFFICIENT 230
+FZ_MAX 100000
+M_TIRE 101
+IT 34.4
+IT_XXZZ 20.2
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 230
+L_CONTACT_Y_CONSTANT 430
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_8dc6a168-96e0-4df0-bf2b-e585c26920f9.par
+#BlueLink0 Tire: Aligning Moment`Typical Large Vehicle` Reference Tires` , Aligning Moment`TireMz_8dc6a168-96e0-4df0-bf2b-e585c26920f9
+
+PARSFILE Tires\Fy\TireFy_e974165d-b272-4eaf-8f4c-3fecec4947b6.par
+#BlueLink1 Tire: Lateral Force`Typical Large Vehicle` Reference Tires` , Lateral Force`TireFy_e974165d-b272-4eaf-8f4c-3fecec4947b6
+
+PARSFILE Tires\Fx\TireFx_2f9555b5-1977-4fad-8e34-de4e506a6413.par
+#BlueLink2 Tire: Longitudinal Force`Typical Large Vehicle` Reference Tires` , Longitudinal Force`TireFx_2f9555b5-1977-4fad-8e34-de4e506a6413
+
+PARSFILE Tires\Camber_Thrust\CamStiff_50329df2-aa6d-4727-8950-29c27ee9299e.par
+#BlueLink3 Tire: Camber Thrust Coefficient`Typical Large Vehicle` Reference Tires` , Camber Thrust`CamStiff_50329df2-aa6d-4727-8950-29c27ee9299e
+
+
+
+LOG_ENTRY Used Dataset: Tire; { Utility Vehicle Tires } Tractor: Rear Tire (Right)
+#Library : Tire
+#DataSet : Tractor: Rear Tire (Right)
+#Category: Utility Vehicle Tires
+#FileID  : Tire_6737d60e-42b0-4560-bc65-f7d5ef676eba
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

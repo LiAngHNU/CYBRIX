@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Plot: Setup`Road ID of Objects 2 - 5`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output RdID_O2 = ROAD_ID_OBJ(2)
+define_output RdID_O3 = ROAD_ID_OBJ(3)
+define_output RdID_O4 = ROAD_ID_OBJ(4)
+define_output RdID_O5 = ROAD_ID_OBJ(5)
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS RdID_O2, time
+PLOTCHANNELS RdID_O3, time
+PLOTCHANNELS RdID_O4, time
+PLOTCHANNELS RdID_O5, time
+
+#ENDMYellow
+
+YAXISLABEL Road ID
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road ID of Objects 2 - 5
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Show road ID attached to moving objects. The ID may change if the object crosses boundaries.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Road ID of Objects 2 - 5
+#Library : Plot: Setup
+#DataSet : Road ID of Objects 2 - 5
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_814648a2-308a-42f1-ac71-b41583cdf415
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Road for UE4`Unreal Engine
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_ab394301-be44-40a1-8b0c-6cde0dd84c22.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Road for UE4
+PARSFILE Roads\Center_XYZ\RoadXYZ_72bf07f8-b821-4b84-a335-6ae52e4cc3b3.par
+#BlueLink0 Road: X-Y-Z Coordinates of Reference Line`Path taken from UE4 Project` Unreal Engine (UE4)` , Reference Path`RoadXYZ_72bf07f8-b821-4b84-a335-6ae52e4cc3b3
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Path taken from UE4 Project
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+parsfile Roads\3D_Road\Road_ab394301-be44-40a1-8b0c-6cde0dd84c22.ani
+
+#EMBEDDED_NOTES
+#This road was taken from an Unreal Engine UE4 demo project.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Unreal Engine } Road for UE4
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Road for UE4
+#Category: Unreal Engine
+#FileID  : Road_ab394301-be44-40a1-8b0c-6cde0dd84c22
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

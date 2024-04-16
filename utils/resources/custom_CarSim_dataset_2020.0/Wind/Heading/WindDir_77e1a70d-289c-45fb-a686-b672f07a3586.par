@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Wind Heading`Constant: -90 deg`Constant
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+WIND_HEADING_COMBINE ADD
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+WIND_HEADING_CONSTANT -90
+WIND_HEADING_S_CONSTANT 0
+*SCALAR -90
+*SCALAR2 0
+
+
+#EMBEDDED_NOTES
+#Wind Heading (deg)
+#
+#This dataset is used to represent a constant wind heading angle of -90 degrees.
+#
+#Please see the CarSim Aerodynamics documentation for more information on how the direction of the Wind Heading influences the behavior of the vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Wind Heading; { Constant } Constant: -90 deg
+#Library : Wind Heading
+#DataSet : Constant: -90 deg
+#Category: Constant
+#FileID  : WindDir_77e1a70d-289c-45fb-a686-b672f07a3586
+#Product : CarSim 2020.0
+#VehCode Wind Heading
+
+END

@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Procedures`City 3-Way Intersection`ADAS and Active Safety
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 50
+TSTART_WRITE = 0;
+TSTOP 40
+SSTOP 270
+OPT_DIRECTION 0
+*TSTOP 40
+*TSTART 0
+*SSTART 50
+*SSTOP 270
+
+PARSFILE Control\Driver\StrDM_1e62f87d-f0c4-4941-af7b-208028421c69.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.2m Left, Urban, Variable Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_1e62f87d-f0c4-4941-af7b-208028421c69
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_07343a37-aaf9-402e-9caa-019f1df7e2cf.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Ax/Ay, SPEED_LIMIT_ID, mi/h` Miscellaneous` , Speed vs. station`SpdPath_07343a37-aaf9-402e-9caa-019f1df7e2cf
+
+PARSFILE Roads\3D_Road\Road_e0c52233-eb6d-47aa-b0ae-24f9b36405b5.par
+#BlueLink0 Road: 3D Surface (All Properties)`3-Way Intersection in City` VS Scene Builder` , Miscellaneous`Road_e0c52233-eb6d-47aa-b0ae-24f9b36405b5
+
+#MiscYellow1
+path_id_dm = 1 
+current_road_id = path_id_dm
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3
+
+PARSFILE Generic\VS_commands\GenVS_8c1daed1-890c-4f63-a9da-5725c10ffcf7.par
+#BlueLink9 Generic VS Commands`Pedestrian Velocity and Station` Plot Groups` , Plot`GenVS_8c1daed1-890c-4f63-a9da-5725c10ffcf7
+
+PARSFILE Generic\VS_commands\GenVS_9adae0f9-c659-4690-8e88-e92525112141.par
+#BlueLink10 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_9adae0f9-c659-4690-8e88-e92525112141
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink11 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+PARSFILE Plot\Setup\Plot_59f74859-7f34-4878-a9b5-3ba45cf252ae.par
+#BlueLink18 Plot: Setup`Event Count` Event Control` , Plot`Plot_59f74859-7f34-4878-a9b5-3ba45cf252ae
+
+
+#EMBEDDED_NOTES
+#This dataset works with a vehicle that has an ADAS sensor that detects speed limit signs. The maximum speed used in the path preview dataset is set to a SPEED_TARGET dataset with ID = SPEED_LIMIT.
+#
+#The 3D road dataset has information imported from VS Scene Builder, with 3 paths. The vehicle follows path 1, which takes a right turn.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { ADAS and Active Safety } City 3-Way Intersection
+#Library : Procedures
+#DataSet : City 3-Way Intersection
+#Category: ADAS and Active Safety
+#FileID  : Proc_95e0db4c-71b0-43d5-bcdf-a849faeda041
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName CarSim Run Control`External 4WS, DLC`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1e65ece3-967c-4168-b4cf-95b0e864ae4b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_3f173a9e-6387-4b0c-a178-aa77d9c90bc3.par
+#BlueLink12 Models: Simulink`Four Wheel Steering System` Steering and Steering Controls` , Models`Simlink_3f173a9e-6387-4b0c-a178-aa77d9c90bc3
+
+PARSFILE Animator\Cameras\Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 5 El, 27 m` Road Reference` , Animator camera`Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Generic\VS_commands\GenVS_5b4a3116-9160-46f6-861f-ac5c23c7c8c7.par
+#BlueLink9 Generic VS Commands`Replace All (Rear)` External Steering` , Miscellaneous`GenVS_5b4a3116-9160-46f6-861f-ac5c23c7c8c7
+
+PARSFILE Plot\Setup\Plot_55747539-bf32-4212-ab05-8ac431ec62e4.par
+#BlueLink15 Plot: Setup`Road Wheel Steer Angle - Rear` Steering` , Plot`Plot_55747539-bf32-4212-ab05-8ac431ec62e4
+
+PARSFILE Plot\Setup\Plot_b86d8c49-db4e-400a-a282-322334d38a2e.par
+#BlueLink16 Plot: Setup`Vehicle Sideslip Angle` Vehicle Motion` , Plot`Plot_b86d8c49-db4e-400a-a282-322334d38a2e
+
+PARSFILE Plot\Setup\Plot_e8a23cd9-8cc6-40b0-a6a5-1914cfd4937d.par
+#BlueLink17 Plot: Setup`Vehicle Sideslip Angle Rate` Vehicle Motion` , Plot`Plot_e8a23cd9-8cc6-40b0-a6a5-1914cfd4937d
+
+
+SPECIAL_PARSFILE Runs\Run_6cb07365-85a3-4a3b-95f9-c5c844687601.par
+#BlueLink23 CarSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_6cb07365-85a3-4a3b-95f9-c5c844687601
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title External 4WS, DLC <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE External 4WS, DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates a four-wheel steering controller modeled in Simulink. (Libraries > Models > Models: Simulink)
+#
+#Click on the blue link "Four Wheel Steering System" to see how the Simulink model is connected to CarSim, and how to define the import and export variables that allow CarSim and Simulink to communicate.
+#
+#Note the vehicle parameter defined in the VS Commands screen linked here, where OPT_STEER_EXT(2) is set to option 4 indicating that the rear steer is externally defined.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } External 4WS, DLC
+#Library : CarSim Run Control
+#DataSet : External 4WS, DLC
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_1e65ece3-967c-4168-b4cf-95b0e864ae4b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

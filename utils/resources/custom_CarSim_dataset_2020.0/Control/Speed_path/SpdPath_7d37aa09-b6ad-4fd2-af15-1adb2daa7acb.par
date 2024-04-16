@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Ax/Ay, 60km/h`Miscellaneous
+INSTALL_SPEED_CONTROLLER
+SPEED_AX_THROTTLE_CONSTANT 0.15
+SPEED_AX_BRAKE_CONSTANT 0.15
+SPEED_AY_LEFT_CONSTANT 0.2
+SPEED_AY_RIGHT_CONSTANT 0.2
+#RingCtrl0 2
+OPT_SC_SKILL 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+SET_ISPEED_FOR_ID 0
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Path Preview: 0.15/0.2 G Ax/Ay, 60km/h
+SPEED_TARGET_CONSTANT 60
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC 4
+#CheckBox0 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox1 0    
+#CheckBox2 0    
+OPT_SC_3D 0
+#CheckBox3 0    
+OPT_SC_2018 0
+
+SPEED_KP 0.3
+SPEED_KI 0.5
+SPEED_KP3 0
+BK_PERF_SC 0.15
+FPD_PERF_SC 0.1
+SPEED_PREVIEW_STEP 1
+SPEED_CURV_LENGTH 4
+SPEED_PREVIEW_START 0
+SPEED_PREVIEW 100
+PBK_CON_MAX_SC 10
+
+#EMBEDDED_NOTES
+#These control settings are with a maximum speed specified with a SPEED_TARGET dataset with the ID set to the parameter SPEED_LIMIT_ID.
+#
+#SPEED_LIMIT_ID must be defined with a VS Command before this dataset is loaded.
+#
+#The speed limit may be obtained from signs with units of mi/h (USA), so the units for several speed output variables are set to mi/h.
+#
+#This dataset is used for ADAS examples where the vehicle stops and then makes a 90-deg turn. The path preview must handle a short-radius turn, while looking ahead 100m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Miscellaneous } 0.15/0.2 G Ax/Ay, 60km/h
+#Library : Control: Speed (Closed Loop) Using Path Preview
+#DataSet : 0.15/0.2 G Ax/Ay, 60km/h
+#Category: Miscellaneous
+#FileID  : SpdPath_7d37aa09-b6ad-4fd2-af15-1adb2daa7acb
+#Product : CarSim 2020.0
+#VehCode Speed Using Path Preview
+
+END

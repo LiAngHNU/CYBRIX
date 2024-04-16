@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Tire (External)`R=316.5mm (TameTire 6.1)`TameTire
+FZ_REF 30000
+Y_LENGTH 225
+#CheckBox3 1    
+
+#RingCtrl0 11
+#RingCtrl5 0
+OPT_TIRE_MODEL 10
+
+X_LENGTH 316.5
+Z_LENGTH 316.5
+PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+#BlueLink0 Animator: Shape Assembly`Sports Car` Tires` , Animator`ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 225
+*SET_RADIUS 316.5
+KY_TIRE 956.08
+IT 1.3
+M_TIRE 20
+
+#External API information
+EXTERNAL_TIRE_MODULE_DLL Extensions\External_Tire_API\TameWrapper_6_1.dll
+INSTALL_EXTERNAL_TIRE_API
+
+*3RD_PARTY_DATA Extensions\TameTire\JL_ref_Front_61_CS.tir
+*3RD_PARTY_DLL Extensions\TameTire\tametire_6_1.dll
+*EXT_MODULE_DLL Extensions\External_Tire_API\TameWrapper_6_1.dll
+
+#User Tire Model setting data
+USER_STI_DATA Extensions\TameTire\JL_ref_Front_61_CS.tir
+USER_STI_DLL Extensions\TameTire\tametire_6_1.dll
+#MiscYellow0
+TAME_TI_INIT 20
+TAME_TS_INIT 20
+TAME_TEMP_RIM 26
+#ENDMYellow
+
+USER_STI_INIT
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "3rd-Party Tire model STI", which adopts an external tire model and bypass the CarSim internal tire model.  In this option, the external tire model calculates all tire forces and moments.
+#
+#This tire data specifies the Michelin TameTire solver program in "Tire program file (DLL)."
+#
+#The other DLL file specified in the path field of "VS STI module (DLL)" is the wrapper program based on VS STI format which interfaces between VS vehicle solver and the Michelin TameTire solver program.
+#
+#A Michelin TameTire's property file needs to be specified in "Tire property file (TIR)." CarSim package does not include any example TIR file for TameTire which needs to be obtained from Michelin.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire (External); { TameTire } R=316.5mm (TameTire 6.1)
+#Library : Tire (External)
+#DataSet : R=316.5mm (TameTire 6.1)
+#Category: TameTire
+#FileID  : TireExt_7e28717d-c35c-4f7d-8933-1688811ffa92
+#Product : CarSim 2020.0
+#VehCode Tire (External)
+
+END

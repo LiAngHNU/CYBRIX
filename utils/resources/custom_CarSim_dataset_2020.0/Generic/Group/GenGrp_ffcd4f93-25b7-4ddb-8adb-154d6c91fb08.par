@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic, Two Lanes, Forward`ADAS: Traffic for ACC & FCW
+#VehCode Generic Group
+#MiscYellow0
+SET_ILTARG_FOR_ID 0
+ltarg_constant = -2
+set_description ltarg_id ...
+  Lateral target for right lane
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_49536af4-b012-4563-ab97-e0d870646cc1.par
+#BlueLink0 Multiple Moving Objects`2 Vehicles, Relative S` Traffic Vehicles (Forward)` , Link 1`TMotion_49536af4-b012-4563-ab97-e0d870646cc1
+
+
+#MiscYellow1
+SET_ILTARG_FOR_ID 0
+ltarg_constant = 2
+set_description ltarg_id ...
+  Lateral target for left lane
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_057344c9-e7e7-4b08-99a4-4d6b2ca532b5.par
+#BlueLink1 Multiple Moving Objects`6 Vehicles, Vx * 1.1, ILTARG` Traffic Vehicles (Forward)` , Link 2`TMotion_057344c9-e7e7-4b08-99a4-4d6b2ca532b5
+
+
+#BlueLink2 ` , Link 3` , Link 3` , Link 3`
+
+
+
+#BlueLink4 ` , Link 5` , Link 5` , Link 5`
+
+
+#BlueLink5 ` , Link 6` , Link 6` , Link 6`
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset assembles some traffic vehicles in two lanes.
+#
+#The moving objects from link 1 lead the ego vehicle. Their positions are based on the position of the vehicle station.
+#
+#The moving objects from link 2 have speed proportional to that of the vehicle: Vx.
+#
+#The lateral positions of the moving objects are set using the LTARG function, with datasets specified with ILTARG. Descriptions are specified that will appear in the Echo file. A new command SET_ILTARG_FOR_ID adds LTARG datasets.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic for ACC & FCW } Traffic, Two Lanes, Forward
+#Library : Generic Data Group
+#DataSet : Traffic, Two Lanes, Forward
+#Category: ADAS: Traffic for ACC & FCW
+#FileID  : GenGrp_ffcd4f93-25b7-4ddb-8adb-154d6c91fb08
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

@@ -1,0 +1,100 @@
+PARSFILE
+#FullDataName CarSim Run Control`Ext. Frt., Ctr., and Rr. Diffs.`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_45f134dc-dbea-4a01-a3f2-7e837c78d3ae
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_4efa7469-8049-483b-8ebf-a2d1704760e5.par
+#BlueLink12 Models: Simulink`External Transfer Case and Diffs` External Powertrain` , Models`Simlink_4efa7469-8049-483b-8ebf-a2d1704760e5
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.4 0.6
+SET_RUN_COLOR 0.2 0.4 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_6d84a9e2-f63f-4cf5-944b-5a6633696138.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: Ext. All Diffs.` External Powertrains` , Math Model`Vehicle_6d84a9e2-f63f-4cf5-944b-5a6633696138
+
+PARSFILE Procedures\Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc.par
+#BlueLink28 Procedures`Ramp to 0.5 Throttle` Accel. and Brake Testing` , Procedure`Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc
+
+PARSFILE Roads\3D_Road\Road_1858fd7f-8c63-404a-a7a7-9f6c232bb1e9.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, Two Lanes, Mu = 0.85` Straight` , Miscellaneous`Road_1858fd7f-8c63-404a-a7a7-9f6c232bb1e9
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink6 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.01
+*FREQ_OUT 100
+tstep 0.0005
+iprint 20
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Ext. Frt., Ctr., and Rr. Diffs. <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Ext. Frt., Ctr., and Rr. Diffs.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates powertrain differentials modeled in Simulink. (Libraries > Models > Models: Simulink)
+#
+#Browse to the Vehicle: Assembly screen and click on the powertrain blue link to see the settings for the externally defined differentials.
+#
+#Click on the blue link "External Transfer Case and Diffs" to see how the Simulink model is connected to CarSim, and how to define the import and export variables that allow CarSim and Simulink to communicate.
+#
+#You can choose whether to Add, Replace, or Mulitply certain Simulink imported variables to their corresponding variables in CarSim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Ext. Frt., Ctr., and Rr. Diffs.
+#Library : CarSim Run Control
+#DataSet : Ext. Frt., Ctr., and Rr. Diffs.
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_45f134dc-dbea-4a01-a3f2-7e837c78d3ae
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

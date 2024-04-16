@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`Three-wheeled Vehicle - Front`Utility Vehicles: SUVs and Vans
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0.660989
+*DIVE_L 0
+*KIN_CAMBER_L 0
+*LAT_L 0
+*KIN_TOE_L 0
+L_TRACK 1e-06
+Y_CL_SUSP 0
+M_US 18.2
+*IW_L 0.025
+*JNC_DESIGN_L 0
+*TOE_L 0
+*CAMBER_L 0
+*IWXXZZ_L 0.015
+*M_US_IND_L 3.085
+*M_US_STR_L 6.015
+SUSP_DIVE_COEFFICIENT 0
+PARSFILE Suspensions\Longitudinal\SusX_79957ce6-3980-4011-a849-531fe9110431.par
+#BlueLink1 Suspension: Longitudinal Movement`Linear: -0.5` Reference Suspension Geometry` , Left wheel X`SusX_79957ce6-3980-4011-a849-531fe9110431
+
+CAMBER_COEFFICIENT 0
+SUSP_LAT_COEFFICIENT 0
+TOE_COEFFICIENT 0
+M_US_IND 3.085
+M_US_STR 6.015
+IW 0.025
+IW_XXZZ 0.015
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+
+iside 2
+SUSP_DIVE_COEFFICIENT 0
+PARSFILE Suspensions\Longitudinal\SusX_79957ce6-3980-4011-a849-531fe9110431.par
+#BlueLink1 Suspension: Longitudinal Movement`Linear: -0.5` Reference Suspension Geometry` , Left wheel X`SusX_79957ce6-3980-4011-a849-531fe9110431
+
+CAMBER_COEFFICIENT 0
+SUSP_LAT_COEFFICIENT 0
+TOE_COEFFICIENT 0
+M_US_IND 3.085
+M_US_STR 6.015
+IW 0.025
+IW_XXZZ 0.015
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+
+#EMBEDDED_NOTES
+#The suspension modeled here is for a three-wheeled utility truck. The single front wheel is modeled by setting the front track to a negligibly small positive number (it appears in the denominator of some calculations, so it can't be exactly zero), giving each wheel identical kinematic properties, and dividing the spring and damper properties between both wheels.  This will simulate the performance of a three-wheeled vehicle.
+#In version 2018, this number was changed to 1e-06 from 1e-32 mm to avoid numerical problem caused by using the number too small.
+#
+#The unsprung mass for the whole suspension is entered here. CarSim divides it between the two wheels (or two "half" wheels in this case).
+#
+#NOTE:  Both wheels on the single-wheeled axle need to have kinematic and compliance properties. (Don't skip any links)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { Utility Vehicles: SUVs and Vans } Three-wheeled Vehicle - Front
+#Library : Suspension: Independent System Kinematics
+#DataSet : Three-wheeled Vehicle - Front
+#Category: Utility Vehicles: SUVs and Vans
+#FileID  : KinInd_b0f73ee4-b980-4364-97b0-96440b972236
+#Product : CarSim 2020.0
+#VehCode Independent
+
+END

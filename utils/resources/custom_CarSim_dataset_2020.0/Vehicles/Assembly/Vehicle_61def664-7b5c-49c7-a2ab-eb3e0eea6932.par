@@ -1,0 +1,106 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`European Van`European Van
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 1
+OPT_PT 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_f1f7df45-4505-43a8-a0da-9fffd283d290.par
+#BlueLink7 Steering`D-Class, Minivan: Power, R&P` CS D-Class` , Steering System`StrSys2_f1f7df45-4505-43a8-a0da-9fffd283d290
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_6f2c03dc-0ade-43b8-bed3-e680fbc1861b.par
+#BlueLink19 Suspension: Independent System Kinematics`European Van - Front` Utility Vehicles: SUVs and Vans` , Kinematics`KinInd_6f2c03dc-0ade-43b8-bed3-e680fbc1861b
+
+PARSFILE Suspensions\Compliance\CmpInd_21b02b29-0f06-4fc9-9361-d1a158cc8c22.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`D-Class, Minivan - Front` D-Class` , Compliance`CmpInd_21b02b29-0f06-4fc9-9361-d1a158cc8c22
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf.par
+#BlueLink999 Tire`185/65 R15` Touring Tires` , Tire`Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf.par
+#BlueLink10 Tire`185/65 R15` Touring Tires` , Tire`Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_77b45f71-6fa4-4fd2-94a9-9c8b44dc2468.par
+#BlueLink20 Suspension: Independent System Kinematics`European Van - Rear` Utility Vehicles: SUVs and Vans` , Kinematics`KinInd_77b45f71-6fa4-4fd2-94a9-9c8b44dc2468
+
+PARSFILE Suspensions\Compliance\CmpInd_1f780024-6e34-4c12-af78-7825b99500ae.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`European Van - Rear` Utility Vehicles: SUVs and Vans` , Compliance`CmpInd_1f780024-6e34-4c12-af78-7825b99500ae
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf.par
+#BlueLink999 Tire`185/65 R15` Touring Tires` , Tire`Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf.par
+#BlueLink999 Tire`185/65 R15` Touring Tires` , Tire`Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_965cb2d6-66c5-4ac3-97b8-23ee0901556a.par
+#BlueLink0 Vehicle: Sprung Mass`European Van` Utility Vehicles: SUVs and Vans` , Sprung Mass`SprMass_965cb2d6-66c5-4ac3-97b8-23ee0901556a
+
+PARSFILE Aerodynamics\Aero_Main\Aero_8bf2d279-31b5-43d0-8a3b-df83520b997c.par
+#BlueLink1 Aerodynamics: Basic`Euro Van Aerodynamics` Utility Vehicles: SUVs and Vans` , Aerodynamics`Aero_8bf2d279-31b5-43d0-8a3b-df83520b997c
+
+R_REAR_DRIVE_SC 0
+PMAX_SC 185
+PARSFILE Powertrain\Fwd\FWD_53113d09-c94c-461b-891c-1e585c8b4d02.par
+#BlueLink3 Powertrain: Front-Wheel Drive`75 kW, 5-spd., 4.1 Ratio` 75 kW - 125 kW Powertrains` , Powertrain`FWD_53113d09-c94c-461b-891c-1e585c8b4d02
+
+PARSFILE Brakes\4W_System\Brk4W_5011ad03-3228-4bdc-8aba-aebd0486c2eb.par
+#BlueLink6 Brakes: Four-Wheel System`(SUV), MC Press, No ABS` D-Class` , Brake System`Brk4W_5011ad03-3228-4bdc-8aba-aebd0486c2eb
+
+PARSFILE Animator\Vehicles\AniVeh_7dd7ddfd-3eed-408a-9775-5909d0de96d8.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`European Van` Utility Vehicles: SUVs and Vans` , Vehicle 3D Shape`AniVeh_7dd7ddfd-3eed-408a-9775-5909d0de96d8
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_7dd7ddfd-3eed-408a-9775-5909d0de96d8.png
+
+#EMBEDDED_NOTES
+#Generic European Van with a Strut front and 5-Link rear suspension.
+#
+#Updated for CarSim 2017 with the revised steering system parameters for the D-Class Minivan.  Tested for: On-Center, Static Steer, and Free Response Stability.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { European Van } European Van
+#Library : Vehicle: Assembly
+#DataSet : European Van
+#Category: European Van
+#FileID  : Vehicle_61def664-7b5c-49c7-a2ab-eb3e0eea6932
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

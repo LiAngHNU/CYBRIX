@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName CarSim Run Control`MF-Tyre Sweep Kappa (Fz = 2000 N)`Tire Tester
+#VEHICLECODE Tire (External)
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e170cf66-93c6-4c4c-ada1-2dbe7470ebdc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 4
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Tires\External\TireExt_e621552e-a61c-4879-928c-9d0fcc445622.par
+#BlueLink2 Tire (External)`225/60 R18 (Tyre 6.2, Static)` MF-Tyre/MF-Swift` , Math Model`TireExt_e621552e-a61c-4879-928c-9d0fcc445622
+
+PARSFILE Tire_Tester\TestTire_e6d12311-dd3f-4c6e-940a-37ce28b78abc.par
+#BlueLink28 Tire Tester`Sweep Kappa: Fz = 4000 N` Sweep Kappa +/- 1.0` , Procedure`TestTire_e6d12311-dd3f-4c6e-940a-37ce28b78abc
+
+
+SPECIAL_PARSFILE Runs\Run_cf370a40-7400-4fe8-b1a4-0b12bcea85ea.par
+#BlueLink23 CarSim Run Control`MF-Tyre Sweep Kappa (Fz = 4000 N)` Tire Tester` , Overlay run or ERD file`Run_cf370a40-7400-4fe8-b1a4-0b12bcea85ea
+
+
+SPECIAL_PARSFILE Runs\Run_8b6bf783-f775-4655-8500-ebda43c99027.par
+#BlueLink24 CarSim Run Control`MF-Tyre Sweep Kappa (Fz = 6000 N)` Tire Tester` , Overlay run or ERD file`Run_8b6bf783-f775-4655-8500-ebda43c99027
+
+
+*IMAGE_TYPE DEFAULT
+PARSFILE IO_Channels\W_Channels\Write_71bdebab-1d55-4f21-9f09-6c1936e267ce.par
+#BlueLink13 I/O Channels: Write`All Outputs with Tire for Excel` ` , Output Variables`Write_71bdebab-1d55-4f21-9f09-6c1936e267ce
+
+WRITE_SENSOR_DETECT
+Title MF-Tyre Sweep Kappa (Fz = 2000 N) <Tire Tester>
+CATEGORY Tire Tester 
+DATASET_TITLE MF-Tyre Sweep Kappa (Fz = 2000 N)
+#MiscYellow0
+! Set the vertical load for this test
+FZ_TEST 2000
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The Tire Tester makes direct use of the CarSim tire models to simulate a steady state tire test.
+#
+#With the Tire Tester, you can examine the output of the tire equations under any conditions of slip angle, slip ratio, inclination, vertical load, and road coefficient of friction.
+#
+#This example sweeps the longitudinal slip ratio from -1 to +1 while holding the inclination angle at a constant 0 degrees and a vertical load at 2000 N, defind here on the Run Control screen in the Misc. yellow field.
+#
+#It is overlaid with simulations at Fz = 4000 N and Fz = 6000 N.
+#
+#The Tire Tester produces outputs for 6 tire forces and moments: Fx, Fy, Fz, Mx, My, and Mz, and 3 kinematic variables: slip angle (alpha), slip ratio (kappa), and inclination angle (gamma).
+#
+#There is no animator camera linked because we are not interested in the animation for these simulations.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Tester } MF-Tyre Sweep Kappa (Fz = 2000 N)
+#Library : CarSim Run Control
+#DataSet : MF-Tyre Sweep Kappa (Fz = 2000 N)
+#Category: Tire Tester
+#FileID  : Run_e170cf66-93c6-4c4c-ada1-2dbe7470ebdc
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

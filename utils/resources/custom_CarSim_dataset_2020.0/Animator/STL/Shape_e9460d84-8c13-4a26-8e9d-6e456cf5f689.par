@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Baja Truck: Cab`Cars: Exotic
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trucks\Off_Road_Pickup_Truck\bajaCab.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 0.91
+SET_SCALE_Y 0.9
+SET_SCALE_Z 0.9
+SET_OFFSET_X -.06
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.45
+*SPECULAR 0.8
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 1    
+
+SET_SPECULAR 0.8 0.8 0.8
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink2 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_e9460d84-8c13-4a26-8e9d-6e456cf5f689.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Cars: Exotic } Baja Truck: Cab
+#Library : Animator: Shape File Link
+#DataSet : Baja Truck: Cab
+#Category: Cars: Exotic
+#FileID  : Shape_e9460d84-8c13-4a26-8e9d-6e456cf5f689
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

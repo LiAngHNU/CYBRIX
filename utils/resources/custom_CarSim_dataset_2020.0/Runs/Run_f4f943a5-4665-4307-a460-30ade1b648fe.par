@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName CarSim Run Control`ADAS Sensor Collision Detection`* CS 2020.0 - Miscellaneous
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f4f943a5-4665-4307-a460-30ade1b648fe
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f728fdba-427b-492f-808b-3a9dfef00185.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 15 El, 25 m` Vehicle Reference` , Animator camera`Camera_f728fdba-427b-492f-808b-3a9dfef00185
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_1ee4b4f5-60b9-4d36-9d24-49f79b50b95e.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatch w/ ADAS Sensor` C-Class` , Math Model`VehLoad_1ee4b4f5-60b9-4d36-9d24-49f79b50b95e
+
+PARSFILE Procedures\Proc_8bbc25b2-eb27-448d-98f1-06c6da19abd9.par
+#BlueLink28 Procedures`ADAS Sensor Collision Detection` ADAS and Active Safety` , Procedure`Proc_8bbc25b2-eb27-448d-98f1-06c6da19abd9
+
+
+*IMAGE_TYPE PASS_THROUGH
+WRITE_SENSOR_DETECT
+Title ADAS Sensor Collision Detection <* CS 2020.0 - Miscellaneous>
+CATEGORY * CS 2020.0 - Miscellaneous 
+DATASET_TITLE ADAS Sensor Collision Detection
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A Moving Object is set to move towards and away from the ego vehicle using a sinusoid profile.
+#
+#The point of this example is to show how to set up counters, HUD, and collision detection.
+#
+#Based on an ADAS Sensor located at the front of the ego vehicle, VS Commands are used to compare the Moving Object's detected distance and magnitude relative to a user-defined distance threshold, and trigger one of three alerts. Events are used to count the number of times the alerts are triggered, corresponding to recorded contacts made.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Miscellaneous } ADAS Sensor Collision Detection
+#Library : CarSim Run Control
+#DataSet : ADAS Sensor Collision Detection
+#Category: * CS 2020.0 - Miscellaneous
+#FileID  : Run_f4f943a5-4665-4307-a460-30ade1b648fe
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

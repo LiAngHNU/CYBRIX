@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName CarSim Run Control`Chassis Flex: Flexible Chassis`* More Examples (Extra License Options)
+#VEHICLECODE F_Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e8824e5d-2cc4-40a3-975e-3bb3d0a7615f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_5feacfa5-2cee-4705-8aee-f5baa805e553.par
+#BlueLink0 Animator: Camera Setup`21 Azm, 5 El, 25 m` Road Reference` , Animator camera`Camera_5feacfa5-2cee-4705-8aee-f5baa805e553
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.8 0
+SET_RUN_COLOR 1 0.8 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_967e93c0-0c88-4759-934c-62bf4a5dc7a2.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car w/ Chassis Flex` B-Class` , Math Model`Vehicle_967e93c0-0c88-4759-934c-62bf4a5dc7a2
+
+PARSFILE Procedures\Proc_fce62114-6e9d-4cc6-90ff-2244a4447571.par
+#BlueLink28 Procedures`Cross Slope Sine Sweep Test` Ride Tests` , Procedure`Proc_fce62114-6e9d-4cc6-90ff-2244a4447571
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 50
+OPT_SC_ENGINE_BRAKING 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 16
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 50
+*TSTOP 16
+*TSTART 0
+*SSTART 0
+
+SPECIAL_PARSFILE Runs\Run_c1668a5c-6b20-4093-a750-5e2e742451f4.par
+#BlueLink23 CarSim Run Control`Chassis Flex: Rigid Chassis Overlay` Suspension and Ride Tests` , Overlay run or ERD file`Run_c1668a5c-6b20-4093-a750-5e2e742451f4
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Chassis Flex: Flexible Chassis <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE Chassis Flex: Flexible Chassis
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Sports Car with Frame Torsional Flexibility drives on a Cross Slope Sine Sweep road.
+#
+#The Cross Slope Sine Sweep road data varies in both frequency and amplitude, exciting various bounce, pitch, and roll motions of the vehicle.
+#
+#The overlay is virtually the same vehicle but with a rigid sprung mass body (i.e., no Frame Torsional Flexibility).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * More Examples (Extra License Options) } Chassis Flex: Flexible Chassis
+#Library : CarSim Run Control
+#DataSet : Chassis Flex: Flexible Chassis
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_e8824e5d-2cc4-40a3-975e-3bb3d0a7615f
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

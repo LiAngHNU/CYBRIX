@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`Euro Box Van: Chassis`Straight Trucks
+*OFFSET_X 0.05
+*OFFSET_Y 0
+*OFFSET_Z 0.5
+*X_REF_LENGTH 4400
+*Y_REF_LENGTH 2100
+*Z_REF_LENGTH 1960
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+
+#RingCtrl1 2
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\ShpGrp_aab7df17-45c7-4e19-af69-94c2a8d59731.png
+PARSFILE Animator\STL\Shape_e7b488b2-78ec-4cef-ac88-02e8f97228e1.par
+#BlueLink0 Animator: Shape File Link`Van: Chassis` Trucks: Chassis` , Shape File`Shape_e7b488b2-78ec-4cef-ac88-02e8f97228e1
+
+set_offset_x 0.05
+set_offset_y 0
+set_offset_z 0.5
+PARSFILE Animator\STL\Shape_81b49807-0254-4d6e-9325-500e6416e090.par
+#BlueLink1 Animator: Shape File Link`Conventional: Box Details (For Van Cab)` Trucks: Vocational Bodies` , Shape File`Shape_81b49807-0254-4d6e-9325-500e6416e090
+
+set_offset_x 0.05
+set_offset_y 0
+set_offset_z 0.5
+PARSFILE Animator\STL\Shape_2c85b358-7be5-43fe-a952-6a6e3763367d.par
+#BlueLink2 Animator: Shape File Link`Conventional: Box Walls (For Van Cab)` Trucks: Vocational Bodies` , Shape File`Shape_2c85b358-7be5-43fe-a952-6a6e3763367d
+
+set_offset_x 0.05
+set_offset_y 0
+set_offset_z 0.5
+x_ref_length 4400
+y_ref_length 2100
+z_ref_length 1960
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink17 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Straight Trucks } Euro Box Van: Chassis
+#Library : Animator: Shape Assembly
+#DataSet : Euro Box Van: Chassis
+#Category: Straight Trucks
+#FileID  : ShpGrp_aab7df17-45c7-4e19-af69-94c2a8d59731
+#Product : CarSim 2020.0
+#VehCode Shape Assembly
+
+END

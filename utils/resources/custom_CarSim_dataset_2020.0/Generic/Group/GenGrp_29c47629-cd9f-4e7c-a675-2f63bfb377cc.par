@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Generic Data Group`3 Lanes Fwd,3 Traffic Groups,+/-3.5 m`ADAS: Traffic for ACC & FCW
+#VehCode Generic Group
+PARSFILE Sensors_Traffic\Traffic\TMotion_bb46b986-916e-48b6-864d-f06288c24307.par
+#BlueLink0 Multiple Moving Objects`3 Vehicles, Vx` Traffic Vehicles (Forward)` , Link 1`TMotion_bb46b986-916e-48b6-864d-f06288c24307
+
+
+#MiscYellow1
+SET_ILTARG_FOR_ID 0
+ltarg_constant = -3.5
+set_description ltarg_id ...
+  Lateral target for vehicles in the right lane
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_396e4a3e-d365-4d44-b618-f6e170573499.par
+#BlueLink1 Multiple Moving Objects`6 Vehicles, Vx * 0.95` Traffic Vehicles (Forward)` , Link 2`TMotion_396e4a3e-d365-4d44-b618-f6e170573499
+
+
+#MiscYellow2
+SET_ILTARG_FOR_ID 0
+ltarg_constant = 3.5
+set_description ltarg_id ...
+  Lateral target for vehicles in the left lane
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d5cadbc5-43e0-488a-8169-4b4fe16687a7.par
+#BlueLink2 Multiple Moving Objects`6 Vehicles, Vx * 1.1` Traffic Vehicles (Forward)` , Link 3`TMotion_d5cadbc5-43e0-488a-8169-4b4fe16687a7
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#Used new command SET_ILTARG_FOR_ID to add LTARG datasets.
+#
+#Used set_description to make description for Echo file.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic for ACC & FCW } 3 Lanes Fwd,3 Traffic Groups,+/-3.5 m
+#Library : Generic Data Group
+#DataSet : 3 Lanes Fwd,3 Traffic Groups,+/-3.5 m
+#Category: ADAS: Traffic for ACC & FCW
+#FileID  : GenGrp_29c47629-cd9f-4e7c-a675-2f63bfb377cc
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

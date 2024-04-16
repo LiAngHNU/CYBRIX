@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment vs. Inclination`MF-Tyre Example`MF-Tyre Example
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 3, 12 ! columns x rows
+MZG_TIRE_CARPET 2D_FROM_ZERO
+0, 2000, 4000, 6000
+0.5, -0.807088, -1.58863, -2.34453
+1, -1.61423, -3.17708, -4.68785
+1.5, -2.42146, -4.76518, -7.02873
+2, -3.22884, -6.35274, -9.36587
+2.5, -4.0364, -7.93952, -11.698
+3, -4.84418, -9.52533, -14.0237
+3.5, -5.65222, -11.1099, -16.3415
+4, -6.46054, -12.693, -18.6502
+4.5, -7.26917, -14.2743, -20.9481
+5, -8.07813, -15.8537, -23.2339
+5.5, -8.07813, -15.8537, -23.2339
+6, -8.07813, -15.8537, -23.2339
+ENDTABLE
+
+CRO_MZ 1
+
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment vs. Inclination; { MF-Tyre Example } MF-Tyre Example
+#Library : Tire: Aligning Moment vs. Inclination
+#DataSet : MF-Tyre Example
+#Category: MF-Tyre Example
+#FileID  : TireMzC_b6b7280e-2919-47db-8327-b5233fa881d8
+#Product : CarSim 2020.0
+#VehCode Tire: Mz
+
+END

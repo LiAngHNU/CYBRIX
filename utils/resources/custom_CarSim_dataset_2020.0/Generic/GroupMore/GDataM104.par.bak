@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`Brake Indicator Light`HUD Gauges
+#VehCode Generic group
+#MiscYellow0
+HUD_ADD_ELEMENT image_widget
+hud_base_name Brake Fill BG
+hud_base_location 100 10 100 100
+hud_base_align_x 0
+hud_base_align_y 2
+hud_base_size_mode 1
+hud_base_place_mode 1
+hud_base_alpha_scale_channel time - 0.75
+hud_image_file Images\Hud\LIGHT_OFF.dds
+HUD_END_ELEMENT
+#ENDMYellow
+
+
+#MiscYellow1
+HUD_ADD_ELEMENT image_widget
+hud_base_name Brake Fill BG
+hud_base_location 100 10 100 100
+hud_base_color_red_channel 1
+hud_base_color_green_channel 0
+hud_base_color_blue_channel 0
+hud_base_align_x 0
+hud_base_align_y 2
+hud_base_size_mode 1
+hud_base_place_mode 1
+hud_base_alpha_scale_channel Bk_Stat * 0.65
+hud_image_file Images\Hud\LIGHT_ON.dds
+HUD_END_ELEMENT
+#ENDMYellow
+
+
+
+#MiscYellow3
+HUD_ADD_ELEMENT text_widget
+hud_base_name Brake Header
+hud_text_label Brake
+hud_base_location 150 94 100 18
+hud_base_align_x 0
+hud_base_align_y 2
+hud_base_size_mode 1
+hud_base_place_mode 1
+hud_text_color 1 1 1 1
+hud_text_align 10
+hud_text_backdrop_color .3 .3 .3 0.5
+hud_text_font VeraMono.ttf
+hud_base_alpha_scale_channel time - 0.75
+HUD_END_ELEMENT
+#ENDMYellow
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { HUD Gauges } Brake Indicator Light
+#Library : Generic Data Group (More)
+#DataSet : Brake Indicator Light
+#Category: HUD Gauges
+#FileID  : GDataM104
+#Product : CarSim 8.2 Beta, September 2012
+#Last update: 10-11-2012 16:03
+#VehCode Generic group
+
+END

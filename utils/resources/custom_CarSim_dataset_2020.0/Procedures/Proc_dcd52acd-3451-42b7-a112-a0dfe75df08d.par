@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName Procedures`Sine Sweep Steer Torque Input`Driver Controls
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 110
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 60
+*TSTOP 110
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Sine Sweep Steer Torque Input
+SPEED_TARGET_CONSTANT 60
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\SteerTorque\StrTrq_97f62cfa-87af-4f74-9b81-6cb4922b3ffe.par
+#BlueLink27 Control: Steering Torque (Open Loop)`Sine Sweep Torque` ` , Steering`StrTrq_97f62cfa-87af-4f74-9b81-6cb4922b3ffe
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_ab537056-ed0a-4baf-a604-672fd56928e8.par
+#BlueLink0 Road: 3D Surface (All Properties)`2 km Square, Mu = 1.0` Flat Test Pads` , Miscellaneous`Road_ab537056-ed0a-4baf-a604-672fd56928e8
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+#MiscYellow1
+OPT_INIT_PATH 0
+SV_XO 850
+SV_YO -450
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink8 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink9 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+PARSFILE Plot\Setup\Plot_b19280a2-8346-4fce-9410-a014d7ef86ac.par
+#BlueLink10 Plot: Setup`Kingpin Torque - Front` Steering` , Plot`Plot_b19280a2-8346-4fce-9410-a014d7ef86ac
+
+PARSFILE Plot\Setup\Plot_57fbe53b-9356-4cb1-9fd0-29f3e70d3894.par
+#BlueLink11 Plot: Setup`Road Wheel Steer Angle - Front` Steering` , Plot`Plot_57fbe53b-9356-4cb1-9fd0-29f3e70d3894
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink12 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136.par
+#BlueLink13 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136
+
+PARSFILE Plot\Setup\Plot_310b0189-b08d-49fc-a484-ee359eb89744.par
+#BlueLink14 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_310b0189-b08d-49fc-a484-ee359eb89744
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how you can use CarSim to perform an open-loop steering test such as a decreasing amplitude, increasing frequency sine sweep test.
+#
+#Click on the open-loop steer torque dataset "Sine Sweep Torque" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 60 kph, no brake pressure, and automatic gear selection using all available gears.
+#
+#VS Commands are used to specify the vehicle's starting location on the 2 km square. Please see the VS Commands defined in the second miscellaneous yellow field for more details.
+#
+#NOTE:  The keyword OPT_INIT_ROAD has been replaced with OPT_INIT_PATH.  The old keyword will still work, however only the new keyword will appear in the echo file.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Sine Sweep Steer Torque Input
+#Library : Procedures
+#DataSet : Sine Sweep Steer Torque Input
+#Category: Driver Controls
+#FileID  : Proc_dcd52acd-3451-42b7-a112-a0dfe75df08d
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Lowboy (2A)`Traffic and Moving Objects: Trailers
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 2
+OBJ_X_LENGTH 12356
+OBJ_Y_LENGTH 2438
+OBJ_Z_LENGTH 543
+*DZ_V 30
+*LAT_WC 1863
+*LAT_WC_2 1863
+*HWC 510
+*WHEEL_RATIO 1
+*LAXLE_1 10960
+*LAXLE_2 12356
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_dcfc20ef-a309-4708-82d6-02afc4b95c6c.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -10.96
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.4845
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -10.96
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.4845
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -12.356
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.4845
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -12.356
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.4845
+DZ_OBJECT 0.03
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_d33ffbce-175e-40c5-9ba8-ae67208e2ae0.par
+#BlueLink1 Animator: Shape Assembly`Lowboy (2A)` Trailers` , Vehicle Body`ShpGrp_d33ffbce-175e-40c5-9ba8-ae67208e2ae0
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_79e92d06-6960-4379-8824-3f11f492b288.par
+#BlueLink3 Animator: Shape File Link`Lowboy: Brake Lights` Trailers` , Brake Lights`Shape_79e92d06-6960-4379-8824-3f11f492b288
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_09ade48c-1ac2-4680-a0bc-e53feab77176
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Traffic and Moving Objects: Trailers } Lowboy (2A)
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Lowboy (2A)
+#Category: Traffic and Moving Objects: Trailers
+#FileID  : AniVeh_dcfc20ef-a309-4708-82d6-02afc4b95c6c
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

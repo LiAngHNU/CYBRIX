@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Vehicle: Sprung Mass`D-Class, Sedan w/ Powertrain Mount`D-Class
+#VehCode Rigid frame + engine mount
+#RingCtrl0 2
+#CheckBox2 0    
+X_LENGTH 2866
+Y_LENGTH 1500
+iaxle 2
+iside 1
+LX_AXLE 2866
+LX_CG_SU 1110
+M_SU 1370
+IXX_SU 671.3
+IYY_SU 1972.8
+IZZ_SU 2315.3
+IXZ_SU 0
+*RX 0.700
+*RY 1.200
+*RZ 1.300
+Y_CG_SU 0
+H_CG_SU 520
+IXY_SU 0
+IYZ_SU 0
+Z_LENGTH 1380
+Y_LENGTH 2162
+*HWC_LF 340
+*HWC_RF 340
+*HWC_LR 325
+*HWC_RR 325
+H_WC 325
+iside 2
+H_WC 325
+iaxle 1
+iside 1
+H_WC 340
+iside 2
+H_WC 340
+iaxle 2
+iside 1
+PARSFILE Engine_Mounts\Engine_Mass\EngMass_cc348caf-c99f-465d-8f91-b83ab2a0564a.par
+#BlueLink0 Engine Mounts: Engine Mass and Geometry`Engine Body, 2 Mounts w/ Torq. Rod` ` , Engine`EngMass_cc348caf-c99f-465d-8f91-b83ab2a0564a
+
+
+#EMBEDDED_NOTES
+#In this example, "Engine Mount" is selected in the advanced settings, and a link is made to a dataset with information about the engine mass and mount properties.
+#
+#The sprung mass (kg) on this screen is supposed to be the entire sprung mass including the engine body which is specified on the other screen. The VehicleSim solver automatically subtracts the engine mass from the entire sprung mass in order to not duplicate the engine mass.
+#
+#A CarSim Engine Mount license is required to run the math model for any vehicle that links to this dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Sprung Mass; { D-Class } D-Class, Sedan w/ Powertrain Mount
+#Library : Vehicle: Sprung Mass
+#DataSet : D-Class, Sedan w/ Powertrain Mount
+#Category: D-Class
+#FileID  : SprMass_90f3890d-f368-4c77-a07e-7bce9485c82b
+#Product : CarSim 2020.0
+#VehCode Rigid frame + engine mount
+
+END

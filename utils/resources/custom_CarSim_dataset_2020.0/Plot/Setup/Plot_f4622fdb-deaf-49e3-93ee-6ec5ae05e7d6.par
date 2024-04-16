@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Torque Converter Lock Signal`Controls: Chassis and Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS TC_Lock, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Torque Converter Lock Signal
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Chassis and Powertrain } Torque Converter Lock Signal
+#Library : Plot: Setup
+#DataSet : Torque Converter Lock Signal
+#Category: Controls: Chassis and Powertrain
+#FileID  : Plot_f4622fdb-deaf-49e3-93ee-6ec5ae05e7d6
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

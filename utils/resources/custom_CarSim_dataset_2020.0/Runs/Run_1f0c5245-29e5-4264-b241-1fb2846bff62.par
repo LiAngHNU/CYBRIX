@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName CarSim Run Control`C-Class (Trace Lines): Roll Sine Sweep`* CS 2020.0 - Animated Trace Lines
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1f0c5245-29e5-4264-b241-1fb2846bff62
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_0ec846dd-2332-4ea3-a508-0281d36e8b6d.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 10 m, No Yaw` Vehicle Reference` , Animator camera`Camera_0ec846dd-2332-4ea3-a508-0281d36e8b6d
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 2
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9ec76bd0-2384-4dfc-87f7-4ff4611fba17.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class (Motion Sensors, Trace Lines)` C-Class` , Math Model`VehLoad_9ec76bd0-2384-4dfc-87f7-4ff4611fba17
+
+PARSFILE Procedures\Proc_fce62114-6e9d-4cc6-90ff-2244a4447571.par
+#BlueLink28 Procedures`Cross Slope Sine Sweep Test` Ride Tests` , Procedure`Proc_fce62114-6e9d-4cc6-90ff-2244a4447571
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 15
+OPT_SC_ENGINE_BRAKING 0
+OPT_STOP 0
+TSTOP 60
+OPT_DIRECTION 1
+*SPEED 15
+*TSTOP 60
+
+*IMAGE_TYPE PASS_THROUGH
+WRITE_SENSOR_DETECT
+Title C-Class (Trace Lines): Roll Sine Sweep <* CS 2020.0 - Animated Trace Lines>
+CATEGORY * CS 2020.0 - Animated Trace Lines 
+DATASET_TITLE C-Class (Trace Lines): Roll Sine Sweep
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#C-Class Hatchback w/ Motion Sensors and Animated Trace Lines, performing a Roll Sine Sweep Test.
+#
+#Several types of Animated Trace Lines are used to show the trajectories of various locations on the vehicle, and are common in physical testing when a long exposure photograph is used to capture the motion of the vehicle.
+#
+#The animation shape of the vehicle is unlinked to clearly show the Motion Sensor locations and trace lines.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Animated Trace Lines } C-Class (Trace Lines): Roll Sine Sweep
+#Library : CarSim Run Control
+#DataSet : C-Class (Trace Lines): Roll Sine Sweep
+#Category: * CS 2020.0 - Animated Trace Lines
+#FileID  : Run_1f0c5245-29e5-4264-b241-1fb2846bff62
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

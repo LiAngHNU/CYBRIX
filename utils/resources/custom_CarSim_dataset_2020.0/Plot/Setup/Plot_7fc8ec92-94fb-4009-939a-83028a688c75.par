@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Plot: Setup`Event Time and Time Stamp vs. File Time`Event Control
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS T_Event, Time
+PLOTCHANNELS T_Stamp, Time
+
+#ENDMYellow
+
+XAXISLABEL File time - sec
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Event Time and Time Stamp vs. File Time
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#There are multiple time scales used in VS solvers. Three are involved in this plot setting:
+#
+#File time "Time" is the independent variable in the saved ERD file. Post-processing programs such as the plotter calculate this based on the position in the file and the time step associated with the file.
+#
+#Time stamp "T_Stamp" is time during the simulation. Writing to file can be disabled, in which case T_Stamp can jump to the next value when writing is enabled. T_Stamp can also be manipulated by advanced users with the RESTORE_STATE VS command.
+#
+#Event time "T_Event" is a local time often used to trigger events.
+#
+#Futher details about time scales are provided in the VS Commands Reference Manual.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Event Control } Event Time and Time Stamp vs. File Time
+#Library : Plot: Setup
+#DataSet : Event Time and Time Stamp vs. File Time
+#Category: Event Control
+#FileID  : Plot_7fc8ec92-94fb-4009-939a-83028a688c75
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Plot: Setup`Tire Ambient Temp (TameTire only)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output Tair_L1 = SV_TEMP_AIR_L1; units = C; Tire ambient air temperature, L1
+define_output Tair_R1 = SV_TEMP_AIR_R1; units = C; Tire ambient air temperature, R1
+define_output Tair_L2 = SV_TEMP_AIR_L2; units = C; Tire ambient air temperature, L2
+define_output Tair_R2 = SV_TEMP_AIR_R2; units = C; Tire ambient air temperature, R2
+define_output Ttrk_L1 = SV_TEMP_TRACK_L1; units = C; Tire track temperature, L1
+define_output Ttrk_R1 = SV_TEMP_TRACK_R1; units = C; Tire track temperature, R1
+define_output Ttrk_L2 = SV_TEMP_TRACK_L2; units = C; Tire track temperature, L2
+define_output Ttrk_R2 = SV_TEMP_TRACK_R2; units = C; Tire track temperature, R2
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS Tair_R1, time
+PLOTCHANNELS Tair_L2, time
+PLOTCHANNELS Tair_R2, time
+PLOTCHANNELS Ttrk_L1, time
+PLOTCHANNELS Ttrk_R1, time
+PLOTCHANNELS Ttrk_L2, time
+PLOTCHANNELS Ttrk_R2, time
+
+#ENDMYellow
+
+YAXISLABEL Tire ambient temperature
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tire Ambient Temp (TameTire only)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Tire Ambient Temp (TameTire only)
+#Library : Plot: Setup
+#DataSet : Tire Ambient Temp (TameTire only)
+#Category: Tire Kinematics
+#FileID  : Plot_c819546e-2705-479e-8b1a-9be2e10598ac
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

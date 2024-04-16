@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Road Wheel Steer Angle vs T_Stamp`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Steer_L1, t_stamp
+PLOTCHANNELS Steer_R1, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road Wheel Steer Angle vs T_Stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Road Wheel Steer Angle vs T_Stamp
+#Library : Plot: Setup
+#DataSet : Road Wheel Steer Angle vs T_Stamp
+#Category: Steering
+#FileID  : Plot_ee2bb856-6e44-455b-b4be-5b5560dc0413
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

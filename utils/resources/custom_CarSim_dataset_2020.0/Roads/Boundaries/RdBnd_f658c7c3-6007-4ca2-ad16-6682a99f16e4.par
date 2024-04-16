@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Road: Boundaries`Handling Course Edges`Road Boundary Stop Conditions
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 1
+#RingCtrl4 3
+#RingCtrl6 1
+#RingCtrl7 3
+*ROAD_ID_1 road_id
+*LMAX_1 0.5
+*LMIN_1 -8.5
+
+
+IROAD = GET_IROAD(road_id)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_L_BOUNDARY_CONSTANT 0.5
+ROAD_NEW_ID_CONSTANT = -1
+
+ISIDE = 2
+ROAD_L_BOUNDARY_CONSTANT -8.5
+ROAD_NEW_ID_CONSTANT = -1
+
+#EMBEDDED_NOTES
+#These limits apply to the current road, and were set up for the handling course example. It is defined with the left edge, so the bounary for the left side is 0.5 m, for the right side -8.5 which includes that track width.
+#
+#If this dataset is used with a driving simulator, it may be useful to increase these boundaries to a less-sensitive setting.
+#
+#The smaller setting is useful for preventing corner cutting when doing lap time optimization, for example.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Boundaries; { Road Boundary Stop Conditions } Handling Course Edges
+#Library : Road: Boundaries
+#DataSet : Handling Course Edges
+#Category: Road Boundary Stop Conditions
+#FileID  : RdBnd_f658c7c3-6007-4ca2-ad16-6682a99f16e4
+#Product : CarSim 2020.0
+#VehCode Road Boundaries
+
+END

@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Accel. Control: Commanded vs. Actual`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ax_Rd, Time
+PLOTCHANNELS Ax_SCcmd, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Accel. Control: Commanded vs. Actual
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#OPT_SC 5 enables an acceleration command with output variable Ax_SCcmd. The controller modulates the throttle and brake so that Ax_Rd matches.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Accel. Control: Commanded vs. Actual
+#Library : Plot: Setup
+#DataSet : Accel. Control: Commanded vs. Actual
+#Category: Controls: Driver
+#FileID  : Plot_5608ae47-21c9-479d-95fe-8c73f9f1f785
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

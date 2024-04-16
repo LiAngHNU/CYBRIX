@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName CarSim Run Control`8-Speed Trans, Var. Shift Duration`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_84980fe9-aeb3-4eb2-9960-95fb758e901a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0 0 0.4
+SET_RUN_COLOR 0 0 0.4
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_527cca93-c21c-4e44-9484-2a30a25b6ce6.par
+#BlueLink2 Vehicle: Assembly`F-Class, Sedan w/ 8-spd. Transmission` F-Class` , Math Model`Vehicle_527cca93-c21c-4e44-9484-2a30a25b6ce6
+
+PARSFILE Procedures\Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc.par
+#BlueLink28 Procedures`Ramp to 0.5 Throttle` Accel. and Brake Testing` , Procedure`Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc
+
+PARSFILE Roads\3D_Road\Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2
+
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 28
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 28
+*TSTART 0
+*SSTART 0
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823.par
+#BlueLink15 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823
+
+PARSFILE Plot\Setup\Plot_049add18-2b2a-4b49-b26f-108a1a01a497.par
+#BlueLink16 Plot: Setup`Fuel Rate` Powertrain` , Plot`Plot_049add18-2b2a-4b49-b26f-108a1a01a497
+
+PARSFILE Plot\Setup\Plot_772f39e1-e3b2-49d7-b5dd-9cab3049e936.par
+#BlueLink17 Plot: Setup`Gear Ratio` Powertrain` , Plot`Plot_772f39e1-e3b2-49d7-b5dd-9cab3049e936
+
+PARSFILE Plot\Setup\Plot_84cf249c-520a-44d4-965b-f2a898a45ad5.par
+#BlueLink18 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_84cf249c-520a-44d4-965b-f2a898a45ad5
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7.png
+WRITE_SENSOR_DETECT
+Title 8-Speed Trans, Var. Shift Duration <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE 8-Speed Trans, Var. Shift Duration
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#CarSim supports up to 18 speeds in a transmission.  This is an example of an F-Class Sedan equipped with an 8-speed transmission performing a 1/2-throttle straight line acceleration test.
+#
+#The new upshift and downshift duration settings are on each of the Powertrain: Shift Schedule screens.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } 8-Speed Trans, Var. Shift Duration
+#Library : CarSim Run Control
+#DataSet : 8-Speed Trans, Var. Shift Duration
+#Category: Powertrain Tests
+#FileID  : Run_84980fe9-aeb3-4eb2-9960-95fb758e901a
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName CarSim Run Control`Suspension Bump Stops`Suspension and Ride Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2a86ade3-73f1-491e-9b07-97b52f696964
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.4 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_cd7fd4e1-58f5-4013-8142-b81fd633e040.par
+#BlueLink28 Procedures`Chassis Twist Road` Ride Tests` , Procedure`Proc_cd7fd4e1-58f5-4013-8142-b81fd633e040
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Suspension Bump Stops <Suspension and Ride Tests>
+CATEGORY Suspension and Ride Tests 
+DATASET_TITLE Suspension Bump Stops
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback drives on a Chassis Twist Road.
+#
+#The Chassis Twist Road uses two sets of sine wave bumps (one per side) and are designed to exercise the full range of suspension travel, from full jounce to full rebound.
+#
+#This test is helpful in evaluating the effectiveness of the jounce and rebound stops, regardless of whether they are entered separately from the ride springs or incorporated directly into the spring data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Suspension and Ride Tests } Suspension Bump Stops
+#Library : CarSim Run Control
+#DataSet : Suspension Bump Stops
+#Category: Suspension and Ride Tests
+#FileID  : Run_2a86ade3-73f1-491e-9b07-97b52f696964
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

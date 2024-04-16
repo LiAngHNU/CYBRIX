@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName CarSim Run Control`Static Steer Test - Brakes Off`Steering Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c3449124-b95a-4e02-9636-c364bbbc3674
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_be745cb7-ac68-4a4b-ba26-8a584119b7f0.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 15 m` Road Reference` , Animator camera`Camera_be745cb7-ac68-4a4b-ba26-8a584119b7f0
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan` D-Class` , Math Model`Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89
+
+PARSFILE Procedures\Proc_ada610f5-c875-4108-aa87-a76be8860c31.par
+#BlueLink28 Procedures`Static Steer Test - Brakes Off` Driver Controls` , Procedure`Proc_ada610f5-c875-4108-aa87-a76be8860c31
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.005
+*FREQ_OUT 200
+tstep 0.0005
+iprint 10
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title Static Steer Test - Brakes Off <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Static Steer Test - Brakes Off
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan performs a Static Steering test while at rest.
+#
+#The Static Steer test uses Open-Loop Steering Wheel Angle vs. Time with a sine wave profile of constant frequency and amplitude.
+#
+#The brakes are not being applied.
+#
+#Plots are selected to show the steering wheel torque felt by the driver, the tire lateral forces, and the steering moments about the kingpin, just to name a few.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Tests } Static Steer Test - Brakes Off
+#Library : CarSim Run Control
+#DataSet : Static Steer Test - Brakes Off
+#Category: Steering Tests
+#FileID  : Run_c3449124-b95a-4e02-9636-c364bbbc3674
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`2A Delivery Truck`Traffic and Moving Objects: Commercial
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox6 1    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 4300
+OBJ_Y_LENGTH 2438
+OBJ_Z_LENGTH 2600
+*DZ_V 0
+*LAT_WC 2030
+*LAT_WC_2 2030
+*HWC 525
+*WHEEL_RATIO 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_d60d04eb-2861-4a33-9caf-af22e18d3d38.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -4.3
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -4.3
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.49875
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_decb50ef-3105-4445-8601-ee71749d3e3a.par
+#BlueLink1 Animator: Shape Assembly`2A Delivery Truck` Utility Vehicles` , Vehicle Body`ShpGrp_decb50ef-3105-4445-8601-ee71749d3e3a
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_fcd7404d-802e-481d-9350-19484c9c13e5.par
+#BlueLink3 Animator: Shape File Link`Delivery Van: Brake Lights` Trucks: Vans` , Brake Lights`Shape_fcd7404d-802e-481d-9350-19484c9c13e5
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_5ae795f7-b30c-4b97-880c-3490d16d8bd5.par
+#BlueLink10 Animator: Shape File Link`Delivery Van: Reverse Lights` Trucks: Vans` , Reverse lights`Shape_5ae795f7-b30c-4b97-880c-3490d16d8bd5
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_09ade48c-1ac2-4680-a0bc-e53feab77176
+
+EXPORT_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Traffic and Moving Objects: Commercial } 2A Delivery Truck
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 2A Delivery Truck
+#Category: Traffic and Moving Objects: Commercial
+#FileID  : AniVeh_d60d04eb-2861-4a33-9caf-af22e18d3d38
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

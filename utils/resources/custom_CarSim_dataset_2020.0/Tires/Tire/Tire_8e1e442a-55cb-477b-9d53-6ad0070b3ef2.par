@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Tire`205/45 R17`Performance Tires
+FZ_REF 5500
+X_LENGTH 308
+Z_LENGTH 308
+Y_LENGTH 205
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+#BlueLink4 Animator: Shape Assembly`Sports Car` Tires` , Animator`ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 205
+RRE 298
+R0 308
+FZ_TIRE_COEFFICIENT 242
+FZ_MAX 100000
+M_TIRE 20
+IT 1.2
+IT_XXZZ 0.7
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 80
+L_CONTACT_Y_CONSTANT 205
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_72f62f87-a55e-4d28-a911-404df7f5aedf.par
+#BlueLink0 Tire: Aligning Moment`205/45 R17` Performance Tires` , Aligning Moment`TireMz_72f62f87-a55e-4d28-a911-404df7f5aedf
+
+PARSFILE Tires\Fy\TireFy_87467cce-afcb-4aec-9285-c4e6b3c06fe8.par
+#BlueLink1 Tire: Lateral Force`205/45 R17` Performance Tires` , Lateral Force`TireFy_87467cce-afcb-4aec-9285-c4e6b3c06fe8
+
+PARSFILE Tires\Fx\TireFx_7f409457-f408-428f-86c8-f4b4d85715e1.par
+#BlueLink2 Tire: Longitudinal Force`205/45 R17` Performance Tires` , Longitudinal Force`TireFx_7f409457-f408-428f-86c8-f4b4d85715e1
+
+PARSFILE Tires\Camber_Thrust\CamStiff_5bb00c9b-fdc9-4e5d-a0c2-01d3727e6f83.par
+#BlueLink3 Tire: Camber Thrust Coefficient`205/45 R17` Performance Tires` , Camber Thrust`CamStiff_5bb00c9b-fdc9-4e5d-a0c2-01d3727e6f83
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 550 kg
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Performance Tires } 205/45 R17
+#Library : Tire
+#DataSet : 205/45 R17
+#Category: Performance Tires
+#FileID  : Tire_8e1e442a-55cb-477b-9d53-6ad0070b3ef2
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

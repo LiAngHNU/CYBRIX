@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Models: Simulink`ABS Controller`Braking Controls
+#RunMdlFile Extensions\Simulink\abs_CS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\abs_CS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_a34dca41-ec1d-4d68-a2fe-4aa68169657e.par
+#BlueLink0 I/O Channels: Import`ABS: Wheel Cylinder Pressures` Brake System: Control and External Models` , Import`Import_a34dca41-ec1d-4d68-a2fe-4aa68169657e
+
+PARSFILE IO_Channels\O_Channels\Export_df421d7e-0823-442a-b07c-0057573f0076.par
+#BlueLink1 I/O Channels: Export`ABS: Vehicle Speed, M/C Pressure` Brake System: Control and External Models` , Import/Export`Export_df421d7e-0823-442a-b07c-0057573f0076
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This “Models: Simulink” dataset links to a Simulink model of an ABS controller.
+#
+#The Simulink model calculates the brake system’s wheel cylinder pressure and this data is imported into CarSim. CarSim calculates a variety of vehicle properties including the equivalent longitudinal wheel speeds and brake master cylinder pressure, and this data is returned to Simulink.
+#
+#The time step is set to 0.0005 sec. (2000 Hz), the method is AB-2, and the option is checked to synchronize the CarSim kinematical exports with force imports.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from CarSim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Braking Controls } ABS Controller
+#Library : Models: Simulink
+#DataSet : ABS Controller
+#Category: Braking Controls
+#FileID  : Simlink_51b0592d-db5d-4a61-80bf-1ece86492108
+#Product : CarSim 2020.0
+#VehCode 
+
+END

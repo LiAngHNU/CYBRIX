@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Highway Accident Avoidance`Speed vs Station
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Highway Accident Avoidance
+#CheckBox2 0    
+#CheckBox3 1    
+*SCALAR 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 1
+SPEED_ID_SC SPEED_TARGET_ID
+#CheckBox0 1    
+OPT_BK_SC 1
+#CheckBox1 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox4 0    
+OPT_SC_2018 0
+SPEED_KI 0.1
+SPEED_KP 1
+VLOW_STOP -1
+BK_PERF_SC 1.6
+FPD_PERF_SC 0.1
+PBK_CON_MAX_SC 10
+SPEED_KP3 0
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE LINEAR_FLAT
+0, 125
+50, 100
+100, 90
+200, 70
+375, 80
+500, 100
+520, 125
+600, 125
+1000, 125
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs Station } Highway Accident Avoidance
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Highway Accident Avoidance
+#Category: Speed vs Station
+#FileID  : SpdTime_cf657bb1-ae7f-4f59-a797-79861d0a6594
+#Product : CarSim 2020.0
+#VehCode Target Speed
+
+END

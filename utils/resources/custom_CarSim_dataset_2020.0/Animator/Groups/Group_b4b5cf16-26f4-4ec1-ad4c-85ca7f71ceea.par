@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName Animator: Group`Radar Beam Pyramid`ADAS Sensor Detection Indicators
+PARSFILE Animator\Frames\Frame_1df9943b-a142-471e-b0c7-36a7043b7fc4.par
+#BlueLink10 Animator: Reference Frame`Vehicle X-Y-Z-Yaw (Radar Not Detected)` Tracking: Vehicle` , Miscellaneous`Frame_1df9943b-a142-471e-b0c7-36a7043b7fc4
+
+#MiscYellow0
+X_LENGTH 65
+Y_LENGTH 12.25
+Z_LENGTH 5
+DEFINE_OUTPUT NotDetec = ~detect
+#ENDMYellow
+
+PARSFILE Animator\STL\Shape_8add5813-4516-4978-944c-b28761104db7.par
+#BlueLink11 Animator: Shape File Link`Pyramid: 1m Square, 1m Height` Geometric Shapes` , Miscellaneous`Shape_8add5813-4516-4978-944c-b28761104db7
+
+#MiscYellow1
+ANI_NotDetec
+SET_COLOR green
+set_transparency .3
+#ENDMYellow
+
+PARSFILE Animator\Frames\Frame_1c8ec75e-b881-4955-8e92-8945c9ec031f.par
+#BlueLink12 Animator: Reference Frame`Vehicle X-Y-Z-Yaw (Radar Detected)` Tracking: Vehicle` , Miscellaneous`Frame_1c8ec75e-b881-4955-8e92-8945c9ec031f
+
+#MiscYellow2
+X_LENGTH 65
+Y_LENGTH 12.25
+Z_LENGTH 5
+#ENDMYellow
+
+PARSFILE Animator\STL\Shape_8add5813-4516-4978-944c-b28761104db7.par
+#BlueLink13 Animator: Shape File Link`Pyramid: 1m Square, 1m Height` Geometric Shapes` , Miscellaneous`Shape_8add5813-4516-4978-944c-b28761104db7
+
+#MiscYellow3
+SET_COLOR red
+set_transparency .3
+#ENDMYellow
+
+*X_REF_LENGTH 2756
+*Y_REF_LENGTH 1988
+*Z_REF_LENGTH 1272
+
+#CheckBox0 0    
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink20 Animator: Camera Setup`YZ-Plane, No Offsets (with Yaw)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+
+#EMBEDDED_NOTES
+#This shape is used to represent a radar field.  It is attached to a reference frame and given some reference lengths for sizing purposes.
+#
+#You need manually to synchronize the animation shape sizes with the actual simulation settings in the Simulink model "Radar_Acc_CS8.mdl").
+#
+#Open the above Simulink model and double-click "Radar Sensor" block. Then, you will see "View Angle" and "Distance Range".
+#
+#For example, if "Distance Range" is 70 (m), you have to set X_LENGTH to 70.  If "View Angle" is 10 (deg), you have to set Y_LENGTH to 12.25, which can be obtained by the following hand equations:
+#
+#Y_LENGTH = {tan(View Angle/2) * Distance Range} * 2.
+#
+#Z_LENGTH (height of the radar range) is not involved in the simulation. Therefore, you can adopt any number in order to show good looking animation.
+#
+#This screen is set up to change the visibility of two shape, one green and one red. The color indicates that detection has occurred.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Group; { ADAS Sensor Detection Indicators } Radar Beam Pyramid
+#Library : Animator: Group
+#DataSet : Radar Beam Pyramid
+#Category: ADAS Sensor Detection Indicators
+#FileID  : Group_b4b5cf16-26f4-4ec1-ad4c-85ca7f71ceea
+#Product : CarSim 2020.0
+#VehCode Animator Group
+
+END

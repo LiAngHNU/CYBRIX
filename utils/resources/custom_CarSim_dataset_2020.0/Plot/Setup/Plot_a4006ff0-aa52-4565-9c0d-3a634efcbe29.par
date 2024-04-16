@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Accel. of CG's vs. Station`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ay, Station
+PLOTCHANNELS Ay_2, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Accel. of CG's vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Lateral Accel. of CG's vs. Station
+#Library : Plot: Setup
+#DataSet : Lateral Accel. of CG's vs. Station
+#Category: Vehicle Motion
+#FileID  : Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

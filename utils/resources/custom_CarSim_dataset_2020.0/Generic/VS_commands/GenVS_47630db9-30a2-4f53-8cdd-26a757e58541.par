@@ -1,0 +1,96 @@
+PARSFILE
+#FullDataName Generic VS Commands`Suspension Dampers (2D, Base)`2D Dampers
+#VehCode VS Commands
+
+#MiscYellow0
+! VS Commands for use with Generic 2D Tables representing Damper Force vs. Damper Compression
+! Rate and Damper Compression. The 2D tables use the same Force vs. Compression Rate data for all
+! compression positions. 
+
+! Create two tables for the suspension dampers: one for the front suspension, and another for the rear
+! suspension. If individual dampers are desired at each wheel position, the table index needs to be 
+! changed from 2 to 4, and a total of four Generic Tables will need to be created and linked. 
+define_table Damper_2D_Base 2
+
+DAMPER_2D_Base_GAIN(1)   1;  ! Gain on the output of the 2D Table, Front. Adjust to scale the damper force
+DAMPER_2D_Base_GAIN(2)   1;  ! Gain on the output of the 2D Table, Rear. Adjust to scale the damper force
+
+! Use eq_in to calculate the Damper Force from the Damper Compression Rate and Damper 
+! Compression, as represented by the Generic Tables with a user-defined root keyword of 
+! Damper_2D_Base.
+
+eq_in Imp_FD_L1 = Damper_2D_Base(CmpD_L1, CmpRD_L1, 1); ! Left Front
+eq_in Imp_FD_R1 = Damper_2D_Base(CmpD_R1, CmpRD_R1, 1); ! Right Front
+eq_in Imp_FD_L2 = Damper_2D_Base(CmpD_L2, CmpRD_L2, 2); ! Left Rear
+eq_in Imp_FD_R2 = Damper_2D_Base(CmpD_R2, CmpRD_R2, 2); ! Right Rear
+
+
+! Import Commands
+Imp_FD_L1 Replace 14.45; ! The initial value represents the initial damper force.
+Imp_FD_R1 Replace 14.45;
+Imp_FD_R2 Replace 14.45;
+Imp_FD_L2 Replace 14.45;
+
+! Outputs for plotting
+define_output test_df = CmpRD_L1*1000;
+define_output test_dc = CmpD_L1*1000;
+
+define_output TStatL1 = Imp_FD_L1;
+define_output TStatR1 = Imp_FD_R1;
+define_output TStatL2 = Imp_FD_L2;
+define_output TStatR2 = Imp_FD_R2;
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_870b4242-51a3-4be3-ae1f-a580f5afff40.par
+#BlueLink0 Generic Table`Suspension Damper, Front (2D, Base)` 2D Dampers` , Miscellaneous`GenTab_870b4242-51a3-4be3-ae1f-a580f5afff40
+
+PARSFILE Generic\tables\GenTab_c585848e-94c4-4398-a4d7-09624b8b3052.par
+#BlueLink1 Generic Table`Suspension Damper, Rear (2D, Base)` 2D Dampers` , Miscellaneous`GenTab_c585848e-94c4-4398-a4d7-09624b8b3052
+
+PARSFILE Plot\Setup\Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59.par
+#BlueLink3 Plot: Setup`Jounce - Front` Suspension Motion` , Plot`Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59
+
+PARSFILE Plot\Setup\Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d.par
+#BlueLink4 Plot: Setup`Jounce - Rear` Suspension Motion` , Plot`Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d
+
+PARSFILE Plot\Setup\Plot_5fa77236-daaf-435e-9b3d-be940793ad0c.par
+#BlueLink5 Plot: Setup`Damping Force (Axle 1)` Suspension Forces and Moments` , Plot`Plot_5fa77236-daaf-435e-9b3d-be940793ad0c
+
+PARSFILE Plot\Setup\Plot_8f2af66e-bb6d-4c49-a046-e4fc1fa4d1f2.par
+#BlueLink6 Plot: Setup`Damping Force (Axle 2)` Suspension Forces and Moments` , Plot`Plot_8f2af66e-bb6d-4c49-a046-e4fc1fa4d1f2
+
+PARSFILE Plot\Setup\Plot_afa63bdd-493f-481e-a710-40050136d955.par
+#BlueLink7 Plot: Setup`Damper Compression (Axle 1)` Suspension Motion` , Plot`Plot_afa63bdd-493f-481e-a710-40050136d955
+
+PARSFILE Plot\Setup\Plot_0db557e6-f324-418b-92eb-2993ca28925e.par
+#BlueLink8 Plot: Setup`Damper Compression (Axle 2)` Suspension Motion` , Plot`Plot_0db557e6-f324-418b-92eb-2993ca28925e
+
+PARSFILE Plot\Setup\Plot_739654d5-4213-4d65-bca7-509bd982dd89.par
+#BlueLink9 Plot: Setup`Damper Compression Rate (Axle 1)` Suspension Motion` , Plot`Plot_739654d5-4213-4d65-bca7-509bd982dd89
+
+PARSFILE Plot\Setup\Plot_d54c8ae6-df15-40a1-8f4c-71ca7c0e5473.par
+#BlueLink10 Plot: Setup`Damper Compression Rate (Axle 2)` Suspension Motion` , Plot`Plot_d54c8ae6-df15-40a1-8f4c-71ca7c0e5473
+
+PARSFILE Plot\Setup\Plot_ced72a3a-a171-4651-801d-49c33d5ee713.par
+#BlueLink11 Plot: Setup`Damper Force vs. Damper Rate (Axle 1)` Suspension Forces and Moments` , Plot`Plot_ced72a3a-a171-4651-801d-49c33d5ee713
+
+PARSFILE Plot\Setup\Plot_03e02490-57c9-403b-85be-e4eb01ae6330.par
+#BlueLink12 Plot: Setup`Damper Force vs. Damper Rate (Axle 2)` Suspension Forces and Moments` , Plot`Plot_03e02490-57c9-403b-85be-e4eb01ae6330
+
+
+#EMBEDDED_NOTES
+#This Generic VS Commands dataset is used to calculate damper forces based on Generic Tables.
+#
+#This is a baseline condition, which means the linked 2D tables use the same Damper Force vs. Compression Rate data for all damper compression positions.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { 2D Dampers } Suspension Dampers (2D, Base)
+#Library : Generic VS Commands
+#DataSet : Suspension Dampers (2D, Base)
+#Category: 2D Dampers
+#FileID  : GenVS_47630db9-30a2-4f53-8cdd-26a757e58541
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

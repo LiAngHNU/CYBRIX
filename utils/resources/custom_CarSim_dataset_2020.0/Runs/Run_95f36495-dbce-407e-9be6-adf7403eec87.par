@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`DLC, Constant Target Speed`Driver Model
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_95f36495-dbce-407e-9be6-adf7403eec87
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_de93188e-85a0-4e48-a39b-ef07b4e54be0.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m, No Yaw` Vehicle Reference` , Animator camera`Camera_de93188e-85a0-4e48-a39b-ef07b4e54be0
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan` D-Class` , Math Model`Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89
+
+PARSFILE Procedures\Proc_8006150e-65e6-40bf-86e1-bee7f9c9b983.par
+#BlueLink28 Procedures`DLC w/ Constant Speed Target` Driver Controls` , Procedure`Proc_8006150e-65e6-40bf-86e1-bee7f9c9b983
+
+
+SPECIAL_PARSFILE Runs\Run_3c0b0556-bee4-4b58-b62a-723cb72a4e75.par
+#BlueLink23 CarSim Run Control`DLC, Preview Speed Control` Driver Model` , Overlay run or ERD file`Run_3c0b0556-bee4-4b58-b62a-723cb72a4e75
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title DLC, Constant Target Speed <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE DLC, Constant Target Speed
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan performs a double lane change maneuver with a constant target speed of 48 km/h. The target speed was chosen to allow the car to follow the path with a minimum of error.
+#
+#The Speed Controller uses the option for the Target speed from path preview, allowing a combination of driving styles and acceleration limits.
+#
+#The Closed-Loop Driver Model Preview Time is short (0.5 seconds), resulting in increased sensitivity to the path's lateral target.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Driver Model } DLC, Constant Target Speed
+#Library : CarSim Run Control
+#DataSet : DLC, Constant Target Speed
+#Category: Driver Model
+#FileID  : Run_95f36495-dbce-407e-9be6-adf7403eec87
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

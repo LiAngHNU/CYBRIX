@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Mode/Fuel Variables`Hybrid Powertrain Imports
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_aa479559-f20c-4b95-a2cc-d8fb4563a531\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_HYBRID_MODE Add 0.0! 0
+IMP_FUEL_RT Replace 0.0! 1
+#ENDMYellow
+
+#MiscYellow1
+define_import IMP_HYBRID_MODE
+define_output ModeHybr = IMP_HYBRID_MODE; -; Hybrid mode
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Ext. Hybrid: US06 Acceleration` Simulink and LabVIEW Models` , example run`Run_aa479559-f20c-4b95-a2cc-d8fb4563a531
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Hybrid Powertrain Imports } Mode/Fuel Variables
+#Library : I/O Channels: Import
+#DataSet : Mode/Fuel Variables
+#Category: Hybrid Powertrain Imports
+#FileID  : Import_fca7b215-290c-4378-b375-cd2f8383b92e
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

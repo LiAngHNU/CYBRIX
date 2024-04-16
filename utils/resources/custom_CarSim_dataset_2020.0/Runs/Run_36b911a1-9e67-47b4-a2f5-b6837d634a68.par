@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName CarSim Run Control`Baja Driving`Driver Model
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_36b911a1-9e67-47b4-a2f5-b6837d634a68
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 8
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0.024
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e98e176c-e871-4ba1-a001-e662183eac1e.par
+#BlueLink2 Vehicle: Assembly`Off-Road Pickup: Ind_SA` Pickup Trucks` , Math Model`Vehicle_e98e176c-e871-4ba1-a001-e662183eac1e
+
+PARSFILE Procedures\Proc_e8b02715-0a62-4bd3-a5ac-590ec0830f2a.par
+#BlueLink28 Procedures`Off-Road/City Loop, Aggressive Driving` Driver Controls` , Procedure`Proc_e8b02715-0a62-4bd3-a5ac-590ec0830f2a
+
+PARSFILE Animator\HUD\HUD_ce21d6ea-73a6-4297-93d2-ebb98b8e52c5.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, Speedo w/ Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_ce21d6ea-73a6-4297-93d2-ebb98b8e52c5
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_eb06e89d-a83e-4844-b6db-5f71ce5ff9a1.png
+WRITE_SENSOR_DETECT
+Title Baja Driving <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Baja Driving
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#In 2019.1, adjusted to use a single point preview.
+#
+#A pickup truck with off-road-oriented suspension and tire data drives on a loop consisting of off-road and city sections.
+#
+#The Speed Controller uses the option for the Target speed from path preview, allowing a combination of driving styles and acceleration limits.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Driver Model } Baja Driving
+#Library : CarSim Run Control
+#DataSet : Baja Driving
+#Category: Driver Model
+#FileID  : Run_36b911a1-9e67-47b4-a2f5-b6837d634a68
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

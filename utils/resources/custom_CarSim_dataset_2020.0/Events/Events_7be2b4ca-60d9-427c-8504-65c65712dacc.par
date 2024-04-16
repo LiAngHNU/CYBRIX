@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Events`ESC Norm On`Rollover Test
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+#MiscYellow0
+OPT_ESC_ON 0
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Turning ESC 'off' on a normally on system.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Rollover Test } ESC Norm On
+#Library : Events
+#DataSet : ESC Norm On
+#Category: Rollover Test
+#FileID  : Events_7be2b4ca-60d9-427c-8504-65c65712dacc
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

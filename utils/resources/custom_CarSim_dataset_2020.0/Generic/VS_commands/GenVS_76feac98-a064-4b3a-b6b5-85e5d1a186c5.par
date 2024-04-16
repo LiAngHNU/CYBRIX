@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Generic VS Commands`Euro NCAP: Single CCrb Test`ADAS Support
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_PARAMETER Start_Distance = 12; m ; Distance to EVT when test starts
+DEFINE_PARAMETER t_bk = 4; s ; Start time of braking event
+
+EQ_OUT Vx_EVT = SPEED_TARGET(0, T - t_bk, 2)
+EQ_INIT Vx_EVT = SPEED_TARGET(0, T - t_bk, 2)
+
+EQ_PRE_INIT SSTART = START_EVT - Start_Distance - X_Sensor ! Initial location of VUT
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed.par
+#BlueLink3 Plot: Setup`Distances for Closest 2 Objects, Sensor 1` ADAS Sensor Detections` , Plot`Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed
+
+
+#EMBEDDED_NOTES
+#Change for 2019.1: Add EQ_INIT Vx_EVT to work with newer moving object screen.
+#
+#This dataset has a few commands to support the CCRb test. The VUT and EVT initially travel at the same speed with a starting distance between them set to the parameter Start_Distance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Euro NCAP: Single CCrb Test
+#Library : Generic VS Commands
+#DataSet : Euro NCAP: Single CCrb Test
+#Category: ADAS Support
+#FileID  : GenVS_76feac98-a064-4b3a-b6b5-85e5d1a186c5
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

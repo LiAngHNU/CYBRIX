@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Events`A. Driver Drifts to Right`Wind-tripped Rollover
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 station
+*VALUE1 260
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Driver\StrDM_44de3e9b-90aa-4f9c-a2c8-991d1842a398.par
+#BlueLink11 Control: Steering by the Closed-loop Driver Model`Drifts to the Right` Avoidance, Merges, and Drifiting` , Miscellaneous`StrDM_44de3e9b-90aa-4f9c-a2c8-991d1842a398
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink14 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Miscellaneous`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+MAKE_EVENT station > 260 ; Events\Events_e0dad738-c3a9-46f4-bd66-a6398f0e8664.par
+#BlueLink0 Events`B. Wind Gust` Wind-tripped Rollover` , Events`Events_e0dad738-c3a9-46f4-bd66-a6398f0e8664
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Vehicle drives down the road at 145 km/h.  When it is 260 m down the road, the next event is triggered.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Wind-tripped Rollover } A. Driver Drifts to Right
+#Library : Events
+#DataSet : A. Driver Drifts to Right
+#Category: Wind-tripped Rollover
+#FileID  : Events_0c2a3e25-3f96-41de-b583-79ab424689d5
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

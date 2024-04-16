@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Events`A. Get Stuck`Shift 2WD to 4WD
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 -1
+MAKE_EVENT vx < -1 ; Events\Events_029a1558-e259-4a7b-9d51-eee98a1227f8.par
+#BlueLink0 Events`B. Stop - Shift to Neutral` Shift 2WD to 4WD` , Events`Events_029a1558-e259-4a7b-9d51-eee98a1227f8
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle climbs a hill.  When the vehicle begins to roll backwards (i.e. it gets stuck) the next event is triggered.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Shift 2WD to 4WD } A. Get Stuck
+#Library : Events
+#DataSet : A. Get Stuck
+#Category: Shift 2WD to 4WD
+#FileID  : Events_5747c0ec-21e9-4e49-9559-65946d5c7598
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

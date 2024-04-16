@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Hybrid: Rear In-Wheel Motors`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c8d09c6d-728e-48a8-b64b-8d0241554c26
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 8
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_d8f9f514-076f-41b5-9f91-f689875eeeb8.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`E-Class, Sedan w/ Hybrid Batteries` E-Class` , Math Model`VehLoad_d8f9f514-076f-41b5-9f91-f689875eeeb8
+
+PARSFILE Procedures\Proc_fa43ada2-6709-46dc-945f-fab14879675c.par
+#BlueLink28 Procedures`Full Throttle Acceleration` Accel. and Brake Testing` , Procedure`Proc_fa43ada2-6709-46dc-945f-fab14879675c
+
+PARSFILE Roads\3D_Road\Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Hybrid: Rear In-Wheel Motors <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Hybrid: Rear In-Wheel Motors
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#VS Commands are used to define drive torque applied to the rear wheels and reacted at the unsprung mass, representing the effect of in-wheel motors such as those used in some hybrid powertrains.
+#
+#Drive torques are applied to the wheels and reacted by the unsprung mass for independent suspensions, and the sprung mass for solid axles.
+#
+#Brake torques are applied to the wheels with reactions at the unsprung mass and always oppose the direction of wheel rotation.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Hybrid: Rear In-Wheel Motors
+#Library : CarSim Run Control
+#DataSet : Hybrid: Rear In-Wheel Motors
+#Category: Powertrain Tests
+#FileID  : Run_c8d09c6d-728e-48a8-b64b-8d0241554c26
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

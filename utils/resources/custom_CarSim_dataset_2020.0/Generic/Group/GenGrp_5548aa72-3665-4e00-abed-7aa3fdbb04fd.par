@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Generic Data Group`HUD for Normally Off ESC`HUD Gauges
+#VehCode Generic Group
+#MiscYellow0
+OPT_ESC_ON  0
+DEFINE_OUTPUT ESC_on = OPT_ESC_ON;
+DEFINE_OUTPUT ESC_noof = NOT(OPT_ESC_ON);
+DEFINE_OUTPUT esc_icon = ESC_active;
+#ENDMYellow
+
+PARSFILE Animator\HUD\HUD_2756d552-9b8f-40af-b7ce-e7cd567c1caf.par
+#BlueLink0 Animator: HUD`ESC` ADAS Alerts` , Link 1`HUD_2756d552-9b8f-40af-b7ce-e7cd567c1caf
+
+
+#MiscYellow1
+ADD_ENTITY hud_text HUD_ESC_labelactive
+  prefix ESC active
+  location -160 150 100 18
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+  opacity esc_icon
+END_ENTITY hud_text HUD_ESC_labelactive
+#ENDMYellow
+
+PARSFILE Generic\Lists\GenList_d765846b-3563-49ae-a339-561c7f63a560.par
+#BlueLink1 Generic Data Lists`ESC Normally Off` HUD Indicators` , Link 2`GenList_d765846b-3563-49ae-a339-561c7f63a560
+
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#The top yellow field defines variables that are used to control when the HUD elements are displayed.  OPT_ESC_ON sets the on/off status of the ESC.
+#
+#The "ESC" dataset defines the HUD element that indicates that the ESC is active.
+#
+#The second yellow field defines the "ESC active" label.
+#
+#The "ESC Normally Off" dataset defines the HUD elements for a "normally off" ESC.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { HUD Gauges } HUD for Normally Off ESC
+#Library : Generic Data Group
+#DataSet : HUD for Normally Off ESC
+#Category: HUD Gauges
+#FileID  : GenGrp_5548aa72-3665-4e00-abed-7aa3fdbb04fd
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

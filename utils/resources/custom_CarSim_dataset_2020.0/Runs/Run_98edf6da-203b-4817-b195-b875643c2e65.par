@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName CarSim Run Control`C-Class Hatchback: 2D Dampers (Base)`* CS 2020.0 - Dampers with 2D tables
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_98edf6da-203b-4817-b195-b875643c2e65
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_ee2cc943-58b4-4cbd-bb5b-75bfea5e697f.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatch w/ 2D Dampers (Base)` C-Class` , Math Model`VehLoad_ee2cc943-58b4-4cbd-bb5b-75bfea5e697f
+
+PARSFILE Procedures\Proc_5a89142f-1f49-4856-b138-d0b22d42c412.par
+#BlueLink28 Procedures`Bounce Sine Sweep Test` Ride Tests` , Procedure`Proc_5a89142f-1f49-4856-b138-d0b22d42c412
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title C-Class Hatchback: 2D Dampers (Base) <* CS 2020.0 - Dampers with 2D tables>
+CATEGORY * CS 2020.0 - Dampers with 2D tables 
+DATASET_TITLE C-Class Hatchback: 2D Dampers (Base)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback performs a Bounce Sine Sweep test.
+#
+#Linked to the Vehicle Loaded screen are VS Commands and Generic Tables that represent the suspension dampers with two independent variables: Damper Compression Rate and Damper Compression.
+#
+#The same data for Force vs. Compression Rate is used for all compression positions, recreating the performance of a 1D damper and allowing this run to serve as a baseline reference.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Dampers with 2D tables } C-Class Hatchback: 2D Dampers (Base)
+#Library : CarSim Run Control
+#DataSet : C-Class Hatchback: 2D Dampers (Base)
+#Category: * CS 2020.0 - Dampers with 2D tables
+#FileID  : Run_98edf6da-203b-4817-b195-b875643c2e65
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

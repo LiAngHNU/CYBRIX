@@ -1,0 +1,128 @@
+PARSFILE
+#FullDataName Procedures`Handling Course, Race Driving`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -200
+TSTART_WRITE = 0;
+TSTOP 80
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 130
+*TSTOP 80
+*TSTART 0
+*SSTART -200
+
+PARSFILE Control\Driver\StrDM_f11c27c8-7d18-47ac-9922-9799f383e281.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.25s Single Preview` Constant Position: No Offset` , Steering`StrDM_f11c27c8-7d18-47ac-9922-9799f383e281
+
+PARSFILE Control\Gear_at\GearCL_3d656f9b-b010-469b-b86b-d4e11ee52bef.par
+#BlueLink30 Control: Shifting (Closed Loop)`MT (All Gears w/ Fast Clutch)` Closed-Loop Shifting` , Shifting Control`GearCL_3d656f9b-b010-469b-b86b-d4e11ee52bef
+
+PARSFILE Control\Speed_path\SpdPath_5592cd5b-66ff-476b-bef9-70bf87594a83.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`Race Driving (GT w/ Var. Gains)` Aggressive Driving` , Speed vs. station`SpdPath_5592cd5b-66ff-476b-bef9-70bf87594a83
+
+PARSFILE Roads\3D_Road\Road_2e2d68ea-3745-4439-97f8-47f23dcb3105.par
+#BlueLink0 Road: 3D Surface (All Properties)`Handling Course` Self-Contained Scenes` , Miscellaneous`Road_2e2d68ea-3745-4439-97f8-47f23dcb3105
+
+PARSFILE Roads\Center_XY\PathXY_c507bbb7-cf7a-44da-a069-618a787b17a0.par
+#BlueLink1 Path: X-Y Coordinates`Handling Course Race Line` Handling Course` , Miscellaneous`PathXY_c507bbb7-cf7a-44da-a069-618a787b17a0
+
+PARSFILE Animator\Arrows\Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887.par
+#BlueLink2 Animator: Wheel Arrows and Other Indicators`Tire Skid Marks (2 Axles)` Skid Marks` , Miscellaneous`Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887
+
+PARSFILE Roads\Profiles\Profile_3bff0c88-84c1-408a-843d-956a1e2abe43.par
+#BlueLink3 Surface: Roughness Profiles`Example Road Roughness` ` , Miscellaneous`Profile_3bff0c88-84c1-408a-843d-956a1e2abe43
+
+PARSFILE Events\Events_a81087d1-a61e-4368-b969-d92ee798f876.par
+#BlueLink7 Events`Stop Condition: Record Exactly 1 Lap` Recording a Lap` , Miscellaneous`Events_a81087d1-a61e-4368-b969-d92ee798f876
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink34 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+PARSFILE Plot\Setup\Plot_28157809-95ed-4de0-9113-82d4a0dd0b42.par
+#BlueLink10 Plot: Setup`Steering Wheel Angle vs Station` Steering` , Plot`Plot_28157809-95ed-4de0-9113-82d4a0dd0b42
+
+PARSFILE Plot\Setup\Plot_8158864c-cc8e-44ba-8dd8-e3af665dd87c.par
+#BlueLink11 Plot: Setup`Throttle: Control Input vs Station` Controls: Driver` , Plot`Plot_8158864c-cc8e-44ba-8dd8-e3af665dd87c
+
+PARSFILE Plot\Setup\Plot_2069b93a-8ce4-4265-a146-4941167b0a8c.par
+#BlueLink12 Plot: Setup`Brake Control: M/C Pressure vs Station` Braking` , Plot`Plot_2069b93a-8ce4-4265-a146-4941167b0a8c
+
+PARSFILE Plot\Setup\Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e.par
+#BlueLink13 Plot: Setup`Wheel Cylinder Pressures` Braking` , Plot`Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e
+
+PARSFILE Plot\Setup\Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b.par
+#BlueLink14 Plot: Setup`Longitudinal Forces` Tire Forces and Moments` , Plot`Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b
+
+PARSFILE Plot\Setup\Plot_0773e087-151d-42db-a308-f02b7b6ee48d.par
+#BlueLink15 Plot: Setup`Lateral Forces` Tire Forces and Moments` , Plot`Plot_0773e087-151d-42db-a308-f02b7b6ee48d
+
+PARSFILE Plot\Setup\Plot_ef39a2c7-73b1-4a60-b806-3c2f6bbb3539.par
+#BlueLink16 Plot: Setup`Roll Angle of Sprung Masses vs. Station` Vehicle Motion` , Plot`Plot_ef39a2c7-73b1-4a60-b806-3c2f6bbb3539
+
+PARSFILE Plot\Setup\Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c.par
+#BlueLink17 Plot: Setup`Aerodynamic Forces` Aerodynamics and Wind` , Plot`Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c
+
+PARSFILE Plot\Setup\Plot_7206d25c-6cfe-42fa-9d2d-0c17692987ed.par
+#BlueLink18 Plot: Setup`Path Curvature vs. Station` Tracking` , Plot`Plot_7206d25c-6cfe-42fa-9d2d-0c17692987ed
+
+PARSFILE Plot\Setup\Plot_b3a6669c-ce2f-474d-a6e2-b8f6e738f598.par
+#BlueLink19 Plot: Setup`Ground Slope on Path vs. Station` Ground` , Plot`Plot_b3a6669c-ce2f-474d-a6e2-b8f6e738f598
+
+PARSFILE Plot\Setup\Plot_a883e5dc-fa62-4460-8b54-d60ead53be33.par
+#BlueLink20 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a883e5dc-fa62-4460-8b54-d60ead53be33
+
+PARSFILE Plot\Setup\Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29.par
+#BlueLink21 Plot: Setup`Lateral Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29
+
+PARSFILE Plot\Setup\Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1.par
+#BlueLink22 Plot: Setup`Longitudinal vs. Lateral Accel.` Vehicle Motion` , Plot`Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1
+
+PARSFILE Plot\Setup\Plot_b86d8c49-db4e-400a-a282-322334d38a2e.par
+#BlueLink23 Plot: Setup`Vehicle Sideslip Angle` Vehicle Motion` , Plot`Plot_b86d8c49-db4e-400a-a282-322334d38a2e
+
+PARSFILE Plot\Setup\Plot_033c55dc-d64e-4e15-89b2-56afa03c4255.par
+#BlueLink24 Plot: Setup`Vehicle Sideslip Angle vs. Station` Vehicle Motion` , Plot`Plot_033c55dc-d64e-4e15-89b2-56afa03c4255
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink25 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink26 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+
+#EMBEDDED_NOTES
+#Target speed from path preview:
+#
+#The "Target speed from path preview" calculates a speed target over a preview distance to maintain the lateral and longitudinal accelerations with specified limits. Both the preview distance and acceleration limits can be defined on the screen.
+#
+#When the speed target is calculated from a preview of the target path, the preview times for the driver-path follower are typically much shorter than for cases where the driver-path follower doesn't preview the path to obtain a target speed. For example, these preview times can be 0.1 - 0.15 seconds using path preview vs. 0.5 - 1.5 seconds for situations where the path preview is not considered.
+#
+#Since the target speed is very tightly tied to the exact path geometry, the path follower must be tied to it as well. As a result, "look ahead" distances are short.
+#
+#Handling course target path:
+#The handling course target path is defined using a set of X-Y coordinates such as those that might be obtained from GPS or other instruments.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Handling Course, Race Driving
+#Library : Procedures
+#DataSet : Handling Course, Race Driving
+#Category: Driver Controls
+#FileID  : Proc_68568516-45a1-4979-94e7-60e02041219d
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

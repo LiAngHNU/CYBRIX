@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Bump (Very Sharp)`Ride Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_3aad8099-4e43-4d4b-8064-c8ea3e43777d.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Bump (Very Sharp)
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+PARSFILE Roads\dZ_Map\RdMapZ_e39b90bf-0123-41f1-9f82-bf93ee862c21.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Long, Sharp Bump` Bumps` , Miscellaneous`RdMapZ_e39b90bf-0123-41f1-9f82-bf93ee862c21
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_b0b87981-01dd-4ced-bf2c-77d2bffda32f.par
+#BlueLink4 Road: Animator Surface Shapes`Sharp Bump` Ride Road Shapes` , Road shape definitions`RdShape_b0b87981-01dd-4ced-bf2c-77d2bffda32f
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_a45b0cec-2b9c-4e91-b3d4-697683a1bb37.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 25 El, 49 m` Road Reference` , Camera`Camera_a45b0cec-2b9c-4e91-b3d4-697683a1bb37
+
+parsfile Roads\3D_Road\Road_3aad8099-4e43-4d4b-8064-c8ea3e43777d.ani
+
+#EMBEDDED_NOTES
+#This flat road with a single sharp bump is used to compare different tire models.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Ride Roads } Bump (Very Sharp)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Bump (Very Sharp)
+#Category: Ride Roads
+#FileID  : Road_3aad8099-4e43-4d4b-8064-c8ea3e43777d
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

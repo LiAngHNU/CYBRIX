@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName CarSim Run Control`Intersection, 3-Way, Traffic`Road Networks: Intersections and Roundabouts
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_3e840921-6b63-452e-9e12-51063ebebdf6
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5.par
+#BlueLink0 Animator: Camera Setup`254 Azm, 8 El, 15 m, No Yaw` Vehicle Reference` , Animator camera`Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_bd966ed1-00c8-4040-b7b9-2b29752464c8.par
+#BlueLink28 Procedures`Intersection, 3-Way with Curbs` Road Networks` , Procedure`Proc_bd966ed1-00c8-4040-b7b9-2b29752464c8
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Generic\Group\GenGrp_7da86aaf-5382-452b-a30c-ba55c68ab153.par
+#BlueLink10 Generic Data Group`Traffic for 3-Way Intersection` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_7da86aaf-5382-452b-a30c-ba55c68ab153
+
+#BlueLink11 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink15 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Intersection, 3-Way, Traffic <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Intersection, 3-Way, Traffic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This intersection of two straight roads (East and North) has curbs on the edges. One road ends at the intersection, so it is a 3-way.
+#
+#This includes traffic vehicles to show how their paths and speeds can be controlled. However, there is no interaction with the simulated ego vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: Intersections and Roundabouts } Intersection, 3-Way, Traffic
+#Library : CarSim Run Control
+#DataSet : Intersection, 3-Way, Traffic
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_3e840921-6b63-452e-9e12-51063ebebdf6
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

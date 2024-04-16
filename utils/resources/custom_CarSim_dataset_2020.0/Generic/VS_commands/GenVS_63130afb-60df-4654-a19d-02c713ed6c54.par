@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Generic VS Commands`Retain Wheel Kinematics`External Steering
+#VehCode Support Settings
+
+#MiscYellow0
+! This parameter indicates that, for the front axle, the entire steering system is to be 
+! replaced, except for the internal look-up tables for tie rod / steer arm kinematics
+
+opt_steer_ext(1) 3
+#ENDMYellow
+
+*MODELCODE Support Settings
+PARSFILE Plot\Setup\Plot_01808015-b102-4547-aaae-2228a168ba43.par
+#BlueLink3 Plot: Setup`Driver Ratio from External` Steering` , Plot`Plot_01808015-b102-4547-aaae-2228a168ba43
+
+PARSFILE Plot\Setup\Plot_b029cc81-e142-4554-ac27-7e67994936fd.par
+#BlueLink4 Plot: Setup`Rack position from external` Steering` , Plot`Plot_b029cc81-e142-4554-ac27-7e67994936fd
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { External Steering } Retain Wheel Kinematics
+#Library : Generic VS Commands
+#DataSet : Retain Wheel Kinematics
+#Category: External Steering
+#FileID  : GenVS_63130afb-60df-4654-a19d-02c713ed6c54
+#Product : CarSim 2020.0
+#VehCode Support Settings
+
+END

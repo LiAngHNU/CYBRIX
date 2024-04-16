@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, Variable Width`Hilly Scenic Route`Mountain Roads
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Hilly Scenic Route
+set_description ROAD_DZ_ID Hilly Scenic Route
+#RingCtrl0 CARPET
+#RingCtrl1 1
+*3D_DATA 2, 2 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 1, 2
+0, 0, 0
+1, 0, 0
+ENDDATA
+0, 1, 2
+0, -50, -5
+500, -75, -5
+1000, -75, -5
+1500, -100, -5
+2000, -125, -5
+2500, -150, -5
+3000, -145, -5
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+RdTb1_CARPET 2D_LINEAR
+0, 1, 2
+0, 0, 0
+1, 0, 0
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 2, 7 ! columns x rows
+RdTb2_CARPET 2D_LINEAR
+0, 1, 2
+0, -50, -5
+500, -75, -5
+1000, -75, -5
+1500, -100, -5
+2000, -125, -5
+2500, -150, -5
+3000, -145, -5
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SET_IROAD_DZ_FOR_ID 0
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Mountain Roads } Hilly Scenic Route
+#Library : Road: Off-Center Elevation Map, Variable Width
+#DataSet : Hilly Scenic Route
+#Category: Mountain Roads
+#FileID  : VarWidZ_ccf0d103-2528-41f7-9f5c-ebf7b6f58639
+#Product : CarSim 2020.0
+#VehCode dZ via S-L, Variable Width
+
+END

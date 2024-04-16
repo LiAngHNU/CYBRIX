@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName CarSim Run Control`Speed Variable Steer Test w/ 4WS`Steering Tests
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d4794577-3791-4d4e-8951-8d5b5ce9708b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_dd69da47-d4aa-4046-97d7-bb631976087a.par
+#BlueLink2 Vehicle: Assembly`Pickup, Full Size Crew Cab 6.5 Bed: 4WS` Pickup Trucks` , Math Model`Vehicle_dd69da47-d4aa-4046-97d7-bb631976087a
+
+PARSFILE Procedures\Proc_24acd8a4-9315-4dee-a1f1-22d57929ad1d.par
+#BlueLink28 Procedures`Speed Variable Steer Test` Driver Controls` , Procedure`Proc_24acd8a4-9315-4dee-a1f1-22d57929ad1d
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_dd69da47-d4aa-4046-97d7-bb631976087a.png
+WRITE_SENSOR_DETECT
+Title Speed Variable Steer Test w/ 4WS <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Speed Variable Steer Test w/ 4WS
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A Full-size Pickup Truck with 4-wheel steering performs a Sine Sweep steering wheel angle test while slowly ramping the target speed.
+#
+#The 4-wheel steering system is defined on the vehicle's Steering System dataset linked on the Vehicle: Assembly screen.
+#
+#It is set up to use variable phase gain, meaning that at low speeds the rear wheels steer in the opposite direction as the front wheels, while at medium to high speeds, the rear wheels steer in the same direction as the front wheels.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Tests } Speed Variable Steer Test w/ 4WS
+#Library : CarSim Run Control
+#DataSet : Speed Variable Steer Test w/ 4WS
+#Category: Steering Tests
+#FileID  : Run_d4794577-3791-4d4e-8951-8d5b5ce9708b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

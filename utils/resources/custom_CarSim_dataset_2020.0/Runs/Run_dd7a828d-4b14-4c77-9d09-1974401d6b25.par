@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName CarSim Run Control`* Unreal Engine 4 Plug-in, Lead Vehicle`External Control: COM, FMU, MATLAB, Python, VB
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_dd7a828d-4b14-4c77-9d09-1974401d6b25
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Local_Dir\Local_a221e37e-5140-49e0-9155-4346055bdba5.par
+#BlueLink12 Models: Transfer to Local Windows Directory`UE4 simfile generator` ` , Models`Local_a221e37e-5140-49e0-9155-4346055bdba5
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_ec426f57-90ab-4717-ad78-2bada1695853.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS, No Shape` C-Class` , Math Model`Vehicle_ec426f57-90ab-4717-ad78-2bada1695853
+
+PARSFILE Procedures\Proc_dd67f38e-4c19-4477-9f41-2caeffe7e27e.par
+#BlueLink28 Procedures`Path created in UE4` ADAS and Active Safety` , Procedure`Proc_dd67f38e-4c19-4477-9f41-2caeffe7e27e
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_2599c4d4-616b-48ef-b85b-80ce10013f07.par
+#BlueLink9 Multiple Moving Objects`1 Vehicle, Variable Speed` Traffic Vehicles (Forward)` , Miscellaneous`TMotion_2599c4d4-616b-48ef-b85b-80ce10013f07
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_ec426f57-90ab-4717-ad78-2bada1695853.png
+WRITE_SENSOR_DETECT
+Title * Unreal Engine 4 Plug-in, Lead Vehicle <External Control: COM, FMU, MATLAB, Python, VB>
+CATEGORY External Control: COM, FMU, MATLAB, Python, VB 
+DATASET_TITLE * Unreal Engine 4 Plug-in, Lead Vehicle
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example is used with Unreal Engine 4 Plug-in.
+#
+#You have to install UE4 and also get CarSim plug-in from UE4 market place to run this example.
+#
+#For more information, please refer to the documentation.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { External Control: COM, FMU, MATLAB, Python, VB } * Unreal Engine 4 Plug-in, Lead Vehicle
+#Library : CarSim Run Control
+#DataSet : * Unreal Engine 4 Plug-in, Lead Vehicle
+#Category: External Control: COM, FMU, MATLAB, Python, VB
+#FileID  : Run_dd7a828d-4b14-4c77-9d09-1974401d6b25
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

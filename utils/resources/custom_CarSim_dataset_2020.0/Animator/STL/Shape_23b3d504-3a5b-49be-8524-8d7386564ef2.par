@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Tractor: Tire (Left Front)`Cars: Other Vehicles
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Other_Vehicles\Tractor\front_tire.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+X_REF_LENGTH 565
+Y_REF_LENGTH 269
+Z_REF_LENGTH 565
+*SPECULAR 0.5
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Small Objects` Shape Preview` , Video Camera`Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_23b3d504-3a5b-49be-8524-8d7386564ef2.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Cars: Other Vehicles } Tractor: Tire (Left Front)
+#Library : Animator: Shape File Link
+#DataSet : Tractor: Tire (Left Front)
+#Category: Cars: Other Vehicles
+#FileID  : Shape_23b3d504-3a5b-49be-8524-8d7386564ef2
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

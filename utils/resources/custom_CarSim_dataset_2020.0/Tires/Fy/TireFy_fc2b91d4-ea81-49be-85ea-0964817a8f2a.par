@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`MF-Tyre Example`MF-Tyre Example
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Abs. lateral tire force Fy (N)
+
+#DiagramTwo0
+*3D_DATA 3, 21 ! columns x rows
+FY_TIRE_CARPET 2D_FROM_ZERO
+0, 2000, 4000, 6000
+0.5, 267.035, 433.373, 494.195
+1, 529.169, 865.293, 991.982
+1.5, 777.066, 1286.21, 1488
+2, 1002.22, 1685.51, 1975.36
+2.5, 1198.25, 2052.52, 2445.63
+3, 1361.88, 2378.21, 2889.49
+3.5, 1493.12, 2656.79, 3297.81
+4, 1594.6, 2886.53, 3663.1
+4.5, 1670.5, 3069.46, 3980.53
+5, 1722.4, 3202.24, 4232.26
+5.5, 1758.79, 3300.81, 4436.22
+6, 1784.04, 3373.47, 4600.7
+6.5, 1800.97, 3425.73, 4730.88
+7, 1811.74, 3462.21, 4832.09
+7.5, 1817.98, 3486.62, 4909.3
+8, 1820.91, 3501.91, 4966.97
+8.5, 1821.44, 3510.36, 5008.94
+9, 1820.25, 3513.73, 5038.44
+9.5, 1817.82, 3513.34, 5058.09
+10, 1817.82, 3513.34, 5058.09
+10.5, 1817.82, 3513.34, 5058.09
+ENDTABLE
+
+MU_REF_Y 1.0
+
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { MF-Tyre Example } MF-Tyre Example
+#Library : Tire: Lateral Force
+#DataSet : MF-Tyre Example
+#Category: MF-Tyre Example
+#FileID  : TireFy_fc2b91d4-ea81-49be-85ea-0964817a8f2a
+#Product : CarSim 2020.0
+#VehCode Tire: Fy
+
+END

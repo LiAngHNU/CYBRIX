@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`A. Wait to Start Slowly Increasing Steer`Slowly Increasing Steer Test
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 INIT_DONE
+*NAME2 OPT_WRITE
+*VALUE1 INIT_DONE
+*VALUE2 0
+*SPEED 80
+#MiscYellow0
+DEFINE_PARAMETER SLOW_STEER_DONE 0
+DEFINE_PARAMETER SWA_REF 0 ; deg;  SWA for 0.3 g's
+#ENDMYellow
+
+DEFINE_EVENT INIT_DONE ; Events\Events_491832b9-0178-41d1-9090-683cf90e1c82.par
+#BlueLink0 Events`B. Slowly Increasing Steer to Ay = 0.3 g` Slowly Increasing Steer Test` , Events`Events_491832b9-0178-41d1-9090-683cf90e1c82
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset starts a sequence called the "Slowly Increasing Steer" test to determine steering wheel angle (SWA) associated with lateral acceleration of 0.3 g at a constant speed. It is used in NHTSA tests such as Fishhook and Sine with Dwell to establish a reference SWA used to define increasing levels of steer in transient maneuvers that follow.
+#
+#Two parameters are introduced: SLOW_STEER_DONE is a Boolean that is initially 0 and set to 1 when  the slow steer tests are done. SWA_REF is the reference steering wheel angle associated with 0.3 g lateral acceleration.
+#
+#The vehicle speed is set outside this sequence. Maybe it's a ramp from zero (needed for HIL), or maybe it starts immedately at the test speed. A parameter INIT_DONE is used to determine when the initialization is done and the slowly increasing steer can start. During the slowly increasing steer, the speed should be controlled using a target constant speed, typically 80 km/h.
+#
+#The driver controls are also set outside this sequence. Braking and open-loop throttle should be off, and the transmission should be in the proper gear or mode.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Slowly Increasing Steer Test } A. Wait to Start Slowly Increasing Steer
+#Library : Events
+#DataSet : A. Wait to Start Slowly Increasing Steer
+#Category: Slowly Increasing Steer Test
+#FileID  : Events_7dea0a25-f1d6-45e0-bcfb-581ba9ad9017
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Animator: Group (More)`Brakes (Right Front)`Brake Temperature
+#MiscYellow0
+ADD_REFERENCE_FRAME xr1
+SET_X_NAME X_R1
+SET_Y_NAME Y_R1
+SET_Z_NAME Z_R1
+SET_ROLL_NAME Roll_R1
+SET_YAW_NAME Yaw_R1
+#ENDMYellow
+
+PARSFILE Animator\STL_Groups\ShpGrp_59ea4711-3457-4f59-88ca-cc57d6a59424.par
+#BlueLink11 Animator: Shape Assembly`Brakes (Cool)` Brake Temperature` , Miscellaneous`ShpGrp_59ea4711-3457-4f59-88ca-cc57d6a59424
+
+#MiscYellow1
+ADD_REFERENCE_FRAME xr1_hot
+SET_X_NAME X_R1
+SET_Y_NAME Y_R1
+SET_Z_NAME Z_R1
+SET_ROLL_NAME Roll_R1
+SET_YAW_NAME Yaw_R1
+define_output BkHot_R1
+eq_out BkHot_R1 = t_rtr_R1 * 0.002
+REFERENCE_FRAME_ALPHA_FUNCTION BkHot_R1
+#ENDMYellow
+
+PARSFILE Animator\STL_Groups\ShpGrp_79c57e65-80f1-4221-83bf-82081cae829a.par
+#BlueLink12 Animator: Shape Assembly`Brakes (Hot)` Brake Temperature` , Miscellaneous`ShpGrp_79c57e65-80f1-4221-83bf-82081cae829a
+
+
+#CheckBox0 0    
+
+
+LOG_ENTRY Used Dataset: Animator: Group (More); { Brake Temperature } Brakes (Right Front)
+#Library : Animator: Group (More)
+#DataSet : Brakes (Right Front)
+#Category: Brake Temperature
+#FileID  : GroupM_2d0e7794-d106-441f-840f-d5270519a7fd
+#Product : CarSim 2020.0
+#VehCode Group (More)
+
+END

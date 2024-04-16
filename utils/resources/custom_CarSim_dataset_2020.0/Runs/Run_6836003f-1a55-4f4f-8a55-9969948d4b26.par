@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName CarSim Run Control`Lane Keeping, Normal Driving`Driver Model
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6836003f-1a55-4f4f-8a55-9969948d4b26
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan` D-Class` , Math Model`Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89
+
+PARSFILE Procedures\Proc_94f3d353-1fa8-47b3-a6e6-2be2e05152cd.par
+#BlueLink28 Procedures`Lane Keeping, Normal Driving` Driver Controls` , Procedure`Proc_94f3d353-1fa8-47b3-a6e6-2be2e05152cd
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title Lane Keeping, Normal Driving <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Lane Keeping, Normal Driving
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan on a handling course subject to sublimit (i.e., 0.3g) levels of acceleration via the Speed control from path preview.
+#
+#A speed target can be calculated along a path using a preview distance, including the effects of the road's 3D geometry, while attempting to remain within target limits of lateral and longitudinal acceleration.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Driver Model } Lane Keeping, Normal Driving
+#Library : CarSim Run Control
+#DataSet : Lane Keeping, Normal Driving
+#Category: Driver Model
+#FileID  : Run_6836003f-1a55-4f4f-8a55-9969948d4b26
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

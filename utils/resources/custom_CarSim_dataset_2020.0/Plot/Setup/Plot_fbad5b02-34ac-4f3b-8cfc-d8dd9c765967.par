@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Tire Mx`Three-wheeled Vehicle
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output mx_1 = mx_l1 + mx_r1;
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS Mx_1, Time, Single Front overturning
+PLOTCHANNELS Mx_L2, Time
+PLOTCHANNELS Mx_R2, Time
+
+#ENDMYellow
+
+YAXISLABEL Tire Overturning Moment - N-m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tire Mx
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This plot format includes plots created with VS Commands for the single front wheel of a three-wheeled vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Three-wheeled Vehicle } Tire Mx
+#Library : Plot: Setup
+#DataSet : Tire Mx
+#Category: Three-wheeled Vehicle
+#FileID  : Plot_fbad5b02-34ac-4f3b-8cfc-d8dd9c765967
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

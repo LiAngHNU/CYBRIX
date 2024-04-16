@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Tire`175/70R13 (Pacejka 5.2, Symmetric)`PAC52 Tire Model
+FZ_REF 4100
+Y_LENGTH 205
+#CheckBox2 0    
+#CheckBox6 0    
+
+#RingCtrl0 7
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 7
+
+PARSFILE Animator\STL_Groups\ShpGrp_27c591f4-b392-4dda-bdc3-c1e97b86f0f5.par
+#BlueLink4 Animator: Shape Assembly`Big Car` Tires` , Animator`ShpGrp_27c591f4-b392-4dda-bdc3-c1e97b86f0f5
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 205
+FZ_TIRE_COEFFICIENT 220
+FZ_MAX 100000
+M_TIRE 15
+IT 0.7
+IT_XXZZ 0.4
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+L_CONTACT_X_CONSTANT 70
+L_CONTACT_Y_CONSTANT 205
+PARSFILE Tires\Pacejka52\Pac52_7b76c102-396a-49e0-b295-5fc0bacd9520.par
+#BlueLink11 Tire: Pacejka 5.2 Parameters`175/70 R13 (Symmetric)` ` , Pacejka 5.2 parameters`Pac52_7b76c102-396a-49e0-b295-5fc0bacd9520
+
+
+
+#EMBEDDED_NOTES
+#Example of an Symmetric Pacejka 5.2 tire model.
+#
+#Pacejka 5.2 coefficient definitions may be found in the Echo file.  Go to the View button at the bottom right of the Run screen and select one of the Echo files.
+#
+#Also, you may reference the book:
+#Tyre and Vehicle Dynamics
+#Hans B. Pacejka
+#(C) 2002
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { PAC52 Tire Model } 175/70R13 (Pacejka 5.2, Symmetric)
+#Library : Tire
+#DataSet : 175/70R13 (Pacejka 5.2, Symmetric)
+#Category: PAC52 Tire Model
+#FileID  : Tire_743136f5-e2e5-4d3f-bc2c-bd7c699c161f
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

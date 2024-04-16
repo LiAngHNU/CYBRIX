@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName Generic Data Group`3 Edges, Based On LTARG`ADAS: Lane Detection Markers
+#VehCode Generic Group
+#MiscYellow0
+! The sensor must be defined before the
+! points of interest, because the X_SENSOR
+! parameter is used to locate the points
+#ENDMYellow
+
+
+#MiscYellow1
+DEFINE_PARAMETER lane_width = 3.85; m; ...
+  Lane width, used to calculate edge locations
+PATH_ID_DM = 1
+Current_Road_ID = 1 ! No real road yet
+#ENDMYellow
+
+#BlueLink1 ` , Link 2` , Link 2` , Link 2`
+
+
+#BlueLink2 ` , Link 3` , Link 3` , Link 3`
+
+
+#MiscYellow3
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+ltarg_constant = 0
+set_description ltarg_id ...
+  Road reference path (between right 2 lanes)
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_a717826d-3c3a-4859-94f7-00ff3fd81900.par
+#BlueLink3 Multiple Moving Objects`5 Lane Edge Markers for ILTARG` Points of Interest` , Link 4`TMotion_a717826d-3c3a-4859-94f7-00ff3fd81900
+
+
+#MiscYellow4
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+EQ_INIT ltarg_constant = -Lane_Width
+set_description ltarg_id ...
+  First edge to right
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_a717826d-3c3a-4859-94f7-00ff3fd81900.par
+#BlueLink4 Multiple Moving Objects`5 Lane Edge Markers for ILTARG` Points of Interest` , Link 5`TMotion_a717826d-3c3a-4859-94f7-00ff3fd81900
+
+
+#MiscYellow5
+N_LTARG = N_LTARG + 1
+ILTARG = N_LTARG
+EQ_INIT ltarg_constant = Lane_Width
+set_description ltarg_id ...
+  First edge to left
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_a717826d-3c3a-4859-94f7-00ff3fd81900.par
+#BlueLink5 Multiple Moving Objects`5 Lane Edge Markers for ILTARG` Points of Interest` , Link 6`TMotion_a717826d-3c3a-4859-94f7-00ff3fd81900
+
+
+
+#BlueLink7 ` , Link 8` , Link 8` , Link 8`
+
+
+
+
+#EMBEDDED_NOTES
+#Define 15 moving objects located on lane edges.
+#
+#At least one sensor must be defined before the objects, because they use the coordinate X_SENSOR to define station S on the lane edge.
+#
+#Each edge is defined with an LTARG dataset. These are set to constants that are defined with a parameter LANE_WIDTH.
+#
+#N_LTARG is the number of LTARG datasets that will be shown in the Echo file. The
+#default value is 1; it can be set to any positive number up to 100. In this example it is being used to increment the number of target paths being used and shown in the echo files.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Lane Detection Markers } 3 Edges, Based On LTARG
+#Library : Generic Data Group
+#DataSet : 3 Edges, Based On LTARG
+#Category: ADAS: Lane Detection Markers
+#FileID  : GenGrp_ba4d570c-5715-4219-8319-511ceb1d0e5b
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

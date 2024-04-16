@@ -1,0 +1,113 @@
+PARSFILE
+#FullDataName CarSim Run Control`Live Video w/ Simulink`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2e3e62b7-66b8-4f77-8211-7c690609b731
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_1e46ce7f-2ffc-4c88-99fe-13cb4f2886cc.par
+#BlueLink12 Models: Simulink`Base Model` Live Video` , Models`Simlink_1e46ce7f-2ffc-4c88-99fe-13cb4f2886cc
+
+PARSFILE Animator\Cameras\Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+OPT_BUFFER_WRITE 1
+AUTOSIZE OFF
+BLOCKING_RT_READ ON
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_ef94e99b-8b88-46df-b7ac-9595f02d04c6.par
+#BlueLink28 Procedures`Handling Course, Aggressive Driving` Driver Controls` , Procedure`Proc_ef94e99b-8b88-46df-b7ac-9595f02d04c6
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Animator\Arrows\Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887.par
+#BlueLink10 Animator: Wheel Arrows and Other Indicators`Tire Skid Marks (2 Axles)` Skid Marks` , Miscellaneous`Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887
+
+PARSFILE Animator\HUD\HUD_28cddbb9-94c6-4e76-a06f-7737ba30c08f.par
+#BlueLink11 Animator: HUD`Throttle and Speed` Vehicle Status Indicators` , Miscellaneous`HUD_28cddbb9-94c6-4e76-a06f-7737ba30c08f
+
+PARSFILE Plot\Setup\Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1.par
+#BlueLink15 Plot: Setup`Longitudinal vs. Lateral Accel.` Vehicle Motion` , Plot`Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1
+
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+PARSFILE Plot\Setup\Plot_84cf249c-520a-44d4-965b-f2a898a45ad5.par
+#BlueLink17 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_84cf249c-520a-44d4-965b-f2a898a45ad5
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink18 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Live Video w/ Simulink <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Live Video w/ Simulink
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Introduced in CarSim 2017 (Matlab 2014b or newer)
+#
+#This example illustrates how to add Live Video when running with Simulink. This example was copied from the run, {Driver Speed from Path Preview} -> Speed Control from Driver Path.
+#
+#To view the live video:
+#(1) Click "Send to Simulink". VS Visualizer will start and the vehicle animation shapes will all be at the Sprung Mass Coordinate System Origin.
+#
+#(2) Click the Play button in Simulink to run the simulation.  Once the run starts, the video will show the status.
+#
+#If you do not see a button in this screen "Start Live Video", please check Tools > License Settings and make sure the "CarSim Extra Live Animator" option is checked.
+#
+#To use Live Video for another run:
+#(1) Select "Models: Simulink" and link to a Simulink model. For this example, the blue link is {Live Video} > Base Model. Go to this dataset for notes on enabling live animation.
+#
+#(2) When the link is made to a Simulink model, three controls appear involving live video. The number of live cameras should be set to 1.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Live Video w/ Simulink
+#Library : CarSim Run Control
+#DataSet : Live Video w/ Simulink
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_2e3e62b7-66b8-4f77-8211-7c690609b731
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Sphere: 0.1m Radius (Purple)`Geometric Shapes
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Spheres\sphere_1m_radius.obj
+#ENDMYellow
+
+SET_COLOR 0.6 0.2 1
+SET_SCALE_X 0.1
+SET_SCALE_Y 0.1
+SET_SCALE_Z 0.1
+*SPECULAR 1
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 0    
+
+SET_SPECULAR 1 1 1
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Small Objects` Shape Preview` , Video Camera`Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_cd4c2f54-ebbc-4ea8-9275-94565481cfc5.png
+
+#EMBEDDED_NOTES
+#Sphere, used to visualize Tire Reference Points in PBS tests, Motion Sensor locations, and other points of interest on the vehicle.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere: 0.1m Radius (Purple)
+#Library : Animator: Shape File Link
+#DataSet : Sphere: 0.1m Radius (Purple)
+#Category: Geometric Shapes
+#FileID  : Shape_cd4c2f54-ebbc-4ea8-9275-94565481cfc5
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

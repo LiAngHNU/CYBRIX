@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName Generic VS Commands`Derived Outputs for Tire Tester`Miscellaneous Custom Output Variables
+#VehCode VS Commands
+
+#MiscYellow0
+! (1) Normalized lateral and longitudinal forces
+define_output mu_y_l1 = if( fz_l1, fy_l1 / fz_l1, 0); -;
+set_output_long_name mu_y_l1 Normalized lateral force
+set_output_component mu_y_l1 Test tire
+
+define_output mu_x_l1 = if(fz_l1, fx_l1 / fz_l1, 0); -;
+set_output_long_name mu_x_l1 Normalized longitudinal force
+set_output_component mu_x_l1 Test tire
+
+! (2) Tangent of slip angle
+define_output slip_l1 = tan(alpha_l1); -;
+set_output_long_name slip_l1 Tangent of slip angle
+set_output_component slip_l1 Test tire
+
+! (3) CTC lateral shift
+define_output y_ctc_l1 = if( fz_l1, mx_l1 / fz_l1, 0); mm;
+set_output_long_name y_ctc_l1 CTC lateral shift
+set_output_component y_ctc_l1 Test tire
+
+! (4) Aligning moment due to Fx and lateral shift of the CTC
+define_output mz_fx_l1 = fx_l1 * y_ctc_l1; N-m;
+set_output_long_name mz_fx_l1 Mz due to Fx and CTC lat. shift
+set_output_component mz_fx_l1 Test tire
+
+! (5) The remaining aligning moment is assumed entirely due to Fy
+define_output mz_fy_l1 = mz_l1 - mz_fx_l1; N-m;
+set_output_long_name mz_fy_l1 Aligning moment due to Fy
+set_output_component mz_fy_l1 Test tire
+
+! (6) The aligning moment due to Fy can be described by a moment arm (pneumatic trail)
+define_output trail_l1 = if(fy_l1, mz_fy_l1 / fy_l1, 0); mm;
+set_output_long_name trail_l1 Pneumatic trail
+set_output_component trail_l1 Test tire
+#ENDMYellow
+
+*MODELCODE VS Commands
+PARSFILE Plot\Setup\Plot_638658a8-89ef-4773-afd9-00fe53fc8cd4.par
+#BlueLink3 Plot: Setup`Normalized Lateral Force vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_638658a8-89ef-4773-afd9-00fe53fc8cd4
+
+PARSFILE Plot\Setup\Plot_d19086db-bb3d-4f63-a7f3-6d7c40f1dcb6.par
+#BlueLink4 Plot: Setup`Normalized Longitudinal Force vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_d19086db-bb3d-4f63-a7f3-6d7c40f1dcb6
+
+PARSFILE Plot\Setup\Plot_6fbd2be1-8ca2-4e4e-89d1-246a2e5a4478.par
+#BlueLink5 Plot: Setup`Tangent of Slip Angle vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_6fbd2be1-8ca2-4e4e-89d1-246a2e5a4478
+
+PARSFILE Plot\Setup\Plot_0a2ea03c-6551-4c38-a9ef-c70f16641502.par
+#BlueLink6 Plot: Setup`Lateral Shift of CTC vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_0a2ea03c-6551-4c38-a9ef-c70f16641502
+
+PARSFILE Plot\Setup\Plot_16b66348-8461-4c4a-82d2-be0fe4e137d5.par
+#BlueLink7 Plot: Setup`Mz from Fx vs Alpha` Tire Tester Derived Outputs` , Plot`Plot_16b66348-8461-4c4a-82d2-be0fe4e137d5
+
+PARSFILE Plot\Setup\Plot_9ff74ee3-819a-42ac-b06c-a1eba074faf6.par
+#BlueLink8 Plot: Setup`Mz from Fy and Pneumatic Trail vs Alpha` Tire Tester Derived Outputs` , Plot`Plot_9ff74ee3-819a-42ac-b06c-a1eba074faf6
+
+PARSFILE Plot\Setup\Plot_b4053864-ac64-41fb-810b-4b3c14b4ddfa.par
+#BlueLink9 Plot: Setup`Pneumatic Trail vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_b4053864-ac64-41fb-810b-4b3c14b4ddfa
+
+
+#EMBEDDED_NOTES
+#This dataset creates seven outputs for use with the Tire Tester.
+#
+#(1) Lateral and longitudinal tire shear forces are normalized by dividing by the normal force, producing an analog to the coefficent of friction, and generally referred to as "Mu".
+#
+#(2) Sometimes the tangent of the slip angle is used to refer to lateral slip instead of the angle itself, facilitating plotting it alongside longitudinal slip ratio. It may be referred to as "percent slip".
+#
+#(3) The overturning moment may be thought of as the effect of the vertical force acting through a laterally shifted center of tire contact.
+#
+#(4) The longitudinal force, acting through the moment arm of the laterally shifted CTC, produces a component of the aligning moment.
+#
+#(5) The aligning moment due to Fx can be removed from the total to see the component due to Fy alone.
+#
+#(6) Sometimes the aligning moment is expressed as the length of a moment arm through which the lateral force acts to produce the aligning moment. It is called "pneumatic trail"
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Output Variables } Derived Outputs for Tire Tester
+#Library : Generic VS Commands
+#DataSet : Derived Outputs for Tire Tester
+#Category: Miscellaneous Custom Output Variables
+#FileID  : GenVS_495524ba-1c7f-4365-8a05-84434effacfe
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

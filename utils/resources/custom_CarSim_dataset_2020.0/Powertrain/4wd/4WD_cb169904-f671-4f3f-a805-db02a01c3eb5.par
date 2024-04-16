@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`200 kW, 6-spd, 4.1 Ratio w/ Active T. Case`External Components
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(1) 1
+OPT_DIFF_INTERNAL(2) 1
+OPT_DIFF_INTERNAL(3) 1
+
+PARSFILE Powertrain\Engine\Engine_d49c24d0-f8ba-4bd6-83a5-d57395bb87ce.par
+#BlueLink0 Powertrain: Engine`200 kW Engine` 200 kW - 270 kW Engines` , Engine`Engine_d49c24d0-f8ba-4bd6-83a5-d57395bb87ce
+
+PARSFILE Powertrain\TConv\TC_0b62e224-7cf4-49f3-bf3f-c13c33e92f16.par
+#BlueLink1 Powertrain: Torque Converter`Torque Converter: 200 kW Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_0b62e224-7cf4-49f3-bf3f-c13c33e92f16
+
+PARSFILE Powertrain\TransExt\Trans18_55b3d8ee-e987-4803-8615-8a5b5c910733.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`6-Speed` 6-Speed Transmissions` , Transmission (Extended)`Trans18_55b3d8ee-e987-4803-8615-8a5b5c910733
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_c29e371f-2b92-4032-964a-fce185e6b9aa.par
+#BlueLink3 Powertrain: Transfer Case`Yaw Control Transfer Case: Gear Ratio 1:1` Yaw Control` , Transfer case`XC_c29e371f-2b92-4032-964a-fce185e6b9aa
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_4679a40b-781f-464d-8a83-fb07685b3ee6.par
+#BlueLink4 Powertrain: Front Differential`Viscous Coupling: Gear Ratio 4.1:1` Limited Slip and Viscous Coupling` , Differential front`DiffF_4679a40b-781f-464d-8a83-fb07685b3ee6
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_c642a21e-e719-4ec4-89bb-964708a0eac0.par
+#BlueLink5 Powertrain: Rear Differential`Viscous Coupling: Gear Ratio 4.1:1` Limited Slip and Viscous Coupling` , Differential rear`DiffR_c642a21e-e719-4ec4-89bb-964708a0eac0
+
+
+#EMBEDDED_NOTES
+#Generic 200 kW powertrain with an automatic transmission.  The torque converter data has been tuned to work with the 200 kW engine to give reasonable performance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { External Components } 200 kW, 6-spd, 4.1 Ratio w/ Active T. Case
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 200 kW, 6-spd, 4.1 Ratio w/ Active T. Case
+#Category: External Components
+#FileID  : 4WD_cb169904-f671-4f3f-a805-db02a01c3eb5
+#Product : CarSim 2020.0
+#VehCode 4WD
+
+END

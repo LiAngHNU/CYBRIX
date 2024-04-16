@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Generic VS Commands`Control R1 Tire Sidewall Point`PBS (Performance Based Standards)
+#VehCode VS Commands
+
+#MiscYellow0
+! Define a point in the RF Tire that is supposed to follow the 12.5m radius path (left-hand turn)
+DEFINE_PARAMETER L_TIRE_REF 0.2 ; m ; Distance to point on sidewall
+
+DEFINE_OUTPUT X_Ref_R1 = Xctc_R1 + sin(Yaw_R1)*L_TIRE_REF; m ;  X coordinate of tire ref point
+DEFINE_OUTPUT Y_Ref_R1 = Yctc_R1 - cos(Yaw_R1)*L_TIRE_REF; m ;  Y coordinate of tire ref point
+
+! Tracking Error
+DEFINE_OUTPUT LatError = PATH_L_I(X_Ref_R1, Y_Ref_R1, 2) ; mm ;  Error distance to the path
+
+! Allow large angles by the driver model
+A_SW_MAX_DM 1200;
+#ENDMYellow
+
+*MODELCODE VS Commands
+PARSFILE Animator\Frames\Frame_a53184eb-1a9b-4578-a344-0872779bf7a8.par
+#BlueLink0 Animator: Reference Frame`Tire Sidewall, R1` Animator Reference Frame, Unit 1` , Miscellaneous`Frame_a53184eb-1a9b-4578-a344-0872779bf7a8
+
+PARSFILE Plot\Setup\Plot_6118dabe-9c1e-44b1-ae87-6aca5beb90ea.par
+#BlueLink3 Plot: Setup`X-Y Tracking for Outside Tire Sidewall, R1` PBS (Performance Based Standards)` , Plot`Plot_6118dabe-9c1e-44b1-ae87-6aca5beb90ea
+
+PARSFILE Plot\Setup\Plot_504122fe-f748-45ca-bed5-01514ca57fdc.par
+#BlueLink4 Plot: Setup`Lateral Tracking Error` PBS (Performance Based Standards)` , Plot`Plot_504122fe-f748-45ca-bed5-01514ca57fdc
+
+PARSFILE Plot\Setup\Plot_b39cbbe4-acbb-4068-8c3f-6ea84c51b0a5.par
+#BlueLink5 Plot: Setup`Lateral Tracking Target` PBS (Performance Based Standards)` , Plot`Plot_b39cbbe4-acbb-4068-8c3f-6ea84c51b0a5
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { PBS (Performance Based Standards) } Control R1 Tire Sidewall Point
+#Library : Generic VS Commands
+#DataSet : Control R1 Tire Sidewall Point
+#Category: PBS (Performance Based Standards)
+#FileID  : GenVS_eb5e1777-0b74-4311-bb9d-18afac9c4186
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

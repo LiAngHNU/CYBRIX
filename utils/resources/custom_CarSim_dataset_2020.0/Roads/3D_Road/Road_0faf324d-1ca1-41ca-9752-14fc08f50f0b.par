@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`30-m Radius Circle, Mu = 0.9`Circular Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_0faf324d-1ca1-41ca-9752-14fc08f50f0b.png
+#RingCtrl0 1
+#CheckBox0 1    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 30-m Radius Circle, Mu = 0.9
+PARSFILE Roads\BuilderSegment\RoadSeg_9d55df69-78d8-4ef0-b3f8-5ce42816350e.par
+#BlueLink0 Path: Segment Builder`30 m Radius` Circles` , Reference Path`RoadSeg_9d55df69-78d8-4ef0-b3f8-5ce42816350e
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 30 m Radius
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.9` Constant` , Friction`RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba
+
+PARSFILE Roads\Shapes\RdShape_9d177f95-6fc2-46cf-b88c-334516f75fc9.par
+#BlueLink4 Road: Animator Surface Shapes`Looped Road + 100 m Light Grass` Roads` , Road shape definitions`RdShape_9d177f95-6fc2-46cf-b88c-334516f75fc9
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+#MiscYellow0
+DEFINE_PARAMETER R = 30; units m
+#ENDMYellow
+
+PARSFILE Roads\Boundaries\RdBnd_443e1da0-3328-4cc0-a76d-7a1f7a62fc75.par
+#BlueLink11 Road: Boundaries`Circle Test Boundaries` Road Boundary Stop Conditions` , Miscellaneous`RdBnd_443e1da0-3328-4cc0-a76d-7a1f7a62fc75
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_0faf324d-1ca1-41ca-9752-14fc08f50f0b.ani
+
+#EMBEDDED_NOTES
+#This track is a circular loop with a 30-m radius to the centerline. It is suitable for constant-radius understeer testing as specified in ISO 4138.
+#
+#A parameter R is defined for use in a formula for target speed in the ISO 4138 procedure.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Circular Roads } 30-m Radius Circle, Mu = 0.9
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 30-m Radius Circle, Mu = 0.9
+#Category: Circular Roads
+#FileID  : Road_0faf324d-1ca1-41ca-9752-14fc08f50f0b
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

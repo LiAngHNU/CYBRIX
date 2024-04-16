@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Passenger - 2nd Row Left Seat`Passengers
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Passenger - 2nd Row Left Seat
+*X_LENGTH 350
+*Y_LENGTH 350
+*Z_LENGTH 750
+Y_CG_PL 500
+H_BOX_BOTTOM 700
+LX_CG_PL 2250
+M_PL 80
+*SET_COLOR 0.627 0.627 0.627
+
+#CheckBox0 1    
+
+H_CG_PL 1075.00
+IXX_PL 4.57
+IYY_PL 4.57
+IZZ_PL 1.63
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+add_obj Payloads\Box\Box_b12bcd1b-70e5-44ae-a0bb-c64f0c643ac5.obj
+show_front on
+show_back off
+set_color 0.627 0.627 0.627
+
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Passengers } Passenger - 2nd Row Left Seat
+#Library : Payload: Box Shape
+#DataSet : Passenger - 2nd Row Left Seat
+#Category: Passengers
+#FileID  : Box_b12bcd1b-70e5-44ae-a0bb-c64f0c643ac5
+#Product : CarSim 2020.0
+#VehCode Payload: Box
+
+END

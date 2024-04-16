@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Twin Clutch Control Input`Controls: Chassis and Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ClutchL1, Time
+PLOTCHANNELS ClutchR1, Time
+PLOTCHANNELS ClutchL2, Time
+PLOTCHANNELS ClutchR2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Twin Clutch Control Input
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Chassis and Powertrain } Twin Clutch Control Input
+#Library : Plot: Setup
+#DataSet : Twin Clutch Control Input
+#Category: Controls: Chassis and Powertrain
+#FileID  : Plot_fee9314f-6343-4691-83cc-3990f5bd08bd
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

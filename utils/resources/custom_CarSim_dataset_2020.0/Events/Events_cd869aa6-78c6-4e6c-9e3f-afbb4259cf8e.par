@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`Move Back to Path`Simple Path Planning
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Station
+*VALUE1 Stat_Next
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+
+! Run the routine
+Stat_Next = Station+35.0
+RUN_PYTHON_PROG simplepathplan.returntopath LTARGNPATH None None
+
+! Now load the new table that was created
+LOAD_TABLE_FILE LTARGNPATH.vstb
+FILE_TO_TABLE LTARG_TABLE XLABEL VALUE
+ECHO_LOADED_TABLE LTARG_TABLE
+#ENDMYellow
+
+MAKE_EVENT Station > Stat_Next ; Events\Events_b29d0a5f-fa7f-4acd-86f9-da2ee3a69d3c.par
+#BlueLink0 Events`Returned to Path` Simple Path Planning` , Events`Events_b29d0a5f-fa7f-4acd-86f9-da2ee3a69d3c
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Simple Path Planning } Move Back to Path
+#Library : Events
+#DataSet : Move Back to Path
+#Category: Simple Path Planning
+#FileID  : Events_cd869aa6-78c6-4e6c-9e3f-afbb4259cf8e
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

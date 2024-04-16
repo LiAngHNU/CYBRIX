@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName CarSim Run Control`Lockup Torque Converter`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d3bf4f2a-016b-4e0d-a174-7b438685e0c9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0 0 0.4
+SET_RUN_COLOR 0 0 0.4
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_10e9cbd8-897f-4b21-b7f9-2b53066538e2.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan w/ Lockup Torque Conv.` D-Class` , Math Model`Vehicle_10e9cbd8-897f-4b21-b7f9-2b53066538e2
+
+PARSFILE Procedures\Proc_d895948e-10ee-49da-bc45-cc14e63e6e15.par
+#BlueLink28 Procedures`Accel then Brake` Accel. and Brake Testing` , Procedure`Proc_d895948e-10ee-49da-bc45-cc14e63e6e15
+
+PARSFILE Plot\Setup\Plot_84cf249c-520a-44d4-965b-f2a898a45ad5.par
+#BlueLink15 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_84cf249c-520a-44d4-965b-f2a898a45ad5
+
+PARSFILE Plot\Setup\Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823.par
+#BlueLink16 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823
+
+PARSFILE Plot\Setup\Plot_f4622fdb-deaf-49e3-93ee-6ec5ae05e7d6.par
+#BlueLink17 Plot: Setup`Torque Converter Lock Signal` Controls: Chassis and Powertrain` , Plot`Plot_f4622fdb-deaf-49e3-93ee-6ec5ae05e7d6
+
+PARSFILE Plot\Setup\Plot_2cd77a14-4a29-44d1-a8e0-03a81f9c74cf.par
+#BlueLink18 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_2cd77a14-4a29-44d1-a8e0-03a81f9c74cf
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Lockup Torque Converter <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Lockup Torque Converter
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class sedan uses a powertrain with a lockup clutch applied to the torque converter. The vehicle is performing a slowly ramping acceleration, followed by a constant braking deceleration.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Lockup Torque Converter
+#Library : CarSim Run Control
+#DataSet : Lockup Torque Converter
+#Category: Powertrain Tests
+#FileID  : Run_d3bf4f2a-016b-4e0d-a174-7b438685e0c9
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

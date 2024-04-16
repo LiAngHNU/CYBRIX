@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Rural Scene`VS Scene Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_62f9776e-af5f-4b36-a1b7-88b6e42c231d.png
+#CheckBox0 0    
+
+PARSFILE Roads\ExScene\SceneImp_086b9da8-e2fb-4fdc-ad4a-4d13f275fb52.par
+#BlueLink0 Scene: External Import`Rural Scene` VS Scene Builder` , Reference Path`SceneImp_086b9da8-e2fb-4fdc-ad4a-4d13f275fb52
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_62f9776e-af5f-4b36-a1b7-88b6e42c231d.ani
+
+#EMBEDDED_NOTES
+#The road reference path and most of the animator assets were made from the VS Scene Builder.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { VS Scene Builder } Rural Scene
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Rural Scene
+#Category: VS Scene Builder
+#FileID  : Road_62f9776e-af5f-4b36-a1b7-88b6e42c231d
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

@@ -1,0 +1,104 @@
+PARSFILE
+#FullDataName CarSim Run Control`Five-Car Platoon: Car 1`* CS 2020.0 - Platooning
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_086406aa-e54b-4004-a0cf-9afaa2cc27ef
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_05e7cc58-ad07-4be3-8522-72e664067a0a.par
+#BlueLink12 Models: Simulink`Five-Car Platoon: Lead` Multi-Vehicle` , Models`Simlink_05e7cc58-ad07-4be3-8522-72e664067a0a
+
+PARSFILE Animator\Cameras\Camera_6278dd7f-fcb6-4cd1-aad3-5ada1d8f9248.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 3 El, 50 m` Vehicle Reference` , Animator camera`Camera_6278dd7f-fcb6-4cd1-aad3-5ada1d8f9248
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 1
+SET_RUN_COLOR 0 0.2 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Math Model`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+PARSFILE Procedures\Proc_b5cbb172-8479-4d76-975a-5a900fb40b65.par
+#BlueLink28 Procedures`Platoon Lead` Multi-Vehicle` , Procedure`Proc_b5cbb172-8479-4d76-975a-5a900fb40b65
+
+PARSFILE Animator\Arrows\Arrows_728e43ed-86a4-491c-8f89-6b6fcbd775e7.par
+#BlueLink10 Animator: Wheel Arrows and Other Indicators`Paint Tire Path (Blue)` Tire Paths` , Miscellaneous`Arrows_728e43ed-86a4-491c-8f89-6b6fcbd775e7
+
+PARSFILE Animator\Frames\Frame_a4688f74-1169-4000-b735-6950b0fde75f.par
+#BlueLink11 Animator: Reference Frame`Numbered Sphere for Car 1` Platooning` , Miscellaneous`Frame_a4688f74-1169-4000-b735-6950b0fde75f
+
+
+SPECIAL_PARSFILE Runs\Run_bc248d62-9ded-4369-a913-14f07c6b8ba0.par
+#BlueLink23 CarSim Run Control`Five-Car Platoon: Car 2` * CS 2020.0 - Platooning` , Overlay run or ERD file`Run_bc248d62-9ded-4369-a913-14f07c6b8ba0
+
+
+SPECIAL_PARSFILE Runs\Run_49bc04f8-cb3d-428e-9f5f-2c7b2ce85449.par
+#BlueLink24 CarSim Run Control`Five-Car Platoon: Car 3` * CS 2020.0 - Platooning` , Overlay run or ERD file`Run_49bc04f8-cb3d-428e-9f5f-2c7b2ce85449
+
+
+SPECIAL_PARSFILE Runs\Run_f5853921-2079-4f7d-9c73-a92f9dbb5dae.par
+#BlueLink25 CarSim Run Control`Five-Car Platoon: Car 4` * CS 2020.0 - Platooning` , Overlay run or ERD file`Run_f5853921-2079-4f7d-9c73-a92f9dbb5dae
+
+
+SPECIAL_PARSFILE Runs\Run_0d5eac07-d4f6-4302-8173-094904f7c0fe.par
+#BlueLink26 CarSim Run Control`Five-Car Platoon: Car 5` * CS 2020.0 - Platooning` , Overlay run or ERD file`Run_0d5eac07-d4f6-4302-8173-094904f7c0fe
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Five-Car Platoon: Car 1 <* CS 2020.0 - Platooning>
+CATEGORY * CS 2020.0 - Platooning 
+DATASET_TITLE Five-Car Platoon: Car 1
+#MiscYellow0
+SSTART -15
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#WARNING: do not click Run or Send to Simulink! Use the new 'Multiple Vehicles' Library to run this example.
+#
+#This is 1 of 5 Run Control datasets use to simultaneously simulate five vehicles that interact with each other. New for 2020.0 release is the Multiple Vehicles library (Batch/Multiple Vehicles) that allows you to easily run parallel solver examples.
+#
+#A shared simulink model uses parallel solvers to simulate five vehicles across five CarSim Runs: Platoon Car 1-5. View the results from any of the five Platoon Run Control screens.
+#
+#To make a new run from Simulink, you may need additional parallel solver licenses (a standard CarSim package supports two parallel model instsances). If you do not have enough parallel solver licenses needed to run this simulation, please check the platoon example with two vehicles: that example runs with any CarSim license.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Platooning } Five-Car Platoon: Car 1
+#Library : CarSim Run Control
+#DataSet : Five-Car Platoon: Car 1
+#Category: * CS 2020.0 - Platooning
+#FileID  : Run_086406aa-e54b-4004-a0cf-9afaa2cc27ef
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

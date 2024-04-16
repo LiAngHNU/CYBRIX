@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName CarSim Run Control`Outrigger for Roll Stability Testing`Extended Models
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_756d0204-ba6a-45dc-8a4d-3cabfb558523
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+SET_RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_313b8111-3ba3-455f-9fff-4bbd991280e5.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`E-Class, SUV: Outriggers and Roof Load` E-Class` , Math Model`VehLoad_313b8111-3ba3-455f-9fff-4bbd991280e5
+
+PARSFILE Procedures\Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84.par
+#BlueLink28 Procedures`Rollover Steer Input` Stability Testing` , Procedure`Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+WRITE_SENSOR_DETECT
+Title Outrigger for Roll Stability Testing <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Outrigger for Roll Stability Testing
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class SUV with three payloads performs a rollover steer input maneuver. No ESC system is used.
+#
+#The three payloads represent the following:
+#Roof-mounted payload
+#Front and rear outriggers
+#
+#The ends of the outriggers that come into contact with the ground are modeled as springs using VS Commands. Since these springs are placed at a lateral distance from the car's centerline, the spring forces generate a counter roll moment.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Extended Models } Outrigger for Roll Stability Testing
+#Library : CarSim Run Control
+#DataSet : Outrigger for Roll Stability Testing
+#Category: Extended Models
+#FileID  : Run_756d0204-ba6a-45dc-8a4d-3cabfb558523
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

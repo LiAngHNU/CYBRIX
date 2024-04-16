@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName CarSim Run Control`City Environment: Car 1`* CS 2020.0 - Multiple Autonomous Vehicles
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_aa76dce2-630c-47c0-84c8-275a1975d306
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_667c238e-34b1-4bb0-b864-3e428deaeae0.par
+#BlueLink12 Models: Simulink`Autonomous Vehicle` Multi-Vehicle` , Models`Simlink_667c238e-34b1-4bb0-b864-3e428deaeae0
+
+PARSFILE Animator\Cameras\Camera_3abb6cb7-82f2-4567-b52d-fa76e8c9a9c9.par
+#BlueLink0 Animator: Camera Setup`City Intersection` Fixed Camera` , Animator camera`Camera_3abb6cb7-82f2-4567-b52d-fa76e8c9a9c9
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 2
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 1
+SET_RUN_COLOR 0 0.2 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_aa836016-2a25-4335-8871-83f70be350a1.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`D-Class Sdn: 160 deg Sensor (Blue)` Sensor Color Variations` , Math Model`VehLoad_aa836016-2a25-4335-8871-83f70be350a1
+
+PARSFILE Procedures\Proc_ce68ddac-5993-45c7-bd97-45694a02087f.par
+#BlueLink28 Procedures`Autonomous Driving: City Intersection` Multi-Vehicle` , Procedure`Proc_ce68ddac-5993-45c7-bd97-45694a02087f
+
+PARSFILE Roads\3D_Road\Road_34201660-ffbd-4778-81a3-82b34616d43e.par
+#BlueLink9 Road: 3D Surface (All Properties)`City Intersection` VS Scene Builder` , Miscellaneous`Road_34201660-ffbd-4778-81a3-82b34616d43e
+
+
+SPECIAL_PARSFILE Runs\Run_c1fc9dee-8e96-46e8-bcd1-1db079bbb1e2.par
+#BlueLink23 CarSim Run Control`City Environment: Car 2` * CS 2020.0 - Multiple Autonomous Vehicles` , Overlay run or ERD file`Run_c1fc9dee-8e96-46e8-bcd1-1db079bbb1e2
+
+
+SPECIAL_PARSFILE Runs\Run_2c662592-f728-475b-8b8b-31ce4754401f.par
+#BlueLink24 CarSim Run Control`City Environment: Car 3` * CS 2020.0 - Multiple Autonomous Vehicles` , Overlay run or ERD file`Run_2c662592-f728-475b-8b8b-31ce4754401f
+
+
+SPECIAL_PARSFILE Runs\Run_a2739cb3-3778-4884-8354-7ddd6a252932.par
+#BlueLink25 CarSim Run Control`City Environment: Car 4` * CS 2020.0 - Multiple Autonomous Vehicles` , Overlay run or ERD file`Run_a2739cb3-3778-4884-8354-7ddd6a252932
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title City Environment: Car 1 <* CS 2020.0 - Multiple Autonomous Vehicles>
+CATEGORY * CS 2020.0 - Multiple Autonomous Vehicles 
+DATASET_TITLE City Environment: Car 1
+#MiscYellow0
+SSTART 100
+path_id_dm 1000
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#WARNING: do not click Run or Send to Simulink! Use the new 'Multiple Vehicles' Library  (Batch/Multiple Vehicles) to run this example.
+#
+#This is 1 of 4 Run Control datasets used to simultaneously simulate four vehicles that interact with each other. New for 2020.0 release is the Multiple Vehicles library that allows you to easily run parallel solver examples.
+#
+#Autonomous Cars 1, 2, 3, & 4 all approach a four-way intersection with two opposing stop signs. Two pedestrians, one walking and one on a bicycle, cross the intersection seemingly unaware of their surroundings. Car 1 is Blue.
+#
+#A shared simulink model uses parallel solvers to simulate four vehicles across four CarSim Runs: the City Environment examples. View the results from any of these Run Control screens.
+#
+#To make a new run from Simulink, you may need additional parallel solver licenses (a standard CarSim package supports two parallel model instsances).
+#
+#If you do not have enough parallel solver licenses needed to run this simulation, please check the 'City (2-Car)' examples with two vehicles: that example runs with any CarSim license.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Multiple Autonomous Vehicles } City Environment: Car 1
+#Library : CarSim Run Control
+#DataSet : City Environment: Car 1
+#Category: * CS 2020.0 - Multiple Autonomous Vehicles
+#FileID  : Run_aa76dce2-630c-47c0-84c8-275a1975d306
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

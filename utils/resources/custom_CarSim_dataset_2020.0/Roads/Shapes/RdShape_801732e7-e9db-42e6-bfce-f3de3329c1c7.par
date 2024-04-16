@@ -1,0 +1,146 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`5-m Grid (Low Mu Surface)`3D Grid
+NLANES 7
+#MiscYellow0
+# 1 1 1, Grass (Light), 1, 30, 2.25, 10, m, 100, m, , , -100, 400, 100, , 0, Foliage
+# 1 1 1, Grass (Light), 1, 30, 2.25, -100, m, -10, m, , , -100, 400, 100, , 0, Foliage
+# 1 1 1, Pavement, 1, 10, 2, 10, m, -10, m, 3, 2, -100, 400, 5, 2, 0, Random
+# 1 1 1, Slate (White), 1, 10, 1.5, 5, m, -10, m, 2, 2, -100, 400, 5, 2, 0, Random
+# 1 1 1, Pavement, 1, 10, 1.5, 5, m, -10, m, 2, 2, -95, 400, 5, 2, 0, Random
+# 1 1 1, Slate (White), 1, 10, 2, 10, m, -10, m, 3, 2, -95, 400, 5, 2, 0, Random
+# 1 1 1, Tile Ice, 1, 10, 2, -9, m, 9, m, , , -100, 400, 5, , 0.02, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Grass (Light)
+SPECULAR(1) 1
+SCALE(1) 30
+LTILES(1) 2.25
+LIN(1) 10
+LINUNITS(1) m
+LOUT(1) 100
+LOUTUNITS(1) m
+SSTART(1) -100
+SSTOP(1) 400
+SINT(1) 100
+DZ(1) 0
+AUTODETAIL(1) Foliage
+COLOR(2) 1 1 1
+MATERIAL(2) Grass (Light)
+SPECULAR(2) 1
+SCALE(2) 30
+LTILES(2) 2.25
+LIN(2) -100
+LINUNITS(2) m
+LOUT(2) -10
+LOUTUNITS(2) m
+SSTART(2) -100
+SSTOP(2) 400
+SINT(2) 100
+DZ(2) 0
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Pavement
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 2
+LIN(3) 10
+LINUNITS(3) m
+LOUT(3) -10
+LOUTUNITS(3) m
+LDIV(3) 3
+LIPRINT(3) 2
+SSTART(3) -100
+SSTOP(3) 400
+SINT(3) 5
+IPRINT(3) 2
+DZ(3) 0
+AUTODETAIL(3) Random
+COLOR(4) 1 1 1
+MATERIAL(4) Slate (White)
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 1.5
+LIN(4) 5
+LINUNITS(4) m
+LOUT(4) -10
+LOUTUNITS(4) m
+LDIV(4) 2
+LIPRINT(4) 2
+SSTART(4) -100
+SSTOP(4) 400
+SINT(4) 5
+IPRINT(4) 2
+DZ(4) 0
+AUTODETAIL(4) Random
+COLOR(5) 1 1 1
+MATERIAL(5) Pavement
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1.5
+LIN(5) 5
+LINUNITS(5) m
+LOUT(5) -10
+LOUTUNITS(5) m
+LDIV(5) 2
+LIPRINT(5) 2
+SSTART(5) -95
+SSTOP(5) 400
+SINT(5) 5
+IPRINT(5) 2
+DZ(5) 0
+AUTODETAIL(5) Random
+COLOR(6) 1 1 1
+MATERIAL(6) Slate (White)
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) 2
+LIN(6) 10
+LINUNITS(6) m
+LOUT(6) -10
+LOUTUNITS(6) m
+LDIV(6) 3
+LIPRINT(6) 2
+SSTART(6) -95
+SSTOP(6) 400
+SINT(6) 5
+IPRINT(6) 2
+DZ(6) 0
+AUTODETAIL(6) Random
+COLOR(7) 1 1 1
+MATERIAL(7) Tile Ice
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 2
+LIN(7) -9
+LINUNITS(7) m
+LOUT(7) 9
+LOUTUNITS(7) m
+SSTART(7) -100
+SSTOP(7) 400
+SINT(7) 5
+DZ(7) 0.02
+AUTODETAIL(7) Random
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+#EMBEDDED_NOTES
+#This shape specification is setup to match a friction map that defines a low-friciton surface.
+#
+#The friction is 0.5 from  -100 < s < +400 and -9 m < L < +9 m. This is shown with the Tile Ice material (row 7).
+#
+#Mu is 0.85 everywhere else.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { 3D Grid } 5-m Grid (Low Mu Surface)
+#Library : Road: Animator Surface Shapes
+#DataSet : 5-m Grid (Low Mu Surface)
+#Category: 3D Grid
+#FileID  : RdShape_801732e7-e9db-42e6-bfce-f3de3329c1c7
+#Product : CarSim 2020.0
+#VehCode Road Shapes
+
+END

@@ -1,0 +1,126 @@
+PARSFILE
+#FullDataName Generic VS Commands`Peak force information`Tire force and moment
+#VehCode VS Commands
+
+#MiscYellow0
+! Parameter to prevent dividing by zero
+define_parameter f_eps = 1e-10; N;
+! some things are to be expressed in percent, so define units
+define_units percent 100;
+! Parameter to offset the animations vertically so they are visible
+! symbol stack is used to send it to the visualizer
+symbol_push <<z_anim>> 1.5
+! Slip angles for peak lateral force at current load
+! Combined slip effects ignored
+define_output AlpPkL1 = alpha_fy_peak(fz_l1, 1); deg;
+define_output AlpPkR1 = alpha_fy_peak(fz_r1, 2); deg;
+define_output AlpPkL2 = alpha_fy_peak(fz_l2, 3); deg;
+define_output AlpPkR2 = alpha_fy_peak(fz_r2, 4); deg;
+! Peak lateral force at current load and mu
+! Combined slip effects ignored
+define_output FyPkL1 = max(f_eps, abs(fy_tire(fz_l1, AlpPkL1, 1)) * muy_l1/mu_ref_y(1,1)); N;
+define_output FyPkR1 = max(f_eps, abs(fy_tire(fz_r1, AlpPkR1, 2)) * muy_r1/mu_ref_y(1,2)); N;
+define_output FyPkL2 = max(f_eps, abs(fy_tire(fz_l2, AlpPkL2, 3)) * muy_l2/mu_ref_y(2,1)); N;
+define_output FyPkR2 = max(f_eps, abs(fy_tire(fz_r2, AlpPkR2, 4)) * muy_r2/mu_ref_y(2,2)); N;
+! Percent lateral force saturation at current load
+! Combined slip effects ignored
+define_output FyUseL1 = abs(fy_l1 / FyPkL1); percent;
+define_output FyUseR1 = abs(fy_r1 / FyPkR1); percent;
+define_output FyUseL2 = abs(fy_l2 / FyPkL2); percent;
+define_output FyUseR2 = abs(fy_r2 / FyPkR2); percent;
+
+! Slip ratios for peak longitudinal force at current load
+! Combined slip effects ignored
+define_output KapPkL1 = Kappa_fx_peak(fz_l1, 1); -;
+define_output KapPkR1 = Kappa_fx_peak(fz_r1, 2); -;
+define_output KapPkL2 = Kappa_fx_peak(fz_l2, 3); -;
+define_output KapPkR2 = Kappa_fx_peak(fz_r2, 4); -;
+! Peak longitudinal force at current load and mu
+! Combined slip effects ignored
+define_output FxPkL1 = max(f_eps, abs(fx_tire(fz_l1, KapPkL1, 1)) * mux_l1/mu_ref_x(1,1)); N;
+define_output FxPkR1 = max(f_eps, abs(fx_tire(fz_r1, KapPkR1, 2)) * mux_r1/mu_ref_x(1,2)); N;
+define_output FxPkL2 = max(f_eps, abs(fx_tire(fz_l2, KapPkL2, 3)) * mux_l2/mu_ref_x(2,1)); N;
+define_output FxPkR2 = max(f_eps, abs(fx_tire(fz_r2, KapPkR2, 4)) * mux_r2/mu_ref_x(2,2)); N;
+! Percent lateral force saturation at current load
+! Combined slip effects ignored
+define_output FxUseL1 = abs(fx_l1 / FxPkL1); percent;
+define_output FxUseR1 = abs(fx_r1 / FxPkR1); percent;
+define_output FxUseL2 = abs(fx_l2 / FxPkL2); percent;
+define_output FxUseR2 = abs(fx_r2 / FxPkR2); percent;
+
+! Tire force directions and magnitudes
+! Force magnitude
+define_output MagF_L1 = (fx_l1^2 + fy_l1^2)^0.5;
+define_output MagF_R1 = (fx_r1^2 + fy_r1^2)^0.5;
+define_output MagF_L2 = (fx_l2^2 + fy_l2^2)^0.5;
+define_output MagF_R2 = (fx_r2^2 + fy_r2^2)^0.5;
+! Angle of force relative to wheel plane
+define_output AF_rel_L1 = atan2(fy_l1,fx_l1); deg;
+define_output AF_rel_R1 = atan2(fy_r1,fx_r1); deg;
+define_output AF_rel_L2 = atan2(fy_l2,fx_l2); deg;
+define_output AF_rel_R2 = atan2(fy_r2,fx_r2); deg;
+
+! The force arrows will be shown as cylinders, so yaw and pitch are
+! sufficient to animate them
+! Global (and Euler) direction (yaw angle) of force
+define_output AF_L1 = AF_rel_L1 + Yaw_L1; deg;
+define_output AF_R1 = AF_rel_R1 + Yaw_R1; deg;
+define_output AF_L2 = AF_rel_L2 + Yaw_L2; deg;
+define_output AF_R2 = AF_rel_R2 + Yaw_R2; deg;
+! Euler pitch of the force for animation
+define_output TfPitchL1 = -asin(cos(AF_rel_L1)*-sin(PitchGL1)+sin(AF_rel_L1)*sin(RollGL1)); deg;
+define_output TfPitchR1 = -asin(cos(AF_rel_R1)*-sin(PitchGR1)+sin(AF_rel_R1)*sin(RollGR1)); deg;
+define_output TfPitchL2 = -asin(cos(AF_rel_L2)*-sin(PitchGL2)+sin(AF_rel_L2)*sin(RollGL2)); deg;
+define_output TfPitchR2 = -asin(cos(AF_rel_R2)*-sin(PitchGR2)+sin(AF_rel_R2)*sin(RollGR2)); deg;
+
+
+!
+#ENDMYellow
+
+PARSFILE Generic\Group\GenGrp_763aac33-eee8-4f05-95cd-b48c2806000b.par
+#BlueLink0 Generic Data Group`Tire utilization` Tire force and moment` , Miscellaneous`GenGrp_763aac33-eee8-4f05-95cd-b48c2806000b
+
+PARSFILE Plot\Setup\Plot_784fa5fa-ba2b-4145-9b95-cec2849c09f4.par
+#BlueLink3 Plot: Setup`Slip angle for peak lateral force` Tire utilization` , Plot`Plot_784fa5fa-ba2b-4145-9b95-cec2849c09f4
+
+PARSFILE Plot\Setup\Plot_6be62ad0-2388-48cf-85c7-e9f7113cdb33.par
+#BlueLink4 Plot: Setup`Peak lateral force at Fz` Tire utilization` , Plot`Plot_6be62ad0-2388-48cf-85c7-e9f7113cdb33
+
+PARSFILE Plot\Setup\Plot_ac244e06-6d68-45d0-8607-f0237c19e483.par
+#BlueLink5 Plot: Setup`Lateral force pct utilization` Tire utilization` , Plot`Plot_ac244e06-6d68-45d0-8607-f0237c19e483
+
+PARSFILE Plot\Setup\Plot_0773e087-151d-42db-a308-f02b7b6ee48d.par
+#BlueLink6 Plot: Setup`Lateral Forces` Tire Forces and Moments` , Plot`Plot_0773e087-151d-42db-a308-f02b7b6ee48d
+
+PARSFILE Plot\Setup\Plot_e42eec15-5648-4e02-a45e-ff08ba9d1357.par
+#BlueLink7 Plot: Setup`Slip ratio for peak longitudinal force` Tire utilization` , Plot`Plot_e42eec15-5648-4e02-a45e-ff08ba9d1357
+
+PARSFILE Plot\Setup\Plot_51a614a8-a37c-475f-abb0-a0c8655ef73b.par
+#BlueLink8 Plot: Setup`Peak longitudinal force at Fz` Tire utilization` , Plot`Plot_51a614a8-a37c-475f-abb0-a0c8655ef73b
+
+PARSFILE Plot\Setup\Plot_f280b43a-133e-45e0-a339-2fd7c22f0dab.par
+#BlueLink9 Plot: Setup`Longitudinal force pct utilization` Tire utilization` , Plot`Plot_f280b43a-133e-45e0-a339-2fd7c22f0dab
+
+PARSFILE Plot\Setup\Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b.par
+#BlueLink10 Plot: Setup`Longitudinal Forces` Tire Forces and Moments` , Plot`Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b
+
+
+#EMBEDDED_NOTES
+#This dataset makes use of the functions "alpha_fy_peak" and "kappa_fx_peak". These functions accept a tire Fz and a tire index, and return the values of alpha and kappa, respectively, where the tire produces maximum force (Fy or Fx) at that load.
+#
+#Here, the values of alpha and kappa for peak force are obtained at the current Fz, and in turn the tire force tables are called directly to obtain the maximum force value. (Scroll)
+#
+#These are then used dynamically to scale animation shapes that float above each tire, indicating the maximum theoretical force available from each tire as an ellipse.
+#
+#The current actual tire forces are used to scale and orient an arrow shape representing the actual current tire shear force vector.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Tire force and moment } Peak force information
+#Library : Generic VS Commands
+#DataSet : Peak force information
+#Category: Tire force and moment
+#FileID  : GenVS_a144aff8-8119-4179-abfa-f89a8c369217
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

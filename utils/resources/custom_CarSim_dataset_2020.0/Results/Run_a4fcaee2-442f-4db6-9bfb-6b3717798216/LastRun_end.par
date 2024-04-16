@@ -1,0 +1,663 @@
+PARSFILE
+! VS Tire Tester for CarSim and TruckSim 2020.0
+! Utility to calculate tire behavior for simulated quasi-static tests
+! Revision 125462, December 17, 2019
+
+DATASET_TITLE Load Sensitivity at 4000 N
+CATEGORY Tire Tester
+TITLE Load Sensitivity at 4000 N <Tire Tester>
+
+! Echo: Results\Run_a4fcaee2-442f-4db6-9bfb-6b3717798216\LastRun_echo.par
+! This run was made 21:03 on December 18, 2019.
+
+!------------------------------------------------------------------------------------
+! SYSTEM PARAMETERS (SIMULATION OPTIONS)
+!------------------------------------------------------------------------------------
+! [D] (default) indicates that a parameter was not set by reading from a Parsfile.
+! [I] indicates that changing the parameter via an Event triggers an initialization.
+! [L] indicates that the parameter is locked once the simulation starts.
+
+ID_EVENT            0 ; - ! ID number that can be assigned to the current event
+ID_RUN              0 ; - ! ID number that can be assigned to a simulation run
+NDIGITS_ECHO       10 ! [D] Max. no. of digits for printing floating-point numbers
+! NIMPORT           0 ! Number of variables activated for import (read only)
+! NOUT_ANI_LIVE     0 ! Number of variables sent live to animators (read only)
+! NOUT_EXPORT       0 ! Number of output variables activated for export (read only)
+! NOUT_WRITE       16 ! Number of output variables written to file (read only)
+OPT_ALL_WRITE       0 ! Write all outputs to file? 1 -> all, 0 -> only activated
+                      ! outputs
+OPT_BUFFER_WRITE    0 ! [D] Retain output data in memory buffer until end of run? 0
+                      ! -> no, write immediately to file, 1 -> yes, buffer during
+                      ! run and write to file after run finishes [L]
+OPT_CHECK_MATH      2 ! [D] Check for math exceptions? 2 -> as errors, 1 -> as
+                      ! warnings, 0 -> no checks
+OPT_ECHO_ALL_PARS   0 ! [D] Echo all parameters in this VS Solver? 0 -> no, 1 -> yes
+OPT_ECHO_ALL_UNITS  0 ! [D] Echo list of units and scale factors? 0 -> no, 1 -> yes
+OPT_ECHO_ICS        0 ! [D] Echo initial conditions? 0 -> no, 1 -> yes
+OPT_ECHO_KEYWORDS_LC 0 ! [D] Echo all keywords in lowercase? -> 0 -> no, 1 -> yes
+OPT_ECHO_WRITE      0 ! [D] Echo written outputs? 0 -> no, 1 -> yes
+OPT_ERROR_DIALOG    1 ! [D] Show pop-up dialog box if fatal error occurs: 1 -> yes
+                      ! (normal use), 0 -> no (for batch runs)
+OPT_ERROR_DUP_DEF   0 ! [D] Handle case where DEFINE_IMPORT, DEFINE_OUTPUT,
+                      ! DEFINE_PARAMETER, or DEFINE_VARIABLE attempts to define a
+                      ! variable with a name that is already in use. 0 -> write
+                      ! warning in log file, 1 -> generate error [L]
+OPT_ERROR_SHOW_ALL  0 ! [D] Show pop-up boxes for all errors: 0 -> only show the
+                      ! first, 1 -> also show subsequent errors
+OPT_LOG_DEBUG       0 ! [D] Log file writing: 0 -> normal, 1 -> crash expected
+OPT_LOG_VERBOSE     2 ! [D] Log file verbosity: 2 -> errors + most events + parsfile
+                      ! names, 0 -> errors only, 1 -> errors + events, 3 ->
+                      ! advanced diagnostics
+OPT_LOG_WARNINGS    1 ! [D] Write warnings into log file? 1 -> yes, 0 -> no
+OPT_PAUSE           0 ! [D] Pause at end of run with window open? 0 -> no, 1 -> yes
+OPT_SKIP_INIT_DYN   0 ! [D] Skip initial dynamic calculations (for some RT systems)?
+                      ! 0 -> no, 1 -> yes
+OPT_SORT_WRITE      1 ! [D] Sort written outputs? 1 -> alphabetical, 0 -> as entered
+OPT_VS_FILETYPE     2 ! Type of output file: 1-> 64-bit VS, 2-> 32-bit VS,3 ->
+                      ! 32-bit ERD, 4 -> text CSV (no binary), 0 -> no output file
+! RTIME 0.08700000006 ; - ! CALC -- Computational efficiency (sec/sim. sec)
+TSTEP          0.0005 ; s ! Time step between calculations. [L]
+
+!------------------------------------------------------------------------------------
+! MODEL PARAMETERS
+!------------------------------------------------------------------------------------
+! Tire behavior is specified with the following parameters. Depending on the
+! selected options, the following nonlinear Configurable Functions might also be
+! used: FX_TIRE, FY_TIRE, FYG_TIRE, FZ_TIRE, KGAMMA, L_CONTACT_X, L_CONTACT_Y,
+! L_RELAX_X, L_RELAX_Y, MX_TIRE, MXG_TIRE, MZ_TIRE, STI_TYPARR, and Z_PROFILE
+
+VLOW_DRIFT_X      0.1 ; km/h ! [D] Low speed limit: allow near-static Fx to avoid
+                      ! drift when stopped on a grade
+VLOW_DRIFT_Y      0.1 ; km/h ! [D] Low speed limit: allow near-static Fy to avoid
+                      ! drift when stopped on a grade
+
+OPT_TIRE_MODEL(1,1) 6 ! Internal tire shear-model option, tire L1: 1 -> original
+                      ! tabular model; 0 -> fully external model; 2 -> built-in
+                      ! lags; 3 -> built-in for Fx, My, and lags; 6 -> tabular with
+                      ! camber extensions; 7 -> built-in Pacejka 5.2; 8 -> TNO
+                      ! Delft-Tyre; 9 -> COSIN FTire; 10 -> third-party STI tire
+                      ! model [I]
+OPT_TIRE_COMB(1,1)  0 ! Option for combined slip calculation: 0 -> use only
+                      ! theoretical combined slip; 1 -> use transition between the
+                      ! normalized and theoretical combined slip
+OPT_TIRE_LAG_ALPHA(1,1) 1 ! Options for handling lag in tire alpha: 1 -> transition
+                          ! to using instant slip when the time constant is less
+                          ! than 12*TSTEP, 0 -> use fixed time constant 12*TSTEP at
+                          ! high speeds
+OPT_TIRE_LAG_KAPPA(1,1) 2 ! Options for handling lag in tire kappa: 2 -> use instant
+                          ! slip when absolute kappa is decreasing and transition
+                          ! to instant slip when the time constant is less than
+                          ! 12*TSTEP; 1 -> transition to instant slip when the time
+                          ! constant is less than 12*TSTEP; 0 -> use fixed time
+                          ! constant 12*TSTEP at high speeds
+CRO_FY(1,1)         1 ; - ! Roll-off of Fyg with normalized combined slip, tire L1
+CRO_MX(1,1)         1 ; - ! Roll-off of Mxg with normalized combined slip
+CRO_MZ(1,1)         1 ; - ! Roll-off of Mzg with normalized combined slip
+OPT_MX_CONICITY(1,1) 0 ! [D] Is MX data decoupled from conicity? 0 -> No; 1 -> Yes
+FZ_MAX(1,1)    100000 ; N ! Maximum allowed vertical force, tire L1 [I]
+FZ_REF(1,1)      5500 ; N ! Reference vertical force: Not used directly in the VS
+                      ! Math Model; provided as a standard reference for advanced
+                      ! users to scale other parameters and Configurable Functions
+                      ! for this tire
+IT(1,1)             2 ; kg-m2 ! Spin inertia for tire L1 [I]
+IT_XXZZ(1,1)      1.1 ; kg-m2 ! XX/ZZ inertia for tire L1 [I]
+M_TIRE(1,1)        25 ; kg ! Mass of tire L1
+MU_REF_X(1,1)       1 ; - ! Ground friction during meas. of Fx data, tire L1
+MU_REF_Y(1,1)       1 ; - ! Ground friction during meas. of Fy data, tire L1
+R0(1,1)           364 ; mm ! Free (unloaded) radius (if 0, R0 is set to RRE) [I]
+RRE(1,1)          364 ; mm ! Effective rolling radius (Vx/AVy), tire L1 [I]
+RR_C(1,1)      0.0064 ; - ! Rolling resistance: MyRR = R*Fz*RR_surf*(RR_c + RR_v*Vx)
+RR_FX(1,1)          0 ; - ! Switch: 0 -> do not add the effect of tire Fx to the
+                      ! rolling resistance moment MyRR; 1 add the effect
+RR_V(1,1)  9.0718e-05 ; h/km ! Rolling resistance: MyRR = R*Fz*RR_surf*(RR_c +
+                      ! RR_v*Vx)
+VLOW_ALPHA(1,1)     2 ; km/h ! Minimum Vx used in ODE for lagged alpha
+VLOW_DAMP_Y(1,1)    0 ; km/h ! [D] Low speed when damping is added to Fy
+VLOW_KAPPA(1,1)     2 ; km/h ! Minimum Vx used in ODE for lagged kappa
+
+!------------------------------------------------------------------------------------
+! TEST SETUP PARAMETERS
+!------------------------------------------------------------------------------------
+OPT_TEST_MODE       1 ! Sweep one variable from a lower limit to an upper limit
+                      ! using a constant step. 0 -> vary Fz, 1 -> vary alpha, 2 ->
+                      ! vary kappa, 3 -> vary gamma [I]
+FZ_TEST          4000 ; N ! Constant vertical force
+ALPHA_LOWER       -10 ; deg ! Slip angle lower test limit
+ALPHA_UPPER        10 ; deg ! Slip angle upper test limit
+ALPHA_STEP       0.01 ; deg ! Slip angle increment
+KAPPA_TEST          0 ; - ! Constant slip ratio
+GAMMA_TEST          0 ; deg ! Constant inclination angle
+MUX_TEST           -1 ; - ! Longitudinal mu for this test
+MUY_TEST           -1 ; - ! Lateral mu for this test
+SPEED_TEST         10 ; km/h ! Test speed (r*w)
+RR_SURF             1 ; - ! Tire rolling resistance surface-effect coefficient
+
+
+!------------------------------------------------------------------------------------
+! SYSTEM CONSTANTS
+!------------------------------------------------------------------------------------
+! DR      57.29577951 ; - ! Deg/rad symbol to use in formulas (read-only)
+! G           9.80665 ; - ! Symbol for gravity constant m/s/s (read-only)
+! PI      3.141592654 ; - ! Symbol for PI to use in formulas (read-only)
+! ZERO              0 ; - ! Symbol for zero to use in VS Events (read-only)
+
+!------------------------------------------------------------------------------------
+! CONFIGURABLE FUNCTIONS
+!------------------------------------------------------------------------------------
+
+! FX_TIRE: Tire longitudinal force (Fx) as a function of vertical load (Fz) and
+! longitudinal slip (Kappa). Fx can be a nonlinear CARPET function of Fz and Kappa or
+! a function of Kappa multiplied by a function FX_TIRE_FZ of Fz (CONSTANT,
+! COEFFICIENT, or TABLE). Fx from the calculation can be adjusted with FX_TIRE_GAIN
+! and FX_TIRE_OFFSET. Kappa used in the calculation can be adjusted with
+! KAPPA_SCALE_FX_TIRE and KAPPA_START_FX_TIRE. Fz used in the calculation can be
+! adjusted with FZ_SCALE_FX_TIRE and FZ_START_FX_TIRE.
+
+! 2D table: row 1 has "0" (place holder) followed by 3 values of Fz (N). Other rows
+! have Kappa (-) followed by 3 values of Fx (N). With type = 2D_FROM _ZERO, the table
+! includes a hidden row 2 of zeros along with a hidden column 1 of zeros.
+FX_TIRE_CARPET 2D_FROM_ZERO
+ 0, 2000, 4000, 6000
+ 0.025, 806.695, 1873.43, 2951.6
+ 0.05, 1436.1, 3151.2, 4778.17
+ 0.075, 1834.25, 3811.03, 5616.64
+ 0.1, 2046.5, 4086.8, 5931.24
+ 0.125, 2140.19, 4166.09, 6004.46
+ 0.15, 2166.84, 4152.54, 5970.11
+ 0.175, 2158.19, 4097.66, 5889.47
+ 0.2, 2132.13, 4026.37, 5791.06
+ 0.225, 2098.33, 3950.67, 5688.39
+ 0.25, 2061.93, 3876.2, 5587.85
+ 0.275, 2025.59, 3805.52, 5492.31
+ 0.3, 1990.64, 3739.63, 5402.93
+ 0.325, 1957.68, 3678.76, 5319.97
+ 0.35, 1926.94, 3622.76, 5243.27
+ 0.375, 1898.43, 3571.33, 5172.46
+ 0.4, 1872.07, 3524.09, 5107.09
+ 0.425, 1847.7, 3480.66, 5046.7
+ 0.45, 1825.19, 3440.66, 4990.82
+ 0.475, 1804.37, 3403.77, 4939.05
+ 0.5, 1785.09, 3369.66, 4890.99
+ 0.525, 1767.2, 3338.07, 4846.3
+ 0.55, 1750.58, 3308.73, 4804.65
+ 0.575, 1735.11, 3281.44, 4765.78
+ 0.6, 1720.68, 3256, 4729.41
+ 0.625, 1707.21, 3232.24, 4695.34
+ 0.65, 1694.59, 3210, 4663.36
+ 0.675, 1682.77, 3189.14, 4633.3
+ 0.7, 1671.66, 3169.55, 4604.98
+ 0.725, 1661.21, 3151.11, 4578.27
+ 0.75, 1651.36, 3133.73, 4553.04
+ 0.775, 1642.08, 3117.33, 4529.17
+ 0.8, 1633.3, 3101.82, 4506.56
+ 0.825, 1624.99, 3087.14, 4485.11
+ 0.85, 1617.11, 3073.22, 4464.74
+ 0.875, 1609.64, 3060.01, 4445.36
+ 0.9, 1602.55, 3047.45, 4426.92
+ 0.925, 1595.79, 3035.5, 4409.34
+ 0.95, 1589.37, 3024.11, 4392.57
+ 0.975, 1583.24, 3013.25, 4376.55
+ 1, 1583.24, 3013.25, 4376.55
+ENDTABLE
+FX_TIRE_GAIN        1 ! Gain multiplied with calculated value to get Fx
+FX_TIRE_OFFSET      0 ; N ! Offset added (after gain) to get Fx
+KAPPA_START_FX_TIRE 0 ; - ! Offset subtracted from Kappa
+KAPPA_SCALE_FX_TIRE 1 ! Scale factor divided into (Kappa - KAPPA_START_FX_TIRE)
+FZ_START_FX_TIRE    0 ; N ! Offset subtracted from Fz
+FZ_SCALE_FX_TIRE    1 ! Scale factor divided into (Fz - FZ_START_FX_TIRE)
+
+! FYG_TIRE: Tire lateral force (Fy) as a function of vertical load (Fz) and
+! inclination angle (Gamma). Fy can be a nonlinear CARPET function of Fz and Gamma or
+! a function of Gamma (CONSTANT, COEFFICIENT, or TABLE) multiplied by a function
+! FYG_TIRE_FZ of Fz (CONSTANT, COEFFICIENT, or TABLE). Fy from the calculation can be
+! adjusted with FYG_TIRE_GAIN and FYG_TIRE_OFFSET. Gamma used in the calculation can
+! be adjusted with GAMMA_SCALE_FYG_TIRE and GAMMA_START_FYG_TIRE. Fz used in the
+! calculation can be adjusted with FZ_SCALE_FYG_TIRE and FZ_START_FYG_TIRE.
+
+! 2D table: row 1 has "0" (place holder) followed by 3 values of Fz (N). Other rows
+! have Gamma (deg) followed by 3 values of Fy (N). With type = 2D_FROM _ZERO, the
+! table includes a hidden row 2 of zeros along with a hidden column 1 of zeros.
+FYG_TIRE_CARPET 2D_FROM_ZERO
+ 0, 2000, 4000, 6000
+ 0.5, -13.4855, -31.0616, -52.728
+ 1, -26.9731, -62.1306, -105.471
+ 1.5, -40.4649, -93.2149, -158.246
+ 2, -53.9634, -124.323, -211.067
+ 2.5, -67.4709, -155.462, -263.953
+ 3, -80.9901, -186.641, -316.919
+ 3.5, -94.5236, -217.87, -369.983
+ 4, -108.075, -249.158, -423.162
+ 4.5, -121.646, -280.514, -476.476
+ 5, -135.24, -311.948, -529.942
+ 5.5, -135.24, -311.948, -529.942
+ 6, -135.24, -311.948, -529.942
+ENDTABLE
+FYG_TIRE_GAIN       1 ! Gain multiplied with calculated value to get Fy
+FYG_TIRE_OFFSET     0 ; N ! Offset added (after gain) to get Fy
+GAMMA_START_FYG_TIRE 0 ; deg ! Offset subtracted from Gamma
+GAMMA_SCALE_FYG_TIRE 1 ! Scale factor divided into (Gamma - GAMMA_START_FYG_TIRE)
+FZ_START_FYG_TIRE   0 ; N ! Offset subtracted from Fz
+FZ_SCALE_FYG_TIRE   1 ! Scale factor divided into (Fz - FZ_START_FYG_TIRE)
+
+! FY_TIRE: Tire lateral force (Fy) as a function of vertical load (Fz) and lateral
+! slip (Alpha). Fy can be a nonlinear CARPET function of Fz and Alpha or a function
+! of Alpha multiplied by a function FY_TIRE_FZ of Fz (CONSTANT, COEFFICIENT, or
+! TABLE). Fy from the calculation can be adjusted with FY_TIRE_GAIN and
+! FY_TIRE_OFFSET. Alpha used in the calculation can be adjusted with
+! ALPHA_SCALE_FY_TIRE and ALPHA_START_FY_TIRE. Fz used in the calculation can be
+! adjusted with FZ_SCALE_FY_TIRE and FZ_START_FY_TIRE.
+
+! 2D table: row 1 has "0" (place holder) followed by 3 values of Fz (N). Other rows
+! have Alpha (deg) followed by 3 values of Fy (N). With type = 2D_FROM _ZERO, the
+! table includes a hidden row 2 of zeros along with a hidden column 1 of zeros.
+FY_TIRE_CARPET 2D_FROM_ZERO
+ 0, 2000, 4000, 6000
+ 0.5, 267.035, 433.373, 494.195
+ 1, 529.169, 865.293, 991.982
+ 1.5, 777.066, 1286.21, 1488
+ 2, 1002.22, 1685.51, 1975.36
+ 2.5, 1198.25, 2052.52, 2445.63
+ 3, 1361.88, 2378.21, 2889.49
+ 3.5, 1493.12, 2656.79, 3297.81
+ 4, 1594.6, 2886.53, 3663.1
+ 4.5, 1670.5, 3069.46, 3980.53
+ 5, 1722.4, 3202.24, 4232.26
+ 5.5, 1758.79, 3300.81, 4436.22
+ 6, 1784.04, 3373.47, 4600.7
+ 6.5, 1800.97, 3425.73, 4730.88
+ 7, 1811.74, 3462.21, 4832.09
+ 7.5, 1817.98, 3486.62, 4909.3
+ 8, 1820.91, 3501.91, 4966.97
+ 8.5, 1821.44, 3510.36, 5008.94
+ 9, 1820.25, 3513.73, 5038.44
+ 9.5, 1817.82, 3513.34, 5058.09
+ 10, 1817.82, 3513.34, 5058.09
+ 10.5, 1817.82, 3513.34, 5058.09
+ENDTABLE
+FY_TIRE_GAIN        1 ! Gain multiplied with calculated value to get Fy
+FY_TIRE_OFFSET      0 ; N ! Offset added (after gain) to get Fy
+ALPHA_START_FY_TIRE 0 ; deg ! Offset subtracted from Alpha
+ALPHA_SCALE_FY_TIRE 1 ! Scale factor divided into (Alpha - ALPHA_START_FY_TIRE)
+FZ_START_FY_TIRE    0 ; N ! Offset subtracted from Fz
+FZ_SCALE_FY_TIRE    1 ! Scale factor divided into (Fz - FZ_START_FY_TIRE)
+
+! FZ_TIRE: Tire vertical force. Vertical force is a function of tire compression
+! (COEFFICIENT or TABLE). Vertical force from the calculation can be adjusted with
+! FZ_TIRE_GAIN and FZ_TIRE_OFFSET. Tire compression used in the calculation can be
+! adjusted with CMP_SCALE_FZ_TIRE and CMP_START_FZ_TIRE. An inverse version of this
+! function is used internally.
+
+FZ_TIRE_COEFFICIENT 230 ! Coefficient: vertical force per unit tire compression
+                        ! (N/mm)
+FZ_TIRE_GAIN        1 ! Gain multiplied with calculated value to get vertical force
+FZ_TIRE_OFFSET      0 ; N ! Offset added (after gain) to get vertical force
+CMP_START_FZ_TIRE   0 ; mm ! Offset subtracted from tire compression
+CMP_SCALE_FZ_TIRE   1 ! Scale factor divided into (tire compression -
+                      ! CMP_START_FZ_TIRE)
+
+! L_CONTACT_X: Tire/ground contact length. Tire contact length is a function of tire
+! compression (CONSTANT or TABLE). Alternatively, a custom equation can be defined at
+! runtime. Tire contact length from the calculation can be adjusted with
+! L_CONTACT_X_GAIN and L_CONTACT_X_OFFSET. Tire compression used in the calculation
+! can be adjusted with CMP_SCALE_L_CONTACT_X.
+
+L_CONTACT_X_CONSTANT 115 ; mm ! Constant tire contact length
+L_CONTACT_X_GAIN    1 ! Gain multiplied with calculated value to get tire contact
+                      ! length
+L_CONTACT_X_OFFSET  0 ; mm ! Offset added (after gain) to get tire contact length
+
+! L_CONTACT_Y: Tire/ground contact width. Tire contact width is a function of tire
+! compression (CONSTANT or TABLE). Alternatively, a custom equation can be defined at
+! runtime. Tire contact width from the calculation can be adjusted with
+! L_CONTACT_Y_GAIN and L_CONTACT_Y_OFFSET. Tire compression used in the calculation
+! can be adjusted with CMP_SCALE_L_CONTACT_Y.
+
+L_CONTACT_Y_CONSTANT 225 ; mm ! Constant tire contact width
+L_CONTACT_Y_GAIN    1 ! Gain multiplied with calculated value to get tire contact
+                      ! width
+L_CONTACT_Y_OFFSET  0 ; mm ! Offset added (after gain) to get tire contact width
+
+! L_RELAX_X: Tire longitudinal relaxation length as a function of vertical load (Fz)
+! and lagged slip ratio (Kappa). L_Relax_X can be a nonlinear CARPET function of Fz
+! and Lagged Kappa or a function of Lagged Kappa (CONSTANT or TABLE) combined with a
+! function L_RELAX_X_FZ of Fz (CONSTANT, COEFFICIENT, or TABLE). Alternatively, a
+! custom equation can be defined at runtime. L_Relax_X from the calculation can be
+! adjusted with L_RELAX_X_GAIN and L_RELAX_X_OFFSET. Lagged Kappa used in the
+! calculation can be adjusted with LAGGED_KAPPA_SCALE_L_RELAX_X. Fz used in the
+! calculation can be adjusted with FZ_SCALE_L_RELAX_X.
+SET_UNITS L_RELAX_X_CARPET m ;
+
+! 1D table: col 1 = Lagged Kappa (-), col 2 = L_Relax_X (m)
+L_RELAX_X_TABLE SPLINE_FLAT ! spline interpolation, flat-line extrapolation
+ -0.1, 0.13526
+ -0.095, 0.13793
+ -0.09, 0.1431
+ -0.085, 0.14862
+ -0.08, 0.1552
+ -0.075, 0.16251
+ -0.07, 0.17087
+ -0.065, 0.18085
+ -0.06, 0.1926
+ -0.055, 0.20631
+ -0.05, 0.22324
+ -0.045, 0.24389
+ -0.04, 0.26989
+ -0.035, 0.30301
+ -0.03, 0.34575
+ -0.025, 0.40397
+ -0.02, 0.48251
+ -0.015, 0.59275
+ -0.01, 0.7393
+ -0.005, 0.90707
+ 0, 1
+ 0.005, 0.90707
+ 0.01, 0.7393
+ 0.015, 0.59275
+ 0.02, 0.48251
+ 0.025, 0.40397
+ 0.03, 0.34575
+ 0.035, 0.30301
+ 0.04, 0.26989
+ 0.045, 0.24389
+ 0.05, 0.22324
+ 0.055, 0.20631
+ 0.06, 0.1926
+ 0.065, 0.18085
+ 0.07, 0.17087
+ 0.075, 0.16251
+ 0.08, 0.1552
+ 0.085, 0.14862
+ 0.09, 0.1431
+ 0.095, 0.13793
+ 0.1, 0.13526
+ENDTABLE
+L_RELAX_X_GAIN 0.0728 ! Gain multiplied with calculated value to get L_Relax_X
+L_RELAX_X_OFFSET    0 ; m ! Offset added (after gain) to get L_Relax_X
+LAGGED_KAPPA_SCALE_L_RELAX_X 1 ! Scale factor divided into Lagged Kappa
+L_RELAX_X_COMBINE MULTIPLY ! How to combine the two components
+
+! 1D table: col 1 = Fz (N), col 2 = L_Relax_X component due to Fz (-)
+L_RELAX_X_FZ_TABLE LINEAR ! linear interpolation and extrapolation
+ 0, 0.2
+ 1, 1
+ENDTABLE
+FZ_SCALE_L_RELAX_X 5500 ! Scale factor divided into Fz
+
+! L_RELAX_Y: Tire lateral relaxation length as a function of vertical load (Fz) and
+! lagged slip angle (Alpha). L_Relax_Y can be a nonlinear CARPET function of Fz and
+! Lagged Alpha or a function of Lagged Alpha (CONSTANT or TABLE) combined with a
+! function L_RELAX_Y_FZ of Fz (CONSTANT, COEFFICIENT, or TABLE). Alternatively, a
+! custom equation can be defined at runtime. L_Relax_Y from the calculation can be
+! adjusted with L_RELAX_Y_GAIN and L_RELAX_Y_OFFSET. Lagged Alpha used in the
+! calculation can be adjusted with LAGGED_ALPHA_SCALE_L_RELAX_Y. Fz used in the
+! calculation can be adjusted with FZ_SCALE_L_RELAX_Y.
+SET_UNITS L_RELAX_Y_CARPET m ;
+
+! 1D table: col 1 = Lagged Alpha (deg), col 2 = L_Relax_Y (m)
+L_RELAX_Y_TABLE SPLINE_FLAT ! spline interpolation, flat-line extrapolation
+ -10, 0.039175
+ -9.5, 0.042142
+ -9, 0.047886
+ -8.5, 0.054018
+ -8, 0.061335
+ -7.5, 0.069451
+ -7, 0.078749
+ -6.5, 0.089829
+ -6, 0.10289
+ -5.5, 0.11812
+ -5, 0.13693
+ -4.5, 0.15988
+ -4, 0.18877
+ -3.5, 0.22557
+ -3, 0.27305
+ -2.5, 0.33775
+ -2, 0.42501
+ -1.5, 0.5475
+ -1, 0.71033
+ -0.5, 0.89674
+ 0, 1
+ 0.5, 0.89674
+ 1, 0.71033
+ 1.5, 0.5475
+ 2, 0.42501
+ 2.5, 0.33775
+ 3, 0.27305
+ 3.5, 0.22557
+ 4, 0.18877
+ 4.5, 0.15988
+ 5, 0.13693
+ 5.5, 0.11812
+ 6, 0.10289
+ 6.5, 0.089829
+ 7, 0.078749
+ 7.5, 0.069451
+ 8, 0.061335
+ 8.5, 0.054018
+ 9, 0.047886
+ 9.5, 0.042142
+ 10, 0.039175
+ENDTABLE
+L_RELAX_Y_GAIN  0.728 ! Gain multiplied with calculated value to get L_Relax_Y
+L_RELAX_Y_OFFSET    0 ; m ! Offset added (after gain) to get L_Relax_Y
+LAGGED_ALPHA_SCALE_L_RELAX_Y 1 ! Scale factor divided into Lagged Alpha
+L_RELAX_Y_COMBINE MULTIPLY ! How to combine the two components
+
+! 1D table: col 1 = Fz (N), col 2 = L_Relax_Y component due to Fz (-)
+L_RELAX_Y_FZ_TABLE SPLINE ! spline interpolation and extrapolation
+ 0, 0.1
+ 1, 1
+ 2, 1.5805
+ENDTABLE
+FZ_SCALE_L_RELAX_Y 5500 ! Scale factor divided into Fz
+
+! MXG_TIRE: Tire overturning moment (Mx) as a function of vertical load (Fz) and
+! inclination angle (Gamma). Mx can be a nonlinear CARPET function of Fz and Gamma or
+! a function of Gamma (CONSTANT, COEFFICIENT, or TABLE) multiplied by a function
+! MXG_TIRE_FZ of Fz (CONSTANT, COEFFICIENT, or TABLE). Mx from the calculation can be
+! adjusted with MXG_TIRE_GAIN and MXG_TIRE_OFFSET. Gamma used in the calculation can
+! be adjusted with GAMMA_SCALE_MXG_TIRE and GAMMA_START_MXG_TIRE. Fz used in the
+! calculation can be adjusted with FZ_SCALE_MXG_TIRE and FZ_START_MXG_TIRE.
+
+! 2D table: row 1 has "0" (place holder) followed by 3 values of Fz (N). Other rows
+! have Gamma (deg) followed by 3 values of Mx (N-m). With type = 2D_FROM _ZERO, the
+! table includes a hidden row 2 of zeros along with a hidden column 1 of zeros.
+MXG_TIRE_CARPET 2D_FROM_ZERO
+ 0, 2000, 4000, 6000
+ 0.5, -5.87052, -11.6292, -17.2388
+ 1, -11.7424, -23.261, -34.4814
+ 1.5, -17.6169, -34.898, -51.7316
+ 2, -23.4955, -46.5429, -68.9932
+ 2.5, -29.3794, -58.1981, -86.27
+ 3, -35.27, -69.8665, -103.566
+ 3.5, -41.1686, -81.5505, -120.884
+ 4, -47.0766, -93.2528, -138.23
+ 4.5, -52.9955, -104.976, -155.605
+ 5, -58.9264, -116.723, -173.015
+ 5.5, -58.9264, -116.723, -173.015
+ 6, -58.9264, -116.723, -173.015
+ENDTABLE
+MXG_TIRE_GAIN       1 ! Gain multiplied with calculated value to get Mx
+MXG_TIRE_OFFSET     0 ; N-m ! Offset added (after gain) to get Mx
+GAMMA_START_MXG_TIRE 0 ; deg ! Offset subtracted from Gamma
+GAMMA_SCALE_MXG_TIRE 1 ! Scale factor divided into (Gamma - GAMMA_START_MXG_TIRE)
+FZ_START_MXG_TIRE   0 ; N ! Offset subtracted from Fz
+FZ_SCALE_MXG_TIRE   1 ! Scale factor divided into (Fz - FZ_START_MXG_TIRE)
+
+! MX_TIRE: Tire overturning moment (Mx) as a function of vertical load (Fz) and
+! lateral slip (Alpha). Mx can be a nonlinear CARPET function of Fz and Alpha or a
+! function of Alpha (CONSTANT, COEFFICIENT, or TABLE) multiplied by a function
+! MX_TIRE_FZ of Fz (CONSTANT, COEFFICIENT, or TABLE). Mx from the calculation can be
+! adjusted with MX_TIRE_GAIN and MX_TIRE_OFFSET. Alpha used in the calculation can be
+! adjusted with ALPHA_SCALE_MX_TIRE and ALPHA_START_MX_TIRE. Fz used in the
+! calculation can be adjusted with FZ_SCALE_MX_TIRE and FZ_START_MX_TIRE.
+
+! 2D table: row 1 has "0" (place holder) followed by 3 values of Fz (N). Other rows
+! have Alpha (deg) followed by 3 values of Mx (N-m). With type = 2D_FROM _ZERO, the
+! table includes a hidden row 2 of zeros along with a hidden column 1 of zeros.
+MX_TIRE_CARPET 2D_FROM_ZERO
+ 0, 2000, 4000, 6000
+ 0.5, 0.78543, 2.52213, 4.30554
+ 1, 1.55645, 5.03593, 8.64266
+ 1.5, 2.28562, 7.4859, 12.9649
+ 2, 2.94792, 9.81034, 17.2125
+ 2.5, 3.52456, 11.9472, 21.3121
+ 3, 4.00593, 13.8438, 25.1825
+ 3.5, 4.39202, 15.4663, 28.7442
+ 4, 4.69058, 16.8045, 31.9315
+ 4.5, 4.91386, 17.8703, 34.702
+ 5, 5.06656, 18.644, 36.8998
+ 5.5, 5.17363, 19.2184, 38.6808
+ 6, 5.24793, 19.6418, 40.1173
+ 6.5, 5.29775, 19.9464, 41.2546
+ 7, 5.32943, 20.1589, 42.1388
+ 7.5, 5.34778, 20.3012, 42.8134
+ 8, 5.3564, 20.3903, 43.3173
+ 8.5, 5.35797, 20.4396, 43.6841
+ 9, 5.35445, 20.4592, 43.9419
+ 9.5, 5.34733, 20.457, 44.1136
+ 10, 5.34733, 20.457, 44.1136
+ 10.5, 5.34733, 20.457, 44.1136
+ENDTABLE
+MX_TIRE_GAIN        1 ! Gain multiplied with calculated value to get Mx
+MX_TIRE_OFFSET      0 ; N-m ! Offset added (after gain) to get Mx
+ALPHA_START_MX_TIRE 0 ; deg ! Offset subtracted from Alpha
+ALPHA_SCALE_MX_TIRE 1 ! Scale factor divided into (Alpha - ALPHA_START_MX_TIRE)
+FZ_START_MX_TIRE    0 ; N ! Offset subtracted from Fz
+FZ_SCALE_MX_TIRE    1 ! Scale factor divided into (Fz - FZ_START_MX_TIRE)
+
+! MZG_TIRE: Tire aligning moment (Mz) as a function of vertical load (Fz) and
+! inclination angle (Gamma). Mz can be a nonlinear CARPET function of Fz and Gamma or
+! a function of Gamma (CONSTANT, COEFFICIENT, or TABLE) multiplied by a function
+! MZG_TIRE_FZ of Fz (CONSTANT, COEFFICIENT, or TABLE). Mz from the calculation can be
+! adjusted with MZG_TIRE_GAIN and MZG_TIRE_OFFSET. Gamma used in the calculation can
+! be adjusted with GAMMA_SCALE_MZG_TIRE and GAMMA_START_MZG_TIRE. Fz used in the
+! calculation can be adjusted with FZ_SCALE_MZG_TIRE and FZ_START_MZG_TIRE.
+
+! 2D table: row 1 has "0" (place holder) followed by 3 values of Fz (N). Other rows
+! have Gamma (deg) followed by 3 values of Mz (N-m). With type = 2D_FROM _ZERO, the
+! table includes a hidden row 2 of zeros along with a hidden column 1 of zeros.
+MZG_TIRE_CARPET 2D_FROM_ZERO
+ 0, 2000, 4000, 6000
+ 0.5, -0.807088, -1.58863, -2.34453
+ 1, -1.61423, -3.17708, -4.68785
+ 1.5, -2.42146, -4.76518, -7.02873
+ 2, -3.22884, -6.35274, -9.36587
+ 2.5, -4.0364, -7.93952, -11.698
+ 3, -4.84418, -9.52533, -14.0237
+ 3.5, -5.65222, -11.1099, -16.3415
+ 4, -6.46054, -12.693, -18.6502
+ 4.5, -7.26917, -14.2743, -20.9481
+ 5, -8.07813, -15.8537, -23.2339
+ 5.5, -8.07813, -15.8537, -23.2339
+ 6, -8.07813, -15.8537, -23.2339
+ENDTABLE
+MZG_TIRE_GAIN       1 ! Gain multiplied with calculated value to get Mz
+MZG_TIRE_OFFSET     0 ; N-m ! Offset added (after gain) to get Mz
+GAMMA_START_MZG_TIRE 0 ; deg ! Offset subtracted from Gamma
+GAMMA_SCALE_MZG_TIRE 1 ! Scale factor divided into (Gamma - GAMMA_START_MZG_TIRE)
+FZ_START_MZG_TIRE   0 ; N ! Offset subtracted from Fz
+FZ_SCALE_MZG_TIRE   1 ! Scale factor divided into (Fz - FZ_START_MZG_TIRE)
+
+! MZ_TIRE: Tire aligning moment (Mz) as a function of vertical load (Fz) and lateral
+! slip (Alpha). Mz can be a nonlinear CARPET function of Fz and Alpha or a function
+! of Alpha multiplied by a function MZ_TIRE_FZ of Fz (CONSTANT, COEFFICIENT, or
+! TABLE). Mz from the calculation can be adjusted with MZ_TIRE_GAIN and
+! MZ_TIRE_OFFSET. Alpha used in the calculation can be adjusted with
+! ALPHA_SCALE_MZ_TIRE and ALPHA_START_MZ_TIRE. Fz used in the calculation can be
+! adjusted with FZ_SCALE_MZ_TIRE and FZ_START_MZ_TIRE.
+
+! 2D table: row 1 has "0" (place holder) followed by 3 values of Fz (N). Other rows
+! have Alpha (deg) followed by 3 values of Mz (N-m). With type = 2D_FROM _ZERO, the
+! table includes a hidden row 2 of zeros along with a hidden column 1 of zeros.
+MZ_TIRE_CARPET 2D_FROM_ZERO
+ 0, 2000, 4000, 6000
+ 0.5, 4.4575, 14.2035, 23.8405
+ 1, 8.54197, 27.5185, 46.5814
+ 1.5, 11.8204, 38.818, 66.7226
+ 2, 13.9506, 47.1166, 82.902
+ 2.5, 14.7774, 51.7856, 94.1031
+ 3, 14.3796, 52.723, 99.8419
+ 3.5, 13.0259, 50.3596, 100.244
+ 4, 11.066, 45.49, 95.9703
+ 4.5, 8.82493, 39.0252, 88.0291
+ 5, 6.69379, 32.2757, 78.2972
+ 5.5, 4.71407, 25.5739, 67.5595
+ 6, 2.91342, 19.1549, 56.4112
+ 6.5, 1.30985, 13.1965, 45.3657
+ 7, -0.10066, 7.77586, 34.7606
+ 7.5, -1.33311, 2.90662, 24.7956
+ 8, -2.40676, -1.43366, 15.5705
+ 8.5, -3.34151, -5.28576, 7.11705
+ 9, -4.15611, -8.69776, -0.576612
+ 9.5, -4.86737, -11.7187, -7.54805
+ 10, -4.86737, -11.7187, -7.54805
+ 10.5, -4.86737, -11.7187, -7.54805
+ENDTABLE
+MZ_TIRE_GAIN        1 ! Gain multiplied with calculated value to get Mz
+MZ_TIRE_OFFSET      0 ; N-m ! Offset added (after gain) to get Mz
+ALPHA_START_MZ_TIRE 0 ; deg ! Offset subtracted from Alpha
+ALPHA_SCALE_MZ_TIRE 1 ! Scale factor divided into (Alpha - ALPHA_START_MZ_TIRE)
+FZ_START_MZ_TIRE    0 ; N ! Offset subtracted from Fz
+FZ_SCALE_MZ_TIRE    1 ! Scale factor divided into (Fz - FZ_START_MZ_TIRE)
+
+! Z_PROFILE: "Wandering profile" (roughness input). Elevation increment is a
+! function of distance travelled (CONSTANT or TABLE). Elevation increment from the
+! calculation can be adjusted with Z_PROFILE_GAIN and Z_PROFILE_OFFSET. Distance
+! travelled used in the calculation can be adjusted with SSCALE_Z_PROFILE and
+! SSTART_Z_PROFILE. The derivative of this function is used internally. This
+! configurable function supports 2 datasets; if indices shown below are not used,
+! e.g., (2), the current value of the index ISIDE is used to identify the dataset
+! when reading data.
+
+Z_PROFILE_CONSTANT(1) 0 ; mm ! [D] Constant elevation increment
+Z_PROFILE_OFFSET(1) 0 ; mm ! Offset added (after gain) to get elevation increment
+
+Z_PROFILE_CONSTANT(2) 0 ; mm ! [D] Constant elevation increment
+Z_PROFILE_OFFSET(2) 0 ; mm ! Offset added (after gain) to get elevation increment
+
+!------------------------------------------------------------------------------------
+! NEW VARIABLES DEFINED AT RUN TIME
+!------------------------------------------------------------------------------------
+DEFINE_OUTPUT mu_y_l1 = -0.878335; - ; Normalized lateral force 
+SET_OUTPUT_COMPONENT MU_Y_L1 Test tire;
+DEFINE_OUTPUT mu_x_l1 = 4.98129e-10; - ; Normalized longitudinal force 
+SET_OUTPUT_COMPONENT MU_X_L1 Test tire;
+DEFINE_OUTPUT slip_l1 = 0.176327; - ; Tangent of slip angle 
+SET_OUTPUT_COMPONENT SLIP_L1 Test tire;
+DEFINE_OUTPUT y_ctc_l1 = 5.11425; mm ; CTC lateral shift 
+SET_OUTPUT_COMPONENT Y_CTC_L1 Test tire;
+DEFINE_OUTPUT mz_fx_l1 = 1.01902e-08; N-m ; Mz due to Fx and CTC lat. shift 
+SET_OUTPUT_COMPONENT MZ_FX_L1 Test tire;
+DEFINE_OUTPUT mz_fy_l1 = -11.7187; N-m ; Aligning moment due to Fy 
+SET_OUTPUT_COMPONENT MZ_FY_L1 Test tire;
+DEFINE_OUTPUT trail_l1 = 3.33549; mm ; Pneumatic trail 
+SET_OUTPUT_COMPONENT TRAIL_L1 Test tire;
+
+!------------------------------------------------------------------------------------
+! EQUATIONS OUT (AT THE END OF EVERY TIME STEP)
+!------------------------------------------------------------------------------------
+EQ_OUT MU_Y_L1 = IF(FZ_L1, FY_L1/FZ_L1, 0);
+EQ_OUT MU_X_L1 = IF(FZ_L1, FX_L1/FZ_L1, 0);
+EQ_OUT SLIP_L1 = TAN(ALPHA_L1);
+EQ_OUT Y_CTC_L1 = IF(FZ_L1, MX_L1/FZ_L1, 0);
+EQ_OUT MZ_FX_L1 = FX_L1*Y_CTC_L1;
+EQ_OUT MZ_FY_L1 = MZ_L1 -MZ_FX_L1;
+EQ_OUT TRAIL_L1 = IF(FY_L1, MZ_FY_L1/FY_L1, 0);
+
+!------------------------------------------------------------------------------------
+! STATE VARIABLES (NEEDED FOR RESTART)
+!------------------------------------------------------------------------------------
+SV_CMP_T_L1 17.39130435 ; mm ! Tire L1 compression
+SV_DZDX_L1          0 ; - ! Ground X slope under tire L1
+SV_DZDY_L1          0 ; - ! Ground Y slope under tire L1
+SV_D_ALPHA_L1       0 ; - ! Delta Alpha (Fy 0-crossing), tire L1
+SV_D_ALPHA_MX_L1    0 ; - ! Delta Alpha (Mx 0-crossing), tire L1
+SV_D_CONI_L1        0 ; - ! Delta Coni (Mz 0-crossing), tire L1
+SV_D_KAPPA_L1       0 ; - ! Delta Kappa (Fx 0-crossing), tire L1
+SV_R_L1             0 ; m ! Deflected radius for tire L1
+SV_SLIP_LAT_L1 0.1763269807 ; - ! ODE: Lagged tan of lateral slip, tire L1
+SV_SLIP_LONG_L1     0 ; - ! ODE: Lagged long. slip, tire L1
+SV_Z_CTC_L1         0 ; m ! Center of tire contact L1 {Zgnd_L1}
+
+
+END

@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName CarSim Run Control`On-Center Steer Test, D-Class Sedan`Steering Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6f6dddbf-6f3d-45dd-95c6-f5662819b1e8
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Animator camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+SET_RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan` D-Class` , Math Model`Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89
+
+PARSFILE Procedures\Proc_07d9a19f-3ef9-44ff-9e52-f41142cc19c3.par
+#BlueLink28 Procedures`On-Center Steer Test` Driver Controls` , Procedure`Proc_07d9a19f-3ef9-44ff-9e52-f41142cc19c3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title On-Center Steer Test, D-Class Sedan <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE On-Center Steer Test, D-Class Sedan
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan with Power Rack and Pinion Steering performs a sinusoidal on-center test at 100 km/h.
+#
+#This on-center steer test consists of 5 cycles of a sinusoidal path, with smooth (cosine) lead-in and lead-out. The length was chosen to achieve 5 seconds per cycle (0.2 Hz) at 100 kph.
+#
+#The CarSim Closed-Loop Path Following Driver Model is used to follow the path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Tests } On-Center Steer Test, D-Class Sedan
+#Library : CarSim Run Control
+#DataSet : On-Center Steer Test, D-Class Sedan
+#Category: Steering Tests
+#FileID  : Run_6f6dddbf-6f3d-45dd-95c6-f5662819b1e8
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

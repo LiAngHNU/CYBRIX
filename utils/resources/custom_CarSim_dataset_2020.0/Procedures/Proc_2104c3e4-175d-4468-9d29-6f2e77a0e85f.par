@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Procedures`K & C Parallel Fx`Test Rigs
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 10
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 0
+*TSTOP 10
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: K & C Parallel Fx
+SPEED_TARGET_CONSTANT 0
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par
+#BlueLink27 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Steering`StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c
+
+PARSFILE Control\Braking\PbkCon_596c5341-5868-427e-a984-e4a4fa39d6f6.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 30 MPa` Constant` , Braking`PbkCon_596c5341-5868-427e-a984-e4a4fa39d6f6
+
+PARSFILE Control\Gear_at\GearCL_395374af-90fa-4fef-80e1-a8df607bfbef.par
+#BlueLink30 Control: Shifting (Closed Loop)`Neutral` ` , Shifting Control`GearCL_395374af-90fa-4fef-80e1-a8df607bfbef
+
+PARSFILE Roads\3D_Road\Road_3d3efdbc-9b94-40d6-aa37-04d5a6fb360d.par
+#BlueLink0 Road: 3D Surface (All Properties)`K & C Test Rig` Test Facilities` , Miscellaneous`Road_3d3efdbc-9b94-40d6-aa37-04d5a6fb360d
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Generic\VS_commands\GenVS_04040f3f-adeb-48f2-b4dc-e66d55b857d8.par
+#BlueLink5 Generic VS Commands`K & C Parallel Fx Test VS` K & C Testing` , Miscellaneous`GenVS_04040f3f-adeb-48f2-b4dc-e66d55b857d8
+
+#MiscYellow1
+TSTART_WRITE 0.2
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_0b56f306-d854-4e89-8d7a-58de5f1cbae2.par
+#BlueLink8 Plot: Setup`Fx vs. camber - Rear` Suspension Motion` , Plot`Plot_0b56f306-d854-4e89-8d7a-58de5f1cbae2
+
+PARSFILE Plot\Setup\Plot_444d4f38-b95c-44a3-be47-87acb852f97b.par
+#BlueLink9 Plot: Setup`Fx vs. toe - Rear` Suspension Motion` , Plot`Plot_444d4f38-b95c-44a3-be47-87acb852f97b
+
+PARSFILE Plot\Setup\Plot_2530f81b-3f7a-4c54-94f2-2bf8b648cb60.par
+#BlueLink10 Plot: Setup`Fx vs. SuspX - Rear` Suspension Motion` , Plot`Plot_2530f81b-3f7a-4c54-94f2-2bf8b648cb60
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how to set a compliance test with parallel tire longitudinal forces in left and right tires.
+#
+#Click on the blue links "K & C Parallel Fx Test VS" to see how this was done.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Test Rigs } K & C Parallel Fx
+#Library : Procedures
+#DataSet : K & C Parallel Fx
+#Category: Test Rigs
+#FileID  : Proc_2104c3e4-175d-4468-9d29-6f2e77a0e85f
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

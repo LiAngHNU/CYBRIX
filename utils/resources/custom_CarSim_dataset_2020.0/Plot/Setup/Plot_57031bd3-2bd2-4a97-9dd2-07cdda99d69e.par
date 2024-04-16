@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Y vs.Time`Sine with Dwell
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Yo, T_Event
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Y vs.Time
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Track global Y coordinate versus event time. Used as part of the sine with dwell ESC test evaluation.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Sine with Dwell } Y vs.Time
+#Library : Plot: Setup
+#DataSet : Y vs.Time
+#Category: Sine with Dwell
+#FileID  : Plot_57031bd3-2bd2-4a97-9dd2-07cdda99d69e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Lifted Suspension (SA_SA)`Suspension and Ride Tests
+#VEHICLECODE SA_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e405ac14-b865-4952-b808-9b2a80b834fb
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_3eaa41a1-4efa-4cad-9159-3ea5b86ad95a.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 45 m` Vehicle Reference` , Animator camera`Camera_3eaa41a1-4efa-4cad-9159-3ea5b86ad95a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.6 0.8
+SET_RUN_COLOR 0 0.6 0.8
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b840ee4e-e79f-4208-886e-649036d1d9a3.par
+#BlueLink2 Vehicle: Assembly`Pickup, Full Size: Lifted (SA_SA)` Pickup Trucks` , Math Model`Vehicle_b840ee4e-e79f-4208-886e-649036d1d9a3
+
+PARSFILE Procedures\Proc_d2506e36-2e85-4cee-b801-9dc4ba0c9194.par
+#BlueLink28 Procedures`Large Smooth Bump` Ride Tests` , Procedure`Proc_d2506e36-2e85-4cee-b801-9dc4ba0c9194
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9eaaef41-90b6-4bab-988c-23d84c8adabf.png
+WRITE_SENSOR_DETECT
+Title Lifted Suspension (SA_SA) <Suspension and Ride Tests>
+CATEGORY Suspension and Ride Tests 
+DATASET_TITLE Lifted Suspension (SA_SA)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A Full-size Pickup Truck with wheel center heights set close to the Sprung Mass Coordinate System Origin drives on a road with a large, smooth bump.
+#
+#Reducing the wheel center heights, set on the Sprung Mass screen, has the effect of raising the Sprung Mass CG relative to the Sprung Mass Coordinate System Origin.
+#
+#The Large Smooth Bump and the lowered road shoulder is defined using the Off-Center Elevation library.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Suspension and Ride Tests } Lifted Suspension (SA_SA)
+#Library : CarSim Run Control
+#DataSet : Lifted Suspension (SA_SA)
+#Category: Suspension and Ride Tests
+#FileID  : Run_e405ac14-b865-4952-b808-9b2a80b834fb
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

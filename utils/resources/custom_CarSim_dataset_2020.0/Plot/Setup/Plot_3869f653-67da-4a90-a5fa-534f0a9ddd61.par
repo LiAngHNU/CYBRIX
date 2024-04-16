@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Roll-Back Check Flags`Hill Hold w/ Parking Brake
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS rbinit, Time, Roll-Back: Init
+PLOTCHANNELS rbpf, Time, Roll-Back: Pass / Fail
+PLOTCHANNELS rbcompl, Time, Roll-Back: Completed
+PLOTCHANNELS drvoff, Time, Drive-ok: Ok / Not ok
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Roll-Back Check Flags
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hill Hold w/ Parking Brake } Roll-Back Check Flags
+#Library : Plot: Setup
+#DataSet : Roll-Back Check Flags
+#Category: Hill Hold w/ Parking Brake
+#FileID  : Plot_3869f653-67da-4a90-a5fa-534f0a9ddd61
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

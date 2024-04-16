@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`6-Speed for Diesel`6-Speed Transmissions
+#RingCtrl0 6
+NGEARS 6
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -3.168
+R_GEAR_TR(1) 3.10
+R_GEAR_TR(2) 1.81
+R_GEAR_TR(3) 1.41
+R_GEAR_TR(4) 1.00
+R_GEAR_TR(5) 0.71
+R_GEAR_TR(6) 0.61
+ITR_REVERSE 0.034
+ITR_NEUTRAL 0.034
+ITR(1) 0.037
+ITR(2) 0.034
+ITR(3) 0.042
+ITR(4) 0.04
+ITR(5) 0.04
+ITR(6) 0.04
+R_EFF_TR_F_REVERSE 0.9
+R_EFF_TR_F(1) 0.92
+R_EFF_TR_F(2) 0.92
+R_EFF_TR_F(3) 0.95
+R_EFF_TR_F(4) 0.95
+R_EFF_TR_F(5) 0.98
+R_EFF_TR_F(6) 0.99
+R_EFF_TR_R_REVERSE 0.9
+R_EFF_TR_R(1) 0.92
+R_EFF_TR_R(2) 0.92
+R_EFF_TR_R(3) 0.95
+R_EFF_TR_R(4) 0.95
+R_EFF_TR_R(5) 0.98
+R_EFF_TR_R(6) 0.99
+T_SHIFT 0.25
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_2353020d-acc6-42e2-b369-4b1d31b9d279.par
+#BlueLink0 Powertrain: Shift Schedule`6-speed, 1-2 Shift (Diesel)` 6-speed, Diesel` , Shift schedule`Shift_2353020d-acc6-42e2-b369-4b1d31b9d279
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_072e161e-d739-4965-8920-f45ea5c8f04b.par
+#BlueLink1 Powertrain: Shift Schedule`6-speed, 2-3 Shift (Diesel)` 6-speed, Diesel` , Shift schedule`Shift_072e161e-d739-4965-8920-f45ea5c8f04b
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_cdf6b20c-81d3-4fc2-93e9-00aac2d35513.par
+#BlueLink2 Powertrain: Shift Schedule`6-speed, 3-4 Shift (Diesel)` 6-speed, Diesel` , Shift schedule`Shift_cdf6b20c-81d3-4fc2-93e9-00aac2d35513
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_4f7703a3-bfa8-49ef-b441-ae60b29e3a13.par
+#BlueLink3 Powertrain: Shift Schedule`6-speed, 4-5 Shift (Diesel)` 6-speed, Diesel` , Shift schedule`Shift_4f7703a3-bfa8-49ef-b441-ae60b29e3a13
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift_c9c90471-565b-48ca-ab12-96d067545bc4.par
+#BlueLink4 Powertrain: Shift Schedule`6-speed, 5-6 Shift (Diesel)` 6-speed, Diesel` , Shift schedule`Shift_c9c90471-565b-48ca-ab12-96d067545bc4
+
+
+igear 6
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 6-Speed Transmissions } 6-Speed for Diesel
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 6-Speed for Diesel
+#Category: 6-Speed Transmissions
+#FileID  : Trans18_66b2661e-7c25-405b-99d4-c343ef72f389
+#Product : CarSim 2020.0
+#VehCode Transmission
+
+END

@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Events`003 Remove Fault torque`Boost fault insertion
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 3
+#MiscYellow0
+delete_eqs_in m_boost_g_gain
+delete_eqs_in m_boost_g_offset
+eq_in m_boost_g_gain = 0;
+eq_in m_boost_g_offset = 0;
+TSTART_T_EVENT = t
+k_con = 25
+d_con = 0.5
+tprev_constant 1.5
+#ENDMYellow
+
+MAKE_EVENT t_event > 3 ; Events\Events_71f6b32d-d9b9-4bb6-a291-85a8fd350387.par
+#BlueLink0 Events`004 Restore driver preview time to 1.0 s` Boost fault insertion` , Events`Events_71f6b32d-d9b9-4bb6-a291-85a8fd350387
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Boost fault insertion } 003 Remove Fault torque
+#Library : Events
+#DataSet : 003 Remove Fault torque
+#Category: Boost fault insertion
+#FileID  : Events_7548b355-d0f6-47e4-a287-413cbde872f0
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

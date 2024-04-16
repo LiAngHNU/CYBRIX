@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Hitch Articulation vs. Desired`Hitch
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Art_H, Time
+PLOTCHANNELS Art_H_Desired, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Hitch Articulation vs. Desired
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The output variable Art_H_Desired is not built in. This plot is for examples backing a single trailer using VS commands.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hitch } Hitch Articulation vs. Desired
+#Library : Plot: Setup
+#DataSet : Hitch Articulation vs. Desired
+#Category: Hitch
+#FileID  : Plot_24530d21-f100-4efd-97c3-5851cf2d8c3b
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

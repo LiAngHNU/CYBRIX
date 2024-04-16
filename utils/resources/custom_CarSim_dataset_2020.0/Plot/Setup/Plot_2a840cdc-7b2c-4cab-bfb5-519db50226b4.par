@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Power Steering Assist Torque`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS m_boost, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Power Steering Assist Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Power Steering Assist Torque
+#Library : Plot: Setup
+#DataSet : Power Steering Assist Torque
+#Category: Steering
+#FileID  : Plot_2a840cdc-7b2c-4cab-bfb5-519db50226b4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Step: 0 to 1 Radian at 0 seconds`Step
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE LINEAR
+-0.1, 0
+0, 0
+0.05, 57.29578
+1, 57.29578
+ENDTABLE
+*SCALAR 0
+
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { Step } Step: 0 to 1 Radian at 0 seconds
+#Library : Control: Steering (Open Loop)
+#DataSet : Step: 0 to 1 Radian at 0 seconds
+#Category: Step
+#FileID  : StrSW_ff526279-eaf4-45c0-bc17-a15f06c5152c
+#Product : CarSim 2020.0
+#VehCode Open-Loop Steering
+
+END

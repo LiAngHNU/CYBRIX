@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Tire: Longitudinal Force`Normalized 1D (15-pt spline)`Normalized Tires
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 COEFFICIENT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+FX_TIRE_TABLE SPLINE
+-1, -0.92909
+-0.4, -0.99408
+-0.2, -1.013
+-0.14, -0.99995
+-0.12, -0.98768
+-0.08, -0.93044
+-0.04, -0.7283
+0, 0
+0.04, 0.7283
+0.08, 0.93045
+0.12, 0.98768
+0.14, 0.99995
+0.2, 1.013
+0.4, 0.99408
+1, 0.92909
+ENDTABLE
+FX_TIRE_FZ_COEFFICIENT 1
+*SCALAR2 1
+MU_REF_X 1.0
+
+
+#EMBEDDED_NOTES
+#This normalized data was made by taking the table for the 225/60 R18 and dividing by the load rating of 5000 N.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Longitudinal Force; { Normalized Tires } Normalized 1D (15-pt spline)
+#Library : Tire: Longitudinal Force
+#DataSet : Normalized 1D (15-pt spline)
+#Category: Normalized Tires
+#FileID  : TireFx_1ecbd52d-e92e-4e93-a843-85163cbb9226
+#Product : CarSim 2020.0
+#VehCode Tire: Fx
+
+END

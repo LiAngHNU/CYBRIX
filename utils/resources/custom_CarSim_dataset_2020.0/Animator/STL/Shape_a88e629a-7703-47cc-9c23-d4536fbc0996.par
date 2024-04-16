@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Utility Flatbed Trailer: Tongue (Ball)`Trailers
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trailers\Ballast_Trailer\Ballast_Trailer_Tongue.obj
+#ENDMYellow
+
+SET_COLOR .5 .5 .5
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.350
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 1    
+
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_67cc4229-fee5-4589-bc48-0f75aae5753d.par
+#BlueLink2 Animator: Camera Setup`Vehicles - Trailers` Shape Preview` , Video Camera`Camera_67cc4229-fee5-4589-bc48-0f75aae5753d
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_a88e629a-7703-47cc-9c23-d4536fbc0996.png
+
+#EMBEDDED_NOTES
+#Coordinate offset in Z-Direction is used to place the origin of the shape reference frame (which is at the center of the hitch) down onto the origin for the trailer sprung mass.
+#
+#Changing the distance to the sprung mass origin for the trailer will require changing the Z coordinate offset on this screen to animate properly.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trailers } Utility Flatbed Trailer: Tongue (Ball)
+#Library : Animator: Shape File Link
+#DataSet : Utility Flatbed Trailer: Tongue (Ball)
+#Category: Trailers
+#FileID  : Shape_a88e629a-7703-47cc-9c23-d4536fbc0996
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

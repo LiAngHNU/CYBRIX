@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Events`CCRb C. Apply Brakes and Stop`Euro NCAP AEB Testing
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Vx
+*VALUE1 0.01
+#MiscYellow0
+opt_sc = 0
+opt_bk_sc = 1
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_05647622-c054-491d-a2fc-d34f9f2f273d.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 10 MPa` Constant` , Miscellaneous`PbkCon_05647622-c054-491d-a2fc-d34f9f2f273d
+
+MAKE_EVENT Vx >= 0.01 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#opt_bk_sc was set to 2 previously, but correctly set to 1 in 2019.1. opt_bk_sc should only be set to: 0 (off) or 1 (on).
+#
+#Changes speed controller to open loop and applies brakes to keep VUT at a stop when test ends.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Euro NCAP AEB Testing } CCRb C. Apply Brakes and Stop
+#Library : Events
+#DataSet : CCRb C. Apply Brakes and Stop
+#Category: Euro NCAP AEB Testing
+#FileID  : Events_fb90a8dd-0fe8-475f-bbeb-ad50dd550e2f
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

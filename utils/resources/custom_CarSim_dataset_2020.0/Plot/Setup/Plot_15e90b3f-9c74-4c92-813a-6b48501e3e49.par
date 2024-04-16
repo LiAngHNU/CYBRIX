@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Shift of CTC vs. Kappa`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS y_ctc_l1, kappa_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Shift of CTC vs. Kappa
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Lateral Shift of CTC vs. Kappa
+#Library : Plot: Setup
+#DataSet : Lateral Shift of CTC vs. Kappa
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_15e90b3f-9c74-4c92-813a-6b48501e3e49
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

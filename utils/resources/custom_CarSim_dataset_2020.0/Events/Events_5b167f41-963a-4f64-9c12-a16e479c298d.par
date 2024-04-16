@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Events`B. Off Throttle and Brake`Highway Merge
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 abs_vx
+*VALUE1 0.001
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+define_variable abs_vx 0; km/h;
+eq_in abs_vx = abs(vx);
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_a48f2e62-ce44-40ec-9f1a-ee5c5cd24fb7.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Spike: 15 MPa @ 0.3 sec.` Spike` , Miscellaneous`PbkCon_a48f2e62-ce44-40ec-9f1a-ee5c5cd24fb7
+
+MAKE_EVENT abs_vx < 0.001 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Release the throttle and apply the brakes until a minimum speed is reached.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Highway Merge } B. Off Throttle and Brake
+#Library : Events
+#DataSet : B. Off Throttle and Brake
+#Category: Highway Merge
+#FileID  : Events_5b167f41-963a-4f64-9c12-a16e479c298d
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Models: Simulink`External Transmission`External Powertrain
+#RunMdlFile Extensions\Simulink\pt_transmission\Pt_Transmission_CS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\pt_transmission\Pt_Transmission_CS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+*ALTERNATE_PATH Programs\Simulink_MDL
+PARSFILE IO_Channels\I_Channels\Import_ec758801-bed6-4b05-9541-8a3f52f37cce.par
+#BlueLink0 I/O Channels: Import`External Transmission` Powertrain: Sub-System Controls and External Models` , Import`Import_ec758801-bed6-4b05-9541-8a3f52f37cce
+
+PARSFILE IO_Channels\O_Channels\Export_afecdeeb-c554-4b50-bc01-0f0d410ec83e.par
+#BlueLink1 I/O Channels: Export`External Transmssion Gear` Powertrain: Sub-System Controls and External Models` , Import/Export`Export_afecdeeb-c554-4b50-bc01-0f0d410ec83e
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This dataset specifies a Simulink model that is used to replace the transmission in a CarSim vehicle.
+#
+#The CarSim powertrain model involves some detailed interactions between variables, so the option to Add, Replace, or Multiply the Simulink imported variables with their corresponding variables in CarSim is not available for most powertrain variables.
+#
+#Instead, Add is the only import mode available for most powertrain import variables, and it is necessary to specify that certain components are handled with an external model on the powertrain library screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { External Powertrain } External Transmission
+#Library : Models: Simulink
+#DataSet : External Transmission
+#Category: External Powertrain
+#FileID  : Simlink_1b4ec015-29d9-4465-bbae-fb27068c7525
+#Product : CarSim 2020.0
+#VehCode 
+
+END

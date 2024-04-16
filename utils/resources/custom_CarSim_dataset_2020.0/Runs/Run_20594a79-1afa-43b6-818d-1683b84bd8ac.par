@@ -1,0 +1,100 @@
+PARSFILE
+#FullDataName CarSim Run Control`Traffic Signals Facing N, E, S`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_20594a79-1afa-43b6-818d-1683b84bd8ac
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_eafc05ab-1fc3-4810-9b6d-8dd5f4f589c5.par
+#BlueLink0 Animator: Camera Setup`300 Azm, 21 El, 30 m` Fixed Camera` , Animator camera`Camera_eafc05ab-1fc3-4810-9b6d-8dd5f4f589c5
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9522e6bd-d1bd-4cd7-924f-ff0322ccd5fe.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Sign Detection` C-Class` , Math Model`VehLoad_9522e6bd-d1bd-4cd7-924f-ff0322ccd5fe
+
+PARSFILE Procedures\Proc_bd3d060e-ee98-45e4-b4db-eea80a5c6727.par
+#BlueLink28 Procedures`Intersection, 3-Way, Curbs, Speed Sign` Road Networks` , Procedure`Proc_bd3d060e-ee98-45e4-b4db-eea80a5c6727
+
+PARSFILE Generic\Group\GenGrp_45a92a33-2ff5-438e-9635-e79b81b75d6c.par
+#BlueLink9 Generic Data Group`Traffic Lights for 3-way` Traffic Lights` , Miscellaneous`GenGrp_45a92a33-2ff5-438e-9635-e79b81b75d6c
+
+PARSFILE Generic\Group\GenGrp_a3f34622-8dfb-4f65-bf56-0fb60640edce.par
+#BlueLink10 Generic Data Group`Traffic Vehicles following Ego` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_a3f34622-8dfb-4f65-bf56-0fb60640edce
+
+PARSFILE Generic\Group\GenGrp_e8170158-4ad0-47d9-a122-c0d67bf655e5.par
+#BlueLink11 Generic Data Group`* Traffic Vehicles at Light` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_e8170158-4ad0-47d9-a122-c0d67bf655e5
+
+*TSTOP 50
+*SSTART -150
+*SSTOP 150
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_8dfd1a91-0118-4d77-b02e-4386638754b4.par
+#BlueLink15 Plot: Setup`Traffic Speed v. Station (5 - 12)` ADAS Traffic Motion` , Plot`Plot_8dfd1a91-0118-4d77-b02e-4386638754b4
+
+PARSFILE Plot\Setup\Plot_aea909ce-8112-4a27-bb0b-b8ed75e48aae.par
+#BlueLink16 Plot: Setup`Traffic Accel v. Station (5 - 12)` ADAS Traffic Motion` , Plot`Plot_aea909ce-8112-4a27-bb0b-b8ed75e48aae
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Traffic Signals Facing N, E, S <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Traffic Signals Facing N, E, S
+#MiscYellow0
+ ! start fraction of signal cycle, 0 - 1
+R_SIG_START = 0.7
+sstop = 280
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#After 2019.0: Added plots, adjust start S to be correct, more aggressive control. Braking limits applied due to bug fix.
+#--------------------
+#This intersection of two straight roads (East and North) forms a 3-way intersection. Both roads have curbs on the edges.
+#
+#The Moving Objects approaching and leaving the intersection are set up to smoothly accelerate and decelerate, mimicking a physically realistic traffic flow.
+#
+#Adjust the parameter R_SIG_START to control where the light cycle is when the simulation starts (Run Control screen's Misc. yellow field).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Traffic Signals Facing N, E, S
+#Library : CarSim Run Control
+#DataSet : Traffic Signals Facing N, E, S
+#Category: ADAS and Active Safety
+#FileID  : Run_20594a79-1afa-43b6-818d-1683b84bd8ac
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

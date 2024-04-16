@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName CarSim Run Control`Fishhook: FMI 2.0 Self-Contained`External Control: COM, FMU, MATLAB, Python, VB
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f0b770c2-5573-4e20-b98d-f2d06f7fc0d1
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\FMU\Fmu_b4e98d68-bcb4-4f43-bcf9-4a2142bb780d.par
+#BlueLink12 Models: Export FMU/FMI`Baseline FMI 2.0 Self-Contained` ` , Models`Fmu_b4e98d68-bcb4-4f43-bcf9-4a2142bb780d
+
+PARSFILE Animator\Cameras\Camera_de1f5f31-cdc6-45aa-8fad-27588467e961.par
+#BlueLink0 Animator: Camera Setup`350 Azm, 3 El, 49 m` Vehicle Reference` , Animator camera`Camera_de1f5f31-cdc6-45aa-8fad-27588467e961
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.4 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276.par
+#BlueLink2 Vehicle: Assembly`E-Class, SUV` E-Class` , Math Model`Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276
+
+PARSFILE Procedures\Proc_cf1a1fd9-1945-4bf6-9c74-1c4e519ffcf7.par
+#BlueLink28 Procedures`Fishhook Procedure` Stability Testing` , Procedure`Proc_cf1a1fd9-1945-4bf6-9c74-1c4e519ffcf7
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+WRITE_SENSOR_DETECT
+Title Fishhook: FMI 2.0 Self-Contained <External Control: COM, FMU, MATLAB, Python, VB>
+CATEGORY External Control: COM, FMU, MATLAB, Python, VB 
+DATASET_TITLE Fishhook: FMI 2.0 Self-Contained
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is the "Fishhook Procedure: E-Class SUV" example set to run as a self-contained FMU within a FMU master tool.
+#
+#We tested the this example in two FMU masters:
+#
+#1. Matlab 2015a/b with a Simulink package "Pilot Support Package".
+#
+#Win64: "Pilot Support Package v0.2.0 or later".
+#Win32: "Pilot Support Package v0.2.1 or later".
+#
+#2. A batch file comes in the folder of FMU "run_event2_SC.bat"
+#
+#NOTE:  The feature which allows you to save multiple results datasets is not availble with the Self-Contained FMU.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { External Control: COM, FMU, MATLAB, Python, VB } Fishhook: FMI 2.0 Self-Contained
+#Library : CarSim Run Control
+#DataSet : Fishhook: FMI 2.0 Self-Contained
+#Category: External Control: COM, FMU, MATLAB, Python, VB
+#FileID  : Run_f0b770c2-5573-4e20-b98d-f2d06f7fc0d1
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

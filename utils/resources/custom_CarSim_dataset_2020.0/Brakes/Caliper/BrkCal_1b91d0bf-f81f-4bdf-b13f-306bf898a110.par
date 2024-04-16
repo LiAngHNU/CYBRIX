@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Brakes: Caliper and Rotor Properties`E-Class, Sedan: Rear w/ Caliper`
+#CheckBox0 1    
+#CheckBox1 1    
+
+#RingCtrl0 2
+#RingCtrl1 2
+OPT_BK_THERMAL 1
+OPT_BK_DYN 2
+PARSFILE Brakes\PV_CAL\PvCal_9b537d05-e57d-4c05-bc3f-b108f5ec8a57.par
+#BlueLink0 Brakes: Caliper Pressure vs Volume`E-Class, Sedan: Rear` ` , Caliper PV`PvCal_9b537d05-e57d-4c05-bc3f-b108f5ec8a57
+
+BK_HYD_RES 1.1e-04
+PARSFILE Brakes\COOL\BrkCool_ec57b03f-5b0a-4754-b3bc-d2fa9cd60f90.par
+#BlueLink1 Brakes: Cooling Coefficient`E-Class, Sedan: Rear` ` , Cooling coefficient`BrkCool_ec57b03f-5b0a-4754-b3bc-d2fa9cd60f90
+
+PARSFILE Brakes\TorqueTemp\TrqTmp_efa7bbb4-f0d6-4be6-8775-7f59ca230653.par
+#BlueLink2 Brakes: Torque vs. Rotor Temperature`E-Class, Sedan: Rear` ` , Torque`TrqTmp_efa7bbb4-f0d6-4be6-8775-7f59ca230653
+
+M_ROTOR 5.5
+BK_CP_RTR 0.47
+BK_CP2_RTR 0.00055
+
+LOG_ENTRY Used Dataset: Brakes: Caliper and Rotor Properties; E-Class, Sedan: Rear w/ Caliper
+#Library : Brakes: Caliper and Rotor Properties
+#DataSet : E-Class, Sedan: Rear w/ Caliper
+#Category: 
+#FileID  : BrkCal_1b91d0bf-f81f-4bdf-b13f-306bf898a110
+#Product : CarSim 2020.0
+#VehCode Caliper and Rotor
+
+END

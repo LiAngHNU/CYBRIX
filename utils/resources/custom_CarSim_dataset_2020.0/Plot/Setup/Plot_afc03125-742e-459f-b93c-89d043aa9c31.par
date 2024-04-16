@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed Controller Gains`Speed Controller
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Kp_Vx, Time
+PLOTCHANNELS Ki_Vx, Time
+PLOTCHANNELS K3_Vx, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed Controller Gains
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Speed Controller } Speed Controller Gains
+#Library : Plot: Setup
+#DataSet : Speed Controller Gains
+#Category: Speed Controller
+#FileID  : Plot_afc03125-742e-459f-b93c-89d043aa9c31
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

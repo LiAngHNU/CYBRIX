@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Procedures`Alley Dock`Driver Model, Extended and External
+#CheckBox0 1    
+OPT_INIT_CONFIG 1
+#CheckBox1 0    
+OPT_INIT_PATH 0
+#CheckBox2 1    
+OPT_INIT_SPEED 1
+#CheckBox3 1    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP 14
+OPT_DIRECTION 0
+*SPEED -10
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+*SSTOP 14
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Alley Dock
+SPEED_TARGET_CONSTANT -10
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Generic\VS_commands\GenVS_b35ac96e-9d86-4be2-b9ee-263be22963db.par
+#BlueLink27 Generic VS Commands`Alley Dock: Preview Point` Custom Steering Controls` , Steering`GenVS_b35ac96e-9d86-4be2-b9ee-263be22963db
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_73dd8273-cecc-4a62-afb7-b1a8adae1c0c.par
+#BlueLink30 Control: Shifting (Closed Loop)`Reverse` ` , Shifting Control`GearCL_73dd8273-cecc-4a62-afb7-b1a8adae1c0c
+
+PARSFILE Roads\3D_Road\Road_54ad60f5-67b3-48c4-bdc3-3346fa3355d2.par
+#BlueLink0 Road: 3D Surface (All Properties)`Alley Dock Test Pad` Flat Test Pads` , Miscellaneous`Road_54ad60f5-67b3-48c4-bdc3-3346fa3355d2
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink1 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Output\Sensors\MoSen_a068ad5c-c56b-4caa-a64e-41df6523ef79.par
+#BlueLink2 Positions, Velocities, and Accelerations`Trailer Hitch Position` ` , Miscellaneous`MoSen_a068ad5c-c56b-4caa-a64e-41df6523ef79
+
+PARSFILE Generic\VS_commands\GenVS_b68a7b5a-0177-440c-a978-26d8c33386d1.par
+#BlueLink3 Generic VS Commands`Trailer Backing: I-PD Setup` Custom Steering Controls` , Miscellaneous`GenVS_b68a7b5a-0177-440c-a978-26d8c33386d1
+
+PARSFILE Generic\VS_commands\GenVS_c2790d36-c34b-4fbb-8a74-3d66a7220e60.par
+#BlueLink4 Generic VS Commands`Alley Dock: I-PD Control` Custom Steering Controls` , Miscellaneous`GenVS_c2790d36-c34b-4fbb-8a74-3d66a7220e60
+
+#MiscYellow1
+Xo = X_INITIAL; ! defined w/ preview point
+Yo = 35;
+Yaw = 90;
+OPT_DIRECTION -1
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink9 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+
+#EMBEDDED_NOTES
+#This alley dock procedure uses the I-PD trailer backing controller which is implemented with VS commands. In this case, the preview point for steer control is also custom.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Model, Extended and External } Alley Dock
+#Library : Procedures
+#DataSet : Alley Dock
+#Category: Driver Model, Extended and External
+#FileID  : Proc_46ee7190-d1d4-4031-b2c7-a8f12fb4d114
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

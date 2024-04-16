@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`Utility Flatbed Trailer (2A)`Trailers
+*OFFSET_X 0
+*OFFSET_Y 0
+*OFFSET_Z .35
+*X_REF_LENGTH 4800
+*Y_REF_LENGTH 2679
+*Z_REF_LENGTH 1357
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+
+#RingCtrl1 2
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\ShpGrp_e0b3f01e-b9cc-4245-a266-ea649225df70.png
+PARSFILE Animator\STL\Shape_7d13e576-206d-496c-ab07-51bb764978ab.par
+#BlueLink0 Animator: Shape File Link`Utility Flatbed Trailer: Floor` Trailers` , Shape File`Shape_7d13e576-206d-496c-ab07-51bb764978ab
+
+set_offset_x 0
+set_offset_y 0
+set_offset_z .35
+PARSFILE Animator\STL\Shape_7880bafc-913c-4ed2-a354-bef6f3ff9b03.par
+#BlueLink1 Animator: Shape File Link`Utility Flatbed Trailer: Frame` Trailers` , Shape File`Shape_7880bafc-913c-4ed2-a354-bef6f3ff9b03
+
+set_offset_x 0
+set_offset_y 0
+set_offset_z .35
+x_ref_length 4800
+y_ref_length 2679
+z_ref_length 1357
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink17 Animator: Camera Setup`YZ-Plane, No Offsets (with Yaw)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+
+#EMBEDDED_NOTES
+#There is no scaling on these shapes because they were originally developed for the original trailer which had 2 axles.
+#
+#The offsets are designed to properly locate the scaled shapes.  The offsets are set by:
+#X: Not set here
+#Y: No adjustment
+#Z: The height of the hitch point from the trailer sprung mass origin
+#
+#The X-direction offsets are applied in the shape links.  This is because the order of operations (offset then scale vs scale then offset) matters and the illuminated brake lights are offset first, then scaled.  In order to keep the lights attached to the trailer, we repeat that order of operations here.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Trailers } Utility Flatbed Trailer (2A)
+#Library : Animator: Shape Assembly
+#DataSet : Utility Flatbed Trailer (2A)
+#Category: Trailers
+#FileID  : ShpGrp_e0b3f01e-b9cc-4245-a266-ea649225df70
+#Product : CarSim 2020.0
+#VehCode Shape Assembly
+
+END

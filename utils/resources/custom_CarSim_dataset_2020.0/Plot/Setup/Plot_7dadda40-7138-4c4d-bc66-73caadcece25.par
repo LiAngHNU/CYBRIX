@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`AEB: Ax_Calc`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Ax_Calc, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE AEB: Ax_Calc
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Ax_Calc was defined with VS Commands for AEB example controllers.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } AEB: Ax_Calc
+#Library : Plot: Setup
+#DataSet : AEB: Ax_Calc
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_7dadda40-7138-4c4d-bc66-73caadcece25
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

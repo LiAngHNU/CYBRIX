@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Left Front Facing Sensor for ADAS`Front Facing
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Left Front Facing Sensor for ADAS
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+OPT_EXPORT_SENSOR 1
+#CheckBox6 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_8c144d30-f6d3-459d-9b44-b96ec54390c5.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`100 m Sensor Range` ` , Range & Bearing Sensitivity`Range_8c144d30-f6d3-459d-9b44-b96ec54390c5
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_594e7ef9-3c2d-4d4e-99a8-dd535dbab2d7.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 20 deg FOV` Common Vehicle Assets` , Shape for Detection Field`Shape_594e7ef9-3c2d-4d4e-99a8-dd535dbab2d7
+
+SET_COLOR 1 0 0.2
+SET_TRANSPARENCY 0.2
+X_LENGTH 90
+Y_LENGTH 39.0
+Z_LENGTH 6
+X_SENSOR 500
+Y_SENSOR 500
+Z_SENSOR 500
+YAW_AIM_SENSOR 12
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0.2
+*SET_TRANSPARENCY 0.2
+*SET_COLOR_FIELD 1 0 0.2
+BEARING_MIN_SENSOR -13
+BEARING_MAX_SENSOR 12
+
+SPECIAL_PARSFILE Animator\STL\Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829.par
+#BlueLink3 Animator: Shape File Link`Square: 1m (Scale: Y = 0.1)` Geometric Shapes` , Shape for vector`Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829.par
+
+#EMBEDDED_NOTES
+#The sensor is attached on the left-front bumper of the car.
+#
+#There are 11 sensor information variables exported to Simulink by checking of the check box "Automatically export connections to Simulink/LabVIEW". Those variables are exported with internal units (SI unit).
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Front Facing } Left Front Facing Sensor for ADAS
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Left Front Facing Sensor for ADAS
+#Category: Front Facing
+#FileID  : Radar_b35f46b2-f990-450f-9775-24825645ada2
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

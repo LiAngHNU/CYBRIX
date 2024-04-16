@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Generic VS Commands`Rough Road 02 - 92 (loaded)`Loaded Tables
+#VehCode VS Commands
+
+#MiscYellow0
+ISIDE 1
+! File is loaded so the data can be used to build tables.
+LOAD_TABLE_FILE Roads\Profiles\RR_02_92_lrEmm.vstb
+
+! Dist column from file is used by both tables
+FILE_TO_TABLE Z_PROFILE_TABLE DIST L_ELE LINEAR_LOOP
+ECHO_LOADED_TABLE Z_PROFILE_TABLE
+
+ISIDE 2
+! The file remains loaded and used to create second table
+FILE_TO_TABLE Z_PROFILE_TABLE DIST R_ELE LINEAR_LOOP
+ECHO_LOADED_TABLE Z_PROFILE_TABLE
+
+! Used to make files copy to Consolidated Pars File Export
+*CPAR_INCLUDE Roads\Profiles\RR_02_92_lrEmm.vstb
+*CPAR_INCLUDE Roads\Profiles\RR_02_92_lrEmm.vsb
+#ENDMYellow
+
+#BlueLink4 Plot: Setup`Sensor Vx -- Rear Blind Spot` Object Sensors` , Plot`
+
+#BlueLink5 Plot: Setup`Sensor Dist -- Rear Blind Spot` Object Sensors` , Plot`
+
+
+#EMBEDDED_NOTES
+#This screen loads the data found in Rough Road 02 - 92 in/mi (1.45 m/km) using an external ERD file that is loaded into two tables.
+#
+#This screen is in support of the Loaded Tables example.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Loaded Tables } Rough Road 02 - 92 (loaded)
+#Library : Generic VS Commands
+#DataSet : Rough Road 02 - 92 (loaded)
+#Category: Loaded Tables
+#FileID  : GenVS_ec47d315-d653-4774-af37-e5aa7c32fc92
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

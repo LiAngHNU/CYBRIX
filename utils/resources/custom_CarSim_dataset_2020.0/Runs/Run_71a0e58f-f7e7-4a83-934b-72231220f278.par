@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName CarSim Run Control`Roundabout (3D, 36 m), Show Boundaries`Road Networks: Intersections and Roundabouts
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_71a0e58f-f7e7-4a83-934b-72231220f278
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 5 El, 30 m` Vehicle Reference` , Animator camera`Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_340bc84c-3c23-4634-a9e9-34e9b4434da9.par
+#BlueLink28 Procedures`Roundabout: D = 36 m, Show Boundaries` Road Networks` , Procedure`Proc_340bc84c-3c23-4634-a9e9-34e9b4434da9
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Roads\BuilderSegment\RoadSeg_4f16aa74-7dd0-4ae7-9a8f-af78d75daa9a.par
+#BlueLink10 Path: Segment Builder`South Entrance, 3d Exit, 1021` Roundabout, D = 36 m` , Miscellaneous`RoadSeg_4f16aa74-7dd0-4ae7-9a8f-af78d75daa9a
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink11 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_92e94740-7813-4c8a-9bea-c62fff972287.par
+#BlueLink15 Plot: Setup`Road ID for Tires` Tracking` , Plot`Plot_92e94740-7813-4c8a-9bea-c62fff972287
+
+PARSFILE Plot\Setup\Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f.par
+#BlueLink16 Plot: Setup`Road Station for Tires` Tracking` , Plot`Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Roundabout (3D, 36 m), Show Boundaries <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Roundabout (3D, 36 m), Show Boundaries
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example uses a version of the roundabout with alternative graphics that show the boundaries of the five connected roads.
+#
+#The colored regions are shown on top of the pavement graphics, and represent the boundaries for each road segement. These view match figures in the Help document Path and Road Surfaces.
+#
+#When viewing the video, it may be helpful to render with the wireframe view, to see the overlap of the boundaries. To do so, press Ctrl+W several times in VS Visualizer to cycle through the rendering modes.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: Intersections and Roundabouts } Roundabout (3D, 36 m), Show Boundaries
+#Library : CarSim Run Control
+#DataSet : Roundabout (3D, 36 m), Show Boundaries
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_71a0e58f-f7e7-4a83-934b-72231220f278
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

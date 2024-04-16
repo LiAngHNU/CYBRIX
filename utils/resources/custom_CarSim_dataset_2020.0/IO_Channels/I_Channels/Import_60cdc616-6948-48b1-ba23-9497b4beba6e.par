@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName I/O Channels: Import`External Engine`Powertrain: Sub-System Controls and External Models
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_db360068-5241-470d-a358-3b37cd8f26f7\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_MENGINE Add 0.0! 0
+IMP_AV_ENG Add 0.0! 0
+IMP_PWR_ENGINE_AV Replace 0.0! 1
+#ENDMYellow
+
+#MiscYellow1
+INSTALL_SPEED_CONTROLLER
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`External Engine` Simulink and LabVIEW Models` , example run`Run_db360068-5241-470d-a358-3b37cd8f26f7
+
+
+#EMBEDDED_NOTES
+#In 2019.0, IMP_PWR_ENGINE_AV is not recognized in a open loop unless INSTALL_SPEED_CONTROLLER is used.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Powertrain: Sub-System Controls and External Models } External Engine
+#Library : I/O Channels: Import
+#DataSet : External Engine
+#Category: Powertrain: Sub-System Controls and External Models
+#FileID  : Import_60cdc616-6948-48b1-ba23-9497b4beba6e
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

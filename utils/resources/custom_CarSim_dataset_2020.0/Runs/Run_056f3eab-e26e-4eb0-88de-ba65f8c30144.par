@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName CarSim Run Control`Camera Sensor: Lanes (Simulink)`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_056f3eab-e26e-4eb0-88de-ba65f8c30144
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_fa1a36a3-cb24-4c4c-b177-2cfcd3f4ec60.par
+#BlueLink12 Models: Simulink`Highway Lane Detection w/ Steer Control` Live Video` , Models`Simlink_fa1a36a3-cb24-4c4c-b177-2cfcd3f4ec60
+
+PARSFILE Animator\Cameras\Camera_5517eaa4-ec66-45f1-87b8-979b0dfc4a12.par
+#BlueLink0 Animator: Camera Setup`Camera Sensor: C-Class Hatchback` Custom Cameras` , Animator camera`Camera_5517eaa4-ec66-45f1-87b8-979b0dfc4a12
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+OPT_BUFFER_WRITE 1
+AUTOSIZE OFF
+BLOCKING_RT_READ ON
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Assembly\Vehicle_ca42f025-f59d-4e3c-b9f6-c2193adcf67c.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: Brk. Pedal, Camera` VS Visualizer Camera Sensor` , Math Model`Vehicle_ca42f025-f59d-4e3c-b9f6-c2193adcf67c
+
+PARSFILE Procedures\Proc_ee005ed8-e64d-41f1-8697-22a3c1ad0f3c.par
+#BlueLink28 Procedures`Speed = 110, 2m Right, Open Loop Steer` Driving` , Procedure`Proc_ee005ed8-e64d-41f1-8697-22a3c1ad0f3c
+
+PARSFILE Roads\3D_Road\Road_ca0c8546-fea7-42d0-ba28-fc055fde52b8.par
+#BlueLink9 Road: 3D Surface (All Properties)`4-Lane Section (Adjacent Lanes)` Many Lanes` , Miscellaneous`Road_ca0c8546-fea7-42d0-ba28-fc055fde52b8
+
+PARSFILE Generic\VS_commands\GenVS_05ef2bed-c11c-4c9e-9d14-0e746287cf25.par
+#BlueLink11 Generic VS Commands`Camera Sensor on Upper Front Window` Camera Sensors` , Miscellaneous`GenVS_05ef2bed-c11c-4c9e-9d14-0e746287cf25
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_ca42f025-f59d-4e3c-b9f6-c2193adcf67c.png
+WRITE_SENSOR_DETECT
+Title Camera Sensor: Lanes (Simulink) <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Camera Sensor: Lanes (Simulink)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Highway Lane Detection with the VS Visualizer Camera Sensor and Simulink
+#
+#(Matlab 2014b or newer)
+#
+#In v2019.0, the threshold value of the edge detection block in the Simulink model was updated because the scene brightness in the VS Visualizer was improved.
+#
+#Highway Lane Detection is demonstrated with a Camera Sensor and Image Processing using Simulink. The Camera Sensor detects the lanes on the left and right sides of the vehicle, warns when the vehicle drifts, and commands a steering wheel angle control to return the vehicle to the center of the lane.
+#
+#The Matlab Computer Vision System Toolbox and Image Processing Toolbox are required to run this example. The minimum supported Matlab version is R2014b.
+#
+#A CarSim Sensors license is required to run the math model for this simulation. You may still view the animation and plots.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Camera Sensor: Lanes (Simulink)
+#Library : CarSim Run Control
+#DataSet : Camera Sensor: Lanes (Simulink)
+#Category: ADAS and Active Safety
+#FileID  : Run_056f3eab-e26e-4eb0-88de-ba65f8c30144
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

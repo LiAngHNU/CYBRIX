@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Batch Matrix`Tire Tester - Procedure and Tire`
+
+PARSFILE Runs\Run_f9cc7fcd-cddb-4d5f-a70f-d545b65d2a67.par
+#BlueLink0 CarSim Run Control`Friction Ellipse - Alpha = -2 deg` Tire Tester` , Baseline run`Run_f9cc7fcd-cddb-4d5f-a70f-d545b65d2a67
+
+PARSFILE Tire_Tester\TestTire_e6d12311-dd3f-4c6e-940a-37ce28b78abc.par
+#BlueLink1 Tire Tester`Sweep Kappa: Fz = 4000 N` Sweep Kappa +/- 1.0` , Library for Factor A`TestTire_e6d12311-dd3f-4c6e-940a-37ce28b78abc
+
+PARSFILE Tire_Tester\TestTire_c40879d2-b79a-4bdb-a475-2a7fed4b67c0.par
+#BlueLink2 Tire Tester`Sweep Alpha: Fz = 4000 N` Sweep Alpha +/- 10 deg` , Baseline run`TestTire_c40879d2-b79a-4bdb-a475-2a7fed4b67c0
+
+PARSFILE Tires\Tire\Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f.par
+#BlueLink19 Tire`175/65 R14` Touring Tires` , Library for Factor B`Tire_d4b58623-61c9-4fd6-9d6b-d19fdbbbd93f
+
+PARSFILE Tires\Tire\Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7.par
+#BlueLink20 Tire`215/55 R17` Touring Tires` , Baseline run`Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+
+PARSFILE Tires\Tire\Tire_5458a425-c82a-4e2e-9bf3-b5280910a179.par
+#BlueLink21 Tire`225/60 R18 (Camber Ext.: Symmetric)` Extended Tire Model` , Baseline run`Tire_5458a425-c82a-4e2e-9bf3-b5280910a179
+
+
+
+#EMBEDDED_NOTES
+#To make a batch matrix using the Tire Tester feature, link to your Tire Tester procedure under Factor "A" and the tires to test under Factor "B".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Batch Matrix; Tire Tester - Procedure and Tire
+#Library : Batch Matrix
+#DataSet : Tire Tester - Procedure and Tire
+#Category: 
+#FileID  : Matrix_c8ceba66-dc51-475f-9b9c-5a4b5cc82a4c
+#Product : CarSim 2020.0
+#VehCode Batch Matrix
+
+END

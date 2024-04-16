@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Events`A. Wait to start Fishhook`Fishhook with Roll Rate Feedback
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 SLOW_STEER_DONE
+*VALUE1 SLOW_STEER_DONE
+*SPEED 80
+PARSFILE Generic\VS_commands\GenVS_5b1344e6-d752-431f-b09e-328f9b9607ed.par
+#BlueLink10 Generic VS Commands`Define Fishhook Variables` Miscellaneous Custom Output Variables` , Miscellaneous`GenVS_5b1344e6-d752-431f-b09e-328f9b9607ed
+
+DEFINE_EVENT SLOW_STEER_DONE ; Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par
+#BlueLink0 Events`B. Let Vehicle Settle for Next Fishhook` Fishhook with Roll Rate Feedback` , Events`Events_709edbcc-6812-4629-9d36-16dedb024adc
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded before the run starts. It in turn loads a dataset with VS commands that define variables that will be used for the fishhook sequence, then waits  until SLOW_STEER_DONE is not zero.
+#
+#When SLOW_STEER_DONE is not zero, the slowly increading steer tests are done and the parameter SWA_REF has a value to be used in the fishhook tests.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Fishhook with Roll Rate Feedback } A. Wait to start Fishhook
+#Library : Events
+#DataSet : A. Wait to start Fishhook
+#Category: Fishhook with Roll Rate Feedback
+#FileID  : Events_f3df7a10-981f-4cec-9add-c6f804b389af
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

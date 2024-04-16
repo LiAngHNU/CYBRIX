@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Models: Simulink`Brake Control w/ 2 ADAS Sensors`Object Sensors
+#RunMdlFile Extensions\Simulink\ADAS_Brake_2_sensors.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\ADAS_Brake_2_sensors.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 0    
+PARSFILE IO_Channels\I_Channels\Import_2a113a46-f2c2-457d-878c-7282cd90c707.par
+#BlueLink0 I/O Channels: Import`Master Cylinder Pressure` Brake System: Control and External Models` , Import`Import_2a113a46-f2c2-457d-878c-7282cd90c707
+
+PARSFILE IO_Channels\O_Channels\Export_7dbd2490-8152-422b-95dd-2aa6499f7eac.par
+#BlueLink1 I/O Channels: Export`Vehicle Speed: Vxz_Fwd` Brake System: Control and External Models` , Import/Export`Export_7dbd2490-8152-422b-95dd-2aa6499f7eac
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This is an example dataset for a Simulink-based brake controlller and is meant to be used for the ADAS / sensor-mounted vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Object Sensors } Brake Control w/ 2 ADAS Sensors
+#Library : Models: Simulink
+#DataSet : Brake Control w/ 2 ADAS Sensors
+#Category: Object Sensors
+#FileID  : Simlink_91fb2108-822c-4847-b987-86bee2bcbc7a
+#Product : CarSim 2020.0
+#VehCode 
+
+END

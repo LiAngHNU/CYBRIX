@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Events`H. Cancel Open Loop Throttle`Opt_Engine_Running: Manual Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 0.001
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_THROTTLE = T
+! Switching from Open Loop Throttle to Closed Loop Speed Control 
+! requires us to set the Open Loop Throttle to 0. Event lasts 0.001 sec.
+#ENDMYellow
+
+MAKE_EVENT t_event > 0.001 ; Events\Events_27cca51c-e9be-4bc1-9c1a-cbf69bf8c5a2.par
+#BlueLink0 Events`I. Switch to Target Speed` Opt_Engine_Running: Manual Transmission` , Events`Events_27cca51c-e9be-4bc1-9c1a-cbf69bf8c5a2
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Manual Transmission } H. Cancel Open Loop Throttle
+#Library : Events
+#DataSet : H. Cancel Open Loop Throttle
+#Category: Opt_Engine_Running: Manual Transmission
+#FileID  : Events_59820092-f6c2-45c4-a887-d8c64046781d
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

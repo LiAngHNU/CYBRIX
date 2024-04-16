@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Generic VS Commands`Lap Time Optimization Parameters`Miscellaneous Custom Controls
+#VehCode VS Commands
+
+#MiscYellow0
+! Will not save any results until the final lap time achieved:
+opt_write = 0
+
+! Parameters associated with the optimization algorithm
+define_parameter next_search_dir
+define_parameter delta_tol = 1e-3
+define_parameter delta = 0.1
+
+! Parameters to save final and initial values for optimized parameters
+define_parameter initial_arc_length = speed_curv_length; m
+define_parameter initial_pvw_time = tprev_constant; s
+define_parameter final_arc_length; m
+define_parameter final_pvw_time; s
+
+! Parameters associated with lap timing
+define_parameter lap_start_time; s
+define_parameter best_time_so_far = 1000; s
+define_parameter current_lap_time; s
+
+! Outputs and parameters associated with road boundary check
+define_output lat_pos_L1 = road_L_id(xctc_L1,yctc_L1,current_road_id,1); m
+define_output lat_pos_R1 = road_L_id(xctc_R1,yctc_R1,current_road_id,2); m
+define_output lat_pos_L2 = road_L_id(xctc_L2,yctc_L2,current_road_id,3); m
+define_output lat_pos_R2 = road_L_id(xctc_R2,yctc_R2,current_road_id,4); m
+define_parameter road_boundary_left = 0.5; m
+define_parameter road_boundary_right = -8.5; m
+
+! This saved state will be used to restart the run during the optimization process
+save_state
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Controls } Lap Time Optimization Parameters
+#Library : Generic VS Commands
+#DataSet : Lap Time Optimization Parameters
+#Category: Miscellaneous Custom Controls
+#FileID  : GenVS_5d8ab8cd-0cd5-4363-b7be-15f274539b89
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

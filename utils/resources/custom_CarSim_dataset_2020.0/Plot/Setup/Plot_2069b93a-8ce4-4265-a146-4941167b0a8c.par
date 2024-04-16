@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Control: M/C Pressure vs Station`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Pbk_Con, station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Control: M/C Pressure vs Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Brake Control: M/C Pressure vs Station
+#Library : Plot: Setup
+#DataSet : Brake Control: M/C Pressure vs Station
+#Category: Braking
+#FileID  : Plot_2069b93a-8ce4-4265-a146-4941167b0a8c
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

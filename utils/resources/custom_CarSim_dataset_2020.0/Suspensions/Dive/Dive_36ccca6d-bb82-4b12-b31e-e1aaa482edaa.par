@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Suspension: Dive Angle (Caster Change)`Front Strut - Front Dive Angle`Strut
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_DIVE_COMBINE ADD
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_DIVE_TABLE SPLINE
+-70, 0.282157
+-60, 0.243294
+-50, 0.204028
+-40, 0.164309
+-30, 0.124089
+-20, 0.083323
+-10, 0.041971
+0, 0
+10, -0.042617
+20, -0.085893
+30, -0.129828
+40, -0.174396
+50, -0.21954
+60, -0.265153
+70, -0.311062
+ENDTABLE
+SUSP_DIVE_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_DIVE_AXLE_TABLE SPLINE
+-70, 0.282157
+-60, 0.243294
+-50, 0.204028
+-40, 0.164309
+-30, 0.124089
+-20, 0.083323
+-10, 0.041971
+0, 0
+10, -0.042617
+20, -0.085893
+30, -0.129828
+40, -0.174396
+50, -0.21954
+60, -0.265153
+70, -0.311062
+ENDTABLE
+
+#EMBEDDED_NOTES
+#NOTE:  Sign convention of the CS 7.01b and earlier datasets was reversed and demonstrated a pro-dive suspension.  This dataset represents an anti-dive suspension.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Dive Angle (Caster Change); { Strut } Front Strut - Front Dive Angle
+#Library : Suspension: Dive Angle (Caster Change)
+#DataSet : Front Strut - Front Dive Angle
+#Category: Strut
+#FileID  : Dive_36ccca6d-bb82-4b12-b31e-e1aaa482edaa
+#Product : CarSim 2020.0
+#VehCode Dive
+
+END

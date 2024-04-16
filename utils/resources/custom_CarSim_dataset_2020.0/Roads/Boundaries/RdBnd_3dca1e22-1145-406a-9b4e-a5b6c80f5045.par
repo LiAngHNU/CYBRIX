@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName Road: Boundaries`Highway Intersection Boundaries`Crossing with Curbs
+#RingCtrl0 3
+#RingCtrl1 1
+#RingCtrl2 0
+#RingCtrl3 3
+#RingCtrl6 3
+#RingCtrl9 0
+#RingCtrl10 0
+#RingCtrl11 3
+#RingCtrl14 3
+#RingCtrl17 1
+#RingCtrl18 0
+#RingCtrl19 3
+#RingCtrl22 3
+*ROAD_ID_1 1094
+*SMAX_1 630
+*SMAX_NEW_ID_1 1002
+*SMAX_NEW_S_1 -8
+*LMAX_1 4
+*LMIN_1 -10
+*LMIN_NEW_ID_1 1004
+*LMIN_NEW_S_1 75
+*ROAD_ID_2 1001
+*SMAX_2 66
+*SMAX_NEW_ID_2 1000
+*SMAX_NEW_S_2 10
+*LMAX_2 4
+*LMIN_2 -10
+*ROAD_ID_3 1002
+*SMAX_3 235.359
+*SMAX_NEW_ID_3 1001
+*SMAX_NEW_S_3 424.594
+*LMAX_3 0.1
+*LMIN_3 -10
+
+
+IROAD = GET_IROAD(1094)
+ROAD_SMAX 630
+ROAD_SMAX_NEW_ID 1002
+ROAD_SMAX_NEW_S -8
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_NEW_ID_CONSTANT = 0
+
+ISIDE = 2
+ROAD_NEW_ID_CONSTANT = 0
+
+IROAD = GET_IROAD(1001)
+ROAD_SMAX_NEW_ID = 0
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_NEW_ID_CONSTANT = 0
+
+ISIDE = 2
+ROAD_NEW_ID_CONSTANT = 0
+
+IROAD = GET_IROAD(1002)
+ROAD_SMAX 235.359
+ROAD_SMAX_NEW_ID 1001
+ROAD_SMAX_NEW_S 424.594
+ROAD_SMIN_NEW_ID = 0
+
+ISIDE = 1
+ROAD_NEW_ID_CONSTANT = 0
+
+ISIDE = 2
+ROAD_NEW_ID_CONSTANT = 0
+
+#EMBEDDED_NOTES
+#The three road surfaces have unlimited station. All will stop the simulation if the vehicle goes off-right to the right. All will switch to an adjacent road if the vehicle goes to the left.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Boundaries; { Crossing with Curbs } Highway Intersection Boundaries
+#Library : Road: Boundaries
+#DataSet : Highway Intersection Boundaries
+#Category: Crossing with Curbs
+#FileID  : RdBnd_3dca1e22-1145-406a-9b4e-a5b6c80f5045
+#Product : CarSim 2020.0
+#VehCode Road Boundaries
+
+END

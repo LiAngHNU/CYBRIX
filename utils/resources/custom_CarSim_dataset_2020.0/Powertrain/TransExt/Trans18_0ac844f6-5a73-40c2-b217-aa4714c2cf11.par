@@ -1,0 +1,105 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`6-Speed w/ Lockup Tq. Conv.`6-Speed Transmissions
+#RingCtrl0 6
+NGEARS 6
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 1    
+OPT_CLUTCH 2
+R_GEAR_TR_REVERSE -3.168
+R_GEAR_TR(1) 3.538
+R_GEAR_TR(2) 2.06
+R_GEAR_TR(3) 1.404
+R_GEAR_TR(4) 1.00
+R_GEAR_TR(5) 0.713
+R_GEAR_TR(6) 0.582
+ITR_REVERSE 0.034
+ITR_NEUTRAL 0.034
+ITR(1) 0.037
+ITR(2) 0.034
+ITR(3) 0.042
+ITR(4) 0.04
+ITR(5) 0.04
+ITR(6) 0.04
+R_EFF_TR_F_REVERSE 0.9
+R_EFF_TR_F(1) 0.92
+R_EFF_TR_F(2) 0.92
+R_EFF_TR_F(3) 0.95
+R_EFF_TR_F(4) 0.95
+R_EFF_TR_F(5) 0.98
+R_EFF_TR_F(6) 0.99
+R_EFF_TR_R_REVERSE 0.9
+R_EFF_TR_R(1) 0.92
+R_EFF_TR_R(2) 0.92
+R_EFF_TR_R(3) 0.95
+R_EFF_TR_R(4) 0.95
+R_EFF_TR_R(5) 0.98
+R_EFF_TR_R(6) 0.99
+T_SHIFT 0.25
+*TC_CLUTCH_ENGAGE 0.06
+*TC_CLUTCH_DISENGAGE 0.002
+*M_LOCKUP_CLUTCH_CAP 600
+
+#CheckBox1 1    
+OPT_CLUTCH_DELAY 1
+TC_CLUTCH_ENGAGE 0.06
+TC_CLUTCH_DISENGAGE 0.002
+M_LOCKUP_CLUTCH_CAP 600
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_28d508f4-a9e5-4d5f-93e0-da2839bd20ad.par
+#BlueLink0 Powertrain: Shift Schedule`6-speed, 1-2 Shift` 6-speed` , Shift schedule`Shift_28d508f4-a9e5-4d5f-93e0-da2839bd20ad
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_6b7b439a-f0ca-4048-937e-7705d820021d.par
+#BlueLink17 Powertrain: AT Clutch Schedule`1st Gear, Lock` 6-speed` , Clutch schedule`ClSched_6b7b439a-f0ca-4048-937e-7705d820021d
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_458185ed-acb4-414f-bccd-d9bffa8cb1d0.par
+#BlueLink1 Powertrain: Shift Schedule`6-speed, 2-3 Shift` 6-speed` , Shift schedule`Shift_458185ed-acb4-414f-bccd-d9bffa8cb1d0
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_33243c6b-faf9-4753-93fb-77253952833f.par
+#BlueLink18 Powertrain: AT Clutch Schedule`2nd Gear, Lock` 6-speed` , Clutch schedule`ClSched_33243c6b-faf9-4753-93fb-77253952833f
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_227434b7-0668-495c-a01a-0881f536f932.par
+#BlueLink2 Powertrain: Shift Schedule`6-speed, 3-4 Shift` 6-speed` , Shift schedule`Shift_227434b7-0668-495c-a01a-0881f536f932
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_dd41719e-d698-427d-a9aa-a6d2964f85f6.par
+#BlueLink19 Powertrain: AT Clutch Schedule`3rd Gear, Lock` 6-speed` , Clutch schedule`ClSched_dd41719e-d698-427d-a9aa-a6d2964f85f6
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_4c7e0778-d050-4bc4-ae32-5ddb69fa99e5.par
+#BlueLink3 Powertrain: Shift Schedule`6-speed, 4-5 Shift` 6-speed` , Shift schedule`Shift_4c7e0778-d050-4bc4-ae32-5ddb69fa99e5
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_c2e6bba5-180e-49dd-9e51-381aa3251494.par
+#BlueLink20 Powertrain: AT Clutch Schedule`4th Gear, Lock` 6-speed` , Clutch schedule`ClSched_c2e6bba5-180e-49dd-9e51-381aa3251494
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift_1ca55221-d7d9-4a14-a7cc-e661498a08ca.par
+#BlueLink4 Powertrain: Shift Schedule`6-speed, 5-6 Shift` 6-speed` , Shift schedule`Shift_1ca55221-d7d9-4a14-a7cc-e661498a08ca
+
+PARSFILE Powertrain\ClutchSchedule\ClSched_d5009286-3ef9-47f9-afce-8edeeded2618.par
+#BlueLink21 Powertrain: AT Clutch Schedule`5th Gear, Lock` 6-speed` , Clutch schedule`ClSched_d5009286-3ef9-47f9-afce-8edeeded2618
+
+
+igear 6
+PARSFILE Powertrain\ClutchSchedule\ClSched_1e6d3a72-6b6e-43dd-93fe-753c1933f0cf.par
+#BlueLink22 Powertrain: AT Clutch Schedule`6th Gear, Lock` 6-speed` , Clutch schedule`ClSched_1e6d3a72-6b6e-43dd-93fe-753c1933f0cf
+
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 6-Speed Transmissions } 6-Speed w/ Lockup Tq. Conv.
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 6-Speed w/ Lockup Tq. Conv.
+#Category: 6-Speed Transmissions
+#FileID  : Trans18_0ac844f6-5a73-40c2-b217-aa4714c2cf11
+#Product : CarSim 2020.0
+#VehCode Transmission
+
+END

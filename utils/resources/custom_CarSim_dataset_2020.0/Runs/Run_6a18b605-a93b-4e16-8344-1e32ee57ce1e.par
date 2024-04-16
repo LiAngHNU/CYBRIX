@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName CarSim Run Control`MF-Swift v7.3, Turn-Slip: Parking`* More Examples (Extra License Options)
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6a18b605-a93b-4e16-8344-1e32ee57ce1e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_045f9b8a-2e8a-4608-8066-fecace521157.par
+#BlueLink0 Animator: Camera Setup`167 Azm, 5 El, 38 m` Road Reference` , Animator camera`Camera_045f9b8a-2e8a-4608-8066-fecace521157
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 12
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_f5978a97-ff24-4a83-a349-9fb78f03260f.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hbk: MF-Swift v7.3, Turn-Slip` External Tire Models` , Math Model`Vehicle_f5978a97-ff24-4a83-a349-9fb78f03260f
+
+PARSFILE Procedures\Proc_2801c8f5-7260-49a7-8885-9feaa94344eb.par
+#BlueLink28 Procedures`Parking Steer Input` Driver Controls` , Procedure`Proc_2801c8f5-7260-49a7-8885-9feaa94344eb
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title MF-Swift v7.3, Turn-Slip: Parking <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE MF-Swift v7.3, Turn-Slip: Parking
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with the MF-Swift v7.3 (with Turn-Slip function) tire model performs a low speed parking test using an Open-Loop Steering Wheel Angle control.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * More Examples (Extra License Options) } MF-Swift v7.3, Turn-Slip: Parking
+#Library : CarSim Run Control
+#DataSet : MF-Swift v7.3, Turn-Slip: Parking
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_6a18b605-a93b-4e16-8344-1e32ee57ce1e
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

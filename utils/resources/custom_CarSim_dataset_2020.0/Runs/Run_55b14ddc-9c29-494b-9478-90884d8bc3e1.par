@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName CarSim Run Control`SI Units for Output`Output Options
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_55b14ddc-9c29-494b-9478-90884d8bc3e1
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 2
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+SET_RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Generic\VS_commands\GenVS_0ed66112-4dbe-4fcb-9ccc-a3e7cecbac13.par
+#BlueLink9 Generic VS Commands`SI Units` Alternate Unit Systems` , Miscellaneous`GenVS_0ed66112-4dbe-4fcb-9ccc-a3e7cecbac13
+
+PARSFILE Generic\VS_commands\GenVS_7ed09c24-5cda-40bd-a3b8-1e5ba158dce5.par
+#BlueLink10 Generic VS Commands`Force Euler Angles to Degrees` Alternate Unit Systems` , Miscellaneous`GenVS_7ed09c24-5cda-40bd-a3b8-1e5ba158dce5
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title SI Units for Output <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE SI Units for Output
+#MiscYellow0
+OPT_ECHO_ALL_UNITS 1
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates converting and displaying CarSim output variables in SI units.
+#
+#Note that the units information should be provided to the math model AFTER all vehicle and control datasets are read, to avoid conflicts with the units used for the vehicle properties, steering inputs, etc.
+#
+#Two sets of VS Commands are used to change units, and both are linked here, on the Run Control screen.
+#
+#The first, "SI Units," redefines almost all of the units in the math model to SI.
+#
+#The second, "Force Euler Angles to Degrees," sets a few angular variables to use degrees to support "standard" animator settings. Note that if this second set of VS Commands is not used, then the animations don't show Euler rotations properly.
+#
+#The plots display all angles in radians.
+#
+#The misc. yellow field on this screen sets OPT_ECHO_ALL_UNITS to 1, so all units-related settings are documented at the top of the echo file. Use the drop-down menu in the lower-right corner of this screen and select either the "Echo file with initial conditions" or the "Echo file with final conditions." Then click the View button in the lower-right corner of the screen to see this file selection.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Output Options } SI Units for Output
+#Library : CarSim Run Control
+#DataSet : SI Units for Output
+#Category: Output Options
+#FileID  : Run_55b14ddc-9c29-494b-9478-90884d8bc3e1
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`300 kW, 6-spd., 3.1 Ratio, MT`300 kW Powertrains
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 0
+R_MDRIVE 0
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 12
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(1) 1
+OPT_DIFF_INTERNAL(2) 1
+OPT_DIFF_INTERNAL(3) 1
+
+PARSFILE Powertrain\Engine\Engine_8040b1ad-5f06-4c6c-a6e6-740997750fc3.par
+#BlueLink0 Powertrain: Engine`300 kW Engine` 300 kW Engines` , Engine`Engine_8040b1ad-5f06-4c6c-a6e6-740997750fc3
+
+PARSFILE Powertrain\Clutch\TrqCl_d863b57d-39cf-4fd9-ac2e-cabe376f0675.par
+#BlueLink6 Powertrain: Clutch Torque`Maximum 1800 N-m (Linear)` Clutch Torque` , Clutch`TrqCl_d863b57d-39cf-4fd9-ac2e-cabe376f0675
+
+PARSFILE Powertrain\TransExt\Trans18_507f055e-67b2-4f17-aebe-82ecc4c8398d.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`6-Speed Manual (High RPM)` 6-Speed Transmissions` , Transmission (Extended)`Trans18_507f055e-67b2-4f17-aebe-82ecc4c8398d
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_d98002a3-b967-42a5-86fd-fecb3cdb7b9e.par
+#BlueLink3 Powertrain: Transfer Case`Viscous Coupling: 40/60, Gear Ratio 1:1` Limited Slip and Viscous Coupling` , Transfer case`XC_d98002a3-b967-42a5-86fd-fecb3cdb7b9e
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_47cc06d1-4dba-4096-ba90-c418b5d28dfa.par
+#BlueLink4 Powertrain: Front Differential`Viscous: Gear Ratio 3.1` Limited Slip and Viscous Coupling` , Differential front`DiffF_47cc06d1-4dba-4096-ba90-c418b5d28dfa
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_43875e05-6d2d-4f1a-9396-a76529dd683d.par
+#BlueLink5 Powertrain: Rear Differential`Viscous Coupling: Gear Ratio 3.1:1` Limited Slip and Viscous Coupling` , Differential rear`DiffR_43875e05-6d2d-4f1a-9396-a76529dd683d
+
+
+#EMBEDDED_NOTES
+#2019.0 - Improved shifting behavior
+# Lowered shift point for part throttle in all gears
+# Increased driveline natural frequency
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { 300 kW Powertrains } 300 kW, 6-spd., 3.1 Ratio, MT
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 300 kW, 6-spd., 3.1 Ratio, MT
+#Category: 300 kW Powertrains
+#FileID  : 4WD_0e5a1518-9386-4c6c-8ff8-718cb68c742b
+#Product : CarSim 2020.0
+#VehCode 4WD
+
+END

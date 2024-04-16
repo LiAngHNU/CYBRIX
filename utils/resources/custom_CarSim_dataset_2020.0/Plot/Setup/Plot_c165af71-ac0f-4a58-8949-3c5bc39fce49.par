@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Pitch -- S1, S2 (2 Objects)`Object Sensors
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS El_S1_1, Time, Detected elevation (S1 O1)
+PLOTCHANNELS PchS1_1, Time, Pitch for animator (S1 O1)
+PLOTCHANNELS El_S1_2, Time, Detected elevation (S1 O2)
+PLOTCHANNELS PchS1_2, Time, Pitch for animator (S1 O2)
+PLOTCHANNELS El_S2_1, Time, Detected elevation (S2 O1)
+PLOTCHANNELS PchS2_1, Time, Pitch for animator (S2 O1)
+PLOTCHANNELS El_S2_2, Time, Detected elevation (S2 O2)
+PLOTCHANNELS PchS2_2, Time, Pitch for animator (S2 O2)
+PLOTCHANNELS Pitch, time, Vehicle pitch
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Pitch -- S1, S2 (2 Objects)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Object Sensors } Pitch -- S1, S2 (2 Objects)
+#Library : Plot: Setup
+#DataSet : Pitch -- S1, S2 (2 Objects)
+#Category: Object Sensors
+#FileID  : Plot_c165af71-ac0f-4a58-8949-3c5bc39fce49
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

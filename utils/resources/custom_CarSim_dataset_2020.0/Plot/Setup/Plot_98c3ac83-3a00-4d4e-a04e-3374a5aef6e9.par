@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Plot: Setup`Bearing -- S1, S2 (2 Objects)`Object Sensors
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS BrCS1_1, Time
+PLOTCHANNELS BrLS1_1, Time
+PLOTCHANNELS BrRS1_1, Time
+PLOTCHANNELS BrCS1_2, Time
+PLOTCHANNELS BrLS1_2, Time
+PLOTCHANNELS BrRS1_2, Time
+PLOTCHANNELS BrCS2_1, Time
+PLOTCHANNELS BrLS2_1, Time
+PLOTCHANNELS BrRS2_1, Time
+PLOTCHANNELS BrCS2_2, Time
+PLOTCHANNELS BrLS2_2, Time
+PLOTCHANNELS BrRS2_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Bearing -- S1, S2 (2 Objects)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Object Sensors } Bearing -- S1, S2 (2 Objects)
+#Library : Plot: Setup
+#DataSet : Bearing -- S1, S2 (2 Objects)
+#Category: Object Sensors
+#FileID  : Plot_98c3ac83-3a00-4d4e-a04e-3374a5aef6e9
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

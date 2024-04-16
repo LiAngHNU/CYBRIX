@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Road: Elevation Map (Legacy)`No Data`Empty (You should edit or delete this)
+DEFINE_ROADS 1
+IROAD = NROAD
+DEFINE_PATHS 1
+IPATH = NPATH
+ROAD_PATH_ID = IPATH ! last path
+CURRENT_ROAD_ID = ROAD_ID
+NSEGMENTS 1
+IPATHSEG = 1
+SEGMENT_TYPE = 0
+SEGMENT_LENGTH = 100
+DEFINE_DZ_TABLES 1 ! add 1 more DZ table
+IROAD_DZ = NROAD_DZ ! make this the active table
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 0, 0 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Road: Elevation Map (Legacy); { Empty (You should edit or delete this) } No Data
+#Library : Road: Elevation Map (Legacy)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : GndZ_240eb9f0-1fff-40f2-9e4e-eddece891230
+#Product : CarSim 2017 Dev
+#VehCode 3D Elevation (Legacy)
+
+END

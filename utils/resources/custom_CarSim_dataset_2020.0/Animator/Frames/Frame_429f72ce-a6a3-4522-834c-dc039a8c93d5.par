@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Aero My`Aero Forces & Moments
+ADD_REFERENCE_FRAME Frame_429f72ce-a6a3-4522-834c-dc039a8c93d5
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME XCG_SM
+SET_Y_NAME YCG_SM
+SET_Z_NAME ZCG_SM
+SET_ROLL_NAME Roll_E
+SET_PITCH_NAME Pitch
+SET_YAW_NAME Yaw
+SET_FRAME_SCALE_Y_NAME MY_AIR * 10
+
+PARSFILE Animator\STL_Groups\ShpGrp_0bc85db3-ddf0-4dda-8f26-14df2285c751.par
+#BlueLink0 Animator: Shape Assembly`My Double: (Tail Origin)` Arrows` , Animator Data`ShpGrp_0bc85db3-ddf0-4dda-8f26-14df2285c751
+
+#MiscYellow0
+WRT_MY_AIR
+ANI_MY_AIR
+#ENDMYellow
+
+WRT_XCG_SM
+ANI_XCG_SM
+WRT_YCG_SM
+ANI_YCG_SM
+WRT_ZCG_SM
+ANI_ZCG_SM
+WRT_Roll_E
+ANI_Roll_E
+WRT_Pitch
+ANI_Pitch
+WRT_Yaw
+ANI_Yaw
+WRT_MY_AIR * 10
+ANI_MY_AIR * 10
+
+#EMBEDDED_NOTES
+#Rescale MY_AIR, and ensure it's written to output file.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Aero Forces & Moments } Aero My
+#Library : Animator: Reference Frame
+#DataSet : Aero My
+#Category: Aero Forces & Moments
+#FileID  : Frame_429f72ce-a6a3-4522-834c-dc039a8c93d5
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

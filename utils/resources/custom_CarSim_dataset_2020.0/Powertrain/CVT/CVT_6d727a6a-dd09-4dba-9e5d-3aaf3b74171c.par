@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Powertrain: CVT Gear Ratio`CVT: R = 0.69 - 4.6`
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+
+
+PARSFILE Powertrain\CvtEfficiencies\CvtEff_3bb5f059-3f87-4223-822a-a250c4fdd859.par
+#BlueLink0 Powertrain: CVT Efficiencies`CVT Efficiencies` ` , Efficiencies`CvtEff_3bb5f059-3f87-4223-822a-a250c4fdd859
+
+*3D_XLabel Throttle (-)
+*3D_YLabel Trans. output speed (rpm)
+*3D_ZLabel Absolute transmission gear ratio (-)
+
+#DiagramTwo0
+*3D_DATA 4, 16 ! columns x rows
+R_GEAR_CVT_CARPET 2D_LINEAR
+0, 0, 0.2, 0.8, 1
+0, 4.596, 4.596, 4.596, 4.596
+500, 4.596, 4.596, 4.596, 4.596
+750, 2.724, 4.2, 4.55, 4.596
+860, 1.864, 3.8, 4.45, 4.55
+960, 1.464, 3.2, 4.25, 4.5
+1050, 1.231, 2.8, 4, 4.4
+1180, 1, 2.4, 3.6, 4.2
+1325, 0.824, 2.1, 3, 3.9
+1490, 0.685, 1.8, 2.6, 3.5
+1700, 0.685, 1.5, 2.25, 3
+2500, 0.685, 0.95, 1.4, 1.864
+3500, 0.685, 0.7, 0.9, 1.3
+4300, 0.685, 0.685, 0.75, 1.1
+5000, 0.685, 0.685, 0.7, 1
+6100, 0.685, 0.685, 0.685, 0.8
+7200, 0.685, 0.685, 0.685, 0.685
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#This is an example of CVT gear ratio with range from 0.69 to 4.6. The gear ratio is a function of the throttle and transmission output speed.
+#
+#This screen also links to the CVT efficiency screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: CVT Gear Ratio; CVT: R = 0.69 - 4.6
+#Library : Powertrain: CVT Gear Ratio
+#DataSet : CVT: R = 0.69 - 4.6
+#Category: 
+#FileID  : CVT_6d727a6a-dd09-4dba-9e5d-3aaf3b74171c
+#Product : CarSim 2020.0
+#VehCode CVT Gear Ratio
+
+END

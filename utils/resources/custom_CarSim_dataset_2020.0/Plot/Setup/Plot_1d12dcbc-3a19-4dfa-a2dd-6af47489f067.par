@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Current Path ID DM`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output PathID = path_id_dm; - ;Current Path ID DM
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS PathID, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Current Path ID DM
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Current Path ID DM
+#Library : Plot: Setup
+#DataSet : Current Path ID DM
+#Category: User-Defined Variables
+#FileID  : Plot_1d12dcbc-3a19-4dfa-a2dd-6af47489f067
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

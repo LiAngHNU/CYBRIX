@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`6-Speed Manual (High RPM)`6-Speed Transmissions
+#RingCtrl0 6
+NGEARS 6
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -2.86
+R_GEAR_TR(1) 3.82
+R_GEAR_TR(2) 2.26
+R_GEAR_TR(3) 1.64
+R_GEAR_TR(4) 1.25
+R_GEAR_TR(5) 1.06
+R_GEAR_TR(6) 0.92
+ITR_REVERSE 0.034
+ITR_NEUTRAL 0.034
+ITR(1) 0.037
+ITR(2) 0.034
+ITR(3) 0.042
+ITR(4) 0.04
+ITR(5) 0.04
+ITR(6) 0.04
+R_EFF_TR_F_REVERSE 0.9
+R_EFF_TR_F(1) 0.92
+R_EFF_TR_F(2) 0.92
+R_EFF_TR_F(3) 0.95
+R_EFF_TR_F(4) 0.95
+R_EFF_TR_F(5) 0.98
+R_EFF_TR_F(6) 0.99
+R_EFF_TR_R_REVERSE 0.9
+R_EFF_TR_R(1) 0.92
+R_EFF_TR_R(2) 0.92
+R_EFF_TR_R(3) 0.95
+R_EFF_TR_R(4) 0.95
+R_EFF_TR_R(5) 0.98
+R_EFF_TR_R(6) 0.99
+T_SHIFT 0.15
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_222a5134-9732-4596-952d-6ecfd7cdf7b1.par
+#BlueLink0 Powertrain: Shift Schedule`6-speed, 1-2 Shift (MT, High RPM)` 6-speed, MT` , Shift schedule`Shift_222a5134-9732-4596-952d-6ecfd7cdf7b1
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_7eb5efc3-0899-4163-893f-5f6271117947.par
+#BlueLink1 Powertrain: Shift Schedule`6-speed, 2-3 Shift (MT, High RPM)` 6-speed, MT` , Shift schedule`Shift_7eb5efc3-0899-4163-893f-5f6271117947
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_9f663d8b-39bc-4973-bd06-11585e242d0e.par
+#BlueLink2 Powertrain: Shift Schedule`6-speed, 3-4 Shift (MT, High RPM)` 6-speed, MT` , Shift schedule`Shift_9f663d8b-39bc-4973-bd06-11585e242d0e
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_9d5cbaa4-0144-44f9-84b6-da44ad455d86.par
+#BlueLink3 Powertrain: Shift Schedule`6-speed, 4-5 Shift (MT, High RPM)` 6-speed, MT` , Shift schedule`Shift_9d5cbaa4-0144-44f9-84b6-da44ad455d86
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift_709c5719-b082-4b6d-8a3f-665a53e471cd.par
+#BlueLink4 Powertrain: Shift Schedule`6-speed, 5-6 Shift (MT, High RPM)` 6-speed, MT` , Shift schedule`Shift_709c5719-b082-4b6d-8a3f-665a53e471cd
+
+
+igear 6
+
+#EMBEDDED_NOTES
+#2019.0 - Improved shift schedule
+# Lowered part-throttle shift points in all gears
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 6-Speed Transmissions } 6-Speed Manual (High RPM)
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 6-Speed Manual (High RPM)
+#Category: 6-Speed Transmissions
+#FileID  : Trans18_507f055e-67b2-4f17-aebe-82ecc4c8398d
+#Product : CarSim 2020.0
+#VehCode Transmission
+
+END

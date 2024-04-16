@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Spring: Force vs. Compression`Suspension Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fs_L1, CmpS_L1
+PLOTCHANNELS Fs_R1, CmpS_R1
+PLOTCHANNELS Fs_L2, CmpS_L2
+PLOTCHANNELS Fs_R2, CmpS_R2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Spring: Force vs. Compression
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Forces and Moments } Spring: Force vs. Compression
+#Library : Plot: Setup
+#DataSet : Spring: Force vs. Compression
+#Category: Suspension Forces and Moments
+#FileID  : Plot_1cac48ae-4def-47a2-9ac8-a1a1093d6ba8
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

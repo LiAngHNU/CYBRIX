@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Y vs X - Trajectory (Custom View Point)`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 1    
+
+
+#MiscYellow0
+PLOTCHANNELS Yo, Xo
+PLOTCHANNELS Y_Design, X_Design
+PLOTCHANNELS Y_Target, X_Target
+PLOTCHANNELS Ypreview, Xpreview
+
+#ENDMYellow
+
+ASPECTRATIO 1
+YAXISLABEL Global Y coordinate - m
+XAXISLABEL Global X coordinate - m
+
+#RingCtrl8 1
+
+
+PTITLE Y vs X - Trajectory (Custom View Point)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Y vs X - Trajectory (Custom View Point)
+#Library : Plot: Setup
+#DataSet : Y vs X - Trajectory (Custom View Point)
+#Category: Tracking
+#FileID  : Plot_8064ead5-1ca9-4c41-b9f8-c69692603301
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

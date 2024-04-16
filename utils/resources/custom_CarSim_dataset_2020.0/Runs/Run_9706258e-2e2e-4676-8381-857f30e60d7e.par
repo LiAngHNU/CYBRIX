@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName CarSim Run Control`Sprung Mass from Whole Vehicle: s_s`Sprung Mass (Whole Vehicle)
+#VEHICLECODE SA_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9706258e-2e2e-4676-8381-857f30e60d7e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.4 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_59f82071-e06c-4beb-ab24-ceb58c54ff8f.par
+#BlueLink2 Vehicle: Assembly`Pickup, Full Size (SA_SA): Spr. Mass: Total` Pickup Trucks` , Math Model`Vehicle_59f82071-e06c-4beb-ab24-ceb58c54ff8f
+
+PARSFILE Procedures\Proc_cd7fd4e1-58f5-4013-8142-b81fd633e040.par
+#BlueLink28 Procedures`Chassis Twist Road` Ride Tests` , Procedure`Proc_cd7fd4e1-58f5-4013-8142-b81fd633e040
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_62b985da-b641-46fe-badb-39dcbd5a6dbb.png
+WRITE_SENSOR_DETECT
+Title Sprung Mass from Whole Vehicle: s_s <Sprung Mass (Whole Vehicle)>
+CATEGORY Sprung Mass (Whole Vehicle) 
+DATASET_TITLE Sprung Mass from Whole Vehicle: s_s
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A Fullsize Pickup Truck drives on a Chassis Twist Road.
+#
+#The Sprung Mass is represented using properties measured from the whole vehicle. Mass and inertia data are entered that represent a total vehicle measurement, from which CarSim extracts the Sprung Mass properties and uses those in the vehicle simulation.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Sprung Mass (Whole Vehicle) } Sprung Mass from Whole Vehicle: s_s
+#Library : CarSim Run Control
+#DataSet : Sprung Mass from Whole Vehicle: s_s
+#Category: Sprung Mass (Whole Vehicle)
+#FileID  : Run_9706258e-2e2e-4676-8381-857f30e60d7e
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

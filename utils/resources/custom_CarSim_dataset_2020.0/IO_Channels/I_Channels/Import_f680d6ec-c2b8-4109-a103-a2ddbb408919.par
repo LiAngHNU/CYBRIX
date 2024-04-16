@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName I/O Channels: Import`ABS (Type B): Control Pressures`Brake System: Control and External Models
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_b3ed78ef-a897-421b-a1ff-66f91635a32f\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_PCTL_L1 Replace 0.0! 1
+IMP_PCTL_R1 Replace 0.0! 1
+IMP_PCTL_L2 Replace 0.0! 1
+IMP_PCTL_R2 Replace 0.0! 1
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Braking: Advanced, Type B Ext. ABS` Brake Tests` , example run`Run_b3ed78ef-a897-421b-a1ff-66f91635a32f
+
+
+#EMBEDDED_NOTES
+#This example is for the CarSim "Type B" ABS Controller.
+#
+#In this case, the control pressures into the actuators are provided by the external controller, and are imported using variables PCTL_L1, PCTL_R1, etc.
+#
+#This dataset has been modified from previous versions; these pressure control variables did not exist in versions prior to 2017.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Brake System: Control and External Models } ABS (Type B): Control Pressures
+#Library : I/O Channels: Import
+#DataSet : ABS (Type B): Control Pressures
+#Category: Brake System: Control and External Models
+#FileID  : Import_f680d6ec-c2b8-4109-a103-a2ddbb408919
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

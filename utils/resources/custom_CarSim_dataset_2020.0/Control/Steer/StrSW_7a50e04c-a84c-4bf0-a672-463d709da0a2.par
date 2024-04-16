@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Platoon Lead`Platoon
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE SPLINE_FLAT
+0, 0
+10, -90
+20, -60
+30, 40
+40, -80
+50, 0
+60, 60
+70, 90
+80, 70
+90, 40
+100, -40
+110, -20
+120, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { Platoon } Platoon Lead
+#Library : Control: Steering (Open Loop)
+#DataSet : Platoon Lead
+#Category: Platoon
+#FileID  : StrSW_7a50e04c-a84c-4bf0-a672-463d709da0a2
+#Product : CarSim 2020.0
+#VehCode Open-Loop Steering
+
+END

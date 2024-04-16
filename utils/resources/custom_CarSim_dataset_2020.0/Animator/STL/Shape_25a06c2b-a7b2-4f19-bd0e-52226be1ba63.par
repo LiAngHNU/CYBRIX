@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Downtown: Type 9, 3 Stories`Environment: Buildings
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Buildings\Down_Town\DwnTwn_Bld_09_3S.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1.5
+SET_SCALE_Y 1.5
+SET_SCALE_Z 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_a09b6cf8-f7eb-4f79-b815-59182cd87d61.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Extra Large Objects` Shape Preview` , Video Camera`Camera_a09b6cf8-f7eb-4f79-b815-59182cd87d61
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_25a06c2b-a7b2-4f19-bd0e-52226be1ba63.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Buildings } Downtown: Type 9, 3 Stories
+#Library : Animator: Shape File Link
+#DataSet : Downtown: Type 9, 3 Stories
+#Category: Environment: Buildings
+#FileID  : Shape_25a06c2b-a7b2-4f19-bd0e-52226be1ba63
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

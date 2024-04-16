@@ -1,0 +1,68 @@
+PARSFILE
+#FullDataName Procedures`Parking Lot: One Lap`Parking Lot
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 50
+SSTOP 210
+OPT_DIRECTION 0
+*SPEED 10
+*TSTOP 50
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Parking Lot: One Lap
+SPEED_TARGET_CONSTANT 10
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_b1b717a4-04d9-461d-8975-e1ef0b12d822.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_b1b717a4-04d9-461d-8975-e1ef0b12d822
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Animator\Groups\Group_0e6c9727-7b17-4db0-ae8f-6c5fecdd8772.par
+#BlueLink0 Animator: Group`Parking Lot Road Surfaces` Test Facilities` , Miscellaneous`Group_0e6c9727-7b17-4db0-ae8f-6c5fecdd8772
+
+PARSFILE Roads\Center_XY\PathXY_d563bfcb-d0ab-4c03-8ea3-e14819933447.par
+#BlueLink1 Path: X-Y Coordinates`Parking Lot: Vehicle Path` Parking Lot` , Miscellaneous`PathXY_d563bfcb-d0ab-4c03-8ea3-e14819933447
+
+PARSFILE Roads\Center_XY\PathXY_347b1ad4-5ec9-40bd-b726-0fcd342ff119.par
+#BlueLink2 Path: X-Y Coordinates`Parking Lot: North-South Parking Spots` Parking Lot` , Miscellaneous`PathXY_347b1ad4-5ec9-40bd-b726-0fcd342ff119
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink9 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_8064ead5-1ca9-4c41-b9f8-c69692603301.par
+#BlueLink10 Plot: Setup`Y vs X - Trajectory (Custom View Point)` Tracking` , Plot`Plot_8064ead5-1ca9-4c41-b9f8-c69692603301
+
+
+LOG_ENTRY Used Dataset: Procedures; { Parking Lot } Parking Lot: One Lap
+#Library : Procedures
+#DataSet : Parking Lot: One Lap
+#Category: Parking Lot
+#FileID  : Proc_7b38c5b4-f86e-418e-8df3-65488b882e05
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

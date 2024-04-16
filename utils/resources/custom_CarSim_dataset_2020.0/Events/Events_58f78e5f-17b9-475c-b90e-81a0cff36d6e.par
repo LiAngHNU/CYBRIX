@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Events`New Detect`Embedded Python: Obstacle Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+*NAME1 DsLS1_1
+*VALUE1 35.0
+*SPEED 0
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: New Detect
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT 0
+#MiscYellow0
+det_time = t+3
+! Set up the inputs
+eq_in intab(0,1,1) = Vx
+eq_in intab(0,2,1) = DsLS1_1
+eq_in intab(0,3,1) = BrCS1_1
+eq_in intab(0,4,1) = Lat_Targ
+eq_in intab(0,5,1) = Station
+#ENDMYellow
+
+MAKE_EVENT DsLS1_1 < 35.0 ; Events\Events_f6e2fd97-1e24-4024-aba7-e9bf9cbde529.par
+#BlueLink0 Events`Update Path` Embedded Python: Obstacle Detection` , Events`Events_f6e2fd97-1e24-4024-aba7-e9bf9cbde529
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Update input table to Python call and watch detection until it is closer than 35 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Embedded Python: Obstacle Detection } New Detect
+#Library : Events
+#DataSet : New Detect
+#Category: Embedded Python: Obstacle Detection
+#FileID  : Events_58f78e5f-17b9-475c-b90e-81a0cff36d6e
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`L1 Outrigger at RP1`Outriggers
+ADD_REFERENCE_FRAME Frame_7ced5dd3-0c65-417e-b4cb-6d4dfb17e9fc
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_RP1
+SET_Y_NAME Y_RP1
+SET_Z_NAME Z_RP1
+SET_ROLL_NAME Roll
+SET_PITCH_NAME Pitch
+SET_YAW_NAME Yaw
+SET_OFFSET_VAR_X 0
+SET_OFFSET_VAR_Y 0
+SET_OFFSET_VAR_Z 0
+
+PARSFILE Animator\STL\Shape_e757e823-70b6-4128-ab71-09539c0d6b41.par
+#BlueLink0 Animator: Shape File Link`Outriggers: Frame` Common Vehicle Assets` , Animator Data`Shape_e757e823-70b6-4128-ab71-09539c0d6b41
+
+PARSFILE Animator\STL\Shape_067034b6-1db1-4d26-b4ac-056d1bf427d1.par
+#BlueLink1 Animator: Shape File Link`Outriggers: Wheel` Common Vehicle Assets` , Animator Data`Shape_067034b6-1db1-4d26-b4ac-056d1bf427d1
+
+WRT_X_RP1
+ANI_X_RP1
+WRT_Y_RP1
+ANI_Y_RP1
+WRT_Z_RP1
+ANI_Z_RP1
+WRT_Roll
+ANI_Roll
+WRT_Pitch
+ANI_Pitch
+WRT_Yaw
+ANI_Yaw
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Outriggers } L1 Outrigger at RP1
+#Library : Animator: Reference Frame
+#DataSet : L1 Outrigger at RP1
+#Category: Outriggers
+#FileID  : Frame_7ced5dd3-0c65-417e-b4cb-6d4dfb17e9fc
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

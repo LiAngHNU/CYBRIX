@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName CarSim Run Control`CL: Full Internal Model`Steering Models, Ext. Elements, Open/Closed-Loop
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1534f627-d7d7-43a4-a873-46933c91387f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae.par
+#BlueLink2 Vehicle: Assembly`A-Class, Hatchback, No ABS` A-Class` , Math Model`Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink15 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+PARSFILE Plot\Setup\Plot_b19280a2-8346-4fce-9410-a014d7ef86ac.par
+#BlueLink16 Plot: Setup`Kingpin Torque - Front` Steering` , Plot`Plot_b19280a2-8346-4fce-9410-a014d7ef86ac
+
+
+SPECIAL_PARSFILE Runs\Run_f41b5078-044e-4770-97a2-89ed1e12bd65.par
+#BlueLink23 CarSim Run Control`CL: Replace Entire System` Steering Models, Ext. Elements, Open/Closed-Loop` , Overlay run or ERD file`Run_f41b5078-044e-4770-97a2-89ed1e12bd65
+
+
+SPECIAL_PARSFILE Runs\Run_45bd5004-8780-46f0-8d7d-2cac3c0a3fe8.par
+#BlueLink24 CarSim Run Control`CL: Retain Tie Rod/Steer Arm Kinematics` Steering Models, Ext. Elements, Open/Closed-Loop` , Overlay run or ERD file`Run_45bd5004-8780-46f0-8d7d-2cac3c0a3fe8
+
+
+SPECIAL_PARSFILE Runs\Run_f2410eb9-aa5b-49e9-b684-76cb2aa34b18.par
+#BlueLink25 CarSim Run Control`CL: Replace Rack and Pinion Only` Steering Models, Ext. Elements, Open/Closed-Loop` , Overlay run or ERD file`Run_f2410eb9-aa5b-49e9-b684-76cb2aa34b18
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae.png
+WRITE_SENSOR_DETECT
+Title CL: Full Internal Model <Steering Models, Ext. Elements, Open/Closed-Loop>
+CATEGORY Steering Models, Ext. Elements, Open/Closed-Loop 
+DATASET_TITLE CL: Full Internal Model
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An A-Class Hatchback performs a double lane change maneuver at 120 km/h.
+#
+#This is a baseline for a series of examples illustrating the replacement of elements of the steering system with external models.
+#
+#The external models are implemented using either VS Commands or Simulink.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Models, Ext. Elements, Open/Closed-Loop } CL: Full Internal Model
+#Library : CarSim Run Control
+#DataSet : CL: Full Internal Model
+#Category: Steering Models, Ext. Elements, Open/Closed-Loop
+#FileID  : Run_1534f627-d7d7-43a4-a873-46933c91387f
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

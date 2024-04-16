@@ -1,0 +1,129 @@
+PARSFILE
+#FullDataName Procedures`Handling Course, Aggressive Driving`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART -200
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 130
+*TSTOP -1
+*TSTART 0
+*SSTART -200
+
+PARSFILE Control\Driver\StrDM_f11c27c8-7d18-47ac-9922-9799f383e281.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.25s Single Preview` Constant Position: No Offset` , Steering`StrDM_f11c27c8-7d18-47ac-9922-9799f383e281
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_b4a3aeb5-d1cf-429c-b49c-c9649acba772.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`Sports Car on Racetrack` Aggressive Driving` , Speed vs. station`SpdPath_b4a3aeb5-d1cf-429c-b49c-c9649acba772
+
+PARSFILE Roads\3D_Road\Road_2e2d68ea-3745-4439-97f8-47f23dcb3105.par
+#BlueLink0 Road: 3D Surface (All Properties)`Handling Course` Self-Contained Scenes` , Miscellaneous`Road_2e2d68ea-3745-4439-97f8-47f23dcb3105
+
+PARSFILE Roads\Center_XY\PathXY_c507bbb7-cf7a-44da-a069-618a787b17a0.par
+#BlueLink1 Path: X-Y Coordinates`Handling Course Race Line` Handling Course` , Miscellaneous`PathXY_c507bbb7-cf7a-44da-a069-618a787b17a0
+
+PARSFILE Events\Events_a81087d1-a61e-4368-b969-d92ee798f876.par
+#BlueLink7 Events`Stop Condition: Record Exactly 1 Lap` Recording a Lap` , Miscellaneous`Events_a81087d1-a61e-4368-b969-d92ee798f876
+
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+PARSFILE Plot\Setup\Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1.par
+#BlueLink9 Plot: Setup`Longitudinal vs. Lateral Accel.` Vehicle Motion` , Plot`Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1
+
+PARSFILE Plot\Setup\Plot_28157809-95ed-4de0-9113-82d4a0dd0b42.par
+#BlueLink10 Plot: Setup`Steering Wheel Angle vs Station` Steering` , Plot`Plot_28157809-95ed-4de0-9113-82d4a0dd0b42
+
+PARSFILE Plot\Setup\Plot_8158864c-cc8e-44ba-8dd8-e3af665dd87c.par
+#BlueLink11 Plot: Setup`Throttle: Control Input vs Station` Controls: Driver` , Plot`Plot_8158864c-cc8e-44ba-8dd8-e3af665dd87c
+
+PARSFILE Plot\Setup\Plot_2069b93a-8ce4-4265-a146-4941167b0a8c.par
+#BlueLink12 Plot: Setup`Brake Control: M/C Pressure vs Station` Braking` , Plot`Plot_2069b93a-8ce4-4265-a146-4941167b0a8c
+
+PARSFILE Plot\Setup\Plot_0773e087-151d-42db-a308-f02b7b6ee48d.par
+#BlueLink13 Plot: Setup`Lateral Forces` Tire Forces and Moments` , Plot`Plot_0773e087-151d-42db-a308-f02b7b6ee48d
+
+PARSFILE Plot\Setup\Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b.par
+#BlueLink14 Plot: Setup`Longitudinal Forces` Tire Forces and Moments` , Plot`Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b
+
+PARSFILE Plot\Setup\Plot_ef39a2c7-73b1-4a60-b806-3c2f6bbb3539.par
+#BlueLink15 Plot: Setup`Roll Angle of Sprung Masses vs. Station` Vehicle Motion` , Plot`Plot_ef39a2c7-73b1-4a60-b806-3c2f6bbb3539
+
+PARSFILE Plot\Setup\Plot_033c55dc-d64e-4e15-89b2-56afa03c4255.par
+#BlueLink16 Plot: Setup`Vehicle Sideslip Angle vs. Station` Vehicle Motion` , Plot`Plot_033c55dc-d64e-4e15-89b2-56afa03c4255
+
+PARSFILE Plot\Setup\Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c.par
+#BlueLink17 Plot: Setup`Aerodynamic Forces` Aerodynamics and Wind` , Plot`Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c
+
+PARSFILE Plot\Setup\Plot_7206d25c-6cfe-42fa-9d2d-0c17692987ed.par
+#BlueLink18 Plot: Setup`Path Curvature vs. Station` Tracking` , Plot`Plot_7206d25c-6cfe-42fa-9d2d-0c17692987ed
+
+PARSFILE Plot\Setup\Plot_b3a6669c-ce2f-474d-a6e2-b8f6e738f598.par
+#BlueLink19 Plot: Setup`Ground Slope on Path vs. Station` Ground` , Plot`Plot_b3a6669c-ce2f-474d-a6e2-b8f6e738f598
+
+PARSFILE Plot\Setup\Plot_a883e5dc-fa62-4460-8b54-d60ead53be33.par
+#BlueLink20 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a883e5dc-fa62-4460-8b54-d60ead53be33
+
+PARSFILE Plot\Setup\Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29.par
+#BlueLink21 Plot: Setup`Lateral Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink22 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates the following CarSim features:
+#
+#(1) Target speed from path preview.
+#(2) Defining a vehicle target path separate from the road geometry.
+#
+#(3) Using Events to define stop conditions as well as control the number of laps the vehicle makes.
+#
+#Target speed from path preview:
+#The "Target speed from path preview" calculates a speed target over a preview distance to maintain the lateral and longitudinal acceleration with specified limits. Both the preview distance and acceleration limits can be defined by the user on the screen.
+#
+#When the speed target is calculated from a preview of the target path, the preview times for the driver-path follower are typically much shorter than for cases where the driver-path follower doesn't preview the path to obtain a target speed. For example, these preview times can be 0.1 - 0.15 seconds using path preview vs. 0.5 - 1.5 seconds for situations where the path preview is not considered.
+#
+#Since the target speed is very tightly tied to the exact path geometry, the path follower must be tied to it as well. As a result, "look ahead" distances are short.
+#
+#
+#Handling course target path:
+#The handling course target path is defined using a set of X-Y coordinates such as those that might be obtained from GPS or other instruments.
+#
+#Click on the 3D road dataset "Handling Course Target Path" for more information.
+#
+#
+#Event-driven conditions:
+#Two Event series are defined to specify two different stop conditions.
+#
+#(1) A check is made every time step to ensure that the vehicle is tracking OK. If the lateral tracking error reaches some threshold set with the parameter Lat_Tolerance, the run stops.
+#
+#(2) A check is made every time step to ensure that the vehicle's steering hasn't exceeded a limit. If the steering wheel angle reaches some threshold set with the parameter Steer_Tolerance, the run stops.
+#
+#
+#A third Event series controls how many laps the vehicle will make on the handling course. In this example, the vehicle is limited to a single lap.
+#
+#For more information, click on the Events dataset "Stop Condition: Record Exactly 1 Lap."
+#
+#Updates in 2018.1: Improved animator assets for 3D Road and environment
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Handling Course, Aggressive Driving
+#Library : Procedures
+#DataSet : Handling Course, Aggressive Driving
+#Category: Driver Controls
+#FileID  : Proc_ef94e99b-8b88-46df-b7ac-9595f02d04c6
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

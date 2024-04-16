@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Models: Simulink`Type B ABS Controller`Braking Controls
+#RunMdlFile Extensions\Simulink\absmdl_TypeB_CS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\absmdl_TypeB_CS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_f680d6ec-c2b8-4109-a103-a2ddbb408919.par
+#BlueLink0 I/O Channels: Import`ABS (Type B): Control Pressures` Brake System: Control and External Models` , Import`Import_f680d6ec-c2b8-4109-a103-a2ddbb408919
+
+PARSFILE IO_Channels\O_Channels\Export_c055104a-4d0a-4e41-b444-0a3ecf2d3ee2.par
+#BlueLink1 I/O Channels: Export`ABS (B): Veh. Speed, Delivery Pressure` Brake System: Control and External Models` , Import/Export`Export_c055104a-4d0a-4e41-b444-0a3ecf2d3ee2
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This “Models: Simulink” dataset links to a Simulink model for an ABS controller and is intended to be used with the CarSim “Type B” ABS Control, a legacy option that allows brake pressure to be imported after the brake system proportioning.
+#
+#The “Type B” and corresponding “Type A” Brake System control are part of the legacy Brake System screen that handled thermal properties.
+#
+#All Brake System functions, including the legacy “Type A” and “Type B” controls and thermal properties, are now handled on the screen, “Brakes: Four-Wheel System”.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Braking Controls } Type B ABS Controller
+#Library : Models: Simulink
+#DataSet : Type B ABS Controller
+#Category: Braking Controls
+#FileID  : Simlink_137a8262-ec4b-463c-b5f7-2caa838f6ec5
+#Product : CarSim 2020.0
+#VehCode 
+
+END

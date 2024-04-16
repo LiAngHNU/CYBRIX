@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Events`Rollover Steer Setup w/ Norm On ESC`Rollover Test
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl1 >=
+#RingCtrl10 2
+#RingCtrl11 1
+#RingCtrl12 1
+*NAME1 t
+*NAME2 t
+*VALUE1 1
+*VALUE2 2.5
+*SPEED 80
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: Rollover Steer Setup w/ Norm On ESC
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT 80
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink10 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Miscellaneous`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par
+#BlueLink11 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Miscellaneous`StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink14 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+MAKE_EVENT t > 1 ; Events\Events_8321adaa-90ea-4793-8780-5fbf7078e3f6.par
+#BlueLink0 Events`B. Start Rollover Steering Input` Rollover Test` , Events`Events_8321adaa-90ea-4793-8780-5fbf7078e3f6
+
+MAKE_EVENT t >= 2.5 ; Events\Events_7be2b4ca-60d9-427c-8504-65c65712dacc.par
+#BlueLink1 Events`ESC Norm On` Rollover Test` , Events`Events_7be2b4ca-60d9-427c-8504-65c65712dacc
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Start at constant speed, wait 1 second, then load dataset for fixed fishhook steering test.
+#
+#Initially, the ESC system is turned off at 2.5 seconds.  You can adjust the time and run the simulation again to see how turning off the ESC earlier or later affects the vehicle's performance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Rollover Test } Rollover Steer Setup w/ Norm On ESC
+#Library : Events
+#DataSet : Rollover Steer Setup w/ Norm On ESC
+#Category: Rollover Test
+#FileID  : Events_9fb87e54-1884-4fe9-9db8-3574a14a8d94
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

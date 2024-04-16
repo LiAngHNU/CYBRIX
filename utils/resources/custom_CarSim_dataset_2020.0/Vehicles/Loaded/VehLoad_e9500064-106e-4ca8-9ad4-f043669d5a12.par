@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`SUV, Full Size w/ 7 Passengers`Utility Vehicles
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_ae739799-e1e6-4392-8847-b92b6c833931.par
+#BlueLink0 Vehicle: Assembly`SUV, Full Size` Utility Vehicles` , Lead Unit`Vehicle_ae739799-e1e6-4392-8847-b92b6c833931
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Generic\Links\GenLink_176500c6-923a-4037-87d0-d1826b9bb616.par
+#BlueLink1 Generic Group of Links`7 Passengers` Payloads` , Miscellaneous`GenLink_176500c6-923a-4037-87d0-d1826b9bb616
+
+PARSFILE Output\Sensors\MoSen_934770e5-cb1c-4e98-a975-b347bcd2b2ae.par
+#BlueLink2 Positions, Velocities, and Accelerations`Accelerometers at SM and USM CGs` SM and USM CGs` , Miscellaneous`MoSen_934770e5-cb1c-4e98-a975-b347bcd2b2ae
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_ae739799-e1e6-4392-8847-b92b6c833931.png
+
+#EMBEDDED_NOTES
+#This example demonstrates how to add 7 payloads attached to the vehicle sprung mass.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { Utility Vehicles } SUV, Full Size w/ 7 Passengers
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : SUV, Full Size w/ 7 Passengers
+#Category: Utility Vehicles
+#FileID  : VehLoad_e9500064-106e-4ca8-9ad4-f043669d5a12
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

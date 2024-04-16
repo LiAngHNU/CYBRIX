@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName CarSim Run Control`S-Turn, Too Slow`Restore, Restart, Optimize
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_28a74dca-92fe-47fc-b187-eb24442de180
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_552d83a4-93e0-4e7f-b6ff-54cb5038f515.par
+#BlueLink28 Procedures`Low Speed - Success` Restoring to a Previous State` , Procedure`Proc_552d83a4-93e0-4e7f-b6ff-54cb5038f515
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title S-Turn, Too Slow <Restore, Restart, Optimize>
+CATEGORY Restore, Restart, Optimize 
+DATASET_TITLE S-Turn, Too Slow
+#MiscYellow0
+opt_echo_all_pars 1
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Restoring to a Previous State
+#Low Speed - Success
+#Target Speed: 90 kph
+#
+#The car can negotiate both parts of the S-Turn at 90 kph.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Restore, Restart, Optimize } S-Turn, Too Slow
+#Library : CarSim Run Control
+#DataSet : S-Turn, Too Slow
+#Category: Restore, Restart, Optimize
+#FileID  : Run_28a74dca-92fe-47fc-b187-eb24442de180
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`Update Path with Embedded Python`Embedded Python
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e34d1655-7217-4e5c-b6b3-b9aec0a0afc5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_f9b83dc4-2a9d-4717-9279-b5b71ae7fd84.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class for Update Path Example` C-Class` , Math Model`VehLoad_f9b83dc4-2a9d-4717-9279-b5b71ae7fd84
+
+PARSFILE Procedures\Proc_5e58c6a2-36be-4427-994d-bd887f622032.par
+#BlueLink28 Procedures`Update Path to Avoid Collision` Driver Controls` , Procedure`Proc_5e58c6a2-36be-4427-994d-bd887f622032
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Generic\Links\GenLink_4e3a6f49-10b6-4ba3-9ee6-706c902cb854.par
+#BlueLink10 Generic Group of Links`Animated Deer for Update Path` ADAS: Moving Objects, incl. Pedestrians` , Miscellaneous`GenLink_4e3a6f49-10b6-4ba3-9ee6-706c902cb854
+
+PARSFILE Events\Events_17150517-be44-47f2-b86d-7496fbf0d73e.par
+#BlueLink11 Events`Avoid Obstruction` Embedded Python: Obstacle Detection` , Miscellaneous`Events_17150517-be44-47f2-b86d-7496fbf0d73e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Update Path with Embedded Python <Embedded Python>
+CATEGORY Embedded Python 
+DATASET_TITLE Update Path with Embedded Python
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is a basic demonstration that uses Embedded Python and VS Commands to take inputs from the running vehicle and produce an updated path to avoid the detected obstruction.
+#
+#The example also includes an ADAS Sensor, AEB / FCW, and Events.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Embedded Python } Update Path with Embedded Python
+#Library : CarSim Run Control
+#DataSet : Update Path with Embedded Python
+#Category: Embedded Python
+#FileID  : Run_e34d1655-7217-4e5c-b6b3-b9aec0a0afc5
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

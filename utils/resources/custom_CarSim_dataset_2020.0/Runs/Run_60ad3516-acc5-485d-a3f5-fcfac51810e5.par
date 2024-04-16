@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName CarSim Run Control`Camera Sensor: Pedestrians  (Simulink)`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_60ad3516-acc5-485d-a3f5-fcfac51810e5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_b18f5f5f-1e7f-4397-9f34-a154dad6ac11.par
+#BlueLink12 Models: Simulink`Pedestrian Detection` Live Video` , Models`Simlink_b18f5f5f-1e7f-4397-9f34-a154dad6ac11
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0 1
+OPT_BUFFER_WRITE 1
+AUTOSIZE OFF
+BLOCKING_RT_READ ON
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Assembly\Vehicle_758b5604-ce89-459c-a92a-8d458b95bd97.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: Camera` VS Visualizer Camera Sensor` , Math Model`Vehicle_758b5604-ce89-459c-a92a-8d458b95bd97
+
+PARSFILE Procedures\Proc_e7e2302a-2f07-431c-8191-eb280b55e2fb.par
+#BlueLink28 Procedures`Pedestrian Scenario` Mcity` , Procedure`Proc_e7e2302a-2f07-431c-8191-eb280b55e2fb
+
+PARSFILE Sensors_Traffic\Targets\Target_c8830ee9-fe6f-40db-a445-da2f309bfc13.par
+#BlueLink9 Single Moving Object (Custom)`Woman Crossing from S=42.8, L=-7.5` Pedestrians and Bicyclists` , Miscellaneous`Target_c8830ee9-fe6f-40db-a445-da2f309bfc13
+
+PARSFILE Generic\VS_commands\GenVS_05ef2bed-c11c-4c9e-9d14-0e746287cf25.par
+#BlueLink10 Generic VS Commands`Camera Sensor on Upper Front Window` Camera Sensors` , Miscellaneous`GenVS_05ef2bed-c11c-4c9e-9d14-0e746287cf25
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_a2543dd5-6a0a-4346-86a7-c7a0293a72ac.png
+WRITE_SENSOR_DETECT
+Title Camera Sensor: Pedestrians  (Simulink) <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Camera Sensor: Pedestrians  (Simulink)
+#MiscYellow0
+PATH_ID_DM = 1002
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The roads of this example is updated from loaded table grid to 3D tiles from VS Scene Builder.
+#
+#(Matlab 2017a or newer)
+#
+#Pedestrian Detection with the VS Visualizer Camera Sensor and Simulink
+#
+#A C-Class Hatchback with a Camera Sensor is used to detect a crossing pedestrian. The Simulink model detects a pedestrian using a pretrained detector, and displays the information of the distance to the pedestrian and the time to collision.
+#
+#The example can only run with Matlab version 2017a and above with the Computer Vision System Toolbox.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Camera Sensor: Pedestrians  (Simulink)
+#Library : CarSim Run Control
+#DataSet : Camera Sensor: Pedestrians  (Simulink)
+#Category: ADAS and Active Safety
+#FileID  : Run_60ad3516-acc5-485d-a3f5-fcfac51810e5
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

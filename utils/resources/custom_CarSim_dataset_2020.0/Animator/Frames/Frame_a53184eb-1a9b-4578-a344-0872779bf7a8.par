@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Tire Sidewall, R1`Animator Reference Frame, Unit 1
+ADD_REFERENCE_FRAME Frame_a53184eb-1a9b-4578-a344-0872779bf7a8
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_Ref_R1
+SET_Y_NAME Y_Ref_R1
+SET_Z_NAME 0.1
+
+PARSFILE Animator\STL\Shape_1977cca3-c19d-4949-84f1-c47c48ee1b6c.par
+#BlueLink0 Animator: Shape File Link`Sphere: 0.1m Radius (Green)` Geometric Shapes` , Animator Data`Shape_1977cca3-c19d-4949-84f1-c47c48ee1b6c
+
+WRT_X_Ref_R1
+ANI_X_Ref_R1
+WRT_Y_Ref_R1
+ANI_Y_Ref_R1
+WRT_0.1
+ANI_0.1
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Animator Reference Frame, Unit 1 } Tire Sidewall, R1
+#Library : Animator: Reference Frame
+#DataSet : Tire Sidewall, R1
+#Category: Animator Reference Frame, Unit 1
+#FileID  : Frame_a53184eb-1a9b-4578-a344-0872779bf7a8
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

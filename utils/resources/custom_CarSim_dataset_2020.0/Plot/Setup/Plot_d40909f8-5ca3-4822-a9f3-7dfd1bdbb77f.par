@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed Limit, Target, and Actual`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+! Output variable to hold the speed limit data.
+define_output max_kph = speed_station(0,0,1); km/h; ...
+  Speed limit
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS Vx, station, Vehicle Speed
+PLOTCHANNELS VxTarget, station, Speed Target (Calculated)
+PLOTCHANNELS max_kph, station, Speed Limit
+
+#ENDMYellow
+
+YAXISLABEL Speed (km/h)
+XAXISLABEL Station (m)
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed Limit, Target, and Actual
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#max_kph is a variable created here with a VS command.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Speed Limit, Target, and Actual
+#Library : Plot: Setup
+#DataSet : Speed Limit, Target, and Actual
+#Category: Controls: Driver
+#FileID  : Plot_d40909f8-5ca3-4822-a9f3-7dfd1bdbb77f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

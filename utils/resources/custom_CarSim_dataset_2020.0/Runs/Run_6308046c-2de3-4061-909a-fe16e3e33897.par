@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName CarSim Run Control`Pickup, Full Size, Dual Tires`Vehicle Configurations
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6308046c-2de3-4061-909a-fe16e3e33897
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 8
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_16dc3de5-6995-4c20-8b91-420b9fc86ac1.par
+#BlueLink2 Vehicle: Assembly`Pickup, Full Size Reg Cab DRW` Pickup Trucks` , Math Model`Vehicle_16dc3de5-6995-4c20-8b91-420b9fc86ac1
+
+PARSFILE Procedures\Proc_38b53763-4ae2-4178-9faa-9b74ba426016.par
+#BlueLink28 Procedures`DLC @ 120 km/h (no tire force arrows)` Handling Testing` , Procedure`Proc_38b53763-4ae2-4178-9faa-9b74ba426016
+
+PARSFILE Generic\Group\GenGrp_29d43960-537c-43a9-a45c-11cb62509517.par
+#BlueLink9 Generic Data Group`2 Axle - Fx, Fy, Fz (Duals)` Tire Force Arrows` , Miscellaneous`GenGrp_29d43960-537c-43a9-a45c-11cb62509517
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 100
+OPT_SC_ENGINE_BRAKING 0
+*SPEED 100
+PARSFILE Plot\Setup\Plot_502b7c43-dc6b-4e6c-9c08-25f4135ec232.par
+#BlueLink15 Plot: Setup`Slip Angles: Instant (dual tires - inner)` Tire Kinematics` , Plot`Plot_502b7c43-dc6b-4e6c-9c08-25f4135ec232
+
+PARSFILE Plot\Setup\Plot_0bc7ec62-3363-4efa-8cf9-bf9bf6fe8010.par
+#BlueLink16 Plot: Setup`Slip Angles: Instant (dual tires - outer)` Tire Kinematics` , Plot`Plot_0bc7ec62-3363-4efa-8cf9-bf9bf6fe8010
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_94681f71-cfc4-4053-bfd1-1d2ed6e4fd10.png
+WRITE_SENSOR_DETECT
+Title Pickup, Full Size, Dual Tires <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE Pickup, Full Size, Dual Tires
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A full-size pickup truck with dual rear tires performing a double lane change maneuver at 100 km/h.
+#
+#CarSim supports dual tires on all axles of a vehicle, including trailers.
+#
+#Some output variables will be indexed for inside vs. outside tires (e.g., slip angles). Check the Output Variable list (lower right corner of the Run Control screen) and the Plot: Setup screen for more information.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Vehicle Configurations } Pickup, Full Size, Dual Tires
+#Library : CarSim Run Control
+#DataSet : Pickup, Full Size, Dual Tires
+#Category: Vehicle Configurations
+#FileID  : Run_6308046c-2de3-4061-909a-fe16e3e33897
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

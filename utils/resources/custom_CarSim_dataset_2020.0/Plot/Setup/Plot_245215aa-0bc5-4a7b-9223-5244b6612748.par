@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Path with Road Edges`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_parameter road_width = 10; m;Width used to define X-Y coordinates
+define_output x_left = road_x_sl_i(station, road_width / 2, 1);m; X coordinate, left edge
+define_output y_left = road_y_sl_i(station, road_width / 2 , 1); m; Y coordinate, left edge
+define_output x_right = road_x_sl_i(station, -road_width / 2, 2); m; Y coordinate, right edge
+define_output y_right = road_y_sl_i(station, -road_width / 2, 2);m; X coordinate, right edge
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS y_left, x_left, Left Edge
+PLOTCHANNELS y_right, x_right, Right Edge
+PLOTCHANNELS Yo, Xo, Vehicle Track
+PLOTCHANNELS Y_Target, X_Target, Target Path
+
+#ENDMYellow
+
+YAXISLABEL Global Y coordinate - m
+XAXISLABEL Global X coordinate - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Path with Road Edges
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#VS commands are used to create a new parameter road_width and X-Y variables for the left and right edges of the road based on this width. Road_width is given a value of 10 m here, but can be overridden from any dataset that is sent to the VS solver after this one. (E.g., the Misc. field on the Run screen.)
+#
+#Names are assigned to each set of information to be displayed in the plot.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Vehicle Path with Road Edges
+#Library : Plot: Setup
+#DataSet : Vehicle Path with Road Edges
+#Category: Tracking
+#FileID  : Plot_245215aa-0bc5-4a7b-9223-5244b6612748
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Plot: Setup`Distances for Closest 15 Objects, Sensor 1`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DisS1_1, Time
+PLOTCHANNELS DisS1_2, Time
+PLOTCHANNELS DisS1_3, Time
+PLOTCHANNELS DisS1_4, Time
+PLOTCHANNELS DisS1_5, Time
+PLOTCHANNELS DisS1_6, Time
+PLOTCHANNELS DisS1_7, Time
+PLOTCHANNELS DisS1_8, Time
+PLOTCHANNELS DisS1_9, Time
+PLOTCHANNELS DisS1_10, Time
+PLOTCHANNELS DisS1_11, Time
+PLOTCHANNELS DisS1_12, Time
+PLOTCHANNELS DisS1_13, Time
+PLOTCHANNELS DisS1_14, Time
+PLOTCHANNELS DisS1_15, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distances for Closest 15 Objects, Sensor 1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Distances for Closest 15 Objects, Sensor 1
+#Library : Plot: Setup
+#DataSet : Distances for Closest 15 Objects, Sensor 1
+#Category: ADAS Sensor Detections
+#FileID  : Plot_67c4d071-8e09-42c0-b0cc-343d412318e7
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

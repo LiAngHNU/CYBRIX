@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Normal Driving on Road Course`Handling and Performance Driving
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Normal Driving on Road Course
+#CheckBox2 0    
+#CheckBox3 0    
+*SCALAR 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 STEP
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 1    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE STEP
+0, 80
+1150, 120
+1360, 80
+2240, 80
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Handling and Performance Driving } Normal Driving on Road Course
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Normal Driving on Road Course
+#Category: Handling and Performance Driving
+#FileID  : SpdTime_6ee57edf-b277-48cb-9b79-bb9e9bcad9e1
+#Product : CarSim 2020.0
+#VehCode Target Speed
+
+END

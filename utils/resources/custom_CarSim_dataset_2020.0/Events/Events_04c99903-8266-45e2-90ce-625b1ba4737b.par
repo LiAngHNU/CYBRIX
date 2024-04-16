@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Events`C. Apply Parking brake`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 5
+#MiscYellow0
+TSTART_T_EVENT = T 
+define_parameter tstart_park_brake_app
+tstart_park_brake_app t
+eq_in pb_on = pb_apply(0, t - tstart_park_brake_app, 4)
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_98fddc67-ed80-45c1-9768-e2e4be9a16f7.par
+#BlueLink10 Generic Table`Control: Parking Brake Apply` Parking Brake Control` , Miscellaneous`GenTab_98fddc67-ed80-45c1-9768-e2e4be9a16f7
+
+#MiscYellow1
+XROW_SCALE_PB_APPLY(4) = 3; ! 3 seconds to apply parking brake
+
+! Increase or decrease XROW_SCALE_PB_APPLY(4) to adjust the parking
+! brake application time.
+#ENDMYellow
+
+MAKE_EVENT t_event > 5 ; Events\Events_74b51e7d-8e07-45b7-b0b5-7530b26e0a01.par
+#BlueLink0 Events`D. Release Brakes, Check for Roll-back` Hill Hold with Parking Brake: Auto. Trans.` , Events`Events_74b51e7d-8e07-45b7-b0b5-7530b26e0a01
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } C. Apply Parking brake
+#Library : Events
+#DataSet : C. Apply Parking brake
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_04c99903-8266-45e2-90ce-625b1ba4737b
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

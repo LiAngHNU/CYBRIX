@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`A. Start at 100 km/h (Pedal Force Control)`Braking Distance
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 100
+MAKE_EVENT vx < 100 ; Events\Events_8587e344-f516-431f-b68b-febdefdb48f7.par
+#BlueLink0 Events`B. Reset Postion and Brake (Force)` Braking Distance` , Events`Events_8587e344-f516-431f-b68b-febdefdb48f7
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This starts a sequence of events for a braking test to determine stopping distance. Brake control is applied later using pedal force.
+#
+#When the vehicle speed drops to 100 km/h, another dataset that will apply the brakes is triggered.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Braking Distance } A. Start at 100 km/h (Pedal Force Control)
+#Library : Events
+#DataSet : A. Start at 100 km/h (Pedal Force Control)
+#Category: Braking Distance
+#FileID  : Events_522096b7-3d2b-4f2f-b2ec-18fa637208c2
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

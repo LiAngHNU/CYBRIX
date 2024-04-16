@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Kingpin Moments`Three-wheeled Vehicle
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output mz_kp_1 = mz_kp_l1 + mz_kp_r1
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS Mz_KP_1, Time, Steering about front kingpin
+PLOTCHANNELS Mz_KP_L2, Time
+PLOTCHANNELS Mz_KP_R2, Time
+
+#ENDMYellow
+
+YAXISLABEL Kingpin moment - N-m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Kingpin Moments
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This plot format includes plots created with VS Commands for the single front wheel of a three-wheeled vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Three-wheeled Vehicle } Kingpin Moments
+#Library : Plot: Setup
+#DataSet : Kingpin Moments
+#Category: Three-wheeled Vehicle
+#FileID  : Plot_5c44e99d-0108-4d49-b442-18dc840ee610
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

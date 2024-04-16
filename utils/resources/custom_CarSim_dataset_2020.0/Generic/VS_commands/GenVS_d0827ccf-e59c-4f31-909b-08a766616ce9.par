@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Generic VS Commands`4x4 Indicator`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+define_output vis_2wd 1; -; 2wd visibility switch
+define_output vis_4wd 0; -; 4wd visibility switch
+
+!Adds 2WD Image
+ADD_ENTITY hud_image 2WD Image
+  location 255 17 100 160
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity vis_2wd
+  image_file Animator\2D_HUD_Icons\Transfer_Case\2WD.png
+END_ENTITY hud_image 2WD Image
+!
+!Adds 4WD Image
+ADD_ENTITY hud_image 4WD Image
+  location 255 17 100 160
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity vis_4wd
+  image_file Animator\2D_HUD_Icons\Transfer_Case\4WD_LO.png
+END_ENTITY hud_image 4WD Image
+#ENDMYellow
+
+#BlueLink4 Plot: Setup`Sensor Vx -- Rear Blind Spot` Object Sensors` , Plot`
+
+#BlueLink5 Plot: Setup`Sensor Dist -- Rear Blind Spot` Object Sensors` , Plot`
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } 4x4 Indicator
+#Library : Generic VS Commands
+#DataSet : 4x4 Indicator
+#Category: HUD Gauges
+#FileID  : GenVS_d0827ccf-e59c-4f31-909b-08a766616ce9
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`D. Release Brake, Restart Engine`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Pbk_Con
+*VALUE1 0.0001
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_BRAKES = T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_fd9ef75a-c7fa-48ec-a814-9563f688340e.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Smooth Brake Release: 1 to 0 MPa` Sigmoid` , Miscellaneous`PbkCon_fd9ef75a-c7fa-48ec-a814-9563f688340e
+
+#MiscYellow1
+TSCALE_PBK_CON = 1.5; 
+! Increase or decrease the gain to adjust the brake release time
+
+! Scale factor applied to independent variable (i.e., Time) of Master Cylinder 
+! Pressure control table. Since the table is normalized (0 to 1) on both axes,
+! this scale factor results in the Master Cylinder Pressure application taking
+! 1 seconds to reach 0 MPa.
+#ENDMYellow
+
+MAKE_EVENT Pbk_Con < 0.0001 ; Events\Events_1fcf5f64-dce1-4417-a86b-bb8b5dfabd62.par
+#BlueLink0 Events`E. Set Opt_Engine_Running = 1` Opt_Engine_Running: Auto. Transmission` , Events`Events_1fcf5f64-dce1-4417-a86b-bb8b5dfabd62
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } D. Release Brake, Restart Engine
+#Library : Events
+#DataSet : D. Release Brake, Restart Engine
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_e4f4c488-bd9c-4426-b937-48917f076c39
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

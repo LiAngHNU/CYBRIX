@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName CarSim Run Control`Scene Builder: Intersection, Truck, ACC`Scene Import
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5312a5ff-a4ba-4c2b-b023-db953b217f97
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 6
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_54ed20f6-ba92-4707-9f57-7c0b6550347b.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ ACC` C-Class` , Math Model`VehLoad_54ed20f6-ba92-4707-9f57-7c0b6550347b
+
+PARSFILE Procedures\Proc_cc76140b-bc83-46f9-82fe-79c694405c31.par
+#BlueLink28 Procedures`Rural Intersection Scene` VS Scene Builder` , Procedure`Proc_cc76140b-bc83-46f9-82fe-79c694405c31
+
+PARSFILE Generic\Group\GenGrp_40497b31-5381-4727-9df1-fe680aba4454.par
+#BlueLink9 Generic Data Group`Tractor semitrailer making right turn` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_40497b31-5381-4727-9df1-fe680aba4454
+
+PARSFILE Generic\VS_commands\GenVS_e77fa81a-63aa-4825-8ce3-36f50a7f8de0.par
+#BlueLink20 Generic VS Commands`Driving with ACC` Plot Groups` , Plot`GenVS_e77fa81a-63aa-4825-8ce3-36f50a7f8de0
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Scene Builder: Intersection, Truck, ACC <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE Scene Builder: Intersection, Truck, ACC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The data representing the X-Y path of the road as well as the animated scenario were created using the VS Scene Builder tool.
+#
+#The VS Scene Builder tool is accessed from the Tools drop-down menu.
+#
+#This example also shows a target tractor semitrailer with offtracking in the low-speed turn.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Scene Import } Scene Builder: Intersection, Truck, ACC
+#Library : CarSim Run Control
+#DataSet : Scene Builder: Intersection, Truck, ACC
+#Category: Scene Import
+#FileID  : Run_5312a5ff-a4ba-4c2b-b023-db953b217f97
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

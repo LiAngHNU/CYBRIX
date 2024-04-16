@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Events`C. Speed Initialization is Done`Go to Constant Speed
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+INIT_DONE = 1
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Set the parameter INIT_DONE to a non-zero value to signal that the vehicle is at ready for the next stage of testing.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Go to Constant Speed } C. Speed Initialization is Done
+#Library : Events
+#DataSet : C. Speed Initialization is Done
+#Category: Go to Constant Speed
+#FileID  : Events_5377f4e6-2fc4-40eb-bdc6-095e7c1efd79
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

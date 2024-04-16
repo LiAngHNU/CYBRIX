@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Events`Engine ON`Ignition Switch and Transmission Park
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ==
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 ign_onoff
+*VALUE1 0
+PARSFILE Powertrain\Engine\Engine_5fd8cccf-3f87-4967-bf2c-05672393be86.par
+#BlueLink10 Powertrain: Engine`150 kW Engine` 150 kW Engines` , Miscellaneous`Engine_5fd8cccf-3f87-4967-bf2c-05672393be86
+
+#MiscYellow1
+sv_av_eng = av_eng_idle
+#ENDMYellow
+
+MAKE_EVENT ign_onoff == 0 ; Events\Events_48dea5d2-52c8-475a-b1cc-5340a12e210b.par
+#BlueLink0 Events`Engine OFF` Ignition Switch and Transmission Park` , Events`Events_48dea5d2-52c8-475a-b1cc-5340a12e210b
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Ignition Switch and Transmission Park } Engine ON
+#Library : Events
+#DataSet : Engine ON
+#Category: Ignition Switch and Transmission Park
+#FileID  : Events_22f4592e-90f4-4e5e-b441-a952dc7b5c3b
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

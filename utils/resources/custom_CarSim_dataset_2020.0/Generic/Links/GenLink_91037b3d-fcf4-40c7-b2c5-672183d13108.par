@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Generic Group of Links`Roundabout Network (7 Roads)`Roads and Paths
+#VehCode Generic Links
+PARSFILE Roads\3D_Road\Road_f8a39ebc-3862-4da7-9262-15096e089b5b.par
+#BlueLink0 Road: 3D Surface (All Properties)`Inner Circle, Path ID = 1001` Roundabout Network, Flat` , Miscellaneous`Road_f8a39ebc-3862-4da7-9262-15096e089b5b
+
+PARSFILE Roads\3D_Road\Road_23c243fd-2b3c-4fca-94ae-c23f6a1c4b8e.par
+#BlueLink1 Road: 3D Surface (All Properties)`Entry S/ Exit E, Path ID =1002` Roundabout Network, Flat` , Miscellaneous`Road_23c243fd-2b3c-4fca-94ae-c23f6a1c4b8e
+
+PARSFILE Roads\3D_Road\Road_f2e54170-0e3b-4282-9a04-7a3d1d32cdf2.par
+#BlueLink2 Road: 3D Surface (All Properties)`Entry E/ Exit N, Path ID = 1003` Roundabout Network, Flat` , Miscellaneous`Road_f2e54170-0e3b-4282-9a04-7a3d1d32cdf2
+
+PARSFILE Roads\3D_Road\Road_8d1e642a-2ba8-4a49-b406-4dc8dcd8928d.par
+#BlueLink3 Road: 3D Surface (All Properties)`Entry N / Exit W, Path ID =1004` Roundabout Network, Flat` , Miscellaneous`Road_8d1e642a-2ba8-4a49-b406-4dc8dcd8928d
+
+PARSFILE Roads\3D_Road\Road_d2859322-9986-4655-8fcd-8d365d41b2b6.par
+#BlueLink4 Road: 3D Surface (All Properties)`Entry W / Exit S, Path ID = 1005` Roundabout Network, Flat` , Miscellaneous`Road_d2859322-9986-4655-8fcd-8d365d41b2b6
+
+PARSFILE Roads\3D_Road\Road_99cdf564-236d-462b-9967-2f34d941a340.par
+#BlueLink5 Road: 3D Surface (All Properties)`Outer Circle, Path ID = 1006` Roundabout Network, Flat` , Miscellaneous`Road_99cdf564-236d-462b-9967-2f34d941a340
+
+PARSFILE Roads\3D_Road\Road_c161cbdc-8b8f-4f1f-9255-833f13fadcee.par
+#BlueLink10 Road: 3D Surface (All Properties)`Big Grass, Z = -0.04, ID = 999` Roundabout Network, Flat` , Miscellaneous`Road_c161cbdc-8b8f-4f1f-9255-833f13fadcee
+
+#BlueLink13 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink14 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink15 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+
+#EMBEDDED_NOTES
+#A road network with seven road datasets is used to generate animator graphics for visualization purporse. All seven of the linked dataset use a road ID of 999, such that only one road will be used in the math model for the simulation. The properties are used from the last link (Big Grass), which is based on a straight reference path going east, such that S=global X and L = global Y.
+#
+# The other six links use curved reference paths with ID numbers 1001 to 1006. Besides providing machine-generated graphics to show road pavements, they are used by the closed-loop steering controller.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Roads and Paths } Roundabout Network (7 Roads)
+#Library : Generic Group of Links
+#DataSet : Roundabout Network (7 Roads)
+#Category: Roads and Paths
+#FileID  : GenLink_91037b3d-fcf4-40c7-b2c5-672183d13108
+#Product : CarSim 2020.0
+#VehCode Generic Links
+
+END

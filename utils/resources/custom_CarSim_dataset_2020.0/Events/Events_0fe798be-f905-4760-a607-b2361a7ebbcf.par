@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Events`Avoid Obstruction`Simple Path Planning
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*VALUE1 show_fcw
+DEFINE_EVENT show_fcw ; Events\Events_56dd4eae-710b-4424-b702-df7b026dff30.par
+#BlueLink0 Events`New Detect` Simple Path Planning` , Events`Events_56dd4eae-710b-4424-b702-df7b026dff30
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Check to see if the single sensor has detected a new obstruction.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Simple Path Planning } Avoid Obstruction
+#Library : Events
+#DataSet : Avoid Obstruction
+#Category: Simple Path Planning
+#FileID  : Events_0fe798be-f905-4760-a607-b2361a7ebbcf
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName I/O Channels: Ports`Hybrid 1`Powertrain
+#RingCtrl0 7
+#RingCtrl1 2
+#CheckBox0 0    
+
+IPORT_IMP 1
+PARSFILE IO_Channels\I_Channels\Import_6c807073-f26e-4de3-a587-3a16ed0774bd.par
+#BlueLink0 I/O Channels: Import`Closed-Loop Essential Imports` Hybrid Powertrain Imports` , Library for factor A`Import_6c807073-f26e-4de3-a587-3a16ed0774bd
+
+IPORT_IMP 2
+PARSFILE IO_Channels\I_Channels\Import_4a21a3c5-c81b-47c9-a912-137bf969fa70.par
+#BlueLink1 I/O Channels: Import`Control Essential Imports` Hybrid Powertrain Imports` , Baseline run`Import_4a21a3c5-c81b-47c9-a912-137bf969fa70
+
+IPORT_IMP 3
+PARSFILE IO_Channels\I_Channels\Import_2d512deb-7752-492e-8875-d560827247ca.par
+#BlueLink2 I/O Channels: Import`Power Variables` Hybrid Powertrain Imports` , Baseline run`Import_2d512deb-7752-492e-8875-d560827247ca
+
+IPORT_IMP 4
+PARSFILE IO_Channels\I_Channels\Import_5a343ab7-a0b1-4e2d-8ad4-972b9cff7bb3.par
+#BlueLink3 I/O Channels: Import`Torque Variables` Hybrid Powertrain Imports` , Baseline run`Import_5a343ab7-a0b1-4e2d-8ad4-972b9cff7bb3
+
+IPORT_IMP 5
+PARSFILE IO_Channels\I_Channels\Import_dfd07be1-ebbd-4b2c-8c63-b09880f0f6c5.par
+#BlueLink4 I/O Channels: Import`Speed Variables` Hybrid Powertrain Imports` , Baseline run`Import_dfd07be1-ebbd-4b2c-8c63-b09880f0f6c5
+
+IPORT_IMP 6
+PARSFILE IO_Channels\I_Channels\Import_7e1bff10-5c0a-4caf-9dae-4553ffad9666.par
+#BlueLink5 I/O Channels: Import`Battery Variables` Hybrid Powertrain Imports` , Baseline run`Import_7e1bff10-5c0a-4caf-9dae-4553ffad9666
+
+IPORT_IMP 7
+PARSFILE IO_Channels\I_Channels\Import_fca7b215-290c-4378-b375-cd2f8383b92e.par
+#BlueLink6 I/O Channels: Import`Mode/Fuel Variables` Hybrid Powertrain Imports` , Baseline run`Import_fca7b215-290c-4378-b375-cd2f8383b92e
+
+IPORT_EXP 1
+PARSFILE IO_Channels\O_Channels\Export_9ba4b9f6-db75-4a00-972f-c3bf4fba651c.par
+#BlueLink20 I/O Channels: Export`Essential Outputs for CL` Hybrid Powertrain Exports` , Library for factor B`Export_9ba4b9f6-db75-4a00-972f-c3bf4fba651c
+
+IPORT_EXP 2
+PARSFILE IO_Channels\O_Channels\Export_5e0ce79d-3d02-4fde-be82-dfda64b9ec00.par
+#BlueLink21 I/O Channels: Export`Essential Outputs for Control` Hybrid Powertrain Exports` , Baseline run`Export_5e0ce79d-3d02-4fde-be82-dfda64b9ec00
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Ports; { Powertrain } Hybrid 1
+#Library : I/O Channels: Ports
+#DataSet : Hybrid 1
+#Category: Powertrain
+#FileID  : Port_5bedea33-4b58-4db1-b2f8-bb0a51fa2eff
+#Product : CarSim 2020.0
+#VehCode I/O Ports
+
+END

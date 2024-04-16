@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName Brakes: Four-Wheel System`(Hbk): MC Press, No ABS, No Rr`B-Class
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 1
+#RingCtrl4 1
+#RingCtrl6 1
+#RingCtrl8 2
+#RingCtrl10 1
+#RingCtrl12 1
+#RingCtrl14 0
+OPT_BK_PEDAL 0
+TL_L1 0
+TL_L2 0
+
+iaxle 1
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 150
+MY_BRAKE_COEFFICIENT 150
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 150
+MY_BRAKE_COEFFICIENT 150
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+
+iaxle 2
+iside 1
+symbol_add <<ax_bk>> 1
+symbol_set <<side>> L
+TLAG_BK 0
+PARSFILE Brakes\Proportioning\BrkProp_d1eb5377-7474-4adb-9964-e4c13ba2d700.par
+#BlueLink6 Brakes: Proportioning / Limiting Valve`Zero Brake Pressure` ` , Proportioning`BrkProp_d1eb5377-7474-4adb-9964-e4c13ba2d700
+
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 100
+MY_BRAKE_COEFFICIENT 100
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+PARSFILE Brakes\Proportioning\BrkProp_d1eb5377-7474-4adb-9964-e4c13ba2d700.par
+#BlueLink6 Brakes: Proportioning / Limiting Valve`Zero Brake Pressure` ` , Proportioning`BrkProp_d1eb5377-7474-4adb-9964-e4c13ba2d700
+
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 100
+MY_BRAKE_COEFFICIENT 100
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+
+#EMBEDDED_NOTES
+#Without ABS this system has a proportioning valve. Brakes lock between 6 and 7 MPa, with fronts usually locking first except under some low friction conditions.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Four-Wheel System; { B-Class } (Hbk): MC Press, No ABS, No Rr
+#Library : Brakes: Four-Wheel System
+#DataSet : (Hbk): MC Press, No ABS, No Rr
+#Category: B-Class
+#FileID  : Brk4W_2276dc13-2698-4949-b4a6-c2745f75552b
+#Product : CarSim 2020.0
+#VehCode 4-Wheel System
+
+END

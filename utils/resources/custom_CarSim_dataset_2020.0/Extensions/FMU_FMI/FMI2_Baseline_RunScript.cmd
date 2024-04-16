@@ -1,0 +1,1 @@
+python Extensions\FMU_FMI\pyFMI_Baseline_Example.py FMI2_Baseline.fmu

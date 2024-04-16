@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Events`B. Slowly Increasing Steer to Ay = 0.3 g`Slowly Increasing Steer Test
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 AY
+*VALUE1 0.3
+*SPEED 80
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+#MiscYellow0
+OPT_WRITE 1
+#ENDMYellow
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+#MiscYellow1
+steer_sw_coefficient 13.5 ! specified ramp
+#ENDMYellow
+
+MAKE_EVENT AY >= 0.3 ; Events\Events_d366896b-3b28-42cf-b222-ec2cfa87ba74.par
+#BlueLink0 Events`C. Set Reference Steering Wheel Angle` Slowly Increasing Steer Test` , Events`Events_d366896b-3b28-42cf-b222-ec2cfa87ba74
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Turn on writing to file, so this part of the test will appear in plots and animation.
+#
+#Reset clocks and set the open-loop steering to ramp at 13.5 deg/sec. Also reset vehicle position so the animation starts at that initial station.
+#
+#Continue to the next step (C) when Ay reaches 0.3 g.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Slowly Increasing Steer Test } B. Slowly Increasing Steer to Ay = 0.3 g
+#Library : Events
+#DataSet : B. Slowly Increasing Steer to Ay = 0.3 g
+#Category: Slowly Increasing Steer Test
+#FileID  : Events_491832b9-0178-41d1-9090-683cf90e1c82
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

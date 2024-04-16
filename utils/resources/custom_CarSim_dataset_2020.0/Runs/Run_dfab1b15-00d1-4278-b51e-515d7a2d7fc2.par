@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName CarSim Run Control`Quick Start Example: Export to CSV`Output Options
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_dfab1b15-00d1-4278-b51e-515d7a2d7fc2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 4
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+PARSFILE IO_Channels\W_Channels\Write_c42883e2-9b42-45ed-be16-cedbe8354668.par
+#BlueLink13 I/O Channels: Write`Copy All Active Output Variables to Excel` ` , Output Variables`Write_c42883e2-9b42-45ed-be16-cedbe8354668
+
+WRITE_SENSOR_DETECT
+Title Quick Start Example: Export to CSV <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE Quick Start Example: Export to CSV
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is a copy of the double lane change run made for the Quick Start Guide. Two differences:
+#
+#1. The "Write all outputs" box is not checked. Only the outputs used for animation and plotting are written to file.
+#
+#2. A link is made to a Write Channels dataset to copy all of the output data to a CSV file that can be opened in a spreadsheet.
+#
+#Click on the link to the Write Channels dataset to see how simple this is.
+#
+#Click the View button in the lower-right corner to view the simulation results in Excel (if you have it installed).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Output Options } Quick Start Example: Export to CSV
+#Library : CarSim Run Control
+#DataSet : Quick Start Example: Export to CSV
+#Category: Output Options
+#FileID  : Run_dfab1b15-00d1-4278-b51e-515d7a2d7fc2
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

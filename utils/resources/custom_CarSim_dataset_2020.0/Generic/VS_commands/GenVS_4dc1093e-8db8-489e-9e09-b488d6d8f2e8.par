@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Generic VS Commands`Replace Rack and Pinion`External Steering
+#VehCode Support Settings
+
+#MiscYellow0
+! This parameter indicates that, for the front axle, the rack and pinon is replaced with an external 
+! model. The column and wheel-end kinematics (tie rod / steering arm) is retained.
+
+! In this case, the model is nearly identical to one that also replaces the column, with the exception that
+! instead of imoprting the driver torque, the reaction torque at the column is imported.
+
+opt_steer_ext(1) 2
+#ENDMYellow
+
+*MODELCODE Support Settings
+PARSFILE Plot\Setup\Plot_01808015-b102-4547-aaae-2228a168ba43.par
+#BlueLink3 Plot: Setup`Driver Ratio from External` Steering` , Plot`Plot_01808015-b102-4547-aaae-2228a168ba43
+
+PARSFILE Plot\Setup\Plot_b029cc81-e142-4554-ac27-7e67994936fd.par
+#BlueLink4 Plot: Setup`Rack position from external` Steering` , Plot`Plot_b029cc81-e142-4554-ac27-7e67994936fd
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { External Steering } Replace Rack and Pinion
+#Library : Generic VS Commands
+#DataSet : Replace Rack and Pinion
+#Category: External Steering
+#FileID  : GenVS_4dc1093e-8db8-489e-9e09-b488d6d8f2e8
+#Product : CarSim 2020.0
+#VehCode Support Settings
+
+END

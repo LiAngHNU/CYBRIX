@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Tire`Exotic Front - 235/35 19`Performance Tires
+FZ_REF 2000
+Y_LENGTH 235
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_bea935be-912e-4ae1-9d2c-ad366906d7b1.par
+#BlueLink4 Animator: Shape Assembly`Exotic Front Tire` Tires` , Animator`ShpGrp_bea935be-912e-4ae1-9d2c-ad366906d7b1
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 235
+PARSFILE Tires\Fz\TireFz_5d90a093-38b5-475c-b23b-5247b68c2546.par
+#BlueLink12 Tire: Vertical Force vs. Compression`GT Front - 27/68 - 18` GT` , Vertical force`TireFz_5d90a093-38b5-475c-b23b-5247b68c2546
+
+M_TIRE 24
+IT 1.6
+IT_XXZZ 0.9
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.006
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 95
+L_CONTACT_Y_CONSTANT 235
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_e84e26db-3ac1-4276-aa19-218abc74f2ed.par
+#BlueLink0 Tire: Aligning Moment`GT Front - 27/68 - 18` Racing Tires` , Aligning Moment`TireMz_e84e26db-3ac1-4276-aa19-218abc74f2ed
+
+PARSFILE Tires\Fy\TireFy_19b4ce65-dd37-4c32-8ad4-fc82b30f704b.par
+#BlueLink1 Tire: Lateral Force`GT Front - 27/68 - 18` Racing Tires` , Lateral Force`TireFy_19b4ce65-dd37-4c32-8ad4-fc82b30f704b
+
+PARSFILE Tires\Fx\TireFx_d1b79176-a899-48f5-939b-5df53c4e9dd4.par
+#BlueLink2 Tire: Longitudinal Force`GT Front - 27/68 - 18` Racing Tires` , Longitudinal Force`TireFx_d1b79176-a899-48f5-939b-5df53c4e9dd4
+
+PARSFILE Tires\Camber_Thrust\CamStiff_96ac3181-273b-4547-8371-301f904d3873.par
+#BlueLink3 Tire: Camber Thrust Coefficient`GT Front - 27/68 - 18` Racing Tires` , Camber Thrust`CamStiff_96ac3181-273b-4547-8371-301f904d3873
+
+
+
+#EMBEDDED_NOTES
+#This tire is for the front axle of a top level GT car with curb mass approximately 1320 kg, approx 600 HP, and high aerodynamic downforce.
+#
+#Tire & Rim Association Load Rating: 375 kg
+#
+#2019.0 - Improved tire data:
+# Changed Reference vertical force
+# Added non-zero tire spin inertia.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Performance Tires } Exotic Front - 235/35 19
+#Library : Tire
+#DataSet : Exotic Front - 235/35 19
+#Category: Performance Tires
+#FileID  : Tire_68f15a93-cb0c-4c0e-9e42-4b2443f2766b
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

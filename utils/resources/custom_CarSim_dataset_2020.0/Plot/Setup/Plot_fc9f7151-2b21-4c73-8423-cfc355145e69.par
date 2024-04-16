@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Engine Mount Compression (Long.)`Engine Mount
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CmpX_EM1, time
+PLOTCHANNELS CmpX_EM2, time
+PLOTCHANNELS CmpX_EM3, time
+PLOTCHANNELS CmpX_EM4, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Engine Mount Compression (Long.)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Engine Mount } Engine Mount Compression (Long.)
+#Library : Plot: Setup
+#DataSet : Engine Mount Compression (Long.)
+#Category: Engine Mount
+#FileID  : Plot_fc9f7151-2b21-4c73-8423-cfc355145e69
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

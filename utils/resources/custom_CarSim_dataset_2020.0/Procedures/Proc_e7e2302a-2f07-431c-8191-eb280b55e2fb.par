@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Procedures`Pedestrian Scenario`Mcity
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 10
+TSTART_WRITE = 0;
+TSTOP 11
+SSTOP 100
+OPT_DIRECTION 0
+*SPEED 30
+*TSTOP 11
+*TSTART 0
+*SSTART 10
+*SSTOP 100
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_t\SpdTime_999d28d6-da60-49bc-beda-b5fa93e4ffb3.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 25 km/h` Constant` , Speed vs. time`SpdTime_999d28d6-da60-49bc-beda-b5fa93e4ffb3
+
+PARSFILE Roads\3D_Road\Road_d9d25b26-00e5-4ce4-83fe-60de3320e1cd.par
+#BlueLink0 Road: 3D Surface (All Properties)`Mcity Scene` VS Scene Builder` , Miscellaneous`Road_d9d25b26-00e5-4ce4-83fe-60de3320e1cd
+
+PARSFILE Roads\Center_XY\PathXY_fb2d340f-513f-4e26-93ad-e381d303f748.par
+#BlueLink1 Path: X-Y Coordinates`Mcity: East to West on Main St. (ID 1002)` Mcity` , Miscellaneous`PathXY_fb2d340f-513f-4e26-93ad-e381d303f748
+
+PARSFILE Animator\HUD\HUD_c7f77509-6015-49f1-a6bc-1f22a42550de.par
+#BlueLink2 Animator: HUD`FCW Alert` ADAS Alerts` , Miscellaneous`HUD_c7f77509-6015-49f1-a6bc-1f22a42550de
+
+PARSFILE Plot\Setup\Plot_3782673a-b430-4e21-9e66-9361c3608ff3.par
+#BlueLink8 Plot: Setup`Distance to Pedestrian` User-Defined Variables` , Plot`Plot_3782673a-b430-4e21-9e66-9361c3608ff3
+
+PARSFILE Generic\VS_commands\GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3.par
+#BlueLink18 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3
+
+PARSFILE Generic\VS_commands\GenVS_9adae0f9-c659-4690-8e88-e92525112141.par
+#BlueLink19 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_9adae0f9-c659-4690-8e88-e92525112141
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink20 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+
+#EMBEDDED_NOTES
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Mcity } Pedestrian Scenario
+#Library : Procedures
+#DataSet : Pedestrian Scenario
+#Category: Mcity
+#FileID  : Proc_e7e2302a-2f07-431c-8191-eb280b55e2fb
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

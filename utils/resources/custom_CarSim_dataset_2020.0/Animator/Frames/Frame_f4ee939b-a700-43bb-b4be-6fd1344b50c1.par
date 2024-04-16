@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`L2 Outrigger Fz`Outriggers
+ADD_REFERENCE_FRAME Frame_f4ee939b-a700-43bb-b4be-6fd1344b50c1
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME x_rp2
+SET_Y_NAME y_rp2
+SET_YAW_NAME Yaw
+SET_FRAME_SCALE_Z_NAME FZ_RP2
+
+PARSFILE Animator\STL_Groups\ShpGrp_633107e3-ce5c-4346-b0d8-f6d93c814de8.par
+#BlueLink0 Animator: Shape Assembly`Fz Double (Tail Origin)` Arrows` , Animator Data`ShpGrp_633107e3-ce5c-4346-b0d8-f6d93c814de8
+
+WRT_x_rp2
+ANI_x_rp2
+WRT_y_rp2
+ANI_y_rp2
+WRT_Yaw
+ANI_Yaw
+WRT_FZ_RP2
+ANI_FZ_RP2
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Outriggers } L2 Outrigger Fz
+#Library : Animator: Reference Frame
+#DataSet : L2 Outrigger Fz
+#Category: Outriggers
+#FileID  : Frame_f4ee939b-a700-43bb-b4be-6fd1344b50c1
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

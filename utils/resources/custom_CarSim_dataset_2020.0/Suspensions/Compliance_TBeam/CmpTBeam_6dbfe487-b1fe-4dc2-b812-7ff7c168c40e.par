@@ -1,0 +1,268 @@
+PARSFILE
+#FullDataName Suspension: Twist Beam System Compliance, Springs, and Dampers`B-Class, Hatchback - Rear`
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+*KSPRING_L 35
+*FRICTION_L 20
+*BETA_C_L 3
+*BETA_E_L 3
+*L_SPG_ADJ_L 0
+*R_SPRING_L 0.8
+*R_DAMPER_L 0.8
+*R_JOUNCE_L 0.8
+*R_REBOUND_L 0.8
+DAUX 0
+*C_ROLL_CTR 165
+*SLR_REF 298.07
+*FRAC_BRK 0
+
+! define units for the compliance coefficients
+define_units deg/N dr;
+define_units deg/N-m dr;
+define_units mm/N 1000;
+define_units mm/N-m 1000;
+! Twist beam suspensions have one kinematic degree of freedom: they are constrained
+! at their forward end by a pair of bushings to rotate about a transverse axis. All
+! other motions of the wheels result from structural deformation of the beam
+! components.
+! Some suspensions that may be called "twist beams" are augmented with a lateral
+! locating device such as a track bar ("panhard rod") or Watt's link. The first
+! category can be treated as a special case of an independent suspension. The
+! second is really a special case of a solid axle.
+! This example is for the first case.
+
+! ---Roll center---
+define_parameter rch_r = 0.0; mm; Roll center height above ground
+define_parameter slr_ref = 0.0; mm; Static loaded radius
+define_output RCH_Cor 0; mm; Corrected roll center height
+iside 1
+eq_in rch_cor = r0 - CmpT_L2; ! Left side loaded radius
+iside 2
+eq_in rch_cor = (rch_cor + r0 - CmpT_R2)/2 - slr_ref + rch_r; ! completion
+! Calculate the parallel and opposed parts of each force and moment
+define_output Fx_Par 0; N; Parallel Fx: (Fx_L2 + Fx_R2)/2
+define_output Fx_Opp 0; N; Opposed Fx: (Fx_L2 - Fx_R2)/2
+define_output Fy_Par 0; N; Parallel Fy: (Fy_L2 + Fy_R2)/2
+define_output Fy_Opp 0; N; Opposed Fy: (Fy_L2 - Fy_R2)/2
+define_output Fz_Par 0; N; Parallel Fz w/o design load
+define_output Fz_Opp 0; N; Opposed Fz: (Fz_L2 - Fz_R2)/2
+define_output My_Par 0; N-m; Parallel My: (My_L2 + My_R2)/2
+define_output My_Opp 0; N-m; Opposed portion of My
+define_output Mz_Par 0; N-m; Parallel Mz: (mz_l2 + mz_r2)/2
+define_output Mz_Opp 0; N-m; Opposed Mz: (mz_l2 - mz_r2)/2
+eq_in fx_par = (sv_fx_sm_l2 + sv_fx_sm_r2)/2;
+eq_in fx_opp = (sv_fx_sm_l2 - sv_fx_sm_r2)/2;
+eq_in fy_par = (sv_fy_sm_l2 + sv_fy_sm_r2)/2;
+eq_in fy_opp = (sv_fy_sm_l2 - sv_fy_sm_r2)/2;
+eq_in fz_par = (sv_fz_sm_l2 + sv_fz_sm_r2 - FZA_UL)/2;
+eq_in fz_opp = (sv_fz_sm_l2 - sv_fz_sm_r2)/2;
+eq_in my_par = (sv_my_brk_l2 + sv_my_brk_r2)/2;
+eq_in my_opp = (sv_my_brk_l2 - sv_my_brk_r2)/2;
+eq_in mz_par = (sv_mz_wheel_l2 + sv_mz_wheel_r2)/2;
+eq_in mz_opp = (sv_mz_wheel_l2 - sv_mz_wheel_r2)/2;
+define_variable sv_fy_tire_sum_2 sv_fy_sm_l2 + sv_fy_sm_r2; N; Sum of axle 2 tire Fy: Fy_L2 + Fy_R2
+eq_save sv_fy_tire_sum_2 = fy_l2 + fy_r2;
+define_variable sv_dist_ctc_2 1.5; mm; Instant distance between CTC points, axle 2
+eq_init sv_dist_ctc_2 l_track;
+eq_save sv_dist_ctc_2 = sqrt(pow(Xctc_l2 - Xctc_r2, 2) + pow(Yctc_l2 - Yctc_r2, 2) + pow(Zgnd_l2 - Zgnd_r2, 2));
+eq_in imp_fzexl2 = sv_fy_tire_sum_2 * rch_cor / sv_dist_ctc_2;
+import imp_fzexl2 vs_add 0
+eq_in imp_fzexr2 = -imp_fzexl2;
+import imp_fzexr2 vs_add 0
+define_output Fjack_L2 = imp_fzexl2; N; Jacking Force, left side
+define_output Fjack_R2 = imp_fzexr2; N; Jacking Force, right side
+! Brake moments
+define_parameter brk_m_trans = 0; units = -; Fraction of Brake Moment transferred to opposite suspension
+eq_in imp_myusm_l2 = -2*my_opp * brk_m_trans
+import imp_myusm_l2 vs_add 0
+eq_in imp_myusm_r2 = 2*my_opp * brk_m_trans;
+import imp_myusm_r2 vs_add 0
+define_parameter i_fx_p_l 0; deg/N; inclination due to parallel Fx(L)
+define_parameter i_fy_p_l 0; deg/N; inclination due to parallel Fy(L)
+define_parameter i_fz_p_l 0; deg/N; inclination due to parallel Fz(L)
+define_parameter i_my_p_l 0; deg/N-m; inclination due to parallel My(L)
+define_parameter i_mz_p_l 0; deg/N-m; inclination due to parallel Mz(L)
+define_parameter i_fx_p_r 0; deg/N; inclination due to parallel Fx(R)
+define_parameter i_fy_p_r 0; deg/N; inclination due to parallel Fy(R)
+define_parameter i_fz_p_r 0; deg/N; inclination due to parallel Fz(R)
+define_parameter i_my_p_r 0; deg/N-m; inclination due to parallel My(R)
+define_parameter i_mz_p_r 0; deg/N-m; inclination due to parallel Mz(R)
+iside 1
+eq_in ci_fy_offset = i_fx_p_l * fx_par + i_fy_p_l * fy_par + i_fz_p_l * fz_par + i_my_p_l * my_par + i_mz_p_l * mz_par;
+iside 2
+eq_in ci_fy_offset = i_fx_p_r * fx_par + i_fy_p_r * fy_par + i_fz_p_r * fz_par + i_my_p_r * my_par + i_mz_p_r * mz_par;
+define_parameter i_fx_o_l 0; deg/N; inclination due to opposed Fx(L)
+define_parameter i_fy_o_l 0; deg/N; inclination due to opposed Fy(L)
+define_parameter i_fz_o_l 0; deg/N; inclination due to opposed Fz(L)
+define_parameter i_my_o_l 0; deg/N-m; inclination due to opposed My(L)
+define_parameter i_mz_o_l 0; deg/N-m; inclination due to opposed Mz(L)
+define_parameter i_fx_o_r 0; deg/N; inclination due to opposed Fx(R)
+define_parameter i_fy_o_r 0; deg/N; inclination due to opposed Fy(R)
+define_parameter i_fz_o_r 0; deg/N; inclination due to opposed Fz(R)
+define_parameter i_my_o_r 0; deg/N-m; inclination due to opposed My(R)
+define_parameter i_mz_o_r 0; deg/N-m; inclination due to opposed Mz(R)
+iside 1
+eq_in ci_fy_offset = ci_fy_offset + i_fx_o_l * fx_opp + i_fy_o_l * fy_opp + i_fz_o_l * fz_opp + i_my_o_l * my_opp + i_mz_o_l * mz_opp;
+iside 2
+eq_in ci_fy_offset = ci_fy_offset - (i_fx_o_r * fx_opp + i_fy_o_r * fy_opp + i_fz_o_r * fz_opp + i_my_o_r * my_opp + i_mz_o_r * mz_opp);
+define_parameter s_fx_p_l 0; deg/N; steer due to parallel Fx(L)
+define_parameter s_fy_p_l 0; deg/N; steer due to parallel Fy(L)
+define_parameter s_fz_p_l 0; deg/N; steer due to parallel Fz(L)
+define_parameter s_my_p_l 0; deg/N-m; steer due to parallel My(L)
+define_parameter s_mz_p_l 0; deg/N-m; steer due to parallel Mz(L)
+define_parameter s_fx_p_r 0; deg/N; steer due to parallel Fx(R)
+define_parameter s_fy_p_r 0; deg/N; steer due to parallel Fy(R)
+define_parameter s_fz_p_r 0; deg/N; steer due to parallel Fz(R)
+define_parameter s_my_p_r 0; deg/N-m; steer due to parallel My(R)
+define_parameter s_mz_p_r 0; deg/N-m; steer due to parallel Mz(R)
+iside 1
+eq_in cs_fy_offset = s_fx_p_l * fx_par + s_fy_p_l * fy_par + s_fz_p_l * fz_par + s_my_p_l * my_par + s_mz_p_l * mz_par;
+iside 2
+eq_in cs_fy_offset = s_fx_p_r * fx_par + s_fy_p_r * fy_par + s_fz_p_r * fz_par + s_my_p_r * my_par + s_mz_p_r * mz_par;
+define_parameter s_fx_o_l 0; deg/N; steer due to opposed Fx(L)
+define_parameter s_fy_o_l 0; deg/N; steer due to opposed Fy(L)
+define_parameter s_fz_o_l 0; deg/N; steer due to opposed Fz(L)
+define_parameter s_my_o_l 0; deg/N-m; steer due to opposed My(L)
+define_parameter s_mz_o_l 0; deg/N-m; steer due to opposed Mz(L)
+define_parameter s_fx_o_r 0; deg/N; steer due to opposed Fx(R)
+define_parameter s_fy_o_r 0; deg/N; steer due to opposed Fy(R)
+define_parameter s_fz_o_r 0; deg/N; steer due to opposed Fz(R)
+define_parameter s_my_o_r 0; deg/N-m; steer due to opposed My(R)
+define_parameter s_mz_o_r 0; deg/N-m; steer due to opposed Mz(R)
+iside 1
+eq_in cs_fy_offset = cs_fy_offset + s_fx_o_l * fx_opp + s_fy_o_l * fy_opp + s_fz_o_l * fz_opp + s_my_o_l * my_opp + s_mz_o_l * mz_opp;
+iside 2
+eq_in cs_fy_offset = cs_fy_offset - (s_fx_o_r * fx_opp + s_fy_o_r * fy_opp + s_fz_o_r * fz_opp + s_my_o_r * my_opp + s_mz_o_r * mz_opp);
+define_parameter yd_fx_p_l 0; mm/N; lateral deflection due to parallel Fx(L)
+define_parameter yd_fy_p_l 0; mm/N; lateral deflection due to parallel Fy(L)
+define_parameter yd_my_p_l 0; mm/N-m; lateral deflection due to parallel My(L)
+define_parameter yd_mz_p_l 0; mm/N-m; lateral deflection due to parallel Mz(L)
+define_parameter yd_fx_p_r 0; mm/N; lateral deflection due to parallel Fx(R)
+define_parameter yd_fy_p_r 0; mm/N; lateral deflection due to parallel Fy(R)
+define_parameter yd_my_p_r 0; mm/N-m; lateral deflection due to parallel My(R)
+define_parameter yd_mz_p_r 0; mm/N-m; lateral deflection due to parallel Mz(R)
+iside 1
+eq_in c_lat_offset = yd_fx_p_l * fx_par + yd_fy_p_l * fy_par + yd_my_p_l * my_par + yd_mz_p_l * mz_par;
+iside 2
+eq_in c_lat_offset = yd_fx_p_r * fx_par + yd_fy_p_r * fy_par + yd_my_p_r * my_par + yd_mz_p_r * mz_par;
+define_parameter yd_fx_o_l 0; mm/N; lateral deflection due to opposed Fx(L)
+define_parameter yd_fy_o_l 0; mm/N; lateral deflection due to opposed Fy(L)
+define_parameter yd_my_o_l 0; mm/N-m; lateral deflection due to opposed My(L)
+define_parameter yd_mz_o_l 0; mm/N-m; lateral deflection due to opposed Mz(L)
+define_parameter yd_fx_o_r 0; mm/N; lateral deflection due to opposed Fx(R)
+define_parameter yd_fy_o_r 0; mm/N; lateral deflection due to opposed Fy(R)
+define_parameter yd_my_o_r 0; mm/N-m; lateral deflection due to opposed My(R)
+define_parameter yd_mz_o_r 0; mm/N-m; lateral deflection due to opposed Mz(R)
+iside 1
+eq_in c_lat_offset = c_lat_offset + yd_fx_o_l * fx_opp + yd_fy_o_l * fy_opp + yd_my_o_l * my_opp + yd_mz_o_l * mz_opp;
+iside 2
+eq_in c_lat_offset = c_lat_offset - (yd_fx_o_r * fx_opp + yd_fy_o_r * fy_opp + yd_my_o_r * my_opp + yd_mz_o_r * mz_opp);
+define_parameter xd_fx_p_l 0; mm/N; longitudinal deflection due to parallel Fx(L)
+define_parameter xd_fy_p_l 0; mm/N; longitudinal deflection due to parallel Fy(L)
+define_parameter xd_my_p_l 0; mm/N-m; longitudinal deflection due to parallel My(L)
+define_parameter xd_mz_p_l 0; mm/N-m; longitudinal deflection due to parallel Mz(L)
+define_parameter xd_fx_p_r 0; mm/N; longitudinal deflection due to parallel Fx(R)
+define_parameter xd_fy_p_r 0; mm/N; longitudinal deflection due to parallel Fy(R)
+define_parameter xd_my_p_r 0; mm/N-m; longitudinal deflection due to parallel My(R)
+define_parameter xd_mz_p_r 0; mm/N-m; longitudinal deflection due to parallel Mz(R)
+iside 1
+eq_in c_long_offset = xd_fx_p_l * fx_par + xd_fy_p_l * fy_par + xd_my_p_l * my_par + xd_mz_p_l * mz_par;
+iside 2
+eq_in c_long_offset = xd_fx_p_r * fx_par + xd_fy_p_r * fy_par + xd_my_p_r * my_par + xd_mz_p_r * mz_par;
+define_parameter xd_fx_o_l 0; mm/N; longitudinal deflection due to opposed Fx(L)
+define_parameter xd_fy_o_l 0; mm/N; longitudinal deflection due to opposed Fy(L)
+define_parameter xd_my_o_l 0; mm/N-m; longitudinal deflection due to opposed My(L)
+define_parameter xd_mz_o_l 0; mm/N-m; longitudinal deflection due to opposed Mz(L)
+define_parameter xd_fx_o_r 0; mm/N; longitudinal deflection due to opposed Fx(R)
+define_parameter xd_fy_o_r 0; mm/N; longitudinal deflection due to opposed Fy(R)
+define_parameter xd_my_o_r 0; mm/N-m; longitudinal deflection due to opposed My(R)
+define_parameter xd_mz_o_r 0; mm/N-m; longitudinal deflection due to opposed Mz(R)
+iside 1
+eq_in c_long_offset = c_long_offset + xd_fx_o_l * fx_opp + xd_fy_o_l * fy_opp + xd_my_o_l * my_opp + xd_mz_o_l * mz_opp; 
+iside 2
+eq_in c_long_offset = c_long_offset - (xd_fx_o_r * fx_opp + xd_fy_o_r * fy_opp + xd_my_o_r * my_opp + xd_mz_o_r * mz_opp);
+OPT_SUSP_COMPLIANCE_METHOD 0
+iside 1
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 35
+FS_EXT_COEFFICIENT 35
+FS_COMP_OFFSET 20
+FS_EXT_OFFSET -20
+SPRING_COMP_BETA 3
+SPRING_EXT_BETA 3
+CMP_SPR_SEAT_COEFFICIENT 0.8
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_06339072-ca43-46c4-af82-ec3bf59d6ffc.par
+#BlueLink1 Suspension: Shock Absorber`Big Car` Passenger Car` , Left damper`Shock_06339072-ca43-46c4-af82-ec3bf59d6ffc
+
+CMP_DAMP_COEFFICIENT 0.8
+PARSFILE Suspensions\Jounce_Rebound\JncReb_a149b76b-e734-43ee-b840-d0fd8769d993.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+70 mm / -50 mm` Jounce Range: 50 mm to 99 mm` , Jounce / rebound stop force`JncReb_a149b76b-e734-43ee-b840-d0fd8769d993
+
+CMP_JSTOP_COEFFICIENT 0.8
+CMP_RSTOP_COEFFICIENT 0.8
+
+iside 2
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 35
+FS_EXT_COEFFICIENT 35
+FS_COMP_OFFSET 20
+FS_EXT_OFFSET -20
+SPRING_COMP_BETA 3
+SPRING_EXT_BETA 3
+CMP_SPR_SEAT_COEFFICIENT 0.8
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_06339072-ca43-46c4-af82-ec3bf59d6ffc.par
+#BlueLink1 Suspension: Shock Absorber`Big Car` Passenger Car` , Left damper`Shock_06339072-ca43-46c4-af82-ec3bf59d6ffc
+
+CMP_DAMP_COEFFICIENT 0.8
+PARSFILE Suspensions\Jounce_Rebound\JncReb_a149b76b-e734-43ee-b840-d0fd8769d993.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+70 mm / -50 mm` Jounce Range: 50 mm to 99 mm` , Jounce / rebound stop force`JncReb_a149b76b-e734-43ee-b840-d0fd8769d993
+
+CMP_JSTOP_COEFFICIENT 0.8
+CMP_RSTOP_COEFFICIENT 0.8
+PARSFILE Suspensions\Aux_Roll\AuxMx_071374ca-01d7-41fc-9780-36167f9d7948.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Linear: 251 N-m/deg` Linear` , Roll Moment`AuxMx_071374ca-01d7-41fc-9780-36167f9d7948
+
+PARSFILE Suspensions\Twist_beam\Twist_Beam_Comp_Steer\TBStr_5ba6caeb-2e24-45ac-9e7a-3d2f962a2f0f.par
+#BlueLink20 Suspension: Twist Beam Compliances - Steer`B-Class, Hatchback - Rear` ` , Twist Beam Compliances (Steer)`TBStr_5ba6caeb-2e24-45ac-9e7a-3d2f962a2f0f
+
+PARSFILE Suspensions\Twist_Beam\Twist_Beam_Comp_Inc\TBInc_6f7f840c-c82d-42df-adc0-2da09319374c.par
+#BlueLink21 Suspension: Twist Beam Compliances - Inclination`B-Class, Hatchback - Rear` ` , Twist Beam Compliances (Inclination)`TBInc_6f7f840c-c82d-42df-adc0-2da09319374c
+
+PARSFILE Suspensions\Twist_Beam\Twist_Beam_Comp_Long\TBLong_62ee9259-21d1-4261-b2b4-120fe21a68ef.par
+#BlueLink22 Suspension: Twist Beam Compliances - Longitudinal`B-Class, Hatchback - Rear` ` , Twist Beam Compliances (Longitudinal)`TBLong_62ee9259-21d1-4261-b2b4-120fe21a68ef
+
+PARSFILE Suspensions\Twist_Beam\Twist_Beam_Comp_Lat\TBLat_060c0c33-5a67-473a-8cd9-609f7357fe94.par
+#BlueLink23 Suspension: Twist Beam Compliances - Lateral`B-Class, Hatchback - Rear` ` , Twist Beam Compliances (Lateral)`TBLat_060c0c33-5a67-473a-8cd9-609f7357fe94
+
+rch_r = 165
+slr_ref = 298.07
+brk_m_trans = 0
+
+#EMBEDDED_NOTES
+#This screen is a new feature of CarSim 2016. It is customized to support parameters for the twist beam model. It automatically extends the model by adding new equatons and VS Commands.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Twist Beam System Compliance, Springs, and Dampers; B-Class, Hatchback - Rear
+#Library : Suspension: Twist Beam System Compliance, Springs, and Dampers
+#DataSet : B-Class, Hatchback - Rear
+#Category: 
+#FileID  : CmpTBeam_6dbfe487-b1fe-4dc2-b812-7ff7c168c40e
+#Product : CarSim 2020.0
+#VehCode Springs and Dampers
+
+END

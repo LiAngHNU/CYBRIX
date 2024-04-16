@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`1 Driver Preview Point`Points of Interest
+#RingCtrl0 1
+DEFINE_MOVING_OBJECTS 1
+#RingCtrl1 5
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox38 0    
+
+DZ_OBJECT 0
+#MiscYellow0
+# INSTALL_DM_OUTPUTS ! Need outputs from the driver model
+#EQ_INIT ROAD_ID_OBJ(<<o>>) = CURRENT_ROAD_ID ! now
+#EQ_OUT X_Obj_<<o>> = x_dm_1 ! Calculate every time step
+#EQ_OUT Y_Obj_<<o>> = y_dm_1
+#ENDMYellow
+
+*PATH_ID 0
+*ROAD_ID 0
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME 1 Driver Preview Point
+OPT_SPEED_OBJ 0
+ INSTALL_DM_OUTPUTS ! Need outputs from the driver model
+EQ_INIT ROAD_ID_OBJ(<<o>>) = CURRENT_ROAD_ID ! now
+EQ_OUT X_Obj_<<o>> = x_dm_1 ! Calculate every time step
+EQ_OUT Y_Obj_<<o>> = y_dm_1
+#RingCtrl4 1
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+OPT_RECYCLE_OBJ 0
+*COLOR_1 0 1 1
+SET_RUN_COLOR 0 1 1
+H_OBJ = 0 ! Default for blank field
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_6fc601fe-00b4-4e31-89e1-5038b205e467.par
+#BlueLink0 Animator: Shape File Link`Sphere: 0.1m Radius` Geometric Shapes` , 3D Shape for Video`Shape_6fc601fe-00b4-4e31-89e1-5038b205e467
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#This dataset shows a sphere on the path being previewed by the driver model (both steering and speed). It is set up to work with most datasets, including those with complicated road networks.
+#
+#The Path ID and Road ID are both set to zero. When this dataset is read, the current road is often not known, so setting the ID to zero prevents an error.
+#
+#However, during initialization, the Road ID is set to CURRENT_ROAD_ID.  Output X and Y coordinates are always calculated from the DM points, using equations added with EQ_OUT.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Points of Interest } 1 Driver Preview Point
+#Library : Multiple Moving Objects
+#DataSet : 1 Driver Preview Point
+#Category: Points of Interest
+#FileID  : TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+#Product : CarSim 2020.0
+#VehCode Multiple Objects
+
+END

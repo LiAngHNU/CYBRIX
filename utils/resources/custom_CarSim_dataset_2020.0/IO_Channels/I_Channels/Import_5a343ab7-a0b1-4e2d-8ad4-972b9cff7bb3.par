@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Torque Variables`Hybrid Powertrain Imports
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_aa479559-f20c-4b95-a2cc-d8fb4563a531\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_MENGINE Add 0.0! 0
+IMP_M_GENERATOR Add 0.0! 0
+IMP_M_MOTOR Add 0.0! 0
+#ENDMYellow
+
+#MiscYellow1
+define_import IMP_M_GENERATOR
+define_import IMP_M_MOTOR
+define_output M_Gnrtr = IMP_M_GENERATOR; units=N-m; Generator
+define_output M_Motor = IMP_M_MOTOR; units=N-m; Motor
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Ext. Hybrid: US06 Acceleration` Simulink and LabVIEW Models` , example run`Run_aa479559-f20c-4b95-a2cc-d8fb4563a531
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Hybrid Powertrain Imports } Torque Variables
+#Library : I/O Channels: Import
+#DataSet : Torque Variables
+#Category: Hybrid Powertrain Imports
+#FileID  : Import_5a343ab7-a0b1-4e2d-8ad4-972b9cff7bb3
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

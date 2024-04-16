@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Control: Throttle (Open Loop)`Ramp To Half Throttle w/ MT Shifting`Ramp
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+THROTTLE_ENGINE_TABLE LINEAR_FLAT
+0, 0
+0.25, 0.5
+3.8, 0.5
+3.9, 0.1
+4, 0
+4.1, 0.1
+4.2, 0.5
+9.3, 0.5
+9.4, 0.1
+9.5, 0
+9.6, 0.1
+9.7, 0.5
+14.8, 0.5
+14.9, 0.1
+15, 0
+15.1, 0.1
+15.2, 0.5
+19.8, 0.5
+19.9, 0.1
+20, 0
+20.1, 0.1
+20.2, 0.5
+24.8, 0.5
+24.9, 0.1
+25, 0
+25.1, 0.1
+25.2, 0.5
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Throttle (Open Loop); { Ramp } Ramp To Half Throttle w/ MT Shifting
+#Library : Control: Throttle (Open Loop)
+#DataSet : Ramp To Half Throttle w/ MT Shifting
+#Category: Ramp
+#FileID  : Throttle_4bc6fc57-aeac-4f82-9dad-c3450833917c
+#Product : CarSim 2020.0
+#VehCode Open-loop Throttle
+
+END

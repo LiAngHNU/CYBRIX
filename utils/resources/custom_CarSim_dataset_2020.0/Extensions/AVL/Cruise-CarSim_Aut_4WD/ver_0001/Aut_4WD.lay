@@ -1,0 +1,698 @@
+! TeimModel-Reader: 0.9
+!
+! Modell: Automatic 4WD vom: Jan 19, 2011 13:44:04
+!
+! Modul 1: Engine (4)
+! Modul 2: Torque Converter (7)
+! Modul 3: Gear Box (8)
+! Modul 4: Single Ratio Transmission (11)
+! Modul 5: Single Ratio Transmission (11)
+! Modul 6: Hub (16)
+! Modul 7: Hub (16)
+! Modul 8: Hub (16)
+! Modul 9: Hub (16)
+! Modul 10: Differential (24)
+! Modul 11: Differential (24)
+! Modul 12: Differential (24)
+! Modul 13: Cockpit (60)
+! Modul 14: Gear Box Control (61)
+! Modul 15: Gear Box Program (62)
+! Modul 16: Anti-Slip Control (71)
+! Modul 17: Exhaust System (80)
+! Modul 18: Monitor (99)
+! Modul 19: CarSim (181)
+$======================================================================
+$ Application: Vehicle Model
+$ created:     May 09, 2018 16:48:46
+$=================================================================Model
+[TM_MODEL]
+#TM_ID                    = 
+#TM_VERSION               = "May 09, 2018 16:47:53"
+NAME                      = 'Automatic 4WD'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+BEARBEITER                = 'Support-Team'
+BMS_NR                    = 7
+TP_ID                     = 
+UIL                       = 
+{ FROM_CONNECTOR_ID TO_CONNECTOR_ID }
+  1                 4               
+  5                 6               
+  8                 24              
+  10                23              
+  12                21              
+  13                20              
+  14                18              
+  15                17              
+  9                 16              
+  11                19              
+  7                 22              
+  2                 25              
+{ OUTPUT_MODUL_ID OUTPUT_NR INPUT_MODUL_ID INPUT_NR TYP         }
+  16              1         1              1        'TRP'       
+  19              20        1              2        'SWI'       
+  14              1         3              1        'SWI'       
+  19              9         6              1        'TOR'       
+  19              22        6              2        'TOR'       
+  19              8         7              1        'TOR'       
+  19              21        7              2        'TOR'       
+  19              11        8              1        'TOR'       
+  19              24        8              2        'TOR'       
+  19              10        9              1        'TOR'       
+  19              23        9              2        'TOR'       
+  1               3         13             1        'RSP'       
+  1               1         13             2        'SWI'       
+  3               1         13             7        'SWI'       
+  13              4         14             3        'SWI'       
+  3               1         14             4        'SWI'       
+  19              3         14             5        'RSP'       
+  2               2         14             6        'RSP'       
+  13              18        14             7        'SWI'       
+  15              1         14             8        'SWI'       
+  3               1         15             1        'SWI'       
+  19              6         15             2        'TRP'       
+  3               3         15             3        'RSP'       
+  19              3         15             5        'RSP'       
+  19              6         16             1        'TRP'       
+  19              14        16             2        'SLP'       
+  19              16        16             3        'SLP'       
+  19              17        16             4        'SLP'       
+  19              15        16             5        'SLP'       
+  19              12        18             1        'undefined' 
+  19              3         18             2        'undefined' 
+  1               24        18             4        'undefined' 
+  1               3         18             5        'undefined' 
+  1               3         19             2        'RSP'       
+  1               21        19             3        'TOR'       
+  1               30        19             4        'EMI'       
+  3               3         19             5        'RSP'       
+  3               4         19             6        'DBL'       
+  3               1         19             7        'SWI'       
+  11              5         19             12       'TOR'       
+  11              6         19             13       'TOR'       
+  10              5         19             14       'TOR'       
+  10              6         19             15       'TOR'       
+  1               21        19             16       'TOR'       
+  2               5         19             17       'TOR'       
+  12              5         19             18       'TOR'       
+  12              6         19             19       'TOR'       
+  3               6         19             20       'TOR'       
+  2               2         19             21       'RSP'       
+  12              2         19             22       'RSP'       
+  12              3         19             23       'RSP'       
+{ LAYER_ID NAME         STATE CL_ID CL_ENTW_DATUM }
+  1        'Powertrain' 3     nil   nil           
+  2        'CarSim'     3     nil   nil           
+$----------------------------------------------------Layerset
+(TM_LAYERSET)
+#TP_ID                    = 
+LAYERSET_ID               = 1
+IDENT                     = 565207311075192007
+NAME                      = 'System 001'
+IS_CURRENT                = 1
+DO_VARIATION              = 
+CALCMODE                  = 1
+TMP_ID                    = 
+{ LAYER_ID STATE }
+  2        3     
+  1        3     
+{ INFO                                                                                                      }
+  'PROJEKT.BER_MAPPE_EINBAU:3.BER_MAPPE.AUFGABENMAPPE.KONSTANTFAHRT_EINBAU:2.KONSTANTFAHRT'                 
+  'PROJEKT.BER_MAPPE_EINBAU:3.BER_MAPPE.AUFGABENMAPPE.KONSTANTFAHRT_EINBAU:1.KONSTANTFAHRT'                 
+  'PROJEKT.BER_MAPPE_EINBAU:1.BER_MAPPE.AUFGABENMAPPE.ZYKLUSFAHRT_EINBAU:1.ZYKLUSFAHRT'                     
+  'PROJEKT.SAM_FOLDER_EINBAU.SAM_FOLDER.VIRT_SAM.SAM_TASK_EINBAU:1.SAM_TASK'                                
+  'PROJEKT.BER_MAPPE_EINBAU:7.BER_MAPPE'                                                                    
+  'PROJEKT.BER_MAPPE_EINBAU:4.BER_MAPPE.AUFGABENMAPPE.VOLLASTBESCHLEUNIGUNG_EINBAU:2.VOLLASTBESCHLEUNIGUNG' 
+  'PROJEKT.BER_MAPPE_EINBAU:4.BER_MAPPE.AUFGABENMAPPE.VOLLASTBESCHLEUNIGUNG_EINBAU:3.VOLLASTBESCHLEUNIGUNG' 
+  'PROJEKT.BER_MAPPE_EINBAU:2.BER_MAPPE.AUFGABENMAPPE.STEIGFAEHIGKEIT_EINBAU:2.STEIGFAEHIGKEIT'             
+  'PROJEKT.BER_MAPPE_EINBAU:2.BER_MAPPE.AUFGABENMAPPE.STEIGFAEHIGKEIT_EINBAU:3.STEIGFAEHIGKEIT'             
+  'PROJEKT.BER_MAPPE_EINBAU:5.BER_MAPPE.AUFGABENMAPPE.MAXIMALE_ZUGKRAFT_EINBAU:2.MAXIMALE_ZUGKRAFT'         
+  'PROJEKT.BER_MAPPE_EINBAU:4.BER_MAPPE.AUFGABENMAPPE.VOLLASTBESCHLEUNIGUNG_EINBAU:1.VOLLASTBESCHLEUNIGUNG' 
+  'PROJEKT.BER_MAPPE_EINBAU:7.BER_MAPPE.AUFGABENMAPPE.BREMSEN_EINBAU:1.BREMSEN'                             
+  'PROJEKT.SAM_FOLDER_EINBAU.SAM_FOLDER'                                                                    
+  'PROJEKT.BER_MAPPE_EINBAU:5.BER_MAPPE.AUFGABENMAPPE.MAXIMALE_ZUGKRAFT_EINBAU:1.MAXIMALE_ZUGKRAFT'         
+  'PROJEKT.BER_MAPPE_EINBAU:6.BER_MAPPE.AUFGABENMAPPE.STRECKENFAHRT_EINBAU:1.STRECKENFAHRT'                 
+  'PROJEKT.BER_MAPPE_EINBAU:6.BER_MAPPE'                                                                    
+  'PROJEKT.BER_MAPPE_EINBAU:2.BER_MAPPE.AUFGABENMAPPE.STEIGFAEHIGKEIT_EINBAU:1.STEIGFAEHIGKEIT'             
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 1
+MODUL_NR                  = 4
+NAME                      = 'Engine'
+ICON                      = ''
+ENTITY                    = 'VERBR_MOTOR'
+TOP                       = 287
+LEFT                      = 159
+BOTTOM                    = 376
+RIGHT                     = 288
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = '6 cylinder engine'
+{ NAME             NUM STR TST                     }
+  'MOT_ID'         nil ''  nil                     
+  'MOT_ENTW_DATUM' nil ''  "Nov 05, 1998 14:08:48" 
+{ CONNECTOR_ID CONNECTOR_NR X    Y   TYP }
+  1            1            1.0  0.5 'm' 
+  2            2            0.75 0.0 'a' 
+  3            3            0.25 1.0 't' 
+{ NAME                         VALUE }
+  'AUSGABE'                    2     
+  'REFERENZ'                   1     
+  'VERWENDUNG'                 3     
+  'TEMP_MODELL_HAUPTSCHALTER'  1     
+  'TEMPERATURMODELL'           2     
+  'VERBRAUCHSMODELL'           2     
+  'REIBMODELL'                 1     
+  'LL_VERBRAUCH_EMISSIONEN'    2     
+  'SCHUBKENNLINIE_1'           1     
+  'SCHUBKENNLINIE_2'           1     
+  'STARTANREICHERUNG'          1     
+  'BESCHL_ANREICHERUNG'        1     
+  'VERBR_MASSENSTROM_EXTERN_S' 1     
+  'VERBR_KOEFF_EXTERN_S'       1     
+  'LL_DREHZAHL_ERMITTLUNG'     1     
+  'LL_REGELUNG'                1     
+  'MAX_DREHZAHL_ERMITTLUNG'    1     
+  'VERLUSTMOMENTKENNLINIE'     1     
+  'ANSPRECHVERHALTEN_TURBO'    1     
+  'TC_PTX_SCHALT'              1     
+  'LL_LADEDRUCK_SCHALTER'      1     
+  'KORREKTURVERFAHREN'         1     
+  'SPEZ_VERBRAUCHSKENNFELD'    1     
+  'UREA_CONSUMPTION'           1     
+  'AIR_FUEL_RATIO'             1     
+  'REDUZIERTE_VOLLAST_1'       1     
+  'REDUZIERTE_VOLLAST_2'       1     
+  'REDUZIERTE_VOLLAST_3'       1     
+  'REDUZIERTE_VOLLAST_4'       1     
+  'REDUZIERTE_VOLLAST_5'       1     
+  'REDUZ_VOLLASTREDUKTION'     1     
+  'MOTORBREMSKENNLINIE'        1     
+  'ANLASSERSTROM'              1     
+  'DROSSELKLAPPENKENNFELD'     1     
+  'STEUERGROESSE'              1     
+  'AUSWAHL_ABGSANLAGE'         1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 2
+MODUL_NR                  = 7
+NAME                      = 'Torque Converter'
+ICON                      = ''
+ENTITY                    = 'WANDLER'
+TOP                       = 295
+LEFT                      = 287
+BOTTOM                    = 368
+RIGHT                     = 352
+ORIENTATION               = 20
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Torque Converter'
+{ NAME             NUM STR TST                     }
+  'WDL_ID'         nil ''  nil                     
+  'WDL_ENTW_DATUM' nil ''  "Nov 04, 1998 17:11:24" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  4            1            0.0 0.5 'm' 
+  5            2            1.0 0.5 'm' 
+{ NAME           VALUE }
+  'AUSGABE'      2     
+  'REFERENZ'     1     
+  'MODELLIERUNG' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 3
+MODUL_NR                  = 8
+NAME                      = 'Gear Box'
+ICON                      = ''
+ENTITY                    = 'GETRIEBE'
+TOP                       = 287
+LEFT                      = 351
+BOTTOM                    = 376
+RIGHT                     = 440
+ORIENTATION               = 20
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = '5 speed Gear Box'
+{ NAME             NUM STR TST                     }
+  'GET_ID'         nil ''  nil                     
+  'GET_ENTW_DATUM' nil ''  "Nov 04, 2002 02:09:48" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  6            1            0.0 0.5 'm' 
+  7            2            1.0 0.5 'm' 
+{ NAME                      VALUE }
+  'AUSGABE'                 2     
+  'GANGWECHSELZEITSCHALTER' 1     
+  'WIDERSTANDSSCHALTER'     3     
+  'GANGWECHSELVERLUSTE'     1     
+  'VERLUSTMOMENT_TEMP'      1     
+  'WIRKUNGSGRADEINGABE'     1     
+  'VERLUSTMOMENT_TEMP_T1'   2     
+  'VERLUSTMOMENT_TEMP_T2'   1     
+  'VERLUSTMOMENT_TEMP_T3'   1     
+  'VERLUSTMOMENT_TEMP_T4'   1     
+  'VERLUSTMOMENT_TEMP_T5'   1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 4
+MODUL_NR                  = 11
+NAME                      = 'Single Ratio Transmission'
+ICON                      = ''
+ENTITY                    = 'UEBERSETZUNGSSTUFE'
+TOP                       = 295
+LEFT                      = 623
+BOTTOM                    = 368
+RIGHT                     = 680
+ORIENTATION               = 1
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Final Drive Rear'
+{ NAME             NUM STR TST                     }
+  'UES_ID'         nil ''  nil                     
+  'UES_ENTW_DATUM' nil ''  "Nov 04, 2002 02:09:48" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  8            1            0.0 0.5 'm' 
+  9            2            1.0 0.5 'm' 
+{ NAME                    VALUE }
+  'VARIIERT'              2     
+  'AUSGABE'               2     
+  'ANGABE'                1     
+  'WIDERSTANDSSCHALTER'   3     
+  'VERLUSTMOMENT_TEMP'    1     
+  'WIRKUNGSGRADEINGABE'   1     
+  'VERLUSTMOMENT_TEMP_T1' 2     
+  'VERLUSTMOMENT_TEMP_T2' 1     
+  'VERLUSTMOMENT_TEMP_T3' 1     
+  'VERLUSTMOMENT_TEMP_T4' 1     
+  'VERLUSTMOMENT_TEMP_T5' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 5
+MODUL_NR                  = 11
+NAME                      = 'Single Ratio Transmission'
+ICON                      = ''
+ENTITY                    = 'UEBERSETZUNGSSTUFE'
+TOP                       = 375
+LEFT                      = 127
+BOTTOM                    = 448
+RIGHT                     = 184
+ORIENTATION               = 1
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Final Drive Front'
+{ NAME             NUM STR TST                     }
+  'UES_ID'         nil ''  nil                     
+  'UES_ENTW_DATUM' nil ''  "Nov 04, 2002 02:09:48" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y     TYP }
+  10           1            1.0 0.125 'm' 
+  11           2            0.0 0.125 'm' 
+{ NAME                    VALUE }
+  'VARIIERT'              2     
+  'AUSGABE'               2     
+  'ANGABE'                1     
+  'WIDERSTANDSSCHALTER'   3     
+  'VERLUSTMOMENT_TEMP'    1     
+  'WIRKUNGSGRADEINGABE'   1     
+  'VERLUSTMOMENT_TEMP_T1' 2     
+  'VERLUSTMOMENT_TEMP_T2' 1     
+  'VERLUSTMOMENT_TEMP_T3' 1     
+  'VERLUSTMOMENT_TEMP_T4' 1     
+  'VERLUSTMOMENT_TEMP_T5' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 6
+MODUL_NR                  = 16
+NAME                      = 'Hub'
+ICON                      = ''
+ENTITY                    = 'NABE'
+TOP                       = 111
+LEFT                      = 71
+BOTTOM                    = 192
+RIGHT                     = 152
+ORIENTATION               = 30
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Hub FR'
+{ NAME             NUM STR TST                     }
+  'NAB_ID'         nil ''  nil                     
+  'NAB_ENTW_DATUM' nil ''  "Jun 30, 2010 17:34:16" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  12           1            0.5 1.0 'm' 
+{ NAME                 VALUE }
+  'AUSGABE'            2     
+  'DYNAMISCH_SCHALTER' 1     
+  'EINBAUORT'          4     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 7
+MODUL_NR                  = 16
+NAME                      = 'Hub'
+ICON                      = ''
+ENTITY                    = 'NABE'
+TOP                       = 479
+LEFT                      = 71
+BOTTOM                    = 560
+RIGHT                     = 152
+ORIENTATION               = 10
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Hub FL'
+{ NAME             NUM STR TST                     }
+  'NAB_ID'         nil ''  nil                     
+  'NAB_ENTW_DATUM' nil ''  "Jun 30, 2010 17:34:16" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  13           1            0.5 0.0 'm' 
+{ NAME                 VALUE }
+  'AUSGABE'            2     
+  'DYNAMISCH_SCHALTER' 1     
+  'EINBAUORT'          1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 8
+MODUL_NR                  = 16
+NAME                      = 'Hub'
+ICON                      = ''
+ENTITY                    = 'NABE'
+TOP                       = 119
+LEFT                      = 679
+BOTTOM                    = 200
+RIGHT                     = 760
+ORIENTATION               = 30
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Hub RR'
+{ NAME             NUM STR TST                     }
+  'NAB_ID'         nil ''  nil                     
+  'NAB_ENTW_DATUM' nil ''  "Jun 30, 2010 17:34:16" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  14           1            0.5 1.0 'm' 
+{ NAME                 VALUE }
+  'AUSGABE'            2     
+  'DYNAMISCH_SCHALTER' 1     
+  'EINBAUORT'          3     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 9
+MODUL_NR                  = 16
+NAME                      = 'Hub'
+ICON                      = ''
+ENTITY                    = 'NABE'
+TOP                       = 479
+LEFT                      = 679
+BOTTOM                    = 560
+RIGHT                     = 760
+ORIENTATION               = 10
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Hub RL'
+{ NAME             NUM STR TST                     }
+  'NAB_ID'         nil ''  nil                     
+  'NAB_ENTW_DATUM' nil ''  "Jun 30, 2010 17:34:16" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  15           1            0.5 0.0 'm' 
+{ NAME                 VALUE }
+  'AUSGABE'            2     
+  'DYNAMISCH_SCHALTER' 1     
+  'EINBAUORT'          2     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 10
+MODUL_NR                  = 24
+NAME                      = 'Differential'
+ICON                      = ''
+ENTITY                    = 'DIFFERENTIAL'
+TOP                       = 287
+LEFT                      = 679
+BOTTOM                    = 376
+RIGHT                     = 760
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Rear Differential'
+{ NAME             NUM STR TST                     }
+  'DIF_ID'         nil ''  nil                     
+  'DIF_ENTW_DATUM' nil ''  "Nov 04, 1998 18:11:33" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  16           1            0.0 0.5 'm' 
+  17           2            0.5 1.0 'm' 
+  18           3            0.5 0.0 'm' 
+{ NAME                  VALUE }
+  'AUSGABE'             2     
+  'WIDERSTANDSSCHALTER' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 11
+MODUL_NR                  = 24
+NAME                      = 'Differential'
+ICON                      = ''
+ENTITY                    = 'DIFFERENTIAL'
+TOP                       = 287
+LEFT                      = 71
+BOTTOM                    = 376
+RIGHT                     = 152
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Front Differential'
+{ NAME             NUM STR TST                     }
+  'DIF_ID'         nil ''  nil                     
+  'DIF_ENTW_DATUM' nil ''  "Nov 04, 1998 18:11:33" 
+{ CONNECTOR_ID CONNECTOR_NR X     Y   TYP }
+  19           1            0.875 1.0 'm' 
+  20           2            0.5   1.0 'm' 
+  21           3            0.5   0.0 'm' 
+{ NAME                  VALUE }
+  'AUSGABE'             2     
+  'WIDERSTANDSSCHALTER' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 12
+MODUL_NR                  = 24
+NAME                      = 'Differential'
+ICON                      = ''
+ENTITY                    = 'DIFFERENTIAL'
+TOP                       = 287
+LEFT                      = 439
+BOTTOM                    = 376
+RIGHT                     = 520
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Central Differential'
+{ NAME             NUM STR TST                     }
+  'DIF_ID'         nil ''  nil                     
+  'DIF_ENTW_DATUM' nil ''  "Nov 04, 1998 18:11:33" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  22           1            0.0 0.5 'm' 
+  23           2            0.5 1.0 'm' 
+  24           3            1.0 0.5 'm' 
+{ NAME                  VALUE }
+  'AUSGABE'             2     
+  'WIDERSTANDSSCHALTER' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 13
+MODUL_NR                  = 60
+NAME                      = 'Cockpit'
+ICON                      = ''
+ENTITY                    = 'COCKPIT'
+TOP                       = 455
+LEFT                      = 223
+BOTTOM                    = 584
+RIGHT                     = 320
+ORIENTATION               = 30
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Cockpit'
+{ NAME             NUM STR TST                     }
+  'CKP_ID'         nil ''  nil                     
+  'CKP_ENTW_DATUM' nil ''  "Jul 20, 2010 18:06:26" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                  VALUE }
+  'AUSGABE'             2     
+  'EXTERNE_VORGABE'     1     
+  'EXTERNE_SOLLGESCHW'  1     
+  'FAHRPEDAL_AUSWAHL'   1     
+  'FAHRZUSTAND_AUSWAHL' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 14
+MODUL_NR                  = 61
+NAME                      = 'Gear Box Control'
+ICON                      = ''
+ENTITY                    = 'GETRIEBESTEUERUNG'
+TOP                       = 167
+LEFT                      = 375
+BOTTOM                    = 248
+RIGHT                     = 440
+ORIENTATION               = 30
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'GB Control'
+{ NAME              NUM STR TST                     }
+  'MGST_ID'         nil ''  nil                     
+  'MGST_ENTW_DATUM' nil ''  "Nov 05, 1998 02:11:48" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                        VALUE }
+  'AUSGABE'                   2     
+  'SCHALTVERZUGSCHALTER'      1     
+  'GANGSPRUNGSCHALTER_HOCH'   1     
+  'GANGSPRUNGSCHALTER_RUNTER' 1     
+  'SAM_STEUER_PROG'           1     
+  'SAM_GANGWAHL_HOCH'         2     
+  'SAM_GANGWAHL_RUNTER'       2     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 15
+MODUL_NR                  = 62
+NAME                      = 'Gear Box Program'
+ICON                      = ''
+ENTITY                    = 'GETRIEBEPROGRAMM'
+TOP                       = 167
+LEFT                      = 327
+BOTTOM                    = 248
+RIGHT                     = 392
+ORIENTATION               = 30
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'GB Program'
+{ NAME             NUM STR TST                     }
+  'GPR_ID'         nil ''  nil                     
+  'GPR_ENTW_DATUM' nil ''  "Nov 04, 2002 02:09:48" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                            VALUE }
+  'AUSGABE'                       2     
+  'SCHALTPROGRAMM_VERWENDUNG'     1     
+  'SCHALTPROGRAMM_SP2'            1     
+  'SCHALTPROGRAMM_SP3'            1     
+  'SCHALTPROGRAMM_SP4'            1     
+  'SCHALTPROGRAMM_SP5'            1     
+  'KICKDOWNTABELLE'               1     
+  'VERWEILDAUER'                  1     
+  'GANGSPRUNGSCHALTER_HOCH_GBP'   2     
+  'GANGSPRUNGSCHALTER_RUNTER_GBP' 2     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 16
+MODUL_NR                  = 71
+NAME                      = 'Anti-Slip Control'
+ICON                      = ''
+ENTITY                    = 'SCHLUPFREGELUNG'
+TOP                       = 447
+LEFT                      = 343
+BOTTOM                    = 528
+RIGHT                     = 424
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'ASC'
+{ NAME             NUM STR TST                     }
+  'ASC_ID'         nil ''  nil                     
+  'ASC_ENTW_DATUM' nil ''  "Nov 03, 1999 01:16:17" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                     VALUE }
+  'AUSGABE'                2     
+  'SIMULATIONSAKTIVIERUNG' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 17
+MODUL_NR                  = 80
+NAME                      = 'Exhaust System'
+ICON                      = ''
+ENTITY                    = 'ABGASANLAGE'
+TOP                       = 231
+LEFT                      = 575
+BOTTOM                    = 296
+RIGHT                     = 680
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Catalyst'
+{ NAME             NUM STR TST                     }
+  'KAT_ID'         nil ''  nil                     
+  'KAT_ENTW_DATUM' nil ''  "Nov 08, 2009 21:11:20" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  25           1            0.0 0.5 'a' 
+{ NAME                   VALUE }
+  'AUSGABE'              2     
+  'TEMPERATURMODELL_KAT' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 18
+MODUL_NR                  = 99
+NAME                      = 'Monitor'
+ICON                      = ''
+ENTITY                    = 'MONITOR'
+TOP                       = 447
+LEFT                      = 431
+BOTTOM                    = 528
+RIGHT                     = 512
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Monitor'
+{ NAME             NUM STR TST                     }
+  'MON_ID'         nil ''  nil                     
+  'MON_ENTW_DATUM' nil ''  "Nov 01, 2005 15:17:47" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME      VALUE }
+  'AUSGABE' 2     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 19
+MODUL_NR                  = 181
+NAME                      = 'CarSim'
+ICON                      = ''
+ENTITY                    = 'CAR_SIM'
+TOP                       = 15
+LEFT                      = 71
+BOTTOM                    = 96
+RIGHT                     = 760
+ORIENTATION               = 0
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'CarSim'
+{ NAME              NUM STR TST                     }
+  'CSIM_ID'         nil ''  nil                     
+  'CSIM_ENTW_DATUM' nil ''  "Sep 02, 2010 14:05:06" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME      VALUE }
+  'AUSGABE' 2     

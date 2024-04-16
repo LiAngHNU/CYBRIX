@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName Tire`225/60 R18 (Camber Ext.: Asymmetric)`Extended Tire Model
+FZ_REF 5500
+X_LENGTH 364
+Z_LENGTH 364
+Y_LENGTH 225
+#CheckBox2 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 6
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 6
+
+PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+#BlueLink4 Animator: Shape Assembly`Sports Car` Tires` , Animator`ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 225
+RRE 364
+R0 364
+FZ_TIRE_COEFFICIENT 230
+FZ_MAX 100000
+M_TIRE 25
+IT 2
+IT_XXZZ 1.1
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0064
+RR_V 0.000090718
+L_CONTACT_X_CONSTANT 115
+L_CONTACT_Y_CONSTANT 225
+RR_FX 0
+OPT_TIRE_COMB 1
+R_TIRE_COMB 1.1
+PARSFILE Tires\Mz\TireMz_e6d5d369-8847-4c17-840f-31d0562c53fe.par
+#BlueLink0 Tire: Aligning Moment`MF-Tyre Asymmetric` MF-Tyre Example` , Aligning Moment`TireMz_e6d5d369-8847-4c17-840f-31d0562c53fe
+
+PARSFILE Tires\Fy\TireFy_f3064243-1679-4e67-a518-5df3ce9072f0.par
+#BlueLink1 Tire: Lateral Force`MF-Tyre Asymmetric` MF-Tyre Example` , Lateral Force`TireFy_f3064243-1679-4e67-a518-5df3ce9072f0
+
+PARSFILE Tires\Fx\TireFx_615ef077-bee1-455a-a9d3-3d5efbf125f6.par
+#BlueLink2 Tire: Longitudinal Force`MF-Tyre Asymmetric` MF-Tyre Example` , Longitudinal Force`TireFx_615ef077-bee1-455a-a9d3-3d5efbf125f6
+
+PARSFILE Tires\FyC\TireFyC_380662ad-0cf2-4129-971f-366722786bf3.par
+#BlueLink6 Tire: Lateral Force vs. Inclination`MF-Tyre Asymmetric` MF-Tyre Example` , Lateral Force vs Gamma`TireFyC_380662ad-0cf2-4129-971f-366722786bf3
+
+PARSFILE Tires\MzC\TireMzC_b941f9a6-2bea-42ec-b93e-9156d4aa1635.par
+#BlueLink7 Tire: Aligning Moment vs. Inclination`MF-Tyre Asymmetric` MF-Tyre Example` , Aligning Moment vs Gamma`TireMzC_b941f9a6-2bea-42ec-b93e-9156d4aa1635
+
+PARSFILE Tires\Mx\TireMx_b5842a3e-1d4b-497b-a1f2-99247e5c6e75.par
+#BlueLink8 Tire: Overturning Moment`MF-Tyre Asymmetric` MF-Tyre Example` , Overturning moment`TireMx_b5842a3e-1d4b-497b-a1f2-99247e5c6e75
+
+PARSFILE Tires\MxC\TireMxC_f129fe47-b53a-4e25-83f2-2073aa8be7e2.par
+#BlueLink9 Tire: Overturning Moment vs. Inclination`MF-Tyre Asymmetric` MF-Tyre Example` , Overturning Moment vs Gamma`TireMxC_f129fe47-b53a-4e25-83f2-2073aa8be7e2
+
+
+
+#EMBEDDED_NOTES
+#This tire data selects the model option "Internal with Camber Extensions".  However, the data source is "225/60 R18 (MF-Tyre, Asymmetric) V9, category: * Delft-Tyre", whose tire characteristics are measured by CarSim's tire tester function.Therefore, this dataset and the other dataset are based on the same tire characteristics. But they are just different tire models: This dataset adopts CarSim internal tire model while the other dataset adopts TNO MF-Tyre.
+#
+#This data also adopts combined slip transition that the direction of the total horizontal tire force is derived by the theoretical slip to normalized slip which is smoothly transitioned.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Extended Tire Model } 225/60 R18 (Camber Ext.: Asymmetric)
+#Library : Tire
+#DataSet : 225/60 R18 (Camber Ext.: Asymmetric)
+#Category: Extended Tire Model
+#FileID  : Tire_2276acda-8ae9-4aea-8adc-597fcda14491
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

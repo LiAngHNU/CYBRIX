@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Sidewalk w/ Curb and Crosswalk`Intersections
+NLANES 2
+OPTTHRESHOLD 2
+#MiscYellow0
+# 0.69 0.69 0.69, Concrete (Curb), 1, 10, 1, -8.2, m, -4.2, m, 0, , -50, 50, 1, , 0.007, Road
+# 0.69 0.69 0.69, Concrete (Curb), 1, 10, 1, -15, m, -8.2, m, 0, , -25, 25, 1, , 0.007, Road
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 0.69 0.69 0.69
+MATERIAL(1) Concrete (Curb)
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -8.2
+LINUNITS(1) m
+LOUT(1) -4.2
+LOUTUNITS(1) m
+LDIV(1) 0
+SSTART(1) -50
+SSTOP(1) 50
+SINT(1) 1
+DZ(1) 0.007
+AUTODETAIL(1) Road
+COLOR(2) 0.69 0.69 0.69
+MATERIAL(2) Concrete (Curb)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 1
+LIN(2) -15
+LINUNITS(2) m
+LOUT(2) -8.2
+LOUTUNITS(2) m
+LDIV(2) 0
+SSTART(2) -25
+SSTOP(2) 25
+SINT(2) 1
+DZ(2) 0.007
+AUTODETAIL(2) Road
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Intersections } Sidewalk w/ Curb and Crosswalk
+#Library : Road: Animator Surface Shapes
+#DataSet : Sidewalk w/ Curb and Crosswalk
+#Category: Intersections
+#FileID  : RdShape_99da0736-690f-4826-90df-703de16c3b8d
+#Product : CarSim 2020.0
+#VehCode Road Shapes
+
+END

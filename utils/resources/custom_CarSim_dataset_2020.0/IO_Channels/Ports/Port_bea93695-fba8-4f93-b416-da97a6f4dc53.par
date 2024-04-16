@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName I/O Channels: Ports`ABS Controller: Multi-Port`Braking Controls
+#RingCtrl0 4
+#RingCtrl1 3
+#CheckBox0 0    
+
+IPORT_IMP 1
+PARSFILE IO_Channels\I_Channels\Import_3ece241d-682c-4d62-88ce-c3e569a00880.par
+#BlueLink0 I/O Channels: Import`Brake Wheel Cylinder Pressure L1` Brake System: Control and External Models` , Library for factor A`Import_3ece241d-682c-4d62-88ce-c3e569a00880
+
+IPORT_IMP 2
+PARSFILE IO_Channels\I_Channels\Import_16b0a3f0-a425-4921-9c6b-435d4bc6db71.par
+#BlueLink1 I/O Channels: Import`Brake Wheel Cylinder Pressure R1` Brake System: Control and External Models` , Baseline run`Import_16b0a3f0-a425-4921-9c6b-435d4bc6db71
+
+IPORT_IMP 3
+PARSFILE IO_Channels\I_Channels\Import_5cfe3d4e-fded-40a9-973d-63a54da463af.par
+#BlueLink2 I/O Channels: Import`Brake Wheel Cylinder Pressure L2` Brake System: Control and External Models` , Baseline run`Import_5cfe3d4e-fded-40a9-973d-63a54da463af
+
+IPORT_IMP 4
+PARSFILE IO_Channels\I_Channels\Import_32a96fa6-57f2-464c-b60b-e02a97f68026.par
+#BlueLink3 I/O Channels: Import`Brake Wheel Cylinder Pressure R2` Brake System: Control and External Models` , Baseline run`Import_32a96fa6-57f2-464c-b60b-e02a97f68026
+
+IPORT_EXP 1
+PARSFILE IO_Channels\O_Channels\Export_c1300b19-a673-4359-ac95-a14a8e85969b.par
+#BlueLink20 I/O Channels: Export`Four Wheel Speeds` Brake System: Control and External Models` , Library for factor B`Export_c1300b19-a673-4359-ac95-a14a8e85969b
+
+IPORT_EXP 2
+PARSFILE IO_Channels\O_Channels\Export_7dbd2490-8152-422b-95dd-2aa6499f7eac.par
+#BlueLink21 I/O Channels: Export`Vehicle Speed: Vxz_Fwd` Brake System: Control and External Models` , Baseline run`Export_7dbd2490-8152-422b-95dd-2aa6499f7eac
+
+IPORT_EXP 3
+PARSFILE IO_Channels\O_Channels\Export_3a65ed44-0d6d-4669-8e50-26ed8228d897.par
+#BlueLink22 I/O Channels: Export`Master Cylinder Pressure: Pbk_Con` Brake System: Control and External Models` , Baseline run`Export_3a65ed44-0d6d-4669-8e50-26ed8228d897
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Ports; { Braking Controls } ABS Controller: Multi-Port
+#Library : I/O Channels: Ports
+#DataSet : ABS Controller: Multi-Port
+#Category: Braking Controls
+#FileID  : Port_bea93695-fba8-4f93-b416-da97a6f4dc53
+#Product : CarSim 2020.0
+#VehCode I/O Ports
+
+END

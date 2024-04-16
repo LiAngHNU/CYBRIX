@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Vehicle: Sprung Mass (from Whole Vehicle)`Pickup, Midsize`
+#VehCode Rigid sprung mass (whole)
+iunit 1
+iaxle 2
+#CheckBox1 1    
+symbol_push_or_set <<hitch_x>> -4.3
+symbol_push_or_set <<hitch_y>> 0
+symbol_push_or_set <<hitch_z>> 0.47
+LX_H 4300
+H_H 470
+Y_H 0
+*M_TU 1985.61
+*LX_CG_TU 1376.60
+*Y_CG_TU 46.59
+M_SU 1715.61
+LX_CG_SU 1308.13
+Y_CG_SU 53.92
+H_CG_SU 736.55
+IXX_SU 631.36
+IYY_SU 4191.79
+IZZ_SU 4095.39
+IXY_SU 6.33
+IXZ_SU 41.41
+IYZ_SU 4.67
+L_WHEELBASE 3261
+*IXX_TU 800
+*IYY_TU 5000
+*IZZ_TU 5000
+*IXY_TU 0
+*IXZ_TU 0
+*IYZ_TU 0
+*H_CG_TU 686.1
+Z_LENGTH 1418
+Y_LENGTH 2152
+*HWC_LF 360
+*HWC_RF 360
+*HWC_LR 370
+*HWC_RR 370
+*W_LF 6044.7
+*W_RF 5207.5
+*W_LR 4262
+*W_RR 3958
+*M_US(1) 120
+*M_US(2) 150
+*IW(1) 2
+*IW(2) 2
+*L_TRACK(1) 1590
+*L_TRACK(2) 1590
+*IA(2) 60
+*IA(1) 50
+#RingCtrl0 1
+#RingCtrl1 0
+X_LENGTH 3261
+LX_AXLE 3261
+iaxle 1
+iside 1
+H_WC 360
+iside 2
+H_WC 360
+iaxle 2
+iside 1
+H_WC 370
+iside 2
+H_WC 370
+
+#EMBEDDED_NOTES
+#This is an example of a vehicle with an independent front suspension and solid-axle rear suspension that has been measured on scales and includes the unsprung mass.  CarSim calculates the sprung mass properties from the entered data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Sprung Mass (from Whole Vehicle); Pickup, Midsize
+#Library : Vehicle: Sprung Mass (from Whole Vehicle)
+#DataSet : Pickup, Midsize
+#Category: 
+#FileID  : TotMass_01512d16-b2c0-41f8-a16e-73a2307cd77c
+#Product : CarSim 2020.0
+#VehCode Rigid sprung mass (whole)
+
+END

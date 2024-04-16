@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName CarSim Run Control`Steer Controller with VS Commands`Extended Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_6ee7b251-3362-4e47-80d3-90ca59581138.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 3 El, 36 m` Vehicle Reference` , Animator camera`Camera_6ee7b251-3362-4e47-80d3-90ca59581138
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.8 0
+SET_RUN_COLOR 1 0.8 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_b51258ba-42c7-4b7e-b55d-077cd21c37c6.par
+#BlueLink28 Procedures`Extended Driver Model` Driver Model, Extended and External` , Procedure`Proc_b51258ba-42c7-4b7e-b55d-077cd21c37c6
+
+PARSFILE Generic\VS_commands\GenVS_81a52563-002e-4f79-9d78-0d8c29709b76.par
+#BlueLink9 Generic VS Commands`Steer Controller` Custom Steering Controls` , Miscellaneous`GenVS_81a52563-002e-4f79-9d78-0d8c29709b76
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Steer Controller with VS Commands <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Steer Controller with VS Commands
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A steering controller is written in VS Commands.
+#
+#Help > Technical Memos > Example: Extending a Model with VS Commands and the API
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Extended Models } Steer Controller with VS Commands
+#Library : CarSim Run Control
+#DataSet : Steer Controller with VS Commands
+#Category: Extended Models
+#FileID  : Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

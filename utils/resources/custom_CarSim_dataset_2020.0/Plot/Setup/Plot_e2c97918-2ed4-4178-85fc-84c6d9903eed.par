@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Tire Inner Rubber Temp (TameTire)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS TtrGi_L1, time
+PLOTCHANNELS TtrGi_R1, time
+PLOTCHANNELS TtrGi_L2, time
+PLOTCHANNELS TtrGi_R2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tire Inner Rubber Temp (TameTire)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Tire Inner Rubber Temp (TameTire)
+#Library : Plot: Setup
+#DataSet : Tire Inner Rubber Temp (TameTire)
+#Category: Tire Kinematics
+#FileID  : Plot_e2c97918-2ed4-4178-85fc-84c6d9903eed
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

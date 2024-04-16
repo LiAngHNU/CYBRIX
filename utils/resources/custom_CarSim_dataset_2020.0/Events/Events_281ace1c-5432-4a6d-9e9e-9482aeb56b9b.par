@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Events`Evaluate`Optimize Controls for Lap Time
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl1 ==
+#RingCtrl2 ==
+#RingCtrl3 ==
+#RingCtrl4 ==
+#RingCtrl10 5
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 current_lap_time
+*NAME2 next_search_dir
+*NAME3 next_search_dir
+*NAME4 next_search_dir
+*NAME5 next_search_dir
+*VALUE1 best_time_so_far
+*VALUE2 2
+*VALUE3 3
+*VALUE4 4
+*VALUE5 5
+#MiscYellow0
+current_lap_time = if(sv_n_start_cross<2,10000,T-lap_start_time)
+iter_count = iter_count+1
+#ENDMYellow
+
+MAKE_EVENT current_lap_time < best_time_so_far ; Events\Events_bdd87e8d-0e81-4f76-be64-c13767f86513.par
+#BlueLink0 Events`Update Best Time` Optimize Controls for Lap Time` , Events`Events_bdd87e8d-0e81-4f76-be64-c13767f86513
+
+MAKE_EVENT next_search_dir == 2 ; Events\Events_4ba41655-d640-4e31-9fd6-e2cea98fc2c8.par
+#BlueLink1 Events`Set 2` Optimize Controls for Lap Time` , Events`Events_4ba41655-d640-4e31-9fd6-e2cea98fc2c8
+
+MAKE_EVENT next_search_dir == 3 ; Events\Events_4c998f0e-4274-4ae8-802d-46029a40ba87.par
+#BlueLink2 Events`Set 3` Optimize Controls for Lap Time` , Events`Events_4c998f0e-4274-4ae8-802d-46029a40ba87
+
+MAKE_EVENT next_search_dir == 4 ; Events\Events_281ecd2c-36ac-48e2-96a6-4492d278172d.par
+#BlueLink3 Events`Set 4` Optimize Controls for Lap Time` , Events`Events_281ecd2c-36ac-48e2-96a6-4492d278172d
+
+MAKE_EVENT next_search_dir == 5 ; Events\Events_9cb1bc89-0488-4d1d-8324-cd8eec2df321.par
+#BlueLink4 Events`Update Delta` Optimize Controls for Lap Time` , Events`Events_9cb1bc89-0488-4d1d-8324-cd8eec2df321
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Lap time is heavily penalized if the car did not cross the finish line.
+#
+#iter_count may be used to track the number of restarts necessary to reach the stopping criterion.
+#
+#Depending on the current lap time, keep it, or search in other directions to see if a better time can be found.
+#
+#If out of search directions, update delta. Delta is the amount a variable is changed when a new search is made.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Optimize Controls for Lap Time } Evaluate
+#Library : Events
+#DataSet : Evaluate
+#Category: Optimize Controls for Lap Time
+#FileID  : Events_281ace1c-5432-4a6d-9e9e-9482aeb56b9b
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

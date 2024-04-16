@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Twist Beam - DLC`Suspension and Ride Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_61fd1d41-6b9c-41dc-beae-b4c36d01aa88
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0 0 0.8
+SET_RUN_COLOR 0 0 0.8
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_0ab2cd42-b7ab-4adb-b971-1aaaee97f3c4.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback: Twist Beam` B-Class` , Math Model`Vehicle_0ab2cd42-b7ab-4adb-b971-1aaaee97f3c4
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Plot\Setup\Plot_49899491-d8d8-4ff6-a245-a19f3e895cff.par
+#BlueLink15 Plot: Setup`Tire Compression` Tire Kinematics` , Plot`Plot_49899491-d8d8-4ff6-a245-a19f3e895cff
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Twist Beam - DLC <Suspension and Ride Tests>
+CATEGORY Suspension and Ride Tests 
+DATASET_TITLE Twist Beam - DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with a Twist Beam rear suspension performs a double lane change maneuver at 120 km/h.
+#
+#The twist beam is modeled as a variation of an independent suspension and is of the type that uses a pair of trailing arms connected by a transverse beam. The transverse beam is located about mid-way between the forward bushings and wheel centers.
+#
+#Help > Technical Memos > An Alternative Twist Beam Suspension
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Suspension and Ride Tests } Twist Beam - DLC
+#Library : CarSim Run Control
+#DataSet : Twist Beam - DLC
+#Category: Suspension and Ride Tests
+#FileID  : Run_61fd1d41-6b9c-41dc-beae-b4c36d01aa88
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

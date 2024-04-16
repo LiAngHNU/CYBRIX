@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Procedures`Rollover Steer Input`Stability Testing
+#CheckBox3 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 80
+*TSTOP 15
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+PARSFILE Roads\3D_Road\Road_cc73fa07-928b-470e-b16a-138bcaa60d82.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_cc73fa07-928b-470e-b16a-138bcaa60d82
+
+PARSFILE Events\Events_dd704ab4-85af-4f13-ac8c-0301178776d6.par
+#BlueLink1 Events`A. Rollover Steer Setup` Rollover Test` , Miscellaneous`Events_dd704ab4-85af-4f13-ac8c-0301178776d6
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink2 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Roads\Friction\RdMu_c8235679-ac14-458f-8e77-28bdd121c095.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 1.0` Constant` , Miscellaneous`RdMu_c8235679-ac14-458f-8e77-28bdd121c095
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink8 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink10 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_7a35820a-a0eb-411b-8232-4db8e14274c2.par
+#BlueLink11 Plot: Setup`Roll Rate (Body-fixed) of Sprung Mass` Vehicle Motion` , Plot`Plot_7a35820a-a0eb-411b-8232-4db8e14274c2
+
+PARSFILE Plot\Setup\Plot_b86d8c49-db4e-400a-a282-322334d38a2e.par
+#BlueLink12 Plot: Setup`Vehicle Sideslip Angle` Vehicle Motion` , Plot`Plot_b86d8c49-db4e-400a-a282-322334d38a2e
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink13 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_310b0189-b08d-49fc-a484-ee359eb89744.par
+#BlueLink14 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_310b0189-b08d-49fc-a484-ee359eb89744
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink15 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink16 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29.par
+#BlueLink17 Plot: Setup`Lateral Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink18 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink19 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink20 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_7251a722-18c9-43db-a324-bd380d275618.par
+#BlueLink21 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7251a722-18c9-43db-a324-bd380d275618
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink22 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how to use Event-driven tests to set up a simplified rollover steer input. All of the driver controls are defined on the various Events datasets.
+#
+#For more information, please see the Event dataset "A. Rollover Steer Setup."
+#
+#Please note that this test is not intended for general use in fishhook simulation; it was originally made to provide the same input to several vehicles to compare their stability.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Stability Testing } Rollover Steer Input
+#Library : Procedures
+#DataSet : Rollover Steer Input
+#Category: Stability Testing
+#FileID  : Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

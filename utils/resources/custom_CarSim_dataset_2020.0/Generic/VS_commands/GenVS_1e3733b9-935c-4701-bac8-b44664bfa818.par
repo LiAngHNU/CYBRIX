@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName Generic VS Commands`Ext. Steer - Internal Wheel Kinematics`External Steering
+#VehCode VS Commands
+
+#MiscYellow0
+! This example replaces the entire steering system.
+! It works with steering wheel angle as control input,
+! in either open-loop or closed-loop control mode.
+
+! opt_steer_ext, when set to 3, indicates the entire steering system
+! is replaced by an external model, except for the tie rod and steering
+! arm kinematics
+opt_steer_ext(1) 3
+
+! Output variables used
+!    Steer_SW -- Steering wheel angle from open or closed loop
+!    StrAV_SW -- Steering wheel angle rate
+!    Mz_Kp_L1 -- Steer torque, LF
+!    Mz_Kp_R1 -- Steer torque, RF
+
+! Steer effects imported to CarSim
+!    imp_steer_rack_con_l1   -- Position of steering gear, input to kinematics tables, LF
+!    imp_dsteer_rack_con_l1  -- Speed of steering gear, input to kinematics tables, LF
+!    imp_steer_rack_con_r1   -- Position of steering gear, input to kinematics tables, RF
+!    imp_dsteer_rack_con_r1  -- Speed of steering gear, input to kinematics tables, RF
+!    imp_r_str_ext_l1   -- Overall steer ratio LF (steering wheel angle rate / road wheel steer angle rate)
+!    imp_r_str_ext_r1   -- Overall steer ratio RF (steering wheel angle rate / road wheel steer angle rate)
+!    imp_steer_t_in     -- Steer torque at steering wheel
+! Configurable functions called
+!    rack_kin(0, position, (1 -> left or 2-> right)
+
+! create a parameter for perturbing a table to calculate its derivative
+define_parameter eps_str = 0.01; mm; Perturbation parameter
+
+! For this example, the steering system is represented by a C-factor
+! for a rack and pinion. The internal tie rod and steer arm kinematics
+! are retained
+! The c-factor is just the pitch circumference of the pinion
+define_parameter c_fact = 38.4; mm; C Factor
+define_parameter pinion_radius = c_fact / (2*pi); m; Pinion pitch radius
+
+! Calculate the rack motion and speeds
+! on steering wheel angle, steering rate and the ratio.
+! Then, activate the variables for import
+! Left front
+eq_out imp_steer_rack_con_l1 = steer_sw * pinion_radius;
+eq_out imp_dsteer_rack_con_l1 = strav_sw * pinion_radius;
+import imp_steer_rack_con_l1 vs_add 0
+import imp_dsteer_rack_con_l1 vs_add 0
+
+! Right front
+eq_out imp_steer_rack_con_r1 = steer_sw * pinion_radius;
+eq_out imp_dsteer_rack_con_r1 = strav_sw * pinion_radius;
+import imp_steer_rack_con_r1 vs_add 0
+import imp_dsteer_rack_con_r1 vs_add 0
+
+! The closed loop driver model needs the overall steering
+! ratio for each steered wheel
+! First, find a derivative of the table for tie rod and steer arm by perturbing it
+! Left side
+define_variable d_str_kin_l1 0;
+eq_out d_str_kin_l1 = (rack_kin(0, imp_steer_rack_con_l1 + eps_str, 1) - ...
+                     rack_kin(0, imp_steer_rack_con_l1, 1)) / eps_str;
+! calculate the overall ratio
+eq_out imp_r_str_ext_l1 = 1 / (pinion_radius * d_str_kin_l1);
+import imp_r_str_ext_l1 vs_add 0
+! Right side
+! First, find a derivative of the table for tie rod and steer arm by perturbing it
+define_variable d_str_kin_r1 0;
+eq_out d_str_kin_r1 = (rack_kin(0, imp_steer_rack_con_r1 + eps_str, 2) - ...
+                     rack_kin(0, imp_steer_rack_con_r1, 2)) / eps_str;
+! calculate the overall ratio
+eq_out imp_r_str_ext_r1 = 1 / (pinion_radius * d_str_kin_r1);
+import imp_r_str_ext_r1 vs_add 0
+! Calculate the steering wheel torque
+eq_out imp_steer_t_in = mz_kp_l1 / imp_r_str_ext_l1  + mz_kp_r1 / imp_r_str_ext_r1;
+import imp_steer_t_in vs_add 0
+
+! Output the driver model ratios
+define_output r_dr_l1 = imp_r_str_ext_l1;
+define_output r_dr_r1 = imp_r_str_ext_r1;
+define_output r_con_l1 = imp_steer_rack_con_l1;
+define_output r_con_r1 = imp_steer_rack_con_r1;
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This data set replaces much of the steering system, retaining only the internal model of tie rod / steer arm kinematics. CarSim internally has no information about any other element of the system.
+#
+#To make use of the closed-loop driver model, the instantaneous overall steering ratio for each steered wheel must be supplied as an import variable.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { External Steering } Ext. Steer - Internal Wheel Kinematics
+#Library : Generic VS Commands
+#DataSet : Ext. Steer - Internal Wheel Kinematics
+#Category: External Steering
+#FileID  : GenVS_1e3733b9-935c-4701-bac8-b44664bfa818
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

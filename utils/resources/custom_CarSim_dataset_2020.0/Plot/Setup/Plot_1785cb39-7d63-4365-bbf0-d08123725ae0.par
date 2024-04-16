@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Pneumatic Trail vs. Kappa`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS trail_l1, kappa_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Pneumatic Trail vs. Kappa
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Pneumatic Trail vs. Kappa
+#Library : Plot: Setup
+#DataSet : Pneumatic Trail vs. Kappa
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_1785cb39-7d63-4365-bbf0-d08123725ae0
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Deer Crossing Elevation Curve`Misc. Curved Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_a28f01c1-2e06-4dc5-9f2b-628c3dbe0721.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1002
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Deer Crossing Elevation Curve
+SET_IPATH_FOR_ID 0
+ROAD_PATH_ID = PATH_ID
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Shapes\RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1.par
+#BlueLink4 Road: Animator Surface Shapes`No Machine-Generated Shapes` ` , Road shape definitions`RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1
+
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_72ebbb07-0ed9-4606-a758-d7c406d515f8.par
+#BlueLink5 Animator: Camera Setup`Parking Lot Top` Custom Cameras` , Camera`Camera_72ebbb07-0ed9-4606-a758-d7c406d515f8
+
+parsfile Roads\3D_Road\Road_a28f01c1-2e06-4dc5-9f2b-628c3dbe0721.ani
+
+#EMBEDDED_NOTES
+#An invisible road is used to apply elevation changes for the path of the deer crossing the highway.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Misc. Curved Roads } Deer Crossing Elevation Curve
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Deer Crossing Elevation Curve
+#Category: Misc. Curved Roads
+#FileID  : Road_a28f01c1-2e06-4dc5-9f2b-628c3dbe0721
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

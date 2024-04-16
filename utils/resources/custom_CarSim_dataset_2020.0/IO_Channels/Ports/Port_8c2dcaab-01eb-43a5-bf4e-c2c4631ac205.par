@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName I/O Channels: Ports`Variable Effective Rolling Radius`Tire Kinematics
+#RingCtrl0 1
+#RingCtrl1 2
+#CheckBox0 0    
+
+IPORT_IMP 1
+PARSFILE IO_Channels\I_Channels\Import_dcffbcd6-ef9f-4b4d-9a35-68708caf9ed7.par
+#BlueLink0 I/O Channels: Import`Variable RRE Import` Tire Kinematics` , Library for factor A`Import_dcffbcd6-ef9f-4b4d-9a35-68708caf9ed7
+
+IPORT_EXP 1
+PARSFILE IO_Channels\O_Channels\Export_d17542ae-aa05-4f0d-a74d-44465b4ce679.par
+#BlueLink20 I/O Channels: Export`Variable RRE: Fz Export` Tire Kinematics` , Library for factor B`Export_d17542ae-aa05-4f0d-a74d-44465b4ce679
+
+IPORT_EXP 2
+PARSFILE IO_Channels\O_Channels\Export_8439885e-eecc-4f44-9bff-a0333b83b339.par
+#BlueLink21 I/O Channels: Export`Variable RRE: Gamma Export` Tire Kinematics` , Baseline run`Export_8439885e-eecc-4f44-9bff-a0333b83b339
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Ports; { Tire Kinematics } Variable Effective Rolling Radius
+#Library : I/O Channels: Ports
+#DataSet : Variable Effective Rolling Radius
+#Category: Tire Kinematics
+#FileID  : Port_8c2dcaab-01eb-43a5-bf4e-c2c4631ac205
+#Product : CarSim 2020.0
+#VehCode I/O Ports
+
+END

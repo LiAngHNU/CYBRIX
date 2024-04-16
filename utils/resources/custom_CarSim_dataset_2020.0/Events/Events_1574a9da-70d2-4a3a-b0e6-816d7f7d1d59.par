@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Events`D. Slowly Decreasing Steer to Ay = -0.3g`Slowly Increasing Steer Test
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 AY
+*VALUE1 -0.3
+*SPEED 80
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+#MiscYellow0
+OPT_WRITE 1
+#ENDMYellow
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+#MiscYellow1
+steer_sw_coefficient -13.5 ! specified ramp
+#ENDMYellow
+
+MAKE_EVENT AY <= -0.3 ; Events\Events_2c9d3292-4fbe-401b-8cfa-520aeb21a109.par
+#BlueLink0 Events`E. Revise Reference Steering Wheel Angle` Slowly Increasing Steer Test` , Events`Events_2c9d3292-4fbe-401b-8cfa-520aeb21a109
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Resume writing to allow plotting and animation for this part of the test.
+#
+#Start the next steering calibration test. Reset position and timer for steering ramp which is now -13.5, and continue until the lateral acceleration exceeds -0.3 g.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Slowly Increasing Steer Test } D. Slowly Decreasing Steer to Ay = -0.3g
+#Library : Events
+#DataSet : D. Slowly Decreasing Steer to Ay = -0.3g
+#Category: Slowly Increasing Steer Test
+#FileID  : Events_1574a9da-70d2-4a3a-b0e6-816d7f7d1d59
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

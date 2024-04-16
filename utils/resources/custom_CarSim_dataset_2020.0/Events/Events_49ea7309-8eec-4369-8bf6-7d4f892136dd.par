@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`C: Exit West`Roundabout Network, D = 38m
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+path_id_dm = 1003
+station = 75
+LTARG_DM = 0
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Roundabout Network, D = 38m } C: Exit West
+#Library : Events
+#DataSet : C: Exit West
+#Category: Roundabout Network, D = 38m
+#FileID  : Events_49ea7309-8eec-4369-8bf6-7d4f892136dd
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

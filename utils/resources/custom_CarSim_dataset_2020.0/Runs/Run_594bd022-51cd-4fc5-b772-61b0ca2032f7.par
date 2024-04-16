@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`3-Point Turn, Accel Control`* CS 2020.0 - Low Speed Behavior
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_594bd022-51cd-4fc5-b772-61b0ca2032f7
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5.par
+#BlueLink0 Animator: Camera Setup`254 Azm, 8 El, 15 m, No Yaw` Vehicle Reference` , Animator camera`Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_fc3b1684-8fb6-4fdb-a93d-9ee7e62b99af.par
+#BlueLink28 Procedures`3-Point Turn` Driver Controls` , Procedure`Proc_fc3b1684-8fb6-4fdb-a93d-9ee7e62b99af
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink10 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Animator\HUD\HUD_28a31fcb-503a-4a78-8256-b3516c7e91ca.par
+#BlueLink11 Animator: HUD`Throttle, Speedo w/ Gear, Brakes` Vehicle Status Indicators` , Miscellaneous`HUD_28a31fcb-503a-4a78-8256-b3516c7e91ca
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title 3-Point Turn, Accel Control <* CS 2020.0 - Low Speed Behavior>
+CATEGORY * CS 2020.0 - Low Speed Behavior 
+DATASET_TITLE 3-Point Turn, Accel Control
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#In this example, the vehicle makes a 3-point turn in an intersection.
+#
+#This shows the use of speed and steer control in reverse, and using acceleration control for smooth braking and accelerating.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Low Speed Behavior } 3-Point Turn, Accel Control
+#Library : CarSim Run Control
+#DataSet : 3-Point Turn, Accel Control
+#Category: * CS 2020.0 - Low Speed Behavior
+#FileID  : Run_594bd022-51cd-4fc5-b772-61b0ca2032f7
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

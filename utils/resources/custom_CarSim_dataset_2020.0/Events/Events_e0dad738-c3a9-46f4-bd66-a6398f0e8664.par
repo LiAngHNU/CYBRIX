@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Events`B. Wind Gust`Wind-tripped Rollover
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 zgnd_r1
+*VALUE1 -0.02
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+TSTART_WIND T_Stamp
+#ENDMYellow
+
+PARSFILE Wind\Speed\Wind_350c8081-8825-449a-a4a3-f12356d3f5c7.par
+#BlueLink10 Wind Speed`Constant: 100 km/h` Constant` , Miscellaneous`Wind_350c8081-8825-449a-a4a3-f12356d3f5c7
+
+PARSFILE Wind\Heading\WindDir_77e1a70d-289c-45fb-a686-b672f07a3586.par
+#BlueLink11 Wind Heading`Constant: -90 deg` Constant` , Miscellaneous`WindDir_77e1a70d-289c-45fb-a686-b672f07a3586
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT zgnd_r1 < -0.02 ; Events\Events_deab1555-63a8-4215-ac9e-6b8980496e9d.par
+#BlueLink0 Events`C. RF Tire Ref. Mu Reset, Driver Overreact` Wind-tripped Rollover` , Events`Events_deab1555-63a8-4215-ac9e-6b8980496e9d
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#A crosswind of 100 km/h is defined at a -90 deg. heading.  The height of the road is being tracked.  When it drops into the shoulder (-0.02 m below the road surface), the next event occurs.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Wind-tripped Rollover } B. Wind Gust
+#Library : Events
+#DataSet : B. Wind Gust
+#Category: Wind-tripped Rollover
+#FileID  : Events_e0dad738-c3a9-46f4-bd66-a6398f0e8664
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

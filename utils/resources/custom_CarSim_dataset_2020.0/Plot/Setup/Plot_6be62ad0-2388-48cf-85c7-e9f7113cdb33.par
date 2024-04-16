@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Peak lateral force at Fz`Tire utilization
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FyPkL1, time
+PLOTCHANNELS FyPkR1, time
+PLOTCHANNELS FyPkL2, time
+PLOTCHANNELS FyPkR2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Peak lateral force at Fz
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire utilization } Peak lateral force at Fz
+#Library : Plot: Setup
+#DataSet : Peak lateral force at Fz
+#Category: Tire utilization
+#FileID  : Plot_6be62ad0-2388-48cf-85c7-e9f7113cdb33
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

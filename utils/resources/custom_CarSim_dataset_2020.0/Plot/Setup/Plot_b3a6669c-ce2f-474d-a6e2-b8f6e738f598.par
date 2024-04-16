@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Ground Slope on Path vs. Station`Ground
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink2 CarSim Run Control`Speed Control from Driver Path` Driver Model` , example run`Run_b4187d53-3590-442e-817a-bb6cd1698c56
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_da78ff62-8a42-4f83-9bff-c1e49af95db0\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS PitchRd, Station
+PLOTCHANNELS Roll_Rd, Station
+PLOTCHANNELS PtchPath, Station
+PLOTCHANNELS RollPath, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 0
+#RingCtrl8 1
+
+
+PTITLE Ground Slope on Path vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Ground } Ground Slope on Path vs. Station
+#Library : Plot: Setup
+#DataSet : Ground Slope on Path vs. Station
+#Category: Ground
+#FileID  : Plot_b3a6669c-ce2f-474d-a6e2-b8f6e738f598
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

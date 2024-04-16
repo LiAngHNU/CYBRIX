@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName CarSim Run Control`Non-linear Spring Deflection`Extended Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_901c7a9f-f6d2-49b4-a752-33cf30ed9762
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_5feacfa5-2cee-4705-8aee-f5baa805e553.par
+#BlueLink0 Animator: Camera Setup`21 Azm, 5 El, 25 m` Road Reference` , Animator camera`Camera_5feacfa5-2cee-4705-8aee-f5baa805e553
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.6 0 0.2
+SET_RUN_COLOR 0.6 0 0.2
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan` D-Class` , Math Model`Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89
+
+PARSFILE Procedures\Proc_5a89142f-1f49-4856-b138-d0b22d42c412.par
+#BlueLink28 Procedures`Bounce Sine Sweep Test` Ride Tests` , Procedure`Proc_5a89142f-1f49-4856-b138-d0b22d42c412
+
+PARSFILE Generic\Group\GenGrp_32611719-118e-49c4-a8fc-62fc29859411.par
+#BlueLink9 Generic Data Group`D-Class, Sedan Spring Seat Tables` Suspension Extensions` , Miscellaneous`GenGrp_32611719-118e-49c4-a8fc-62fc29859411
+
+
+SPECIAL_PARSFILE Runs\Run_db4bb818-8634-450e-8fee-ebd655e9283b.par
+#BlueLink23 CarSim Run Control`Bounce Sine Sweep` Suspension and Ride Tests` , Overlay run or ERD file`Run_db4bb818-8634-450e-8fee-ebd655e9283b
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title Non-linear Spring Deflection <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Non-linear Spring Deflection
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan drives over a Bounce Sine Sweep Road.
+#
+#Generic Tables are used to represent nonlinear relationships between the suspension travel of the four wheels (i.e., jounce) and the lower spring seat displacement.
+#
+#Not all math model functions have direct GUI support, so this example demonstrates a common method to make use of CarSim's more advanced capabilities.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Extended Models } Non-linear Spring Deflection
+#Library : CarSim Run Control
+#DataSet : Non-linear Spring Deflection
+#Category: Extended Models
+#FileID  : Run_901c7a9f-f6d2-49b4-a752-33cf30ed9762
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

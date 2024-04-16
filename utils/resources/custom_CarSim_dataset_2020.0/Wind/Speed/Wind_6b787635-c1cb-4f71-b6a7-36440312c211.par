@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Wind Speed`100 km/h Bursts`Wind Bursts and Gusts
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 MULTIPLY
+WIND_SPEED_COMBINE MULTIPLY
+WIND_SPEED_CONSTANT 100
+#DiagramOne1
+WIND_SPEED_S_TABLE LINEAR_FLAT
+0, 0
+20, 0
+20.5, 1
+49.5, 1
+50, 0
+80, 0
+80.5, 1
+109.5, 1
+110, 0
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 100
+*SCALAR2 1
+D_AIR 1.206
+
+
+#EMBEDDED_NOTES
+#Wind Speed (kph)
+#
+#This dataset is used to represent a constant wind speed of 0 kph.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Wind Speed; { Wind Bursts and Gusts } 100 km/h Bursts
+#Library : Wind Speed
+#DataSet : 100 km/h Bursts
+#Category: Wind Bursts and Gusts
+#FileID  : Wind_6b787635-c1cb-4f71-b6a7-36440312c211
+#Product : CarSim 2020.0
+#VehCode Wind Speed
+
+END

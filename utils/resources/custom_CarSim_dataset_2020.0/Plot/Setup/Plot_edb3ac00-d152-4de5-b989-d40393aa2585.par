@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Y vs X - Axle Centers (5 Axles)`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_A1, X_A2, Axle 1
+PLOTCHANNELS Y_A2, X_A2, Axle 2
+PLOTCHANNELS Y_A3, X_A3, Axle 3
+PLOTCHANNELS Y_A4, X_A4, Axle 4
+PLOTCHANNELS Y_A5, X_A5, Axle 5
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Y vs X - Axle Centers (5 Axles)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Y vs X - Axle Centers (5 Axles)
+#Library : Plot: Setup
+#DataSet : Y vs X - Axle Centers (5 Axles)
+#Category: Tracking
+#FileID  : Plot_edb3ac00-d152-4de5-b989-d40393aa2585
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

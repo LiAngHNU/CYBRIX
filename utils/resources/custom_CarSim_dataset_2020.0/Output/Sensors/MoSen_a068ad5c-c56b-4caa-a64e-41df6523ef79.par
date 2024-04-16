@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Positions, Velocities, and Accelerations`Trailer Hitch Position`
+#RingCtrl0 0
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+*BODY_ID_1 1
+*X_S1 LX_H
+*Y_S1 Y_H
+*Z_S1 H_H
+
+ISENSOR_M = 1
+DEFINE_MOTION_SENSORS 1 + ISENSOR_M -1 -NSENSOR_M
+
+OPT_S_BODY_TYPE 1
+OPT_S_OUTPUT 1
+OPT_S_BODY_ID 1
+X_S LX_H
+Y_S Y_H
+Z_S H_H
+SET_DESCRIPTION MOTION_SENSOR_NAME Trailer Hitch Position
+
+MAKE_MOTION_SENSOR_OUTPUTS
+
+LOG_ENTRY Used Dataset: Positions, Velocities, and Accelerations; Trailer Hitch Position
+#Library : Positions, Velocities, and Accelerations
+#DataSet : Trailer Hitch Position
+#Category: 
+#FileID  : MoSen_a068ad5c-c56b-4caa-a64e-41df6523ef79
+#Product : CarSim 2020.0
+#VehCode Motion Sensors
+
+END

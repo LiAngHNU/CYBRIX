@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName Generic Data Group`ACC, 2 Lanes Fwd w/o Display`ADAS: Traffic for ACC & FCW
+#VehCode Generic Group
+#MiscYellow0
+SET_ILTARG_FOR_ID 0
+ltarg_constant = 2
+set_description ltarg_id ...
+  Lateral target for vehicles in the same lane
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_6c5afeea-6599-4958-ad71-ddff9cf04715.par
+#BlueLink0 Multiple Moving Objects`2 Veh., Variable Speed for AAC` Traffic Vehicles (w/o Target Display)` , Link 1`TMotion_6c5afeea-6599-4958-ad71-ddff9cf04715
+
+
+#MiscYellow1
+SET_ILTARG_FOR_ID 0
+ltarg_constant = -2
+set_description ltarg_id ...
+  Lateral target for vehicles in the right lane
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_1d26ee94-68fd-4ff8-9bc5-3ba53e018946.par
+#BlueLink1 Multiple Moving Objects`6 Veh., Vx * 0.95, ILTARG` Traffic Vehicles (w/o Target Display)` , Link 2`TMotion_1d26ee94-68fd-4ff8-9bc5-3ba53e018946
+
+
+#MiscYellow2
+SET_ILTARG_FOR_ID 0
+ltarg_constant = 6
+set_description ltarg_id ...
+  Lateral target for oncoming vehicles
+define_parameter vx_ref = speed_target(0,0,1); ...
+  km/h; Reference speed
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_192f9f40-7cda-43a8-b763-73868c5ce3fe.par
+#BlueLink2 Multiple Moving Objects`6 Veh., ILTARG, -Vx_Ref` Traffic Vehicles (w/o Target Display)` , Link 3`TMotion_192f9f40-7cda-43a8-b763-73868c5ce3fe
+
+
+PARSFILE Control\Speed_t\SpdTime_26c077aa-689c-4a04-9d1f-8d53a9c20b10.par
+#BlueLink3 Control: Speed (Closed Loop) Using Target Speed`Traffic Speed for ACC` Traffic Vehicles and Sensor Targets` , Link 4`SpdTime_26c077aa-689c-4a04-9d1f-8d53a9c20b10
+
+
+PARSFILE Sensors_Traffic\Radar\Radar_2c746cd8-d0de-4b24-b062-d4fdea17796c.par
+#BlueLink4 ADAS Sensors for Range and Tracking`FCW and ACC, No Display` Forward Facing Sensors: FCW and ACC` , Link 5`Radar_2c746cd8-d0de-4b24-b062-d4fdea17796c
+
+
+PARSFILE Generic\VS_commands\GenVS_5bda99aa-7aed-41c8-91b2-5dd1b15d8322.par
+#BlueLink5 Generic VS Commands`ACC Equations` ADAS Support` , Link 6`GenVS_5bda99aa-7aed-41c8-91b2-5dd1b15d8322
+
+
+
+#MiscYellow7
+
+ACC_DISTANCE = 8
+#ENDMYellow
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset assembles some traffic vehicles with an ACC Sensor and two blind-spot sensors. The equations used to show the ACC icon and modify the target speed used internally by the CarSim speed controller involve the detection of the closest vehicle.
+#
+#The linked datasets are made to ensure that moving objects (the traffic vehicles) and the ACC Sensor are defined before the link to the ACC Equations.
+#
+#The moving objects from link 1 follow a target speed defined in link 3. The vehicles from link 3 use a speed assigned to a custom parameter VX_REF.
+#
+#The lateral positions of the moving objects are set using the LTARG function, with datasets specified with ILTARG.
+#
+#Removed ISPEED and N_SPPED_TARGET variables because SPEED_TARGET indexing has changed in 2018.1.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic for ACC & FCW } ACC, 2 Lanes Fwd w/o Display
+#Library : Generic Data Group
+#DataSet : ACC, 2 Lanes Fwd w/o Display
+#Category: ADAS: Traffic for ACC & FCW
+#FileID  : GenGrp_ea243516-d139-4402-8771-8d657d48c037
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

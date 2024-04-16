@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Generic Table`D-Class, Sedan Front Spring Seat`Non-Linear Suspension Properties
+#RingCtrl0 SPLINE
+#CheckBox0 0    
+
+#DiagramOne0
+cmp_spr_seat_TABLE SPLINE
+0, 0
+10, 6.5144
+20, 13.68024
+30, 21.4977
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD cmp_spr_seat
+*X_LABEL Jounce
+*Y_LABEL Spring seat deflection
+
+
+#EMBEDDED_NOTES
+#CarSim supports non-linear table functions for suspension mechanical ratios and compliances.
+#
+#Tables are rarely used for this data, so the browser only supports linear coefficients to reduce the number and complexity of screens to define the suspension.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Non-Linear Suspension Properties } D-Class, Sedan Front Spring Seat
+#Library : Generic Table
+#DataSet : D-Class, Sedan Front Spring Seat
+#Category: Non-Linear Suspension Properties
+#FileID  : GenTab_899b074a-9449-4a8a-8a22-d0b9c9050323
+#Product : CarSim 2020.0
+#VehCode table
+
+END

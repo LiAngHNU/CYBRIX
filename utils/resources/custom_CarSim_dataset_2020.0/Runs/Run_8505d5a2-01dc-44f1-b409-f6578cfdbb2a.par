@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName CarSim Run Control`Steer Controller w/ VS Defined Functions`Driver Model
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8505d5a2-01dc-44f1-b409-f6578cfdbb2a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_6ee7b251-3362-4e47-80d3-90ca59581138.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 3 El, 36 m` Vehicle Reference` , Animator camera`Camera_6ee7b251-3362-4e47-80d3-90ca59581138
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 0
+SET_RUN_COLOR 0 0.4 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_b51258ba-42c7-4b7e-b55d-077cd21c37c6.par
+#BlueLink28 Procedures`Extended Driver Model` Driver Model, Extended and External` , Procedure`Proc_b51258ba-42c7-4b7e-b55d-077cd21c37c6
+
+PARSFILE Generic\VS_commands\GenVS_148f4dbf-6b91-4451-9259-ef7a0a8209ff.par
+#BlueLink9 Generic VS Commands`Steer Controller with Defined Functions` Custom Steering Controls` , Miscellaneous`GenVS_148f4dbf-6b91-4451-9259-ef7a0a8209ff
+
+
+SPECIAL_PARSFILE Runs\Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc.par
+#BlueLink23 CarSim Run Control`Steer Controller with VS Commands` Extended Models` , Overlay run or ERD file`Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Steer Controller w/ VS Defined Functions <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Steer Controller w/ VS Defined Functions
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A steering controller is written in VS Commands.
+#
+#Based on the road curvature, a different set of parameters is applied to the steering model.
+#
+#Using defined functions, the parameter sets are applied to the vehicle to improve steering control.
+#
+#Yellow vehicle is nominal (original) steering control.
+#
+#Green vehicle is new steering control.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Driver Model } Steer Controller w/ VS Defined Functions
+#Library : CarSim Run Control
+#DataSet : Steer Controller w/ VS Defined Functions
+#Category: Driver Model
+#FileID  : Run_8505d5a2-01dc-44f1-b409-f6578cfdbb2a
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

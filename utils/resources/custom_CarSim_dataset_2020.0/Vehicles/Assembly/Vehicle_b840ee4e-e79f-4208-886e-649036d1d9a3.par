@@ -1,0 +1,112 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Pickup, Full Size: Lifted (SA_SA)`Pickup Trucks
+#VehCode SA_SA
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_53515216-2d4d-4852-aacd-4c6ae0bc8dbd.par
+#BlueLink7 Steering`Pickup, Compact: Power, Recirc. Ball` Pickup Trucks` , Steering System`StrSys2_53515216-2d4d-4852-aacd-4c6ae0bc8dbd
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_c55d7398-3e92-46d5-9d5a-b007d01be70e.par
+#BlueLink27 Suspension: Solid Axle System Kinematics`Pickup, Full Size - Front` Pickup Trucks` , Kinematics`KinSA_c55d7398-3e92-46d5-9d5a-b007d01be70e
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_0de14c7a-c39c-4b8f-99f6-7d7819b2623b.par
+#BlueLink26 Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Full Size - Front` Pickup Trucks` , Compliance`CmpSA_0de14c7a-c39c-4b8f-99f6-7d7819b2623b
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_0286704b-e53b-41fb-a49e-781ecaefcd68.par
+#BlueLink999 Tire`315/75 R 16` Trailer and Light Truck Tires` , Tire`Tire_0286704b-e53b-41fb-a49e-781ecaefcd68
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_0286704b-e53b-41fb-a49e-781ecaefcd68.par
+#BlueLink10 Tire`315/75 R 16` Trailer and Light Truck Tires` , Tire`Tire_0286704b-e53b-41fb-a49e-781ecaefcd68
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_a7bd941f-1b7e-4b01-84aa-cdc48a618d05.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`Pickup, Full Size - Rear` Pickup Trucks` , Kinematics`KinSA_a7bd941f-1b7e-4b01-84aa-cdc48a618d05
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_648aa2cf-03c4-4d12-97b4-530d19c14efd.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Full Size - Rear` Pickup Trucks` , Compliance`CmpSA_648aa2cf-03c4-4d12-97b4-530d19c14efd
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_0286704b-e53b-41fb-a49e-781ecaefcd68.par
+#BlueLink999 Tire`315/75 R 16` Trailer and Light Truck Tires` , Tire`Tire_0286704b-e53b-41fb-a49e-781ecaefcd68
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_0286704b-e53b-41fb-a49e-781ecaefcd68.par
+#BlueLink999 Tire`315/75 R 16` Trailer and Light Truck Tires` , Tire`Tire_0286704b-e53b-41fb-a49e-781ecaefcd68
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_9a156b56-0776-4f89-a377-db33cee816f9.par
+#BlueLink0 Vehicle: Sprung Mass`Pickup, Super Cab, 5.5 ft Bed, Lifted` Pickup Trucks` , Sprung Mass`SprMass_9a156b56-0776-4f89-a377-db33cee816f9
+
+PARSFILE Aerodynamics\Aero_Main\Aero_7d32d095-6d2c-4a17-81d3-062dec6c7668.par
+#BlueLink1 Aerodynamics: Basic`Full-Size Pickup (3500 mm wheelbase)` Pickup Trucks` , Aerodynamics`Aero_7d32d095-6d2c-4a17-81d3-062dec6c7668
+
+PARSFILE Powertrain\4wd\4WD_fbfcb4f0-fd26-461e-bb78-c894e72a61fa.par
+#BlueLink5 Powertrain: 4-Wheel Drive`270 kW Diesel, 6-spd., 4.1 Ratio` 270 kW Powertrains` , Powertrain`4WD_fbfcb4f0-fd26-461e-bb78-c894e72a61fa
+
+PARSFILE Brakes\4W_System\Brk4W_1cac803a-e36c-431b-b18e-ee34e2087187.par
+#BlueLink6 Brakes: Four-Wheel System`Pickup (Full): MC Press, ABS` Pickup Trucks` , Brake System`Brk4W_1cac803a-e36c-431b-b18e-ee34e2087187
+
+PARSFILE Animator\Vehicles\AniVeh_9eaaef41-90b6-4bab-988c-23d84c8adabf.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Pickup, Full Size Sup Cab 5.5 Bed` Pickup Trucks` , Vehicle 3D Shape`AniVeh_9eaaef41-90b6-4bab-988c-23d84c8adabf
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9eaaef41-90b6-4bab-988c-23d84c8adabf.png
+
+#EMBEDDED_NOTES
+#Animation shape of a Full-Size Pickup Truck with an Extended Cab and a 5.5 foot bed.
+#
+#Generic full-size pickup truck with a front solid axle suspension and Hotchkiss Solid Axle rear suspension.
+#
+#Full-size pickup trucks include the Chevrolet Silverado, Dodge Ram, Ford F-150, Nissan Titan, and Toyota Tundra.
+#
+#In this example, the sprung mass of the Pickup, Full Size: Lifted (SA_SA) has the same sprung mass properties as another example vehicle called Pickup, Full size. The only difference is the wheel center heights are lower relative to the sprung mass coordinate system. Since the ground is defined by the bottom of the tires, this has the effect of raising the vehicle's sprung mass.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Pickup Trucks } Pickup, Full Size: Lifted (SA_SA)
+#Library : Vehicle: Assembly
+#DataSet : Pickup, Full Size: Lifted (SA_SA)
+#Category: Pickup Trucks
+#FileID  : Vehicle_b840ee4e-e79f-4208-886e-649036d1d9a3
+#Product : CarSim 2020.0
+#VehCode SA_SA
+
+END

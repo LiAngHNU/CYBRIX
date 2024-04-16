@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`Stop at Ay = AY_STOP`Validation Tests
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 AY_STOP
+*VALUE1 ABS(Ay)
+MAKE_EVENT AY_STOP <= ABS(Ay) ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Validation Tests } Stop at Ay = AY_STOP
+#Library : Events
+#DataSet : Stop at Ay = AY_STOP
+#Category: Validation Tests
+#FileID  : Events_eca461f5-3454-4626-9650-8f7ee4db11a9
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

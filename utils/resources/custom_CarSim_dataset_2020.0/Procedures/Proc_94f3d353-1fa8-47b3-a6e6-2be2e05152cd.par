@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName Procedures`Lane Keeping, Normal Driving`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 130
+*TSTOP -1
+*TSTART 0
+*SSTART 0
+*SSTOP 2234.
+
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_65670824-831c-47e5-a0ce-1ce4d6dd8fa1.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`Normal Driving on Road Course` Miscellaneous` , Speed vs. station`SpdPath_65670824-831c-47e5-a0ce-1ce4d6dd8fa1
+
+#MiscYellow0
+LTARG_CONSTANT -5.75
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_2e2d68ea-3745-4439-97f8-47f23dcb3105.par
+#BlueLink0 Road: 3D Surface (All Properties)`Handling Course` Self-Contained Scenes` , Miscellaneous`Road_2e2d68ea-3745-4439-97f8-47f23dcb3105
+
+#BlueLink1 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Events\Events_f69d433a-b23c-4fb6-b221-9dd0be417728.par
+#BlueLink4 Events`Stop After Number of Laps` Speed Control with Path Preview` , Miscellaneous`Events_f69d433a-b23c-4fb6-b221-9dd0be417728
+
+#MiscYellow1
+! reduce frequency to make a smaller file
+iprint = 80 ! 12.5 Hz
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1.par
+#BlueLink8 Plot: Setup`Longitudinal vs. Lateral Accel.` Vehicle Motion` , Plot`Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1
+
+PARSFILE Plot\Setup\Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29.par
+#BlueLink9 Plot: Setup`Lateral Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29
+
+PARSFILE Plot\Setup\Plot_a883e5dc-fa62-4460-8b54-d60ead53be33.par
+#BlueLink10 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a883e5dc-fa62-4460-8b54-d60ead53be33
+
+PARSFILE Plot\Setup\Plot_8158864c-cc8e-44ba-8dd8-e3af665dd87c.par
+#BlueLink11 Plot: Setup`Throttle: Control Input vs Station` Controls: Driver` , Plot`Plot_8158864c-cc8e-44ba-8dd8-e3af665dd87c
+
+PARSFILE Plot\Setup\Plot_2069b93a-8ce4-4265-a146-4941167b0a8c.par
+#BlueLink12 Plot: Setup`Brake Control: M/C Pressure vs Station` Braking` , Plot`Plot_2069b93a-8ce4-4265-a146-4941167b0a8c
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink13 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_d40909f8-5ca3-4822-a9f3-7dfd1bdbb77f.par
+#BlueLink14 Plot: Setup`Speed Limit, Target, and Actual` Controls: Driver` , Plot`Plot_d40909f8-5ca3-4822-a9f3-7dfd1bdbb77f
+
+PARSFILE Plot\Setup\Plot_245215aa-0bc5-4a7b-9223-5244b6612748.par
+#BlueLink15 Plot: Setup`Vehicle Path with Road Edges` Tracking` , Plot`Plot_245215aa-0bc5-4a7b-9223-5244b6612748
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates the use of the Target speed from path preview combined with the 3D road dataset "Handling Course."
+#
+#Rather than define a stop time or station, Events are used to record the number of laps the vehicle makes on the handling course. Once the vehicle has completed the specified number of laps, the simulation ends.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Lane Keeping, Normal Driving
+#Library : Procedures
+#DataSet : Lane Keeping, Normal Driving
+#Category: Driver Controls
+#FileID  : Proc_94f3d353-1fa8-47b3-a6e6-2be2e05152cd
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

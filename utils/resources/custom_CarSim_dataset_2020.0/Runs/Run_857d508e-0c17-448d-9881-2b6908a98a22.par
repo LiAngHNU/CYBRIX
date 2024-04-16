@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName CarSim Run Control`Michelin TameTire v6.1: DLC`* More Examples (Extra License Options)
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_857d508e-0c17-448d-9881-2b6908a98a22
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 15
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 7
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_57f47eb2-59a2-4fda-9bb9-4e741550fd82.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: TameTire 6.1` External Tire Models` , Math Model`Vehicle_57f47eb2-59a2-4fda-9bb9-4e741550fd82
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+PARSFILE Plot\Setup\Plot_c819546e-2705-479e-8b1a-9be2e10598ac.par
+#BlueLink15 Plot: Setup`Tire Ambient Temp (TameTire only)` Tire Kinematics` , Plot`Plot_c819546e-2705-479e-8b1a-9be2e10598ac
+
+PARSFILE Plot\Setup\Plot_5ae11689-71a6-4a9b-b860-5b4ad86eaf59.par
+#BlueLink16 Plot: Setup`Tire Core Temperature (TameTire only)` Tire Kinematics` , Plot`Plot_5ae11689-71a6-4a9b-b860-5b4ad86eaf59
+
+PARSFILE Plot\Setup\Plot_5a783de6-57b9-4715-ba91-42116401587b.par
+#BlueLink17 Plot: Setup`Tire Surface Temperature (TameTire only)` Tire Kinematics` , Plot`Plot_5a783de6-57b9-4715-ba91-42116401587b
+
+PARSFILE Plot\Setup\Plot_e2c97918-2ed4-4178-85fc-84c6d9903eed.par
+#BlueLink18 Plot: Setup`Tire Inner Rubber Temp (TameTire)` Tire Kinematics` , Plot`Plot_e2c97918-2ed4-4178-85fc-84c6d9903eed
+
+PARSFILE Plot\Setup\Plot_a04e4a8b-26b5-48fb-95a7-6967a14ae630.par
+#BlueLink19 Plot: Setup`Tire Inflation Pressure (TameTire only)` Tire Kinematics` , Plot`Plot_a04e4a8b-26b5-48fb-95a7-6967a14ae630
+
+PARSFILE Plot\Setup\Plot_0b641a02-ec98-4cbe-b074-222a78036d64.par
+#BlueLink20 Plot: Setup`RRE` Tire Kinematics` , Plot`Plot_0b641a02-ec98-4cbe-b074-222a78036d64
+
+PARSFILE Plot\Setup\Plot_64cb3336-8c32-4bee-ac86-7a1aead2adec.par
+#BlueLink21 Plot: Setup`Overturning Moments` Tire Forces and Moments` , Plot`Plot_64cb3336-8c32-4bee-ac86-7a1aead2adec
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Michelin TameTire v6.1: DLC <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE Michelin TameTire v6.1: DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan uses the Michelin TameTire model performing a double lane change maneuver at 120 km/h.
+#
+#A TameTire license is needed to allow the simulation to initialize and run correctly.
+#
+#To see how the TameTire data is incorporated into CarSim, browse to the Vehicle: Assembly screen and click on the tire datasets.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * More Examples (Extra License Options) } Michelin TameTire v6.1: DLC
+#Library : CarSim Run Control
+#DataSet : Michelin TameTire v6.1: DLC
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_857d508e-0c17-448d-9881-2b6908a98a22
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

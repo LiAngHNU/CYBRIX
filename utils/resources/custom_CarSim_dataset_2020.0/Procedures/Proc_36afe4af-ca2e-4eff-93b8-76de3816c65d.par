@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Procedures`Opt_Engine_Running: MT`Powertrain, Event-driven Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 60
+SSTOP 1200
+OPT_DIRECTION 0
+*SPEED 30
+*TSTOP 60
+*TSTART 0
+*SSTART 0
+*SSTOP 1200
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Opt_Engine_Running: MT
+SPEED_TARGET_CONSTANT 30
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_da4c0f36-c2f3-4d28-9ec7-163a8275a787.par
+#BlueLink0 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.85 (No Trees)` Straight` , Miscellaneous`Road_da4c0f36-c2f3-4d28-9ec7-163a8275a787
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+#MiscYellow1
+define_parameter Throt_Ref = 0; 
+! Throttle to be saved just before engine is turned off
+define_output ThrotRef = Throt_Ref; ! New output variable for plotting
+#ENDMYellow
+
+PARSFILE Events\Events_94cfbc7f-c86e-4c79-8c20-c9fb45882e9e.par
+#BlueLink7 Events`A. Wait 2.5 sec.` Opt_Engine_Running: Manual Transmission` , Miscellaneous`Events_94cfbc7f-c86e-4c79-8c20-c9fb45882e9e
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink9 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_24623312-0726-4966-8989-a55169cfacb4.par
+#BlueLink11 Plot: Setup`Opt_Engine_Running` Powertrain` , Plot`Plot_24623312-0726-4966-8989-a55169cfacb4
+
+PARSFILE Plot\Setup\Plot_e50a7869-1ae0-4046-9b80-8e64e63d190f.par
+#BlueLink12 Plot: Setup`Throt_Ref` Controls: Driver` , Plot`Plot_e50a7869-1ae0-4046-9b80-8e64e63d190f
+
+PARSFILE Plot\Setup\Plot_7251a722-18c9-43db-a324-bd380d275618.par
+#BlueLink13 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7251a722-18c9-43db-a324-bd380d275618
+
+PARSFILE Plot\Setup\Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31.par
+#BlueLink14 Plot: Setup`Engine RPM` Powertrain` , Plot`Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink15 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+PARSFILE Plot\Setup\Plot_84cf249c-520a-44d4-965b-f2a898a45ad5.par
+#BlueLink16 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_84cf249c-520a-44d4-965b-f2a898a45ad5
+
+PARSFILE Plot\Setup\Plot_acdda0e1-eda0-4f3c-9e9e-b60c57c7c4e8.par
+#BlueLink17 Plot: Setup`Transmision Clutch Control State` Powertrain` , Plot`Plot_acdda0e1-eda0-4f3c-9e9e-b60c57c7c4e8
+
+PARSFILE Plot\Setup\Plot_3fceb089-208c-4b84-84b4-d6aba7193f70.par
+#BlueLink18 Plot: Setup`Transmission Clutch Torque` Powertrain` , Plot`Plot_3fceb089-208c-4b84-84b4-d6aba7193f70
+
+PARSFILE Plot\Setup\Plot_2109be29-240d-4c11-b60e-823b8aa93f2b.par
+#BlueLink19 Plot: Setup`Wheel Drive Torques - Front` Powertrain` , Plot`Plot_2109be29-240d-4c11-b60e-823b8aa93f2b
+
+PARSFILE Plot\Setup\Plot_59f74859-7f34-4878-a9b5-3ba45cf252ae.par
+#BlueLink25 Plot: Setup`Event Count` Event Control` , Plot`Plot_59f74859-7f34-4878-a9b5-3ba45cf252ae
+
+PARSFILE Plot\Setup\Plot_865ec648-7e13-4974-803c-86946399ea5b.par
+#BlueLink26 Plot: Setup`Event Elapsed Time` Event Control` , Plot`Plot_865ec648-7e13-4974-803c-86946399ea5b
+
+
+#EMBEDDED_NOTES
+#Procedure and Events to demonstrate the use of the powertrain control parameter Opt_Engine_Running for a vehicle equipped with a Manual Transmission.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Powertrain, Event-driven Tests } Opt_Engine_Running: MT
+#Library : Procedures
+#DataSet : Opt_Engine_Running: MT
+#Category: Powertrain, Event-driven Tests
+#FileID  : Proc_36afe4af-ca2e-4eff-93b8-76de3816c65d
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

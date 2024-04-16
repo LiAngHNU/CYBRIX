@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName CarSim Run Control`Van w/ 3A Trailer, Yaw Damping, Left`Validation of Vehicle Data
+#VEHICLECODE Ind_SA + SSS
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_104e04b3-8054-4ef1-97b7-7b3c80be3607
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_6a11c7ab-48b8-4c1e-8c5d-f856fb38883f.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Large Euro Van w/ 3-Axle Flatbed Trailer` European Van` , Math Model`VehLoad_6a11c7ab-48b8-4c1e-8c5d-f856fb38883f
+
+PARSFILE Procedures\Proc_b1ae09a8-86c7-4f6a-baaf-3619be3c54d0.par
+#BlueLink28 Procedures`Yaw Damping` Stability Testing` , Procedure`Proc_b1ae09a8-86c7-4f6a-baaf-3619be3c54d0
+
+PARSFILE Generic\Group\GenGrp_dfd6b38e-7dd8-44b1-bcd4-2be02cc25297.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_dfd6b38e-7dd8-44b1-bcd4-2be02cc25297
+
+PARSFILE Plot\Setup\Plot_e63c50d7-929d-4614-87b0-e3aa73ef250a.par
+#BlueLink15 Plot: Setup`Hitch Forces` Hitch` , Plot`Plot_e63c50d7-929d-4614-87b0-e3aa73ef250a
+
+PARSFILE Plot\Setup\Plot_9699ef3d-faca-404f-86a2-414490d3c4f1.par
+#BlueLink16 Plot: Setup`Hitch Angular Rates` Hitch` , Plot`Plot_9699ef3d-faca-404f-86a2-414490d3c4f1
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_a8aec856-9536-4ef7-a407-8f78b29909e9.png
+WRITE_SENSOR_DETECT
+Title Van w/ 3A Trailer, Yaw Damping, Left <Validation of Vehicle Data>
+CATEGORY Validation of Vehicle Data 
+DATASET_TITLE Van w/ 3A Trailer, Yaw Damping, Left
+#MiscYellow0
+STEER_SW_GAIN = 52; ! Steer to the left
+! Do not reduce speed overshoot in Speed
+! Controller. See Echo File for more details.
+OPT_AUTO_RESET_IC = 0
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Euro Van w/ 3-Axle Flat Utility Trailer performing a Yaw Damping test (steer to the left).
+#
+#The steering pulse test is defined in ISO 14791.
+#
+#The waveform for the steering wheel angle is scaled to unity. It is rescaled to the desired amplitude using the parameter STEER_SW_GAIN, set using the Misc. yellow field on this Run Control screen. This gain is set based on the responsiveness of a specific vehicle, with the intent that the lead unit reaches a lateral acceleration of about 0.2 g.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Validation of Vehicle Data } Van w/ 3A Trailer, Yaw Damping, Left
+#Library : CarSim Run Control
+#DataSet : Van w/ 3A Trailer, Yaw Damping, Left
+#Category: Validation of Vehicle Data
+#FileID  : Run_104e04b3-8054-4ef1-97b7-7b3c80be3607
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

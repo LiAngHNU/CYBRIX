@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Tire`255/45 R18`Performance Tires
+FZ_REF 5500
+X_LENGTH 344
+Z_LENGTH 344
+Y_LENGTH 255
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+#BlueLink4 Animator: Shape Assembly`Sports Car` Tires` , Animator`ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 255
+RRE 337
+R0 344
+FZ_TIRE_COEFFICIENT 238
+FZ_MAX 100000
+M_TIRE 25
+IT 1.9
+IT_XXZZ 1.1
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0045
+RR_V 0.000027
+L_CONTACT_X_CONSTANT 105
+L_CONTACT_Y_CONSTANT 255
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 1.1
+PARSFILE Tires\Mz\TireMz_6043ab69-3436-4070-90b7-9d8453971bec.par
+#BlueLink0 Tire: Aligning Moment`255/45 R18` Performance Tires` , Aligning Moment`TireMz_6043ab69-3436-4070-90b7-9d8453971bec
+
+PARSFILE Tires\Fy\TireFy_47f88f61-e637-40cf-89f3-6534b41ab10d.par
+#BlueLink1 Tire: Lateral Force`255/45 R18` Performance Tires` , Lateral Force`TireFy_47f88f61-e637-40cf-89f3-6534b41ab10d
+
+PARSFILE Tires\Fx\TireFx_fc93723f-920f-4eea-9fdf-2fa7a974c74c.par
+#BlueLink2 Tire: Longitudinal Force`255/45 R18` Performance Tires` , Longitudinal Force`TireFx_fc93723f-920f-4eea-9fdf-2fa7a974c74c
+
+PARSFILE Tires\Camber_Thrust\CamStiff_f66641e0-c47e-486a-bf3e-dd0e1782a990.par
+#BlueLink3 Tire: Camber Thrust Coefficient`255/45 R18` Performance Tires` , Camber Thrust`CamStiff_f66641e0-c47e-486a-bf3e-dd0e1782a990
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 550 kg
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Performance Tires } 255/45 R18
+#Library : Tire
+#DataSet : 255/45 R18
+#Category: Performance Tires
+#FileID  : Tire_31394125-ce6e-4fd5-a170-24d55dceaa1c
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

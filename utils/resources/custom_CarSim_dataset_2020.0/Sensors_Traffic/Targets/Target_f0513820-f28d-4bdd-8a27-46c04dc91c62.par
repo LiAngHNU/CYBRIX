@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Target Vehicle, S: 145 m, Head: 70 deg`
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Target Vehicle, S: 145 m, Head: 70 deg
+OPT_SPEED_OBJ 0
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 3
+#RingCtrl1 1
+H_OBJ 1
+*COLOR 0.2 0.6 0.4
+*S_INIT 145
+*L_INIT -20
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 4.7
+LENGTH_OBJ 4.7
+WIDTH_OBJ 2.2
+LX_FRONT_OBJ 0.5
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 4.7
+Y_LENGTH 2.2
+Z_LENGTH 2
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.393617
+SET_OFFSET_Z 0.5
+SET_COLOR 0.2 0.6 0.4
+*SPEED 20
+*HEADING_VEL 70/DR
+EQ_INIT HeadO_<<o>> 70/DR
+*START station >100
+*STOP station >120
+PARSFILE Animator\Vehicles\AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`SUV, Full Size` Utility Vehicles: SUVs and Vans` , 3D Shape for Video`AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a
+
+EQ_INIT S_Obj_<<o>> 145
+EQ_INIT LatO_<<o>> -20
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 70/DR;-; Heading vector for ODEs
+DEFINE_VARIABLE COND_START_OBJ_<<o>>;-; Boolean to start motion
+EQ_FULL_STEP COND_START_OBJ_<<o>> = station >100 ;
+DEFINE_VARIABLE COND_STOP_OBJ_<<o>>; - ; Boolean to stop motion
+EQ_FULL_STEP COND_STOP_OBJ_<<o>> = station >120 ;
+EQ_OUT V_CMD_OBJ_<<o>> = IF(COND_START_OBJ_<<o>> & ~COND_STOP_OBJ_<<o>>, 20, 0);
+EQ_DIFFERENTIAL LatO_<<o>> = sin(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+EQ_DIFFERENTIAL S_Obj_<<o>> = cos(HeadV_O_<<o>>)*V_CMD_OBJ_<<o>>
+
+#EMBEDDED_NOTES
+#Changed to use '> operator for 2019.1
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); Target Vehicle, S: 145 m, Head: 70 deg
+#Library : Single Moving Object (Custom)
+#DataSet : Target Vehicle, S: 145 m, Head: 70 deg
+#Category: 
+#FileID  : Target_f0513820-f28d-4bdd-8a27-46c04dc91c62
+#Product : CarSim 2020.0
+#VehCode Moving Object (Custom)
+
+END

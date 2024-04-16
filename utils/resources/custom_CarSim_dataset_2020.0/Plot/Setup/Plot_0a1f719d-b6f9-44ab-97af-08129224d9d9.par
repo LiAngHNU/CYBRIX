@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Bump Plot (Fz vs. X) L1`Wheel Center Forces
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_wc_L1, X_L1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Bump Plot (Fz vs. X) L1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Wheel Center Forces } Bump Plot (Fz vs. X) L1
+#Library : Plot: Setup
+#DataSet : Bump Plot (Fz vs. X) L1
+#Category: Wheel Center Forces
+#FileID  : Plot_0a1f719d-b6f9-44ab-97af-08129224d9d9
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`A2. Change Lanes (Finds Local Min.)`Lane Change
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T_EVENT
+*VALUE1 5
+#MiscYellow0
+TSTART_T_EVENT = T !Reset Clock
+
+PATH_ID_DM 2000
+#ENDMYellow
+
+MAKE_EVENT T_EVENT > 5 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This event changes paths for the driver model without any information about what station should be used on the new path.
+#
+#The default behavior is that the VS Solver finds a valid station on the new path that is "correct" for the X-Y coordinates of the vehicle. However, in this example, it is not the closest point on the path and is probably not the point indended when making the switch.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Lane Change } A2. Change Lanes (Finds Local Min.)
+#Library : Events
+#DataSet : A2. Change Lanes (Finds Local Min.)
+#Category: Lane Change
+#FileID  : Events_0533ad2e-2c26-41e0-86a1-fce6e7f9e7dd
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

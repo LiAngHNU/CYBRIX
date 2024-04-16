@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`3-Way Intersection in City`VS Scene Builder
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_e0c52233-eb6d-47aa-b0ae-24f9b36405b5.png
+#CheckBox0 0    
+
+PARSFILE Roads\ExScene\SceneImp_3d51c3d3-9307-476a-b61a-17f0e1e2e039.par
+#BlueLink0 Scene: External Import`City Intersection, 3-Way` VS Scene Builder` , Reference Path`SceneImp_3d51c3d3-9307-476a-b61a-17f0e1e2e039
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_045f9b8a-2e8a-4608-8066-fecace521157.par
+#BlueLink5 Animator: Camera Setup`167 Azm, 5 El, 38 m` Road Reference` , Camera`Camera_045f9b8a-2e8a-4608-8066-fecace521157
+
+parsfile Roads\3D_Road\Road_e0c52233-eb6d-47aa-b0ae-24f9b36405b5.ani
+
+#EMBEDDED_NOTES
+#This dataset has an urban scene imported from VS Scene Builder, with 3 paths involving an intersection.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { VS Scene Builder } 3-Way Intersection in City
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 3-Way Intersection in City
+#Category: VS Scene Builder
+#FileID  : Road_e0c52233-eb6d-47aa-b0ae-24f9b36405b5
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

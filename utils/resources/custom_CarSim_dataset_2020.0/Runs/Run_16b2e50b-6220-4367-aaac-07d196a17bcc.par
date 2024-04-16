@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName CarSim Run Control`Railroad Track Crossing`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_16b2e50b-6220-4367-aaac-07d196a17bcc
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 5 El, 30 m` Vehicle Reference` , Animator camera`Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.4 0.2 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_7e0e83ef-877c-4ec4-b598-ec34ab363e23.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Large European Van w/ Payload` European Van` , Math Model`VehLoad_7e0e83ef-877c-4ec4-b598-ec34ab363e23
+
+PARSFILE Procedures\Proc_25729178-c100-470f-93d3-d0dabb8dcc48.par
+#BlueLink28 Procedures`Railroad Track Crossing` Driving` , Procedure`Proc_25729178-c100-470f-93d3-d0dabb8dcc48
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_a8aec856-9536-4ef7-a407-8f78b29909e9.png
+WRITE_SENSOR_DETECT
+Title Railroad Track Crossing <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Railroad Track Crossing
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A Large European Van with a payload crosses railroad tracks set at an angle with respect to the main road. Target Speed vs. Station is used to provide both the acceleration and braking control for this simulation.
+#
+#You can study this example to learn how to utilize the variable width roads in CarSim to model a ballasted railroad track or similar surface as well as two crossing roads.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: 3D Geometry and Terrain } Railroad Track Crossing
+#Library : CarSim Run Control
+#DataSet : Railroad Track Crossing
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_16b2e50b-6220-4367-aaac-07d196a17bcc
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

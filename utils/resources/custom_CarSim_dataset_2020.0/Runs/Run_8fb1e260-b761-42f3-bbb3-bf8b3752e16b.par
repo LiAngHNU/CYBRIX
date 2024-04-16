@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName CarSim Run Control`Roll Stability Testing w/ ESC`Handling and Stability Tests
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8fb1e260-b761-42f3-bbb3-bf8b3752e16b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_de42b31d-f3fe-4a1d-9f41-6616dbab24b5.par
+#BlueLink0 Animator: Camera Setup`190 Azm, 5 El, 49 m` Road Reference` , Animator camera`Camera_de42b31d-f3fe-4a1d-9f41-6616dbab24b5
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.4 0 0
+SET_RUN_COLOR 0.4 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_313b8111-3ba3-455f-9fff-4bbd991280e5.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`E-Class, SUV: Outriggers and Roof Load` E-Class` , Math Model`VehLoad_313b8111-3ba3-455f-9fff-4bbd991280e5
+
+PARSFILE Procedures\Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84.par
+#BlueLink28 Procedures`Rollover Steer Input` Stability Testing` , Procedure`Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84
+
+PARSFILE Control\ESC\ESC_7c83e406-8fbe-4de3-8a54-cf7a2e0c5ea3.par
+#BlueLink9 Control: Electronic Stability (ESC)`ESC for SUV` ` , Miscellaneous`ESC_7c83e406-8fbe-4de3-8a54-cf7a2e0c5ea3
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+
+SPECIAL_PARSFILE Runs\Run_756d0204-ba6a-45dc-8a4d-3cabfb558523.par
+#BlueLink23 CarSim Run Control`Outrigger for Roll Stability Testing` Extended Models` , Overlay run or ERD file`Run_756d0204-ba6a-45dc-8a4d-3cabfb558523
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+WRITE_SENSOR_DETECT
+Title Roll Stability Testing w/ ESC <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Roll Stability Testing w/ ESC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates a parametric Stability Control system and its influence on an E-Class SUV performing a Rollover Steer Input. The E-Class SUV in this example also includes outriggers and a rooftop payload.
+#
+#For comparison, this simulation is overlaid with another example, "Outrigger for Roll Stability Testing". That example has the same E-Class SUV as this example, but no ESC code is linked to it.
+#
+#Review the plots and animation to see the difference an ESC system can have on a vehicle performing a Rollover Steer Input.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Handling and Stability Tests } Roll Stability Testing w/ ESC
+#Library : CarSim Run Control
+#DataSet : Roll Stability Testing w/ ESC
+#Category: Handling and Stability Tests
+#FileID  : Run_8fb1e260-b761-42f3-bbb3-bf8b3752e16b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END
