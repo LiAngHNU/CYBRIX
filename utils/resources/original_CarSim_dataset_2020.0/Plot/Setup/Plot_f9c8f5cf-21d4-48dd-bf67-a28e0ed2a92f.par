@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance -- S1, S2 (2 Objects)`Object Sensors
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DisS1_1, Time
+PLOTCHANNELS DisS1_2, Time
+PLOTCHANNELS DisS2_1, Time
+PLOTCHANNELS DisS2_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance -- S1, S2 (2 Objects)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Object Sensors } Distance -- S1, S2 (2 Objects)
+#Library : Plot: Setup
+#DataSet : Distance -- S1, S2 (2 Objects)
+#Category: Object Sensors
+#FileID  : Plot_f9c8f5cf-21d4-48dd-bf67-a28e0ed2a92f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

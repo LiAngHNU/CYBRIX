@@ -1,0 +1,82 @@
+Run made by VS Tire Tester for CarSim and TruckSim 2020.0 at 21:02 on December 18, 2019.
+Utility to calculate tire behavior for simulated quasi-static tests
+Started with simfile: simfile.sim
+
+Include PARSFILE "Results\Run_bb23a773-723a-4a4f-ba2b-cddc07bff811\Run_all.par"
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 205/60 R14: Tire
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 205/60 R14: Wheel
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 205/60 R14: Stripe
+Used Dataset: Animator: Shape Assembly; { Tires } Big Car
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Extended } Extended Tire Models
+Used Dataset: Tire: Lateral Force; { Extended } Extended Tire
+Used Dataset: Tire: Longitudinal Force; { Extended } Extended Tire
+Used Dataset: Tire: Lateral Force vs. Inclination; Extended Tire
+Used Dataset: Tire: Aligning Moment vs. Inclination; Extended Tire
+Used Dataset: Tire: Overturning Moment; Extended Tire
+Used Dataset: Tire: Overturning Moment vs. Inclination; Extended Tire
+Used Dataset: Tire; { Extended Tire Model } Example Extended Tire
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Lateral Force vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Longitudinal Force vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Tangent of Slip Angle vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Lateral Shift of CTC vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fx vs Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fy and Pneumatic Trail vs Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Pneumatic Trail vs. Alpha
+Used Dataset: Generic VS Commands; { Miscellaneous Custom Output Variables } Derived Outputs for Tire Tester
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } Fx vs. Fy
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } Fx vs. Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } Mz vs. Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } Mx vs. Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } My vs. Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Fx
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Lateral Force vs. Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Longitudinal Force vs. Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Tangent of Slip Angle vs. Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Lateral Shift of CTC vs. Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fx vs Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fy and Pneumatic Trail vs Kappa
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Pneumatic Trail vs. Kappa
+Used Dataset: Tire Tester; { Sweep Kappa +/- 1.0 } Sweep Kappa: Fz = 4000 N
+Used Dataset: I/O Channels: Write; All Outputs with Tire for Excel
+ Friction Ellipse - Alpha = -8 deg <Tire Tester>
+Used Dataset: CarSim Run Control; { Tire Tester } Friction Ellipse - Alpha = -8 deg
+
+Time to read input = 0.002
+Function FX_TIRE_CARPET extrapolated (out of range HIGH) for X = 1 - at T = 0
+Function FY_TIRE_CARPET extrapolated (out of range HIGH) for X = 90 deg at T = 0
+Function MZ_TIRE_CARPET extrapolated (out of range HIGH) for X = 90 deg at T = 0
+Function MX_TIRE_CARPET extrapolated (out of range HIGH) for X = 90 deg at T = 0
+WARNING: The keyword OPT_SSTOP has been deprecated
+WARNING: The keyword T_EVENT_START has been deprecated
+
+Run started: VS output file = Results\Run_bb23a773-723a-4a4f-ba2b-cddc07bff811\LastRun.vsb
+
+Run stopped at t = 0.1. kappa = 1 (-)
+Computational time ratio: RTIME = 0.79 (real time)/(simulation time)
+
+WARNING: The keyword OPT_SSTOP has been deprecated
+WARNING: The keyword T_EVENT_START has been deprecated

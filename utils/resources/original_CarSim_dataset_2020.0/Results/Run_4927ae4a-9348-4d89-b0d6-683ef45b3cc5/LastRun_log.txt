@@ -1,0 +1,99 @@
+Run made by VS Tire Tester for CarSim and TruckSim 2020.0 at 21:03 on December 18, 2019.
+Utility to calculate tire behavior for simulated quasi-static tests
+Started with simfile: simfile.sim
+
+Include PARSFILE "Results\Run_4927ae4a-9348-4d89-b0d6-683ef45b3cc5\Run_all.par"
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 195/45 R16: Tire
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 195/45 R16: Wheel
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 195/45 R16: Stripe
+Used Dataset: Animator: Shape Assembly; { Tires } Sports Car
+  Delft-Tyre: ============================================
+  Delft-Tyre: 
+==                                        ==
+  Delft-Tyre: 
+==      Copyright 1996-2013               ==
+  Delft-Tyre: 
+==      TNO                               ==
+  Delft-Tyre: 
+==      P.O. Box 756                      ==
+  Delft-Tyre: 
+==      5700 AT Helmond                   ==
+  Delft-Tyre: 
+==      The Netherlands                   ==
+  Delft-Tyre: 
+==      www.delft-tyre.nl                 ==
+  Delft-Tyre: 
+==                                        ==
+  Delft-Tyre: 
+============================================
+  Delft-Tyre: 
+DELFT-TYRE MF-Tyre/MF-Swift 6.2.0.2               
+  Delft-Tyre: 
+============================================
+  Delft-Tyre:  *prop.file   : CS_car225_60R18.tir
+  Delft-Tyre:  *tyre side   : left
+  Delft-Tyre:  *contact     : smooth road
+  Delft-Tyre:  *dynamics    : steady-state
+  Delft-Tyre:  *slip forces : combined
+  Delft-Tyre: For tyre    1 the following tyre mass should be part of the wheel body
+  Delft-Tyre: 
+ mass :  9.300      kg;
+  Delft-Tyre: 
+ Iyy  : 0.7360      kgm2;
+  Delft-Tyre: 
+ Ixx  : 0.3910      kgm2;
+  Delft-Tyre: 
+ Izz  : 0.3910      kgm2;
+  Delft-Tyre: Using MBS road definition
+Used Dataset: Tire (External); { MF-Tyre/MF-Swift } 225/60 R18 (Tyre 6.2, Static)
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Lateral Force vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Longitudinal Force vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Tangent of Slip Angle vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Lateral Shift of CTC vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fx vs Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fy and Pneumatic Trail vs Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Pneumatic Trail vs. Alpha
+Used Dataset: Generic VS Commands; { Miscellaneous Custom Output Variables } Derived Outputs for Tire Tester
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } Mx vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester } Mz vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Lateral Force vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Longitudinal Force vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Tangent of Slip Angle vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Lateral Shift of CTC vs. Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fx vs Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fy and Pneumatic Trail vs Alpha
+Used Dataset: Plot: Format; Default Plot Settings
+Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Pneumatic Trail vs. Alpha
+Used Dataset: Tire Tester; { Sweep Alpha +/- 10 deg } Sweep Alpha: Fz = 4000 N
+Used Dataset: I/O Channels: Write; All Outputs with Tire for Excel
+ MF-Tyre Sweep Alpha (Fz = 4000N) <Tire Tester>
+Used Dataset: CarSim Run Control; { Tire Tester } MF-Tyre Sweep Alpha (Fz = 4000N)
+
+Time to read input = 0.087
+WARNING: The keyword OPT_SSTOP has been deprecated
+WARNING: The keyword T_EVENT_START has been deprecated
+
+Run started: VS output file = Results\Run_4927ae4a-9348-4d89-b0d6-683ef45b3cc5\LastRun.vsb
+
+Run stopped at t = 1. alpha = 10 deg
+Computational time ratio: RTIME = 0.052 (real time)/(simulation time)
+
+WARNING: The keyword OPT_SSTOP has been deprecated
+WARNING: The keyword T_EVENT_START has been deprecated

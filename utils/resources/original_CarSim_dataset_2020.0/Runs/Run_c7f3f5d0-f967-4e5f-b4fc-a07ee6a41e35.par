@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName CarSim Run Control`CL: Replace Tie Rod/Steer Arm Kin. (Base)`Steering Models, Ext. Elements, Open/Closed-Loop
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c7f3f5d0-f967-4e5f-b4fc-a07ee6a41e35
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 8
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Generic\VS_commands\GenVS_4ce8a281-5bbe-44e8-b832-9e7368b0bc62.par
+#BlueLink10 Generic VS Commands`Wheel Steer w/ Steer and Jounce (Base)` External Steering` , Miscellaneous`GenVS_4ce8a281-5bbe-44e8-b832-9e7368b0bc62
+
+
+SPECIAL_PARSFILE Runs\Run_6cb07365-85a3-4a3b-95f9-c5c844687601.par
+#BlueLink23 CarSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_6cb07365-85a3-4a3b-95f9-c5c844687601
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title CL: Replace Tie Rod/Steer Arm Kin. (Base) <Steering Models, Ext. Elements, Open/Closed-Loop>
+CATEGORY Steering Models, Ext. Elements, Open/Closed-Loop 
+DATASET_TITLE CL: Replace Tie Rod/Steer Arm Kin. (Base)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback performs a double lane change maneuver at 120 km/h.
+#
+#VS Commands are used to replace the wheel-end kinematics as set on the Steering System screen. The data in the Generic Tables duplicate the C-Class Hatchback road wheel steering kinematics, demonstrating validity of the method.
+#
+#When replacing the tie rod / steer arm behavior, just the kinematics information is changed. All of the steering system components remain.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Models, Ext. Elements, Open/Closed-Loop } CL: Replace Tie Rod/Steer Arm Kin. (Base)
+#Library : CarSim Run Control
+#DataSet : CL: Replace Tie Rod/Steer Arm Kin. (Base)
+#Category: Steering Models, Ext. Elements, Open/Closed-Loop
+#FileID  : Run_c7f3f5d0-f967-4e5f-b4fc-a07ee6a41e35
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Jounce`Rear Tri-Link Strut - Lateral Movement`Tri-Link Strut
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_LAT_COMBINE ADD
+#DiagramOne0
+SUSP_LAT_TABLE SPLINE
+-150, 34.7232
+-135, 28.9298
+-120, 23.7162
+-105, 19.0508
+-90, 14.9073
+-75, 11.2635
+-60, 8.10101
+-45, 5.40464
+-30, 3.16193
+-15, 1.36294
+0, 0
+15, -0.932437
+30, -1.43789
+45, -1.51794
+60, -1.1722
+75, -0.398333
+90, 0.808049
+105, 2.45344
+120, 4.54658
+135, 7.09849
+150, 10.1225
+ENDTABLE
+SUSP_LAT_JNC_OTHER_SIDE_CONSTANT 0
+SUSP_Y_AXLE_ROLL_COMBINE ADD ! in case this is for a solid axle
+#DiagramOne0
+SUSP_LAT_AXLE_JOUNCE_TABLE SPLINE
+-150, 34.7232
+-135, 28.9298
+-120, 23.7162
+-105, 19.0508
+-90, 14.9073
+-75, 11.2635
+-60, 8.10101
+-45, 5.40464
+-30, 3.16193
+-15, 1.36294
+0, 0
+15, -0.932437
+30, -1.43789
+45, -1.51794
+60, -1.1722
+75, -0.398333
+90, 0.808049
+105, 2.45344
+120, 4.54658
+135, 7.09849
+150, 10.1225
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+#EMBEDDED_NOTES
+#Rear Tri-Link Strut Suspension Lateral movement vs. Jounce.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Jounce; { Tri-Link Strut } Rear Tri-Link Strut - Lateral Movement
+#Library : Suspension: Lateral Movement Due to Jounce
+#DataSet : Rear Tri-Link Strut - Lateral Movement
+#Category: Tri-Link Strut
+#FileID  : LatJnc_2d1706c3-ddcf-4177-9d5d-3259b29b38a2
+#Product : CarSim 2020.0
+#VehCode Lateral Movement
+
+END

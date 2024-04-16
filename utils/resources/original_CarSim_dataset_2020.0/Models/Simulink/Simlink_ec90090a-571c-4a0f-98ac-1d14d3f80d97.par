@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Models: Simulink`Semi-Active Suspension`Suspension and Suspension Controls
+#RunMdlFile Extensions\Simulink\SemiActive_Susp_CS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\SemiActive_Susp_CS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_a701d810-39be-458f-b86d-ef2e1d9e0cf7.par
+#BlueLink0 I/O Channels: Import`Semi-Active Susp.: damper forces` Suspension System: Control and External Models` , Import`Import_a701d810-39be-458f-b86d-ef2e1d9e0cf7
+
+PARSFILE IO_Channels\O_Channels\Export_0d6d31d9-7ed5-48a2-b18b-fecaef530d8c.par
+#BlueLink1 I/O Channels: Export`Semi-Active Susp.: dampers and ground` Suspension System: Control and External Models` , Import/Export`Export_0d6d31d9-7ed5-48a2-b18b-fecaef530d8c
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This “Models: Simulink” dataset links to a Simulink model of a Semi-Active suspension system.
+#
+#The Simulink model calculates the damper forces which are imported into CarSim. CarSim calculates a variety of vehicle properties including the damper compression and compression rate, and this data are returned to the Simulink model.
+#
+#The time step is set to 0.0005 sec. (2000 Hz), the method is AB-2, and the option is checked to synchronize the CarSim kinematical exports with force imports.
+#
+#The Simulink model is set to use "variable step" numerical integration, which means it will inherit the time step from CarSim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Suspension and Suspension Controls } Semi-Active Suspension
+#Library : Models: Simulink
+#DataSet : Semi-Active Suspension
+#Category: Suspension and Suspension Controls
+#FileID  : Simlink_ec90090a-571c-4a0f-98ac-1d14d3f80d97
+#Product : CarSim 2020.0
+#VehCode 
+
+END

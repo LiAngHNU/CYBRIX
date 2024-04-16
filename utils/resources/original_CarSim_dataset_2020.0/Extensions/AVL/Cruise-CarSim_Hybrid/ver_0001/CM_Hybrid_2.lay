@@ -1,0 +1,1021 @@
+! TeimModel-Reader: 0.9
+!
+! Modell: Hybrid 2 vom: Jan 19, 2011 13:44:04
+!
+! Modul 1: Vehicle (1)
+! Modul 2: Engine (4)
+! Modul 3: Single Ratio Transmission (11)
+! Modul 4: Wheel (14)
+! Modul 5: Wheel (14)
+! Modul 6: Wheel (14)
+! Modul 7: Wheel (14)
+! Modul 8: Brake (15)
+! Modul 9: Brake (15)
+! Modul 10: Brake (15)
+! Modul 11: Brake (15)
+! Modul 12: Hub (16)
+! Modul 13: Hub (16)
+! Modul 14: Hub (16)
+! Modul 15: Hub (16)
+! Modul 16: Electric Machine (19)
+! Modul 17: Electric Machine (19)
+! Modul 18: Differential (24)
+! Modul 19: Planetary Gear Box (25)
+! Modul 20: Cockpit (60)
+! Modul 21: Anti-Slip Control (71)
+! Modul 22: Battery H (75)
+! Modul 23: MatLab DLL (90)
+! Modul 24: Function (95)
+! Modul 25: Function (95)
+! Modul 26: Monitor (99)
+! Modul 27: CarSim (181)
+! Modul 28: Constants (192)
+$======================================================================
+$ Application: Vehicle Model
+$ created:     May 09, 2018 17:06:28
+$=================================================================Model
+[TM_MODEL]
+#TM_ID                    = 
+#TM_VERSION               = "May 09, 2018 17:06:20"
+NAME                      = 'Hybrid 2'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+BEARBEITER                = 'Support-Team'
+BMS_NR                    = 7
+TP_ID                     = 
+UIL                       = 
+{ FROM_CONNECTOR_ID TO_CONNECTOR_ID }
+  1                 27              
+  4                 20              
+  6                 14              
+  7                 10              
+  8                 12              
+  9                 13              
+  11                25              
+  15                26              
+  16                25              
+  18                26              
+  20                29              
+  21                30              
+  22                28              
+  23                30              
+  5                 24              
+{ OUTPUT_MODUL_ID OUTPUT_NR INPUT_MODUL_ID INPUT_NR TYP         }
+  23              1         2              1        'TRP'       
+  23              4         2              2        'SWI'       
+  23              7         8              1        'PRE'       
+  23              7         9              1        'PRE'       
+  23              7         10             1        'PRE'       
+  23              7         11             1        'PRE'       
+  27              9         12             1        'TOR'       
+  27              22        12             2        'TOR'       
+  27              11        13             1        'TOR'       
+  27              24        13             2        'TOR'       
+  27              8         14             1        'TOR'       
+  27              21        14             2        'TOR'       
+  27              10        15             1        'TOR'       
+  27              23        15             2        'TOR'       
+  23              3         16             3        'TRP'       
+  23              6         16             4        'SWI'       
+  23              2         17             3        'TRP'       
+  23              5         17             4        'SWI'       
+  3               1         20             1        'RSP'       
+  2               1         20             2        'SWI'       
+  16              11        20             3        'SWI'       
+  17              11        20             4        'SWI'       
+  16              11        20             7        'SWI'       
+  20              1         21             1        'TRP'       
+  4               5         21             2        'SLP'       
+  5               5         21             5        'SLP'       
+  20              1         23             1        'undefined' 
+  27              6         23             1        'undefined' 
+  20              12        23             2        'undefined' 
+  27              3         23             2        'undefined' 
+  22              5         23             3        'undefined' 
+  2               21        23             4        'undefined' 
+  17              5         23             5        'undefined' 
+  17              6         23             6        'undefined' 
+  16              6         23             7        'undefined' 
+  24              1         23             8        'undefined' 
+  20              2         23             8        'undefined' 
+  16              5         23             9        'undefined' 
+  2               3         23             10       'undefined' 
+  16              4         23             11       'undefined' 
+  16              3         23             12       'undefined' 
+  17              4         23             13       'undefined' 
+  17              3         23             14       'undefined' 
+  22              4         23             15       'undefined' 
+  22              3         23             16       'undefined' 
+  20              14        23             17       'undefined' 
+  27              4         24             1        'undefined' 
+  19              2         25             1        'undefined' 
+  19              1         25             2        'undefined' 
+  1               7         26             1        'undefined' 
+  1               6         26             2        'undefined' 
+  1               8         26             3        'undefined' 
+  2               24        26             4        'undefined' 
+  2               3         26             5        'undefined' 
+  20              55        26             6        'undefined' 
+  8               3         26             7        'undefined' 
+  11              3         26             8        'undefined' 
+  10              3         26             9        'undefined' 
+  9               3         26             10       'undefined' 
+  16              6         27             2        'RSP'       
+  2               20        27             3        'TOR'       
+  2               30        27             4        'EMI'       
+  18              5         27             8        'TOR'       
+  18              6         27             9        'TOR'       
+{ LAYER_ID NAME         STATE CL_ID CL_ENTW_DATUM }
+  1        'PowerTrain' 3     nil   nil           
+  2        'CarSim'     3     nil   nil           
+  3        'Cruise'     3     nil   nil           
+$----------------------------------------------------Layerset
+(TM_LAYERSET)
+#TP_ID                    = 
+LAYERSET_ID               = 1
+IDENT                     = 565207311091448529
+NAME                      = 'Cruise StandAlone'
+IS_CURRENT                = 
+DO_VARIATION              = 
+CALCMODE                  = 1
+TMP_ID                    = 
+{ LAYER_ID STATE }
+  2        0     
+  3        3     
+  1        3     
+{ INFO                                                                                  }
+  'PROJEKT.BER_MAPPE_EINBAU:1.BER_MAPPE.AUFGABENMAPPE.ZYKLUSFAHRT_EINBAU:1.ZYKLUSFAHRT' 
+  'PROJEKT.BER_MAPPE_EINBAU:1.BER_MAPPE'                                                
+$----------------------------------------------------Layerset
+(TM_LAYERSET)
+#TP_ID                    = 
+LAYERSET_ID               = 2
+IDENT                     = 565207311091448529
+NAME                      = 'Cruise-CarSim'
+IS_CURRENT                = 1
+DO_VARIATION              = 
+CALCMODE                  = 1
+TMP_ID                    = 
+{ LAYER_ID STATE }
+  2        3     
+  3        0     
+  1        3     
+{ INFO                                                                                  }
+  'PROJEKT.BER_MAPPE_EINBAU:1.BER_MAPPE'                                                
+  'PROJEKT.SAM_FOLDER_EINBAU.SAM_FOLDER'                                                
+  'PROJEKT.BER_MAPPE_EINBAU:1.BER_MAPPE.AUFGABENMAPPE.ZYKLUSFAHRT_EINBAU:1.ZYKLUSFAHRT' 
+  'PROJEKT.SAM_FOLDER_EINBAU.SAM_FOLDER.VIRT_SAM.SAM_TASK_EINBAU:1.SAM_TASK'            
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 1
+MODUL_NR                  = 1
+NAME                      = 'Vehicle'
+ICON                      = ''
+ENTITY                    = 'FAHRZEUG'
+TOP                       = -1
+LEFT                      = 71
+BOTTOM                    = 80
+RIGHT                     = 688
+ORIENTATION               = 0
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Hybrid 2'
+{ NAME             NUM STR TST                     }
+  'FZG_ID'         nil ''  nil                     
+  'FZG_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                        VALUE }
+  'AUSGABE'                   2     
+  'LAST_AUF_V_ACHSE_BEGRENZT' 2     
+  'FAHRWIDERSTAND_1'          2     
+  'FAHRWIDERSTAND_2'          1     
+  'FAHRWIDERSTAND_3'          1     
+  'FAHRWIDERSTAND_4'          1     
+  'FAHRWIDERSTAND_6'          1     
+  'FAHRWIDERSTAND_5'          1     
+  'LUFTWIDERSTAND_SCHALTER'   1     
+  'AUSROLLKL_SCHALTER'        1     
+  'LUFTWIDERSTANDSTYP'        1     
+  'AUFTRIEB'                  2     
+  'KURVENFAHRT'               1     
+  'SEITENWIND'                1     
+  'KSK1_SCHALTER'             1     
+  'KSK2_SCHALTER'             1     
+  'KSK3_SCHALTER'             1     
+  'KSK4_SCHALTER'             1     
+  'KSK5_SCHALTER'             1     
+  'TEMP_ZYKLUSABH_SWITCH1'    1     
+  'TEMP_ZYKLUSABH_SWITCH2'    1     
+  'TEMP_ZYKLUSABH_SWITCH3'    1     
+  'TEMP_ZYKLUSABH_SWITCH4'    1     
+  'TEMP_ZYKLUSABH_SWITCH5'    1     
+  'TEMPERATURVERLAUF_SWITCH1' 2     
+  'TEMPERATURVERLAUF_SWITCH2' 1     
+  'TEMPERATURVERLAUF_SWITCH3' 1     
+  'TEMPERATURVERLAUF_SWITCH4' 1     
+  'TEMPERATURVERLAUF_SWITCH5' 1     
+  'STEIGUNG_EXT_SCHALTER'     1     
+  'PFA_SWITCH'                1     
+  'HITCH_FORCE_EXT_SWITCH'    1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 2
+MODUL_NR                  = 4
+NAME                      = 'Engine'
+ICON                      = ''
+ENTITY                    = 'VERBR_MOTOR'
+TOP                       = 207
+LEFT                      = 167
+BOTTOM                    = 320
+RIGHT                     = 296
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = '4 cylinder inline'
+{ NAME             NUM STR TST                     }
+  'MOT_ID'         nil ''  nil                     
+  'MOT_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X    Y   TYP }
+  1            1            1.0  0.5 'm' 
+  2            2            0.5  0.0 'a' 
+  3            3            0.25 1.0 't' 
+{ NAME                         VALUE }
+  'AUSGABE'                    2     
+  'REFERENZ'                   1     
+  'VERWENDUNG'                 2     
+  'TEMP_MODELL_HAUPTSCHALTER'  1     
+  'TEMPERATURMODELL'           2     
+  'VERBRAUCHSMODELL'           2     
+  'REIBMODELL'                 1     
+  'LL_VERBRAUCH_EMISSIONEN'    2     
+  'SCHUBKENNLINIE_1'           1     
+  'SCHUBKENNLINIE_2'           1     
+  'STARTANREICHERUNG'          1     
+  'BESCHL_ANREICHERUNG'        1     
+  'VERBR_MASSENSTROM_EXTERN_S' 1     
+  'VERBR_KOEFF_EXTERN_S'       1     
+  'LL_DREHZAHL_ERMITTLUNG'     1     
+  'LL_REGELUNG'                1     
+  'MAX_DREHZAHL_ERMITTLUNG'    1     
+  'VERLUSTMOMENTKENNLINIE'     1     
+  'ANSPRECHVERHALTEN_TURBO'    1     
+  'TC_PTX_SCHALT'              1     
+  'LL_LADEDRUCK_SCHALTER'      1     
+  'KORREKTURVERFAHREN'         1     
+  'SPEZ_VERBRAUCHSKENNFELD'    1     
+  'UREA_CONSUMPTION'           1     
+  'AIR_FUEL_RATIO'             1     
+  'REDUZIERTE_VOLLAST_1'       1     
+  'REDUZIERTE_VOLLAST_2'       1     
+  'REDUZIERTE_VOLLAST_3'       1     
+  'REDUZIERTE_VOLLAST_4'       1     
+  'REDUZIERTE_VOLLAST_5'       1     
+  'REDUZ_VOLLASTREDUKTION'     1     
+  'MOTORBREMSKENNLINIE'        1     
+  'ANLASSERSTROM'              1     
+  'DROSSELKLAPPENKENNFELD'     1     
+  'STEUERGROESSE'              1     
+  'AUSWAHL_ABGSANLAGE'         1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 3
+MODUL_NR                  = 11
+NAME                      = 'Single Ratio Transmission'
+ICON                      = ''
+ENTITY                    = 'UEBERSETZUNGSSTUFE'
+TOP                       = 335
+LEFT                      = 191
+BOTTOM                    = 408
+RIGHT                     = 280
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'SRT'
+{ NAME             NUM STR TST                     }
+  'UES_ID'         nil ''  nil                     
+  'UES_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  4            1            1.0 0.5 'm' 
+  5            2            0.0 0.5 'm' 
+{ NAME                    VALUE }
+  'VARIIERT'              2     
+  'AUSGABE'               2     
+  'ANGABE'                1     
+  'WIDERSTANDSSCHALTER'   1     
+  'VERLUSTMOMENT_TEMP'    1     
+  'WIRKUNGSGRADEINGABE'   1     
+  'VERLUSTMOMENT_TEMP_T1' 2     
+  'VERLUSTMOMENT_TEMP_T2' 1     
+  'VERLUSTMOMENT_TEMP_T3' 1     
+  'VERLUSTMOMENT_TEMP_T4' 1     
+  'VERLUSTMOMENT_TEMP_T5' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 4
+MODUL_NR                  = 14
+NAME                      = 'Wheel'
+ICON                      = ''
+ENTITY                    = 'RAD'
+TOP                       = 471
+LEFT                      = 71
+BOTTOM                    = 544
+RIGHT                     = 168
+ORIENTATION               = 20
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Vehicle: Front Left'
+{ NAME             NUM STR TST                     }
+  'RAD_ID'         nil ''  nil                     
+  'RAD_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  6            1            0.5 0.0 'm' 
+{ NAME                      VALUE }
+  'AUSGABE'                 2     
+  'WAHLSCHALTER'            1     
+  'SCHLUPF'                 2     
+  'TRANS_ROLLWSBW_SCHALTER' 1     
+  'GESCHWINDIGKEIT'         2     
+  'RADLAST'                 1     
+  'FUELLDRUCK'              1     
+  'TEMPERATUR'              1     
+  'DIMENSIONSAUSWAHL'       1     
+  'EINBAUORT'               1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 5
+MODUL_NR                  = 14
+NAME                      = 'Wheel'
+ICON                      = ''
+ENTITY                    = 'RAD'
+TOP                       = 71
+LEFT                      = 71
+BOTTOM                    = 144
+RIGHT                     = 168
+ORIENTATION               = 1
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Vehicle: Front Right'
+{ NAME             NUM STR TST                     }
+  'RAD_ID'         nil ''  nil                     
+  'RAD_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  7            1            0.5 1.0 'm' 
+{ NAME                      VALUE }
+  'AUSGABE'                 2     
+  'WAHLSCHALTER'            1     
+  'SCHLUPF'                 2     
+  'TRANS_ROLLWSBW_SCHALTER' 1     
+  'GESCHWINDIGKEIT'         2     
+  'RADLAST'                 1     
+  'FUELLDRUCK'              1     
+  'TEMPERATUR'              1     
+  'DIMENSIONSAUSWAHL'       1     
+  'EINBAUORT'               4     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 6
+MODUL_NR                  = 14
+NAME                      = 'Wheel'
+ICON                      = ''
+ENTITY                    = 'RAD'
+TOP                       = 471
+LEFT                      = 591
+BOTTOM                    = 544
+RIGHT                     = 688
+ORIENTATION               = 20
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Vehicle: Rear Left'
+{ NAME             NUM STR TST                     }
+  'RAD_ID'         nil ''  nil                     
+  'RAD_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  8            1            0.5 0.0 'm' 
+{ NAME                      VALUE }
+  'AUSGABE'                 2     
+  'WAHLSCHALTER'            1     
+  'SCHLUPF'                 2     
+  'TRANS_ROLLWSBW_SCHALTER' 1     
+  'GESCHWINDIGKEIT'         2     
+  'RADLAST'                 1     
+  'FUELLDRUCK'              1     
+  'TEMPERATUR'              1     
+  'DIMENSIONSAUSWAHL'       1     
+  'EINBAUORT'               2     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 7
+MODUL_NR                  = 14
+NAME                      = 'Wheel'
+ICON                      = ''
+ENTITY                    = 'RAD'
+TOP                       = 71
+LEFT                      = 591
+BOTTOM                    = 144
+RIGHT                     = 688
+ORIENTATION               = 0
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Vehicle: Rear Right'
+{ NAME             NUM STR TST                     }
+  'RAD_ID'         nil ''  nil                     
+  'RAD_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  9            1            0.5 1.0 'm' 
+{ NAME                      VALUE }
+  'AUSGABE'                 2     
+  'WAHLSCHALTER'            1     
+  'SCHLUPF'                 2     
+  'TRANS_ROLLWSBW_SCHALTER' 1     
+  'GESCHWINDIGKEIT'         2     
+  'RADLAST'                 1     
+  'FUELLDRUCK'              1     
+  'TEMPERATUR'              1     
+  'DIMENSIONSAUSWAHL'       1     
+  'EINBAUORT'               3     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 8
+MODUL_NR                  = 15
+NAME                      = 'Brake'
+ICON                      = ''
+ENTITY                    = 'BREMSE'
+TOP                       = 151
+LEFT                      = 79
+BOTTOM                    = 200
+RIGHT                     = 160
+ORIENTATION               = 30
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Right Front Brake'
+{ NAME             NUM STR TST                     }
+  'BRM_ID'         nil ''  nil                     
+  'BRM_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  10           1            0.5 0.0 'm' 
+  11           1            0.5 1.0 'm' 
+{ NAME            VALUE }
+  'AUSGABE'       2     
+  'DYNMODE'       2     
+  'STEUERGROESSE' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 9
+MODUL_NR                  = 15
+NAME                      = 'Brake'
+ICON                      = ''
+ENTITY                    = 'BREMSE'
+TOP                       = 415
+LEFT                      = 599
+BOTTOM                    = 464
+RIGHT                     = 680
+ORIENTATION               = 30
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Left Rear Brake'
+{ NAME             NUM STR TST                     }
+  'BRM_ID'         nil ''  nil                     
+  'BRM_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  12           1            0.5 1.0 'm' 
+{ NAME            VALUE }
+  'AUSGABE'       2     
+  'DYNMODE'       2     
+  'STEUERGROESSE' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 10
+MODUL_NR                  = 15
+NAME                      = 'Brake'
+ICON                      = ''
+ENTITY                    = 'BREMSE'
+TOP                       = 151
+LEFT                      = 599
+BOTTOM                    = 200
+RIGHT                     = 680
+ORIENTATION               = 30
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Right Rear Brake'
+{ NAME             NUM STR TST                     }
+  'BRM_ID'         nil ''  nil                     
+  'BRM_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  13           1            0.5 0.0 'm' 
+{ NAME            VALUE }
+  'AUSGABE'       2     
+  'DYNMODE'       2     
+  'STEUERGROESSE' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 11
+MODUL_NR                  = 15
+NAME                      = 'Brake'
+ICON                      = ''
+ENTITY                    = 'BREMSE'
+TOP                       = 415
+LEFT                      = 79
+BOTTOM                    = 464
+RIGHT                     = 160
+ORIENTATION               = 30
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Left Front Brake'
+{ NAME             NUM STR TST                     }
+  'BRM_ID'         nil ''  nil                     
+  'BRM_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  14           1            0.5 1.0 'm' 
+  15           1            0.5 0.0 'm' 
+{ NAME            VALUE }
+  'AUSGABE'       2     
+  'DYNMODE'       2     
+  'STEUERGROESSE' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 12
+MODUL_NR                  = 16
+NAME                      = 'Hub'
+ICON                      = ''
+ENTITY                    = 'NABE'
+TOP                       = 7
+LEFT                      = 71
+BOTTOM                    = 88
+RIGHT                     = 184
+ORIENTATION               = 30
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Front Right'
+{ NAME             NUM STR TST                     }
+  'NAB_ID'         nil ''  nil                     
+  'NAB_ENTW_DATUM' nil ''  "Aug 20, 2009 13:55:59" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  16           1            0.5 1.0 'm' 
+{ NAME                 VALUE }
+  'AUSGABE'            2     
+  'DYNAMISCH_SCHALTER' 1     
+  'EINBAUORT'          4     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 13
+MODUL_NR                  = 16
+NAME                      = 'Hub'
+ICON                      = ''
+ENTITY                    = 'NABE'
+TOP                       = 7
+LEFT                      = 695
+BOTTOM                    = 88
+RIGHT                     = 808
+ORIENTATION               = 30
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Rear Right'
+{ NAME             NUM STR TST                     }
+  'NAB_ID'         nil ''  nil                     
+  'NAB_ENTW_DATUM' nil ''  "Aug 20, 2009 13:55:59" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  17           1            0.5 1.0 'm' 
+{ NAME                 VALUE }
+  'AUSGABE'            2     
+  'DYNAMISCH_SCHALTER' 1     
+  'EINBAUORT'          3     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 14
+MODUL_NR                  = 16
+NAME                      = 'Hub'
+ICON                      = ''
+ENTITY                    = 'NABE'
+TOP                       = 463
+LEFT                      = 71
+BOTTOM                    = 544
+RIGHT                     = 184
+ORIENTATION               = 10
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Front Left'
+{ NAME             NUM STR TST                     }
+  'NAB_ID'         nil ''  nil                     
+  'NAB_ENTW_DATUM' nil ''  "Aug 20, 2009 13:55:59" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  18           1            0.5 0.0 'm' 
+{ NAME                 VALUE }
+  'AUSGABE'            2     
+  'DYNAMISCH_SCHALTER' 1     
+  'EINBAUORT'          1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 15
+MODUL_NR                  = 16
+NAME                      = 'Hub'
+ICON                      = ''
+ENTITY                    = 'NABE'
+TOP                       = 463
+LEFT                      = 695
+BOTTOM                    = 544
+RIGHT                     = 808
+ORIENTATION               = 10
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Rear Left'
+{ NAME             NUM STR TST                     }
+  'NAB_ID'         nil ''  nil                     
+  'NAB_ENTW_DATUM' nil ''  "Aug 20, 2009 13:55:59" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  19           1            0.5 0.0 'm' 
+{ NAME                 VALUE }
+  'AUSGABE'            2     
+  'DYNAMISCH_SCHALTER' 1     
+  'EINBAUORT'          2     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 16
+MODUL_NR                  = 19
+NAME                      = 'Electric Machine'
+ICON                      = ''
+ENTITY                    = 'ELEKTRISCHE_MASCHINE'
+TOP                       = 319
+LEFT                      = 455
+BOTTOM                    = 424
+RIGHT                     = 584
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'E-Motor'
+{ NAME                NUM STR TST                     }
+  'EMASCH_ID'         nil ''  nil                     
+  'EMASCH_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  20           1            0.0 0.5 'm' 
+  21           2            0.5 0.0 'e' 
+{ NAME                       VALUE }
+  'AUSGABE'                  2     
+  'WIDERSTANDSSCHALTER'      1     
+  'TEMPERATURMODELL_ELM'     1     
+  'AUSWAHL_TEMPERATURMODELL' 1     
+  'ABH_VOLLLASTKENNLINIEN'   1     
+  'STROMGRENZE'              2     
+  'DREHZAHLGRENZE'           1     
+  'STEUERGROESSE'            1     
+  'EL_MASCHINE_KF1'          2     
+  'EL_MASCHINE_KF2'          1     
+  'EL_MASCHINE_KF3'          1     
+  'EL_MASCHINE_KF4'          1     
+  'EL_MASCHINE_KF5'          1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 17
+MODUL_NR                  = 19
+NAME                      = 'Electric Machine'
+ICON                      = ''
+ENTITY                    = 'ELEKTRISCHE_MASCHINE'
+TOP                       = 103
+LEFT                      = 375
+BOTTOM                    = 192
+RIGHT                     = 464
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Generator'
+{ NAME                NUM STR TST                     }
+  'EMASCH_ID'         nil ''  nil                     
+  'EMASCH_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  22           1            0.5 1.0 'm' 
+  23           2            1.0 0.5 'e' 
+{ NAME                       VALUE }
+  'AUSGABE'                  2     
+  'WIDERSTANDSSCHALTER'      1     
+  'TEMPERATURMODELL_ELM'     1     
+  'AUSWAHL_TEMPERATURMODELL' 1     
+  'ABH_VOLLLASTKENNLINIEN'   1     
+  'STROMGRENZE'              2     
+  'DREHZAHLGRENZE'           1     
+  'STEUERGROESSE'            1     
+  'EL_MASCHINE_KF1'          2     
+  'EL_MASCHINE_KF2'          1     
+  'EL_MASCHINE_KF3'          1     
+  'EL_MASCHINE_KF4'          1     
+  'EL_MASCHINE_KF5'          1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 18
+MODUL_NR                  = 24
+NAME                      = 'Differential'
+ICON                      = ''
+ENTITY                    = 'DIFFERENTIAL'
+TOP                       = 335
+LEFT                      = 71
+BOTTOM                    = 408
+RIGHT                     = 184
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Final Drive'
+{ NAME             NUM STR TST                     }
+  'DIF_ID'         nil ''  nil                     
+  'DIF_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  24           1            1.0 0.5 'm' 
+  25           2            0.5 0.0 'm' 
+  26           3            0.5 1.0 'm' 
+{ NAME                  VALUE }
+  'AUSGABE'             2     
+  'WIDERSTANDSSCHALTER' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 19
+MODUL_NR                  = 25
+NAME                      = 'Planetary Gear Box'
+ICON                      = ''
+ENTITY                    = 'PLANETENGETRIEBE'
+TOP                       = 223
+LEFT                      = 367
+BOTTOM                    = 304
+RIGHT                     = 472
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Planetary Gearset'
+{ NAME            NUM STR TST                     }
+  'PG_ID'         nil ''  nil                     
+  'PG_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+  27           1            0.0 0.5 'm' 
+  28           2            0.5 0.0 'm' 
+  29           3            0.5 1.0 'm' 
+{ NAME                  VALUE }
+  'AUSGABE'             2     
+  'EINGABEBASIS'        1     
+  'WIDERSTANDSSCHALTER' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 20
+MODUL_NR                  = 60
+NAME                      = 'Cockpit'
+ICON                      = ''
+ENTITY                    = 'COCKPIT'
+TOP                       = 407
+LEFT                      = 215
+BOTTOM                    = 512
+RIGHT                     = 320
+ORIENTATION               = 30
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Driver'
+{ NAME             NUM STR TST                     }
+  'CKP_ID'         nil ''  nil                     
+  'CKP_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                  VALUE }
+  'AUSGABE'             2     
+  'EXTERNE_VORGABE'     1     
+  'EXTERNE_SOLLGESCHW'  1     
+  'FAHRPEDAL_AUSWAHL'   1     
+  'FAHRZUSTAND_AUSWAHL' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 21
+MODUL_NR                  = 71
+NAME                      = 'Anti-Slip Control'
+ICON                      = ''
+ENTITY                    = 'SCHLUPFREGELUNG'
+TOP                       = 431
+LEFT                      = 327
+BOTTOM                    = 512
+RIGHT                     = 408
+ORIENTATION               = 0
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'ASC'
+{ NAME             NUM STR TST                     }
+  'ASC_ID'         nil ''  nil                     
+  'ASC_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                     VALUE }
+  'AUSGABE'                2     
+  'SIMULATIONSAKTIVIERUNG' 2     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 22
+MODUL_NR                  = 75
+NAME                      = 'Battery H'
+ICON                      = ''
+ENTITY                    = 'BATTERIE_1'
+TOP                       = 111
+LEFT                      = 567
+BOTTOM                    = 200
+RIGHT                     = 688
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'NiMH, 40 cells'
+{ NAME              NUM STR TST                     }
+  'BAT1_ID'         nil ''  nil                     
+  'BAT1_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y     TYP }
+  30           1            0.0 0.375 'e' 
+{ NAME                        VALUE }
+  'AUSGABE'                   2     
+  'SOC_REFERENZ'              1     
+  'TEMPERATURMODELL_BAT'      1     
+  'WIDERSTAND_TEMPERATUR_ABH' 1     
+  'WIDERSTAND_WIRKUNGSGRAD'   1     
+  'WIDERSTAND_RK'             1     
+  'WIDERSTAND_RD'             1     
+  'WIDERSTAND_TEMP1_SOC_ABH'  2     
+  'WIDERSTAND_TEMP2_SOC_ABH'  1     
+  'WIDERSTAND_TEMP3_SOC_ABH'  1     
+  'WIDERSTAND_TEMP4_SOC_ABH'  1     
+  'WIDERSTAND_TEMP5_SOC_ABH'  1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 23
+MODUL_NR                  = 90
+NAME                      = 'MatLab DLL'
+ICON                      = ''
+ENTITY                    = 'MATLAB'
+TOP                       = 7
+LEFT                      = 191
+BOTTOM                    = 88
+RIGHT                     = 464
+ORIENTATION               = 0
+LAYER_ID                  = 1
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'MatLab Controller'
+{ NAME              NUM STR TST                     }
+  'MASI_ID'         nil ''  nil                     
+  'MASI_ENTW_DATUM' nil ''  "Jan 16, 2005 15:11:32" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                    VALUE }
+  'AUSGABE'               2     
+  'ENFORCE_DATABUS_ENTRY' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 24
+MODUL_NR                  = 95
+NAME                      = 'Function'
+ICON                      = ''
+ENTITY                    = 'FUNKTION'
+TOP                       = 111
+LEFT                      = 799
+BOTTOM                    = 200
+RIGHT                     = 920
+ORIENTATION               = 0
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Brake Signal to Pressure'
+{ NAME            NUM STR TST                     }
+  'BB_ID'         nil ''  nil                     
+  'BB_ENTW_DATUM' nil ''  "Aug 20, 2009 14:43:35" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                    VALUE }
+  'AUSGABE'               2     
+  'FORMEL_MODUS'          2     
+  'EXTRA_CCODE_SWITCH'    1     
+  'ENFORCE_DATABUS_ENTRY' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 25
+MODUL_NR                  = 95
+NAME                      = 'Function'
+ICON                      = ''
+ENTITY                    = 'FUNKTION'
+TOP                       = 199
+LEFT                      = 799
+BOTTOM                    = 280
+RIGHT                     = 920
+ORIENTATION               = 0
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Ring speed'
+{ NAME            NUM STR TST                     }
+  'BB_ID'         nil ''  nil                     
+  'BB_ENTW_DATUM' nil ''  "Aug 20, 2009 15:52:49" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                    VALUE }
+  'AUSGABE'               2     
+  'FORMEL_MODUS'          2     
+  'EXTRA_CCODE_SWITCH'    1     
+  'ENFORCE_DATABUS_ENTRY' 1     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 26
+MODUL_NR                  = 99
+NAME                      = 'Monitor'
+ICON                      = ''
+ENTITY                    = 'MONITOR'
+TOP                       = 295
+LEFT                      = 463
+BOTTOM                    = 376
+RIGHT                     = 544
+ORIENTATION               = 0
+LAYER_ID                  = 3
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Monitor'
+{ NAME             NUM STR TST                     }
+  'MON_ID'         nil ''  nil                     
+  'MON_ENTW_DATUM' nil ''  "Aug 20, 2009 14:21:26" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME      VALUE }
+  'AUSGABE' 2     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 27
+MODUL_NR                  = 181
+NAME                      = 'CarSim'
+ICON                      = ''
+ENTITY                    = 'CAR_SIM'
+TOP                       = 407
+LEFT                      = 255
+BOTTOM                    = 536
+RIGHT                     = 448
+ORIENTATION               = 0
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'CarSim'
+{ NAME              NUM STR TST                     }
+  'CSIM_ID'         nil ''  nil                     
+  'CSIM_ENTW_DATUM' nil ''  "Sep 02, 2010 15:47:09" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME      VALUE }
+  'AUSGABE' 2     
+$------------------------------------------------------module
+(TM_MODUL)
+#TP_ID                    = 
+MODUL_ID                  = 28
+MODUL_NR                  = 192
+NAME                      = 'Constants'
+ICON                      = ''
+ENTITY                    = 'KONSTANTEN'
+TOP                       = 279
+LEFT                      = 799
+BOTTOM                    = 360
+RIGHT                     = 920
+ORIENTATION               = 0
+LAYER_ID                  = 2
+BK_COLOR                  = ''
+TMP_ID                    = 
+INFO                      = 'Constants'
+{ NAME                    NUM STR TST                     }
+  'KONSTANTEN_ID'         nil ''  nil                     
+  'KONSTANTEN_ENTW_DATUM' nil ''  "Aug 20, 2009 14:43:35" 
+{ CONNECTOR_ID CONNECTOR_NR X   Y   TYP }
+{ NAME                    VALUE }
+  'AUSGABE'               2     
+  'ENFORCE_DATABUS_ENTRY' 1     

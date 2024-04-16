@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName CarSim Run Control`Ext. ABS: Split Mu (Flat Ports)`External Control: COM, FMU, MATLAB, Python, VB
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5317a2c0-2f8c-415e-afb7-85ad6defc4c8
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\FMU\Fmu_26023c28-013f-4b12-90f4-de9fe1c00512.par
+#BlueLink12 Models: Export FMU/FMI`ABS Example (Flat Ports)` ` , Models`Fmu_26023c28-013f-4b12-90f4-de9fe1c00512
+
+PARSFILE Animator\Cameras\Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 5 El, 27 m` Road Reference` , Animator camera`Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.596 0.996
+SET_RUN_COLOR 1 0.596 0.996
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_d43acacb-0c00-4a31-955e-f74d6aa2cddf.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback, No ABS` B-Class` , Math Model`Vehicle_d43acacb-0c00-4a31-955e-f74d6aa2cddf
+
+PARSFILE Procedures\Proc_af7b7a9d-340b-49a4-ae1a-008e5c2b5b38.par
+#BlueLink28 Procedures`Split Mu from 65 km/h` Accel. and Brake Testing` , Procedure`Proc_af7b7a9d-340b-49a4-ae1a-008e5c2b5b38
+
+
+SPECIAL_PARSFILE Runs\Run_5b3d86e9-3bdc-4863-b51d-fa00438bded3.par
+#BlueLink23 CarSim Run Control`Braking - Split Mu: No ABS` Brake Tests` , Overlay run or ERD file`Run_5b3d86e9-3bdc-4863-b51d-fa00438bded3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_d43acacb-0c00-4a31-955e-f74d6aa2cddf.png
+WRITE_SENSOR_DETECT
+Title Ext. ABS: Split Mu (Flat Ports) <External Control: COM, FMU, MATLAB, Python, VB>
+CATEGORY External Control: COM, FMU, MATLAB, Python, VB 
+DATASET_TITLE Ext. ABS: Split Mu (Flat Ports)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is the "Ext. ABS: Split Mu" in the FMI running environment.
+#
+#If you want to use the feature which allows you to save multiple sets of results, the ring control must be set prior generating the files for the run.
+#
+#We tested the FMU in Matlab/Simulink 2015a/b with the Simulink package "Pilot Support Package" as the master.
+#
+#Win64: "Pilot Support Package v0.2.0 or later".
+#Win32: "Pilot Support Package v0.2.1 or later".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { External Control: COM, FMU, MATLAB, Python, VB } Ext. ABS: Split Mu (Flat Ports)
+#Library : CarSim Run Control
+#DataSet : Ext. ABS: Split Mu (Flat Ports)
+#Category: External Control: COM, FMU, MATLAB, Python, VB
+#FileID  : Run_5317a2c0-2f8c-415e-afb7-85ad6defc4c8
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

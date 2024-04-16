@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Engine Torque`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#BlueLink2 CarSim Run Control`Outrigger for Roll Stability Testing` Extended Models` , example run`Run_756d0204-ba6a-45dc-8a4d-3cabfb558523
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_756d0204-ba6a-45dc-8a4d-3cabfb558523\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS M_Eng_In, Time
+PLOTCHANNELS M_EngOut, Time
+PLOTCHANNELS M_Eng_rq, Time
+PLOTCHANNELS M_EngEsc, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 0
+#RingCtrl8 1
+
+
+PTITLE Engine Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Engine Torque
+#Library : Plot: Setup
+#DataSet : Engine Torque
+#Category: Powertrain
+#FileID  : Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

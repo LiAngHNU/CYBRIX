@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`HUD, Sports Car, Handling Course (OSG)`VS Visualizer Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_4f189dd6-6630-4017-a8da-89a49e7a316d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5.par
+#BlueLink0 Animator: Camera Setup`254 Azm, 8 El, 15 m, No Yaw` Vehicle Reference` , Animator camera`Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0 1
+SET_RUN_COLOR 0 0 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_ef94e99b-8b88-46df-b7ac-9595f02d04c6.par
+#BlueLink28 Procedures`Handling Course, Aggressive Driving` Driver Controls` , Procedure`Proc_ef94e99b-8b88-46df-b7ac-9595f02d04c6
+
+PARSFILE Generic\VS_commands\GenVS_c3d0ef65-de4c-4ce2-95be-32ab5b743019.par
+#BlueLink9 Generic VS Commands`VS Visualizer HUD Text Display` HUD Gauges` , Miscellaneous`GenVS_c3d0ef65-de4c-4ce2-95be-32ab5b743019
+
+PARSFILE Animator\Arrows\Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887.par
+#BlueLink10 Animator: Wheel Arrows and Other Indicators`Tire Skid Marks (2 Axles)` Skid Marks` , Miscellaneous`Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title HUD, Sports Car, Handling Course (OSG) <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE HUD, Sports Car, Handling Course (OSG)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Sports Car performs one lap around a handling course.
+#
+#VS Visualizer HUD text is used to show a variety of vehicle-related details such as what might be used with in-vehicle instrumentation.
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { VS Visualizer Examples } HUD, Sports Car, Handling Course (OSG)
+#Library : CarSim Run Control
+#DataSet : HUD, Sports Car, Handling Course (OSG)
+#Category: VS Visualizer Examples
+#FileID  : Run_4f189dd6-6630-4017-a8da-89a49e7a316d
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

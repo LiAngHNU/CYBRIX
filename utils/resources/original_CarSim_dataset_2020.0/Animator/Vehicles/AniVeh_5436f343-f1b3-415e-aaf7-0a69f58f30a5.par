@@ -1,0 +1,110 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`3A Dump Truck`Traffic and Moving Objects: Commercial
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 3
+OBJ_X_LENGTH 5770
+OBJ_Y_LENGTH 2438
+OBJ_Z_LENGTH 3200
+*DZ_V 0
+*LAT_WC 2030
+*LAT_WC_2 2030
+*HWC 525
+*WHEEL_RATIO 1
+*LAXLE_1 0
+*LAXLE_2 4500
+*LAXLE_3 5770
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_5436f343-f1b3-415e-aaf7-0a69f58f30a5.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -4.5
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -4.5
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -5.77
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -5.77
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.49875
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_7dbb0124-c10c-44a9-85f5-f7162b34a078.par
+#BlueLink1 Animator: Shape Assembly`Dump Truck (3A): Chassis` Straight Trucks` , Vehicle Body`ShpGrp_7dbb0124-c10c-44a9-85f5-f7162b34a078
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_ad0878af-c758-4423-80d7-d0fd0460a0ef.par
+#BlueLink3 Animator: Shape File Link`Dump Truck: Brake Lights` Trucks: Chassis` , Brake Lights`Shape_ad0878af-c758-4423-80d7-d0fd0460a0ef
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_24f5b2df-d527-46b6-b41c-e70df8f1a7cd.par
+#BlueLink7 Animator: Shape Assembly`Dump Truck: Cab` Straight Trucks` , Vehicle Body`ShpGrp_24f5b2df-d527-46b6-b41c-e70df8f1a7cd
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_09ade48c-1ac2-4680-a0bc-e53feab77176
+
+EXPORT_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Traffic and Moving Objects: Commercial } 3A Dump Truck
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 3A Dump Truck
+#Category: Traffic and Moving Objects: Commercial
+#FileID  : AniVeh_5436f343-f1b3-415e-aaf7-0a69f58f30a5
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

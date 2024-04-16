@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName CarSim Run Control`Rollover Steer Input: Stable`Handling and Stability Tests
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b9e20854-a201-49f6-939c-7a2af1e575a4
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_de1f5f31-cdc6-45aa-8fad-27588467e961.par
+#BlueLink0 Animator: Camera Setup`350 Azm, 3 El, 49 m` Vehicle Reference` , Animator camera`Camera_de1f5f31-cdc6-45aa-8fad-27588467e961
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.4 0.6
+SET_RUN_COLOR 0.2 0.4 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276.par
+#BlueLink2 Vehicle: Assembly`E-Class, SUV` E-Class` , Math Model`Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276
+
+PARSFILE Procedures\Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84.par
+#BlueLink28 Procedures`Rollover Steer Input` Stability Testing` , Procedure`Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136.par
+#BlueLink15 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink16 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink17 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink18 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+
+SPECIAL_PARSFILE Runs\Run_cb5e1c55-2603-4faf-80a4-141b184e0020.par
+#BlueLink23 CarSim Run Control`Rollover Steer Input: Unstable` Handling and Stability Tests` , Overlay run or ERD file`Run_cb5e1c55-2603-4faf-80a4-141b184e0020
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+WRITE_SENSOR_DETECT
+Title Rollover Steer Input: Stable <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Rollover Steer Input: Stable
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Events are used to drive a test in which an E-Class SUV performs a Rollover Steer Input steering and stability test. Despite not having an electronic stability control system, the vehicle does not roll over.
+#
+#This example is overlaid with the simulation "Rollover Steer Input: Unstable". In the overlay, an identical E-Class SUV is used and it has a roof load added. Due to the addition of the roof load and the corresponding change in the vehicle's dynamics, the vehicle rolls over as a result of the severe steering input.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Handling and Stability Tests } Rollover Steer Input: Stable
+#Library : CarSim Run Control
+#DataSet : Rollover Steer Input: Stable
+#Category: Handling and Stability Tests
+#FileID  : Run_b9e20854-a201-49f6-939c-7a2af1e575a4
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

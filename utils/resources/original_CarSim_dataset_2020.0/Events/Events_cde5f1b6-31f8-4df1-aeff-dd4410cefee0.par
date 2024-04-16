@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Events`Continue from Stop Sign`ADAS Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 Vxz_Fwd
+*VALUE1 10
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_db803788-9ef6-4903-90d0-d5d9af0e262e.par
+#BlueLink18 Control: Throttle (Open Loop)`Go from 0 to 0.2 in 2s` Smooth Transition` , Speed link`Throttle_db803788-9ef6-4903-90d0-d5d9af0e262e
+
+#MiscYellow0
+TSTART_THROTTLE = t
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+MAKE_EVENT Vxz_Fwd > 10 ; Events\Events_4453ad56-51ea-4e6f-913b-f7bff8720bed.par
+#BlueLink0 Events`Look for Objects` ADAS Detection` , Events`Events_4453ad56-51ea-4e6f-913b-f7bff8720bed
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Release brakes, gradually increase throttle.
+#
+#Wait until speed is up to 10 mi/h and then start looking for signs again.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Continue from Stop Sign
+#Library : Events
+#DataSet : Continue from Stop Sign
+#Category: ADAS Detection
+#FileID  : Events_cde5f1b6-31f8-4df1-aeff-dd4410cefee0
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

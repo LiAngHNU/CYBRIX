@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Generic Data Group`City: Signs, Pedestrians, Buildings`ADAS: Traffic Scenarios
+#VehCode City: Signs, Pedestrians, Buildings
+#MiscYellow0
+symbol_push <<x>> 155.75 
+symbol_push <<y>> 138.25
+symbol_push <<yaw>> -pi/2
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_3c3a6334-3c34-4a3b-bf0d-e1e959783aba.par
+#BlueLink0 Single Moving Object (Custom)`City Intersection, Stop Sign` Multi-Vehicle` , Link 1`Target_3c3a6334-3c34-4a3b-bf0d-e1e959783aba
+
+
+#MiscYellow1
+symbol_set <<x>> 144.25
+symbol_set <<y>> 161.75
+symbol_set <<yaw>> pi/2
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_3c3a6334-3c34-4a3b-bf0d-e1e959783aba.par
+#BlueLink1 Single Moving Object (Custom)`City Intersection, Stop Sign` Multi-Vehicle` , Link 2`Target_3c3a6334-3c34-4a3b-bf0d-e1e959783aba
+
+
+PARSFILE Sensors_Traffic\Targets\Target_e655f0b9-8d91-49b8-902d-0788e38ce10d.par
+#BlueLink2 Single Moving Object (Custom)`Bicyclist: City Environment` Pedestrians and Bicyclists` , Link 3`Target_e655f0b9-8d91-49b8-902d-0788e38ce10d
+
+
+PARSFILE Sensors_Traffic\Targets\Target_b4cac29a-08cb-4e65-97c0-f488e05834db.par
+#BlueLink3 Single Moving Object (Custom)`Woman: City Environment` Pedestrians and Bicyclists` , Link 4`Target_b4cac29a-08cb-4e65-97c0-f488e05834db
+
+
+PARSFILE Sensors_Traffic\Targets\Target_9962ee14-23a9-4cfd-bd0c-833fa7cf907b.par
+#BlueLink4 Single Moving Object (Custom)`City Environment: Building` ADAS Sensor: Building Occlusion` , Link 5`Target_9962ee14-23a9-4cfd-bd0c-833fa7cf907b
+
+
+#MiscYellow5
+YawO_<<o>> 0
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_9962ee14-23a9-4cfd-bd0c-833fa7cf907b.par
+#BlueLink5 Single Moving Object (Custom)`City Environment: Building` ADAS Sensor: Building Occlusion` , Link 6`Target_9962ee14-23a9-4cfd-bd0c-833fa7cf907b
+
+
+#MiscYellow6
+YawO_<<o>> 90
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_9962ee14-23a9-4cfd-bd0c-833fa7cf907b.par
+#BlueLink6 Single Moving Object (Custom)`City Environment: Building` ADAS Sensor: Building Occlusion` , Link 7`Target_9962ee14-23a9-4cfd-bd0c-833fa7cf907b
+
+
+#MiscYellow7
+YawO_<<o>> 180
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_9962ee14-23a9-4cfd-bd0c-833fa7cf907b.par
+#BlueLink7 Single Moving Object (Custom)`City Environment: Building` ADAS Sensor: Building Occlusion` , Link 8`Target_9962ee14-23a9-4cfd-bd0c-833fa7cf907b
+
+
+#MiscYellow8
+YawO_<<o>> 270
+#ENDMYellow
+
+
+*MODELCODE City: Signs, Pedestrians, Buildings
+
+#EMBEDDED_NOTES
+#The Stop Signs and Pedestrians have specfic signal types defined for the sensor logic.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic Scenarios } City: Signs, Pedestrians, Buildings
+#Library : Generic Data Group
+#DataSet : City: Signs, Pedestrians, Buildings
+#Category: ADAS: Traffic Scenarios
+#FileID  : GenGrp_00397ca3-6af7-412a-94c4-3c0862577b1c
+#Product : CarSim 2020.0
+#VehCode City: Signs, Pedestrians, Buildings
+
+END

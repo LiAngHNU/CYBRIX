@@ -1,0 +1,4905 @@
+CarSim 2018.1
+Vehicle Configuration: I_I
+
+DATASET_TITLE * 2018.1 - Deer Crossing
+CATEGORY * CS 2018 - New Animator Assets
+TITLE * 2018.1 - Deer Crossing <* CS 2018 - New Animator Assets>
+This file was generated 10:37 on April 19, 2018.
+
+For this run, the CarSim 2018.1 math model has 785 available output variables.
+
+AAx (rad/s2)
+Full Name: Roll acc. (body-fixed), vehicle
+Type: Angular acceleration
+Legend: Vehicle roll (body-fixed)
+Component: Chassis motion
+More details: This is the [sx] component of the angular acceleration vector of the sprung mass.
+
+AAy (rad/s2)
+Full Name: Pitch acc. (body-fixed), vehicle
+Type: Angular acceleration
+Legend: Vehicle pitch (body-fixed)
+Component: Chassis motion
+More details: This is the [sy] component of the angular acceleration vector of the sprung mass.
+
+AAy_L1 (rad/s2)
+Full Name: Wheel L1 spin acceleration
+Type: Angular acceleration
+Legend: Wheel L1 spin
+Component: Wheels
+
+AAy_L2 (rad/s2)
+Full Name: Wheel L2 spin acceleration
+Type: Angular acceleration
+Legend: Wheel L2 spin
+Component: Wheels
+
+AAy_R1 (rad/s2)
+Full Name: Wheel R1 spin acceleration
+Type: Angular acceleration
+Legend: Wheel R1 spin
+Component: Wheels
+
+AAy_R2 (rad/s2)
+Full Name: Wheel R2 spin acceleration
+Type: Angular acceleration
+Legend: Wheel R2 spin
+Component: Wheels
+
+AAz (rad/s2)
+Full Name: Yaw acc. (body-fixed), vehicle
+Type: Angular acceleration
+Legend: Vehicle yaw (body-fixed)
+Component: Chassis motion
+More details: This is the [sz] component of the angular acceleration vector of the sprung mass.
+
+AA_Eng (rad/s2)
+Full Name: Engine crankshaft angular accel.
+Type: Angular acceleration
+Legend: Engine crankshaft
+Component: Powertrain
+
+AA_P (rad/s2)
+Full Name: Pitch accel. (Euler), vehicle
+Type: Angular acceleration
+Legend: Vehicle pitch (Euler)
+Component: Chassis motion
+More details: This is the second time derivative of the Euler pitch angle of the sprung mass. Be aware that the second derivatives AA_P, AA_R, and AA_Y are not measurable in physical vehicles.
+
+AA_R (rad/s2)
+Full Name: Roll accel. (Euler), vehicle
+Type: Angular acceleration
+Legend: Vehicle roll (Euler)
+Component: Chassis motion
+More details: This is the second time derivative of the Euler roll angle of the sprung mass.
+
+AA_Y (rad/s2)
+Full Name: Yaw accel. (Euler), vehicle
+Type: Angular acceleration
+Legend: Vehicle yaw (Euler)
+Component: Chassis motion
+More details: This is the second time derivative of the Euler yaw angle of the sprung mass.
+
+ABS_L1 (-)
+Full Name: ABS apply command, L1
+Type: ABS apply command
+Legend: ABS apply command, L1
+Component: Brakes
+
+ABS_L2 (-)
+Full Name: ABS apply command, L2
+Type: ABS apply command
+Legend: ABS apply command, L2
+Component: Brakes
+
+ABS_R1 (-)
+Full Name: ABS apply command, R1
+Type: ABS apply command
+Legend: ABS apply command, R1
+Component: Brakes
+
+ABS_R2 (-)
+Full Name: ABS apply command, R2
+Type: ABS apply command
+Legend: ABS apply command, R2
+Component: Brakes
+
+Alpha_L1 (deg)
+Full Name: Lateral slip angle, tire L1
+Type: Angle
+Legend: Tire L1 lateral slip
+Component: Tires
+More details: Instant lateral slip is the arc-tangent of the ratio of lateral to longitudinal velocity at the center of tire contact in the plane of the ground at the tire contact: ATAN2(Vy, Vx).
+
+Alpha_L2 (deg)
+Full Name: Lateral slip angle, tire L2
+Type: Angle
+Legend: Tire L2 lateral slip
+Component: Tires
+
+Alpha_R1 (deg)
+Full Name: Lateral slip angle, tire R1
+Type: Angle
+Legend: Tire R1 lateral slip
+Component: Tires
+
+Alpha_R2 (deg)
+Full Name: Lateral slip angle, tire R2
+Type: Angle
+Legend: Tire R2 lateral slip
+Component: Tires
+
+AlphL_L1 (deg)
+Full Name: Lateral slip (lagged), tire L1
+Type: Angle
+Legend: Tire L1 slip (lagged)
+Component: Tires
+More details: Lagged slip angle is the arc-tangent of the state variable SV_SLIP_LAT_L1 that follows the tangent of the instant slip angle ALPHA_L1, subject to a dynamic lag based on lateral relaxation length.
+
+AlphL_L2 (deg)
+Full Name: Lateral slip (lagged), tire L2
+Type: Angle
+Legend: Tire L2 slip (lagged)
+Component: Tires
+
+AlphL_R1 (deg)
+Full Name: Lateral slip (lagged), tire R1
+Type: Angle
+Legend: Tire R1 slip (lagged)
+Component: Tires
+
+AlphL_R2 (deg)
+Full Name: Lateral slip (lagged), tire R2
+Type: Angle
+Legend: Tire R2 slip (lagged)
+Component: Tires
+
+ApplyAEB (-)
+Full Name: Boolean: apply brakes
+Type: ApplyAEB
+Legend: ApplyAEB
+Component: VS Commands
+
+AVx (deg/s)
+Full Name: Roll rate (body-fixed), vehicle
+Type: Angular rate
+Legend: Vehicle roll (body-fixed)
+Component: Chassis motion
+More details: This is the [sx] component of the angular velocity vector of the sprung mass.
+
+AVx_L1 (deg/s)
+Full Name: Roll rate, wheel L1
+Type: Angular rate
+Legend: Roll rate, wheel L1
+Component: Wheels
+More details: This is the roll componenent of the angular velocity vector of the wheel knuckle, in the body-fixed [wx] direction.
+
+AVx_L2 (deg/s)
+Full Name: Roll rate, wheel L2
+Type: Angular rate
+Legend: Roll rate, wheel L2
+Component: Wheels
+
+AVx_R1 (deg/s)
+Full Name: Roll rate, wheel R1
+Type: Angular rate
+Legend: Roll rate, wheel R1
+Component: Wheels
+
+AVx_R2 (deg/s)
+Full Name: Roll rate, wheel R2
+Type: Angular rate
+Legend: Roll rate, wheel R2
+Component: Wheels
+
+AVy (deg/s)
+Full Name: Pitch rate (body-fixed), vehicle
+Type: Angular rate
+Legend: Vehicle pitch (body-fixed)
+Component: Chassis motion
+More details: This is the [sy] component of the angular velocity vector of the sprung mass.
+
+AVy_L1 (rpm)
+Full Name: Wheel L1 spin
+Type: Driveline speed
+Legend: Wheel L1 spin
+Component: Wheels
+
+AVy_L2 (rpm)
+Full Name: Wheel L2 spin
+Type: Driveline speed
+Legend: Wheel L2 spin
+Component: Wheels
+
+AVy_R1 (rpm)
+Full Name: Wheel R1 spin
+Type: Driveline speed
+Legend: Wheel R1 spin
+Component: Wheels
+
+AVy_R2 (rpm)
+Full Name: Wheel R2 spin
+Type: Driveline speed
+Legend: Wheel R2 spin
+Component: Wheels
+
+AVy_W_L1 (deg/s)
+Full Name: Pitch rate, wheel L1
+Type: Angular rate
+Legend: Pitch rate, wheel L1
+Component: Wheels
+More details: This is the pitch componenent of the angular velocity vector of the wheel knuckle, in the body-fixed [wy] direction.
+
+AVy_W_L2 (deg/s)
+Full Name: Pitch rate, wheel L2
+Type: Angular rate
+Legend: Pitch rate, wheel L2
+Component: Wheels
+
+AVy_W_R1 (deg/s)
+Full Name: Pitch rate, wheel R1
+Type: Angular rate
+Legend: Pitch rate, wheel R1
+Component: Wheels
+
+AVy_W_R2 (deg/s)
+Full Name: Pitch rate, wheel R2
+Type: Angular rate
+Legend: Pitch rate, wheel R2
+Component: Wheels
+
+AVz (deg/s)
+Full Name: Yaw rate (body-fixed), vehicle
+Type: Angular rate
+Legend: Vehicle yaw (body-fixed)
+Component: Chassis motion
+More details: This is the [sz] component of the angular velocity vector of the sprung mass.
+
+AVzKp_L1 (deg/s)
+Full Name: Steer rate about kingpin L1
+Type: Angular rate
+Legend: Kingpin L1 steer rate
+Component: Steering
+More details: Component of angular velocity vector of wheel knuckle about the 3D inclined kingpin axis.
+
+AVzKp_L2 (deg/s)
+Full Name: Steer rate about kingpin L2
+Type: Angular rate
+Legend: Kingpin L2 steer rate
+Component: Steering
+
+AVzKp_R1 (deg/s)
+Full Name: Steer rate about kingpin R1
+Type: Angular rate
+Legend: Kingpin R1 steer rate
+Component: Steering
+More details: Component of angular velocity vector of wheel knuckle about the 3D inclined kingpin axis.
+
+AVzKp_R2 (deg/s)
+Full Name: Steer rate about kingpin R2
+Type: Angular rate
+Legend: Kingpin R2 steer rate
+Component: Steering
+
+AVz_L1 (deg/s)
+Full Name: Yaw rate, wheel L1
+Type: Angular rate
+Legend: Yaw rate, wheel L1
+Component: Wheels
+More details: This is the yaw componenent of the angular velocity vector of the wheel knuckle, in the body-fixed [wz] direction..
+
+AVz_L2 (deg/s)
+Full Name: Yaw rate, wheel L2
+Type: Angular rate
+Legend: Yaw rate, wheel L2
+Component: Wheels
+
+AVz_R1 (deg/s)
+Full Name: Yaw rate, wheel R1
+Type: Angular rate
+Legend: Yaw rate, wheel R1
+Component: Wheels
+
+AVz_R2 (deg/s)
+Full Name: Yaw rate, wheel R2
+Type: Angular rate
+Legend: Yaw rate, wheel R2
+Component: Wheels
+
+AV_D3f (rpm)
+Full Name: Trans case shaft to drv. A1 spin
+Type: Driveline speed
+Legend: Transfer case front output shaft
+Component: Powertrain
+
+AV_D3r (rpm)
+Full Name: Trans case shaft to drv. A2 spin
+Type: Driveline speed
+Legend: Transfer case rear output shaft
+Component: Powertrain
+
+AV_DS_L1 (rpm)
+Full Name: Left-front driveshaft speed
+Type: Driveline speed
+Legend: LF driveshaft
+Component: Powertrain
+
+AV_DS_L2 (rpm)
+Full Name: Left-rear driveshaft speed
+Type: Driveline speed
+Legend: LR driveshaft
+Component: Powertrain
+
+AV_DS_R1 (rpm)
+Full Name: Right-front driveshaft speed
+Type: Driveline speed
+Legend: RF driveshaft
+Component: Powertrain
+
+AV_DS_R2 (rpm)
+Full Name: Right-rear driveshaft speed
+Type: Driveline speed
+Legend: RR driveshaft
+Component: Powertrain
+
+AV_Eng (rpm)
+Full Name: Engine crankshaft spin
+Type: Driveline speed
+Legend: Engine crankshaft
+Component: Powertrain
+
+AV_Gear1 (deg/s)
+Full Name: Pitman arm rotation rate, axle 1
+Type: Angular rate
+Legend: Axle 1 steering
+Component: Steering
+
+AV_Gear2 (deg/s)
+Full Name: Pitman arm rotation rate, axle 2
+Type: Angular rate
+Legend: Axle 2 steering
+Component: Steering
+
+AV_P (deg/s)
+Full Name: Pitch rate (Euler), vehicle
+Type: Angular rate
+Legend: Vehicle pitch (Euler)
+Component: Chassis motion
+More details: This is the time derivative of the Euler pitch angle of the sprung mass. Be aware that the derivatives AV_P, AV_R, and AV_Y are not measurable in physical vehicles.
+
+AV_R (deg/s)
+Full Name: Roll rate (Euler), vehicle
+Type: Angular rate
+Legend: Vehicle roll (Euler)
+Component: Chassis motion
+More details: This is the time derivative of the Euler roll angle of the sprung mass.
+
+AV_TC (rpm)
+Full Name: Trans input shaft spin
+Type: Driveline speed
+Legend: Transmission input shaft
+Component: Powertrain
+
+AV_Trans (rpm)
+Full Name: Trans. output shaft spin
+Type: Driveline speed
+Legend: Transmission output shaft
+Component: Powertrain
+
+AV_Y (deg/s)
+Full Name: Yaw rate (Euler), vehicle
+Type: Angular rate
+Legend: Vehicle yaw (Euler)
+Component: Chassis motion
+More details: This is the time derivative of the Euler yaw angle of the sprung mass.
+
+Ax (g)
+Full Name: Long. accel., inst. CG, vehicle
+Type: Longitudinal acceleration
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the acceleration of the instant CG of the vehicle unit in the ISO/SAE [x] direction. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+
+Ax_Calc (m/s2)
+Full Name: Decel needed to avoid collision
+Type: Ax_Calc
+Legend: Ax_Calc
+Component: VS Commands
+
+Ax_Rd (g)
+Full Name: Road X accel., inst. CG, vehicle
+Type: Longitudinal acceleration
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the acceleration of the instant CG of the vehicle unit, in the road [rx] direction.
+
+Ax_SCrq (g)
+Full Name: Ax request from SC PI controller
+Type: Longitudinal acceleration
+Legend: Ax request from SC PI controller
+Component: Speed controller
+
+Ax_SM (g)
+Full Name: Long. accel., CG, sprung mass
+Type: Longitudinal acceleration
+Legend: CG, sprung mass
+Component: Chassis motion
+More details: This is the [x] component of the acceleration vector of the sprung mass CG.
+
+Ay (g)
+Full Name: Lat. accel., inst. CG, vehicle
+Type: Lateral acceleration
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the acceleration of the instant CG of the vehicle unit in the ISO/SAE [y] direction. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+
+Ay_Rd (g)
+Full Name: Road Y accel., inst. CG, vehicle
+Type: Lateral acceleration
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the acceleration of the instant CG of the vehicle unit in the road [ry] direction.
+
+Ay_SM (g)
+Full Name: Lat. accel., CG, sprung mass
+Type: Lateral acceleration
+Legend: CG, sprung mass
+Component: Chassis motion
+More details: This is the [y] component of the acceleration vector of the sprung mass CG.
+
+Az (g)
+Full Name: Vert. accel., inst. CG, vehicle
+Type: Vertical acceleration
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the acceleration of the instant CG of the vehicle unit, in the [nz] direction. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+
+Az_Rd (g)
+Full Name: Road Y accel., inst. CG, vehicle
+Type: Vertical acceleration
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the acceleration of the instant CG of the vehicle unit in the road [rz] direction.
+
+Az_SM (g)
+Full Name: Vert. accel., CG, sprung mass
+Type: Vertical acceleration
+Legend: CG, sprung mass
+Component: Chassis motion
+More details: This is the [nz] component of the acceleration vector of the sprung mass CG.
+
+A_Gear1 (deg)
+Full Name: Pitman arm rotation, axle 1
+Type: Angle
+Legend: Axle 1 steering
+Component: Steering
+
+A_Gear2 (deg)
+Full Name: Pitman arm rotation, axle 2
+Type: Angle
+Legend: Axle 2 steering
+Component: Steering
+
+A_Tbar (deg)
+Full Name: Steering torsion bar angle
+Type: Angle
+Legend: Steering
+Component: Steering
+
+Beta (deg)
+Full Name: Slip angle, vehicle
+Type: Angle
+Legend: Vehicle slip (beta)
+Component: Chassis motion
+More details: The side-slip angle of the vehicle unit is calculated with the ISO/SAE definition as ATAN2(Vy, Vx), where Vy and Vx are the ISO [y] and [x] components of the velocity of the instant center of gravity of the vehicle.
+
+BetaAir (deg)
+Full Name: Aero slip angle, vehicle
+Type: Angle
+Legend: Aero slip angle, vehicle
+Component: Aerodynamics
+More details: Angle of air velocity in the vehicle reference frame, relative to the instant CG for the vehicle unit. Head-on = 0. 90-deg is in the [y] direction.
+
+BetaR (deg/s)
+Full Name: Slip angle rate, vehicle
+Type: Angular rate
+Legend: Vehicle slip rate
+Component: Chassis motion
+
+BetaRd (deg)
+Full Name: Slip angle rel. to road, vehicle
+Type: Angle
+Legend: Vehicle slip (beta) rel. to road
+Component: Chassis motion
+More details: This is the side-slip angle of the vehicle unit relative to the Road Reference Frame: ATAN2(Vy_Rd, Vx_Rd).
+
+BetaRdR (deg/s)
+Full Name: Slip angle rate (road), vehicle
+Type: Angular rate
+Legend: Vehicle slip rate (road)
+Component: Chassis motion
+
+Bk_Boost (mm)
+Full Name: Brake booster displacement
+Type: Displacement
+Legend: Brake Booster
+Component: Brakes
+
+Bk_Pedal (mm)
+Full Name: Brake pedal displacement
+Type: Displacement
+Legend: Brake Pedal
+Component: Brakes
+
+Bk_Stat (-)
+Full Name: Brake apply status
+Type: Boolean
+Legend: Brake Control
+Component: Brakes
+More details: This is 0 (brake control not applied; Pbk_Con < 100 Pa) or 1 (brake control applied; Pbk_Con > 100 Pa).
+
+BrCS1_1 (deg)
+Full Name: Sensor 1 bearing (C), detect 1
+Type: Bearing angle
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+BrCS1_2 (deg)
+Full Name: Sensor 1 bearing (C), detect 2
+Type: Bearing angle
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+BrCS1_3 (deg)
+Full Name: Sensor 1 bearing (C), detect 3
+Type: Bearing angle
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+BrLS1_1 (deg)
+Full Name: Sensor 1 bearing (L), detect 1
+Type: Bearing angle
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+BrLS1_2 (deg)
+Full Name: Sensor 1 bearing (L), detect 2
+Type: Bearing angle
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+BrLS1_3 (deg)
+Full Name: Sensor 1 bearing (L), detect 3
+Type: Bearing angle
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+BrRS1_1 (deg)
+Full Name: Sensor 1 bearing (R), detect 1
+Type: Bearing angle
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+BrRS1_2 (deg)
+Full Name: Sensor 1 bearing (R), detect 2
+Type: Bearing angle
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+BrRS1_3 (deg)
+Full Name: Sensor 1 bearing (R), detect 3
+Type: Bearing angle
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+CamberL1 (deg)
+Full Name: Camber angle, wheel L1
+Type: Angle
+Legend: Wheel camber L1
+Component: Suspensions
+
+CamberL2 (deg)
+Full Name: Camber angle, wheel L2
+Type: Angle
+Legend: Wheel camber L2
+Component: Suspensions
+
+CamberR1 (deg)
+Full Name: Camber angle, wheel R1
+Type: Angle
+Legend: Wheel camber R1
+Component: Suspensions
+
+CamberR2 (deg)
+Full Name: Camber angle, wheel R2
+Type: Angle
+Legend: Wheel camber R2
+Component: Suspensions
+
+CamUSL1 (deg)
+Full Name: Camber (unsteered wheel) L1
+Type: Angle
+Legend: Wheel camber (unsteered) L1
+Component: Suspensions
+More details: Roll angle of the unsteered wheel plane, using the camber sign convention.
+
+CamUSL2 (deg)
+Full Name: Camber (unsteered wheel) L2
+Type: Angle
+Legend: Wheel camber (unsteered) L2
+Component: Suspensions
+More details: Roll angle of the unsteered wheel plane, using the camber sign convention.
+
+CamUSR1 (deg)
+Full Name: Camber (unsteered wheel) R1
+Type: Angle
+Legend: Wheel camber (unsteered) R1
+Component: Suspensions
+
+CamUSR2 (deg)
+Full Name: Camber (unsteered wheel) R2
+Type: Angle
+Legend: Wheel camber (unsteered) R2
+Component: Suspensions
+
+Clt_D1_2 (-)
+Full Name: Front diff. 2nd clutch control
+Type: Clutch control
+Legend: Front diff. second clutch
+Component: Powertrain
+
+Clt_D2_2 (-)
+Full Name: Rear diff. 2nd clutch control
+Type: Clutch control
+Legend: Rear diff. second clutch
+Component: Powertrain
+
+Clt_D3_2 (-)
+Full Name: Trans. case, 2nd clutch control
+Type: Clutch control
+Legend: Transfer case second clutch
+Component: Powertrain
+
+ClutchD1 (-)
+Full Name: Drive A1 diff. clutch control
+Type: Clutch control
+Legend: Front differential clutch
+Component: Powertrain
+
+ClutchD2 (-)
+Full Name: Drive A2 diff. clutch control
+Type: Clutch control
+Legend: Rear differential clutch
+Component: Powertrain
+
+ClutchD3 (-)
+Full Name: Trns case drive A1-2 clutch ctrl
+Type: Clutch control
+Legend: Transfer case clutch
+Component: Powertrain
+
+ClutchL1 (-)
+Full Name: Front left whl. clutch control
+Type: Clutch control
+Legend: Front left wheel clutch
+Component: Powertrain
+
+ClutchL2 (-)
+Full Name: Rear left whl. clutch control
+Type: Clutch control
+Legend: Rear left wheel clutch
+Component: Powertrain
+
+ClutchR1 (-)
+Full Name: Front right whl. clutch control
+Type: Clutch control
+Legend: Front right wheel clutch
+Component: Powertrain
+
+ClutchR2 (-)
+Full Name: Rear right whl. clutch control
+Type: Clutch control
+Legend: Rear right wheel clutch
+Component: Powertrain
+
+ClutchTr (-)
+Full Name: Transmission clutch control
+Type: Clutch control
+Legend: Transmission clutch
+Component: Powertrain
+
+Cl_Stat (-)
+Full Name: Clutch locked state
+Type: Boolean
+Legend: Clutch
+Component: Powertrain
+More details: Clutch lock status: 0 -> slipping, 1 -> locked.
+
+CmpAD_L1 (g)
+Full Name: Compression accel, damper L1
+Type: Compression acceleration
+Legend: Damper L1
+Component: Suspensions
+
+CmpAD_L2 (g)
+Full Name: Compression accel, damper L2
+Type: Compression acceleration
+Legend: Damper L2
+Component: Suspensions
+
+CmpAD_R1 (g)
+Full Name: Compression accel, damper R1
+Type: Compression acceleration
+Legend: Damper R1
+Component: Suspensions
+
+CmpAD_R2 (g)
+Full Name: Compression accel, damper R2
+Type: Compression acceleration
+Legend: Damper R2
+Component: Suspensions
+
+CmpD_L1 (mm)
+Full Name: Compression of damper L1
+Type: Compression
+Legend: Damper L1
+Component: Suspensions
+
+CmpD_L2 (mm)
+Full Name: Compression of damper L2
+Type: Compression
+Legend: Damper L2
+Component: Suspensions
+
+CmpD_R1 (mm)
+Full Name: Compression of damper R1
+Type: Compression
+Legend: Damper R1
+Component: Suspensions
+
+CmpD_R2 (mm)
+Full Name: Compression of damper R2
+Type: Compression
+Legend: Damper R2
+Component: Suspensions
+
+CmpJStL1 (mm)
+Full Name: Compression of jounce stop L1
+Type: Compression
+Legend: L1 jounce stop
+Component: Suspensions
+
+CmpJStL2 (mm)
+Full Name: Compression of jounce stop L2
+Type: Compression
+Legend: L2 jounce stop
+Component: Suspensions
+
+CmpJStR1 (mm)
+Full Name: Compression of jounce stop R1
+Type: Compression
+Legend: R1 jounce stop
+Component: Suspensions
+
+CmpJStR2 (mm)
+Full Name: Compression of jounce stop R2
+Type: Compression
+Legend: R2 jounce stop
+Component: Suspensions
+
+CmpRD_L1 (mm/s)
+Full Name: Compression rate for damper L1
+Type: Compression rate
+Legend: Damper L1
+Component: Suspensions
+
+CmpRD_L2 (mm/s)
+Full Name: Compression rate for damper L2
+Type: Compression rate
+Legend: Damper L2
+Component: Suspensions
+
+CmpRD_R1 (mm/s)
+Full Name: Compression rate for damper R1
+Type: Compression rate
+Legend: Damper R1
+Component: Suspensions
+
+CmpRD_R2 (mm/s)
+Full Name: Compression rate for damper R2
+Type: Compression rate
+Legend: Damper R2
+Component: Suspensions
+
+CmpRStL1 (mm)
+Full Name: Compression of rebound stop L1
+Type: Compression
+Legend: L1 rebound stop
+Component: Suspensions
+
+CmpRStL2 (mm)
+Full Name: Compression of rebound stop L2
+Type: Compression
+Legend: L2 rebound stop
+Component: Suspensions
+
+CmpRStR1 (mm)
+Full Name: Compression of rebound stop R1
+Type: Compression
+Legend: R1 rebound stop
+Component: Suspensions
+
+CmpRStR2 (mm)
+Full Name: Compression of rebound stop R2
+Type: Compression
+Legend: R2 rebound stop
+Component: Suspensions
+
+CmpS_L1 (mm)
+Full Name: Compression of ride spring L1
+Type: Compression
+Legend: Ride spring L1
+Component: Suspensions
+
+CmpS_L2 (mm)
+Full Name: Compression of ride spring L2
+Type: Compression
+Legend: Ride spring L2
+Component: Suspensions
+
+CmpS_R1 (mm)
+Full Name: Compression of ride spring R1
+Type: Compression
+Legend: Ride spring R1
+Component: Suspensions
+
+CmpS_R2 (mm)
+Full Name: Compression of ride spring R2
+Type: Compression
+Legend: Ride spring R2
+Component: Suspensions
+
+CmpT_L1 (mm)
+Full Name: Compression, tire L1
+Type: Compression
+Legend: Tire L1 compression
+Component: Tires
+
+CmpT_L2 (mm)
+Full Name: Compression, tire L2
+Type: Compression
+Legend: Tire L2 compression
+Component: Tires
+
+CmpT_R1 (mm)
+Full Name: Compression, tire R1
+Type: Compression
+Legend: Tire R1 compression
+Component: Tires
+
+CmpT_R2 (mm)
+Full Name: Compression, tire R2
+Type: Compression
+Legend: Tire R2 compression
+Component: Tires
+
+DisS1_1 (m)
+Full Name: Sensor 1 distance, detect 1
+Type: Distance
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+DisS1_2 (m)
+Full Name: Sensor 1 distance, detect 2
+Type: Distance
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+DisS1_3 (m)
+Full Name: Sensor 1 distance, detect 3
+Type: Distance
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Dive_L1 (deg)
+Full Name: Wheel L1 dive
+Type: Angle
+Legend: Wheel L1 dive
+Component: Suspensions
+
+Dive_L2 (deg)
+Full Name: Wheel L2 dive
+Type: Angle
+Legend: Wheel L2 dive
+Component: Suspensions
+
+Dive_R1 (deg)
+Full Name: Wheel R1 dive
+Type: Angle
+Legend: Wheel R1 dive
+Component: Suspensions
+
+Dive_R2 (deg)
+Full Name: Wheel R2 dive
+Type: Angle
+Legend: Wheel R2 dive
+Component: Suspensions
+
+DsLS1_1 (m)
+Full Name: Sensor 1 dist. (L), detect 1
+Type: Distance
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+DsLS1_2 (m)
+Full Name: Sensor 1 dist. (L), detect 2
+Type: Distance
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+DsLS1_3 (m)
+Full Name: Sensor 1 dist. (L), detect 3
+Type: Distance
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+DsRS1_1 (m)
+Full Name: Sensor 1 dist. (R), detect 1
+Type: Distance
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+DsRS1_2 (m)
+Full Name: Sensor 1 dist. (R), detect 2
+Type: Distance
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+DsRS1_3 (m)
+Full Name: Sensor 1 dist. (R), detect 3
+Type: Distance
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+dZdXair (-)
+Full Name: X slope at road aero reference 1
+Type: Ground slope
+Legend: X slope: road refence frame 1
+Component: Aerodynamics
+More details: dZ/dX slope of the ground at the point where the Road Reference Frame is defined.
+
+dZdX_L1 (-)
+Full Name: Ground X slope under tire L1
+Type: Ground slope
+Legend: X slope L1
+Component: Ground and road
+More details: Slope of the road or ground in the global [nx] direction at the center of tire contact.
+
+dZdX_L2 (-)
+Full Name: Ground X slope under tire L2
+Type: Ground slope
+Legend: X slope L2
+Component: Ground and road
+
+dZdX_R1 (-)
+Full Name: Ground X slope under tire R1
+Type: Ground slope
+Legend: X slope R1
+Component: Ground and road
+
+dZdX_R2 (-)
+Full Name: Ground X slope under tire R2
+Type: Ground slope
+Legend: X slope R2
+Component: Ground and road
+
+dZdYair (-)
+Full Name: Y slope at road aero reference 1
+Type: Ground slope
+Legend: Y slope: road refence frame 1
+Component: Aerodynamics
+More details: dZ/dY slope of the ground at the point where the Road Reference Frame is defined.
+
+dZdY_L1 (-)
+Full Name: Ground Y slope under tire L1
+Type: Ground slope
+Legend: Y slope L1
+Component: Ground and road
+More details: Slope of the road or ground in the global [ny] direction at the center of tire contact.
+
+dZdY_L2 (-)
+Full Name: Ground Y slope under tire L2
+Type: Ground slope
+Legend: Y slope L2
+Component: Ground and road
+
+dZdY_R1 (-)
+Full Name: Ground Y slope under tire R1
+Type: Ground slope
+Legend: Y slope R1
+Component: Ground and road
+
+dZdY_R2 (-)
+Full Name: Ground Y slope under tire R2
+Type: Ground slope
+Legend: Y slope R2
+Component: Ground and road
+
+El_S1_1 (deg)
+Full Name: Sensor 1 elevation, detect 1
+Type: Angle
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+El_S1_2 (deg)
+Full Name: Sensor 1 elevation, detect 2
+Type: Angle
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+El_S1_3 (deg)
+Full Name: Sensor 1 elevation, detect 3
+Type: Angle
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+ESC_Stat (-)
+Full Name: ESC engine torque control state
+Type: State
+Legend: ESC engine toque control
+Component: Powertrain
+
+Event (-)
+Full Name: Running count of events
+Type: Count
+Legend: Event
+Component: Time
+More details: This output is initially set to 0, and is incremented every time a VS Event is triggered.
+
+FbkB_In (N)
+Full Name: Brake input force before boost
+Type: Force
+Legend: Brake input force
+Component: Brakes
+
+FbkB_Out (N)
+Full Name: Brake booster output force
+Type: Force
+Legend: Brake Booster
+Component: Brakes
+
+Fd_L1 (N)
+Full Name: Force (compressive), damper L1
+Type: Force
+Legend: Damper L1
+Component: Suspensions
+
+Fd_L2 (N)
+Full Name: Force (compressive), damper L2
+Type: Force
+Legend: Damper L2
+Component: Suspensions
+
+Fd_R1 (N)
+Full Name: Force (compressive), damper R1
+Type: Force
+Legend: Damper R1
+Component: Suspensions
+
+Fd_R2 (N)
+Full Name: Force (compressive), damper R2
+Type: Force
+Legend: Damper R2
+Component: Suspensions
+
+FJSt_L1 (N)
+Full Name: Jounce-stop force L1
+Type: Force
+Legend: Jounce stop L1
+Component: Suspensions
+
+FJSt_L2 (N)
+Full Name: Jounce-stop force L2
+Type: Force
+Legend: Jounce stop L2
+Component: Suspensions
+
+FJSt_R1 (N)
+Full Name: Jounce-stop force R1
+Type: Force
+Legend: Jounce stop R1
+Component: Suspensions
+
+FJSt_R2 (N)
+Full Name: Jounce-stop force R2
+Type: Force
+Legend: Jounce stop R2
+Component: Suspensions
+
+FRSt_L1 (N)
+Full Name: Rebound-stop force L1
+Type: Force
+Legend: Rebound stop L1
+Component: Suspensions
+
+FRSt_L2 (N)
+Full Name: Rebound-stop force L2
+Type: Force
+Legend: Rebound stop L2
+Component: Suspensions
+
+FRSt_R1 (N)
+Full Name: Rebound-stop force R1
+Type: Force
+Legend: Rebound stop R1
+Component: Suspensions
+
+FRSt_R2 (N)
+Full Name: Rebound-stop force R2
+Type: Force
+Legend: Rebound stop R2
+Component: Suspensions
+
+FsExt_L1 (N)
+Full Name: Ext. spring force L1 (comp.)
+Type: Force
+Legend: Ext. spring L1 (comp.)
+Component: Suspensions
+More details: Spring force from external model (e.g., Simulink). The force applied in the multibody model is divided by the instant mechanical advantage.
+
+FsExt_L2 (N)
+Full Name: Ext. spring force L2 (comp.)
+Type: Force
+Legend: Ext. spring L2 (comp.)
+Component: Suspensions
+More details: Spring force from external model (e.g., Simulink). The force applied in the multibody model is divided by the instant mechanical advantage.
+
+FsExt_R1 (N)
+Full Name: Ext. spring force R1 (comp.)
+Type: Force
+Legend: Ext. spring R1 (comp.)
+Component: Suspensions
+
+FsExt_R2 (N)
+Full Name: Ext. spring force R2 (comp.)
+Type: Force
+Legend: Ext. spring R2 (comp.)
+Component: Suspensions
+
+Fs_L1 (N)
+Full Name: Spring force L1 (comp.)
+Type: Force
+Legend: Spring L1 (comp.)
+Component: Suspensions
+More details: Spring force from built-in model, including hysteresis. The force applied in the multibody model is divided by the instant mechanical advantage.
+
+Fs_L2 (N)
+Full Name: Spring force L2 (comp.)
+Type: Force
+Legend: Spring L2 (comp.)
+Component: Suspensions
+More details: Spring force from built-in model, including hysteresis. The force applied in the multibody model is divided by the instant mechanical advantage.
+
+Fs_R1 (N)
+Full Name: Spring force R1 (comp.)
+Type: Force
+Legend: Spring R1 (comp.)
+Component: Suspensions
+
+Fs_R2 (N)
+Full Name: Spring force R2 (comp.)
+Type: Force
+Legend: Spring R2 (comp.)
+Component: Suspensions
+
+FullStep (-)
+Full Name: Integrator full-step status
+Type: Boolean
+Legend: Integrator full-step status
+Component: Time
+More details: Boolean that indicates whether the integrator is at a full step (1) or not (0). Be aware that changes to state variables from external equations that are not made at the full step are discarded. Also, events are processed only at the full step.
+
+FxExL1 (N)
+Full Name: External Fx, L1
+Type: Force
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sx] direction
+
+FxExL2 (N)
+Full Name: External Fx, L2
+Type: Force
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sx] direction
+
+FxExR1 (N)
+Full Name: External Fx, R1
+Type: Force
+Legend: Wheel R1
+Component: External actions
+
+FxExR2 (N)
+Full Name: External Fx, R2
+Type: Force
+Legend: Wheel R2
+Component: External actions
+
+FxGExL1 (N)
+Full Name: External FxG, L1
+Type: Force
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nx] direction
+
+FxGExL2 (N)
+Full Name: External FxG, L2
+Type: Force
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nx] direction
+
+FxGExR1 (N)
+Full Name: External FxG, R1
+Type: Force
+Legend: Wheel R1
+Component: External actions
+
+FxGExR2 (N)
+Full Name: External FxG, R2
+Type: Force
+Legend: Wheel R2
+Component: External actions
+
+FxSmMod1 (N)
+Full Name: Fx applied by modules to SM 1
+Type: Force
+Legend: Sprung mass 1
+Component: External actions
+More details: Total reaction force in the [sx] direction from possible trailing hitch.
+
+Fx_A1 (N)
+Full Name: Longitudinal tire force, axle 1
+Type: Force
+Legend: Axle 1 longitudinal tire force
+Component: Axles
+
+Fx_A2 (N)
+Full Name: Longitudinal tire force, axle 2
+Type: Force
+Legend: Axle 2 longitudinal tire force
+Component: Axles
+
+Fx_Air (N)
+Full Name: Aero Fx, vehicle
+Type: Force
+Legend: Aero Fx, vehicle
+Component: Aerodynamics
+More details: Force applied to the sprung mass at the aerodynamic reference point in the [sx] direction.
+
+Fx_L1 (N)
+Full Name: Longitudinal force, tire L1
+Type: Force
+Legend: Tire L1 longitudinal
+Component: Tires
+
+Fx_L2 (N)
+Full Name: Longitudinal force, tire L2
+Type: Force
+Legend: Tire L2 longitudinal
+Component: Tires
+
+Fx_R1 (N)
+Full Name: Longitudinal force, tire R1
+Type: Force
+Legend: Tire R1 longitudinal
+Component: Tires
+
+Fx_R2 (N)
+Full Name: Longitudinal force, tire R2
+Type: Force
+Legend: Tire R2 longitudinal
+Component: Tires
+
+Fx_WC_L1 (N)
+Full Name: Tire Fx at wheel center L1
+Type: Force
+Legend: Tire Fx at wheel center L1
+Component: Wheels
+More details: This is the component of the total tire force vector applied to the wheel center in the [wx] direction.
+
+Fx_WC_L2 (N)
+Full Name: Tire Fx at wheel center L2
+Type: Force
+Legend: Tire Fx at wheel center L2
+Component: Wheels
+
+Fx_WC_R1 (N)
+Full Name: Tire Fx at wheel center R1
+Type: Force
+Legend: Tire Fx at wheel center R1
+Component: Wheels
+
+Fx_WC_R2 (N)
+Full Name: Tire Fx at wheel center R2
+Type: Force
+Legend: Tire Fx at wheel center R2
+Component: Wheels
+
+FyExL1 (N)
+Full Name: External Fy, L1
+Type: Force
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sy] direction
+
+FyExL2 (N)
+Full Name: External Fy, L2
+Type: Force
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sy] direction
+
+FyExR1 (N)
+Full Name: External Fy, R1
+Type: Force
+Legend: Wheel R1
+Component: External actions
+
+FyExR2 (N)
+Full Name: External Fy, R2
+Type: Force
+Legend: Wheel R2
+Component: External actions
+
+FyGExL1 (N)
+Full Name: External FyG, L1
+Type: Force
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [ny] direction
+
+FyGExL2 (N)
+Full Name: External FyG, L2
+Type: Force
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [ny] direction
+
+FyGExR1 (N)
+Full Name: External FyG, R1
+Type: Force
+Legend: Wheel R1
+Component: External actions
+
+FyGExR2 (N)
+Full Name: External FyG, R2
+Type: Force
+Legend: Wheel R2
+Component: External actions
+
+FySmMod1 (N)
+Full Name: Fy applied by modules to SM 1
+Type: Force
+Legend: Sprung mass 1
+Component: External actions
+More details: Total reaction force in the [sy] direction from possible trailing hitch.
+
+Fy_A1 (N)
+Full Name: Lateral tire force, axle 1
+Type: Force
+Legend: Axle 1 lateral tire force
+Component: Axles
+
+Fy_A2 (N)
+Full Name: Lateral tire force, axle 2
+Type: Force
+Legend: Axle 2 lateral tire force
+Component: Axles
+
+Fy_Air (N)
+Full Name: Aero Fy, vehicle
+Type: Force
+Legend: Aero Fy, vehicle
+Component: Aerodynamics
+More details: Force applied to the sprung mass at the aerodynamic reference point in the [sy] direction.
+
+Fy_L1 (N)
+Full Name: Lateral force, tire L1
+Type: Force
+Legend: Tire L1 lateral
+Component: Tires
+
+Fy_L2 (N)
+Full Name: Lateral force, tire L2
+Type: Force
+Legend: Tire L2 lateral
+Component: Tires
+
+Fy_R1 (N)
+Full Name: Lateral force, tire R1
+Type: Force
+Legend: Tire R1 lateral
+Component: Tires
+
+Fy_R2 (N)
+Full Name: Lateral force, tire R2
+Type: Force
+Legend: Tire R2 lateral
+Component: Tires
+
+Fy_WC_L1 (N)
+Full Name: Tire Fy at wheel center L1
+Type: Force
+Legend: Tire Fy at wheel center L1
+Component: Wheels
+More details: This is the component of the total tire force vector applied to the wheel center in the [wy] direction.
+
+Fy_WC_L2 (N)
+Full Name: Tire Fy at wheel center L2
+Type: Force
+Legend: Tire Fy at wheel center L2
+Component: Wheels
+
+Fy_WC_R1 (N)
+Full Name: Tire Fy at wheel center R1
+Type: Force
+Legend: Tire Fy at wheel center R1
+Component: Wheels
+
+Fy_WC_R2 (N)
+Full Name: Tire Fy at wheel center R2
+Type: Force
+Legend: Tire Fy at wheel center R2
+Component: Wheels
+
+FzExL1 (N)
+Full Name: External Fz, L1
+Type: Force
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sz] direction
+
+FzExL2 (N)
+Full Name: External Fz, L2
+Type: Force
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sz] direction
+
+FzExR1 (N)
+Full Name: External Fz, R1
+Type: Force
+Legend: Wheel R1
+Component: External actions
+
+FzExR2 (N)
+Full Name: External Fz, R2
+Type: Force
+Legend: Wheel R2
+Component: External actions
+
+FzGExL1 (N)
+Full Name: External FzG, L1
+Type: Force
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nz] direction
+
+FzGExL2 (N)
+Full Name: External FzG, L2
+Type: Force
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nz] direction
+
+FzGExR1 (N)
+Full Name: External FzG, R1
+Type: Force
+Legend: Wheel R1
+Component: External actions
+
+FzGExR2 (N)
+Full Name: External FzG, R2
+Type: Force
+Legend: Wheel R2
+Component: External actions
+
+FzSmMod1 (N)
+Full Name: Fz applied by modules to SM 1
+Type: Force
+Legend: Sprung mass 1
+Component: External actions
+More details: Total reaction force in the [sz] direction from possible trailing hitch.
+
+Fz_A1 (N)
+Full Name: Vertical tire force, axle 1
+Type: Force
+Legend: Axle 1 vertical tire force
+Component: Axles
+
+Fz_A2 (N)
+Full Name: Vertical tire force, axle 2
+Type: Force
+Legend: Axle 2 vertical tire force
+Component: Axles
+
+Fz_Air (N)
+Full Name: Aero Fz, vehicle
+Type: Force
+Legend: Aero Fz, vehicle
+Component: Aerodynamics
+More details: Force applied to the sprung mass at the aerodynamic reference point in the [sz] direction.
+
+Fz_L1 (N)
+Full Name: Vertical force, tire L1
+Type: Force
+Legend: Tire L1 vertical
+Component: Tires
+
+Fz_L2 (N)
+Full Name: Vertical force, tire L2
+Type: Force
+Legend: Tire L2 vertical
+Component: Tires
+
+Fz_R1 (N)
+Full Name: Vertical force, tire R1
+Type: Force
+Legend: Tire R1 vertical
+Component: Tires
+
+Fz_R2 (N)
+Full Name: Vertical force, tire R2
+Type: Force
+Legend: Tire R2 vertical
+Component: Tires
+
+Fz_WC_L1 (N)
+Full Name: Tire Fz at wheel center L1
+Type: Force
+Legend: Tire Fz at wheel center L1
+Component: Wheels
+More details: This is the component of the total tire force vector applied to the wheel center in the [wz] direction.
+
+Fz_WC_L2 (N)
+Full Name: Tire Fz at wheel center L2
+Type: Force
+Legend: Tire Fz at wheel center L2
+Component: Wheels
+
+Fz_WC_R1 (N)
+Full Name: Tire Fz at wheel center R1
+Type: Force
+Legend: Tire Fz at wheel center R1
+Component: Wheels
+
+Fz_WC_R2 (N)
+Full Name: Tire Fz at wheel center R2
+Type: Force
+Legend: Tire Fz at wheel center R2
+Component: Wheels
+
+F_boost (N)
+Full Name: Steering boost force
+Type: Force
+Legend: Power steering
+Component: Steering
+
+F_Pedal (N)
+Full Name: Brake pedal force
+Type: Force
+Legend: Brake Pedal
+Component: Brakes
+
+F_TRdL1 (N)
+Full Name: Rack load from tierod L1
+Type: Force
+Legend: Tierod L1 rack load
+Component: Steering
+
+F_TRdL2 (N)
+Full Name: Rack load from tierod L2
+Type: Force
+Legend: Tierod L2 rack load
+Component: Steering
+
+F_TRdR1 (N)
+Full Name: Rack load from tierod R1
+Type: Force
+Legend: Tierod R1 rack load
+Component: Steering
+
+F_TRdR2 (N)
+Full Name: Rack load from tierod R2
+Type: Force
+Legend: Tierod R2 rack load
+Component: Steering
+
+Gamma_L1 (deg)
+Full Name: Inclination angle, tire L1
+Type: Angle
+Legend: Tire L1 inclination
+Component: Tires
+More details: Tire inclination is relative to the ground surface.
+
+Gamma_L2 (deg)
+Full Name: Inclination angle, tire L2
+Type: Angle
+Legend: Tire L2 inclination
+Component: Tires
+
+Gamma_R1 (deg)
+Full Name: Inclination angle, tire R1
+Type: Angle
+Legend: Tire R1 inclination
+Component: Tires
+
+Gamma_R2 (deg)
+Full Name: Inclination angle, tire R2
+Type: Angle
+Legend: Tire R2 inclination
+Component: Tires
+
+GearStat (-)
+Full Name: Transmission gear status
+Type: Gear
+Legend: Transmission gear status
+Component: Powertrain
+
+Gear_CL (-)
+Full Name: Closed-loop transmission gear
+Type: Gear
+Legend: Closed-loop transmission gear
+Component: Powertrain
+
+Gear_Del (-)
+Full Name: Delayed transmission gear status
+Type: Gear
+Legend: Delayed transmission gear status
+Component: Powertrain
+
+Gear_OL (-)
+Full Name: Open-loop transmission gear
+Type: Gear
+Legend: Open-loop transmission gear
+Component: Powertrain
+
+GPSlongA (deg)
+Full Name: GPS absolute longitude
+Type: GPS longitude
+Legend: Vehicle
+Component: Chassis motion
+
+GPS_Lat (deg)
+Full Name: GPS relative latitude
+Type: GPS latitude
+Legend: Vehicle
+Component: Chassis motion
+
+GPS_LatA (deg)
+Full Name: GPS absolute latitude
+Type: GPS latitude
+Legend: Vehicle
+Component: Chassis motion
+
+GPS_LatO_1 (deg)
+8-Char Alias: GPS_Lat1
+Full Name: GPS latitude, object 1
+Type: GPS latitude
+Legend: Moving object 1
+Component: Targets
+More details: GPS latitude of control point of moving object.
+
+GPS_LatO_2 (deg)
+8-Char Alias: GPS_Lat2
+Full Name: GPS latitude, object 2
+Type: GPS latitude
+Legend: Moving object 2
+Component: Targets
+
+GPS_LatO_3 (deg)
+8-Char Alias: GPS_Lat3
+Full Name: GPS latitude, object 3
+Type: GPS latitude
+Legend: Moving object 3
+Component: Targets
+
+GPS_Long (deg)
+Full Name: GPS relative longitude
+Type: GPS longitude
+Legend: Vehicle
+Component: Chassis motion
+
+GPS_LongO_1 (deg)
+8-Char Alias: GPS_Lng1
+Full Name: GPS longitude, object 1
+Type: GPS longitude
+Legend: Moving object 1
+Component: Targets
+More details: GPS longitude of control point of moving object.
+
+GPS_LongO_2 (deg)
+8-Char Alias: GPS_Lng2
+Full Name: GPS longitude, object 2
+Type: GPS longitude
+Legend: Moving object 2
+Component: Targets
+
+GPS_LongO_3 (deg)
+8-Char Alias: GPS_Lng3
+Full Name: GPS longitude, object 3
+Type: GPS longitude
+Legend: Moving object 3
+Component: Targets
+
+Hcg_TM (mm)
+Full Name: Height, inst. CG, vehicle
+Type: Height (local Z coordinate)
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the height (local Z coordinate) of the instant CG of the vehicle unit in the sprung mass coordinate system. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+
+HeadO_1 (deg)
+Full Name: Heading angle, moving object 1
+Type: Heading angle
+Legend: Moving object 1
+Component: Targets
+
+HeadO_2 (deg)
+Full Name: Heading angle, moving object 2
+Type: Heading angle
+Legend: Moving object 2
+Component: Targets
+
+HeadO_3 (deg)
+Full Name: Heading angle, moving object 3
+Type: Heading angle
+Legend: Moving object 3
+Component: Targets
+
+ID_Event (-)
+Full Name: ID number of event
+Type: ID number
+Legend: ID of event
+Component: Database
+More details: This output gives the value of the system parameter ID_EVENT. The parameter will keep its default value of 0 unless it is changed by a VS Event or other VS Command.
+
+ID_Run (-)
+Full Name: ID number of run
+Type: ID number
+Legend: ID of run
+Component: Database
+More details: This output gives the value of the system parameter ID_RUN. The parameter will keep its default value of 0 unless it is changed by a VS Event or other VS Command.
+
+ID_S1_1 (-)
+Full Name: Sensor 1 ID number, detect 1
+Type: ID number
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+ID_S1_2 (-)
+Full Name: Sensor 1 ID number, detect 2
+Type: ID number
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+ID_S1_3 (-)
+Full Name: Sensor 1 ID number, detect 3
+Type: ID number
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Ispin_Tr (kg-m2)
+Full Name: Transmission spin inertia
+Type: inertia
+Legend: Transmission spin inertia
+Component: Powertrain
+
+IW_DR_L1 (kg-m2)
+Full Name: Driveline inertia for wheel L1
+Type: Inertia
+Legend: Drive wheel L1
+Component: Powertrain
+More details: Additional driveline inertia applied to the drive wheel.
+
+IW_DR_L2 (kg-m2)
+Full Name: Driveline inertia for wheel L2
+Type: Inertia
+Legend: Drive wheel L2
+Component: Powertrain
+More details: Additional driveline inertia applied to the drive wheel.
+
+IW_DR_R1 (kg-m2)
+Full Name: Driveline inertia for wheel R1
+Type: Inertia
+Legend: Drive wheel R1
+Component: Powertrain
+More details: Additional driveline inertia applied to the drive wheel.
+
+IW_DR_R2 (kg-m2)
+Full Name: Driveline inertia for wheel R2
+Type: Inertia
+Legend: Drive wheel R2
+Component: Powertrain
+More details: Additional driveline inertia applied to the drive wheel.
+
+JncR_L1 (mm/s)
+Full Name: Wheel L1 jounce rate
+Type: Compression rate
+Legend: Wheel L1 jounce
+Component: Suspensions
+
+JncR_L2 (mm/s)
+Full Name: Wheel L2 jounce rate
+Type: Compression rate
+Legend: Wheel L2 jounce
+Component: Suspensions
+
+JncR_R1 (mm/s)
+Full Name: Wheel R1 jounce rate
+Type: Compression rate
+Legend: Wheel R1 jounce
+Component: Suspensions
+
+JncR_R2 (mm/s)
+Full Name: Wheel R2 jounce rate
+Type: Compression rate
+Legend: Wheel R2 jounce
+Component: Suspensions
+
+Jnc_L1 (mm)
+Full Name: Wheel L1 jounce (compression)
+Type: Compression
+Legend: Wheel L1 jounce
+Component: Suspensions
+
+Jnc_L2 (mm)
+Full Name: Wheel L2 jounce (compression)
+Type: Compression
+Legend: Wheel L2 jounce
+Component: Suspensions
+
+Jnc_R1 (mm)
+Full Name: Wheel R1 jounce (compression)
+Type: Compression
+Legend: Wheel R1 jounce
+Component: Suspensions
+
+Jnc_R2 (mm)
+Full Name: Wheel R2 jounce (compression)
+Type: Compression
+Legend: Wheel R2 jounce
+Component: Suspensions
+
+Kappa_L1 (-)
+Full Name: Longitudinal slip, tire L1
+Type: Dimensionless ratio
+Legend: Tire L1 long. slip
+Component: Tires
+More details: Instant longitudinal slip: [AV of wheel]*RRE/Vx - 1.
+
+Kappa_L2 (-)
+Full Name: Longitudinal slip, tire L2
+Type: Dimensionless ratio
+Legend: Tire L2 long. slip
+Component: Tires
+
+Kappa_R1 (-)
+Full Name: Longitudinal slip, tire R1
+Type: Dimensionless ratio
+Legend: Tire R1 long. slip
+Component: Tires
+
+Kappa_R2 (-)
+Full Name: Longitudinal slip, tire R2
+Type: Dimensionless ratio
+Legend: Tire R2 long. slip
+Component: Tires
+
+KappL_L1 (-)
+Full Name: Long. slip (lagged), tire L1
+Type: Dimensionless ratio
+Legend: Tire L1 long. slip (lagged)
+Component: Tires
+More details: Lagged slip ratio is a state variable that follows the instant slip ratio KAPPA_L1, subject to a dynamic lag.
+
+KappL_L2 (-)
+Full Name: Long. slip (lagged), tire L2
+Type: Dimensionless ratio
+Legend: Tire L2 long. slip (lagged)
+Component: Tires
+
+KappL_R1 (-)
+Full Name: Long. slip (lagged), tire R1
+Type: Dimensionless ratio
+Legend: Tire R1 long. slip (lagged)
+Component: Tires
+
+KappL_R2 (-)
+Full Name: Long. slip (lagged), tire R2
+Type: Dimensionless ratio
+Legend: Tire R2 long. slip (lagged)
+Component: Tires
+
+K_TC (Kinv)
+Full Name: TC inverse capacity
+Type: Inverse capacity
+Legend: Torque converter
+Component: Powertrain
+
+LatO_1 (m)
+Full Name: Lateral offset, moving object 1
+Type: Lateral offset
+Legend: Moving object 1
+Component: Targets
+More details: Lateral position is associated with the path identified by the parameter PATH_ID_OBJ. If PATH_ID_OBJ is zero, then LatO is not used and is always zero.
+
+LatO_2 (m)
+Full Name: Lateral offset, moving object 2
+Type: Lateral offset
+Legend: Moving object 2
+Component: Targets
+
+LatO_3 (m)
+Full Name: Lateral offset, moving object 3
+Type: Lateral offset
+Legend: Moving object 3
+Component: Targets
+
+Lat_Targ (m)
+Full Name: Target lateral offset from path
+Type: Lateral distance to path
+Legend: Target
+Component: Driver model path
+
+Lat_Veh (m)
+Full Name: Vehicle lateral distance to path
+Type: Lateral distance to path
+Legend: Vehicle
+Component: Driver model path
+
+LxcgTM (mm)
+Full Name: Lx distance to inst. CG, vehicle
+Type: Lx distance (local -X coord.)
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the local X coordinate of the instant CG of the vehicle unit in the sprung mass coordinate system, with the sign flipped as needed to represent the distance behind the sprung-mass origin. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+
+MagS1_1 (-)
+Full Name: Sensor 1 magnitude, detect 1
+Type: Magnitude
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+MagS1_2 (-)
+Full Name: Sensor 1 magnitude, detect 2
+Type: Magnitude
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+MagS1_3 (-)
+Full Name: Sensor 1 magnitude, detect 3
+Type: Magnitude
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Mfuel (kg)
+Full Name: Mass of fuel consumed
+Type: Fuel consumed
+Legend: Fuel
+Component: Powertrain
+
+ModeTran (-)
+Full Name: Transmission control mode
+Type: Transmission control mode
+Legend: Transmission control mode
+Component: Powertrain
+More details: Control option for transmission, from configurable function MODE_TRANS or imported variable. -1 is reverse, 0 is neutral, 1 specifies open-loop mode, 2 and higher specify a closed-loop limit (maximum gear available to the controller). The current gear in closed-loop mode is Gear_CL. The current gear in open-loop mode is Gear_OL.
+
+MsgObj_1 (-)
+Full Name: Message from object 1
+Type: Message (code)
+Legend: Moving object 1
+Component: Targets
+More details: Each object has an output message (code) that can be set with VS Commands or imported from an external software tool. This can be used to provide content from objects representing signs and traffic signals.
+
+MsgObj_2 (-)
+Full Name: Message from object 2
+Type: Message (code)
+Legend: Moving object 2
+Component: Targets
+
+MsgObj_3 (-)
+Full Name: Message from object 3
+Type: Message (code)
+Legend: Moving object 3
+Component: Targets
+
+MsgS1_1 (-)
+Full Name: Sensor 1 Message, detect 1
+Type: Message
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+MsgS1_2 (-)
+Full Name: Sensor 1 Message, detect 2
+Type: Message
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+MsgS1_3 (-)
+Full Name: Sensor 1 Message, detect 3
+Type: Message
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+MuX_L1 (-)
+Full Name: Ground X friction, tire L1
+Type: Friction coefficient
+Legend: Tire/Ground MuX L1
+Component: Ground and road
+More details: Friction from the built-in Configurable Functions is the same for the X and Y directions. However, different values can be imported for the X and Y directions for simulating unusual conditions such as sand or snow.
+
+MuX_L2 (-)
+Full Name: Ground X friction, tire L2
+Type: Friction coefficient
+Legend: Tire/Ground MuX L2
+Component: Ground and road
+
+MuX_R1 (-)
+Full Name: Ground X friction, tire R1
+Type: Friction coefficient
+Legend: Tire/Ground MuX R1
+Component: Ground and road
+
+MuX_R2 (-)
+Full Name: Ground X friction, tire R2
+Type: Friction coefficient
+Legend: Tire/Ground MuX R2
+Component: Ground and road
+
+MuY_L1 (-)
+Full Name: Ground Y friction, tire L1
+Type: Friction coefficient
+Legend: Tire/Ground MuY L1
+Component: Ground and road
+More details: Friction from the built-in Configurable Functions is the same for the X and Y directions. However, different values can be imported for the X and Y directions for simulating unusual conditions such as sand or snow.
+
+MuY_L2 (-)
+Full Name: Ground Y friction, tire L2
+Type: Friction coefficient
+Legend: Tire/Ground MuY L2
+Component: Ground and road
+
+MuY_R1 (-)
+Full Name: Ground Y friction, tire R1
+Type: Friction coefficient
+Legend: Tire/Ground MuY R1
+Component: Ground and road
+
+MuY_R2 (-)
+Full Name: Ground Y friction, tire R2
+Type: Friction coefficient
+Legend: Tire/Ground MuY R2
+Component: Ground and road
+
+MxExL1 (N-m)
+Full Name: External Mx, L1
+Type: Moment
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sx] direction
+
+MxExL2 (N-m)
+Full Name: External Mx, L2
+Type: Moment
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sx] direction
+
+MxExR1 (N-m)
+Full Name: External Mx, R1
+Type: Moment
+Legend: Wheel R1
+Component: External actions
+
+MxExR2 (N-m)
+Full Name: External Mx, R2
+Type: Moment
+Legend: Wheel R2
+Component: External actions
+
+MxGExL1 (N-m)
+Full Name: External MxG, L1
+Type: Moment
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nx] direction
+
+MxGExL2 (N-m)
+Full Name: External MxG, L2
+Type: Moment
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nx] direction
+
+MxGExR1 (N-m)
+Full Name: External MxG, R1
+Type: Moment
+Legend: Wheel R1
+Component: External actions
+
+MxGExR2 (N-m)
+Full Name: External MxG, R2
+Type: Moment
+Legend: Wheel R2
+Component: External actions
+
+MxGExt (N-m)
+Full Name: External MxG on sprung mass
+Type: Moment
+Legend: Sprung mass
+Component: External actions
+More details: Optional user-defined moment applied from the inertial reference N in the [sx] direction.
+
+MxSmMod1 (N-m)
+Full Name: Mx applied by modules to SM 1
+Type: Moment
+Legend: Sprung mass 1
+Component: External actions
+More details: SumTotal reaction moment in the [sx] direction from possible trailing hitch.
+
+Mx_A1 (N-m)
+Full Name: Auxiliary roll moment, axle 1
+Type: Moment
+Legend: Axle 1
+Component: Suspensions
+
+Mx_A2 (N-m)
+Full Name: Auxiliary roll moment, axle 2
+Type: Moment
+Legend: Axle 2
+Component: Suspensions
+
+Mx_Air (N-m)
+Full Name: Aero Mx, vehicle
+Type: Moment
+Legend: Aero Mx, vehicle
+Component: Aerodynamics
+More details: Moment applied to the sprung mass in the [sx] direction.
+
+Mx_Ext (N-m)
+Full Name: External Mx on sprung mass
+Type: Moment
+Legend: Sprung mass
+Component: External actions
+More details: Optional user-defined moment applied from the inertial reference N in the [nx] direction.
+
+Mx_L1 (N-m)
+Full Name: Overturning moment, tire L1
+Type: Moment
+Legend: Tire L1 overturning
+Component: Tires
+
+Mx_L2 (N-m)
+Full Name: Overturning moment, tire L2
+Type: Moment
+Legend: Tire L2 overturning
+Component: Tires
+
+Mx_R1 (N-m)
+Full Name: Overturning moment, tire R1
+Type: Moment
+Legend: Tire R1 overturning
+Component: Tires
+
+Mx_R2 (N-m)
+Full Name: Overturning moment, tire R2
+Type: Moment
+Legend: Tire R2 overturning
+Component: Tires
+
+Mx_WC_L1 (N-m)
+Full Name: Tire Mx at wheel center L1
+Type: Moment
+Legend: Tire Mx at wheel center L1
+Component: Wheels
+More details: This is the [wx] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+
+Mx_WC_L2 (N-m)
+Full Name: Tire Mx at wheel center L2
+Type: Moment
+Legend: Tire Mx at wheel center L2
+Component: Wheels
+
+Mx_WC_R1 (N-m)
+Full Name: Tire Mx at wheel center R1
+Type: Moment
+Legend: Tire Mx at wheel center R1
+Component: Wheels
+
+Mx_WC_R2 (N-m)
+Full Name: Tire Mx at wheel center R2
+Type: Moment
+Legend: Tire Mx at wheel center R2
+Component: Wheels
+
+MyExL1 (N-m)
+Full Name: External My, L1
+Type: Moment
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sy] direction
+
+MyExL2 (N-m)
+Full Name: External My, L2
+Type: Moment
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sy] direction
+
+MyExR1 (N-m)
+Full Name: External My, R1
+Type: Moment
+Legend: Wheel R1
+Component: External actions
+
+MyExR2 (N-m)
+Full Name: External My, R2
+Type: Moment
+Legend: Wheel R2
+Component: External actions
+
+MyGExL1 (N-m)
+Full Name: External MyG, L1
+Type: Moment
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [ny] direction
+
+MyGExL2 (N-m)
+Full Name: External MyG, L2
+Type: Moment
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [ny] direction
+
+MyGExR1 (N-m)
+Full Name: External MyG, R1
+Type: Moment
+Legend: Wheel R1
+Component: External actions
+
+MyGExR2 (N-m)
+Full Name: External MyG, R2
+Type: Moment
+Legend: Wheel R2
+Component: External actions
+
+MyGExt (N-m)
+Full Name: External MyG on sprung mass
+Type: Moment
+Legend: Sprung mass
+Component: External actions
+More details: Optional user-defined moment applied from the inertial reference N in the [sy] direction.
+
+MyRR_L1 (N-m)
+Full Name: Rolling resist moment, tire L1
+Type: Moment
+Legend: Tire L1 rolling resistance
+Component: Tires
+
+MyRR_L2 (N-m)
+Full Name: Rolling resist moment, tire L2
+Type: Moment
+Legend: Tire L2 rolling resistance
+Component: Tires
+
+MyRR_R1 (N-m)
+Full Name: Rolling resist moment, tire R1
+Type: Moment
+Legend: Tire R1 rolling resistance
+Component: Tires
+
+MyRR_R2 (N-m)
+Full Name: Rolling resist moment, tire R2
+Type: Moment
+Legend: Tire R2 rolling resistance
+Component: Tires
+
+MySmMod1 (N-m)
+Full Name: My applied by modules to SM 1
+Type: Moment
+Legend: Sprung mass 1
+Component: External actions
+More details: Total reaction moment in the [sy] direction from possible trailing hitch.
+
+My_Air (N-m)
+Full Name: Aero My, vehicle
+Type: Moment
+Legend: Aero My, vehicle
+Component: Aerodynamics
+More details: Moment applied to the sprung mass in the [sy] direction.
+
+My_Bk_L1 (N-m)
+Full Name: Brake moment L1
+Type: Moment
+Legend: Brake My L1
+Component: Brakes
+
+My_Bk_L2 (N-m)
+Full Name: Brake moment L2
+Type: Moment
+Legend: Brake My L2
+Component: Brakes
+
+My_Bk_R1 (N-m)
+Full Name: Brake moment R1
+Type: Moment
+Legend: Brake My R1
+Component: Brakes
+
+My_Bk_R2 (N-m)
+Full Name: Brake moment R2
+Type: Moment
+Legend: Brake My R2
+Component: Brakes
+
+MY_DR_L1 (N-m)
+Full Name: Total drive moment for wheel L1
+Type: Moment
+Legend: Drive wheel L1
+Component: Powertrain
+
+MY_DR_L2 (N-m)
+Full Name: Total drive moment for wheel L2
+Type: Moment
+Legend: Drive wheel L2
+Component: Powertrain
+
+MY_DR_R1 (N-m)
+Full Name: Total drive moment for wheel R1
+Type: Moment
+Legend: Drive wheel R1
+Component: Powertrain
+
+MY_DR_R2 (N-m)
+Full Name: Total drive moment for wheel R2
+Type: Moment
+Legend: Drive wheel R2
+Component: Powertrain
+
+My_Ext (N-m)
+Full Name: External My on sprung mass
+Type: Moment
+Legend: Sprung mass
+Component: External actions
+More details: Optional user-defined moment applied from the inertial reference N in the [ny] direction.
+
+My_US_L1 (N-m)
+Full Name: Ext moment on whl from usm L1
+Type: Moment
+Legend: Wheel L1
+Component: Wheels
+More details: This is an optional user-defined moment applied to the wheel from the unsprung mass.
+
+My_US_L2 (N-m)
+Full Name: Ext moment on whl from usm L2
+Type: Moment
+Legend: Wheel L2
+Component: Wheels
+
+My_US_R1 (N-m)
+Full Name: Ext moment on whl from usm R1
+Type: Moment
+Legend: Wheel R1
+Component: Wheels
+
+My_US_R2 (N-m)
+Full Name: Ext moment on whl from usm R2
+Type: Moment
+Legend: Wheel R2
+Component: Wheels
+
+My_WC_L1 (N-m)
+Full Name: Tire My at wheel center L1
+Type: Moment
+Legend: Tire My at wheel center L1
+Component: Wheels
+More details: This is the [wy] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+
+My_WC_L2 (N-m)
+Full Name: Tire My at wheel center L2
+Type: Moment
+Legend: Tire My at wheel center L2
+Component: Wheels
+
+My_WC_R1 (N-m)
+Full Name: Tire My at wheel center R1
+Type: Moment
+Legend: Tire My at wheel center R1
+Component: Wheels
+
+My_WC_R2 (N-m)
+Full Name: Tire My at wheel center R2
+Type: Moment
+Legend: Tire My at wheel center R2
+Component: Wheels
+
+MzExL1 (N-m)
+Full Name: External Mz, L1
+Type: Moment
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sz] direction
+
+MzExL2 (N-m)
+Full Name: External Mz, L2
+Type: Moment
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sz] direction
+
+MzExR1 (N-m)
+Full Name: External Mz, R1
+Type: Moment
+Legend: Wheel R1
+Component: External actions
+
+MzExR2 (N-m)
+Full Name: External Mz, R2
+Type: Moment
+Legend: Wheel R2
+Component: External actions
+
+MzGExL1 (N-m)
+Full Name: External MzG, L1
+Type: Moment
+Legend: Wheel L1
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nz] direction
+
+MzGExL2 (N-m)
+Full Name: External MzG, L2
+Type: Moment
+Legend: Wheel L2
+Component: External actions
+More details: Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nz] direction
+
+MzGExR1 (N-m)
+Full Name: External MzG, R1
+Type: Moment
+Legend: Wheel R1
+Component: External actions
+
+MzGExR2 (N-m)
+Full Name: External MzG, R2
+Type: Moment
+Legend: Wheel R2
+Component: External actions
+
+MzGExt (N-m)
+Full Name: External MzG on sprung mass
+Type: Moment
+Legend: Sprung mass
+Component: External actions
+More details: Optional user-defined moment applied from the inertial reference N in the [sz] direction.
+
+MzSmMod1 (N-m)
+Full Name: Mz applied by modules to SM 1
+Type: Moment
+Legend: Sprung mass 1
+Component: External actions
+More details: Total reaction moment in the [sz] direction from possible trailing hitch.
+
+Mz_Air (N-m)
+Full Name: Aero Mz, vehicle
+Type: Moment
+Legend: Aero Mz, vehicle
+Component: Aerodynamics
+More details: Moment applied to the sprung mass in the [sz] direction.
+
+Mz_Ext (N-m)
+Full Name: External Mz on sprung mass
+Type: Moment
+Legend: Sprung mass
+Component: External actions
+More details: Optional user-defined moment applied from the inertial reference N in the [nz] direction.
+
+Mz_KP_L1 (N-m)
+Full Name: Steer moment about kingpin L1
+Type: Moment
+Legend: Kingpin L1 steer moment
+Component: Steering
+
+Mz_KP_L2 (N-m)
+Full Name: Steer moment about kingpin L2
+Type: Moment
+Legend: Kingpin L2 steer moment
+Component: Steering
+
+Mz_KP_R1 (N-m)
+Full Name: Steer moment about kingpin R1
+Type: Moment
+Legend: Kingpin R1 steer moment
+Component: Steering
+
+Mz_KP_R2 (N-m)
+Full Name: Steer moment about kingpin R2
+Type: Moment
+Legend: Kingpin R2 steer moment
+Component: Steering
+
+Mz_L1 (N-m)
+Full Name: Aligning moment, tire L1
+Type: Moment
+Legend: Tire L1 aligning
+Component: Tires
+
+Mz_L2 (N-m)
+Full Name: Aligning moment, tire L2
+Type: Moment
+Legend: Tire L2 aligning
+Component: Tires
+
+Mz_R1 (N-m)
+Full Name: Aligning moment, tire R1
+Type: Moment
+Legend: Tire R1 aligning
+Component: Tires
+
+Mz_R2 (N-m)
+Full Name: Aligning moment, tire R2
+Type: Moment
+Legend: Tire R2 aligning
+Component: Tires
+
+Mz_WC_L1 (N-m)
+Full Name: Tire Mz at wheel center L1
+Type: Moment
+Legend: Tire Mz at wheel center L1
+Component: Wheels
+More details: This is the [wz] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+
+Mz_WC_L2 (N-m)
+Full Name: Tire Mz at wheel center L2
+Type: Moment
+Legend: Tire Mz at wheel center L2
+Component: Wheels
+
+Mz_WC_R1 (N-m)
+Full Name: Tire Mz at wheel center R1
+Type: Moment
+Legend: Tire Mz at wheel center R1
+Component: Wheels
+
+Mz_WC_R2 (N-m)
+Full Name: Tire Mz at wheel center R2
+Type: Moment
+Legend: Tire Mz at wheel center R2
+Component: Wheels
+
+M_boost (N-m)
+Full Name: Steering boost torque
+Type: Torque
+Legend: Power steering
+Component: Steering
+
+M_Clutch (N-m)
+Full Name: Torq. trans. device clutch torq.
+Type: Torque
+Legend: Torque transfer device clutch
+Component: Powertrain
+More details: Torque of the mechanical clutch or lockup clutch on a hydraulic torque converter.
+
+M_Cl_Cap (N-m)
+Full Name: Max. main clutch torque capacity
+Type: Torque
+Legend: Torque transfer device clutch
+Component: Powertrain
+More details: Maximum torque capacity of the mechanical clutch or lockup clutch on a hydraulic torque converter. (This is not the actual transfered torque.)
+
+M_ColHys (N-m)
+Full Name: Steering col. hysteresis torque
+Type: Torque
+Legend: Steering
+Component: Steering
+
+M_ColVis (N-m)
+Full Name: Steering column damping torque
+Type: Torque
+Legend: Steering
+Component: Steering
+
+M_D1visc (N-m)
+Full Name: Drive A1 diff. viscous torque
+Type: Torque
+Legend: Front diff. viscous coupling
+Component: Powertrain
+
+M_D1_Cl (N-m)
+Full Name: Drive A1 diff. clutch torque
+Type: Torque
+Legend: Front differential clutch
+Component: Powertrain
+
+M_D1_Cl2 (N-m)
+Full Name: Front diff. 2nd clutch torque
+Type: Torque
+Legend: Front diff. second clutch
+Component: Powertrain
+
+M_D2visc (N-m)
+Full Name: Drive A2 diff. viscous torque
+Type: Torque
+Legend: Rear diff. viscous coupling
+Component: Powertrain
+
+M_D2_Cl (N-m)
+Full Name: Drive A2 diff. clutch torque
+Type: Torque
+Legend: Rear differential clutch
+Component: Powertrain
+
+M_D2_Cl2 (N-m)
+Full Name: Rear diff. 2nd clutch torque
+Type: Torque
+Legend: Rear diff. second clutch
+Component: Powertrain
+
+M_D3f (N-m)
+Full Name: Trns case shaft to drv A1 torque
+Type: Torque
+Legend: Transfer case front output shaft
+Component: Powertrain
+
+M_D3r (N-m)
+Full Name: Trns case shaft to drv A2 torque
+Type: Torque
+Legend: Transfer case rear output shaft
+Component: Powertrain
+
+M_D3visc (N-m)
+Full Name: Trans case drv A1-2 visc torque
+Type: Torque
+Legend: Transfer case viscous coupling
+Component: Powertrain
+
+M_D3_Cl (N-m)
+Full Name: Trns case drv A1-2 clutch torque
+Type: Torque
+Legend: Transfer case clutch
+Component: Powertrain
+
+M_D3_Cl2 (N-m)
+Full Name: Transfer case 2nd clutch torque
+Type: Torque
+Legend: Transfer case second clutch
+Component: Powertrain
+
+M_EngEsc (N-m)
+Full Name: ESC requesting engine torque
+Type: Torque
+Legend: ESC requesting for engine
+Component: Powertrain
+
+M_EngOut (N-m)
+Full Name: Engine crankshaft output torque
+Type: Torque
+Legend: Engine crankshaft output
+Component: Powertrain
+More details: Input engine torque minus the inertial effect of the crankshaft rotational acceleration.
+
+M_Eng_In (N-m)
+Full Name: Engine crankshaft input torque
+Type: Torque
+Legend: Engine crankshaft input
+Component: Powertrain
+More details: Torque applied to the crankshaft by the pistons (or other source of torque).
+
+M_Eng_Rq (N-m)
+Full Name: Driver requesting engine torque
+Type: Torque
+Legend: Driver requesting for engine
+Component: Powertrain
+
+M_L1_Cl (N-m)
+Full Name: Front left whl. clutch torque
+Type: Torque
+Legend: Front left wheel clutch
+Component: Powertrain
+
+M_L2_Cl (N-m)
+Full Name: Rear left whl. clutch torque
+Type: Torque
+Legend: Rear left wheel clutch
+Component: Powertrain
+
+M_R1_Cl (N-m)
+Full Name: Front right whl. clutch torque
+Type: Torque
+Legend: Front right wheel clutch
+Component: Powertrain
+
+M_R2_Cl (N-m)
+Full Name: Rear right whl. clutch torque
+Type: Torque
+Legend: Rear right wheel clutch
+Component: Powertrain
+
+M_SW (N-m)
+Full Name: Steering wheel torque
+Type: Torque
+Legend: Steering wheel
+Component: Steering
+
+M_Tbar (N-m)
+Full Name: Steering torsion bar torque
+Type: Torque
+Legend: Steering
+Component: Steering
+
+M_TC (N-m)
+Full Name: Trans input shaft torque
+Type: Torque
+Legend: Transmission input shaft
+Component: Powertrain
+More details: Torque output from the torque converter or clutch. Torque input to the torque converter or clutch is the engine output torque.
+
+M_Trans (N-m)
+Full Name: Trans. output shaft torque
+Type: Torque
+Legend: Transmission output shaft
+Component: Powertrain
+
+M_TRdL1 (N-m)
+Full Name: Steer gear moment from tierod L1
+Type: Moment
+Legend: Pitman arm L1 torque
+Component: Steering
+
+M_TRdL2 (N-m)
+Full Name: Steer gear moment from tierod L2
+Type: Moment
+Legend: Pitman arm L2 torque
+Component: Steering
+
+M_TRdR1 (N-m)
+Full Name: Steer gear moment from tierod R1
+Type: Moment
+Legend: Pitman arm R1 torque
+Component: Steering
+
+M_TRdR2 (N-m)
+Full Name: Steer gear moment from tierod R2
+Type: Moment
+Legend: Pitman arm R2 torque
+Component: Steering
+
+PbkCh_L1 (MPa)
+Full Name: Brake actuator pressure L1
+Type: Pressure
+Legend: Brake actuator pressure L1
+Component: Brakes
+More details: This is the input pressure for the brake actuator, used to determine mechanical brake torque. It includes lags from fluid dynamics relative to the control pressure.
+
+PbkCh_L2 (MPa)
+Full Name: Brake actuator pressure L2
+Type: Pressure
+Legend: Brake actuator pressure L2
+Component: Brakes
+
+PbkCh_R1 (MPa)
+Full Name: Brake actuator pressure R1
+Type: Pressure
+Legend: Brake actuator pressure R1
+Component: Brakes
+
+PbkCh_R2 (MPa)
+Full Name: Brake actuator pressure R2
+Type: Pressure
+Legend: Brake actuator pressure R2
+Component: Brakes
+
+PbkD_L1 (MPa)
+Full Name: Delivery pressure, brake L1
+Type: Pressure
+Legend: Delivery pressure L1
+Component: Brakes
+More details: This is the pressure after proportioning. It is the input pressure for the optional built-in ABS controller.
+
+PbkD_L2 (MPa)
+Full Name: Delivery pressure, brake L2
+Type: Pressure
+Legend: Delivery pressure L2
+Component: Brakes
+
+PbkD_R1 (MPa)
+Full Name: Delivery pressure, brake R1
+Type: Pressure
+Legend: Delivery pressure R1
+Component: Brakes
+
+PbkD_R2 (MPa)
+Full Name: Delivery pressure, brake R2
+Type: Pressure
+Legend: Delivery pressure R2
+Component: Brakes
+
+Pbk_Con (MPa)
+Full Name: Brake control input (M/C)
+Type: Pressure
+Legend: Brake master cylinder
+Component: Brakes
+More details: Control input for braking. This is typically the pressure from the master cylinder.
+
+PchS1_1 (deg)
+Full Name: Sensor 1 pitch, detect 1
+Type: Angle
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+PchS1_2 (deg)
+Full Name: Sensor 1 pitch, detect 2
+Type: Angle
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+PchS1_3 (deg)
+Full Name: Sensor 1 pitch, detect 3
+Type: Angle
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Pctl_L1 (MPa)
+Full Name: Pressure from controller L1
+Type: Pressure
+Legend: Control pressure L1
+Component: Brakes
+More details: This is the pressure requested after all controls, but without lags due to fluid dynamics.
+
+Pctl_L2 (MPa)
+Full Name: Pressure from controller L2
+Type: Pressure
+Legend: Control pressure L2
+Component: Brakes
+
+Pctl_R1 (MPa)
+Full Name: Pressure from controller R1
+Type: Pressure
+Legend: Control pressure R1
+Component: Brakes
+
+Pctl_R2 (MPa)
+Full Name: Pressure from controller R2
+Type: Pressure
+Legend: Control pressure R2
+Component: Brakes
+
+Pitch (deg)
+Full Name: Pitch, vehicle
+Type: Angle
+Legend: Vehicle pitch
+Component: Chassis motion
+More details: Euler pitch angle of the sprung mass. This is the pitch angle commonly used in vehicle dynamics.
+
+PitchGL1 (deg)
+Full Name: Pitch of ground, wheel L1
+Type: Angle
+Legend: Pitch of ground, wheel L1
+Component: Ground and road
+More details: This is the pitch of the ground at the center of tire contact, based on the instant longitudinal direction of the wheel plane.
+
+PitchGL2 (deg)
+Full Name: Pitch of ground, wheel L2
+Type: Angle
+Legend: Pitch of ground, wheel L2
+Component: Ground and road
+
+PitchGR1 (deg)
+Full Name: Pitch of ground, wheel R1
+Type: Angle
+Legend: Pitch of ground, wheel R1
+Component: Ground and road
+
+PitchGR2 (deg)
+Full Name: Pitch of ground, wheel R2
+Type: Angle
+Legend: Pitch of ground, wheel R2
+Component: Ground and road
+
+PitchO1 (deg)
+Full Name: Pitch angle of moving object 1
+Type: Pitch angle
+Legend: Moving object 1
+Component: Targets
+
+PitchO2 (deg)
+Full Name: Pitch angle of moving object 2
+Type: Pitch angle
+Legend: Moving object 2
+Component: Targets
+
+PitchO3 (deg)
+Full Name: Pitch angle of moving object 3
+Type: Pitch angle
+Legend: Moving object 3
+Component: Targets
+
+PitchRd (deg)
+Full Name: Pitch rel. to road, vehicle
+Type: Angle
+Legend: Vehicle pitch (road)
+Component: Chassis motion
+More details: Pitch angle of the sprung mass relative to the Road Reference Frame.
+
+PitchS1 (deg)
+Full Name: Pitch angle of sensor 1
+Type: Pitch angle
+Legend: Sensor 1
+Component: Sensors
+
+Pitch_L1 (deg)
+Full Name: Pitch, wheel L1
+Type: Angle
+Legend: Pitch, wheel L1
+Component: Wheels
+
+Pitch_L2 (deg)
+Full Name: Pitch, wheel L2
+Type: Angle
+Legend: Pitch, wheel L2
+Component: Wheels
+
+Pitch_R1 (deg)
+Full Name: Pitch, wheel R1
+Type: Angle
+Legend: Pitch, wheel R1
+Component: Wheels
+
+Pitch_R2 (deg)
+Full Name: Pitch, wheel R2
+Type: Angle
+Legend: Pitch, wheel R2
+Component: Wheels
+
+PtchAero (deg)
+Full Name: Aero pitch of sprung mass
+Type: Pitch
+Legend: Aerodynamic pitch
+Component: Aerodynamics
+More details: Pitch angle of sprung mass relative to the ground at the aero reference point.
+
+PtchGnd (deg)
+Full Name: Pitch angle of ground
+Type: Angle
+Legend: Road reference frame 1
+Component: Ground and road
+
+PtchGndA (deg)
+Full Name: Pitch of ground for aero
+Type: Pitch
+Legend: Ground pitch for aero
+Component: Aerodynamics
+
+PtchPath (deg)
+Full Name: Pitch at ground on driver path
+Type: Angle
+Legend: Ground at driver path
+Component: Driver model path
+
+PwrEngAv (kW)
+Full Name: Engine available power
+Type: Power
+Legend: Engine available
+Component: Powertrain
+More details: Power that would be obtained at the current crankshaft speed at full throttle. This is used by the closed-loop speed controller.
+
+PwrEngIn (kW)
+Full Name: Engine crankshaft input power
+Type: Power
+Legend: Engine crankshaft input
+Component: Powertrain
+More details: Power going into the engine before accounting for inertial effects of crankshaft angular acceleration.
+
+PwrEngO (kW)
+Full Name: Engine crankshaft output power
+Type: Power
+Legend: Engine crankshaft output
+Component: Powertrain
+More details: Power coming out of the engine after accounting for inertial effects of crankshaft angular acceleration.
+
+PwrTrans (kW)
+Full Name: Transmission output shaft power
+Type: Power
+Legend: Transmission output shaft
+Component: Powertrain
+
+PwrWheel (kW)
+Full Name: Power to wheels from powertrain
+Type: Power
+Legend: Drive wheels
+Component: Powertrain
+
+Pwr_SC (kW)
+Full Name: Power from speed control (no PT)
+Type: Power
+Legend: Speed controller (no powertrain)
+Component: Speed controller
+
+Pwr_SCrq (kW)
+Full Name: Power requested from speed ctrl
+Type: Power
+Legend: Speed controller requested power
+Component: Speed controller
+
+Pwr_TC (kW)
+Full Name: Trans input shaft power
+Type: Power
+Legend: Transmission input shaft
+Component: Powertrain
+
+Qfuel (kg/s)
+Full Name: Fuel rate
+Type: Fuel rate
+Legend: Fuel
+Component: Powertrain
+
+RdID_L1 (-)
+Full Name: Road ID for tire L1
+Type: Road ID Number
+Legend: Tire L1
+Component: Tires
+
+RdID_L2 (-)
+Full Name: Road ID for tire L2
+Type: Road ID Number
+Legend: Tire L2
+Component: Tires
+
+RdID_R1 (-)
+Full Name: Road ID for tire R1
+Type: Road ID Number
+Legend: Tire R1
+Component: Tires
+
+RdID_R2 (-)
+Full Name: Road ID for tire R2
+Type: Road ID Number
+Legend: Tire R2
+Component: Tires
+
+RgearDLT (-)
+Full Name: Driveline total gear ratio
+Type: Dimensionless ratio
+Legend: Driveline total gear
+Component: Powertrain
+
+Rgear_Tr (-)
+Full Name: Transmission gear ratio
+Type: Dimensionless ratio
+Legend: Transmission gear
+Component: Powertrain
+
+RhoPathY (1/m)
+Full Name: Curvature of path (road lateral)
+Type: Curvature
+Legend: Driver path (road lateral)
+Component: Driver model path
+More details: Lateral (parallel to ground) component of curvature of driver preview reference path.
+
+RhoPathZ (1/m)
+Full Name: Curvature of path (road normal)
+Type: Curvature
+Legend: Driver path (road normal)
+Component: Driver model path
+More details: Normal (perpendicular to ground) component of curvature of driver preview reference path.
+
+Rho_Road (1/m)
+Full Name: Curvature of road X-Y ref. path
+Type: Curvature
+Legend: Driver reference path
+Component: Driver model path
+More details: Lateral (perpendicular to gravity) component of curvature of driver reference path.
+
+RolA_A1r (deg/s2)
+Full Name: Axle 1 relative roll acc.
+Type: Angular acceleration
+Legend: Axle 1 relative roll
+Component: Axles
+
+RolA_A2r (deg/s2)
+Full Name: Axle 2 relative roll acc.
+Type: Angular acceleration
+Legend: Axle 2 relative roll
+Component: Axles
+
+Roll (deg)
+Full Name: Roll, vehicle
+Type: Angle
+Legend: Vehicle roll
+Component: Chassis motion
+More details: This is the angle between [sy] and the horizontal plane normal to [nz]. It is calculated as arcsin(dot([sy], [nz])), and is more easily measurable than Euler roll. However, VS Visualizer requires the Euler angle, Roll_E.
+
+RollGL1 (deg)
+Full Name: Roll of ground, wheel L1
+Type: Angle
+Legend: Roll of ground, wheel L1
+Component: Ground and road
+More details: This is the roll of the ground at the center of tire contact, based on the instant longitudinal direction of the wheel plane.
+
+RollGL2 (deg)
+Full Name: Roll of ground, wheel L2
+Type: Angle
+Legend: Roll of ground, wheel L2
+Component: Ground and road
+
+RollGnd (deg)
+Full Name: Roll angle of ground
+Type: Angle
+Legend: Road reference frame 
+Component: Ground and road
+
+RollGR1 (deg)
+Full Name: Roll of ground, wheel R1
+Type: Angle
+Legend: Roll of ground, wheel R1
+Component: Ground and road
+
+RollGR2 (deg)
+Full Name: Roll of ground, wheel R2
+Type: Angle
+Legend: Roll of ground, wheel R2
+Component: Ground and road
+
+RollO_1 (deg)
+Full Name: Roll angle of moving object 1
+Type: Roll angle
+Legend: Moving object 1
+Component: Targets
+
+RollO_2 (deg)
+Full Name: Roll angle of moving object 2
+Type: Roll angle
+Legend: Moving object 2
+Component: Targets
+
+RollO_3 (deg)
+Full Name: Roll angle of moving object 3
+Type: Roll angle
+Legend: Moving object 3
+Component: Targets
+
+RollPath (deg)
+Full Name: Roll at ground on driver path
+Type: Angle
+Legend: Ground at driver path
+Component: Driver model path
+
+RollS_1 (deg)
+Full Name: Roll angle of sensor 1
+Type: Roll angle
+Legend: Sensor 1
+Component: Sensors
+
+RollWK_L1 (deg)
+8-Char Alias: RollWKL1
+Full Name: Roll, wheel knuckle L1
+Type: Angle
+Legend: Roll, wheel knuckle L1
+Component: Wheels
+More details: This is an Euler roll angle (3-2-1) for the wheel knuckle, used for VS STI tire models.
+
+RollWK_L2 (deg)
+8-Char Alias: RollWKL2
+Full Name: Roll, wheel knuckle L2
+Type: Angle
+Legend: Roll, wheel knuckle L2
+Component: Wheels
+
+RollWK_R1 (deg)
+8-Char Alias: RollWKR1
+Full Name: Roll, wheel knuckle R1
+Type: Angle
+Legend: Roll, wheel knuckle R1
+Component: Wheels
+
+RollWK_R2 (deg)
+8-Char Alias: RollWKR2
+Full Name: Roll, wheel knuckle R2
+Type: Angle
+Legend: Roll, wheel knuckle R2
+Component: Wheels
+
+Roll_A1r (deg)
+Full Name: Axle 1 relative roll
+Type: Angle
+Legend: Axle 1 relative roll
+Component: Axles
+
+Roll_A2r (deg)
+Full Name: Axle 2 relative roll
+Type: Angle
+Legend: Axle 2 relative roll
+Component: Axles
+
+Roll_E (deg)
+Full Name: Roll (Euler), vehicle
+Type: Angle
+Legend: Vehicle roll (Euler)
+Component: Chassis motion
+More details: This is the Euler roll angle of the sprung mass of the vehicle. This is needed by VS Visualizer, but is not the angle between [sy] and a horizontal reference unless the pitch angle is zero
+
+Roll_L1 (deg)
+Full Name: Roll, wheel L1
+Type: Angle
+Legend: Roll, wheel L1
+Component: Wheels
+More details: This is the roll angle of the wheel spin axis, used to view with VS Visualizer.
+
+Roll_L2 (deg)
+Full Name: Roll, wheel L2
+Type: Angle
+Legend: Roll, wheel L2
+Component: Wheels
+
+Roll_R1 (deg)
+Full Name: Roll, wheel R1
+Type: Angle
+Legend: Roll, wheel R1
+Component: Wheels
+
+Roll_R2 (deg)
+Full Name: Roll, wheel R2
+Type: Angle
+Legend: Roll, wheel R2
+Component: Wheels
+
+Roll_Rd (deg)
+Full Name: Roll rel. to road, vehicle
+Type: Angle
+Legend: Vehicle roll (road)
+Component: Chassis motion
+More details: Roll angle of the sprung mass relative to the Road Reference Frame.
+
+RolR_A1r (deg/s)
+Full Name: Axle 1 relative roll rate
+Type: Angular rate
+Legend: Axle 1 relative roll
+Component: Axles
+
+RolR_A2r (deg/s)
+Full Name: Axle 2 relative roll rate
+Type: Angular rate
+Legend: Axle 2 relative roll
+Component: Axles
+
+RotTrans (rev)
+Full Name: Trans. output shaft rotation
+Type: Rotation
+Legend: Transmission output shaft
+Component: Powertrain
+
+Rot_D3f (rev)
+Full Name: Trans case shaft to drv. A1 rot
+Type: Rotation
+Legend: Transfer case front output shaft
+Component: Powertrain
+
+Rot_D3r (rev)
+Full Name: Trans case shaft to drv. A2 rot
+Type: Rotation
+Legend: Transfer case rear output shaft
+Component: Powertrain
+
+Rot_L1 (rev)
+Full Name: Wheel L1 rotation (Euler)
+Type: Rotation
+Legend: Wheel L1 rotation
+Component: Wheels
+
+Rot_L2 (rev)
+Full Name: Wheel L2 rotation (Euler)
+Type: Rotation
+Legend: Wheel L2 rotation
+Component: Wheels
+
+Rot_R1 (rev)
+Full Name: Wheel R1 rotation (Euler)
+Type: Rotation
+Legend: Wheel R1 rotation
+Component: Wheels
+
+Rot_R2 (rev)
+Full Name: Wheel R2 rotation (Euler)
+Type: Rotation
+Legend: Wheel R2 rotation
+Component: Wheels
+
+Rot_TC (rev)
+Full Name: Trans input shaft rotation
+Type: Rotation
+Legend: Transmission input shaft
+Component: Powertrain
+
+RRE_L1 (mm)
+Full Name: Effective rolling rad., tire L1
+Type: Effective radius
+Legend: Tire L1, eff. radius
+Component: Tires
+
+RRE_L2 (mm)
+Full Name: Effective rolling rad., tire L2
+Type: Effective radius
+Legend: Tire L2, eff. radius
+Component: Tires
+
+RRE_R1 (mm)
+Full Name: Effective rolling rad., tire R1
+Type: Effective radius
+Legend: Tire R1, eff. radius
+Component: Tires
+
+RRE_R2 (mm)
+Full Name: Effective rolling rad., tire R2
+Type: Effective radius
+Legend: Tire R2, eff. radius
+Component: Tires
+
+R_AV_TC (-)
+Full Name: TC output/input speed ratio
+Type: Dimensionless ratio
+Legend: TC output/input speed
+Component: Powertrain
+
+R_M_TC (-)
+Full Name: TC out./input shaft torque ratio
+Type: Dimensionless ratio
+Legend: TC output/input shaft torque
+Component: Powertrain
+
+Show_FCW (-)
+Full Name: Boolean: show FCW icon
+Type: Show_FCW
+Legend: Show_FCW
+Component: VS Commands
+
+SpdS1_1 (km/h)
+Full Name: Sensor 1 speed, detect 1
+Type: Speed
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+SpdS1_2 (km/h)
+Full Name: Sensor 1 speed, detect 2
+Type: Speed
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+SpdS1_3 (km/h)
+Full Name: Sensor 1 speed, detect 3
+Type: Speed
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Station (m)
+Full Name: Station (path) at vehicle origin
+Type: Longitudinal distance
+Legend: Path station at vehicle origin
+Component: Driver model path
+
+Sta_Prof (m)
+Full Name: Station for road profiles
+Type: Longitudinal distance
+Legend: Road profile station
+Component: Ground and road
+More details: This is the travelled distance, calculated by integrating forward speed Vxz_Fwd. It is used to calculate incremental ground Z for "wandering profiles" that follow the tire contact points.
+
+Sta_Road (m)
+Full Name: Station (road) at vehicle origin
+Type: Longitudinal distance
+Legend: Road station at vehicle origin
+Component: Ground and road
+
+Steer_DM (deg)
+Full Name: Steer angle from driver
+Type: Angle
+Legend: Steering wheel
+Component: Steering
+
+Steer_L1 (deg)
+Full Name: Wheel steer L1
+Type: Angle
+Legend: Wheel steer L1
+Component: Steering
+More details: Total road wheel steer due to kinematics and compliance, about the [sz] axis.
+
+Steer_L2 (deg)
+Full Name: Wheel steer L2
+Type: Angle
+Legend: Wheel steer L2
+Component: Steering
+
+Steer_R1 (deg)
+Full Name: Wheel steer R1
+Type: Angle
+Legend: Wheel steer R1
+Component: Steering
+
+Steer_R2 (deg)
+Full Name: Wheel steer R2
+Type: Angle
+Legend: Wheel steer R2
+Component: Steering
+
+Steer_SW (deg)
+Full Name: Steering wheel angle
+Type: Angle
+Legend: Steering wheel
+Component: Steering
+
+StrAV_SW (deg/s)
+Full Name: Steering wheel angular rate
+Type: Angular rate
+Legend: Steering wheel
+Component: Steering
+
+StrC_L1 (deg)
+Full Name: Compliance steer, wheel L1
+Type: Angle
+Legend: Wheel L1 compliance steer
+Component: Steering
+
+StrC_L2 (deg)
+Full Name: Compliance steer, wheel L2
+Type: Angle
+Legend: Wheel L2 compliance steer
+Component: Steering
+
+StrC_R1 (deg)
+Full Name: Compliance steer, wheel R1
+Type: Angle
+Legend: Wheel R1 compliance steer
+Component: Steering
+
+StrC_R2 (deg)
+Full Name: Compliance steer, wheel R2
+Type: Angle
+Legend: Wheel R2 compliance steer
+Component: Steering
+
+StrKp_L1 (deg)
+Full Name: Steer angle about kingpin L1
+Type: Angle
+Legend: Kingpin L1 steer angle
+Component: Steering
+More details: This steer is about the 3D inclined kingpin axis, which is a rotation axis in the multibody model.
+
+StrKp_L2 (deg)
+Full Name: Steer angle about kingpin L2
+Type: Angle
+Legend: Kingpin L2 steer angle
+Component: Steering
+
+StrKp_R1 (deg)
+Full Name: Steer angle about kingpin R1
+Type: Angle
+Legend: Kingpin R1 steer angle
+Component: Steering
+More details: This steer is about the 3D inclined kingpin axis, which is a rotation axis in the multibody model.
+
+StrKp_R2 (deg)
+Full Name: Steer angle about kingpin R2
+Type: Angle
+Legend: Kingpin R2 steer angle
+Component: Steering
+
+StrK_L1 (deg)
+Full Name: Kinematic steer, wheel L1
+Type: Angle
+Legend: Wheel L1 kinematic steer
+Component: Steering
+More details: Steering angle of wheel due to kinematical effects: control divided by gear ratio, subject to nonlinear kinematical shaping, added to toe.
+
+StrK_L2 (deg)
+Full Name: Kinematic steer, wheel L2
+Type: Angle
+Legend: Wheel L2 kinematic steer
+Component: Steering
+
+StrK_R1 (deg)
+Full Name: Kinematic steer, wheel R1
+Type: Angle
+Legend: Wheel R1 kinematic steer
+Component: Steering
+
+StrK_R2 (deg)
+Full Name: Kinematic steer, wheel R2
+Type: Angle
+Legend: Wheel R2 kinematic steer
+Component: Steering
+
+StrSWr_1 (deg)
+Full Name: SW angle reduced for axle 1
+Type: Angle
+Legend: SW angle reduced for axle 1
+Component: Steering
+More details: Steering wheel angle divided by the constant steering gear ratio for this axle.
+
+StrSWr_2 (deg)
+Full Name: SW angle reduced for axle 2
+Type: Angle
+Legend: SW angle reduced for axle 2
+Component: Steering
+
+SusX_L1 (mm)
+Full Name: Wheel L1 X displacement
+Type: Displacement
+Legend: Wheel L1 X displacement
+Component: Suspensions
+
+SusX_L2 (mm)
+Full Name: Wheel L2 X displacement
+Type: Displacement
+Legend: Wheel L2 X displacement
+Component: Suspensions
+
+SusX_R1 (mm)
+Full Name: Wheel R1 X displacement
+Type: Displacement
+Legend: Wheel R1 X displacement
+Component: Suspensions
+
+SusX_R2 (mm)
+Full Name: Wheel R2 X displacement
+Type: Displacement
+Legend: Wheel R2 X displacement
+Component: Suspensions
+
+SusY_L1 (mm)
+Full Name: Wheel L1 lateral displacement
+Type: Displacement
+Legend: Wheel L1 lateral displacement
+Component: Suspensions
+
+SusY_L2 (mm)
+Full Name: Wheel L2 lateral displacement
+Type: Displacement
+Legend: Wheel L2 lateral displacement
+Component: Suspensions
+
+SusY_R1 (mm)
+Full Name: Wheel R1 lateral displacement
+Type: Displacement
+Legend: Wheel R1 lateral displacement
+Component: Suspensions
+
+SusY_R2 (mm)
+Full Name: Wheel R2 lateral displacement
+Type: Displacement
+Legend: Wheel R2 lateral displacement
+Component: Suspensions
+
+S_Obj_1 (m)
+Full Name: Station of moving object 1
+Type: Station
+Legend: Moving object 1
+Component: Targets
+More details: Station is associated with the path identified by the parameter PATH_ID_OBJ. If the parameter OPT_SPEED_OBJ is 1 or 2, then station is also installed as an ODE state variable whose derivative is V_Obj. If PATH_ID_OBJ is zero, then station is not used and is always zero.
+
+S_Obj_2 (m)
+Full Name: Station of moving object 2
+Type: Station
+Legend: Moving object 2
+Component: Targets
+
+S_Obj_3 (m)
+Full Name: Station of moving object 3
+Type: Station
+Legend: Moving object 3
+Component: Targets
+
+S_RdO_1 (m)
+Full Name: Station on road path, object 1
+Type: Station
+Legend: Moving object 1
+Component: Targets
+More details: S_Rd_O applies to the reference path for the road surface identified by the parameter ROAD_ID_OBJ. If ROAD_ID_OBJ is zero, then this station is not used and is always zero.
+
+S_RdO_2 (m)
+Full Name: Station on road path, object 2
+Type: Station
+Legend: Moving object 2
+Component: Targets
+
+S_RdO_3 (m)
+Full Name: Station on road path, object 3
+Type: Station
+Legend: Moving object 3
+Component: Targets
+
+S_Rd_L1 (m)
+Full Name: Road station for tire L1
+Type: Road Station
+Legend: Tire L1
+Component: Tires
+
+S_Rd_L2 (m)
+Full Name: Road station for tire L2
+Type: Road Station
+Legend: Tire L2
+Component: Tires
+
+S_Rd_R1 (m)
+Full Name: Road station for tire R1
+Type: Road Station
+Legend: Tire R1
+Component: Tires
+
+S_Rd_R2 (m)
+Full Name: Road station for tire R2
+Type: Road Station
+Legend: Tire R2
+Component: Tires
+
+TC_Lock (-)
+Full Name: Torque converter lockup signal
+Type: Boolean
+Legend: Torque converter lockup clutch
+Component: Powertrain
+More details: Torque converter lockup clutch control signal: 0 -> free, 1 -> lockup.
+
+Throttle (-)
+Full Name: Normalized throttle at Pedal
+Type: Dimensionless ratio
+Legend: Pedal
+Component: Powertrain
+More details: Sum of the specified open-loop throttle control (internal + imported) plus throttle due to closed-loop speed control.
+
+Thrtl_SC (-)
+Full Name: Throttle (speed controller)
+Type: Dimensionless ratio
+Legend: Pedal (speed controller)
+Component: Powertrain
+
+Thr_Eng (-)
+Full Name: Normalized throttle at Engine
+Type: Dimensionless ratio
+Legend: Engine
+Component: Powertrain
+More details: Normalized throttle applied to the engine. This includes a 1st-order time lag.
+
+Thr_Intl (-)
+Full Name: Normalized throttle (internal)
+Type: Dimensionless ratio
+Legend: Pedal (internal)
+Component: Powertrain
+More details: Sum of the specified open-loop throttle control plus throttle due to closed-loop speed control. This excludes the optional imported value.
+
+TypeO_1 (-)
+Full Name: Type of object 1
+Type: Type (code)
+Legend: Moving object 1
+Component: Targets
+More details: Each object has an output type (code) that can be set with VS Commands or imported from an external software tool. This can be used to provide content from objects representing signs and traffic signals.
+
+TypeO_2 (-)
+Full Name: Type of object 2
+Type: Type (code)
+Legend: Moving object 2
+Component: Targets
+
+TypeO_3 (-)
+Full Name: Type of object 3
+Type: Type (code)
+Legend: Moving object 3
+Component: Targets
+
+TypS1_1 (-)
+Full Name: Sensor 1 Type, detect 1
+Type: Type
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+TypS1_2 (-)
+Full Name: Sensor 1 Type, detect 2
+Type: Type
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+TypS1_3 (-)
+Full Name: Sensor 1 Type, detect 3
+Type: Type
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+T_Event (s)
+Full Name: Time since event clock reset
+Type: Time
+Legend: Event
+Component: Time
+More details: This output is calculated each time step with the formula T_EVENT = T - TSTART_T_EVENT, where TSTART_T_EVENT is a system parameter that may be set to T when a VS Event is triggered.
+
+T_Record (s)
+Full Name: Recording time in output file
+Type: Time
+Legend: Recording time in file
+Component: Time
+More details: This variable is incremented when outputs are written to file or saved to a buffer. This matches the time that is obtained in post-processing by multiplying the sample number by the sample interval.
+
+T_Rtr_L1 (C)
+Full Name: Brake rotor L1 temperature
+Type: Temperature
+Legend: Brake rotor L1
+Component: Brakes
+
+T_Rtr_L2 (C)
+Full Name: Brake rotor L2 temperature
+Type: Temperature
+Legend: Brake rotor L2
+Component: Brakes
+
+T_Rtr_R1 (C)
+Full Name: Brake rotor R1 temperature
+Type: Temperature
+Legend: Brake rotor R1
+Component: Brakes
+
+T_Rtr_R2 (C)
+Full Name: Brake rotor R2 temperature
+Type: Temperature
+Legend: Brake rotor R2
+Component: Brakes
+
+T_Stamp (s)
+Full Name: Simulation time stamp
+Type: Time
+Legend: Simulation time stamp
+Component: Time
+More details: This is the simulation time. If writing to file is interupted by setting the system parameter OPT_WRITE to 0, then this variable will not match the recording time T_record.
+
+Vair (km/h)
+Full Name: Air speed relative to vehicle
+Type: Speed
+Legend: Air speed relative to vehicle
+Component: Aerodynamics
+
+Vbk_Tot (mm3)
+Full Name: Total brake corner volume
+Type: Volume
+Legend: Brake system
+Component: Brakes
+
+VisO_1 (-)
+Full Name: Visibility of moving object 1
+Type: Visibility
+Legend: Moving object 1
+Component: Targets
+
+VisO_2 (-)
+Full Name: Visibility of moving object 2
+Type: Visibility
+Legend: Moving object 2
+Component: Targets
+
+VisO_3 (-)
+Full Name: Visibility of moving object 3
+Type: Visibility
+Legend: Moving object 3
+Component: Targets
+
+VJStL1 (mm/s)
+Full Name: Comp. rate, jounce stop L1
+Type: Compression rate
+Legend: Jounce stop L1
+Component: Suspensions
+
+VJStL2 (mm/s)
+Full Name: Comp. rate, jounce stop L2
+Type: Compression rate
+Legend: Jounce stop L2
+Component: Suspensions
+
+VJStR1 (mm/s)
+Full Name: Comp. rate, jounce stop R1
+Type: Compression rate
+Legend: Jounce stop R1
+Component: Suspensions
+
+VJStR2 (mm/s)
+Full Name: Comp. rate, jounce stop R2
+Type: Compression rate
+Legend: Jounce stop R2
+Component: Suspensions
+
+VRStL1 (mm/s)
+Full Name: Comp. rate, rebound stop L1
+Type: Compression rate
+Legend: Rebound stop L1
+Component: Suspensions
+
+VRStL2 (mm/s)
+Full Name: Comp. rate, rebound stop L2
+Type: Compression rate
+Legend: Rebound stop L2
+Component: Suspensions
+
+VRStR1 (mm/s)
+Full Name: Comp. rate, rebound stop R1
+Type: Compression rate
+Legend: Rebound stop R1
+Component: Suspensions
+
+VRStR2 (mm/s)
+Full Name: Comp. rate, rebound stop R2
+Type: Compression rate
+Legend: Rebound stop R2
+Component: Suspensions
+
+Vwind (km/h)
+Full Name: Wind speed
+Type: Speed
+Legend: Wind
+Component: Aerodynamics
+
+Vx (km/h)
+Full Name: Long. speed, inst. CG, vehicle
+Type: Longitudinal speed
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the speed of the instant CG of the vehicle unit in the ISO/SAE [x] direction. Be aware  that the motion of the instant CG cannot be measured directly in physical vehicles.
+
+VxCenL1 (km/h)
+Full Name: Vx, center of tire contact L1
+Type: Longitudinal speed
+Legend: Center of tire contact L1
+Component: Tires
+
+VxCenL2 (km/h)
+Full Name: Vx, center of tire contact L2
+Type: Longitudinal speed
+Legend: Center of tire contact L2
+Component: Tires
+
+VxCenR1 (km/h)
+Full Name: Vx, center of tire contact R1
+Type: Longitudinal speed
+Legend: Center of tire contact R1
+Component: Tires
+
+VxCenR2 (km/h)
+Full Name: Vx, center of tire contact R2
+Type: Longitudinal speed
+Legend: Center of tire contact R2
+Component: Tires
+
+VxNf_SM (km/h)
+Full Name: Global X vel., CG, sprung mass
+Type: Speed
+Legend: CG, sprung mass
+Component: Chassis motion
+More details: This is the [nx] component of the velocity vector of the sprung mass CG.
+
+VxTarget (km/h)
+Full Name: Target speed
+Type: Longitudinal speed
+Legend: Target speed
+Component: Speed controller
+
+Vxz_Fwd (km/h)
+Full Name: Longitudinal speed in XZ plane
+Type: Longitudinal speed
+Legend: Vehicle forward in XZ plane
+Component: Chassis motion
+More details: This is the forward speed of the sprung mass CG, calculated as SQRT(Vx_SM^2 + Vz_SM^2), with the sign set to match Vx_SM.
+
+Vx_Err (km/h)
+Full Name: Speed controller error
+Type: Longitudinal speed
+Legend: Controller error
+Component: Speed controller
+
+Vx_IErr (m)
+Full Name: Integrated speed control error
+Type: Speed error integral
+Legend: Integrated speed error
+Component: Speed controller
+
+Vx_L1 (km/h)
+Full Name: Vx (equivalent), wheel L1
+Type: Longitudinal speed
+Legend: Wheel L1 (equivalent)
+Component: Wheels
+More details: Equivalent wheel speed is defined as the spin (rad/sec) multiplied by the effective rolling radius. It is the translational speed that corresponds to the angular rate during free rolling.
+
+Vx_L2 (km/h)
+Full Name: Vx (equivalent), wheel L2
+Type: Longitudinal speed
+Legend: Wheel L2 (equivalent)
+Component: Wheels
+
+Vx_R1 (km/h)
+Full Name: Vx (equivalent), wheel R1
+Type: Longitudinal speed
+Legend: Wheel R1 (equivalent)
+Component: Wheels
+
+Vx_R2 (km/h)
+Full Name: Vx (equivalent), wheel R2
+Type: Longitudinal speed
+Legend: Wheel R2 (equivalent)
+Component: Wheels
+
+Vx_Rd (km/h)
+Full Name: Road X vel., inst. CG, vehicle
+Type: Longitudinal speed
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the speed of the instant CG of the vehicle unit in the road [rx] direction.
+
+Vx_S1_1 (km/h)
+Full Name: Sensor 1 X speed, detect 1
+Type: Speed
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+Vx_S1_2 (km/h)
+Full Name: Sensor 1 X speed, detect 2
+Type: Speed
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+Vx_S1_3 (km/h)
+Full Name: Sensor 1 X speed, detect 3
+Type: Speed
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Vx_SM (km/h)
+Full Name: Long. speed, CG, sprung mass
+Type: Longitudinal speed
+Legend: CG, sprung mass
+Component: Chassis motion
+More details: This is the [x] component of the velocity vector of the sprung mass CG.
+
+Vx_WC_L1 (km/h)
+Full Name: Vx at wheel center L1
+Type: Longitudinal speed
+Legend: Vx at wheel center L1
+Component: Wheels
+
+Vx_WC_L2 (km/h)
+Full Name: Vx at wheel center L2
+Type: Longitudinal speed
+Legend: Vx at wheel center L2
+Component: Wheels
+
+Vx_WC_R1 (km/h)
+Full Name: Vx at wheel center R1
+Type: Longitudinal speed
+Legend: Vx at wheel center R1
+Component: Wheels
+
+Vx_WC_R2 (km/h)
+Full Name: Vx at wheel center R2
+Type: Longitudinal speed
+Legend: Vx at wheel center R2
+Component: Wheels
+
+Vy (km/h)
+Full Name: Lat. speed, inst. CG, vehicle
+Type: Lateral speed
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the speed of the instant CG of the vehicle unit in the ISO/SAE [y] direction. Be aware  that the motion of the instant CG cannot be measured directly in physical vehicles.
+
+VyNf_SM (km/h)
+Full Name: Global Y vel., CG, sprung mass
+Type: Speed
+Legend: CG, sprung mass
+Component: Chassis motion
+More details: This is the [ny] component of the velocity vector of the sprung mass CG.
+
+VyTC_L1 (km/h)
+Full Name: Vy, L1 center of tire contact
+Type: Lateral speed
+Legend: Center of tire contact L1
+Component: Tires
+
+VyTC_L2 (km/h)
+Full Name: Vy, L2 center of tire contact
+Type: Lateral speed
+Legend: Center of tire contact L2
+Component: Tires
+
+VyTC_R1 (km/h)
+Full Name: Vy, R1 center of tire contact
+Type: Lateral speed
+Legend: Center of tire contact R1
+Component: Tires
+
+VyTC_R2 (km/h)
+Full Name: Vy, R2 center of tire contact
+Type: Lateral speed
+Legend: Center of tire contact R2
+Component: Tires
+
+Vy_Rack1 (mm/s)
+Full Name: Steering rack disp. rate, axle 1
+Type: Speed
+Legend: Axle 1 steering
+Component: Steering
+
+Vy_Rack2 (mm/s)
+Full Name: Steering rack disp. rate, axle 2
+Type: Speed
+Legend: Axle 2 steering
+Component: Steering
+
+Vy_Rd (km/h)
+Full Name: Road Y vel., inst. CG, vehicle
+Type: Lateral speed
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the speed of the instant CG of the vehicle unit in the road [ry] direction.
+
+Vy_S1_1 (km/h)
+Full Name: Sensor 1 Y speed, detect 1
+Type: Speed
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+Vy_S1_2 (km/h)
+Full Name: Sensor 1 Y speed, detect 2
+Type: Speed
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+Vy_S1_3 (km/h)
+Full Name: Sensor 1 Y speed, detect 3
+Type: Speed
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Vy_SM (km/h)
+Full Name: Lateral speed, CG, sprung mass
+Type: Lateral speed
+Legend: CG, sprung mass
+Component: Chassis motion
+More details: This is the [y] component of the velocity vector of the sprung mass CG.
+
+Vy_WC_L1 (km/h)
+Full Name: Vy at wheel center L1
+Type: Lateral speed
+Legend: Vy at wheel center L1
+Component: Wheels
+
+Vy_WC_L2 (km/h)
+Full Name: Vy at wheel center L2
+Type: Lateral speed
+Legend: Vy at wheel center L2
+Component: Wheels
+
+Vy_WC_R1 (km/h)
+Full Name: Vy at wheel center R1
+Type: Lateral speed
+Legend: Vy at wheel center R1
+Component: Wheels
+
+Vy_WC_R2 (km/h)
+Full Name: Vy at wheel center R2
+Type: Lateral speed
+Legend: Vy at wheel center R2
+Component: Wheels
+
+Vz (km/h)
+Full Name: Vert. speed, inst. CG, vehicle
+Type: Vertical speed
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the speed of the instant CG of the vehicle unit in the [nz] direction. Be aware  that the motion of the instant CG cannot be measured directly in physical vehicles.
+
+Vz_Rd (km/h)
+Full Name: Road Z vel., inst. CG, vehicle
+Type: Vertical speed
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the speed of the instant CG of the vehicle unit in the road [rz] direction.
+
+Vz_SM (km/h)
+Full Name: Vert. speed, CG, sprung mass
+Type: Vertical speed
+Legend: CG, sprung mass
+Component: Chassis motion
+More details: This is the [nz] component of the velocity vector of the sprung mass CG.
+
+Vz_WC_L1 (km/h)
+Full Name: Vz at wheel center L1
+Type: Vertical speed
+Legend: Vz at wheel center L1
+Component: Wheels
+
+Vz_WC_L2 (km/h)
+Full Name: Vz at wheel center L2
+Type: Vertical speed
+Legend: Vz at wheel center L2
+Component: Wheels
+
+Vz_WC_R1 (km/h)
+Full Name: Vz at wheel center R1
+Type: Vertical speed
+Legend: Vz at wheel center R1
+Component: Wheels
+
+Vz_WC_R2 (km/h)
+Full Name: Vz at wheel center R2
+Type: Vertical speed
+Legend: Vz at wheel center R2
+Component: Wheels
+
+V_Obj_1 (km/h)
+Full Name: Speed of moving object 1
+Type: Forward speed
+Legend: Moving object 1
+Component: Targets
+More details: If the parameter PATH_ID_OBJ is nonzero it identifies a path for the object. If the parameter OPT_SPEED_OBJ is 1 or 2, then station is also installed as an ODE state variable whose derivative is V_Obj. In this case, V_Obj for each object can be imported or set with VS Commands such as EQ_OUT. Otherwise, V_Obj is calculated from changes in global X and Y coordinates.
+
+V_Obj_2 (km/h)
+Full Name: Speed of moving object 2
+Type: Forward speed
+Legend: Moving object 2
+Component: Targets
+
+V_Obj_3 (km/h)
+Full Name: Speed of moving object 3
+Type: Forward speed
+Legend: Moving object 3
+Component: Targets
+
+WidS1_1 (m)
+Full Name: Sensor 1 width, detect 1
+Type: Width
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+WidS1_2 (m)
+Full Name: Sensor 1 width, detect 2
+Type: Width
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+WidS1_3 (m)
+Full Name: Sensor 1 width, detect 3
+Type: Width
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Xcg_SM (m)
+Full Name: X coordinate, CG, sprung mass
+Type: Global X coordinate
+Legend: CG, sprung mass
+Component: Chassis motion
+
+Xcg_TM (m)
+Full Name: X coordinate, inst. CG, vehicle
+Type: Global X coordinate
+Legend: Instant CG, vehicle
+Component: Chassis motion
+
+Xctc_L1 (m)
+Full Name: X coordinate, tire CTC L1
+Type: Global X coordinate
+Legend: Center of tire contact L1
+Component: Tires
+
+Xctc_L2 (m)
+Full Name: X coordinate, tire CTC L2
+Type: Global X coordinate
+Legend: Center of tire contact L2
+Component: Tires
+
+Xctc_R1 (m)
+Full Name: X coordinate, tire CTC R1
+Type: Global X coordinate
+Legend: Center of tire contact R1
+Component: Tires
+
+Xctc_R2 (m)
+Full Name: X coordinate, tire CTC R2
+Type: Global X coordinate
+Legend: Center of tire contact R2
+Component: Tires
+
+XL_S1_1 (m)
+Full Name: Sensor 1 X coord. (L), detect 1
+Type: X coordinate
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+XL_S1_2 (m)
+Full Name: Sensor 1 X coord. (L), detect 2
+Type: X coordinate
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+XL_S1_3 (m)
+Full Name: Sensor 1 X coord. (L), detect 3
+Type: X coordinate
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Xo (m)
+Full Name: X coordinate, vehicle origin
+Type: Global X coordinate
+Legend: Vehicle
+Component: Chassis motion
+
+Xrd_Air (m)
+Full Name: X coord. of road aero ref. 1
+Type: Global X coordinate
+Legend: Road reference frame 1
+Component: Aerodynamics
+
+XR_S1_1 (m)
+Full Name: Sensor 1 X coord. (R), detect 1
+Type: X coordinate
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+XR_S1_2 (m)
+Full Name: Sensor 1 X coord. (R), detect 2
+Type: X coordinate
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+XR_S1_3 (m)
+Full Name: Sensor 1 X coord. (R), detect 3
+Type: X coordinate
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Xv1_O_1 (m)
+Full Name: Xv1_ coordinate, moving object 1
+Type: Xv1_ coordinate
+Legend: Moving object 1
+Component: Targets
+More details: Each object has 4 vertices whose global X and Y coordinates are available as outputs Xv and Yv. For rectangular objects, v1 is left-front, v2 is right-front, v3 is left-rear, and v4 is right-rear. For cylinders, v1 is front, v2 is right, v3 is back, and v4 is left.
+
+Xv1_O_2 (m)
+Full Name: Xv1_ coordinate, moving object 2
+Type: Xv1_ coordinate
+Legend: Moving object 2
+Component: Targets
+
+Xv1_O_3 (m)
+Full Name: Xv1_ coordinate, moving object 3
+Type: Xv1_ coordinate
+Legend: Moving object 3
+Component: Targets
+
+Xv2_O_1 (m)
+Full Name: Xv2_ coordinate, moving object 1
+Type: Xv2_ coordinate
+Legend: Moving object 1
+Component: Targets
+
+Xv2_O_2 (m)
+Full Name: Xv2_ coordinate, moving object 2
+Type: Xv2_ coordinate
+Legend: Moving object 2
+Component: Targets
+
+Xv2_O_3 (m)
+Full Name: Xv2_ coordinate, moving object 3
+Type: Xv2_ coordinate
+Legend: Moving object 3
+Component: Targets
+
+Xv3_O_1 (m)
+Full Name: Xv3_ coordinate, moving object 1
+Type: Xv3_ coordinate
+Legend: Moving object 1
+Component: Targets
+
+Xv3_O_2 (m)
+Full Name: Xv3_ coordinate, moving object 2
+Type: Xv3_ coordinate
+Legend: Moving object 2
+Component: Targets
+
+Xv3_O_3 (m)
+Full Name: Xv3_ coordinate, moving object 3
+Type: Xv3_ coordinate
+Legend: Moving object 3
+Component: Targets
+
+Xv4_O_1 (m)
+Full Name: Xv4_ coordinate, moving object 1
+Type: Xv4_ coordinate
+Legend: Moving object 1
+Component: Targets
+
+Xv4_O_2 (m)
+Full Name: Xv4_ coordinate, moving object 2
+Type: Xv4_ coordinate
+Legend: Moving object 2
+Component: Targets
+
+Xv4_O_3 (m)
+Full Name: Xv4_ coordinate, moving object 3
+Type: Xv4_ coordinate
+Legend: Moving object 3
+Component: Targets
+
+X_Design (m)
+Full Name: X coordinate of reference path
+Type: Global X coordinate
+Legend: Driver reference path
+Component: Driver model path
+
+X_L1 (m)
+Full Name: X coordinate, wheel center L1
+Type: Global X coordinate
+Legend: Wheel center L1
+Component: Wheels
+
+X_L2 (m)
+Full Name: X coordinate, wheel center L2
+Type: Global X coordinate
+Legend: Wheel center L2
+Component: Wheels
+
+X_Obj_1 (m)
+Full Name: X coordinate of moving object 1
+Type: X coordinate
+Legend: Moving object 1
+Component: Targets
+More details: Station and lateral offset (S and L) are used to calculate global X and Y coordinates if the parameter PATH_ID_OBJ is nonzero. If PATH_ID_OBJ is zero, then X and Y can be imported or calculated with VS Commands such as EQ_IN.
+
+X_Obj_2 (m)
+Full Name: X coordinate of moving object 2
+Type: X coordinate
+Legend: Moving object 2
+Component: Targets
+
+X_Obj_3 (m)
+Full Name: X coordinate of moving object 3
+Type: X coordinate
+Legend: Moving object 3
+Component: Targets
+
+X_R1 (m)
+Full Name: X coordinate, wheel center R1
+Type: Global X coordinate
+Legend: Wheel center R1
+Component: Wheels
+
+X_R2 (m)
+Full Name: X coordinate, wheel center R2
+Type: Global X coordinate
+Legend: Wheel center R2
+Component: Wheels
+
+X_S1_1 (m)
+Full Name: Sensor 1 X coord., detect 1
+Type: X coordinate
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+X_S1_2 (m)
+Full Name: Sensor 1 X coord., detect 2
+Type: X coordinate
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+X_S1_3 (m)
+Full Name: Sensor 1 X coord., detect 3
+Type: X coordinate
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+X_Sns_1 (m)
+Full Name: X coordinate of sensor 1
+Type: X coordinate
+Legend: Sensor 1
+Component: Sensors
+
+X_Target (m)
+Full Name: X coordinate of target path
+Type: Global X coordinate
+Legend: Target
+Component: Driver model path
+
+Yaw (deg)
+Full Name: Yaw, vehicle
+Type: Angle
+Legend: Vehicle yaw
+Component: Chassis motion
+
+YawO_1 (deg)
+Full Name: Yaw angle of moving object 1
+Type: Yaw angle
+Legend: Moving object 1
+Component: Targets
+
+YawO_2 (deg)
+Full Name: Yaw angle of moving object 2
+Type: Yaw angle
+Legend: Moving object 2
+Component: Targets
+
+YawO_3 (deg)
+Full Name: Yaw angle of moving object 3
+Type: Yaw angle
+Legend: Moving object 3
+Component: Targets
+
+YawS1_1 (deg)
+Full Name: Sensor 1 yaw, detect 1
+Type: Angle
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+YawS1_2 (deg)
+Full Name: Sensor 1 yaw, detect 2
+Type: Angle
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+YawS1_3 (deg)
+Full Name: Sensor 1 yaw, detect 3
+Type: Angle
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+YawS_1 (deg)
+Full Name: Yaw angle of sensor 1
+Type: Yaw angle
+Legend: Sensor 1
+Component: Sensors
+
+YawWK_L1 (deg)
+Full Name: Yaw, wheel knuckle L1
+Type: Angle
+Legend: Yaw, wheel knuckle L1
+Component: Wheels
+More details: This is an Euler yaw angle for the wheel knuckle, used for VS STI tire models.
+
+YawWK_L2 (deg)
+Full Name: Yaw, wheel knuckle L2
+Type: Angle
+Legend: Yaw, wheel knuckle L2
+Component: Wheels
+
+YawWK_R1 (deg)
+Full Name: Yaw, wheel knuckle R1
+Type: Angle
+Legend: Yaw, wheel knuckle R1
+Component: Wheels
+
+YawWK_R2 (deg)
+Full Name: Yaw, wheel knuckle R2
+Type: Angle
+Legend: Yaw, wheel knuckle R2
+Component: Wheels
+
+Yaw_L1 (deg)
+Full Name: Yaw, wheel L1
+Type: Angle
+Legend: Yaw, wheel L1
+Component: Wheels
+More details: This is the yaw angle of the wheel spin axis, used to view with VS Visualizer.
+
+Yaw_L2 (deg)
+Full Name: Yaw, wheel L2
+Type: Angle
+Legend: Yaw, wheel L2
+Component: Wheels
+
+Yaw_R1 (deg)
+Full Name: Yaw, wheel R1
+Type: Angle
+Legend: Yaw, wheel R1
+Component: Wheels
+
+Yaw_R2 (deg)
+Full Name: Yaw, wheel R2
+Type: Angle
+Legend: Yaw, wheel R2
+Component: Wheels
+
+Yaw_Wind (deg)
+Full Name: Global wind heading (yaw)
+Type: Angle
+Legend: Wind heading
+Component: Aerodynamics
+
+Ycg_SM (m)
+Full Name: Y coordinate, CG, sprung mass
+Type: Global Y coordinate
+Legend: CG, sprung mass
+Component: Chassis motion
+
+Ycg_TM (m)
+Full Name: Y coordinate, inst. CG, vehicle
+Type: Global Y coordinate
+Legend: Instant CG, vehicle
+Component: Chassis motion
+
+Yctc_L1 (m)
+Full Name: Y coordinate, tire CTC L1
+Type: Global Y coordinate
+Legend: Center of tire contact L1
+Component: Tires
+
+Yctc_L2 (m)
+Full Name: Y coordinate, tire CTC L2
+Type: Global Y coordinate
+Legend: Center of tire contact L2
+Component: Tires
+
+Yctc_R1 (m)
+Full Name: Y coordinate, tire CTC R1
+Type: Global Y coordinate
+Legend: Center of tire contact R1
+Component: Tires
+
+Yctc_R2 (m)
+Full Name: Y coordinate, tire CTC R2
+Type: Global Y coordinate
+Legend: Center of tire contact R2
+Component: Tires
+
+YlcgTM (mm)
+Full Name: Local Y, inst. CG, vehicle
+Type: Local Y coordinate
+Legend: Instant CG, vehicle
+Component: Chassis motion
+More details: This is the local Y coordinate of the instant CG of the vehicle unit in the sprung mass coordinate system. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+
+YL_S1_1 (m)
+Full Name: Sensor 1 Y coord. (L), detect 1
+Type: Y coordinate
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+YL_S1_2 (m)
+Full Name: Sensor 1 Y coord. (L), detect 2
+Type: Y coordinate
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+YL_S1_3 (m)
+Full Name: Sensor 1 Y coord. (L), detect 3
+Type: Y coordinate
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Yo (m)
+Full Name: Y coordinate, vehicle origin
+Type: Global Y coordinate
+Legend: Vehicle
+Component: Chassis motion
+
+Yrd_Air (m)
+Full Name: Y coord. of road aero ref. 1
+Type: Global Y coordinate
+Legend: Road reference frame 1
+Component: Aerodynamics
+
+YR_S1_1 (m)
+Full Name: Sensor 1 Y coord. (R), detect 1
+Type: Y coordinate
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+YR_S1_2 (m)
+Full Name: Sensor 1 Y coord. (R), detect 2
+Type: Y coordinate
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+YR_S1_3 (m)
+Full Name: Sensor 1 Y coord. (R), detect 3
+Type: Y coordinate
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Yv1_O_1 (m)
+Full Name: Yv1_ coordinate, moving object 1
+Type: Yv1_ coordinate
+Legend: Moving object 1
+Component: Targets
+More details: Each object has 4 vertices whose global X and Y coordinates are available as outputs Xv and Yv. For rectangular objects, v1 is left-front, v2 is right-front, v3 is left-rear, and v4 is right-rear. For cylinders, v1 is front, v2 is right, v3 is back, and v4 is left.
+
+Yv1_O_2 (m)
+Full Name: Yv1_ coordinate, moving object 2
+Type: Yv1_ coordinate
+Legend: Moving object 2
+Component: Targets
+
+Yv1_O_3 (m)
+Full Name: Yv1_ coordinate, moving object 3
+Type: Yv1_ coordinate
+Legend: Moving object 3
+Component: Targets
+
+Yv2_O_1 (m)
+Full Name: Yv2_ coordinate, moving object 1
+Type: Yv2_ coordinate
+Legend: Moving object 1
+Component: Targets
+
+Yv2_O_2 (m)
+Full Name: Yv2_ coordinate, moving object 2
+Type: Yv2_ coordinate
+Legend: Moving object 2
+Component: Targets
+
+Yv2_O_3 (m)
+Full Name: Yv2_ coordinate, moving object 3
+Type: Yv2_ coordinate
+Legend: Moving object 3
+Component: Targets
+
+Yv3_O_1 (m)
+Full Name: Yv3_ coordinate, moving object 1
+Type: Yv3_ coordinate
+Legend: Moving object 1
+Component: Targets
+
+Yv3_O_2 (m)
+Full Name: Yv3_ coordinate, moving object 2
+Type: Yv3_ coordinate
+Legend: Moving object 2
+Component: Targets
+
+Yv3_O_3 (m)
+Full Name: Yv3_ coordinate, moving object 3
+Type: Yv3_ coordinate
+Legend: Moving object 3
+Component: Targets
+
+Yv4_O_1 (m)
+Full Name: Yv4_ coordinate, moving object 1
+Type: Yv4_ coordinate
+Legend: Moving object 1
+Component: Targets
+
+Yv4_O_2 (m)
+Full Name: Yv4_ coordinate, moving object 2
+Type: Yv4_ coordinate
+Legend: Moving object 2
+Component: Targets
+
+Yv4_O_3 (m)
+Full Name: Yv4_ coordinate, moving object 3
+Type: Yv4_ coordinate
+Legend: Moving object 3
+Component: Targets
+
+Y_Design (m)
+Full Name: Y coordinate of reference path
+Type: Global Y coordinate
+Legend: Driver reference path
+Component: Driver model path
+
+Y_L1 (m)
+Full Name: Y coordinate, wheel center L1
+Type: Global Y coordinate
+Legend: Wheel center L1
+Component: Wheels
+
+Y_L2 (m)
+Full Name: Y coordinate, wheel center L2
+Type: Global Y coordinate
+Legend: Wheel center L2
+Component: Wheels
+
+Y_Obj_1 (m)
+Full Name: Y coordinate of moving object 1
+Type: Y coordinate
+Legend: Moving object 1
+Component: Targets
+More details: Station and lateral offset (S and L) are used to calculate global X and Y coordinates if the parameter PATH_ID_OBJ is nonzero. If PATH_ID_OBJ is zero, then X and Y can be imported or calculated with VS Commands such as EQ_IN.
+
+Y_Obj_2 (m)
+Full Name: Y coordinate of moving object 2
+Type: Y coordinate
+Legend: Moving object 2
+Component: Targets
+
+Y_Obj_3 (m)
+Full Name: Y coordinate of moving object 3
+Type: Y coordinate
+Legend: Moving object 3
+Component: Targets
+
+Y_R1 (m)
+Full Name: Y coordinate, wheel center R1
+Type: Global Y coordinate
+Legend: Wheel center R1
+Component: Wheels
+
+Y_R2 (m)
+Full Name: Y coordinate, wheel center R2
+Type: Global Y coordinate
+Legend: Wheel center R2
+Component: Wheels
+
+Y_Rack1 (mm)
+Full Name: Steering rack disp., axle 1
+Type: Displacement
+Legend: Axle 1 steering
+Component: Steering
+
+Y_Rack2 (mm)
+Full Name: Steering rack disp., axle 2
+Type: Displacement
+Legend: Axle 2 steering
+Component: Steering
+
+Y_S1_1 (m)
+Full Name: Sensor 1 Y coord., detect 1
+Type: Y coordinate
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+Y_S1_2 (m)
+Full Name: Sensor 1 Y coord., detect 2
+Type: Y coordinate
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+Y_S1_3 (m)
+Full Name: Sensor 1 Y coord., detect 3
+Type: Y coordinate
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Y_Sns_1 (m)
+Full Name: Y coordinate of sensor 1
+Type: Y coordinate
+Legend: Sensor 1
+Component: Sensors
+
+Y_Target (m)
+Full Name: Y coordinate of target path
+Type: Global Y coordinate
+Legend: Target
+Component: Driver model path
+
+Zcg_SM (m)
+Full Name: Z coordinate, CG, sprung mass
+Type: Global Z coordinate
+Legend: CG, sprung mass
+Component: Chassis motion
+
+Zcg_TM (m)
+Full Name: Z coordinate, inst. CG, vehicle
+Type: Global Z coordinate
+Legend: Instant CG, vehicle
+Component: Chassis motion
+
+ZgndAve1 (m)
+Full Name: Average ground height, axle 1
+Type: Ground elevation
+Legend: Ground at axle 1
+Component: Aerodynamics
+
+ZgndAve2 (m)
+Full Name: Average ground height, axle 2
+Type: Ground elevation
+Legend: Ground at axle 2
+Component: Aerodynamics
+
+Zgnd_L1 (m)
+Full Name: Ground Z coord under tire L1
+Type: Global Z coordinate
+Legend: Ground under tire L1
+Component: Ground and road
+
+Zgnd_L2 (m)
+Full Name: Ground Z coord under tire L2
+Type: Global Z coordinate
+Legend: Ground under tire L2
+Component: Ground and road
+
+Zgnd_R1 (m)
+Full Name: Ground Z coord under tire R1
+Type: Global Z coordinate
+Legend: Ground under tire R1
+Component: Ground and road
+
+Zgnd_R2 (m)
+Full Name: Ground Z coord under tire R2
+Type: Global Z coordinate
+Legend: Ground under tire R2
+Component: Ground and road
+
+Zo (m)
+Full Name: Z coordinate, vehicle origin
+Type: Global Z coordinate
+Legend: Vehicle
+Component: Chassis motion
+
+Zrd_Air (m)
+Full Name: Z coord. of road aero ref. 1
+Type: Global Z coordinate
+Legend: Road reference frame 1
+Component: Aerodynamics
+
+Z_Aero (m)
+Full Name: Height of aero ref pt above road
+Type: Height above road
+Legend: Aero reference point
+Component: Aerodynamics
+
+Z_L1 (m)
+Full Name: Z coordinate, wheel center L1
+Type: Global Z coordinate
+Legend: Wheel center L1
+Component: Wheels
+
+Z_L2 (m)
+Full Name: Z coordinate, wheel center L2
+Type: Global Z coordinate
+Legend: Wheel center L2
+Component: Wheels
+
+Z_Obj_1 (m)
+Full Name: Z coordinate of moving object 1
+Type: Z coordinate
+Legend: Moving object 1
+Component: Targets
+More details: The global Z coordinate of the object control point is calculated from the road surface specified with the parameter ROAD_ID_OBJ. If ROAD_ID_OBJ is set to zero, then Z_Obj can be imported or calculated with VS Commands such as EQ_IN.
+
+Z_Obj_2 (m)
+Full Name: Z coordinate of moving object 2
+Type: Z coordinate
+Legend: Moving object 2
+Component: Targets
+
+Z_Obj_3 (m)
+Full Name: Z coordinate of moving object 3
+Type: Z coordinate
+Legend: Moving object 3
+Component: Targets
+
+Z_R1 (m)
+Full Name: Z coordinate, wheel center R1
+Type: Global Z coordinate
+Legend: Wheel center R1
+Component: Wheels
+
+Z_R2 (m)
+Full Name: Z coordinate, wheel center R2
+Type: Global Z coordinate
+Legend: Wheel center R2
+Component: Wheels
+
+Z_S1_1 (m)
+Full Name: Sensor 1 Z coord., detect 1
+Type: Z coordinate
+Legend: Sensor 1, detect 1
+Component: Sensor Detections
+
+Z_S1_2 (m)
+Full Name: Sensor 1 Z coord., detect 2
+Type: Z coordinate
+Legend: Sensor 1, detect 2
+Component: Sensor Detections
+
+Z_S1_3 (m)
+Full Name: Sensor 1 Z coord., detect 3
+Type: Z coordinate
+Legend: Sensor 1, detect 3
+Component: Sensor Detections
+
+Z_Sns_1 (m)
+Full Name: Z coordinate of sensor 1
+Type: Z coordinate
+Legend: Sensor 1
+Component: Sensors
+

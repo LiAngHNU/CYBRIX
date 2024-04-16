@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Suspension: Toe Angle`Rear Tri-Link Strut - Toe Change`Tri-Link Strut
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+TOE_COMBINE ADD
+#DiagramOne0
+TOE_TABLE SPLINE
+-150, -0.230886
+-135, -0.137958
+-120, -0.067203
+-105, -0.0158
+-90, 0.018818
+-75, 0.03903
+-60, 0.047078
+-45, 0.045112
+-30, 0.035225
+-15, 0.019492
+0, 0
+15, -0.021118
+30, -0.041648
+45, -0.059255
+60, -0.071439
+75, -0.075487
+90, -0.068408
+105, -0.046854
+120, -0.007025
+135, 0.055466
+150, 0.145778
+ENDTABLE
+SUSP_TOE_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 0
+
+
+#EMBEDDED_NOTES
+#Rear Tri-Link Strut Suspension Toe change vs. Jounce.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Toe Angle; { Tri-Link Strut } Rear Tri-Link Strut - Toe Change
+#Library : Suspension: Toe Angle
+#DataSet : Rear Tri-Link Strut - Toe Change
+#Category: Tri-Link Strut
+#FileID  : Toe_95f0644d-9d12-4e20-9ea8-22889a33d059
+#Product : CarSim 2020.0
+#VehCode Toe
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`MCity Ground Surface`MCity
+#MiscYellow3
+add_obj Scene_Import\VS_Scene_Builder\Mcity_scene.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_9080781f-cafb-4524-9f90-b976961c41a3.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Scene Objects` Shape Preview` , Video Camera`Camera_9080781f-cafb-4524-9f90-b976961c41a3
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_623f4b8f-a603-4ead-a853-c4e0c8b3b60a.png
+
+#EMBEDDED_NOTES
+#This .obj files represents the ground surface for the of the MCity scene.
+#
+#Creation of this .obj file was done by using the VS Terrain Utility to convert the MCity_scene.vsterrain file to a .obj, then importing that file into this Animation Shape File Link.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { MCity } MCity Ground Surface
+#Library : Animator: Shape File Link
+#DataSet : MCity Ground Surface
+#Category: MCity
+#FileID  : Shape_623f4b8f-a603-4ead-a853-c4e0c8b3b60a
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

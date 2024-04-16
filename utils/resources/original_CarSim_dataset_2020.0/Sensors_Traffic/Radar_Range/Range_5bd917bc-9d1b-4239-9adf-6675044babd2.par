@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Sensor Range and Bearing Sensitivity`50 m Sensor Range`
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE_FLAT
+#RingCtrl1 CONSTANT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SENSOR_ANTENNA_RANGE_TABLE SPLINE_FLAT
+15, 1
+20, 0.9
+45, 0.1
+50, 0
+ENDTABLE
+SENSOR_ANTENNA_BEARING_CONSTANT 1
+*SCALAR2 1
+
+
+LOG_ENTRY Used Dataset: Sensor Range and Bearing Sensitivity; 50 m Sensor Range
+#Library : Sensor Range and Bearing Sensitivity
+#DataSet : 50 m Sensor Range
+#Category: 
+#FileID  : Range_5bd917bc-9d1b-4239-9adf-6675044babd2
+#Product : CarSim 2020.0
+#VehCode Range & Bearing Sensitivity
+
+END

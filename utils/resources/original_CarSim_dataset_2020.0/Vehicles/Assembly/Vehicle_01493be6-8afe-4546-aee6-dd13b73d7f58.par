@@ -1,0 +1,110 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`E-Class, Sedan: (Ext. Tires: Symmetric)`E-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_2e9a0a2e-0489-4e2f-b9e5-6b861bc2bc15.par
+#BlueLink7 Steering`E-Class, Sdn: Power R&P` CS E-Class` , Steering System`StrSys2_2e9a0a2e-0489-4e2f-b9e5-6b861bc2bc15
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_6bf06af1-4c8e-4866-a043-6964e4053de5.par
+#BlueLink19 Suspension: Independent System Kinematics`E-Class, Sedan - Front` E-Class` , Kinematics`KinInd_6bf06af1-4c8e-4866-a043-6964e4053de5
+
+PARSFILE Suspensions\Compliance\CmpInd_1d27c3cc-663d-4d4c-9f83-a1f463c66957.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`E-Class, Sedan - Front` E-Class` , Compliance`CmpInd_1d27c3cc-663d-4d4c-9f83-a1f463c66957
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_5458a425-c82a-4e2e-9bf3-b5280910a179.par
+#BlueLink999 Tire`225/60 R18 (Camber Ext.: Symmetric)` Extended Tire Model` , Tire`Tire_5458a425-c82a-4e2e-9bf3-b5280910a179
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_5458a425-c82a-4e2e-9bf3-b5280910a179.par
+#BlueLink10 Tire`225/60 R18 (Camber Ext.: Symmetric)` Extended Tire Model` , Tire`Tire_5458a425-c82a-4e2e-9bf3-b5280910a179
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_1c63a1cd-7f27-4c78-a24f-afd40bb01c00.par
+#BlueLink20 Suspension: Independent System Kinematics`E-Class, Sedan - Rear` E-Class` , Kinematics`KinInd_1c63a1cd-7f27-4c78-a24f-afd40bb01c00
+
+PARSFILE Suspensions\Compliance\CmpInd_ecc0ef42-a7cb-4f58-a1a3-995b264ea80c.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`E-Class, Sedan - Rear` E-Class` , Compliance`CmpInd_ecc0ef42-a7cb-4f58-a1a3-995b264ea80c
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_5458a425-c82a-4e2e-9bf3-b5280910a179.par
+#BlueLink999 Tire`225/60 R18 (Camber Ext.: Symmetric)` Extended Tire Model` , Tire`Tire_5458a425-c82a-4e2e-9bf3-b5280910a179
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_5458a425-c82a-4e2e-9bf3-b5280910a179.par
+#BlueLink999 Tire`225/60 R18 (Camber Ext.: Symmetric)` Extended Tire Model` , Tire`Tire_5458a425-c82a-4e2e-9bf3-b5280910a179
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_b7bfa6a7-4b7d-4095-94f5-7980dbf42a4f.par
+#BlueLink0 Vehicle: Sprung Mass`E-Class, Sedan` E-Class` , Sprung Mass`SprMass_b7bfa6a7-4b7d-4095-94f5-7980dbf42a4f
+
+PARSFILE Aerodynamics\Aero_Main\Aero_d2edabc2-0402-4d99-a986-94430d6589aa.par
+#BlueLink1 Aerodynamics: Basic`E-Class, Sedan Aero` E-Class` , Aerodynamics`Aero_d2edabc2-0402-4d99-a986-94430d6589aa
+
+R_REAR_DRIVE_SC 1
+PMAX_SC 200
+PARSFILE Powertrain\4wd\4WD_98e7df45-86ba-435a-a020-96dbd26b907b.par
+#BlueLink5 Powertrain: 4-Wheel Drive`250 kW, 7-spd., 2.65 Ratio` 250 kW Powertrains` , Powertrain`4WD_98e7df45-86ba-435a-a020-96dbd26b907b
+
+PARSFILE Brakes\4W_System\Brk4W_36269cc2-32ef-40e3-90d6-7c5619dfc973.par
+#BlueLink6 Brakes: Four-Wheel System`(Sdn): MC Press, No ABS` E-Class` , Brake System`Brk4W_36269cc2-32ef-40e3-90d6-7c5619dfc973
+
+PARSFILE Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`E-Class, Sedan` E-Class` , Vehicle 3D Shape`AniVeh_56213a52-605a-4200-ab95-2aae09c11489
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+
+#EMBEDDED_NOTES
+#Generic E-Class Sedan (Full-Size) with SLA front and 5-Link rear suspension.
+#
+#E-Class vehicles include the Audi A6, BMW 5-Series, Cadillac XTS, Chrysler 300C, Lexus GS, and Mercedes-Benz E-Class.
+#
+#This example vehicle uses the internal table look-up model with camber extensions, whose data source is "225/60 R18 (MF-Tyre, Symmetric)". Click on the tire dataset for more information.
+#
+#Updated for CarSim 2017: Revised the steering system parameters.  Tested for: On Center, Static Steer (Brakes ON / Brakes OFF), Transient Response, Torque Free Response, Turning Circle, and others.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { E-Class } E-Class, Sedan: (Ext. Tires: Symmetric)
+#Library : Vehicle: Assembly
+#DataSet : E-Class, Sedan: (Ext. Tires: Symmetric)
+#Category: E-Class
+#FileID  : Vehicle_01493be6-8afe-4546-aee6-dd13b73d7f58
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

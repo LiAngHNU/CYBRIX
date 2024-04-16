@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Transmissions: Transverse`Common Vehicle Assets
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Transmissions\Transverse\Transverse_trans.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.4
+SET_OFFSET_Z 0
+*SPECULAR 1
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Small Objects` Shape Preview` , Video Camera`Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_ab6ab3f8-f96d-4623-a4d4-1a64731f6a24.png
+
+#EMBEDDED_NOTES
+#This dataset was made to show a fake vehicle making a sharp turn. With rear wheels that are not steered, the rear axle should follow the target path and should not move laterally at all relative to the path. (On the other hand, the front axle can move laterally due to presumed steering.)
+#
+#The X coordinates of the shape are offset by the X length (2.690 m). Instead of X=0 being at the front axle (for most shadows), it is at the rear axle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Transmissions: Transverse
+#Library : Animator: Shape File Link
+#DataSet : Transmissions: Transverse
+#Category: Common Vehicle Assets
+#FileID  : Shape_ab6ab3f8-f96d-4623-a4d4-1a64731f6a24
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

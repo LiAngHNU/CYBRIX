@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Tire`215/70 R15`Touring Tires
+FZ_REF 8000
+X_LENGTH 341
+Z_LENGTH 341
+Y_LENGTH 215
+#CheckBox2 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_784ecfb9-264d-47ce-84b8-1eb6198efbbe.par
+#BlueLink4 Animator: Shape Assembly`Small SUV w/ Stripe` Tires` , Animator`ShpGrp_784ecfb9-264d-47ce-84b8-1eb6198efbbe
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 215
+RRE 329
+R0 341
+FZ_TIRE_COEFFICIENT 330
+FZ_MAX 100000
+M_TIRE 21
+IT 1.4
+IT_XXZZ 0.8
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000023
+L_CONTACT_X_CONSTANT 90
+L_CONTACT_Y_CONSTANT 215
+RR_FX 0
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_9c1317e1-1868-4024-91cf-f8a044823bb8.par
+#BlueLink0 Tire: Aligning Moment`215/70 R15` Touring Tires` , Aligning Moment`TireMz_9c1317e1-1868-4024-91cf-f8a044823bb8
+
+PARSFILE Tires\Fy\TireFy_c29c748c-2271-414d-a088-2e6c0ff85992.par
+#BlueLink1 Tire: Lateral Force`215/70 R15` Touring Tires` , Lateral Force`TireFy_c29c748c-2271-414d-a088-2e6c0ff85992
+
+PARSFILE Tires\Fx\TireFx_d860c599-2df7-4113-b2f6-2ff55e96807a.par
+#BlueLink2 Tire: Longitudinal Force`215/70 R15` Touring Tires` , Longitudinal Force`TireFx_d860c599-2df7-4113-b2f6-2ff55e96807a
+
+PARSFILE Tires\Camber_Thrust\CamStiff_e5ddc5f5-cc88-493a-995e-6a51edd0dea2.par
+#BlueLink3 Tire: Camber Thrust Coefficient`215/70 R15` Touring Tires` , Camber Thrust`CamStiff_e5ddc5f5-cc88-493a-995e-6a51edd0dea2
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 735 kg
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Touring Tires } 215/70 R15
+#Library : Tire
+#DataSet : 215/70 R15
+#Category: Touring Tires
+#FileID  : Tire_6540dcf7-92a1-4881-91c5-2f26086fdcb3
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

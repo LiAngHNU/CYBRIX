@@ -1,0 +1,111 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Exotic Racecar: MT, Pedal Force Brakes`Exotic Sports Car
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+PARSFILE Steering\System2\StrSys2_7d1bcc8b-482e-4f5c-bebe-cab4c0727276.par
+#BlueLink7 Steering`Exotic: Manual R&P` CS Exotic Sports Car` , Steering System`StrSys2_7d1bcc8b-482e-4f5c-bebe-cab4c0727276
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_c714d705-474e-4717-8255-455252c00dd2.par
+#BlueLink19 Suspension: Independent System Kinematics`Exotic - Front` Exotic Sports Car` , Kinematics`KinInd_c714d705-474e-4717-8255-455252c00dd2
+
+PARSFILE Suspensions\Compliance\CmpInd_ce270840-0927-4c8c-a78f-b2a3a9c5505b.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Exotic Racecar - Front` Exotic Sports Car` , Compliance`CmpInd_ce270840-0927-4c8c-a78f-b2a3a9c5505b
+
+PARSFILE Generic\Group\GenGrp_d5a5cc59-213d-41da-b786-3e0c236e9f0f.par
+#BlueLink11 Generic Data Group`Variable Gains (Vx_err)` Speed Controller` , Misc. Front Data`GenGrp_d5a5cc59-213d-41da-b786-3e0c236e9f0f
+
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_35667067-7970-4015-869a-1e94c381210c.par
+#BlueLink999 Tire`Exotic Racecar Front - 235/35 19` Performance Tires` , Tire`Tire_35667067-7970-4015-869a-1e94c381210c
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_35667067-7970-4015-869a-1e94c381210c.par
+#BlueLink10 Tire`Exotic Racecar Front - 235/35 19` Performance Tires` , Tire`Tire_35667067-7970-4015-869a-1e94c381210c
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_d4b8f0c3-defb-4452-a69c-e46209c68032.par
+#BlueLink20 Suspension: Independent System Kinematics`Exotic - Rear` Exotic Sports Car` , Kinematics`KinInd_d4b8f0c3-defb-4452-a69c-e46209c68032
+
+PARSFILE Suspensions\Compliance\CmpInd_f9e8d0e1-45f8-4fee-b0fa-d090974e72f2.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`Exotic Racecar - Rear` Exotic Sports Car` , Compliance`CmpInd_f9e8d0e1-45f8-4fee-b0fa-d090974e72f2
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_8636fe3b-ccc8-4f6c-a062-1c2535f25df7.par
+#BlueLink999 Tire`Exotic Racecar Rear - 305/30 19` Performance Tires` , Rear Tire`Tire_8636fe3b-ccc8-4f6c-a062-1c2535f25df7
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_8636fe3b-ccc8-4f6c-a062-1c2535f25df7.par
+#BlueLink14 Tire`Exotic Racecar Rear - 305/30 19` Performance Tires` , Rear Tire`Tire_8636fe3b-ccc8-4f6c-a062-1c2535f25df7
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_f4bf911a-7fc7-4ec3-957a-4b736787bfa5.par
+#BlueLink0 Vehicle: Sprung Mass`Exotic Racecar, Mid-Engine` Exotic Sports Car` , Sprung Mass`SprMass_f4bf911a-7fc7-4ec3-957a-4b736787bfa5
+
+PARSFILE Aerodynamics\Aero_Ext\Aero2_49245b29-5b72-469f-aa10-f5799a254e38.par
+#BlueLink1 Aerodynamics: Pitch, Bounce, Yaw`Exotic Racecar` ` , Aerodynamics`Aero2_49245b29-5b72-469f-aa10-f5799a254e38
+
+PARSFILE Powertrain\Rwd\RWD_c4226f55-041b-4436-88cc-addf93534d75.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`300 kW, 6-spd., 3.44 Ratio (MT)` 300 kW Powertrains` , Powertrain`RWD_c4226f55-041b-4436-88cc-addf93534d75
+
+PARSFILE Brakes\4W_System\Brk4W_d17023a5-8495-42bc-a4fc-ea16eb2a3edd.par
+#BlueLink6 Brakes: Four-Wheel System`Exotic: P Frc, No ABS` Exotic Sports Car` , Brake System`Brk4W_d17023a5-8495-42bc-a4fc-ea16eb2a3edd
+
+PARSFILE Animator\Vehicles\AniVeh_2c9c151a-13e0-4668-bd91-2b8ea79ed58a.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Exotic Racecar` Exotic Sports Car` , Vehicle 3D Shape`AniVeh_2c9c151a-13e0-4668-bd91-2b8ea79ed58a
+
+PARSFILE Animator\Groups\Group_28686184-e800-4d0c-9e44-abbda7857611.par
+#BlueLink18 Animator: Group`Exotic Brake Calipers` Brake System` , Misc. Vehicle Data`Group_28686184-e800-4d0c-9e44-abbda7857611
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2c9c151a-13e0-4668-bd91-2b8ea79ed58a.png
+
+#EMBEDDED_NOTES
+#Generic Exotic Racecar with a mid-mounted engine, manual transmission, SLA front and Semi-Trailing Arm rear suspension.
+#
+#Brake system uses Pedal Force as the control input.
+#
+#User-adjustable speed controller gains defined with VS Commands are described using tables linked on this screen. The tables are linked in this dataset because the VS Commands used to create the tables need to be read by the math model prior to the procedure in which they are used.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Exotic Sports Car } Exotic Racecar: MT, Pedal Force Brakes
+#Library : Vehicle: Assembly
+#DataSet : Exotic Racecar: MT, Pedal Force Brakes
+#Category: Exotic Sports Car
+#FileID  : Vehicle_f7206e07-1aad-46df-a232-7c042adab928
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`SenTrgS`ADAS Sensor Detections: Collision
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS SenTrgS, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE SenTrgS
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections: Collision } SenTrgS
+#Library : Plot: Setup
+#DataSet : SenTrgS
+#Category: ADAS Sensor Detections: Collision
+#FileID  : Plot_190aeec7-52f8-4e84-b2ca-be01ab8a94ae
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

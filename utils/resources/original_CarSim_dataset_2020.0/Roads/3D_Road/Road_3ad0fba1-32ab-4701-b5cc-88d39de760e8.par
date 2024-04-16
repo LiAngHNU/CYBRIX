@@ -1,0 +1,560 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Clothoid Segments`Misc. Curved Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_3ad0fba1-32ab-4701-b5cc-88d39de760e8.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Clothoid Segments
+PARSFILE Roads\BuilderSegment\RoadSeg_f115974e-97f4-4f04-96c9-87400be6bcd3.par
+#BlueLink0 Path: Segment Builder`Clothoid S-Turn` S-Shaped Turns` , Reference Path`RoadSeg_f115974e-97f4-4f04-96c9-87400be6bcd3
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Clothoid S-Turn
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_1fd38aa5-ef33-4683-9674-3ddf6bbbb500.par
+#BlueLink4 Road: Animator Surface Shapes`Clothoid S-Turn` Roads` , Road shape definitions`RdShape_1fd38aa5-ef33-4683-9674-3ddf6bbbb500
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+add_reference_frame road_stuff_7_Trees_(0,_1000)
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_9e87b837-4bbe-4910-ab33-c5c61a43b20d.par
+#BlueLink7 Road: Animator Repeated Object`Trees (0, 1000)` Trees` , 3D Shapes`AniRep_9e87b837-4bbe-4910-ab33-c5c61a43b20d
+
+add_reference_frame road_stuff_8__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink8 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_3ad0fba1-32ab-4701-b5cc-88d39de760e8.ani
+
+add_reference_frame road_stuff_1_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -9.5
+set_offset_var_y -33
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_2_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 8.2
+set_offset_var_y 35.55
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_3_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 37.8
+set_offset_var_y -27.6
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_4_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 180.004126156
+set_offset_var_x 52.3976883173
+set_offset_var_y 32.1000575168
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_5_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0.181067519003
+set_offset_var_x 65.9971608594
+set_offset_var_y -30.7330977992
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_6_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 180.683843356
+set_offset_var_x 80.4824303762
+set_offset_var_y 35.0704412207
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_7_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 4.40217740635
+set_offset_var_x 130.103789654
+set_offset_var_y -20.7257064634
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_8_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 186.101525071
+set_offset_var_x 138.321093306
+set_offset_var_y 39.5172389062
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_9_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 8.19978056194
+set_offset_var_x 161.188175908
+set_offset_var_y -25.4872190782
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_10_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 190.941360909
+set_offset_var_x 166.658729057
+set_offset_var_y 41.4254757043
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_11_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 13.1496089712
+set_offset_var_x 190.418526534
+set_offset_var_y -13.7740818877
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_12_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 196.243665253
+set_offset_var_x 192.680702465
+set_offset_var_y 37.1923671482
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_13_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 20.3828119516
+set_offset_var_x 227.757621062
+set_offset_var_y -10.2654267135
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_14_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 203.932397972
+set_offset_var_x 215.397703946
+set_offset_var_y 57.2185685888
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_15_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 27.513503511
+set_offset_var_x 256.703698224
+set_offset_var_y 1.72537124178
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_16_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 212.200299709
+set_offset_var_x 243.598670984
+set_offset_var_y 58.314266888
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_17_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 36.8126099596
+set_offset_var_x 283.662608593
+set_offset_var_y 28.5646407917
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_18_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 220.966553974
+set_offset_var_x 258.660476735
+set_offset_var_y 82.158767575
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_19_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 45.00590643
+set_offset_var_x 311.080996122
+set_offset_var_y 46.3837942134
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_20_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 229.790104019
+set_offset_var_x 280.144108343
+set_offset_var_y 97.5405857643
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_21_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 53.944048034
+set_offset_var_x 339.964666323
+set_offset_var_y 69.3554986331
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_22_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 237.98340049
+set_offset_var_x 297.638543492
+set_offset_var_y 115.427321841
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_23_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 61.947961379
+set_offset_var_x 349.738677197
+set_offset_var_y 102.584662409
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_24_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 241.947961379
+set_offset_var_x 308.868387471
+set_offset_var_y 142.946549353
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_25_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 61.947961379
+set_offset_var_x 370.721834893
+set_offset_var_y 125.05685841
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_26_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 241.947961379
+set_offset_var_x 314.899833045
+set_offset_var_y 170.213409537
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_27_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 61.947961379
+set_offset_var_x 381.776633213
+set_offset_var_y 152.819629059
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_28_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 241.947961379
+set_offset_var_x 332.402836025
+set_offset_var_y 194.766716578
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_29_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 61.947961379
+set_offset_var_x 396.517103299
+set_offset_var_y 179.524891492
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_30_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 241.947961379
+set_offset_var_x 350.999679469
+set_offset_var_y 220.096884638
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_31_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 61.947961379
+set_offset_var_x 408.127525716
+set_offset_var_y 208.011389896
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_32_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 61.947961379
+set_offset_var_x 413.236229257
+set_offset_var_y 208.348507282
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_33_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 241.947961379
+set_offset_var_x 361.063263572
+set_offset_var_y 256.206360887
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_34_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 61.947961379
+set_offset_var_x 430.714543942
+set_offset_var_y 252.631218534
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_35_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 241.947961379
+set_offset_var_x 384.894040396
+set_offset_var_y 293.591338832
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_36_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 61.947961379
+set_offset_var_x 446.709164354
+set_offset_var_y 275.948693051
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_37_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 241.794011661
+set_offset_var_x 395.837502009
+set_offset_var_y 320.160093667
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_38_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 59.1805537928
+set_offset_var_x 469.420306815
+set_offset_var_y 333.402561347
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_39_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 237.80452779
+set_offset_var_x 426.254031339
+set_offset_var_y 376.358081517
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_40_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 56.0482024021
+set_offset_var_x 490.747260271
+set_offset_var_y 352.000965275
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_41_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 233.692747206
+set_offset_var_x 447.098895499
+set_offset_var_y 403.089703383
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_42_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 51.7612997029
+set_offset_var_x 501.302349648
+set_offset_var_y 376.991838963
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_43_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 229.018477745
+set_offset_var_x 473.365327235
+set_offset_var_y 419.68667448
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_44_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 45.3003470217
+set_offset_var_x 526.596294156
+set_offset_var_y 394.646141581
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_45_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 222.078734774
+set_offset_var_x 490.447414893
+set_offset_var_y 453.019587177
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_46_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 38.804668513
+set_offset_var_x 544.597334306
+set_offset_var_y 409.932916734
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_47_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 214.389218432
+set_offset_var_x 524.291584292
+set_offset_var_y 464.12985952
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_48_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 29.7874616628
+set_offset_var_x 562.951724786
+set_offset_var_y 432.646821256
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_49_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 205.633517648
+set_offset_var_x 549.363279902
+set_offset_var_y 490.359555475
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_50_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 21.5941651925
+set_offset_var_x 587.210656524
+set_offset_var_y 439.336187053
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_51_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 196.809967603
+set_offset_var_x 584.08034546
+set_offset_var_y 499.027519957
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_52_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 12.6560235884
+set_offset_var_x 614.230193952
+set_offset_var_y 440.306798867
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_53_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 188.616671133
+set_offset_var_x 616.466965176
+set_offset_var_y 502.653022897
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_54_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 4.34813555904
+set_offset_var_x 637.023172599
+set_offset_var_y 453.09271379
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_55_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 651.384308652
+set_offset_var_y 508.641507549
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_56_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 6.36110936293e-15
+set_offset_var_x 664.684308652
+set_offset_var_y 445.641507549
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_57_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 678.284308652
+set_offset_var_y 516.141507549
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_58_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 6.36110936293e-15
+set_offset_var_x 694.384308652
+set_offset_var_y 448.941507549
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_59_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 708.184308652
+set_offset_var_y 512.241507549
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_60_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 6.36110936293e-15
+set_offset_var_x 724.884308652
+set_offset_var_y 448.491507549
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_61_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 739.284308652
+set_offset_var_y 507.741507549
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+add_reference_frame road_stuff_62_2_Oak:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 6.36110936293e-15
+set_offset_var_x 755.484308652
+set_offset_var_y 451.641507549
+set_offset_var_z 0
+parsfile Animator\STL\Shape_b639c6f4-88ee-4c0a-b131-51a82e79064b.par
+
+#EMBEDDED_NOTES
+#Example of using automatically generated clothoid to connect segments of varying curvature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Misc. Curved Roads } Clothoid Segments
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Clothoid Segments
+#Category: Misc. Curved Roads
+#FileID  : Road_3ad0fba1-32ab-4701-b5cc-88d39de760e8
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

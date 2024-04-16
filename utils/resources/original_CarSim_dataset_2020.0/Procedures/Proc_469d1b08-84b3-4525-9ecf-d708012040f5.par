@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Procedures`Crosswind Test w/ Steering`Stability Testing
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 80
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Crosswind Test w/ Steering
+SPEED_TARGET_CONSTANT 80
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_f11c27c8-7d18-47ac-9922-9799f383e281.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.25s Single Preview` Constant Position: No Offset` , Steering`StrDM_f11c27c8-7d18-47ac-9922-9799f383e281
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_f9dd9827-5256-4334-bdcc-b73fb45e081f.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 1.0` Flat Test Pads` , Miscellaneous`Road_f9dd9827-5256-4334-bdcc-b73fb45e081f
+
+PARSFILE Wind\Speed\Wind_2cd4dd11-eed2-41d9-9b20-e164ee829399.par
+#BlueLink1 Wind Speed`Crosswind @ 40 km/h @ 2 sec` Wind Bursts and Gusts` , Miscellaneous`Wind_2cd4dd11-eed2-41d9-9b20-e164ee829399
+
+PARSFILE Wind\Heading\WindDir_1956ed76-63eb-452a-bbd9-bd3cd15672f9.par
+#BlueLink2 Wind Heading`Constant: 90 deg` Constant` , Miscellaneous`WindDir_1956ed76-63eb-452a-bbd9-bd3cd15672f9
+
+PARSFILE Animator\Groups\Group_5df11fca-68d2-4d1e-bd7f-71f60b3b28c3.par
+#BlueLink3 Animator: Group`Aero Force and Moment Arrows` Aerodynamics` , Miscellaneous`Group_5df11fca-68d2-4d1e-bd7f-71f60b3b28c3
+
+PARSFILE Plot\Setup\Plot_80fe95a6-7b78-462a-bcfd-a273a731568d.par
+#BlueLink8 Plot: Setup`Aerodynamic Slip Angle` Aerodynamics and Wind` , Plot`Plot_80fe95a6-7b78-462a-bcfd-a273a731568d
+
+PARSFILE Plot\Setup\Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c.par
+#BlueLink9 Plot: Setup`Aerodynamic Forces` Aerodynamics and Wind` , Plot`Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c
+
+PARSFILE Plot\Setup\Plot_34caacf4-52e7-465b-bdb5-0b98adddeaab.par
+#BlueLink10 Plot: Setup`Aerodynamic Moments` Aerodynamics and Wind` , Plot`Plot_34caacf4-52e7-465b-bdb5-0b98adddeaab
+
+PARSFILE Plot\Setup\Plot_737158a3-cc88-4356-a7f8-b76259ff593e.par
+#BlueLink11 Plot: Setup`Wind Speed` Aerodynamics and Wind` , Plot`Plot_737158a3-cc88-4356-a7f8-b76259ff593e
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink12 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136.par
+#BlueLink13 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink14 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink15 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how CarSim can be used to set up a simple crosswind test.
+#
+#Using the Wind Speed dataset "Crosswind @ 40 km/h @ 2 sec" and the Wind heading dataset "90 deg Heading", CarSim applies a constant wind speed of 40 kph from the right side of the vehicle starting at 2 seconds into the simulation.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 80 kph, no brake pressure, and automatic gear selection using all available gears. The closed-loop driver path follower is used to keep the vehicle following a target path with no lateral offset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Stability Testing } Crosswind Test w/ Steering
+#Library : Procedures
+#DataSet : Crosswind Test w/ Steering
+#Category: Stability Testing
+#FileID  : Proc_469d1b08-84b3-4525-9ecf-d708012040f5
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

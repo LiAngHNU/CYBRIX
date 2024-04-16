@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan (New Twist-Beam): C Test`D-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_d23cd164-e25b-4ce0-bd02-6e91b06cbec3.par
+#BlueLink0 Vehicle: Assembly`D-Class, Sedan: Twist-Beam` D-Class` , Lead Unit`Vehicle_d23cd164-e25b-4ce0-bd02-6e91b06cbec3
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Output\Points\RefPt_e37d0f08-dc8d-464a-a0ca-a3be7bed5438.par
+#BlueLink6 Custom Forces and Reference Points`K and C Table (X=-1388mm, Z=200mm)` ` , Miscellaneous`RefPt_e37d0f08-dc8d-464a-a0ca-a3be7bed5438
+
+*FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Loaded\VehLoad_2a27720d-b19b-4245-be45-63da7f64bea1.png
+
+#EMBEDDED_NOTES
+#D-Class Sedan with a twist-beam suspension modelled using the Generic Suspension, new for CarSim 2018.
+#
+#A Reference Point is added on the Custom Forces and Sensors -> Positions, Velocities, and Accelerations dataset, linked below. When this vehicle is used with the Run Control K&C examples, this Reference Point defines the location of the applied forces and moments from the K&C table.
+#
+#This twist-beam suspension is set very soft in order to exaggerate the twist-beam characteristics and the data may be too compliant to represent common suspensions.
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { D-Class } D-Class, Sedan (New Twist-Beam): C Test
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : D-Class, Sedan (New Twist-Beam): C Test
+#Category: D-Class
+#FileID  : VehLoad_2a27720d-b19b-4245-be45-63da7f64bea1
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

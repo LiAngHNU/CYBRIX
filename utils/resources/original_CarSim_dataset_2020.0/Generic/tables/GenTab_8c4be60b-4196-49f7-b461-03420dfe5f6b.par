@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Generic Table`CI_FY: Right R (2D)`Generic Suspension Comp.: Twist-Beam (2D)
+#RingCtrl0 2D_SPLINE
+#CheckBox0 1    
+
+*3D_XLabel Fy other side (N)
+*3D_YLabel Fy (N)
+*3D_ZLabel Inclination (deg)
+
+#DiagramTwo0
+*3D_DATA 3, 21 ! columns x rows
+CI_FY_CARPET 2D_SPLINE
+0, -3000, 0, 3000
+-3000, -4.82485, -5.28153, -5.70496
+-2700, -4.53718, -4.99439, -5.41898
+-2400, -4.24703, -4.70478, -5.13052
+-2100, -3.95441, -4.41268, -4.83958
+-1800, -3.65931, -4.1181, -4.54616
+-1500, -3.36175, -3.82104, -4.25026
+-1200, -3.06172, -3.5215, -3.95187
+-900, -2.75923, -3.21948, -3.651
+-600, -2.45429, -2.91499, -3.34766
+-300, -2.1469, -2.60804, -3.04184
+0, -1.83707, -2.29863, -2.73356
+300, -1.52481, -1.98677, -2.42282
+600, -1.21014, -1.67247, -2.10963
+900, -0.893077, -1.35576, -1.794
+1200, -0.573628, -1.03663, -1.47595
+1500, -0.251816, -0.715117, -1.1555
+1800, 0.0723395, -0.391228, -0.832654
+2100, 0.398816, -0.0649881, -0.507438
+2400, 0.72759, 0.263581, -0.179873
+2700, 1.05863, 0.594455, 0.150018
+3000, 1.39192, 0.927606, 0.482209
+ENDTABLE
+
+_CONSTANT 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD CI_FY
+*X_LABEL Fy (N)
+*Y_LABEL Inclination (deg)
+*X_LABEL_2 Fy other side (N)
+*SCALAR2 1
+
+
+#EMBEDDED_NOTES
+#Twist-beam suspension compliance from David's SuspensionSim model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Generic Suspension Comp.: Twist-Beam (2D) } CI_FY: Right R (2D)
+#Library : Generic Table
+#DataSet : CI_FY: Right R (2D)
+#Category: Generic Suspension Comp.: Twist-Beam (2D)
+#FileID  : GenTab_8c4be60b-4196-49f7-b461-03420dfe5f6b
+#Product : CarSim 2020.0
+#VehCode table
+
+END

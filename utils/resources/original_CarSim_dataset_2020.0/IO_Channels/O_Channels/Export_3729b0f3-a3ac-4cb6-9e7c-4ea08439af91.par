@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName I/O Channels: Export`ESC/TCS: Vehicle Speeds, Engine Torque`Traction Control for TCS and ESC
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_307779ee-0d75-4e55-985d-0c1653fc4d6e\Run_out_tab.txt
+
+
+EXPORT Vx_L1
+EXPORT Vx_R1
+EXPORT Vx_L2
+EXPORT Vx_R2
+EXPORT Vx_SM
+EXPORT M_Eng_In
+EXPORT M_Eng_Rq
+#MiscYellow0
+#Number of Selected Channels: 7
+#CHN_NAME: Vx_L1
+#CHN_NAME: Vx_R1
+#CHN_NAME: Vx_L2
+#CHN_NAME: Vx_R2
+#CHN_NAME: Vx_SM
+#CHN_NAME: M_Eng_In
+#CHN_NAME: M_Eng_Rq
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`TCS: Low Mu Acceleration` Powertrain Tests` , example run`Run_307779ee-0d75-4e55-985d-0c1653fc4d6e
+
+
+#EMBEDDED_NOTES
+#ESC/TCS export variables involve engine torque management:
+#
+#M_ENG_IN: actual engine torque
+#M_ENG_RQ: driver requesting engine torque
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Traction Control for TCS and ESC } ESC/TCS: Vehicle Speeds, Engine Torque
+#Library : I/O Channels: Export
+#DataSet : ESC/TCS: Vehicle Speeds, Engine Torque
+#Category: Traction Control for TCS and ESC
+#FileID  : Export_3729b0f3-a3ac-4cb6-9e7c-4ea08439af91
+#Product : CarSim 2020.0
+#VehCode Export Channels
+
+END

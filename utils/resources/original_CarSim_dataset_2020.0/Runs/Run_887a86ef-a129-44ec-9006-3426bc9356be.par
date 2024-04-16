@@ -1,0 +1,100 @@
+PARSFILE
+#FullDataName CarSim Run Control`MF Tyre, X DOF: Small Bump`Suspension and Ride Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_887a86ef-a129-44ec-9006-3426bc9356be
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_3eaa41a1-4efa-4cad-9159-3ea5b86ad95a.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 45 m` Vehicle Reference` , Animator camera`Camera_3eaa41a1-4efa-4cad-9159-3ea5b86ad95a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_7d447581-8789-4845-b01e-f15232620372.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: MF-Tyre 6.2, Sym.` External Tire Models` , Math Model`Vehicle_7d447581-8789-4845-b01e-f15232620372
+
+PARSFILE Procedures\Proc_1f634f3b-3b9d-4c34-be98-bcddc7023ebe.par
+#BlueLink28 Procedures`Small, Sharp Bump` Driving` , Procedure`Proc_1f634f3b-3b9d-4c34-be98-bcddc7023ebe
+
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.001
+*FREQ_OUT 1000
+tstep 0.0005
+iprint 2
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink15 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_1351817f-3ec4-4d44-b977-d9d4f9bb7e7b.par
+#BlueLink16 Plot: Setup`Vertical Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_1351817f-3ec4-4d44-b977-d9d4f9bb7e7b
+
+PARSFILE Plot\Setup\Plot_08b14f63-7588-48c3-b2ca-bc46e9e3f9da.par
+#BlueLink17 Plot: Setup`Deflections for X DOF` Suspension Motion` , Plot`Plot_08b14f63-7588-48c3-b2ca-bc46e9e3f9da
+
+PARSFILE Plot\Setup\Plot_ecb034be-dc31-4cab-909d-eaa6abafa5d6.par
+#BlueLink18 Plot: Setup`Force for X DOF` Suspension Forces and Moments` , Plot`Plot_ecb034be-dc31-4cab-909d-eaa6abafa5d6
+
+
+SPECIAL_PARSFILE Runs\Run_0b5159a1-99de-46f5-ab79-1e10f1e96826.par
+#BlueLink23 CarSim Run Control`MF-Tyre, Sym.: Small Bump` Tire Models` , Overlay run or ERD file`Run_0b5159a1-99de-46f5-ab79-1e10f1e96826
+
+*ERD_FILE_1 Results\Run_0b5159a1-99de-46f5-ab79-1e10f1e96826\LastRun.csv
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title MF Tyre, X DOF: Small Bump <Suspension and Ride Tests>
+CATEGORY Suspension and Ride Tests 
+DATASET_TITLE MF Tyre, X DOF: Small Bump
+#MiscYellow0
+DEFINE_SUSP_X_DOF 1
+DEFINE_SUSP_X_DOF 2
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan with a longitudinal
+#degree-of-freedom (X direction DOF) in the front and rear suspensions uses the MF-Tyre model driving over a small, sharp bump.
+#
+#The X-DOF settings are on the Run Control screen in the Miscellaneous yellow field.
+#
+#If the box "Write all outputs" is not checked, output variables added with the DEFINE_SUSP_X_DOF commands will not be written to file and therefore not be visible in plots.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Suspension and Ride Tests } MF Tyre, X DOF: Small Bump
+#Library : CarSim Run Control
+#DataSet : MF Tyre, X DOF: Small Bump
+#Category: Suspension and Ride Tests
+#FileID  : Run_887a86ef-a129-44ec-9006-3426bc9356be
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

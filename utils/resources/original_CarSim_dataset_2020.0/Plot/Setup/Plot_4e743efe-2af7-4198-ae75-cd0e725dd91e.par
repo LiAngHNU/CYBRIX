@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed Control: Integral of Error`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx_Ierr, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed Control: Integral of Error
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Speed Control: Integral of Error
+#Library : Plot: Setup
+#DataSet : Speed Control: Integral of Error
+#Category: Controls: Driver
+#FileID  : Plot_4e743efe-2af7-4198-ae75-cd0e725dd91e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

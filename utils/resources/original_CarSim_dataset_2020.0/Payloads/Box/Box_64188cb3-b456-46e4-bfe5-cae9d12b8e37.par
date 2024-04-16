@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Hybrid Batteries (300 kg)`
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Hybrid Batteries (300 kg)
+*X_LENGTH 300
+*Y_LENGTH 800
+*Z_LENGTH 200
+Y_CG_PL 0
+H_BOX_BOTTOM 225
+LX_CG_PL 2400
+M_PL 300
+*SET_COLOR 1 0 0
+
+#CheckBox0 1    
+
+H_CG_PL 325.00
+IXX_PL 17.00
+IYY_PL 3.25
+IZZ_PL 18.25
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+add_obj Payloads\Box\Box_64188cb3-b456-46e4-bfe5-cae9d12b8e37.obj
+show_front on
+show_back off
+set_color 1 0 0
+
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; Hybrid Batteries (300 kg)
+#Library : Payload: Box Shape
+#DataSet : Hybrid Batteries (300 kg)
+#Category: 
+#FileID  : Box_64188cb3-b456-46e4-bfe5-cae9d12b8e37
+#Product : CarSim 2020.0
+#VehCode Payload: Box
+
+END

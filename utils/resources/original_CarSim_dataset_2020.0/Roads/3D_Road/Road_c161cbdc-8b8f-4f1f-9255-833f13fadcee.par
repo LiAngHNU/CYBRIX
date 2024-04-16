@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Big Grass, Z = -0.04, ID = 999`Roundabout Network, Flat
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_c161cbdc-8b8f-4f1f-9255-833f13fadcee.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 999
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Big Grass, Z = -0.04, ID = 999
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.9` Constant` , Friction`RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba
+
+PARSFILE Roads\Shapes\RdShape_76a36443-ce9d-4d53-afb7-a75bafb4cc2d.par
+#BlueLink4 Road: Animator Surface Shapes`Big Grass, dZ = -0.04 m` Roundabout Network, Flat` , Road shape definitions`RdShape_76a36443-ce9d-4d53-afb7-a75bafb4cc2d
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_c161cbdc-8b8f-4f1f-9255-833f13fadcee.ani
+
+#EMBEDDED_NOTES
+#This dataset provides a straight reference line going east, such the Station S = Global X and lateral offset L = Global Y.
+#
+#This also has a large square grass surface with elevation of -0.04 m and links to the sky. It is intended for use with a network of road graphics that all exist at an elevation of Z=0.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Roundabout Network, Flat } Big Grass, Z = -0.04, ID = 999
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Big Grass, Z = -0.04, ID = 999
+#Category: Roundabout Network, Flat
+#FileID  : Road_c161cbdc-8b8f-4f1f-9255-833f13fadcee
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

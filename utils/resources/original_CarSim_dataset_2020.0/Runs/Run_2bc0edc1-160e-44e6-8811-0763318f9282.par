@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName CarSim Run Control`Steer Controller with Embedded Python`Embedded Python
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2bc0edc1-160e-44e6-8811-0763318f9282
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_6ee7b251-3362-4e47-80d3-90ca59581138.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 3 El, 36 m` Vehicle Reference` , Animator camera`Camera_6ee7b251-3362-4e47-80d3-90ca59581138
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 4
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 4
+*RUN_COLOR 0.4 0.6 1
+SET_RUN_COLOR 0.4 0.6 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_b51258ba-42c7-4b7e-b55d-077cd21c37c6.par
+#BlueLink28 Procedures`Extended Driver Model` Driver Model, Extended and External` , Procedure`Proc_b51258ba-42c7-4b7e-b55d-077cd21c37c6
+
+PARSFILE Generic\VS_commands\GenVS_411c9c7d-b3f3-4d72-ba87-55bc3a877124.par
+#BlueLink9 Generic VS Commands`Steer Controller` Embedded Python` , Miscellaneous`GenVS_411c9c7d-b3f3-4d72-ba87-55bc3a877124
+
+OPT_VS_FILETYPE 4
+
+SPECIAL_PARSFILE Runs\Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc.par
+#BlueLink23 CarSim Run Control`Steer Controller with VS Commands` Extended Models` , Overlay run or ERD file`Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Steer Controller with Embedded Python <Embedded Python>
+CATEGORY Embedded Python 
+DATASET_TITLE Steer Controller with Embedded Python
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Embedded Python commands are used to define a steering controller.
+#
+#Help > Technical Memos > Example: Extending a Model with Embedded Python Utility
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Embedded Python } Steer Controller with Embedded Python
+#Library : CarSim Run Control
+#DataSet : Steer Controller with Embedded Python
+#Category: Embedded Python
+#FileID  : Run_2bc0edc1-160e-44e6-8811-0763318f9282
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

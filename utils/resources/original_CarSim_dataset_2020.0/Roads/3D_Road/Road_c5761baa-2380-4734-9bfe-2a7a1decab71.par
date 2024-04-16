@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Braking Distance Test Road`Straight
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_c5761baa-2380-4734-9bfe-2a7a1decab71.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Braking Distance Test Road
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_ef1078c3-6bdf-4b38-b3c0-a8e5ae64660d.par
+#BlueLink4 Road: Animator Surface Shapes`Braking Test Road` Roads` , Road shape definitions`RdShape_ef1078c3-6bdf-4b38-b3c0-a8e5ae64660d
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_c5761baa-2380-4734-9bfe-2a7a1decab71.ani
+
+#EMBEDDED_NOTES
+#This road surface is flat and straight. It has identifying marks in support of quick evaluation of brake tests.
+#
+#White line = 0 m
+#Yellow lines = 1 m
+#Red lines = 5 m
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Straight } Braking Distance Test Road
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Braking Distance Test Road
+#Category: Straight
+#FileID  : Road_c5761baa-2380-4734-9bfe-2a7a1decab71
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Events`B. Bring Vehicle Speed to 82 km/h`Sine with Dwell
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 2
+RESET_EVENTS
+*NAME1 vx
+*NAME2 OPT_WRITE
+*VALUE1 82
+*VALUE2 0
+*SPEED 83
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 1083
+set_description SPEED_TARGET_ID Event: B. Bring Vehicle Speed to 82 km/h
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT 83
+#MiscYellow0
+OPT_WRITE WRITE_ALL
+#ENDMYellow
+
+MAKE_EVENT vx > 82 ; Events\Events_58478183-71fc-4d8b-8cb7-3a270d1b7b61.par
+#BlueLink0 Events`C. Coast Down to 80 km/h` Sine with Dwell` , Events`Events_58478183-71fc-4d8b-8cb7-3a270d1b7b61
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Go to the coast-down speed (82 km/h), using the default speed controller settings. The target speed is set a little higher, at 83 km/h.
+#
+#Turn off writing for this transition (if WRITE_ALL is zero). When the target speed is reached, continue to step C.
+#
+#Any pending events must be cleared here to get rid of events that might be left over from the previous sine with dwell test. (This dataset is read for every repeat, as well as the first test.)
+#
+#Revised 2018.1 because target speed uses new feature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } B. Bring Vehicle Speed to 82 km/h
+#Library : Events
+#DataSet : B. Bring Vehicle Speed to 82 km/h
+#Category: Sine with Dwell
+#FileID  : Events_0fc1d317-a9d2-4cd8-892f-6269f90ad05a
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

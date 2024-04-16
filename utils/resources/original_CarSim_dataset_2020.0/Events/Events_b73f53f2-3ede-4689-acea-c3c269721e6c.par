@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`G. Check for Reversing Steer Direction`Fishhook with Roll Rate Feedback
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 SWA_Sign
+*NAME2 SWA_Sign
+*VALUE1 0
+*VALUE2 0
+MAKE_EVENT SWA_Sign > 0 ; Events\Events_c10dd0d8-5c0e-4d0d-bbe5-84c458eaa65a.par
+#BlueLink0 Events`I. Finished 1st Set (Left-Hand Starts)` Fishhook with Roll Rate Feedback` , Events`Events_c10dd0d8-5c0e-4d0d-bbe5-84c458eaa65a
+
+MAKE_EVENT SWA_Sign < 0 ; Events\Events_5c4a06ba-3bae-4ebf-8c08-508560468d0b.par
+#BlueLink1 Events`J. Finished 2nd Set (Right-Hand Starts)` Fishhook with Roll Rate Feedback` , Events`Events_5c4a06ba-3bae-4ebf-8c08-508560468d0b
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded when the vehicle has run for 3 seconds after the fishhook maneuver. The next step depends on whether this is the first sequence ( SWA_Sign = 1) or second (SWA_Sign = -1).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Fishhook with Roll Rate Feedback } G. Check for Reversing Steer Direction
+#Library : Events
+#DataSet : G. Check for Reversing Steer Direction
+#Category: Fishhook with Roll Rate Feedback
+#FileID  : Events_b73f53f2-3ede-4689-acea-c3c269721e6c
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

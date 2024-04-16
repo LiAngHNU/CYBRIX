@@ -1,0 +1,199 @@
+PARSFILE
+! VS Tire Tester for CarSim and TruckSim 2020.0
+! Utility to calculate tire behavior for simulated quasi-static tests
+! Revision 125462, December 17, 2019
+
+DATASET_TITLE MF-Tyre Sweep Alpha (Fz = 2000 N)
+CATEGORY Tire Tester
+TITLE MF-Tyre Sweep Alpha (Fz = 2000 N) <Tire Tester>
+
+! Echo: Results\Run_07d2e034-5115-449c-8746-9301d2414e2a\LastRun_echo.par
+! This run was made 21:03 on December 18, 2019.
+
+!------------------------------------------------------------------------------------
+! SYSTEM PARAMETERS (SIMULATION OPTIONS)
+!------------------------------------------------------------------------------------
+! [D] (default) indicates that a parameter was not set by reading from a Parsfile.
+! [I] indicates that changing the parameter via an Event triggers an initialization.
+! [L] indicates that the parameter is locked once the simulation starts.
+
+ID_EVENT            0 ; - ! ID number that can be assigned to the current event
+ID_RUN              0 ; - ! ID number that can be assigned to a simulation run
+NDIGITS_ECHO       10 ! [D] Max. no. of digits for printing floating-point numbers
+! NIMPORT           0 ! Number of variables activated for import (read only)
+! NOUT_ANI_LIVE     0 ! Number of variables sent live to animators (read only)
+! NOUT_EXPORT       0 ! Number of output variables activated for export (read only)
+! NOUT_WRITE       16 ! Number of output variables written to file (read only)
+OPT_ALL_WRITE       0 ! Write all outputs to file? 1 -> all, 0 -> only activated
+                      ! outputs
+OPT_BUFFER_WRITE    0 ! [D] Retain output data in memory buffer until end of run? 0
+                      ! -> no, write immediately to file, 1 -> yes, buffer during
+                      ! run and write to file after run finishes [L]
+OPT_CHECK_MATH      2 ! [D] Check for math exceptions? 2 -> as errors, 1 -> as
+                      ! warnings, 0 -> no checks
+OPT_ECHO_ALL_PARS   0 ! [D] Echo all parameters in this VS Solver? 0 -> no, 1 -> yes
+OPT_ECHO_ALL_UNITS  0 ! [D] Echo list of units and scale factors? 0 -> no, 1 -> yes
+OPT_ECHO_ICS        0 ! [D] Echo initial conditions? 0 -> no, 1 -> yes
+OPT_ECHO_KEYWORDS_LC 0 ! [D] Echo all keywords in lowercase? -> 0 -> no, 1 -> yes
+OPT_ECHO_WRITE      0 ! [D] Echo written outputs? 0 -> no, 1 -> yes
+OPT_ERROR_DIALOG    1 ! [D] Show pop-up dialog box if fatal error occurs: 1 -> yes
+                      ! (normal use), 0 -> no (for batch runs)
+OPT_ERROR_DUP_DEF   0 ! [D] Handle case where DEFINE_IMPORT, DEFINE_OUTPUT,
+                      ! DEFINE_PARAMETER, or DEFINE_VARIABLE attempts to define a
+                      ! variable with a name that is already in use. 0 -> write
+                      ! warning in log file, 1 -> generate error [L]
+OPT_ERROR_SHOW_ALL  0 ! [D] Show pop-up boxes for all errors: 0 -> only show the
+                      ! first, 1 -> also show subsequent errors
+OPT_LOG_DEBUG       0 ! [D] Log file writing: 0 -> normal, 1 -> crash expected
+OPT_LOG_VERBOSE     2 ! [D] Log file verbosity: 2 -> errors + most events + parsfile
+                      ! names, 0 -> errors only, 1 -> errors + events, 3 ->
+                      ! advanced diagnostics
+OPT_LOG_WARNINGS    1 ! [D] Write warnings into log file? 1 -> yes, 0 -> no
+OPT_PAUSE           0 ! [D] Pause at end of run with window open? 0 -> no, 1 -> yes
+OPT_SKIP_INIT_DYN   0 ! [D] Skip initial dynamic calculations (for some RT systems)?
+                      ! 0 -> no, 1 -> yes
+OPT_SORT_WRITE      1 ! [D] Sort written outputs? 1 -> alphabetical, 0 -> as entered
+OPT_VS_FILETYPE     2 ! Type of output file: 1-> 64-bit VS, 2-> 32-bit VS,3 ->
+                      ! 32-bit ERD, 4 -> text CSV (no binary), 0 -> no output file
+! RTIME  0.0959999999 ; - ! CALC -- Computational efficiency (sec/sim. sec)
+TSTEP          0.0005 ; s ! Time step between calculations. [L]
+
+!------------------------------------------------------------------------------------
+! MODEL PARAMETERS
+!------------------------------------------------------------------------------------
+! Tire behavior is specified with the following parameters. Depending on the
+! selected options, the following nonlinear Configurable Functions might also be
+! used: FX_TIRE, FY_TIRE, FYG_TIRE, FZ_TIRE, KGAMMA, L_CONTACT_X, L_CONTACT_Y,
+! L_RELAX_X, L_RELAX_Y, MX_TIRE, MXG_TIRE, MZ_TIRE, STI_TYPARR, and Z_PROFILE
+
+VLOW_DRIFT_X      0.1 ; km/h ! [D] Low speed limit: allow near-static Fx to avoid
+                      ! drift when stopped on a grade
+VLOW_DRIFT_Y      0.1 ; km/h ! [D] Low speed limit: allow near-static Fy to avoid
+                      ! drift when stopped on a grade
+
+OPT_TIRE_MODEL(1,1) 8 ! Internal tire shear-model option, tire L1: 1 -> original
+                      ! tabular model; 0 -> fully external model; 2 -> built-in
+                      ! lags; 3 -> built-in for Fx, My, and lags; 6 -> tabular with
+                      ! camber extensions; 7 -> built-in Pacejka 5.2; 8 -> TNO
+                      ! Delft-Tyre; 9 -> COSIN FTire; 10 -> third-party STI tire
+                      ! model [I]
+OPT_TIRE_INERTIA_EXTERNAL(1,1) 1 ! Option for handling spin inertia for 3rd-party
+                                 ! model: 0 -> use spin inertia of tire from
+                                 ! external tire file; 1 -> use spin inertia of
+                                 ! tire from VS Parsfile
+FZ_REF(1,1)     30000 ; N ! Reference vertical force: Not used directly in the VS
+                      ! Math Model; provided as a standard reference for advanced
+                      ! users to scale other parameters and Configurable Functions
+                      ! for this tire
+IT(1,1)            25 ; kg-m2 ! Spin inertia for tire L1 [I]
+IT_XXZZ(1,1)        0 ; kg-m2 ! [D] XX/ZZ inertia for tire L1 [I]
+KY_TIRE(1,1)   956.08 ; N/deg ! Cornering stiffness for the driver model, tire L1
+M_TIRE(1,1)         2 ; kg ! Mass of tire L1
+
+!------------------------------------------------------------------------------------
+! TEST SETUP PARAMETERS
+!------------------------------------------------------------------------------------
+OPT_TEST_MODE       1 ! Sweep one variable from a lower limit to an upper limit
+                      ! using a constant step. 0 -> vary Fz, 1 -> vary alpha, 2 ->
+                      ! vary kappa, 3 -> vary gamma [I]
+FZ_TEST          2000 ; N ! Constant vertical force
+ALPHA_LOWER       -10 ; deg ! Slip angle lower test limit
+ALPHA_UPPER        10 ; deg ! Slip angle upper test limit
+ALPHA_STEP       0.01 ; deg ! Slip angle increment
+KAPPA_TEST          0 ; - ! Constant slip ratio
+GAMMA_TEST          0 ; deg ! Constant inclination angle
+MUX_TEST           -1 ; - ! Longitudinal mu for this test
+MUY_TEST           -1 ; - ! Lateral mu for this test
+SPEED_TEST         10 ; km/h ! Test speed (r*w)
+RR_SURF             1 ; - ! Tire rolling resistance surface-effect coefficient
+
+
+!------------------------------------------------------------------------------------
+! SYSTEM CONSTANTS
+!------------------------------------------------------------------------------------
+! DR      57.29577951 ; - ! Deg/rad symbol to use in formulas (read-only)
+! G           9.80665 ; - ! Symbol for gravity constant m/s/s (read-only)
+! PI      3.141592654 ; - ! Symbol for PI to use in formulas (read-only)
+! ZERO              0 ; - ! Symbol for zero to use in VS Events (read-only)
+
+!------------------------------------------------------------------------------------
+! CONFIGURABLE FUNCTIONS
+!------------------------------------------------------------------------------------
+
+! Z_PROFILE: "Wandering profile" (roughness input). Elevation increment is a
+! function of distance travelled (CONSTANT or TABLE). Elevation increment from the
+! calculation can be adjusted with Z_PROFILE_GAIN and Z_PROFILE_OFFSET. Distance
+! travelled used in the calculation can be adjusted with SSCALE_Z_PROFILE and
+! SSTART_Z_PROFILE. The derivative of this function is used internally. This
+! configurable function supports 2 datasets; if indices shown below are not used,
+! e.g., (2), the current value of the index ISIDE is used to identify the dataset
+! when reading data.
+
+Z_PROFILE_CONSTANT(1) 0 ; mm ! [D] Constant elevation increment
+Z_PROFILE_OFFSET(1) 0 ; mm ! Offset added (after gain) to get elevation increment
+
+Z_PROFILE_CONSTANT(2) 0 ; mm ! [D] Constant elevation increment
+Z_PROFILE_OFFSET(2) 0 ; mm ! Offset added (after gain) to get elevation increment
+
+!------------------------------------------------------------------------------------
+! EXTERNAL TIRE MODULE API
+!------------------------------------------------------------------------------------
+EXTERNAL_TIRE_MODULE_DLL D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Prog\Resources\Extensions\External_Tire_API\win32\DelftTyreWrapper
+INSTALL_EXTERNAL_TIRE_API ! Command to load the specified external module
+
+! TNO Delft-Tyre model: set context in VS model for axle 1, left side
+IAXLE  1
+ISIDE  1
+! TNO Delft-Tyre property file and DLL location
+DELFT_TYRE_DATA D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Data\Extensions\TNO_DelftTyre\CS_car225_60R18.tir 
+DELFT_TYRE_DLL D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Prog\Resources\Extensions\TNO_DelftTyre\win32\TNO_DelftTyre.dll 
+DELFT_TYRE_SW    1104 ! Operating mode of TNO Delft-Tyre model
+DELFT_TYRE_INIT
+
+
+!------------------------------------------------------------------------------------
+! NEW VARIABLES DEFINED AT RUN TIME
+!------------------------------------------------------------------------------------
+DEFINE_OUTPUT mu_y_l1 = -0.931009; - ; Normalized lateral force 
+SET_OUTPUT_COMPONENT MU_Y_L1 Test tire;
+DEFINE_OUTPUT mu_x_l1 = 0.0173674; - ; Normalized longitudinal force 
+SET_OUTPUT_COMPONENT MU_X_L1 Test tire;
+DEFINE_OUTPUT slip_l1 = 0.176327; - ; Tangent of slip angle 
+SET_OUTPUT_COMPONENT SLIP_L1 Test tire;
+DEFINE_OUTPUT y_ctc_l1 = 0.0749271; mm ; CTC lateral shift 
+SET_OUTPUT_COMPONENT Y_CTC_L1 Test tire;
+DEFINE_OUTPUT mz_fx_l1 = 0.00260258; N-m ; Mz due to Fx and CTC lat. shift 
+SET_OUTPUT_COMPONENT MZ_FX_L1 Test tire;
+DEFINE_OUTPUT mz_fy_l1 = -6.44621; N-m ; Aligning moment due to Fy 
+SET_OUTPUT_COMPONENT MZ_FY_L1 Test tire;
+DEFINE_OUTPUT trail_l1 = 3.46195; mm ; Pneumatic trail 
+SET_OUTPUT_COMPONENT TRAIL_L1 Test tire;
+
+!------------------------------------------------------------------------------------
+! EQUATIONS OUT (AT THE END OF EVERY TIME STEP)
+!------------------------------------------------------------------------------------
+EQ_OUT MU_Y_L1 = IF(FZ_L1, FY_L1/FZ_L1, 0);
+EQ_OUT MU_X_L1 = IF(FZ_L1, FX_L1/FZ_L1, 0);
+EQ_OUT SLIP_L1 = TAN(ALPHA_L1);
+EQ_OUT Y_CTC_L1 = IF(FZ_L1, MX_L1/FZ_L1, 0);
+EQ_OUT MZ_FX_L1 = FX_L1*Y_CTC_L1;
+EQ_OUT MZ_FY_L1 = MZ_L1 -MZ_FX_L1;
+EQ_OUT TRAIL_L1 = IF(FY_L1, MZ_FY_L1/FY_L1, 0);
+
+!------------------------------------------------------------------------------------
+! STATE VARIABLES (NEEDED FOR RESTART)
+!------------------------------------------------------------------------------------
+SV_CMP_T_L1 8.633591676 ; mm ! Tire L1 compression
+SV_DZDX_L1          0 ; - ! Ground X slope under tire L1
+SV_DZDY_L1          0 ; - ! Ground Y slope under tire L1
+SV_D_ALPHA_L1       0 ; - ! Delta Alpha (Fy 0-crossing), tire L1
+SV_D_ALPHA_MX_L1    0 ; - ! Delta Alpha (Mx 0-crossing), tire L1
+SV_D_CONI_L1        0 ; - ! Delta Coni (Mz 0-crossing), tire L1
+SV_D_KAPPA_L1       0 ; - ! Delta Kappa (Fx 0-crossing), tire L1
+SV_R_L1             0 ; m ! Deflected radius for tire L1
+SV_SLIP_LAT_L1      0 ; - ! ODE: Lagged tan of lateral slip, tire L1
+SV_SLIP_LONG_L1     0 ; - ! ODE: Lagged long. slip, tire L1
+SV_Z_CTC_L1         0 ; m ! Center of tire contact L1 {Zgnd_L1}
+
+
+END

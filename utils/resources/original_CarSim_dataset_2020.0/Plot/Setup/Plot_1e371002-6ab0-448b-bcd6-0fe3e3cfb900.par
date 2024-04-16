@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Plot: Setup`Steering Stops`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output StrStopL = K_STR_STOP_L*Steer_L1
+define_output StrStopR = K_STR_STOP_R*Steer_R1
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS StrStopL, Time
+PLOTCHANNELS StrStopR, Time
+
+#ENDMYellow
+
+YAXISLABEL Steering Stop Stiffness (Nm)
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steering Stops
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#VS Commands to calculate the steering stop stiffnesses in units of Nm.
+#
+#The steering stop properties are set on the Steering System screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steering Stops
+#Library : Plot: Setup
+#DataSet : Steering Stops
+#Category: Steering
+#FileID  : Plot_1e371002-6ab0-448b-bcd6-0fe3e3cfb900
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

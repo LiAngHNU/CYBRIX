@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Generic VS Commands`Function to follow vehicle`ADAS Support
+#VehCode VS Commands
+
+#MiscYellow0
+define_parameter tlead 1.0;s;Preview time for traffic vehicles
+
+begin_function go_obj(v1, v2) ; Boolean used in calculating Verr
+  return  v1 > 0.1 | abs(v2) > 0.001
+end_function
+
+begin_function follow_ego_verr(id) ; Calculate Verr for following ego vehicle
+  define_local v
+  v = obj_v(id)
+  return if( go_obj(vxz_Fwd,v), 5*(obj_s(id) - station + v*tlead + 6), 0)
+end_function
+
+begin_function follow_obj_verr(id) ; Calculate Verr for following preceding object
+  define_local v
+   v = obj_v(id)
+  return if(go_obj(obj_v(id -1),v), 5*(obj_s(id) - obj_s(id -1) + v*tlead + 6), 0)
+end_function
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Function to follow vehicle
+#Library : Generic VS Commands
+#DataSet : Function to follow vehicle
+#Category: ADAS Support
+#FileID  : GenVS_f47df0e3-a0d3-489e-8565-e7c01b6398ca
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

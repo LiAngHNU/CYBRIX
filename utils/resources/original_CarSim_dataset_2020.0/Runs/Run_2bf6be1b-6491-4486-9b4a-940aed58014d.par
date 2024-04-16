@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Sensors: Crossing Vehicles (Simulink)`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2bf6be1b-6491-4486-9b4a-940aed58014d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_91fb2108-822c-4847-b987-86bee2bcbc7a.par
+#BlueLink12 Models: Simulink`Brake Control w/ 2 ADAS Sensors` Object Sensors` , Models`Simlink_91fb2108-822c-4847-b987-86bee2bcbc7a
+
+PARSFILE Animator\Cameras\Camera_6ee7b251-3362-4e47-80d3-90ca59581138.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 3 El, 36 m` Vehicle Reference` , Animator camera`Camera_6ee7b251-3362-4e47-80d3-90ca59581138
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback` B-Class` , Math Model`Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac
+
+PARSFILE Procedures\Proc_daa090a7-3285-41e5-bc47-6f8641b5fe51.par
+#BlueLink28 Procedures`Two Sensors, Two Target Vehicles` Sensors and Traffic` , Procedure`Proc_daa090a7-3285-41e5-bc47-6f8641b5fe51
+
+PARSFILE Generic\Group\GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges` HUD Gauges` , Miscellaneous`GenGrp_93c85863-f22e-4cd2-b8c7-402c8d5c9781
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.png
+WRITE_SENSOR_DETECT
+Title Sensors: Crossing Vehicles (Simulink) <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Sensors: Crossing Vehicles (Simulink)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with two forward-facing ADAS Sensors detects two traffic vehicles. The linked Simulink model serves as the Brake Controller.
+#
+#The two traffic vehicles start to cross the B-Class Hatchback's path. Once they come into sensor range the Simulink model, receiving data from the ego vehicle's sensors, controls the brake system by commanding Master Cylinder Pressure. The ego vehicle slows down and avoids a collision with the sensor targets.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Sensors: Crossing Vehicles (Simulink)
+#Library : CarSim Run Control
+#DataSet : Sensors: Crossing Vehicles (Simulink)
+#Category: ADAS and Active Safety
+#FileID  : Run_2bf6be1b-6491-4486-9b4a-940aed58014d
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

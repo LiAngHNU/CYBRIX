@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`E. Set Opt_Engine_Running = 1`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 2.5
+#MiscYellow0
+TSTART_T_EVENT = T
+#ENDMYellow
+
+#MiscYellow1
+Opt_Engine_Running = 1; ! Turn engine back on
+SV_AV_ENG = AV_ENG_IDLE; 
+! Turning the engine on is accompanied by setting the engine speed state
+! variable to a non-zero value. In this case, SV_AV_Eng is set to the engine
+! idle speed, normally set on the Engine screen.
+#ENDMYellow
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_2970f94c-448b-4c38-a1a3-123ef9d344bf.par
+#BlueLink0 Events`F. Return Throttle to Throt_Ref` Opt_Engine_Running: Auto. Transmission` , Events`Events_2970f94c-448b-4c38-a1a3-123ef9d344bf
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } E. Set Opt_Engine_Running = 1
+#Library : Events
+#DataSet : E. Set Opt_Engine_Running = 1
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_1fcf5f64-dce1-4417-a86b-bb8b5dfabd62
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

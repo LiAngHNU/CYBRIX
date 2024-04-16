@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Fy vs. camber - Rear`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CamberL2, Flat_l2
+PLOTCHANNELS CamberR2, Flat_r2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fy vs. camber - Rear
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Fy vs. camber - Rear
+#Library : Plot: Setup
+#DataSet : Fy vs. camber - Rear
+#Category: Suspension Motion
+#FileID  : Plot_b94cce77-5f22-4587-b8dd-1aad743b5f74
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

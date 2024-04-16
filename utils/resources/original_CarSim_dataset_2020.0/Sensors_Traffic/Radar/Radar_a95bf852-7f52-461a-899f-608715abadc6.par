@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Forward Radar`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Forward Radar
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 1
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 3
+TYPE_SENSOR 3
+PARSFILE Sensors_Traffic\Radar_Range\Range_9334732c-ac61-465e-b508-efd373fa9b9a.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`100-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_9334732c-ac61-465e-b508-efd373fa9b9a
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b
+
+X_SENSOR -1250
+Y_SENSOR 0
+Z_SENSOR 1450
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 0.6 0 0.8
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -60
+BEARING_MAX_SENSOR 60
+
+SPECIAL_PARSFILE Animator\STL\Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc.par
+#BlueLink3 Animator: Shape File Link`Cube: 1m X, 0.1 Y, Z (Sensor Vector)` Geometric Shapes` , Shape for vector`Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc.par
+#MiscYellow0
+ani_global_interpolation off
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_0c2be909-3bbc-48dd-8145-aba6a949df4e.par
+#BlueLink4 Plot: Setup`ID and Message of Closest Object` ADAS Sensor Target Properties` , Plot`Plot_0c2be909-3bbc-48dd-8145-aba6a949df4e
+
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } Forward Radar
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Forward Radar
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_a95bf852-7f52-461a-899f-608715abadc6
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

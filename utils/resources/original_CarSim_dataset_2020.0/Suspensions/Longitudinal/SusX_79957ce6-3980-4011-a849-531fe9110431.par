@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Linear: -0.5`Reference Suspension Geometry
+#CheckBox0 0    
+
+#RingCtrl0 COEFFICIENT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_X_COMBINE ADD
+*SCALAR -0.5
+*SCALAR2 0
+
+SUSP_X_COEFFICIENT -0.5
+SUSP_X_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SUSP_X_AXLE_COEFFICIENT -0.5
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { Reference Suspension Geometry } Linear: -0.5
+#Library : Suspension: Longitudinal Movement
+#DataSet : Linear: -0.5
+#Category: Reference Suspension Geometry
+#FileID  : SusX_79957ce6-3980-4011-a849-531fe9110431
+#Product : CarSim 2020.0
+#VehCode Longitudinal Movement
+
+END

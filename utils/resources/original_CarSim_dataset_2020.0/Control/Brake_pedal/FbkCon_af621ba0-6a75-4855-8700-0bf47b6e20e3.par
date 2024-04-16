@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Control: Braking Pedal Force (Open Loop)`Spike: 140 N @ 2 sec.`Spike
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+F_BRAKE_PEDAL_TABLE LINEAR_FLAT
+0, 0
+1.99, 0
+2, 140
+ENDTABLE
+VLOW_STOP -1
+
+
+LOG_ENTRY Used Dataset: Control: Braking Pedal Force (Open Loop); { Spike } Spike: 140 N @ 2 sec.
+#Library : Control: Braking Pedal Force (Open Loop)
+#DataSet : Spike: 140 N @ 2 sec.
+#Category: Spike
+#FileID  : FbkCon_af621ba0-6a75-4855-8700-0bf47b6e20e3
+#Product : CarSim 2020.0
+#VehCode Open-Loop Pedal Force
+
+END

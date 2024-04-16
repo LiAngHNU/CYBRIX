@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName CarSim Run Control`K & C: Bounce Test`Suspension and Ride Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_11317e72-ee44-43ca-b964-c9a8f7e49191
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_78646c82-3c25-4eef-b153-d76a910f00fb.par
+#BlueLink0 Animator: Camera Setup`K & C View` K & C` , Animator camera`Camera_78646c82-3c25-4eef-b153-d76a910f00fb
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_7cfccee9-8f78-4fac-ab05-e43827f0bc3b.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan w/ K&C Reference Point` D-Class` , Math Model`VehLoad_7cfccee9-8f78-4fac-ab05-e43827f0bc3b
+
+PARSFILE Procedures\Proc_d5438202-de54-4c8d-9911-8a45734f221d.par
+#BlueLink28 Procedures`K & C Bounce Test` Test Rigs` , Procedure`Proc_d5438202-de54-4c8d-9911-8a45734f221d
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title K & C: Bounce Test <Suspension and Ride Tests>
+CATEGORY Suspension and Ride Tests 
+DATASET_TITLE K & C: Bounce Test
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Kinematics and Compliance Bounce Test
+#
+#The Kinematics and Compliance Bounce Test is used to confirm that the vehicle's suspension data has been entered correctly.
+#
+#Details to check include sign conventions,  magnitudes, and units.
+#
+#The Bounce Test is defined with VS Commands linked on the Procedure dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Suspension and Ride Tests } K & C: Bounce Test
+#Library : CarSim Run Control
+#DataSet : K & C: Bounce Test
+#Category: Suspension and Ride Tests
+#FileID  : Run_11317e72-ee44-43ca-b964-c9a8f7e49191
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

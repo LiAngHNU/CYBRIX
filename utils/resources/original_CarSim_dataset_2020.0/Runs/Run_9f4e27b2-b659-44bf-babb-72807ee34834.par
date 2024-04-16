@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName CarSim Run Control`Brake Distance Test (Force Input w. ABS)`Brake Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9f4e27b2-b659-44bf-babb-72807ee34834
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_045f9b8a-2e8a-4608-8066-fecace521157.par
+#BlueLink0 Animator: Camera Setup`167 Azm, 5 El, 38 m` Road Reference` , Animator camera`Camera_045f9b8a-2e8a-4608-8066-fecace521157
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.4 0.373
+SET_RUN_COLOR 0 0.4 0.373
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_601e10ca-d85c-46c0-a110-71d688bf3232.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: Temp, Boost & ABS` E-Class` , Math Model`Vehicle_601e10ca-d85c-46c0-a110-71d688bf3232
+
+PARSFILE Procedures\Proc_6176f125-a511-4ae7-a0d8-4f94800fa0d5.par
+#BlueLink28 Procedures`100 - 0 km/h Braking Dist Test (Frc Ctrl)` Accel. and Brake Testing` , Procedure`Proc_6176f125-a511-4ae7-a0d8-4f94800fa0d5
+
+#BlueLink9 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Brake Distance Test (Force Input w. ABS) <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Brake Distance Test (Force Input w. ABS)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan with pedal force input, power boost, brake thermal effects, and ABS performs a stopping distance test.
+#
+#The vehicle is traveling at 102 km/h at the start of the simulation and coasts down to 100 km/h.
+#
+#Events are used to reposition the vehicle to the start of the road (Station = 0 m) and simultaneously begin braking.
+#
+#A plot of Station vs. Time is used to measure the vehicle's braking distance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Brake Tests } Brake Distance Test (Force Input w. ABS)
+#Library : CarSim Run Control
+#DataSet : Brake Distance Test (Force Input w. ABS)
+#Category: Brake Tests
+#FileID  : Run_9f4e27b2-b659-44bf-babb-72807ee34834
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

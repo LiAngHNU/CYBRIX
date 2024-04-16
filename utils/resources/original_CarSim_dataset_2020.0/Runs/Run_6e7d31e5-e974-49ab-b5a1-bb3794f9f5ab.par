@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName CarSim Run Control`Two-Car Platoon: Last Car`* CS 2020.0 - Platooning
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6e7d31e5-e974-49ab-b5a1-bb3794f9f5ab
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_f4ca6e8f-47bb-44a4-87f6-c025f547cde4.par
+#BlueLink12 Models: Simulink`Two-Car Platoon: Last` Multi-Vehicle` , Models`Simlink_f4ca6e8f-47bb-44a4-87f6-c025f547cde4
+
+PARSFILE Animator\Cameras\Camera_6278dd7f-fcb6-4cd1-aad3-5ada1d8f9248.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 3 El, 50 m` Vehicle Reference` , Animator camera`Camera_6278dd7f-fcb6-4cd1-aad3-5ada1d8f9248
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 1 1
+SET_RUN_COLOR 0 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Math Model`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+PARSFILE Procedures\Proc_438f7e3d-865f-41e1-ae40-48e1618b04a0.par
+#BlueLink28 Procedures`Platoon Trailing Cars` Multi-Vehicle` , Procedure`Proc_438f7e3d-865f-41e1-ae40-48e1618b04a0
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Animator\Arrows\Arrows_3a564c26-43e6-4724-80bd-2037d1edf2f2.par
+#BlueLink10 Animator: Wheel Arrows and Other Indicators`Paint Tire Path (Teal)` Tire Paths` , Miscellaneous`Arrows_3a564c26-43e6-4724-80bd-2037d1edf2f2
+
+
+SPECIAL_PARSFILE Runs\Run_798d6914-50d8-4b5d-88eb-b5daf168e069.par
+#BlueLink23 CarSim Run Control`Two-Car Platoon: Lead Car` * CS 2020.0 - Platooning` , Overlay run or ERD file`Run_798d6914-50d8-4b5d-88eb-b5daf168e069
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Two-Car Platoon: Last Car <* CS 2020.0 - Platooning>
+CATEGORY * CS 2020.0 - Platooning 
+DATASET_TITLE Two-Car Platoon: Last Car
+#MiscYellow0
+SSTART -20
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#WARNING: do not click Run or Send to Simulink! Use the new 'Multiple Vehicles' Library (Batch/Multiple Vehicles) to run this example.
+#
+#This is 2 of 2 Run Control datasets use to simultaneously simulate two vehicles that interact with each other. New for 2020.0 release is the Multiple Vehicles library that allows you to easily run parallel solver examples.
+#
+#A shared simulink model uses parallel solvers to simulate five vehicles across two CarSim Runs: Platoon Car 1 and 2. View the results from either of the Platoon Run Control screens.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Platooning } Two-Car Platoon: Last Car
+#Library : CarSim Run Control
+#DataSet : Two-Car Platoon: Last Car
+#Category: * CS 2020.0 - Platooning
+#FileID  : Run_6e7d31e5-e974-49ab-b5a1-bb3794f9f5ab
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName Procedures`Highway Merge`Driving
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 1
+OPT_STOP 0
+TSTART 0
+SSTART 768
+TSTART_WRITE = 0;
+TSTOP 22
+SSTOP =  SSTART - 1 ;
+OPT_DIRECTION -1
+*SPEED 110
+*TSTOP 22
+*TSTART 0
+*SSTART 768
+*SSTOP 2235
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Highway Merge
+SPEED_TARGET_CONSTANT 110
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_be54b148-3c94-4644-87e8-4a89c58c4f57.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Highway Merge` Avoidance, Merges, and Drifiting` , Steering`StrDM_be54b148-3c94-4644-87e8-4a89c58c4f57
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+#MiscYellow0
+ltarg_offset 32
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_6501c74f-705d-473e-b64e-77f66cd87537.par
+#BlueLink0 Road: 3D Surface (All Properties)`Highway Merge Lane` Variable Width Roads` , Miscellaneous`Road_6501c74f-705d-473e-b64e-77f66cd87537
+
+#MiscYellow1
+default_ghost off
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink8 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink9 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+PARSFILE Plot\Setup\Plot_0773e087-151d-42db-a308-f02b7b6ee48d.par
+#BlueLink10 Plot: Setup`Lateral Forces` Tire Forces and Moments` , Plot`Plot_0773e087-151d-42db-a308-f02b7b6ee48d
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink11 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+PARSFILE Plot\Setup\Plot_310b0189-b08d-49fc-a484-ee359eb89744.par
+#BlueLink12 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_310b0189-b08d-49fc-a484-ee359eb89744
+
+PARSFILE Plot\Setup\Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136.par
+#BlueLink13 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink14 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink15 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c.par
+#BlueLink16 Plot: Setup`Aerodynamic Forces` Aerodynamics and Wind` , Plot`Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a highway merge situation in which two lanes converge to one.
+#
+#This is accomplished through the use of the variable width roads in CarSim and a highway merge path defined using the closed-loop driver path follower.
+#
+#For more information on the variable width roads, click on the 3D road dataset "Highway Merge Lane."
+#
+#Additional driver controls specify a closed-loop speed control with a constant target speed of 110 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Highway Merge
+#Library : Procedures
+#DataSet : Highway Merge
+#Category: Driving
+#FileID  : Proc_4583a830-0b49-42c6-b11f-f6fad8bf464a
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

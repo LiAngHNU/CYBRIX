@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName CarSim Run Control`Hybrid: US06 Acceleration`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8d703650-e6df-40af-8364-4a7e66731a9e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_ebb0a846-741f-40bb-8567-604122d2aecd.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback: Hybrid RWD` B-Class` , Math Model`Vehicle_ebb0a846-741f-40bb-8567-604122d2aecd
+
+PARSFILE Procedures\Proc_5a25e088-f274-49c4-abbb-44e96feec34c.par
+#BlueLink28 Procedures`Hybrid/Electric: US06 Acceleration` Accel. and Brake Testing` , Procedure`Proc_5a25e088-f274-49c4-abbb-44e96feec34c
+
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+PARSFILE Plot\Setup\Plot_9e7c6a3f-7f4d-4388-b203-bc0555523537.par
+#BlueLink15 Plot: Setup`Battery power limit` Powertrain (Hybrid)` , Plot`Plot_9e7c6a3f-7f4d-4388-b203-bc0555523537
+
+PARSFILE Plot\Setup\Plot_35e9dd75-4567-4e62-9d6c-a68b4a2bfde4.par
+#BlueLink16 Plot: Setup`Battery resistance` Powertrain (Hybrid)` , Plot`Plot_35e9dd75-4567-4e62-9d6c-a68b4a2bfde4
+
+PARSFILE Plot\Setup\Plot_99e48c5c-b21e-4b39-b8ec-6aa8f61b800b.par
+#BlueLink17 Plot: Setup`Fuel Consumed (gallon)` Powertrain (Hybrid)` , Plot`Plot_99e48c5c-b21e-4b39-b8ec-6aa8f61b800b
+
+PARSFILE Plot\Setup\Plot_033b13aa-a635-4ea4-a1b3-cebbfea1b76b.par
+#BlueLink18 Plot: Setup`Miles per gallon` Powertrain (Hybrid)` , Plot`Plot_033b13aa-a635-4ea4-a1b3-cebbfea1b76b
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.png
+WRITE_SENSOR_DETECT
+Title Hybrid: US06 Acceleration <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Hybrid: US06 Acceleration
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with a hybrid powertrain is modeled within CarSim (GUI and math model).
+#
+#CarSim support for hybrid powertrains include an engine, hybrid powertrain assembly, and power management control.
+#
+#The Procedure is a US EPA US06 acceleration test, represented with a Target Speed vs. Time profile.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Hybrid: US06 Acceleration
+#Library : CarSim Run Control
+#DataSet : Hybrid: US06 Acceleration
+#Category: Powertrain Tests
+#FileID  : Run_8d703650-e6df-40af-8364-4a7e66731a9e
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

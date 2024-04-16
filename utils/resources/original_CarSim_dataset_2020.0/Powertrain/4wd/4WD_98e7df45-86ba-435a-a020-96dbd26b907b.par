@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`250 kW, 7-spd., 2.65 Ratio`250 kW Powertrains
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(1) 1
+OPT_DIFF_INTERNAL(2) 1
+OPT_DIFF_INTERNAL(3) 1
+
+PARSFILE Powertrain\Engine\Engine_3c6aca1f-e960-4b7f-9ab9-5285fe3fdb90.par
+#BlueLink0 Powertrain: Engine`250 kW Engine` 200 kW - 270 kW Engines` , Engine`Engine_3c6aca1f-e960-4b7f-9ab9-5285fe3fdb90
+
+PARSFILE Powertrain\TConv\TC_0d2c5e87-fc0e-4a25-9e05-1e57a458454e.par
+#BlueLink1 Powertrain: Torque Converter`Torque Converter: 250 kW Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_0d2c5e87-fc0e-4a25-9e05-1e57a458454e
+
+PARSFILE Powertrain\TransExt\Trans18_5ffbe315-ee09-4746-af50-28438e742285.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`7-Speed` 7-Speed Transmissions` , Transmission (Extended)`Trans18_5ffbe315-ee09-4746-af50-28438e742285
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_eab57451-9d2c-4c0a-91ca-a1c4a8b73a1a.par
+#BlueLink3 Powertrain: Transfer Case`Viscous Coupling: 50/50, Gear Ratio 1:1` Limited Slip and Viscous Coupling` , Transfer case`XC_eab57451-9d2c-4c0a-91ca-a1c4a8b73a1a
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_d46313e7-ccfc-4e7c-9224-462603088fb7.par
+#BlueLink4 Powertrain: Front Differential`Viscous: Gear Ratio 2.65` Limited Slip and Viscous Coupling` , Differential front`DiffF_d46313e7-ccfc-4e7c-9224-462603088fb7
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_da4842d3-1cfe-4768-958e-30a52829d844.par
+#BlueLink5 Powertrain: Rear Differential`Viscous Coupling: Gear Ratio 2.65:1` Limited Slip and Viscous Coupling` , Differential rear`DiffR_da4842d3-1cfe-4768-958e-30a52829d844
+
+
+#EMBEDDED_NOTES
+#Generic 250 kW powertrain with an automatic transmission.  The torque converter data has been tuned to work with the 250 kW engine to give reasonable performance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { 250 kW Powertrains } 250 kW, 7-spd., 2.65 Ratio
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 250 kW, 7-spd., 2.65 Ratio
+#Category: 250 kW Powertrains
+#FileID  : 4WD_98e7df45-86ba-435a-a020-96dbd26b907b
+#Product : CarSim 2020.0
+#VehCode 4WD
+
+END

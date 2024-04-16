@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName CarSim Run Control`ISO Steady-State Circle, R = 30`Handling and Stability Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_0484878f-8ae9-4063-921b-fcd5c599d2d2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_d5e84ddf-cf9c-4adb-a0b7-0ac26b182874.par
+#BlueLink28 Procedures`ISO Steady-State Circle Series` Handling Testing` , Procedure`Proc_d5e84ddf-cf9c-4adb-a0b7-0ac26b182874
+
+PARSFILE Roads\3D_Road\Road_0faf324d-1ca1-41ca-9752-14fc08f50f0b.par
+#BlueLink9 Road: 3D Surface (All Properties)`30-m Radius Circle, Mu = 0.9` Circular Roads` , Miscellaneous`Road_0faf324d-1ca1-41ca-9752-14fc08f50f0b
+
+PARSFILE Control\Speed_t\SpdTime_249e8937-3e8d-4737-a0f1-fc60033aba4a.par
+#BlueLink10 Control: Speed (Closed Loop) Using Target Speed`Constant: 6 km/h (Ackermann Test)` Constant` , Miscellaneous`SpdTime_249e8937-3e8d-4737-a0f1-fc60033aba4a
+
+
+SPECIAL_PARSFILE Runs\Run_2259ec29-5435-4306-b1ab-24ad49244fa1.par
+#BlueLink23 CarSim Run Control`ISO Steady-State Circle: R = 100` Handling and Stability Tests` , Overlay run or ERD file`Run_2259ec29-5435-4306-b1ab-24ad49244fa1
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title ISO Steady-State Circle, R = 30 <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE ISO Steady-State Circle, R = 30
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example illustrates the measurement of a vehicle's understeer gradient by the constant radius test method as described in ISO 4138.
+#
+#This is the baseline, with an unmodified CarSim example vehicle, a 30-m radius path, and positive (left-hand) steering and lateral acceleration.
+#
+#Because the range of speeds for a 30-m radius path is much lower than the range for a 100-m path, the initial speed (used to obtain a reference Ackermann angle) is lowered to 6 km/h.
+#
+#Details of the test are covered in the notes for the procedure.
+#
+#The programming of this procedure is described in detail in the tech memo "Making Advanced Procedures with VS Commands." (See Help > Technical Memos.)
+#
+#Writing to file is limited in order to generate clean cross-plots. The time between samples is too large for animation to work; hence, animation is disabled.
+#
+#This simulation is overlaid with the ISO Steady-State Circle test with a 100-m radius, allowing you to compare the differences in driver controls and vehicle responses.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Handling and Stability Tests } ISO Steady-State Circle, R = 30
+#Library : CarSim Run Control
+#DataSet : ISO Steady-State Circle, R = 30
+#Category: Handling and Stability Tests
+#FileID  : Run_0484878f-8ae9-4063-921b-fcd5c599d2d2
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`Sports Car: Driver & Fuel Payloads`B-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink0 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Lead Unit`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Box\Box_5cfc75a9-4a1b-48d9-aa4d-5459e53f38d2.par
+#BlueLink1 Payload: Box Shape`Driver (75 kg)` B-Class, Sports Car Payloads` , Miscellaneous`Box_5cfc75a9-4a1b-48d9-aa4d-5459e53f38d2
+
+PARSFILE Payloads\Box\Box_6ee8a565-0469-4f65-9d83-ffdb8a3f68e8.par
+#BlueLink2 Payload: Box Shape`Fuel (22 kg)` B-Class, Sports Car Payloads` , Miscellaneous`Box_6ee8a565-0469-4f65-9d83-ffdb8a3f68e8
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+
+#EMBEDDED_NOTES
+#B-Class sports car with two payloads:
+#
+#1. Representing the driver
+#2. Representing the fuel load
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { B-Class } Sports Car: Driver & Fuel Payloads
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : Sports Car: Driver & Fuel Payloads
+#Category: B-Class
+#FileID  : VehLoad_af0efc73-060e-42fb-a84e-f9e58904ce7e
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

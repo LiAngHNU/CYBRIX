@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Torques`Three-wheeled Vehicle
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output my_bk_1 = My_Bk_L1 + My_Bk_R1; n-m;
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS My_Bk_1, Time, Single Front Brake
+PLOTCHANNELS My_Bk_L2, Time
+PLOTCHANNELS My_Bk_R2, Time
+
+#ENDMYellow
+
+YAXISLABEL Brake Torques - N-m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Torques
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This plot format includes plots created with VS Commands for the single front wheel of a three-wheeled vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Three-wheeled Vehicle } Brake Torques
+#Library : Plot: Setup
+#DataSet : Brake Torques
+#Category: Three-wheeled Vehicle
+#FileID  : Plot_6ce8ea17-3fdb-4a33-89af-8ee801a91ae9
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Events`O. Wait 0.5 s and Stop`Sine with Dwell
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_event
+*VALUE1 0.5
+*SPEED 80
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+OPT_WRITE WRITE_ALL
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par
+#BlueLink10 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Miscellaneous`StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT t_event > 0.5 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded when testing is complete.
+#
+#It turns off writing to file and sets the local clock to zero to count 0.5 s before ending the run. This enables Simulink to show the status of the sequence (pass or fail).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } O. Wait 0.5 s and Stop
+#Library : Events
+#DataSet : O. Wait 0.5 s and Stop
+#Category: Sine with Dwell
+#FileID  : Events_7f9cda4f-c5c0-4182-81bc-a0f95ff0366d
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

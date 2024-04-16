@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName CarSim Run Control`Twist-Beam, Kinematics: Bounce`Suspension and Ride Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_91ecd5a4-49be-4f86-b396-d24953503849
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_67e6fc78-b140-44ed-b9b4-dcf887d1ed0a.par
+#BlueLink0 Animator: Camera Setup`K & C View (Rear)` K & C` , Animator camera`Camera_67e6fc78-b140-44ed-b9b4-dcf887d1ed0a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_6f54e4e7-bc2b-425e-bd1a-fabd8d1cd76e.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan (New Twist-Beam): K Test` D-Class` , Math Model`VehLoad_6f54e4e7-bc2b-425e-bd1a-fabd8d1cd76e
+
+PARSFILE Procedures\Proc_d5438202-de54-4c8d-9911-8a45734f221d.par
+#BlueLink28 Procedures`K & C Bounce Test` Test Rigs` , Procedure`Proc_d5438202-de54-4c8d-9911-8a45734f221d
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_91f3aac7-741d-44eb-89be-e431541134d1.par
+#BlueLink15 Plot: Setup`Jounce vs. camber - Rear` Suspension Motion` , Plot`Plot_91f3aac7-741d-44eb-89be-e431541134d1
+
+PARSFILE Plot\Setup\Plot_284ae7ae-8ee9-414e-b81f-51dc6a7ac52c.par
+#BlueLink16 Plot: Setup`Jounce vs. dive - Rear` Suspension Motion` , Plot`Plot_284ae7ae-8ee9-414e-b81f-51dc6a7ac52c
+
+PARSFILE Plot\Setup\Plot_24855d28-77c7-495f-b51a-83e8fb11f283.par
+#BlueLink17 Plot: Setup`Jounce vs. toe - Rear` Suspension Motion` , Plot`Plot_24855d28-77c7-495f-b51a-83e8fb11f283
+
+PARSFILE Plot\Setup\Plot_a36e172b-c517-46b2-8d62-5599fd0c6175.par
+#BlueLink18 Plot: Setup`Jounce vs. SuspX - Rear` Suspension Motion` , Plot`Plot_a36e172b-c517-46b2-8d62-5599fd0c6175
+
+PARSFILE Plot\Setup\Plot_fbe1ec20-24e7-48d1-b1da-2c1411f2e936.par
+#BlueLink19 Plot: Setup`Jounce vs. SuspY - Rear` Suspension Motion` , Plot`Plot_fbe1ec20-24e7-48d1-b1da-2c1411f2e936
+
+
+SPECIAL_PARSFILE Runs\Run_3a1873f6-1603-4ed8-9e4f-bd9d1e0be81d.par
+#BlueLink23 CarSim Run Control`Twist-Beam, Kinematics: Roll` Suspension and Ride Tests` , Overlay run or ERD file`Run_3a1873f6-1603-4ed8-9e4f-bd9d1e0be81d
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Twist-Beam, Kinematics: Bounce <Suspension and Ride Tests>
+CATEGORY Suspension and Ride Tests 
+DATASET_TITLE Twist-Beam, Kinematics: Bounce
+#MiscYellow0
+FS_COMP_COEFFICIENT(2,1) 20
+FS_COMP_COEFFICIENT(2,2) 20
+FS_EXT_COEFFICIENT(2,1) 20
+FS_EXT_COEFFICIENT(2,2) 20
+FS_COMP_OFFSET(2,1) 0
+FS_COMP_OFFSET(2,2) 0
+FS_EXT_OFFSET(2,1) 0
+FS_EXT_OFFSET(2,2) 0
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan with a Twist Beam rear suspension in a K&C Bounce test.
+#
+#The twist beam suspension is modeled using the Generic Suspension option, a variation on the independent suspension model that better captures certain twist beam architectures.
+#
+#The data used for the twist beam suspension is set to be very soft in order to exaggerate the characteristics in this test, but may be too compliant to represent some suspension systems.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Suspension and Ride Tests } Twist-Beam, Kinematics: Bounce
+#Library : CarSim Run Control
+#DataSet : Twist-Beam, Kinematics: Bounce
+#Category: Suspension and Ride Tests
+#FileID  : Run_91ecd5a4-49be-4f86-b396-d24953503849
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

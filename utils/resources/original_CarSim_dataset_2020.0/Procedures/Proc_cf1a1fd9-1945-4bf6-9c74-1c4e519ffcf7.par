@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Procedures`Fishhook Procedure`Stability Testing
+#CheckBox3 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 360
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 80
+*TSTOP 360
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+#MiscYellow0
+DEFINE_PARAMETER WRITE_ALL = 0
+OPT_WRITE WRITE_ALL
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_89d4a142-808f-4480-8cb3-807e4c52ca45.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square w/ Cones, Mu = 0.9` Flat Test Pads` , Miscellaneous`Road_89d4a142-808f-4480-8cb3-807e4c52ca45
+
+PARSFILE Roads\Friction\RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba.par
+#BlueLink1 Road: Friction Map, S-L Grid`Constant: 0.9` Constant` , Miscellaneous`RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink2 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Events\Events_c4b798d5-bd63-4e62-bf04-f4c0dc555f1d.par
+#BlueLink5 Events`A. Go to 80 km/h Speed and Settle` Go to Constant Speed` , Miscellaneous`Events_c4b798d5-bd63-4e62-bf04-f4c0dc555f1d
+
+PARSFILE Events\Events_7dea0a25-f1d6-45e0-bcfb-581ba9ad9017.par
+#BlueLink6 Events`A. Wait to Start Slowly Increasing Steer` Slowly Increasing Steer Test` , Miscellaneous`Events_7dea0a25-f1d6-45e0-bcfb-581ba9ad9017
+
+PARSFILE Events\Events_f3df7a10-981f-4cec-9add-c6f804b389af.par
+#BlueLink7 Events`A. Wait to start Fishhook` Fishhook with Roll Rate Feedback` , Miscellaneous`Events_f3df7a10-981f-4cec-9add-c6f804b389af
+
+PARSFILE Plot\Setup\Plot_9a303e35-6889-4f7a-9e4f-f2bc6e3b4670.par
+#BlueLink8 Plot: Setup`Steer Angle vs. Event Elapsed Time` Sine with Dwell` , Plot`Plot_9a303e35-6889-4f7a-9e4f-f2bc6e3b4670
+
+PARSFILE Plot\Setup\Plot_38a20d25-204d-48d9-8a84-f5a0c91ef043.par
+#BlueLink9 Plot: Setup`Roll Rate vs. T_Event` Vehicle Motion` , Plot`Plot_38a20d25-204d-48d9-8a84-f5a0c91ef043
+
+PARSFILE Plot\Setup\Plot_564165d9-11e2-41a0-b1fc-612f256fb439.par
+#BlueLink10 Plot: Setup`Roll Angle vs. T_Event` Vehicle Motion` , Plot`Plot_564165d9-11e2-41a0-b1fc-612f256fb439
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink11 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink12 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink13 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates the simulation of a Fishhook test series as recommended by NHTSA.
+#
+#The Fishhook test uses a steering input that is intended to mimic the sort of behavior a driver acting in panic might use when recovering as a result of the vehicle drifting off the road.
+#
+#This procedure involves three test sequences:
+#
+#First, the vehicle is driven to the test speed of 80 km/h.
+#
+#Next, a slowly increasing steer maneuver is used to find a reference steering wheel angle associated with a lateral acceleration of 0.3 g's.
+#
+#Finally, a rapid (720 deg/sec) steering input is applied to an amplitude based on the reference steering wheel angle. Roll-rate feedback is used to apply a reverse steer input at the worst time, when the vehicle has almost reached its full roll angle.
+#
+#Tire forces are monitored on both sides. If two tires (left or right) lift simultaneously, the test is abruptly ended and repeated at a lower speed. If the tires stay on the ground, the test speed is recorded in the Echo file. The process is repeated for left- and right-hand steering inputs. The echo file lists the speeds as Vlimit_L and Vlimit_R, with units of miles/h (per NHTSA specification).
+#
+#The maximum speed attempted is nominally 80 km/h (50 mi/h), and can be set using the parameter VTEST_MAX.
+#
+#If a vehicle has a low center of gravity, it will typically pass the test at 80 km/h and the simulation duration will last under 40 seconds. However, if the vehicle has a high CG, many repeats might be needed to reach a lower speed where tire lift-off does not occur.
+#
+#The road is defined as flat with a friction coefficient of 0.9 as specified in FMVSS 126.
+#
+#The VS Command DEFINE_PARAMETER WRITE_ALL can be set to 1 to save the entire run for viewing. Otherwise, only the interesting parts are saved.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Stability Testing } Fishhook Procedure
+#Library : Procedures
+#DataSet : Fishhook Procedure
+#Category: Stability Testing
+#FileID  : Proc_cf1a1fd9-1945-4bf6-9c74-1c4e519ffcf7
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

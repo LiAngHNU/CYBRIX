@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName CarSim Run Control`Opt_Engine_Running: Auto. Transmission`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2d304bb9-99d6-44cf-9be2-8c07042fdb02
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Math Model`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+PARSFILE Procedures\Proc_5c2c5e2a-35e7-4b3c-9d73-1fbb0b1cfd4a.par
+#BlueLink28 Procedures`Opt_Engine_Running: Auto. Transmission` Powertrain, Event-driven Tests` , Procedure`Proc_5c2c5e2a-35e7-4b3c-9d73-1fbb0b1cfd4a
+
+PARSFILE Animator\HUD\HUD_ce21d6ea-73a6-4297-93d2-ebb98b8e52c5.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, Speedo w/ Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_ce21d6ea-73a6-4297-93d2-ebb98b8e52c5
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Opt_Engine_Running: Auto. Transmission <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Opt_Engine_Running: Auto. Transmission
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#C-Class Hatchback with an automatic transmission in a test demonstrating the powertrain control parameter Opt_Engine_Running.
+#
+#Opt_Engine_Running is used to turn the engine on and off, such as what might be used as part of an auto Start / Stop functionality.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Opt_Engine_Running: Auto. Transmission
+#Library : CarSim Run Control
+#DataSet : Opt_Engine_Running: Auto. Transmission
+#Category: Powertrain Tests
+#FileID  : Run_2d304bb9-99d6-44cf-9be2-8c07042fdb02
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

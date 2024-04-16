@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`1 km Square w/ Cones, Mu = 0.9`Flat Test Pads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_89d4a142-808f-4480-8cb3-807e4c52ca45.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 1 km Square w/ Cones, Mu = 0.9
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.9` Constant` , Friction`RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba
+
+PARSFILE Roads\Shapes\RdShape_ed8e596e-74cd-4248-8cd0-0ce2a2ec2611.par
+#BlueLink4 Road: Animator Surface Shapes`1 km Square w/ Line` Roads` , Road shape definitions`RdShape_ed8e596e-74cd-4248-8cd0-0ce2a2ec2611
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+add_reference_frame road_stuff_7_2_Cones_at_S=3
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_48c74e87-86e0-4b47-9546-9e2d2a944f35.par
+#BlueLink7 Road: Animator Repeated Object`2 Cones at S=3` Cones` , 3D Shapes`AniRep_48c74e87-86e0-4b47-9546-9e2d2a944f35
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_89d4a142-808f-4480-8cb3-807e4c52ca45.ani
+
+add_reference_frame road_stuff_1_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 3
+set_offset_var_y 4
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+add_reference_frame road_stuff_2_2_Traffic_Cone
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 3
+set_offset_var_y -4
+set_offset_var_z 0
+parsfile Animator\STL\Shape_779f3bdc-916c-4cf1-af00-e21db3ccca79.par
+
+#EMBEDDED_NOTES
+#This is a flat level surface. A road is defined going east, such that global X = road station and global Y= road lateral coordinate L. Animator shapes are defined to show a grid (checkerboard).
+#
+#This dataset includes two cones and a white connecting line. It is used for proving ground tests to show the start of a robot control, such as SWD or fishhook.
+#.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Flat Test Pads } 1 km Square w/ Cones, Mu = 0.9
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 1 km Square w/ Cones, Mu = 0.9
+#Category: Flat Test Pads
+#FileID  : Road_89d4a142-808f-4480-8cb3-807e4c52ca45
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

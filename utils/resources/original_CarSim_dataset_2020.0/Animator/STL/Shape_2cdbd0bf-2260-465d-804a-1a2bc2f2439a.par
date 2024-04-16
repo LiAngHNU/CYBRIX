@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`JP: For Automobile and Mopeds`Environment: Road Signs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Road_Signs\Japan\ForAutomobileAndMopeds\ForAutomobileAndMopeds.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_OFFSET_Z 1.45
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink2 Animator: Camera Setup`YZ-Plane, No Offsets (with Yaw)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_2cdbd0bf-2260-465d-804a-1a2bc2f2439a.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Road Signs } JP: For Automobile and Mopeds
+#Library : Animator: Shape File Link
+#DataSet : JP: For Automobile and Mopeds
+#Category: Environment: Road Signs
+#FileID  : Shape_2cdbd0bf-2260-465d-804a-1a2bc2f2439a
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

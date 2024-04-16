@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Differential Clutch Torque`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_D1_Cl, Time
+PLOTCHANNELS M_D1_Cl2, Time
+PLOTCHANNELS M_D2_Cl, Time
+PLOTCHANNELS M_D2_Cl2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Differential Clutch Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Differential Clutch Torque
+#Library : Plot: Setup
+#DataSet : Differential Clutch Torque
+#Category: Powertrain
+#FileID  : Plot_ebd10267-16af-4ebb-a594-212aefca291e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

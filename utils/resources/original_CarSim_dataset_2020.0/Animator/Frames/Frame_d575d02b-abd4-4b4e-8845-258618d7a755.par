@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Example Animation Environment`
+ADD_REFERENCE_FRAME Frame_d575d02b-abd4-4b4e-8845-258618d7a755
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+
+PARSFILE Animator\STL\Shape_623f4b8f-a603-4ead-a853-c4e0c8b3b60a.par
+#BlueLink0 Animator: Shape File Link`MCity Ground Surface` MCity` , Animator Data`Shape_623f4b8f-a603-4ead-a853-c4e0c8b3b60a
+
+PARSFILE Animator\STL\Shape_6d5f4980-0cdc-4aa2-841c-f127e1b02f97.par
+#BlueLink2 Animator: Shape File Link`Partly Cloudy Sky` Environment: Sky Boxes` , Animator Data`Shape_6d5f4980-0cdc-4aa2-841c-f127e1b02f97
+
+PARSFILE Animator\STL\Shape_8747e07e-81f8-4899-bd41-ca6921d43beb.par
+#BlueLink3 Animator: Shape File Link`Light Grass` Environment: Land Bowls` , Animator Data`Shape_8747e07e-81f8-4899-bd41-ca6921d43beb
+
+
+#EMBEDDED_NOTES
+#This Animation Environment contains the MCity ground surface(.obj) and generic cloudy sky and grass (.obj)  All are attached to the global reference frame, by default.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; Example Animation Environment
+#Library : Animator: Reference Frame
+#DataSet : Example Animation Environment
+#Category: 
+#FileID  : Frame_d575d02b-abd4-4b4e-8845-258618d7a755
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

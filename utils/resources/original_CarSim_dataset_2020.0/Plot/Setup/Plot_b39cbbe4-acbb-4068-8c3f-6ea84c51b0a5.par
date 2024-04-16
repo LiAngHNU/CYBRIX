@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Tracking Target`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Lat_Targ, Time, Target for Vehicle Origin
+PLOTCHANNELS Lat_Veh, Time, Vehicle Origin
+
+#ENDMYellow
+
+YAXISLABEL Lateral Tracking Relative to 12.5m Turn - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Tracking Target
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } Lateral Tracking Target
+#Library : Plot: Setup
+#DataSet : Lateral Tracking Target
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_b39cbbe4-acbb-4068-8c3f-6ea84c51b0a5
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

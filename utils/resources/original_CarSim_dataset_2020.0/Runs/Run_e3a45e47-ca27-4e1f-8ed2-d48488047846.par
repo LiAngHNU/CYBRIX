@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Steering Stops & Torque Control (Left)`Steering Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e3a45e47-ca27-4e1f-8ed2-d48488047846
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_be745cb7-ac68-4a4b-ba26-8a584119b7f0.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 15 m` Road Reference` , Animator camera`Camera_be745cb7-ac68-4a4b-ba26-8a584119b7f0
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e25375b0-51df-4b4d-91c3-a56a6476c0d8.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan: Steering Stops` D-Class` , Math Model`Vehicle_e25375b0-51df-4b4d-91c3-a56a6476c0d8
+
+PARSFILE Procedures\Proc_e97e2645-6265-4752-8cb8-52f9d085d921.par
+#BlueLink28 Procedures`Open Loop Steer Torque: Ramp to Left` Driver Controls` , Procedure`Proc_e97e2645-6265-4752-8cb8-52f9d085d921
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title Steering Stops & Torque Control (Left) <Steering Tests>
+CATEGORY Steering Tests 
+DATASET_TITLE Steering Stops & Torque Control (Left)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#CarSim 2019 supports steering stops in the Steering System Compliance. This example steers left.
+#
+#In Open Loop Torque control, it is possible to apply sustained steer torque exceeding any reaction torque, causing unrealistic steer angles. To prevent this, steering stops are now supported.
+#
+#Steering stops are also helpful in driving simulators, producing a realistic steer feedback torque at the limit of steer. (Scroll)
+#
+#In other applications controlling steering wheel angle, steering stops are unnecessary because the input angle is directly controlled. If steering stops are used, the system can become stiff when a stop is reached, causing the model to fail.
+#
+#In most cases, an event should be linked to control the model behavior when steer limits are reached, to prevent excessive steer torque and possible instability.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Tests } Steering Stops & Torque Control (Left)
+#Library : CarSim Run Control
+#DataSet : Steering Stops & Torque Control (Left)
+#Category: Steering Tests
+#FileID  : Run_e3a45e47-ca27-4e1f-8ed2-d48488047846
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

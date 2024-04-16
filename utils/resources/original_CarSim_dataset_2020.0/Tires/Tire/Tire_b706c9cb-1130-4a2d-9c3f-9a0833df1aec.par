@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Tire`315/75 R 16 for Duals`Trailer and Light Truck Tires
+FZ_REF 11500
+X_LENGTH 440
+Z_LENGTH 440
+Y_LENGTH 315
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_659d470f-31c5-4b96-a28d-8c794617a2c3.par
+#BlueLink4 Animator: Shape Assembly`Dual Tire` Tires` , Animator`ShpGrp_659d470f-31c5-4b96-a28d-8c794617a2c3
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 315
+RRE 422
+R0 440
+FZ_TIRE_COEFFICIENT 320
+FZ_MAX 100000
+M_TIRE 34
+IT 4.2
+IT_XXZZ 2.5
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.005
+RR_V 0.000029
+L_CONTACT_X_CONSTANT 130
+L_CONTACT_Y_CONSTANT 315
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_f9493617-268b-46cd-8cda-fa337f7fda4b.par
+#BlueLink0 Tire: Aligning Moment`315/75 R16` Trailer and Light Truck Tires` , Aligning Moment`TireMz_f9493617-268b-46cd-8cda-fa337f7fda4b
+
+PARSFILE Tires\Fy\TireFy_84d069aa-e5b4-4c60-a0a4-1fb8b70c7d79.par
+#BlueLink1 Tire: Lateral Force`315/75 R16` Trailer and Light Truck Tires` , Lateral Force`TireFy_84d069aa-e5b4-4c60-a0a4-1fb8b70c7d79
+
+PARSFILE Tires\Fx\TireFx_7669a9bd-96a2-4c1f-bf58-59bb2a92c555.par
+#BlueLink2 Tire: Longitudinal Force`315/75 R16` Trailers and Light Truck Tires` , Longitudinal Force`TireFx_7669a9bd-96a2-4c1f-bf58-59bb2a92c555
+
+PARSFILE Tires\Camber_Thrust\CamStiff_0f68b205-a184-4e13-9b6d-b2c00f79b34a.par
+#BlueLink3 Tire: Camber Thrust Coefficient`315/75 R16` Trailers and Light Trucks` , Camber Thrust`CamStiff_0f68b205-a184-4e13-9b6d-b2c00f79b34a
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 1450 kg
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Trailer and Light Truck Tires } 315/75 R 16 for Duals
+#Library : Tire
+#DataSet : 315/75 R 16 for Duals
+#Category: Trailer and Light Truck Tires
+#FileID  : Tire_b706c9cb-1130-4a2d-9c3f-9a0833df1aec
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

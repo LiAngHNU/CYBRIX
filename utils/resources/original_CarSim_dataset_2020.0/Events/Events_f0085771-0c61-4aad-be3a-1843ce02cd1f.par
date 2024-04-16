@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Events`B. Let Speed Settle`Go to Constant Speed
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+*NAME1 T_EVENT
+*VALUE1 3
+*SPEED vx
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: B. Let Speed Settle
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT vx
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink10 Control: Throttle (Open Loop)`Constant: 0` Constant` , Miscellaneous`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT T_EVENT > 3 ; Events\Events_5377f4e6-2fc4-40eb-bdc6-095e7c1efd79.par
+#BlueLink0 Events`C. Speed Initialization is Done` Go to Constant Speed` , Events`Events_5377f4e6-2fc4-40eb-bdc6-095e7c1efd79
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Turn off throttle (open-loop), activate the speed controller with the target speed set to the current speed Vx, and wait a few seconds to settle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Go to Constant Speed } B. Let Speed Settle
+#Library : Events
+#DataSet : B. Let Speed Settle
+#Category: Go to Constant Speed
+#FileID  : Events_f0085771-0c61-4aad-be3a-1843ce02cd1f
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName CarSim Run Control`OL: Retain Tie Rod/Steer Arm Kinematics`Steering Models, Ext. Elements, Open/Closed-Loop
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_444f946e-82f1-436c-8906-c04713c430c2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 2
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0.8 0
+SET_RUN_COLOR 0.8 0.8 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae.par
+#BlueLink2 Vehicle: Assembly`A-Class, Hatchback, No ABS` A-Class` , Math Model`Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae
+
+PARSFILE Procedures\Proc_41238189-18db-44af-b59a-0e9db1c4434d.par
+#BlueLink28 Procedures`Sine Sweep Steer Input` Driver Controls` , Procedure`Proc_41238189-18db-44af-b59a-0e9db1c4434d
+
+PARSFILE Generic\VS_commands\GenVS_1e3733b9-935c-4701-bac8-b44664bfa818.par
+#BlueLink9 Generic VS Commands`Ext. Steer - Internal Wheel Kinematics` External Steering` , Miscellaneous`GenVS_1e3733b9-935c-4701-bac8-b44664bfa818
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink15 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+PARSFILE Plot\Setup\Plot_b19280a2-8346-4fce-9410-a014d7ef86ac.par
+#BlueLink16 Plot: Setup`Kingpin Torque - Front` Steering` , Plot`Plot_b19280a2-8346-4fce-9410-a014d7ef86ac
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae.png
+WRITE_SENSOR_DETECT
+Title OL: Retain Tie Rod/Steer Arm Kinematics <Steering Models, Ext. Elements, Open/Closed-Loop>
+CATEGORY Steering Models, Ext. Elements, Open/Closed-Loop 
+DATASET_TITLE OL: Retain Tie Rod/Steer Arm Kinematics
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An A-Class Hatchback performs a Sine Sweep Steer Angle test.
+#
+#Most of the internal Steering System is overridden with VS Commands, retaining only the internal tie rod / steer arm kinematics. The Generic VS Commands dataset containing the steering system model is linked on the Run Control screen.
+#
+#The CarSim math model setting is:
+#opt_steer_ext(1) 3
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Models, Ext. Elements, Open/Closed-Loop } OL: Retain Tie Rod/Steer Arm Kinematics
+#Library : CarSim Run Control
+#DataSet : OL: Retain Tie Rod/Steer Arm Kinematics
+#Category: Steering Models, Ext. Elements, Open/Closed-Loop
+#FileID  : Run_444f946e-82f1-436c-8906-c04713c430c2
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

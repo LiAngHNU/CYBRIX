@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Events`C. Coast Down to 80 km/h`Sine with Dwell
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <=
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 Vx
+*VALUE1 80
+*SPEED 82
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+PARSFILE Control\Driver\StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d.par
+#BlueLink10 Control: Steering by the Closed-loop Driver Model`1.0s Preview, 10 points` Constant Position: No Offset` , Miscellaneous`StrDM_5e1b87df-4a9a-4a60-ac80-544adfa4667d
+
+MAKE_EVENT Vx <= 80 ; Events\Events_c8c81603-c682-4a34-86ad-cb260b095c48.par
+#BlueLink0 Events`D. Have Coasted to 80 km/h` Sine with Dwell` , Events`Events_c8c81603-c682-4a34-86ad-cb260b095c48
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Initialize the vehicle X, Y, and Yaw, ensuring that the lateral displacement and Yaw are zero. Set the throttle to zero so the vehicle can coast down to the official test speed of 80 km/h. The driver path follower is used to maintain a straight path during the coast-down.
+#
+#When the speed drops to 80 km/h, go to the next step.
+#
+#Revised 2018.1 because target speed uses new feature.
+#
+#
+#
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } C. Coast Down to 80 km/h
+#Library : Events
+#DataSet : C. Coast Down to 80 km/h
+#Category: Sine with Dwell
+#FileID  : Events_58478183-71fc-4d8b-8cb7-3a270d1b7b61
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`A. Start at 100 km/h (Pressure Control)`Braking Distance
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 100
+MAKE_EVENT vx < 100 ; Events\Events_268f4966-c0bb-4e02-b5d0-34990219f807.par
+#BlueLink0 Events`B. Reset Postion and Brake` Braking Distance` , Events`Events_268f4966-c0bb-4e02-b5d0-34990219f807
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This starts a sequence of events for a braking test to determine stopping distance. Brake control is applied later using pressure from the master cylinder.
+#
+#When the vehicle speed drops to 100 km/h, another dataset that will apply the brakes is triggered.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Braking Distance } A. Start at 100 km/h (Pressure Control)
+#Library : Events
+#DataSet : A. Start at 100 km/h (Pressure Control)
+#Category: Braking Distance
+#FileID  : Events_2d4360cb-5f45-4a1b-a3aa-737bb4115225
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

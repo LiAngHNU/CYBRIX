@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Suspension: Auxiliary Roll Moment`Load Dependent: Trailer`Linear
+#CheckBox0 0    
+
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Axle load (N)
+*3D_YLabel Roll relative to axle (deg)
+*3D_ZLabel Auxiliary roll moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+MX_AUX_CARPET 2D_LINEAR
+0, 4600, 10300, 16500
+0, 0, 0, 0
+1, 815, 475, 23
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Load Dependent: Trailer
+#Library : Suspension: Auxiliary Roll Moment
+#DataSet : Load Dependent: Trailer
+#Category: Linear
+#FileID  : AuxMx_c248671a-12ca-47e6-b96e-820905d95b64
+#Product : CarSim 2020.0
+#VehCode Aux. Roll Moment
+
+END

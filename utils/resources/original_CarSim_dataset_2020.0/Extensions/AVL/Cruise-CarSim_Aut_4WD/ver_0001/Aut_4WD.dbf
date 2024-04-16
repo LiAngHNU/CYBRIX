@@ -1,0 +1,3577 @@
+$======================================================================
+$ Application: Vehicle Data
+$ created:     May 09, 2018 16:48:46
+$================================================================Engine
+[VERBR_MOTOR] 1
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = '6 cylinder engine'
+IDENTIF_ATTR1             = 'gasoline'
+IDENTIF_ATTR2             = 'inline'
+IDENTIF_ATTR3             = ''
+#MOT_ID                   = 
+#MOT_ENTW_DATUM           = "Nov 05, 1998 14:08:48"
+IFO_ID                    = 
+ARBEITSVERFAHREN          = 1
+AUFLADUNG                 = 1
+MOT_HUBVOLUMEN <cm^3>     = 2478.0
+MOT_BETRIEBSTEMPERATUR <°C> = 80.0
+MOT_ZYLINDERZAHL          = 6
+MOT_TAKTZAHL              = 4
+LL_DREHZAHL <1/min>       = 850.0
+MOT_HOECHSTZAHL <1/min>   = 6000.0
+TRAMOM_SCHWUNGRAD <kg*m^2> = 0.134
+MOT_ANSPRECHZEIT <s>      = 0.1
+KS_TYP_ID                 = 
+#MOT_ID                   = 
+#MOT_ENTW_DATUM           = "Nov 05, 1998 14:08:48"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$=============================================================Fuel Type
+(KS_TYPEN)
+#KS_TYP_ID                = 
+KS_TYP                    = 'petrol'
+HEIZWERT <kJ/kg>          = 44000.0
+DICHTE <kg/l>             = 0.76
+GEWICHTSANTEIL_C          = 
+$--------------------------------------------------------Idle
+(MOT_ZYL_ABSCHALT)
+#MOT_ID                   = 
+#MOT_ENTW_DATUM           = "Nov 05, 1998 14:08:48"
+LL_DREHZAHL <1/min>       = 850.0
+LL_VERBRAUCH <l/h>        = 1.5
+LL_VERBRAUCH_EINH         = 'l/h'
+LL_VERBRAUCH_NAME         = 12
+LL_EMISSION_NOX <kg/h>    = 0.03
+LL_EMISSION_CO <kg/h>     = 0.2
+LL_EMISSION_HC <kg/h>     = 0.015
+LL_EMISSION_RUSS <kg/h>   = 
+COM_ID                    = 
+MKKF_ID                   = 
+MVKF_ID                   = 
+MENKF_ID                  = 
+MECOKF_ID                 = 
+MEHCKF_ID                 = 
+MERUKF_ID                 = 
+MLLVKF_ID                 = 
+MLLENKF_ID                = 
+MLLECOKF_ID               = 
+MLLEHCKF_ID               = 
+MLLERUKF_ID               = 
+MLLUCMKF_ID               = 
+MSVKF_ID                  = 
+MVKL_ID                   = 
+MSKL_ID                   = 
+MASKL_ID                  = 
+MTVV_ID                   = 
+MWLA_ID                   = 
+MSLA_ID                   = 
+MBLA_ID                   = 
+MLLK_ID                   = 
+MLD_ID                    = 
+MLLT_ID                   = 
+MLLTK_ID                  = 
+RV1_ID                    = 
+RV2_ID                    = 
+RV3_ID                    = 
+RV4_ID                    = 
+RV5_ID                    = 
+MDK_ID                    = 
+LDAU_ID                   = 
+BMAU_ID                   = 
+VRF_ID                    = 
+MBKL_ID                   = 
+MAFRKF_ID                 = 
+MUCMKF_ID                 = 
+MOELT_ID                  = 
+MLLAMSKF_ID               = 
+MLLATKF_ID                = 
+MLLEH2KF_ID               = 
+MLLEO2KF_ID               = 
+MLLEH2OKF_ID              = 
+MLLECO2KF_ID              = 
+MAMSKF_ID                 = 
+MATKF_ID                  = 
+MEH2KF_ID                 = 
+MEO2KF_ID                 = 
+MEH2OKF_ID                = 
+MECO2KF_ID                = 
+IMOT_ID                   = 
+LUFTDRUCK_PRUEFSTAND_COPY <bar> = 
+LUFTTEMPERATUR_PRUEFSTAND_COPY <°C> = 
+ABS_FEUCHTE_PRUEFSTAND_COPY <kg/m^3> = 
+#IMOT_ID                  = 
+ORDNUNGSANZAHL            = 2
+VIM_GR_NAME_UNABH1        = 11
+VIM_GR_EINH_UNABH1        = '1/min'
+VIM_GR_NAME_UNABH2        = 125
+VIM_GR_EINH_UNABH2        = '1/(min*s)'
+VIM_GR_NAME_UNABH3        = 126
+VIM_GR_EINH_UNABH3        = 'Nm'
+$-----------------------------------------------Fuel Shut-Off
+(SCHUBABSCHALTUNG)
+#MOT_ID                   = 
+#MOT_ENTW_DATUM           = "Nov 05, 1998 14:08:48"
+MSA_AUSLOESER             = 2
+MSA_RESTVERBRAUCH <l/h>   = 0.0
+VERBR_GRADIENT_SA_DEAKTIV = 1
+MSA_WIEDEREINSETZDRZ_BEGINN <1/min> = 1000.0
+MSA_ABSCHNEIDEDREHZAHL <1/min> = 1250.0
+DREHZAHL_DIFF_SCHUB_UNTEN <1/min> = 
+DREHZAHL_DIFF_SCHUB_OBEN <1/min> = 
+$==============================================Full Load Characteristic
+(VOLLASTKENNLINIE)
+#MVKL_ID                  = 
+BEMERKUNG                 = 'Automatic 4WD'
+LUFTDRUCK_PRUEFSTAND <bar> = 
+LUFTTEMPERATUR_PRUEFSTAND <°C> = 
+ABS_FEUCHTE_PRUEFSTAND <kg/m^3> = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 2
+GR_EINH_ABH               = 'kW'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  750.0         8.5         
+  1321.0        24.2        
+  1775.0        36.17       
+  2119.0        45.27       
+  2518.0        56.15       
+  2959.0        68.62       
+  3261.0        77.4        
+  3537.0        85.13       
+  3908.0        95.82       
+  4266.0        105.34      
+  4761.0        116.41      
+  5188.0        123.29      
+  5532.0        126.82      
+  5780.0        127.5       
+  6000.0        126.95      
+$===================================================Full Load Reduction
+(VOLLASTREDUKTION_FEST)
+#VRF_ID                   = 
+REDUKTIONSFAKTOR          = 
+$--------------------------Full Load Reduction Characteristic
+(VOLLASTREDUKTION_KL)
+#VRF_ID                   = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 2
+GR_EINH_ABH               = 'kW'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$============================================Full Load Gear Dependent 1
+(REDUZIERTE_VOLLAST_1)
+#RV_ID                    = 
+BEMERKUNG                 = ''
+GANGPOSITION_VON          = 
+GANGPOSITION_BIS          = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+RVRF_ID                   = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$=================================================Full Load Reduction 1
+(REDUZ_VOLLASTREDUKTION_FEST_1)
+#RVRF_ID                  = 
+REDUKTIONSFAKTOR          = 
+$------------------------Full Load Reduction Characteristic 1
+(REDUZ_VOLLASTREDUKTION_1)
+#RVRF_ID                  = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$============================================Full Load Gear Dependent 2
+(REDUZIERTE_VOLLAST_2)
+#RV_ID                    = 
+BEMERKUNG                 = ''
+GANGPOSITION_VON          = 
+GANGPOSITION_BIS          = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+RVRF_ID                   = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$=================================================Full Load Reduction 2
+(REDUZ_VOLLASTREDUKTION_FEST_2)
+#RVRF_ID                  = 
+REDUKTIONSFAKTOR          = 
+$------------------------Full Load Reduction Characteristic 2
+(REDUZ_VOLLASTREDUKTION_2)
+#RVRF_ID                  = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$============================================Full Load Gear Dependent 3
+(REDUZIERTE_VOLLAST_3)
+#RV_ID                    = 
+BEMERKUNG                 = ''
+GANGPOSITION_VON          = 
+GANGPOSITION_BIS          = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+RVRF_ID                   = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$=================================================Full Load Reduction 3
+(REDUZ_VOLLASTREDUKTION_FEST_3)
+#RVRF_ID                  = 
+REDUKTIONSFAKTOR          = 
+$------------------------Full Load Reduction Characteristic 3
+(REDUZ_VOLLASTREDUKTION_3)
+#RVRF_ID                  = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$============================================Full Load Gear Dependent 4
+(REDUZIERTE_VOLLAST_4)
+#RV_ID                    = 
+BEMERKUNG                 = ''
+GANGPOSITION_VON          = 
+GANGPOSITION_BIS          = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+RVRF_ID                   = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$=================================================Full Load Reduction 4
+(REDUZ_VOLLASTREDUKTION_FEST_4)
+#RVRF_ID                  = 
+REDUKTIONSFAKTOR          = 
+$------------------------Full Load Reduction Characteristic 4
+(REDUZ_VOLLASTREDUKTION_4)
+#RVRF_ID                  = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$============================================Full Load Gear Dependent 5
+(REDUZIERTE_VOLLAST_5)
+#RV_ID                    = 
+BEMERKUNG                 = ''
+GANGPOSITION_VON          = 
+GANGPOSITION_BIS          = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+RVRF_ID                   = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$=================================================Full Load Reduction 5
+(REDUZ_VOLLASTREDUKTION_FEST_5)
+#RVRF_ID                  = 
+REDUKTIONSFAKTOR          = 
+$------------------------Full Load Reduction Characteristic 5
+(REDUZ_VOLLASTREDUKTION_5)
+#RVRF_ID                  = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$========================================================Motoring Curve
+(SCHUBKENNLINIE)
+#MSKL_ID                  = 
+BEMERKUNG                 = 'Automatic 4WD'
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 2
+GR_EINH_ABH               = 'kW'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  750.0         0.0         
+  1397.0        -3.15       
+  1954.0        -5.32       
+  2636.0        -7.67       
+  3351.0        -9.65       
+  3895.0        -10.97      
+  4518.0        -12.43      
+  5220.0        -13.72      
+  6000.0        -14.95      
+$=======================================================Load Signal Map
+(DROSSELKLAPPENKENNFELD)
+#MDK_ID                   = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 28
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$==================================================Fuel Consumption Map
+(VERBRAUCHSKENNFELD)
+#MVKF_ID                  = 
+BEMERKUNG                 = 'Automatic 4WD'
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 12
+GR_EINH_ABH               = 'l/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+  700.0          -4.0           1.6         
+  700.0          -0.5           1.61        
+  700.0          0.0            1.65        
+  700.0          1.6            1.88        
+  700.0          3.16           2.13        
+  700.0          4.55           2.496       
+  700.0          5.95           2.964       
+  700.0          7.32           3.552       
+  700.0          8.63           4.188       
+  700.0          9.3            4.788       
+  1200.0         -4.0           1.75        
+  1200.0         -0.5           1.76        
+  1200.0         0.0            1.8         
+  1200.0         0.35           1.93        
+  1200.0         1.82           2.35        
+  1200.0         3.32           2.784       
+  1200.0         4.73           3.516       
+  1200.0         6.17           4.248       
+  1200.0         7.59           4.968       
+  1200.0         8.9            5.868       
+  1200.0         10.21          6.6         
+  1200.0         10.88          6.72        
+  1700.0         -4.0           1.95        
+  1700.0         -0.5           1.96        
+  1700.0         0.0            2.0         
+  1700.0         0.42           2.16        
+  1700.0         2.06           2.85        
+  1700.0         3.54           3.72        
+  1700.0         4.89           4.608       
+  1700.0         6.33           5.532       
+  1700.0         7.83           6.516       
+  1700.0         9.48           7.704       
+  1700.0         10.93          9.432       
+  1700.0         12.3           10.62       
+  2550.0         -4.0           2.25        
+  2550.0         -0.5           2.3         
+  2550.0         0.0            2.45        
+  2550.0         0.73           2.976       
+  2550.0         2.3            4.2         
+  2550.0         3.8            5.688       
+  2550.0         5.25           7.008       
+  2550.0         6.71           8.304       
+  2550.0         8.21           9.828       
+  2550.0         9.55           10.992      
+  2550.0         12.4           15.096      
+  2550.0         14.29          17.592      
+  3000.0         -4.0           2.73        
+  3000.0         -0.5           2.84        
+  3000.0         0.0            3.0         
+  3000.0         0.71           3.552       
+  3000.0         2.42           5.208       
+  3000.0         3.97           6.852       
+  3000.0         5.49           8.412       
+  3000.0         6.97           10.008      
+  3000.0         8.41           11.508      
+  3000.0         9.81           13.14       
+  3000.0         11.29          14.844      
+  3000.0         14.75          20.916      
+  3600.0         -4.0           3.22        
+  3600.0         -0.5           3.34        
+  3600.0         0.0            3.67        
+  3600.0         0.72           4.44        
+  3600.0         2.41           6.396       
+  3600.0         3.97           8.472       
+  3600.0         7.04           12.18       
+  3600.0         8.59           14.304      
+  3600.0         10.31          16.572      
+  3600.0         11.61          18.588      
+  3600.0         14.68          24.804      
+  3600.0         15.11          25.356      
+  4150.0         -4.0           4.15        
+  4150.0         -0.5           4.27        
+  4150.0         0.0            4.64        
+  4150.0         0.7            5.412       
+  4150.0         2.31           7.656       
+  4150.0         3.82           9.96        
+  4150.0         5.34           12.18       
+  4150.0         6.9            14.556      
+  4150.0         8.53           17.004      
+  4150.0         9.99           19.5        
+  4150.0         13.06          26.76       
+  4150.0         15.11          33.024      
+  5050.0         -4.0           5.25        
+  5050.0         -0.5           5.6         
+  5050.0         0.0            6.0         
+  5050.0         1.99           9.432       
+  5050.0         3.62           12.3        
+  5050.0         5.1            14.856      
+  5050.0         6.63           17.82       
+  5050.0         8.12           20.736      
+  5050.0         9.77           24.696      
+  5050.0         11.19          28.476      
+  5050.0         12.53          33.456      
+  5050.0         14.5           41.784      
+  6000.0         -4.0           6.6         
+  6000.0         -0.5           7.25        
+  6000.0         0.0            8.0         
+  6000.0         1.21           10.428      
+  6000.0         2.76           13.86       
+  6000.0         4.18           17.052      
+  6000.0         5.53           20.22       
+  6000.0         6.94           23.916      
+  6000.0         9.72           33.984      
+  6000.0         10.88          39.144      
+  6000.0         12.05          44.664      
+  6000.0         13.05          49.032      
+$==============================================Specific Consumption Map
+(SPEZ_VERBRAUCHSKENNFELD)
+#MSVKF_ID                 = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 13
+GR_EINH_ABH               = 'l/kWh'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$======================================================NOx Emission Map
+(EMISSIONSKENNFELD_NOX)
+#MENKF_ID                 = 
+BEMERKUNG                 = 'Automatic 4WD'
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+  700.0          -5.0           6.84e-4     
+  700.0          -0.546448      6.84e-4     
+  700.0          0.0            0.0013      
+  700.0          0.901639       0.00514664  
+  700.0          1.76           0.022726    
+  700.0          3.476          0.032604    
+  700.0          5.005          0.06441     
+  700.0          6.545          0.086754    
+  700.0          8.052          0.119586    
+  700.0          10.23          0.158004    
+  1200.0         -5.0           0.001368    
+  1200.0         -0.409836      0.001368    
+  1200.0         0.0            0.001668    
+  1200.0         0.209          0.002166    
+  1200.0         0.655738       0.003       
+  1200.0         2.002          0.00969     
+  1200.0         3.652          0.055632    
+  1200.0         6.787          0.150708    
+  1200.0         9.79           0.193321    
+  1200.0         11.968         0.2394      
+  1700.0         -5.0           0.001254    
+  1700.0         -0.409836      0.001254    
+  1700.0         0.0            0.001854    
+  1700.0         0.245902       0.00407332  
+  1700.0         0.901639       0.00814664  
+  1700.0         2.266          0.044004    
+  1700.0         3.894          0.117648    
+  1700.0         6.963          0.254676    
+  1700.0         10.428         0.318516    
+  1700.0         13.53          0.371754    
+  2550.0         -5.0           0.015048    
+  2550.0         -0.491803      0.015048    
+  2550.0         0.0            0.018048    
+  2550.0         0.409836       0.0283666   
+  2550.0         2.0            0.092682    
+  2550.0         5.775          0.269838    
+  2550.0         7.381          0.342912    
+  2550.0         10.505         0.466237    
+  2550.0         13.64          0.488262    
+  2550.0         15.719         0.501349    
+  3000.0         -5.0           0.011058    
+  3000.0         -1.01093       0.01222     
+  3000.0         -0.382514      0.0162933   
+  3000.0         0.0            0.0203666   
+  3000.0         0.409836       0.0285132   
+  3000.0         2.662          0.140106    
+  3000.0         6.039          0.42009     
+  3000.0         9.251          0.595878    
+  3000.0         10.791         0.664164    
+  3000.0         15.7806        0.705882    
+  3600.0         -5.0           0.020634    
+  3600.0         -0.437158      0.0285132   
+  3600.0         0.0            0.0325866   
+  3600.0         0.355191       0.0448065   
+  3600.0         0.792          0.069882    
+  3600.0         2.651          0.247722    
+  3600.0         4.367          0.423966    
+  3600.0         7.744          0.685026    
+  3600.0         9.449          0.765852    
+  3600.0         12.771         0.878142    
+  3600.0         16.8807        0.910798    
+  4150.0         -5.0           0.041724    
+  4150.0         -1.03825       0.0426599   
+  4150.0         -0.437158      0.0447332   
+  4150.0         0.0            0.0488798   
+  4150.0         0.327869       0.0733198   
+  4150.0         0.79235        0.10998     
+  4150.0         2.541          0.26904     
+  4150.0         4.202          0.445512    
+  4150.0         7.59           0.750462    
+  4150.0         10.989         0.98952     
+  4150.0         14.366         1.13783     
+  4150.0         16.621         1.31864     
+  5050.0         -5.0           0.045372    
+  5050.0         -1.31148       0.0500265   
+  5050.0         -0.519126      0.0569532   
+  5050.0         0.0            0.0651731   
+  5050.0         0.382514       0.0855397   
+  5050.0         2.189          0.283062    
+  5050.0         3.982          0.496698    
+  5050.0         5.61           0.701214    
+  5050.0         8.932          1.11367     
+  5050.0         12.8899        1.40845     
+  5050.0         16.1927        1.74648     
+  6000.0         -5.0           0.137142    
+  6000.0         -1.28415       0.140566    
+  6000.0         -0.437158      0.158859    
+  6000.0         0.0            0.183299    
+  6000.0         0.355191       0.228106    
+  6000.0         1.331          0.40812     
+  6000.0         3.036          0.713754    
+  6000.0         4.598          0.959424    
+  6000.0         7.634          1.23451     
+  6000.0         10.692         1.40915     
+  6000.0         14.355         1.62176     
+$=======================================================CO Emission Map
+(EMISSIONSKENNFELD_CO)
+#MECOKF_ID                = 
+BEMERKUNG                 = 'Automatic 4WD'
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+  700.0          -5.0           0.05225     
+  700.0          -0.765027      0.05225     
+  700.0          0.0            0.05825     
+  700.0          1.76           0.083182    
+  700.0          3.476          0.121847    
+  700.0          5.005          0.169499    
+  700.0          6.545          0.210776    
+  700.0          8.052          0.266893    
+  700.0          10.23          1.60303     
+  1200.0         -5.0           0.02622     
+  1200.0         -0.546448      0.02622     
+  1200.0         0.0            0.03122     
+  1200.0         0.2185         0.073853    
+  1200.0         2.093          0.10204     
+  1200.0         3.818          0.165295    
+  1200.0         5.4395         0.207138    
+  1200.0         7.0955         0.312564    
+  1200.0         8.68852        0.86558     
+  1200.0         10.235         2.44152     
+  1200.0         12.512         3.2338      
+  1700.0         -5.0           0.05225     
+  1700.0         -0.628415      0.05225     
+  1700.0         0.0            0.05925     
+  1700.0         0.504          0.079275    
+  1700.0         2.472          0.159885    
+  1700.0         4.248          0.236693    
+  1700.0         5.868          0.330011    
+  1700.0         7.596          0.391457    
+  1700.0         9.39891        1.12016     
+  1700.0         11.376         2.40528     
+  1700.0         14.76          3.2604      
+  2550.0         -5.0           0.150898    
+  2550.0         -0.57377       0.150898    
+  2550.0         0.0            0.158898    
+  2550.0         0.876          0.189885    
+  2550.0         2.76           0.288525    
+  2550.0         3.6            0.39083     
+  2550.0         6.3            0.691163    
+  2550.0         8.052          0.828058    
+  2550.0         11.46          3.15193     
+  2550.0         14.88          3.72647     
+  2550.0         17.148         4.30853     
+  3000.0         -5.0           0.15162     
+  3000.0         -0.464481      0.15162     
+  3000.0         0.0            0.18162     
+  3000.0         0.781          0.23142     
+  3000.0         2.662          0.389994    
+  3000.0         4.367          0.602376    
+  3000.0         6.039          0.950874    
+  3000.0         9.28962        1.52749     
+  3000.0         10.8197        2.74949     
+  3000.0         12.5956        4.88798     
+  3000.0         16.225         7.14096     
+  3600.0         -5.0           0.172287    
+  3600.0         -0.519126      0.172287    
+  3600.0         0.0            0.192287    
+  3600.0         0.756          0.258879    
+  3600.0         2.5305         0.456228    
+  3600.0         4.1685         0.625128    
+  3600.0         7.392          0.972762    
+  3600.0         11.3303        3.75587     
+  3600.0         13.0874        6.05906     
+  3600.0         15.414         10.2826     
+  3600.0         15.8655        10.9239     
+  4150.0         -5.0           0.220326    
+  4150.0         -0.57377       0.220326    
+  4150.0         0.0            0.250326    
+  4150.0         0.765027       0.325499    
+  4150.0         2.5641         0.592133    
+  4150.0         5.9274         0.968113    
+  4150.0         7.70492        1.17108     
+  4150.0         9.67213        2.24033     
+  4150.0         11.1202        4.07332     
+  4150.0         12.623         6.92464     
+  4150.0         14.4966        9.88546     
+  4150.0         16.7721        11.8716     
+  5050.0         -5.0           0.249888    
+  5050.0         -0.655738      0.249888    
+  5050.0         0.0            0.279888    
+  5050.0         1.22951        0.407332    
+  5050.0         2.189          0.676134    
+  5050.0         3.982          1.00012     
+  5050.0         5.61           1.2271      
+  5050.0         8.93443        1.98574     
+  5050.0         10.5191        4.12424     
+  5050.0         12.309         10.6341     
+  5050.0         13.783         13.3357     
+  5050.0         15.95          15.463      
+  6000.0         -5.0           0.42693     
+  6000.0         -0.5           0.42693     
+  6000.0         0.0            0.45693     
+  6000.0         1.331          0.546744    
+  6000.0         3.036          0.967413    
+  6000.0         6.083          2.64766     
+  6000.0         7.634          4.37882     
+  6000.0         10.692         11.6698     
+  6000.0         11.968         15.4413     
+  6000.0         13.255         18.2252     
+  6000.0         14.355         21.2542     
+$=======================================================HC Emission Map
+(EMISSIONSKENNFELD_HC)
+#MEHCKF_ID                = 
+BEMERKUNG                 = 'Automatic 4WD'
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+  700.0          -5.0           0.0146718   
+  700.0          -0.846995      0.0146718   
+  700.0          0.0            0.0151718   
+  700.0          0.655738       0.0161      
+  700.0          1.744          0.020007    
+  700.0          3.4444         0.0268983   
+  700.0          6.4855         0.036346    
+  700.0          7.9788         0.0426816   
+  700.0          10.137         0.0593541   
+  1200.0         -5.0           0.0115682   
+  1200.0         -0.601093      0.0115682   
+  1200.0         0.0            0.0165682   
+  1200.0         0.2128         0.0128535   
+  1200.0         2.0384         0.0193971   
+  1200.0         3.7184         0.0302642   
+  1200.0         5.2976         0.0371583   
+  1200.0         6.9104         0.0456884   
+  1200.0         9.968          0.07011     
+  1200.0         12.1856        0.106334    
+  1700.0         -5.0           0.0101833   
+  1700.0         -0.546448      0.011       
+  1700.0         0.0            0.01222     
+  1700.0         0.4662         0.0156791   
+  1700.0         2.2866         0.0304618   
+  1700.0         5.4279         0.0612684   
+  1700.0         7.0263         0.0752923   
+  1700.0         10.5228        0.163689    
+  1700.0         14.2896        0.331976    
+  2550.0         -5.0           0.0183122   
+  2550.0         -0.546448      0.0183122   
+  2550.0         0.0            0.0193122   
+  2550.0         0.327869       0.0203666   
+  2550.0         0.8176         0.0222528   
+  2550.0         2.576          0.04636     
+  2550.0         5.88           0.0891271   
+  2550.0         7.5152         0.0986309   
+  2550.0         10.696         0.198189    
+  2550.0         13.888         0.334951    
+  2550.0         16.0048        0.49837     
+  3000.0         -5.0           0.014       
+  3000.0         -0.464481      0.015       
+  3000.0         0.0            0.0183299   
+  3000.0         0.327869       0.023299    
+  3000.0         0.8023         0.0256756   
+  3000.0         2.7346         0.0512402   
+  3000.0         4.4861         0.0752485   
+  3000.0         7.8761         0.104148    
+  3000.0         11.0853        0.162057    
+  3000.0         12.7577        0.2223      
+  3000.0         16.612         0.401222    
+  3600.0         -5.0           0.0183299   
+  3600.0         -0.601093      0.0183299   
+  3600.0         0.0            0.0193299   
+  3600.0         0.3            0.0208299   
+  3600.0         0.792          0.0255493   
+  3600.0         2.651          0.0608209   
+  3600.0         4.367          0.0885182   
+  3600.0         7.744          0.119946    
+  3600.0         11.341         0.229605    
+  3600.0         12.771         0.298452    
+  3600.0         16.148         0.509855    
+  4150.0         -5.0           0.02        
+  4150.0         -0.546448      0.021       
+  4150.0         0.0            0.023       
+  4150.0         0.300546       0.0265499   
+  4150.0         0.77           0.0378993   
+  4150.0         2.541          0.0653676   
+  4150.0         5.874          0.11787     
+  4150.0         7.59           0.136994    
+  4150.0         10.929         0.215886    
+  4150.0         14.153         0.419552    
+  4150.0         16.2568        0.539715    
+  5050.0         -5.0           0.0264766   
+  5050.0         -0.409836      0.0264766   
+  5050.0         0.0            0.0274766   
+  5050.0         0.57377        0.0345132   
+  5050.0         2.24044        0.0631365   
+  5050.0         4.09836        0.0997963   
+  5050.0         5.92896        0.136456    
+  5050.0         7.75956        0.152749    
+  5050.0         9.31694        0.191446    
+  5050.0         10.9016        0.252546    
+  5050.0         12.5956        0.358452    
+  5050.0         15.9016        0.564155    
+  6000.0         -5.0           0.0343064   
+  6000.0         -0.79235       0.0343064   
+  6000.0         0.0            0.0353064   
+  6000.0         0.519126       0.0386599   
+  6000.0         1.3552         0.0527345   
+  6000.0         3.0912         0.0929518   
+  6000.0         6.1936         0.155654    
+  6000.0         7.7728         0.176052    
+  6000.0         10.8864        0.305396    
+  6000.0         12.1856        0.403332    
+  6000.0         14.616         0.59109     
+$=====================================================Soot Emission Map
+(EMISSIONSKENNFELD_RUSS)
+#MERUKF_ID                = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+  700.0          0.0            0.0         
+  700.0          1.6            0.0         
+  700.0          3.16           0.0         
+  700.0          4.55           0.0         
+  700.0          5.95           0.0         
+  700.0          7.32           0.0         
+  700.0          8.63           0.0         
+  700.0          9.3            0.0         
+  1200.0         0.0            0.0         
+  1200.0         0.35           0.0         
+  1200.0         1.82           0.0         
+  1200.0         3.32           0.0         
+  1200.0         4.73           0.0         
+  1200.0         6.17           0.0         
+  1200.0         7.59           0.0         
+  1200.0         8.9            0.0         
+  1200.0         10.21          0.0         
+  1200.0         10.88          0.0         
+  1700.0         0.0            0.0         
+  1700.0         0.42           0.0         
+  1700.0         2.06           0.0         
+  1700.0         3.54           0.0         
+  1700.0         4.89           0.0         
+  1700.0         6.33           0.0         
+  1700.0         7.83           0.0         
+  1700.0         9.48           0.0         
+  1700.0         10.93          0.0         
+  1700.0         12.3           0.0         
+  2550.0         0.0            0.0         
+  2550.0         0.73           0.0         
+  2550.0         2.3            0.0         
+  2550.0         3.8            0.0         
+  2550.0         5.25           0.0         
+  2550.0         6.71           0.0         
+  2550.0         8.21           0.0         
+  2550.0         9.55           0.0         
+  2550.0         12.4           0.0         
+  2550.0         14.29          0.0         
+  3000.0         0.0            0.0         
+  3000.0         0.71           0.0         
+  3000.0         2.42           0.0         
+  3000.0         3.97           0.0         
+  3000.0         5.49           0.0         
+  3000.0         6.97           0.0         
+  3000.0         8.41           0.0         
+  3000.0         9.81           0.0         
+  3000.0         11.29          0.0         
+  3000.0         14.75          0.0         
+  3600.0         0.0            0.0         
+  3600.0         0.72           0.0         
+  3600.0         2.41           0.0         
+  3600.0         3.97           0.0         
+  3600.0         7.04           0.0         
+  3600.0         8.59           0.0         
+  3600.0         10.31          0.0         
+  3600.0         11.61          0.0         
+  3600.0         14.68          0.0         
+  3600.0         15.11          0.0         
+  4150.0         0.0            0.0         
+  4150.0         0.7            0.0         
+  4150.0         2.31           0.0         
+  4150.0         3.82           0.0         
+  4150.0         5.34           0.0         
+  4150.0         6.9            0.0         
+  4150.0         8.53           0.0         
+  4150.0         9.99           0.0         
+  4150.0         13.06          0.0         
+  4150.0         15.11          0.0         
+  5050.0         0.0            0.0         
+  5050.0         1.99           0.0         
+  5050.0         3.62           0.0         
+  5050.0         5.1            0.0         
+  5050.0         6.63           0.0         
+  5050.0         8.12           0.0         
+  5050.0         9.77           0.0         
+  5050.0         11.19          0.0         
+  5050.0         12.53          0.0         
+  5050.0         14.5           0.0         
+  6000.0         0.0            0.0         
+  6000.0         1.21           0.0         
+  6000.0         2.76           0.0         
+  6000.0         4.18           0.0         
+  6000.0         5.53           0.0         
+  6000.0         6.94           0.0         
+  6000.0         9.72           0.0         
+  6000.0         10.88          0.0         
+  6000.0         12.05          0.0         
+  6000.0         13.05          0.0         
+$========================================Air-Fuel Equivalence Ratio Map
+(AIR_FUEL_RATIO_KENNFELD)
+#MAFRKF_ID                = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 199
+GR_EINH_ABH               = '-'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$==================================================Urea Consumption Map
+(UREA_CONSUMPTION_KENNFELD)
+#MUCMKF_ID                = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$=================================================Exhaust Mass Flow Map
+(ABGAS_MASSENSTROM)
+#MAMSKF_ID                = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$===================================================Exhaust Temperature
+(ABGAS_TEMPERATUR)
+#MATKF_ID                 = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 72
+GR_EINH_ABH               = '°C'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$=======================================================H2 Emission Map
+(EMISSIONSKENNFELD_H2)
+#MEH2KF_ID                = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$=======================================================O2 Emission Map
+(EMISSIONSKENNFELD_O2)
+#MEO2KF_ID                = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$======================================================H2O Emission Map
+(EMISSIONSKENNFELD_H2O)
+#MEH2OKF_ID               = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$======================================================CO2 Emission Map
+(EMISSIONSKENNFELD_CO2)
+#MECO2KF_ID               = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$=============================================Idle Speed Characteristic
+(LEERLAUFKENNLINIE)
+#MLLK_ID                  = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH             = 72
+GR_EINH_UNABH             = '°C'
+GR_NAME_ABH               = 11
+GR_EINH_ABH               = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$==================================================Idle Consumption Map
+(LL_VERBRAUCHSKENNFELD)
+#MLLVKF_ID                = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 12
+GR_EINH_ABH               = 'l/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$=================================================Idle Emission Map NOX
+(LL_EMISSIONSKENNFELD_NOX)
+#MLLENKF_ID               = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$==================================================Idle Emission Map CO
+(LL_EMISSIONSKENNFELD_CO)
+#MLLECOKF_ID              = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$==================================================Idle Emission Map HC
+(LL_EMISSIONSKENNFELD_HC)
+#MLLEHCKF_ID              = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$================================================Idle Emission Map Soot
+(LL_EMISSIONSKENNFELD_RUSS)
+#MLLERUKF_ID              = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 3
+GR_EINH_UNABH2            = 'bar'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$=============================================Idle Urea Consumption Map
+(IDLE_UREA_CONSUMPTION_KENNFELD)
+#MLLUCMKF_ID              = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$============================================Idle Exhaust Mass Flow Map
+(LL_ABGAS_MASSENSTROM)
+#MLLAMSKF_ID              = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$==========================================Idle Exhaust Temperature Map
+(LL_ABGAS_TEMPERATUR)
+#MLLATKF_ID               = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 72
+GR_EINH_ABH               = '°C'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$==================================================Idle Emission Map H2
+(LL_EMISSIONSKENNFELD_H2)
+#MLLEH2KF_ID              = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$==================================================Idle Emission Map O2
+(LL_EMISSIONSKENNFELD_O2)
+#MLLEO2KF_ID              = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$=================================================Idle Emission Map H2O
+(LL_EMISSIONSKENNFELD_H2O)
+#MLLEH2OKF_ID             = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$=================================================Idle Emission Map CO2
+(LL_EMISSIONSKENNFELD_CO2)
+#MLLECO2KF_ID             = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 4
+GR_EINH_ABH               = 'kg/h'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$---------------------Friction Mean Effective Pressure (FMEP)
+(REIB_MITTELDRUCK_KW)
+#MOT_ID                   = 
+#MOT_ENTW_DATUM           = "Nov 05, 1998 14:08:48"
+AEQUIVALENTE_MASSE <kg>   = 14.5
+ABGASANTEIL               = 0.48
+NENNTEMPERATUR <°C>       = 80.0
+REIBMITTELDRUCK_BEI_N_MIN <bar> = 1.45
+REIBMITTELDRUCK_BEI_N_MAX <bar> = 2.5
+REIBMITTELDRUCKEXPONENT   = 0.16
+KRUEMMUNGSFAKTOR          = 1.42
+DYN_NENNOELVISKOSITAET_40 <Pas> = 0.09
+$-------------------------------------Advanced Friction Model
+(REIB_MODELL)
+#MOT_ID                   = 
+#MOT_ENTW_DATUM           = "Nov 05, 1998 14:08:48"
+MODELL_AUSWAHL            = 1
+MOT_BOHRUNG <mm>          = 
+VERDICHTUNGSVERHAELTNIS   = 
+MOT_HUB <mm>              = 
+MOTORBAUWEISE             = 2
+KUR_WELLEN_HAUPTLAGER_DURCHMESSER <mm> = 
+PLEUELFUSS_LAGER_DURCHMESSER <mm> = 
+KUR_WELLEN_HAUPTLAGER_LAENGE <mm> = 
+PLEUELFUSS_LAGER_LAENGE <mm> = 
+ANZAHL_KUR_WELLEN_HAUPTLAGER = 
+VENTILTRIEB_TYP           = 1
+ANZAHL_EINLASSVENTILE_PRO_ZYLINDER = 
+MAXIMALER_VENTILHUB <mm>  = 
+ANZAHL_AUSLASSVENTILE_PRO_ZYLINDER = 
+VENTILHEBEL_TYP           = 1
+ANZAHL_NOCKENWELLENLAGER  = 
+VERWENDETES_MOTOR_OEL     = 1
+VISKOZITAET_AUSWAHL       = 1
+VISKOZITAET_VOGELA <->    = 
+VISKOZITAET_VOGELB <->    = 
+VISKOZITAET_VOGELC <->    = 
+VISKOZITAET_REF <Pa*s>    = 
+KRAFTSTOFF_EINSPRITZPUMPE = 1
+$=========================================Pre-defined Temperature Curve
+(MOT_TEMP_VERLAUF_VORGEG)
+#MTVV_ID                  = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH             = 82
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH               = 72
+GR_EINH_ABH               = '°C'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$================================================Cooling Characteristic
+(KUEHLKURVE)
+#MKKF_ID                  = 
+BEMERKUNG                 = 'Automatic 4WD'
+GR_NAME_UNABH             = 72
+GR_EINH_UNABH             = '°C'
+GR_NAME_ABH               = 65
+GR_EINH_ABH               = 'J/K'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  -30.0         43.5        
+  73.9          43.5        
+  77.0          55.0        
+  80.0          155.0       
+  83.0          270.0       
+  88.0          300.0       
+  100.0         315.0       
+  120.0         315.0       
+$====================================================Warm-up Enrichment
+(WARMLAUFANREICHERUNG)
+#MWLA_ID                  = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH             = 72
+GR_EINH_UNABH             = '°C'
+GR_NAME_ABH               = 12
+GR_EINH_ABH               = 'l/h'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$======================================================Start Enrichment
+(STARTANREICHERUNG)
+#MSLA_ID                  = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH             = 82
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH               = 12
+GR_EINH_ABH               = 'l/h'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$===============================================Acceleration Enrichment
+(BESCHL_ANREICHERUNG)
+#MBLA_ID                  = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH             = 28
+GR_EINH_UNABH             = '%/s'
+GR_NAME_ABH               = 12
+GR_EINH_ABH               = 'l/h'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$==========================================Boost Pressure Build-up Time
+(LADEDRUCK_AUFBAUZEIT)
+BEMERKUNG                 = ''
+LADEDRUCKAUFBAUZEIT <s>   = 
+#LDAU_ID                  = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 91
+GR_EINH_ABH               = 's'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$====================================================BMEP Build-up Time
+(BMEP_AUFBAUZEIT)
+BEMERKUNG                 = ''
+BMEP_T90START <bar>       = 
+BMEP_T90END <%>           = 
+BMEPAUFBAUZEIT <s>        = 
+#BMAU_ID                  = 
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 91
+GR_EINH_ABH               = 's'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$========================================================Boost Pressure
+(LADEDRUCK)
+#MLD_ID                   = 
+BEMERKUNG                 = ''
+LEERLAUF_LADEDRUCK <bar>  = 1.01325
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 1
+GR_EINH_ABH               = 'bar'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$============================================Charger Outlet Temperature
+(LADELUFTTEMP_NACH_LADER)
+#MLLT_ID                  = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 72
+GR_EINH_ABH               = '°C'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$=============================================Cooler Outlet Temperature
+(LADELUFTTEMP_NACH_KUEHLER)
+#MLLTK_ID                 = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 72
+GR_EINH_ABH               = '°C'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$====================================================Engine Brake Curve
+(MOTORBREMSKENNLINIE)
+#MBKL_ID                  = 
+BEMERKUNG                 = ''
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+$---------------------------------------Starter Current Curve
+(ANLASSERSTROM)
+#MOT_ID                   = 
+#MOT_ENTW_DATUM           = "Nov 05, 1998 14:08:48"
+IDX                       = 1
+MASKL_ID                  = 
+BERECHNEN                 = 2
+#MASKL_ID                 = 
+BEMERKUNG                 = 'Automatic 4WD'
+TEMPERATUR <°C>           = 
+GR_NAME_UNABH             = 82
+GR_EINH_UNABH             = 's'
+GR_NAME_ABH               = 70
+GR_EINH_ABH               = 'A'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0.0           25.0        
+  2.0           0.0         
+$--------------------------------------------Parameter Matrix
+(PARAMETER_K)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 127
+GR_EINH_UNABH1            = '-'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 }
+$--------------------------------------------Parameter Matrix
+(PARAMETER_O1)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 125
+GR_EINH_UNABH2            = '1/(min*s)'
+GR_NAME_UNABH3            = 126
+GR_EINH_UNABH3            = 'Nm'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$-----------------------------------------------Center Matrix
+(CENTER_O1)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 125
+GR_EINH_UNABH2            = '1/(min*s)'
+GR_NAME_UNABH3            = 126
+GR_EINH_UNABH3            = 'Nm'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$--------------------------------------------Deviation Matrix
+(DEVIATION_O1)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 125
+GR_EINH_UNABH2            = '1/(min*s)'
+GR_NAME_UNABH3            = 126
+GR_EINH_UNABH3            = 'Nm'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$--------------------------------------------Parameter Matrix
+(PARAMETER_O2)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 125
+GR_EINH_UNABH2            = '1/(min*s)'
+GR_NAME_UNABH3            = 126
+GR_EINH_UNABH3            = 'Nm'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$-----------------------------------------------Center Matrix
+(CENTER_O2)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 125
+GR_EINH_UNABH2            = '1/(min*s)'
+GR_NAME_UNABH3            = 126
+GR_EINH_UNABH3            = 'Nm'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$--------------------------------------------Deviation Matrix
+(DEVIATION_O2)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 125
+GR_EINH_UNABH2            = '1/(min*s)'
+GR_NAME_UNABH3            = 126
+GR_EINH_UNABH3            = 'Nm'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$--------------------------------------------Parameter Matrix
+(PARAMETER_O3)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 125
+GR_EINH_UNABH2            = '1/(min*s)'
+GR_NAME_UNABH3            = 126
+GR_EINH_UNABH3            = 'Nm'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$-----------------------------------------------Center Matrix
+(CENTER_O3)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 125
+GR_EINH_UNABH2            = '1/(min*s)'
+GR_NAME_UNABH3            = 126
+GR_EINH_UNABH3            = 'Nm'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$--------------------------------------------Deviation Matrix
+(DEVIATION_O3)
+#IMOT_ID                  = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 125
+GR_EINH_UNABH2            = '1/(min*s)'
+GR_NAME_UNABH3            = 126
+GR_EINH_UNABH3            = 'Nm'
+TP_ID                     = 
+{ IDX GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$----------------------------------------------------Comments
+(COMMENTS)
+{ ATTRIBUT TYPE NAME VALUE EINHEIT }
+$==================================================================Info
+(VERBR_MOTOR_IFO)
+#IFO_ID                   = 
+MAXIMUM_TORQUE <Nm>       = 
+SPEED_AT_MAX_TORQUE <1/min> = 
+MAXIMUM_POWER <kW>        = 
+SPEED_AT_MAX_POWER <1/min> = 
+AUTO_CALC                 = 1
+EMISSION_CTRL_STANDARD    = ''
+INFO_TEXT                 = ''
+$======================================================Torque Converter
+[WANDLER] 2
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Torque Converter'
+IDENTIF_ATTR1             = 'hydro'
+IDENTIF_ATTR2             = 'oil'
+IDENTIF_ATTR3             = '12 plates'
+#WDL_ID                   = 
+#WDL_ENTW_DATUM           = "Nov 04, 1998 17:11:24"
+IFO_ID                    = 
+TRAMOM_PUMPE_MIT_OEL <kg*m^2> = 0.016
+TRAMOM_TURBINE_MIT_OEL <kg*m^2> = 0.011
+MAX_KUPPLUNGSMOMENT <Nm>  = 0.001
+TP_CF_SWITCH              = 1
+BEZUGSDREHZAHL <1/min>    = 2000.0
+BEZUGSDREHZAHL_VIRT <1/min> = 2000.0
+#WDL_ID                   = 
+#WDL_ENTW_DATUM           = "Nov 04, 1998 17:11:24"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$-------------------------------------------Torque Conversion
+(DREHMOMENTWANDLUNG)
+#WDL_ID                   = 
+#WDL_ENTW_DATUM           = "Nov 04, 1998 17:11:24"
+IDX                       = 1
+BERECHNEN                 = 2
+BEMERKUNG                 = ''
+BEZUGSDREHZAHL <1/min>    = 2000.0
+TEMPERATUR <°C>           = 20.0
+#WDL_ID                   = 
+#WDL_ENTW_DATUM           = "Nov 04, 1998 17:11:24"
+IDX                       = 1
+GR_NAME_UNABH             = 27
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 18
+GR_EINH_ABH1              = '-'
+GR_NAME_ABH2              = 17
+GR_EINH_ABH2              = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+  0.0           2.43         357.0        
+  0.1           2.22         357.0        
+  0.2           2.11         354.0        
+  0.3           1.93         340.0        
+  0.4           1.77         333.0        
+  0.5           1.6          316.0        
+  0.6           1.44         301.0        
+  0.7           1.29         280.0        
+  0.8           1.12         256.0        
+  0.848         1.06         213.0        
+  0.85          1.02         202.0        
+  0.9           1.0          183.0        
+  0.92          1.0          167.0        
+  0.94          1.0          137.0        
+  0.95          1.0          117.0        
+  0.96          1.0          99.0         
+  0.965         1.0          80.0         
+  0.97          1.0          72.0         
+  0.975         1.0          65.0         
+  0.98          1.0          40.0         
+  0.985         1.0          24.0         
+  0.989         1.0          12.0         
+  1.0           1.0          0.0          
+  1.019         1.0          -13.0        
+  1.021         1.0          -15.0        
+  1.027         1.0          -18.0        
+  1.032         1.0          -20.0        
+  1.043         1.0          -27.0        
+  1.065         1.0          -41.0        
+  1.088         1.0          -59.0        
+  1.112         1.0          -77.0        
+  1.252         1.0          -169.0       
+  1.431         1.0          -266.0       
+  1.669         1.0          -416.0       
+  2.004         1.0          -689.0       
+  2.506         1.0          -1188.0      
+$----------------------------------------------------Cf-Curve
+(DREHMOMENTWANDLUNG_HMC)
+#WDL_ID                   = 
+#WDL_ENTW_DATUM           = "Nov 04, 1998 17:11:24"
+IDX                       = 1
+BERECHNEN                 = 2
+BEMERKUNG                 = ''
+TEMPERATUR <°C>           = 20.0
+#WDL_ID                   = 
+#WDL_ENTW_DATUM           = "Nov 04, 1998 17:11:24"
+IDX                       = 1
+GR_NAME_UNABH             = '27'
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = '18'
+GR_EINH_ABH1              = '-'
+GR_NAME_ABH2              = '115'
+GR_EINH_ABH2              = 'kp*m*10^-6/(1/min)^2'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+$-----------------------------------------------------K-Curve
+(DREHMOMENTWANDLUNG_K_FACTOR)
+#WDL_ID                   = 
+#WDL_ENTW_DATUM           = "Nov 04, 1998 17:11:24"
+IDX                       = 1
+BERECHNEN                 = 2
+BEMERKUNG                 = ''
+TEMPERATUR <°C>           = 20.0
+#WDL_ID                   = 
+#WDL_ENTW_DATUM           = "Nov 04, 1998 17:11:24"
+IDX                       = 1
+GR_NAME_UNABH             = '27'
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = '18'
+GR_EINH_ABH1              = '-'
+GR_NAME_ABH2              = '116'
+GR_EINH_ABH2              = '(1/min)/Nm^0.5'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+$==================================================================Info
+(WANDLER_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$==============================================================Gear Box
+[GETRIEBE] 3
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = '5 speed Gear Box'
+IDENTIF_ATTR1             = 'Automatic'
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+IFO_ID                    = 
+VVT1_ID                   = 
+VVT2_ID                   = 
+VVT3_ID                   = 
+VVT4_ID                   = 
+VVT5_ID                   = 
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$--------------------------------------------Gear Ratio Table
+(GANGSTUFENTABELLE)
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_ABH1              = 85
+GR_EINH_ABH1              = '-'
+GR_NAME_ABH2              = 74
+GR_EINH_ABH2              = 'kg*m^2'
+GR_NAME_ABH3              = 73
+GR_EINH_ABH3              = 'kg*m^2'
+GR_NAME_ABH4              = 92
+GR_EINH_ABH4              = '-'
+GR_NAME_ABH5              = 93
+GR_EINH_ABH5              = '-'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 GR_WERT_ABH3 GR_WERT_ABH4 GR_WERT_ABH5 }
+  0              1.0          0.0015       0.005        10           10           
+  1              3.62         0.0015       0.005        50           181          
+  2              2.22         0.0015       0.005        50           111          
+  3              1.51         0.0015       0.005        100          151          
+  4              1.08         0.0015       0.005        25           27           
+  5              0.85         0.0015       0.005        20           17           
+$---------------------------------------------Gear Shift Time
+(GANGWECHSELZEIT)
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_ABH1              = 82
+GR_EINH_ABH1              = 's'
+GR_NAME_ABH2              = 82
+GR_EINH_ABH2              = 's'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$------------------------------------Gear Shifting Efficiency
+(GANGWECHSEL_WIRKUNGSGRAD)
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 80
+GR_EINH_ABH1              = '-'
+GR_NAME_ABH2              = 80
+GR_EINH_ABH2              = '-'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+$--------------------------------------------Efficiency Fixed
+(GET_WIRKUNGSGRAD_FEST)
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH             = 34
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '-'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0             0.95        
+  1             0.95        
+  2             0.95        
+  3             0.95        
+  4             0.95        
+  5             0.95        
+$--------------------------------Torque Loss Correction Fixed
+(GET_VERLUSTMOMENT_FEST)
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 34
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+  0              0.0            0.0         
+  0              10000.0        0.0         
+  1              0.0            0.0         
+  1              10000.0        0.0         
+  2              0.0            0.0         
+  2              10000.0        0.0         
+  3              0.0            0.0         
+  3              10000.0        0.0         
+  4              0.0            0.0         
+  4              10000.0        0.0         
+  5              0.0            0.0         
+  5              10000.0        0.0         
+$----------------Torque Loss Correction Temperature Dependent
+(GET_VERLUSTMOMENT_TEMP)
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 72
+GR_EINH_UNABH3            = '°C'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$---------------------------------------------Torque Loss Map
+(VERZAHNUNGSVERLUSTE)
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+  0.0            0.0            0.0            0.0         
+  0.0            0.0            200.0          10.0        
+  0.0            0.0            500.0          25.0        
+  0.0            3250.0         0.0            0.0         
+  0.0            3250.0         200.0          10.0        
+  0.0            3250.0         500.0          25.0        
+  0.0            6500.0         0.0            0.0         
+  0.0            6500.0         200.0          10.0        
+  0.0            6500.0         500.0          25.0        
+  1.0            0.0            0.0            0.0         
+  1.0            0.0            200.0          10.0        
+  1.0            0.0            500.0          25.0        
+  1.0            3250.0         0.0            0.0         
+  1.0            3250.0         200.0          10.0        
+  1.0            3250.0         500.0          25.0        
+  1.0            6500.0         0.0            0.0         
+  1.0            6500.0         200.0          10.0        
+  1.0            6500.0         500.0          25.0        
+  2.0            0.0            0.0            0.0         
+  2.0            0.0            200.0          10.0        
+  2.0            0.0            500.0          25.0        
+  2.0            3250.0         0.0            0.0         
+  2.0            3250.0         200.0          10.0        
+  2.0            3250.0         500.0          25.0        
+  2.0            6500.0         0.0            0.0         
+  2.0            6500.0         200.0          10.0        
+  2.0            6500.0         500.0          25.0        
+  3.0            0.0            0.0            0.0         
+  3.0            0.0            200.0          10.0        
+  3.0            0.0            500.0          25.0        
+  3.0            3250.0         0.0            0.0         
+  3.0            3250.0         200.0          10.0        
+  3.0            3250.0         500.0          25.0        
+  3.0            6500.0         0.0            0.0         
+  3.0            6500.0         200.0          10.0        
+  3.0            6500.0         500.0          25.0        
+  4.0            0.0            0.0            0.0         
+  4.0            0.0            200.0          10.0        
+  4.0            0.0            500.0          25.0        
+  4.0            3250.0         0.0            0.0         
+  4.0            3250.0         200.0          10.0        
+  4.0            3250.0         500.0          25.0        
+  4.0            6500.0         0.0            0.0         
+  4.0            6500.0         200.0          10.0        
+  4.0            6500.0         500.0          25.0        
+  5.0            0.0            0.0            0.0         
+  5.0            0.0            200.0          10.0        
+  5.0            0.0            500.0          25.0        
+  5.0            3250.0         0.0            0.0         
+  5.0            3250.0         200.0          10.0        
+  5.0            3250.0         500.0          25.0        
+  5.0            6500.0         0.0            0.0         
+  5.0            6500.0         200.0          10.0        
+  5.0            6500.0         500.0          25.0        
+$----------------------------------------------Efficiency Map
+(VERZAHNUNGSWIRKUNGSGRAD) 4
+#GET_ID                   = 
+#GET_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$====================================================================T1
+(VERZAHNUNGSVERLUSTE_T1)
+#VVT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERZAHNUNGSVERLUSTE1)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(VERZAHNUNGSWIRKUNGSGRAD1)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$====================================================================T2
+(VERZAHNUNGSVERLUSTE_T2)
+#VVT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERZAHNUNGSVERLUSTE2)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(VERZAHNUNGSWIRKUNGSGRAD2)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$====================================================================T3
+(VERZAHNUNGSVERLUSTE_T3)
+#VVT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERZAHNUNGSVERLUSTE3)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(VERZAHNUNGSWIRKUNGSGRAD3)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$====================================================================T4
+(VERZAHNUNGSVERLUSTE_T4)
+#VVT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERZAHNUNGSVERLUSTE4)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(VERZAHNUNGSWIRKUNGSGRAD4)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$====================================================================T5
+(VERZAHNUNGSVERLUSTE_T5)
+#VVT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERZAHNUNGSVERLUSTE5)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(VERZAHNUNGSWIRKUNGSGRAD5)
+#VVT_ID                   = 
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 11
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 10
+GR_EINH_UNABH3            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 GR_WERT_ABH }
+$==================================================================Info
+(GETRIEBE_IFO)
+#IFO_ID                   = 
+MAX_IN_TORQUE <Nm>        = 
+NUMBER_OF_GEARS <>        = 
+INFO_TEXT                 = ''
+$=============================================Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 4
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Final Drive Rear'
+IDENTIF_ATTR1             = 'Axle Transmission'
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+IFO_ID                    = 
+UEBERSETZUNGSVERHAELTNIS  = 3.0
+ZAEHNEZAHL_EINGANG        = 
+ZAEHNEZAHL_AUSGANG        = 
+TRAMOM_EINGANG <kg*m^2>   = 0.008
+TRAMOM_AUSGANG <kg*m^2>   = 0.015
+VMT1_ID                   = 
+VMT2_ID                   = 
+VMT3_ID                   = 
+VMT4_ID                   = 
+VMT5_ID                   = 
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$--------------------------------------------Efficiency Fixed
+(WIRKUNGSGRAD_FEST)
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+WIRKUNGSGRAD              = 0.97
+$--------------------------------Torque Loss Correction Fixed
+(VERLUSTMOMENT_FEST)
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0.0           0.0         
+  10000.0       0.0         
+$----------------Torque Loss Correction Temperature Dependent
+(VERLUSTMOMENT_TEMP)
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 72
+GR_EINH_UNABH2            = '°C'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT)
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+  0.0            0.0            0.0         
+  0.0            450.0          2.0         
+  0.0            900.0          4.0         
+  3500.0         0.0            0.0         
+  3500.0         450.0          12.0        
+  3500.0         900.0          25.0        
+  7500.0         0.0            0.0         
+  7500.0         450.0          15.0        
+  7500.0         900.0          30.0        
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD) 5
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T1
+(VERLUSTMOMENT_T1)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT1)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD1)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T2
+(VERLUSTMOMENT_T2)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT2)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD2)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T3
+(VERLUSTMOMENT_T3)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT3)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD3)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T4
+(VERLUSTMOMENT_T4)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT4)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD4)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T5
+(VERLUSTMOMENT_T5)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT5)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD5)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$==================================================================Info
+(UEBERSETZUNGSSTUFE_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$=============================================Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 5
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Final Drive Front'
+IDENTIF_ATTR1             = 'Axle Transmission'
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+IFO_ID                    = 
+UEBERSETZUNGSVERHAELTNIS  = 3.0
+ZAEHNEZAHL_EINGANG        = 
+ZAEHNEZAHL_AUSGANG        = 
+TRAMOM_EINGANG <kg*m^2>   = 0.008
+TRAMOM_AUSGANG <kg*m^2>   = 0.015
+VMT1_ID                   = 
+VMT2_ID                   = 
+VMT3_ID                   = 
+VMT4_ID                   = 
+VMT5_ID                   = 
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$--------------------------------------------Efficiency Fixed
+(WIRKUNGSGRAD_FEST)
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+WIRKUNGSGRAD              = 0.97
+$--------------------------------Torque Loss Correction Fixed
+(VERLUSTMOMENT_FEST)
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH             = 11
+GR_EINH_UNABH             = '1/min'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0.0           0.0         
+  10000.0       0.0         
+$----------------Torque Loss Correction Temperature Dependent
+(VERLUSTMOMENT_TEMP)
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 72
+GR_EINH_UNABH2            = '°C'
+GR_NAME_ABH               = 76
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT)
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 10
+YRASTER                   = 10
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+  0.0            0.0            0.0         
+  0.0            450.0          2.0         
+  0.0            900.0          4.0         
+  3500.0         0.0            0.0         
+  3500.0         450.0          12.0        
+  3500.0         900.0          25.0        
+  7500.0         0.0            0.0         
+  7500.0         450.0          15.0        
+  7500.0         900.0          30.0        
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD) 6
+#UES_ID                   = 
+#UES_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T1
+(VERLUSTMOMENT_T1)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT1)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD1)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T2
+(VERLUSTMOMENT_T2)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT2)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD2)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T3
+(VERLUSTMOMENT_T3)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT3)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD3)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T4
+(VERLUSTMOMENT_T4)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT4)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD4)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$====================================================================T5
+(VERLUSTMOMENT_T5)
+#VMT_ID                   = 
+TEMPERATUR <°C>           = 
+$---------------------------------------------Torque Loss Map
+(VERLUSTMOMENT5)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 75
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 20
+YRASTER                   = 20
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 0
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$----------------------------------------------Efficiency Map
+(UESTUFE_WIRKUNGSGRAD5)
+#VMT_ID                   = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 10
+GR_EINH_UNABH2            = 'Nm'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$==================================================================Info
+(UEBERSETZUNGSSTUFE_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$===================================================================Hub
+[NABE] 6
+DATENSATZ_VERANTWORTLICHER = ''
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Hub FR'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#NAB_ID                   = 
+#NAB_ENTW_DATUM           = "Jun 30, 2010 17:34:16"
+IFO_ID                    = 
+TRAEGHEITSMOMENT <kg*m^2> = 0.6
+#NAB_ID                   = 
+#NAB_ENTW_DATUM           = "Jun 30, 2010 17:34:16"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$==================================================================Info
+(NABE_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$===================================================================Hub
+[NABE] 7
+DATENSATZ_VERANTWORTLICHER = ''
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Hub FL'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#NAB_ID                   = 
+#NAB_ENTW_DATUM           = "Jun 30, 2010 17:34:16"
+IFO_ID                    = 
+TRAEGHEITSMOMENT <kg*m^2> = 0.6
+#NAB_ID                   = 
+#NAB_ENTW_DATUM           = "Jun 30, 2010 17:34:16"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$==================================================================Info
+(NABE_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$===================================================================Hub
+[NABE] 8
+DATENSATZ_VERANTWORTLICHER = ''
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Hub RR'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#NAB_ID                   = 
+#NAB_ENTW_DATUM           = "Jun 30, 2010 17:34:16"
+IFO_ID                    = 
+TRAEGHEITSMOMENT <kg*m^2> = 0.6
+#NAB_ID                   = 
+#NAB_ENTW_DATUM           = "Jun 30, 2010 17:34:16"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$==================================================================Info
+(NABE_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$===================================================================Hub
+[NABE] 9
+DATENSATZ_VERANTWORTLICHER = ''
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Hub RL'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#NAB_ID                   = 
+#NAB_ENTW_DATUM           = "Jun 30, 2010 17:34:16"
+IFO_ID                    = 
+TRAEGHEITSMOMENT <kg*m^2> = 0.6
+#NAB_ID                   = 
+#NAB_ENTW_DATUM           = "Jun 30, 2010 17:34:16"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$==================================================================Info
+(NABE_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$==========================================================Differential
+[DIFFERENTIAL] 10
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Rear Differential'
+IDENTIF_ATTR1             = 'unlocked'
+IDENTIF_ATTR2             = 'Split Factor 1'
+IDENTIF_ATTR3             = ''
+#DIF_ID                   = 
+#DIF_ENTW_DATUM           = "Nov 04, 1998 18:11:33"
+IFO_ID                    = 
+VG_BETRIEBSART            = 1
+VG_BASISVERTEILUNG        = 1.0
+TRAMOM_EINGANG <kg*m^2>   = 0.015
+TRAMOM_AUSGANG <kg*m^2>   = 0.015
+TRAMOM_AUSGANG2 <kg*m^2>  = 0.015
+#DIF_ID                   = 
+#DIF_ENTW_DATUM           = "Nov 04, 1998 18:11:33"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$---------------------------------------Stationary Efficiency
+(DIF_STANDWIRKUNGSGRAD)
+#DIF_ID                   = 
+#DIF_ENTW_DATUM           = "Nov 04, 1998 18:11:33"
+WIRKUNGSGRAD              = 
+$==================================================================Info
+(DIFFERENTIAL_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$==========================================================Differential
+[DIFFERENTIAL] 11
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Front Differential'
+IDENTIF_ATTR1             = 'unlocked'
+IDENTIF_ATTR2             = 'Split Factor 1'
+IDENTIF_ATTR3             = ''
+#DIF_ID                   = 
+#DIF_ENTW_DATUM           = "Nov 04, 1998 18:11:33"
+IFO_ID                    = 
+VG_BETRIEBSART            = 1
+VG_BASISVERTEILUNG        = 1.0
+TRAMOM_EINGANG <kg*m^2>   = 0.015
+TRAMOM_AUSGANG <kg*m^2>   = 0.015
+TRAMOM_AUSGANG2 <kg*m^2>  = 0.015
+#DIF_ID                   = 
+#DIF_ENTW_DATUM           = "Nov 04, 1998 18:11:33"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$---------------------------------------Stationary Efficiency
+(DIF_STANDWIRKUNGSGRAD)
+#DIF_ID                   = 
+#DIF_ENTW_DATUM           = "Nov 04, 1998 18:11:33"
+WIRKUNGSGRAD              = 
+$==================================================================Info
+(DIFFERENTIAL_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$==========================================================Differential
+[DIFFERENTIAL] 12
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Central Differential'
+IDENTIF_ATTR1             = 'unlocked'
+IDENTIF_ATTR2             = 'Split Factor 1'
+IDENTIF_ATTR3             = ''
+#DIF_ID                   = 
+#DIF_ENTW_DATUM           = "Nov 04, 1998 18:11:33"
+IFO_ID                    = 
+VG_BETRIEBSART            = 1
+VG_BASISVERTEILUNG        = 1.0
+TRAMOM_EINGANG <kg*m^2>   = 0.015
+TRAMOM_AUSGANG <kg*m^2>   = 0.015
+TRAMOM_AUSGANG2 <kg*m^2>  = 0.015
+#DIF_ID                   = 
+#DIF_ENTW_DATUM           = "Nov 04, 1998 18:11:33"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$---------------------------------------Stationary Efficiency
+(DIF_STANDWIRKUNGSGRAD)
+#DIF_ID                   = 
+#DIF_ENTW_DATUM           = "Nov 04, 1998 18:11:33"
+WIRKUNGSGRAD              = 
+$==================================================================Info
+(DIFFERENTIAL_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$===============================================================Cockpit
+[COCKPIT] 13
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Cockpit'
+IDENTIF_ATTR1             = 'passenger car'
+IDENTIF_ATTR2             = 'automatic'
+IDENTIF_ATTR3             = ''
+#CKP_ID                   = 
+#CKP_ENTW_DATUM           = "Jul 20, 2010 18:06:26"
+IFO_ID                    = 
+SCHALTMODUS               = 2
+ANZ_SCHALTSTUFEN_VORWAERTS = 5
+ANZ_SCHALTSTUFEN_RUECKWAERTS = 1
+BREMSKRAFTMAXIMUM <N>     = 100.0
+BREMSLICHTSCHALTERSCHWELLE <%> = 1.0
+$ --> RETARDERSTUFEN geaendert in ANZ_RETARDERSTUFEN
+ANZ_RETARDERSTUFEN        = 0
+GR_EINH_UNABH1            = '1/min'
+GR_EINH_ABH               = 'Nm'
+#CKP_ID                   = 
+#CKP_ENTW_DATUM           = "Jul 20, 2010 18:06:26"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$------------------------------------Acceleration Pedal Curve
+(FAHRPEDALCHARAKTER)
+#CKP_ID                   = 
+#CKP_ENTW_DATUM           = "Jul 20, 2010 18:06:26"
+GR_NAME_UNABH             = 32
+GR_EINH_UNABH             = '%'
+GR_NAME_ABH               = 48
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0.0           0.0         
+  100.0         100.0       
+$--------------------------------------Acceleration Pedal Map
+(FAHRPEDALKENNFELD)
+#CKP_ID                   = 
+#CKP_ENTW_DATUM           = "Jul 20, 2010 18:06:26"
+IDX                       = 1
+BERECHNEN                 = 2
+#CKP_ID                   = 
+#CKP_ENTW_DATUM           = "Jul 20, 2010 18:06:26"
+IDX                       = 1
+GESCHWINDIGKEIT_VON <km/h> = 
+GESCHWINDIGKEIT_BIS <km/h> = 
+GANG_VON <->              = 
+GANG_BIS <->              = 
+GR_NAME_UNABH1            = 11
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 32
+GR_EINH_UNABH2            = '%'
+GR_NAME_ABH               = 10
+GR_EINH_ABH               = 'Nm'
+TP_ID                     = 
+XRASTER                   = 30
+YRASTER                   = 30
+EPSAPPROX                 = 1.0e-5
+TOLRADIUS                 = 1.0
+EQUIDIST                  = 1
+GRIDCHECK                 = 1
+APPROXIMATION             = 0
+TRIMAPAPP                 = 1
+EXTRAPOL_MODE             = 2
+OBJEKTMODE                = 1
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH }
+$---------------------------------Clutch Pedal Characteristic
+(KUPPLUNGSPEDALCHARAKTER)
+#CKP_ID                   = 
+#CKP_ENTW_DATUM           = "Jul 20, 2010 18:06:26"
+GR_NAME_UNABH             = 45
+GR_EINH_UNABH             = '%'
+GR_NAME_ABH               = 44
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0.0           0.0         
+  100.0         100.0       
+$----------------------------------Brake Pedal Characteristic
+(BREMSPEDALCHARAKTER)
+#CKP_ID                   = 
+#CKP_ENTW_DATUM           = "Jul 20, 2010 18:06:26"
+GR_NAME_UNABH             = 8
+GR_EINH_UNABH             = '%'
+GR_NAME_ABH               = 7
+GR_EINH_ABH               = 'bar'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0.0           0.0         
+  100.0         180.0       
+$==================================================================Info
+(COCKPIT_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$======================================================Gear Box Control
+[GETRIEBESTEUERUNG] 14
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'GB Control'
+IDENTIF_ATTR1             = '5 speed'
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#MGST_ID                  = 
+#MGST_ENTW_DATUM          = "Nov 05, 1998 02:11:48"
+IFO_ID                    = 
+#MGST_ID                  = 
+#MGST_ENTW_DATUM          = "Nov 05, 1998 02:11:48"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$------------------------------Shifting According to Velocity
+(GS_FAHRGESCHWINDIGKEITEN)
+#MGST_ID                  = 
+#MGST_ENTW_DATUM          = "Nov 05, 1998 02:11:48"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 38
+GR_EINH_ABH1              = 'km/h'
+GR_NAME_ABH2              = 37
+GR_EINH_ABH2              = 'km/h'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+  1             25.0         23.0         
+  2             50.0         38.0         
+  3             75.0         60.0         
+  4             100.0        70.0         
+$---------------------------------Shifting According to Speed
+(GS_DREHZAHLEN)
+#MGST_ID                  = 
+#MGST_ENTW_DATUM          = "Nov 05, 1998 02:11:48"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 38
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 37
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+  1             3000.0       1500.0       
+  2             3000.0       1500.0       
+  3             3000.0       1500.0       
+  4             3000.0       1500.0       
+$----------------Shifting According to Speed in the next Gear
+(GS_ANSCHLUSSDREHZAHLEN)
+#MGST_ID                  = 
+#MGST_ENTW_DATUM          = "Nov 05, 1998 02:11:48"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 38
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 37
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+  1             2000.0       2500.0       
+  2             2000.0       2500.0       
+  3             2000.0       2500.0       
+  4             2000.0       2500.0       
+$-----------------------------------Delay Time Gear Dependent
+(SCHALTVERZUGZEIT)
+#MGST_ID                  = 
+#MGST_ENTW_DATUM          = "Nov 05, 1998 02:11:48"
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_ABH1              = 82
+GR_EINH_ABH1              = 's'
+GR_NAME_ABH2              = 82
+GR_EINH_ABH2              = 's'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_ABH1 GR_WERT_ABH2 }
+$==================================================================Info
+(GETRIEBESTEUERUNG_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$======================================================Gear Box Program
+[GETRIEBEPROGRAMM] 15
+DATENSATZ_VERANTWORTLICHER = 'Support Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'GB Program'
+IDENTIF_ATTR1             = '5 speed'
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+IFO_ID                    = 
+GPR_ID1                   = 
+GPR_ENTW_DATUM1           = "Nov 04, 2002 02:09:48"
+GPR_ID2                   = 
+GPR_ENTW_DATUM2           = "Sep 02, 2010 14:05:06"
+GPR_ID3                   = 
+GPR_ENTW_DATUM3           = "Sep 02, 2010 14:05:06"
+GPR_ID4                   = 
+GPR_ENTW_DATUM4           = "Sep 02, 2010 14:05:06"
+GPR_ID5                   = 
+GPR_ENTW_DATUM5           = "Sep 02, 2010 14:05:06"
+GR_DUMMY                  = '1/min'
+GR_DUMMY_NEU              = '1/min'
+SCHALTPROG_KICKDOWN_SELECT = 0
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$====================================================Shifting Program 1
+(SCHALTPROGRAMM)
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+DATENSATZ_VERANTWORTLICHER = ''
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 47
+GR_EINH_UNABH2            = '%'
+GR_NAME_ABH1              = 23
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 22
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 GR_WERT_ABH2 }
+  1              0.0            770.0        510.0        
+  1              20.0           770.0        510.0        
+  1              30.0           770.0        510.0        
+  1              40.0           770.0        510.0        
+  1              60.0           1200.0       780.0        
+  1              65.0           1290.0       848.0        
+  1              72.0           1420.0       942.0        
+  1              80.0           1550.0       1050.0       
+  1              100.0          1550.0       1050.0       
+  2              0.0            1250.0       890.0        
+  2              20.0           1250.0       890.0        
+  2              30.0           1250.0       890.0        
+  2              40.0           1250.0       890.0        
+  2              60.0           1950.0       1285.0       
+  2              65.0           2125.0       1384.0       
+  2              72.0           2370.0       1522.0       
+  2              80.0           2650.0       1680.0       
+  2              100.0          2650.0       1680.0       
+  3              0.0            1820.0       1380.0       
+  3              20.0           1820.0       1380.0       
+  3              30.0           1820.0       1380.0       
+  3              40.0           2350.0       1700.0       
+  3              60.0           3300.0       2250.0       
+  3              65.0           3550.0       2392.0       
+  3              72.0           3900.0       2590.0       
+  3              80.0           3900.0       2590.0       
+  3              100.0          3900.0       2590.0       
+  4              0.0            2500.0       2000.0       
+  4              20.0           2500.0       2000.0       
+  4              30.0           3100.0       2400.0       
+  4              40.0           3800.0       2800.0       
+  4              60.0           5100.0       3500.0       
+  4              65.0           5460.0       3700.0       
+  4              72.0           5460.0       3700.0       
+  4              80.0           5460.0       3700.0       
+  4              100.0          5460.0       3700.0       
+$--------------------------------------------Input Assistance
+(VIRT_SCHALTPROGRAM_TP)
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 }
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH2 }
+$====================================================Shifting Program 2
+(SCHALTPROGRAMM2)
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Sep 02, 2010 14:05:06"
+DATENSATZ_VERANTWORTLICHER = ''
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 47
+GR_EINH_UNABH2            = '%'
+GR_NAME_ABH1              = 23
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 22
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 GR_WERT_ABH2 }
+$--------------------------------------------Input Assistance
+(VIRT_SCHALTPROGRAM2_TP)
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 }
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH2 }
+$====================================================Shifting Program 3
+(SCHALTPROGRAMM3)
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Sep 02, 2010 14:05:06"
+DATENSATZ_VERANTWORTLICHER = ''
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 47
+GR_EINH_UNABH2            = '%'
+GR_NAME_ABH1              = 23
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 22
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 GR_WERT_ABH2 }
+$--------------------------------------------Input Assistance
+(VIRT_SCHALTPROGRAM3_TP)
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 }
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH2 }
+$====================================================Shifting Program 4
+(SCHALTPROGRAMM4)
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Sep 02, 2010 14:05:06"
+DATENSATZ_VERANTWORTLICHER = ''
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 47
+GR_EINH_UNABH2            = '%'
+GR_NAME_ABH1              = 23
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 22
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 GR_WERT_ABH2 }
+$--------------------------------------------Input Assistance
+(VIRT_SCHALTPROGRAM4_TP)
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 }
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH2 }
+$====================================================Shifting Program 5
+(SCHALTPROGRAMM5)
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Sep 02, 2010 14:05:06"
+DATENSATZ_VERANTWORTLICHER = ''
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 47
+GR_EINH_UNABH2            = '%'
+GR_NAME_ABH1              = 23
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 22
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 GR_WERT_ABH2 }
+$--------------------------------------------Input Assistance
+(VIRT_SCHALTPROGRAM5_TP)
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 }
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH2 }
+$----------------------------------Optimized Shifting Program
+(SCHALTPROGRAMM_OPTIMIERT)
+FAHRLEISTUNG_GEWICHT      = 1.0
+FAHRBARKEIT_GEWICHT       = 1.0
+#GPR_ID                   = 
+DATENSATZ_VERANTWORTLICHER = ''
+BEMERKUNG                 = ''
+#GPR_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 47
+GR_EINH_UNABH2            = '%'
+GR_NAME_ABH1              = 23
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 22
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 GR_WERT_ABH2 }
+$--------------------------------------------Input Assistance
+(VIRT_SCHALTPROGRAMM_OPTIMIERT_TP)
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 }
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH2 }
+$----------------------------------------------Kickdown Table
+(KICKDOWNTABELLE)
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 23
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 22
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+$---------------------------------Shifting Program Data Sheet
+(SCHALTPROG_KICKDOWN)
+BERECHNEN                 = 2
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+IDX                       = 1
+SP_ID                     = 
+SP_ENTW_DATUM             = "Sep 02, 2010 14:05:06"
+KD_ID                     = 
+KD_ENTW_DATUM             = 
+$======================================================Shifting Program
+(SCHALTPROGRAMM_NEU)
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Sep 02, 2010 14:05:06"
+DATENSATZ_VERANTWORTLICHER = ''
+BEMERKUNG                 = ''
+GR_NAME_UNABH1            = 33
+GR_EINH_UNABH1            = '-'
+GR_NAME_UNABH2            = 47
+GR_EINH_UNABH2            = '%'
+GR_NAME_ABH1              = 23
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 22
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 GR_WERT_ABH2 }
+$--------------------------------------------Input Assistance
+(VIRT_SCHALTPROGRAMM_NEU_TP)
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH1 }
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_ABH2 }
+$========================================================Kickdown Table
+(KICKDOWNTABELLE_NEU)
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = 
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 23
+GR_EINH_ABH1              = '1/min'
+GR_NAME_ABH2              = 22
+GR_EINH_ABH2              = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+$----------------------------------------Shift Remaining Time
+(SCHALTVERWEILDAUER)
+#GPR_ID                   = 
+#GPR_ENTW_DATUM           = "Nov 04, 2002 02:09:48"
+GR_NAME_UNABH             = 33
+GR_EINH_UNABH             = '-'
+GR_NAME_ABH1              = 82
+GR_EINH_ABH1              = 's'
+GR_NAME_ABH2              = 82
+GR_EINH_ABH2              = 's'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH1 GR_WERT_ABH2 }
+$==================================================================Info
+(GETRIEBEPROGRAMM_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$=====================================================Anti Slip Control
+[SCHLUPFREGELUNG] 16
+DATENSATZ_VERANTWORTLICHER = 'CST CV'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'ASC'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#ASC_ID                   = 
+#ASC_ENTW_DATUM           = "Nov 03, 1999 01:16:17"
+IFO_ID                    = 
+PROPORTIONAL_FAKTOR_SR    = 
+DIFFERENTIAL_FAKTOR_SR <s> = 
+INTEGRAL_FAKTOR_SR <1/s>  = 
+#ASC_ID                   = 
+#ASC_ENTW_DATUM           = "Nov 03, 1999 01:16:17"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$==================================================================Info
+(SCHLUPFREGELUNG_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$========================================================Exhaust System
+[ABGASANLAGE] 17
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Catalyst'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#KAT_ID                   = 
+#KAT_ENTW_DATUM           = "Nov 08, 2009 21:11:20"
+IFO_ID                    = 
+WAERMEVERLUSTFAKTOR       = 0.93
+KAT_GEW <kg>              = 11.0
+SPEZ_WAERMEKAPAZITAET_KAT <J/(kg*K)> = 210.0
+BEZUGSFLAECHE_WAERMEAUSTAUSCH <m^2> = 0.27
+WAERMEUEBERGANGSKOEFF_KAT_LUFT <W/(m^2*K)> = 25.0
+KAT_BETRIEBSTEMPERATUR <°C> = 450.0
+#KAT_ID                   = 
+#KAT_ENTW_DATUM           = "Nov 08, 2009 21:11:20"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$-----------------------------------NOX Conversion Efficiency
+(WIRKUNGSGRAD_NOX)
+#KAT_ID                   = 
+#KAT_ENTW_DATUM           = "Nov 08, 2009 21:11:20"
+GR_NAME_UNABH             = 72
+GR_EINH_UNABH             = '°C'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '-'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0.0           0.0         
+  170.0         0.0         
+  180.0         0.003       
+  190.0         0.007       
+  200.0         0.013       
+  210.0         0.021       
+  215.0         0.031       
+  220.0         0.045       
+  225.0         0.1         
+  230.0         0.16        
+  235.0         0.22        
+  240.0         0.32        
+  245.0         0.485       
+  250.0         0.67        
+  255.0         0.83        
+  260.0         0.92        
+  265.0         0.975       
+  270.0         0.992       
+  280.0         0.996       
+  290.0         0.997       
+  300.0         0.997       
+  400.0         0.996       
+  1000.0        0.996       
+$------------------------------------CO Conversion Efficiency
+(WIRKUNGSGRAD_CO)
+#KAT_ID                   = 
+#KAT_ENTW_DATUM           = "Nov 08, 2009 21:11:20"
+GR_NAME_UNABH             = 72
+GR_EINH_UNABH             = '°C'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '-'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0.0           0.0         
+  170.0         0.0         
+  180.0         0.003       
+  190.0         0.007       
+  200.0         0.013       
+  210.0         0.021       
+  215.0         0.031       
+  220.0         0.045       
+  225.0         0.1         
+  230.0         0.16        
+  235.0         0.22        
+  240.0         0.32        
+  245.0         0.485       
+  250.0         0.67        
+  255.0         0.83        
+  260.0         0.92        
+  265.0         0.975       
+  270.0         0.992       
+  280.0         0.996       
+  290.0         0.997       
+  300.0         0.997       
+  400.0         0.996       
+  1000.0        0.996       
+$------------------------------------HC Conversion Efficiency
+(WIRKUNGSGRAD_HC)
+#KAT_ID                   = 
+#KAT_ENTW_DATUM           = "Nov 08, 2009 21:11:20"
+GR_NAME_UNABH             = 72
+GR_EINH_UNABH             = '°C'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '-'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  0.0           0.0         
+  170.0         0.0         
+  180.0         0.003       
+  190.0         0.007       
+  200.0         0.013       
+  210.0         0.021       
+  215.0         0.031       
+  220.0         0.045       
+  225.0         0.1         
+  230.0         0.16        
+  235.0         0.22        
+  240.0         0.32        
+  245.0         0.485       
+  250.0         0.67        
+  255.0         0.83        
+  260.0         0.92        
+  265.0         0.975       
+  270.0         0.992       
+  280.0         0.996       
+  290.0         0.997       
+  300.0         0.997       
+  400.0         0.996       
+  1000.0        0.996       
+$----------------------------------Soot Conversion Efficiency
+(WIRKUNGSGRAD_RUSS)
+#KAT_ID                   = 
+#KAT_ENTW_DATUM           = "Nov 08, 2009 21:11:20"
+GR_NAME_UNABH             = 72
+GR_EINH_UNABH             = '°C'
+GR_NAME_ABH               = 80
+GR_EINH_ABH               = '-'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  -100.0        0.0         
+  1000.0        0.0         
+$---------------------------------------Heat Transfer Gas/Cat
+(WAERMEUEBERGANG_ABG_KAT)
+#KAT_ID                   = 
+#KAT_ENTW_DATUM           = "Nov 08, 2009 21:11:20"
+GR_NAME_UNABH             = 72
+GR_EINH_UNABH             = '°C'
+GR_NAME_ABH               = 81
+GR_EINH_ABH               = '%'
+TP_ID                     = 
+{ GR_WERT_UNABH GR_WERT_ABH }
+  -30.0         41.0        
+  210.0         39.0        
+  270.0         65.0        
+  500.0         64.0        
+  600.0         64.0        
+  1000.0        64.0        
+$==================================================================Info
+(ABGASANLAGE_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$===============================================================Monitor
+[MONITOR] 18
+DATENSATZ_VERANTWORTLICHER = 'Support-Team'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Monitor'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#MON_ID                   = 
+#MON_ENTW_DATUM           = "Nov 01, 2005 15:17:47"
+IFO_ID                    = 
+TP_ID                     = 
+#MON_ID                   = 
+#MON_ENTW_DATUM           = "Nov 01, 2005 15:17:47"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$-------------------------------------Description of Data Bus
+(DATENBUSBEZEICHNUNG)
+{ ATTRIBUT NAME                   EINHEIT }
+  'INPUT0' 'Vehicle Acceleration' 'm/s^2' 
+  'INPUT1' 'Vehicle Velocity'     'km/h'  
+  'INPUT2' 'Vehicle Distance'     'm'     
+  'INPUT3' 'Engine Load Signal'   '-'     
+  'INPUT4' 'Engine Speed'         '1/min' 
+$==================================================================Info
+(MONITOR_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''
+$================================================================CarSim
+[CAR_SIM] 19
+DATENSATZ_VERANTWORTLICHER = ''
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = ''
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#CSIM_ID                  = 
+#CSIM_ENTW_DATUM          = "Sep 02, 2010 14:05:06"
+IFO_ID                    = 
+TP_ID                     = 
+MLI_LABEL                 = 'CarSim'
+#CSIM_ID                  = 
+#CSIM_ENTW_DATUM          = "Sep 02, 2010 14:05:06"
+RESULT_NAME               = ''
+RESULT_GROUP              = ''
+$==================================================================Info
+(CAR_SIM_IFO)
+#IFO_ID                   = 
+INFO_TEXT                 = ''

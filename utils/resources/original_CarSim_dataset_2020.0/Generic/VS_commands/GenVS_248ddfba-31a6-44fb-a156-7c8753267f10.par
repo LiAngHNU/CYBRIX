@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Generic VS Commands`Instant accel of CG`Tire force and moment
+#VehCode VS Commands
+
+#MiscYellow0
+! calculate the accleration vector angle and magnitude
+define_output acg_tot_mag = (Ax * Ax + Ay * Ay) ^0.5; g's;
+define_output acg_tot_yaw_rel = atan2(Ay, Ax); deg;
+define_output acg_tot_yaw_abs = acg_tot_yaw_rel + yaw; deg;
+#ENDMYellow
+
+PARSFILE Animator\Groups\Group_f19788cd-8a48-47eb-8e12-485ccb0cb06a.par
+#BlueLink0 Animator: Group`Instant accel of CG` Tire Force and Moment` , Miscellaneous`Group_f19788cd-8a48-47eb-8e12-485ccb0cb06a
+
+
+#EMBEDDED_NOTES
+#This dataset uses the current values of Ay and Ax to scale and orient an arrow shape to indicate the current acceleration vector at the vehicle CG
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Tire force and moment } Instant accel of CG
+#Library : Generic VS Commands
+#DataSet : Instant accel of CG
+#Category: Tire force and moment
+#FileID  : GenVS_248ddfba-31a6-44fb-a156-7c8753267f10
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

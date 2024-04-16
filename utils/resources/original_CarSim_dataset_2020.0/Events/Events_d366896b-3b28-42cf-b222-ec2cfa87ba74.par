@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Events`C. Set Reference Steering Wheel Angle`Slowly Increasing Steer Test
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T_EVENT
+*NAME2 OPT_WRITE
+*VALUE1 3
+*VALUE2 0
+*SPEED 80
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 0
+OPT_INIT_SPEED 0
+#MiscYellow0
+SWA_REF = STEER_SW
+OPT_WRITE WRITE_ALL
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par
+#BlueLink10 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Miscellaneous`StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT T_EVENT > 3 ; Events\Events_1574a9da-70d2-4a3a-b0e6-816d7f7d1d59.par
+#BlueLink0 Events`D. Slowly Decreasing Steer to Ay = -0.3g` Slowly Increasing Steer Test` , Events`Events_1574a9da-70d2-4a3a-b0e6-816d7f7d1d59
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Save the current Steer_SW value, set the SW  angle to zero, and start a timer to let the vehicle settle back to the zero steer condition. Stop writing to the output file during this period.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Slowly Increasing Steer Test } C. Set Reference Steering Wheel Angle
+#Library : Events
+#DataSet : C. Set Reference Steering Wheel Angle
+#Category: Slowly Increasing Steer Test
+#FileID  : Events_d366896b-3b28-42cf-b222-ec2cfa87ba74
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

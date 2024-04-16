@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan w/ K&C Reference Point`D-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_9db01fe3-394d-48d6-a479-13443fd2f924.par
+#BlueLink0 Vehicle: Assembly`D-Class, Sedan (No Passenger, for K&C)` D-Class` , Lead Unit`Vehicle_9db01fe3-394d-48d6-a479-13443fd2f924
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Output\Points\RefPt_e37d0f08-dc8d-464a-a0ca-a3be7bed5438.par
+#BlueLink6 Custom Forces and Reference Points`K and C Table (X=-1388mm, Z=200mm)` ` , Miscellaneous`RefPt_e37d0f08-dc8d-464a-a0ca-a3be7bed5438
+
+*FIT_MODE 1
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_ef0b8ec7-53a0-4fe9-b894-42e2dac69c22.png
+
+#EMBEDDED_NOTES
+#D-Class Sedan setup for K&C tests.
+#
+#A Reference Point is added to define the location of the custom forces and moments applied by the K&C table. The amplitudes of the custom forces and moments are defined elsewhere.
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { D-Class } D-Class, Sedan w/ K&C Reference Point
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : D-Class, Sedan w/ K&C Reference Point
+#Category: D-Class
+#FileID  : VehLoad_7cfccee9-8f78-4fac-ab05-e43827f0bc3b
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

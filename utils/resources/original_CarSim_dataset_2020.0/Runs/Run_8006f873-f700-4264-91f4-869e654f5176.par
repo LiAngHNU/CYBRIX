@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName CarSim Run Control`Hybrid: OL, Regen. Brk.100%`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8006f873-f700-4264-91f4-869e654f5176
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_d3f07569-3661-4ae1-9e3f-6da1342040eb.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hbk: Hybrid RWD, Regen. Brk.` B-Class` , Math Model`Vehicle_d3f07569-3661-4ae1-9e3f-6da1342040eb
+
+PARSFILE Procedures\Proc_96be71da-7554-4c77-ae09-58e2596d581e.par
+#BlueLink28 Procedures`Hybrid/Electric: Accel then Regen. Brk.` Accel. and Brake Testing` , Procedure`Proc_96be71da-7554-4c77-ae09-58e2596d581e
+
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink15 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink16 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_99e48c5c-b21e-4b39-b8ec-6aa8f61b800b.par
+#BlueLink17 Plot: Setup`Fuel Consumed (gallon)` Powertrain (Hybrid)` , Plot`Plot_99e48c5c-b21e-4b39-b8ec-6aa8f61b800b
+
+PARSFILE Plot\Setup\Plot_033b13aa-a635-4ea4-a1b3-cebbfea1b76b.par
+#BlueLink18 Plot: Setup`Miles per gallon` Powertrain (Hybrid)` , Plot`Plot_033b13aa-a635-4ea4-a1b3-cebbfea1b76b
+
+PARSFILE Plot\Setup\Plot_8077fc50-941c-45ed-a470-23f6069121a5.par
+#BlueLink19 Plot: Setup`Wheel Drive Torques` Powertrain` , Plot`Plot_8077fc50-941c-45ed-a470-23f6069121a5
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.png
+WRITE_SENSOR_DETECT
+Title Hybrid: OL, Regen. Brk.100% <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Hybrid: OL, Regen. Brk.100%
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with a hybrid powertrain is modeled within CarSim (GUI and math model).
+#
+#CarSim support for hybrid powertrains include an engine, hybrid powertrain assembly, and power management control.
+#
+#The Procedure is a Open-Loop Controls for the throttle and brake.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Hybrid: OL, Regen. Brk.100%
+#Library : CarSim Run Control
+#DataSet : Hybrid: OL, Regen. Brk.100%
+#Category: Powertrain Tests
+#FileID  : Run_8006f873-f700-4264-91f4-869e654f5176
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Transmision Clutch Control State`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ClutchTr, Time
+PLOTCHANNELS Cl_Stat, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Transmision Clutch Control State
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#ClutchTr
+#Transmission clutch
+#
+#Cl_Stat
+#Clutch lock status: 0 -> slipping, 1 -> locked.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Transmision Clutch Control State
+#Library : Plot: Setup
+#DataSet : Transmision Clutch Control State
+#Category: Powertrain
+#FileID  : Plot_acdda0e1-eda0-4f3c-9e9e-b60c57c7c4e8
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

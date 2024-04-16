@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Events`Update Best Time`Optimize Controls for Lap Time
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 delta
+*NAME2 delta
+*VALUE1 delta_tol
+*VALUE2 delta_tol
+#MiscYellow0
+best_time_so_far = current_lap_time
+#ENDMYellow
+
+MAKE_EVENT delta >= delta_tol ; Events\Events_708087d0-d3fd-4de2-8dbb-adf79fbb83c4.par
+#BlueLink0 Events`Set 1` Optimize Controls for Lap Time` , Events`Events_708087d0-d3fd-4de2-8dbb-adf79fbb83c4
+
+MAKE_EVENT delta < delta_tol ; Events\Events_b53e5378-5af8-4d36-bcf4-ce4b5c876e3e.par
+#BlueLink1 Events`Rerun Last Lap for Outputs` Optimize Controls for Lap Time` , Events`Events_b53e5378-5af8-4d36-bcf4-ce4b5c876e3e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#When delta, the amount a variable is changed when searching, is smaller than some tolerance, make a final run in order to record outputs. Otherwise, continue in the first search direction.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Optimize Controls for Lap Time } Update Best Time
+#Library : Events
+#DataSet : Update Best Time
+#Category: Optimize Controls for Lap Time
+#FileID  : Events_bdd87e8d-0e81-4f76-be64-c13767f86513
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

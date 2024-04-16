@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Vehicle: Sprung Mass (from Whole Vehicle)`Pickup, Full Size`
+#VehCode Rigid sprung mass (whole)
+iunit 1
+iaxle 2
+#CheckBox1 1    
+symbol_push_or_set <<hitch_x>> -5.09
+symbol_push_or_set <<hitch_y>> 0
+symbol_push_or_set <<hitch_z>> 0.35
+PARSFILE Hitches\Joint\Hitch_bcedf949-8612-4e6e-98e0-21c4f8e1c879.par
+#BlueLink1 Hitch: Joint Assembly`Ball Hitch` ` , Hitch`Hitch_bcedf949-8612-4e6e-98e0-21c4f8e1c879
+
+LX_H 5090
+H_H 350
+Y_H 0
+*M_TU 2298.44
+*LX_CG_TU 1376.63
+*Y_CG_TU 0.00
+M_SU 1998.44
+LX_CG_SU 1303.69
+Y_CG_SU 0.00
+H_CG_SU 796.49
+IXX_SU 844.41
+IYY_SU 5927.88
+IZZ_SU 5929.88
+IXY_SU 0.00
+IXZ_SU -4.50
+IYZ_SU 0.00
+L_WHEELBASE 3725
+*IXX_TU 985
+*IYY_TU 7095
+*IZZ_TU 7152
+*IXY_TU 0
+*IXZ_TU -62
+*IYZ_TU 0
+*H_CG_TU 745
+Z_LENGTH 1609
+Y_LENGTH 2392
+*HWC_LF 402
+*HWC_RF 402
+*HWC_LR 402
+*HWC_RR 402
+*W_LF 7105
+*W_RF 7105
+*W_LR 4165
+*W_RR 4165
+*M_US(1) 150
+*M_US(2) 150
+*IW(1) 1.1
+*IW(2) 1.1
+*L_TRACK(1) 2000
+*L_TRACK(2) 2000
+*IA(2) 50
+*IA(1) 50
+#RingCtrl0 2
+#RingCtrl1 0
+X_LENGTH 3725
+LX_AXLE 3725
+iaxle 1
+iside 1
+H_WC 402
+iside 2
+H_WC 402
+iaxle 2
+iside 1
+H_WC 402
+iside 2
+H_WC 402
+
+#EMBEDDED_NOTES
+#This is an example of a vehicle with two solid-axle suspensions that has been measured on scales and includes the unsprung mass. CarSim calculates the sprung mass properties from the entered data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Sprung Mass (from Whole Vehicle); Pickup, Full Size
+#Library : Vehicle: Sprung Mass (from Whole Vehicle)
+#DataSet : Pickup, Full Size
+#Category: 
+#FileID  : TotMass_e9c08da7-ab76-4bde-9b4a-e52cb857c95d
+#Product : CarSim 2020.0
+#VehCode Rigid sprung mass (whole)
+
+END

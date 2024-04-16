@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Vehicle: Sprung Mass`Pickup, Full Size, 8 ft. Bed, GN Hitch`Pickup Trucks
+#VehCode Rigid sprung mass
+#RingCtrl0 0
+#CheckBox2 1    
+X_LENGTH 4470
+Y_LENGTH 1500
+iaxle 2
+iside 1
+symbol_push_or_set <<hitch_x>> -4.35
+symbol_push_or_set <<hitch_y>> 0
+symbol_push_or_set <<hitch_z>> 1.1
+PARSFILE Hitches\Parameters\HchPar_828f0a72-c288-4f90-a946-de314a8caab1.par
+#BlueLink1 Hitch: Parameters`Gooseneck` ` , Hitch`HchPar_828f0a72-c288-4f90-a946-de314a8caab1
+
+LX_H 4350
+H_H 1100
+Y_H 0
+LX_AXLE 4470
+LX_CG_SU 1400
+M_SU 1998
+IXX_SU 846.6
+IYY_SU 5757
+IZZ_SU 5757
+IXZ_SU 0
+*RX 0.651
+*RY 1.697
+*RZ 1.697
+Y_CG_SU 0
+H_CG_SU 797
+IXY_SU 0
+IYZ_SU 0
+Z_LENGTH 1610
+Y_LENGTH 2392
+*HWC_LF 402
+*HWC_RF 402
+*HWC_LR 402
+*HWC_RR 402
+H_WC 402
+iside 2
+H_WC 402
+iaxle 1
+iside 1
+H_WC 402
+iside 2
+H_WC 402
+iaxle 2
+iside 1
+
+#EMBEDDED_NOTES
+#This example vehicle is meant to be used with the Gooseneck trailer. This truck has the trailer hitch located in the truck bed, above the rear axle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Sprung Mass; { Pickup Trucks } Pickup, Full Size, 8 ft. Bed, GN Hitch
+#Library : Vehicle: Sprung Mass
+#DataSet : Pickup, Full Size, 8 ft. Bed, GN Hitch
+#Category: Pickup Trucks
+#FileID  : SprMass_266e01ea-34f8-4f95-a743-3f479839155c
+#Product : CarSim 2020.0
+#VehCode Rigid sprung mass
+
+END

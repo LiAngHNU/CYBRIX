@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Mz from Fy and Pneumatic Trail vs Alpha`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS mz_fy_l1, Alpha_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Mz from Fy and Pneumatic Trail vs Alpha
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fy and Pneumatic Trail vs Alpha
+#Library : Plot: Setup
+#DataSet : Mz from Fy and Pneumatic Trail vs Alpha
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_9ff74ee3-819a-42ac-b06c-a1eba074faf6
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

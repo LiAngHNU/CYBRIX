@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName CarSim Run Control`LabVIEW Radar Active Cruise: First Car`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9f4f22af-0a09-41ee-baa3-02d6c4599c73
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\LabViewWin\LabVIEW_80ba37cc-1db4-42d9-8a5a-156498e32a69.par
+#BlueLink12 Models: LabVIEW for Windows (VI)`ACC 1st Car w/ Custom Timestep` labview_two_vehicles` , Models`LabVIEW_80ba37cc-1db4-42d9-8a5a-156498e32a69
+
+PARSFILE Animator\Cameras\Camera_6d843d53-9fb1-478e-846d-16cb6e63ce2b.par
+#BlueLink0 Animator: Camera Setup`355 Azm, 20 El, 49 m` Road Reference` , Animator camera`Camera_6d843d53-9fb1-478e-846d-16cb6e63ce2b
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 2
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_701439b7-a433-4650-b47a-29cdb58189e4.par
+#BlueLink28 Procedures`Radar Active Cruise Control: First Car` Sensors and Traffic` , Procedure`Proc_701439b7-a433-4650-b47a-29cdb58189e4
+
+
+SPECIAL_PARSFILE Runs\Run_89ac3bc9-9239-4210-bd70-78cb44615dac.par
+#BlueLink23 CarSim Run Control`LabVIEW Radar Active Cruise: Second Car` Simulink and LabVIEW Models` , Overlay run or ERD file`Run_89ac3bc9-9239-4210-bd70-78cb44615dac
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title LabVIEW Radar Active Cruise: First Car <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE LabVIEW Radar Active Cruise: First Car
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Blue Link in this example was updated in 2018 to use a modular solver dll.
+#
+#Note: This example works only with 32-bit LabView.
+#
+#This example is similar to Simulink: Radar Active Cruise: First Car (Ext. Sen.) and Second Car Ext. Sen.) except it is done in LabView.
+#
+#To run this example, follow the steps below.
+#1.  Live animator is not used with this example.  Make sure set it to 0. First click the "Send to LabVIEW" button from this screen.
+#
+#2. This will open LabView Front Panel and load i-i_ACC.vi.  Change the "Car 1 Simfile" and "Car 2 Simfile" paths on the bottom of the panel.  The easiest way to find your CarSim database path is to go to Help > About CarSim from your CarSim Window. File >Save in the Front Panel to save this new paths in i_i_ACC.vi. Leave the LabVIEW Front Panel open.
+#
+#3. Then go to the linked dataset for the second car, "Radar Active Cruise: Second Car (Ext. Sen.)" Click the “Send to LabVIEW” button. Wait for a couple of seconds and click Run (the white arrow icon on the top) in the LabVIEW Front Panel.
+#
+#4. After the run, you can look at the results from CarSim (for example, using Plot, Video, etc.)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } LabVIEW Radar Active Cruise: First Car
+#Library : CarSim Run Control
+#DataSet : LabVIEW Radar Active Cruise: First Car
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_9f4f22af-0a09-41ee-baa3-02d6c4599c73
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Autonomous Detection: 1 Other Car`Mult-Vehicle
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_c1fc9dee-8e96-46e8-bcd1-1db079bbb1e2\Run_imp_tab.txt
+
+#MiscYellow0
+#ENDMYellow
+
+#MiscYellow1
+DEFINE_IMPORT IMP_Car1_X
+DEFINE_IMPORT IMP_Car1_Y
+DEFINE_IMPORT IMP_Car1_Z
+DEFINE_IMPORT IMP_Car1_Roll
+DEFINE_IMPORT IMP_Car1_Pitch
+DEFINE_IMPORT IMP_Car1_Yaw
+IMPORT IMP_Car1_X
+IMPORT IMP_Car1_Y
+IMPORT IMP_Car1_Z
+IMPORT IMP_Car1_Roll
+IMPORT IMP_Car1_Pitch
+IMPORT IMP_Car1_Yaw
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`City Environment: Car 2` * CS 2020.0 - Multiple Autonomous Vehicles` , example run`Run_c1fc9dee-8e96-46e8-bcd1-1db079bbb1e2
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Mult-Vehicle } Autonomous Detection: 1 Other Car
+#Library : I/O Channels: Import
+#DataSet : Autonomous Detection: 1 Other Car
+#Category: Mult-Vehicle
+#FileID  : Import_08a3530e-42ae-487f-92fc-35f657b904d9
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

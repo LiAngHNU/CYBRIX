@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Baja Speed Limits NEW`Handling and Performance Driving
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Baja Speed Limits NEW
+#CheckBox2 0    
+#CheckBox3 0    
+*SCALAR 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 STEP
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 1    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE STEP
+300, 100
+330, 70
+371, 125
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Handling and Performance Driving } Baja Speed Limits NEW
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Baja Speed Limits NEW
+#Category: Handling and Performance Driving
+#FileID  : SpdTime_d60e5128-8552-47f6-9c2e-4ed14d450c2d
+#Product : CarSim 2020.0
+#VehCode Target Speed
+
+END

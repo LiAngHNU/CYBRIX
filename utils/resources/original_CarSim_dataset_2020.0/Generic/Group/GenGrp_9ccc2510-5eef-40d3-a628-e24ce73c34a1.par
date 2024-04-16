@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Generic Data Group`Lane Detection, 2 Edges, Lat_Veh`ADAS: Lane Detection Markers
+#VehCode Generic Group
+#MiscYellow0
+define_parameter Lane_Width = 3.85; m; ...
+  Lane width, used to calculate edge locations
+
+PATH_ID_DM = 1
+Current_Road_ID = 1
+#ENDMYellow
+
+
+#BlueLink1 ` , Link 2` , Link 2` , Link 2`
+
+
+#BlueLink2 ` , Link 3` , Link 3` , Link 3`
+
+
+#MiscYellow3
+define_output L_Edge_R = 0 ; m ; ...
+    L coordinate of right lane edge
+eq_out L_Edge_R = floor(Lat_Veh/Lane_Width)*Lane_Width
+symbol_push <<edge>> L_Edge_R
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_b64acc5f-1bc9-4ce6-aebb-63df11e870fd.par
+#BlueLink3 Multiple Moving Objects`5 Lane Edge Markers for [[Edge]]` Points of Interest` , Link 4`TMotion_b64acc5f-1bc9-4ce6-aebb-63df11e870fd
+
+
+#MiscYellow4
+define_output L_Edge_L = 0 ; m ; ...
+    L coordinate of left lane edge
+eq_out  L_Edge_L = L_Edge_R + Lane_Width
+symbol_set <<edge>> L_Edge_L
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_b64acc5f-1bc9-4ce6-aebb-63df11e870fd.par
+#BlueLink4 Multiple Moving Objects`5 Lane Edge Markers for [[Edge]]` Points of Interest` , Link 5`TMotion_b64acc5f-1bc9-4ce6-aebb-63df11e870fd
+
+
+PARSFILE Generic\VS_commands\GenVS_15a060e2-75e8-42c4-af05-f2466480d987.par
+#BlueLink5 Generic VS Commands`Lane Detection position plots` Plot Groups` , Link 6`GenVS_15a060e2-75e8-42c4-af05-f2466480d987
+
+
+
+#BlueLink7 ` , Link 8` , Link 8` , Link 8`
+
+
+
+
+#EMBEDDED_NOTES
+#Define 10 moving objects located on lane edges.
+#
+#The sensor is defined before the objects, because they use the coordinate X_SENSOR to define station S on the lane edge. The VS Commands for warnings and HUD  follows the sensor and objects, because it uses sensor detection variables.
+#
+#The target objects on the lane edges are located with the custom output variables L_Edge_L and L_Edge_R, defined here using the current vehcle location (Lat_Veh) and a user-defined parameter for lane width (Lane_Width).
+#
+#A Symbol Stack variable <<edge>> is defined to reuse the same dataset for two sets of edge markers.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Lane Detection Markers } Lane Detection, 2 Edges, Lat_Veh
+#Library : Generic Data Group
+#DataSet : Lane Detection, 2 Edges, Lat_Veh
+#Category: ADAS: Lane Detection Markers
+#FileID  : GenGrp_9ccc2510-5eef-40d3-a628-e24ce73c34a1
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

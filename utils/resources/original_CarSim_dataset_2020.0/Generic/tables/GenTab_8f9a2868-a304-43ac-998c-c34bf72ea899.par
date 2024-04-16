@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Generic Table`Controller Gains: KP3`Speed Controller: Accel Limits
+#RingCtrl0 LINEAR_FLAT
+#CheckBox0 0    
+
+#DiagramOne0
+K3_Vx_Tab_TABLE LINEAR_FLAT
+-10, 1
+-2.5, 0
+0, 0
+4.5, 0
+10, 1
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD K3_Vx_Tab
+*X_LABEL vx_err
+*Y_LABEL K3_Vx
+*SCALAR 1
+
+
+#EMBEDDED_NOTES
+#The path preview option in the speed controller allows the limits for acceleration to be functions of station and speed. This example defines the controller gain KP3.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Speed Controller: Accel Limits } Controller Gains: KP3
+#Library : Generic Table
+#DataSet : Controller Gains: KP3
+#Category: Speed Controller: Accel Limits
+#FileID  : GenTab_8f9a2868-a304-43ac-998c-c34bf72ea899
+#Product : CarSim 2020.0
+#VehCode table
+
+END

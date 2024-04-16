@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`200 kW, 6-spd., 4.1 Ratio`200 kW - 270 kW Powertrains
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(2) 1
+
+PARSFILE Powertrain\Engine\Engine_d49c24d0-f8ba-4bd6-83a5-d57395bb87ce.par
+#BlueLink0 Powertrain: Engine`200 kW Engine` 200 kW - 270 kW Engines` , Engine`Engine_d49c24d0-f8ba-4bd6-83a5-d57395bb87ce
+
+PARSFILE Powertrain\TConv\TC_0b62e224-7cf4-49f3-bf3f-c13c33e92f16.par
+#BlueLink1 Powertrain: Torque Converter`Torque Converter: 200 kW Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_0b62e224-7cf4-49f3-bf3f-c13c33e92f16
+
+PARSFILE Powertrain\TransExt\Trans18_55b3d8ee-e987-4803-8615-8a5b5c910733.par
+#BlueLink9 Powertrain: Transmission (18 Gears or CVT)`6-Speed` 6-Speed Transmissions` , Transmission (Extended)`Trans18_55b3d8ee-e987-4803-8615-8a5b5c910733
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_d0834241-b61e-470e-9545-8f24c80f4365.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 4.1:1` Open` , Differential`DiffR_d0834241-b61e-470e-9545-8f24c80f4365
+
+
+#EMBEDDED_NOTES
+#Generic 200 kW powertrain with an automatic transmission.  The torque converter data has been tuned to work with the 200 kW engine to give reasonable performance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { 200 kW - 270 kW Powertrains } 200 kW, 6-spd., 4.1 Ratio
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : 200 kW, 6-spd., 4.1 Ratio
+#Category: 200 kW - 270 kW Powertrains
+#FileID  : RWD_e91083ef-0948-4998-9bff-bab111a8fc9a
+#Product : CarSim 2020.0
+#VehCode RWD
+
+END

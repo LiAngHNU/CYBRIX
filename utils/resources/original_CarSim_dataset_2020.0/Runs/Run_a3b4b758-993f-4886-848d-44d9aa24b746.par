@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName CarSim Run Control`ACC, 5-Lane Road, 3 Lanes Fwd Traffic`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a3b4b758-993f-4886-848d-44d9aa24b746
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_dc48416e-5207-488c-ac1e-befb81183b3f.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 15 El, 30 m` Vehicle Reference` , Animator camera`Camera_dc48416e-5207-488c-ac1e-befb81183b3f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_95715261-8bdf-44ec-bac4-eeeae62e9a77.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ ACC & Blind-Spot` C-Class` , Math Model`VehLoad_95715261-8bdf-44ec-bac4-eeeae62e9a77
+
+PARSFILE Procedures\Proc_d9f05c4b-f080-4978-87a3-1e368783e2ca.par
+#BlueLink28 Procedures`Speed = 110, 2 m Left` Driver Controls` , Procedure`Proc_d9f05c4b-f080-4978-87a3-1e368783e2ca
+
+PARSFILE Roads\3D_Road\Road_3ffd4401-007b-490b-b434-fd682b3d08ed.par
+#BlueLink9 Road: 3D Surface (All Properties)`5-Lane Section` Many Lanes` , Miscellaneous`Road_3ffd4401-007b-490b-b434-fd682b3d08ed
+
+PARSFILE Generic\Group\GenGrp_d011336c-204c-49e7-89d9-3a691566120c.par
+#BlueLink10 Generic Data Group`3 Lanes Fwd, 3 Traffic Groups for ACC` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_d011336c-204c-49e7-89d9-3a691566120c
+
+PARSFILE Animator\Groups\Group_c5f567bb-78c8-4d05-8568-054d59b39f3d.par
+#BlueLink11 Animator: Group`Environment` Roads and Environment` , Miscellaneous`Group_c5f567bb-78c8-4d05-8568-054d59b39f3d
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink15 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed.par
+#BlueLink16 Plot: Setup`Distances for Closest 2 Objects, Sensor 1` ADAS Sensor Detections` , Plot`Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title ACC, 5-Lane Road, 3 Lanes Fwd Traffic <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE ACC, 5-Lane Road, 3 Lanes Fwd Traffic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Active Cruise Controller (ACC) with Blind Spot Detection
+#
+#A C-Class Hatchback with ACC and blind spot detection is traveling on a road with forward traffic in three lanes.
+#
+#The blind spot detection shows alerts for vehicles in the adjacent lanes, while the ACC controls the vehicle speed via throttle and brakes. VS Commands are used to model the controllers.  The time gap for the ACC can be set on the ADAS sensor screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } ACC, 5-Lane Road, 3 Lanes Fwd Traffic
+#Library : CarSim Run Control
+#DataSet : ACC, 5-Lane Road, 3 Lanes Fwd Traffic
+#Category: ADAS and Active Safety
+#FileID  : Run_a3b4b758-993f-4886-848d-44d9aa24b746
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

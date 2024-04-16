@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`Brake Indicator Light`HUD Gauges
+#VehCode Generic Group (More)
+#MiscYellow0
+ADD_ENTITY hud_image Brake Fill BG
+  location 100 10 100 100
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  image_file Animator\Hud\LIGHT_OFF.dds
+END_ENTITY hud_image Brake Fill BG
+#ENDMYellow
+
+
+#MiscYellow1
+ANI_Bk_Stat
+WRT_Bk_Stat
+ADD_ENTITY hud_image Brake Fill BG
+  location 100 10 100 100
+  red 1
+  green 0
+  blue 0
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity Bk_Stat * 0.65
+  image_file Animator\Hud\LIGHT_ON.dds
+END_ENTITY hud_image Brake Fill BG
+#ENDMYellow
+
+
+
+#MiscYellow3
+ADD_ENTITY hud_text Brake Header
+  prefix Brake
+  location 125 94 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  color 1 1 1 1
+  align 10
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_ENTITY hud_text Brake Header
+#ENDMYellow
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { HUD Gauges } Brake Indicator Light
+#Library : Generic Data Group (More)
+#DataSet : Brake Indicator Light
+#Category: HUD Gauges
+#FileID  : GenGrpM_e59adeca-f908-47f1-afb0-0052ad758209
+#Product : CarSim 2020.0
+#VehCode Generic Group (More)
+
+END

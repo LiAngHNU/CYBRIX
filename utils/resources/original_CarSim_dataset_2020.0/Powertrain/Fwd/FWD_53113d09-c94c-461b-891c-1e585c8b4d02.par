@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Powertrain: Front-Wheel Drive`75 kW, 5-spd., 4.1 Ratio`75 kW - 125 kW Powertrains
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 1
+R_REAR_DRIVE_SC 0
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 1
+#RingCtrl4 1
+R_MDRIVE 1
+#RingCtrl5 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 1.9
+
+#CheckBox0 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(1) 1
+
+PARSFILE Powertrain\Engine\Engine_cd75601b-35fc-46c0-b963-a8ff77b04782.par
+#BlueLink0 Powertrain: Engine`75 kW  Engine` 43 kW - 125 kW Engines` , Engine`Engine_cd75601b-35fc-46c0-b963-a8ff77b04782
+
+PARSFILE Powertrain\TConv\TC_9cc4746c-afd6-4f1e-9608-1d7933202ecc.par
+#BlueLink1 Powertrain: Torque Converter`Torque Converter for 75 kW Engine` Torque Converters: 75 kW to 150 kW` , Torque Conv.`TC_9cc4746c-afd6-4f1e-9608-1d7933202ecc
+
+PARSFILE Powertrain\TransExt\Trans18_ae794f50-f755-4cff-9dea-2c38062c1336.par
+#BlueLink8 Powertrain: Transmission (18 Gears or CVT)`5-Speed` 5-Speed Transmissions` , Transmission (Extended)`Trans18_ae794f50-f755-4cff-9dea-2c38062c1336
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_0e6d0a7d-5a3d-4cf9-b4d6-7adbda9605b1.par
+#BlueLink4 Powertrain: Front Differential`Open Differential: Gear Ratio 4.1:1` Open` , Differential`DiffF_0e6d0a7d-5a3d-4cf9-b4d6-7adbda9605b1
+
+
+#EMBEDDED_NOTES
+#Generic 75 kW powertrain with an automatic transmission. The torque converter data has been tuned to work with the 75 kW engine to give reasonable performance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Front-Wheel Drive; { 75 kW - 125 kW Powertrains } 75 kW, 5-spd., 4.1 Ratio
+#Library : Powertrain: Front-Wheel Drive
+#DataSet : 75 kW, 5-spd., 4.1 Ratio
+#Category: 75 kW - 125 kW Powertrains
+#FileID  : FWD_53113d09-c94c-461b-891c-1e585c8b4d02
+#Product : CarSim 2020.0
+#VehCode FWD
+
+END

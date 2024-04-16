@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Road 2000: Entrance Ramp`Path Change Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_d0d17c48-e5e4-49d4-b2b7-f8df584a897f.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 2000
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Road 2000: Entrance Ramp
+PARSFILE Roads\BuilderSegment\RoadSeg_16e85049-e219-47e5-bba9-041b77a3aa14.par
+#BlueLink0 Path: Segment Builder`Path 2000: Entrance Ramp` Lane Change Paths` , Reference Path`RoadSeg_16e85049-e219-47e5-bba9-041b77a3aa14
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Path 2000: Entrance Ramp
+PARSFILE Roads\Center_Z\RdRefZ_a213ea4a-628e-4c60-a700-c6c42519996c.par
+#BlueLink1 Road: Reference Line Elevation`Gradually Ascend to zero` ` , Path Elevation`RdRefZ_a213ea4a-628e-4c60-a700-c6c42519996c
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_594cba57-9e77-43f7-a015-62e199fa1af7.par
+#BlueLink4 Road: Animator Surface Shapes`Right Lane` Lane Change Roads` , Road shape definitions`RdShape_594cba57-9e77-43f7-a015-62e199fa1af7
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 39 m` Road Reference` , Camera`Camera_d4c450d6-372b-4662-b26d-43e2a7e034fd
+
+parsfile Roads\3D_Road\Road_d0d17c48-e5e4-49d4-b2b7-f8df584a897f.ani
+
+#EMBEDDED_NOTES
+#This road is a very simplified version of an entrance ramp for a cloverleaf interchange.  It is intended to be used when comparing the effects of a lane change with and without performing a full sweep of the target path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Path Change Roads } Road 2000: Entrance Ramp
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Road 2000: Entrance Ramp
+#Category: Path Change Roads
+#FileID  : Road_d0d17c48-e5e4-49d4-b2b7-f8df584a897f
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

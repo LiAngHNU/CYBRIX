@@ -1,0 +1,110 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`B-Class, Sports Car w/ Chassis Flex`B-Class
+#VehCode F_Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_60ac72f2-0b0a-45af-add5-1e2ab21f36fa.par
+#BlueLink7 Steering`B-Class, Sports Car: Power, R&P` CS B-Class` , Steering System`StrSys2_60ac72f2-0b0a-45af-add5-1e2ab21f36fa
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_1edb555f-f945-4eee-b00d-c16b3c37610a.par
+#BlueLink19 Suspension: Independent System Kinematics`B-Class, Sports Car - Front` B-Class` , Kinematics`KinInd_1edb555f-f945-4eee-b00d-c16b3c37610a
+
+PARSFILE Suspensions\Compliance\CmpInd_12cd1fb4-6a92-40e7-9938-b59d06c5e6f3.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`B-Class, Sports Car - Front` B-Class` , Compliance`CmpInd_12cd1fb4-6a92-40e7-9938-b59d06c5e6f3
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_8e1e442a-55cb-477b-9d53-6ad0070b3ef2.par
+#BlueLink999 Tire`205/45 R17` Performance Tires` , Tire`Tire_8e1e442a-55cb-477b-9d53-6ad0070b3ef2
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_8e1e442a-55cb-477b-9d53-6ad0070b3ef2.par
+#BlueLink10 Tire`205/45 R17` Performance Tires` , Tire`Tire_8e1e442a-55cb-477b-9d53-6ad0070b3ef2
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_c0d795fd-e1d1-4736-9b6d-e4054101246e.par
+#BlueLink20 Suspension: Independent System Kinematics`B-Class, Sports Car - Rear` B-Class` , Kinematics`KinInd_c0d795fd-e1d1-4736-9b6d-e4054101246e
+
+PARSFILE Suspensions\Compliance\CmpInd_52a116ed-0ee3-48d9-8ee9-bf88931d33f6.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`B-Class, Sports Car - Rear` B-Class` , Compliance`CmpInd_52a116ed-0ee3-48d9-8ee9-bf88931d33f6
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_8e1e442a-55cb-477b-9d53-6ad0070b3ef2.par
+#BlueLink999 Tire`205/45 R17` Performance Tires` , Tire`Tire_8e1e442a-55cb-477b-9d53-6ad0070b3ef2
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_8e1e442a-55cb-477b-9d53-6ad0070b3ef2.par
+#BlueLink999 Tire`205/45 R17` Performance Tires` , Tire`Tire_8e1e442a-55cb-477b-9d53-6ad0070b3ef2
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_f85ac362-a164-4dd5-a79c-345aae4669f2.par
+#BlueLink0 Vehicle: Sprung Mass`B-Class, Sports Car w/ Chassis Flex` B-Class` , Sprung Mass`SprMass_f85ac362-a164-4dd5-a79c-345aae4669f2
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2ad0e557-6e21-46a6-8ab1-003608366afe.par
+#BlueLink1 Aerodynamics: Basic`B-Class, Sports Car Aero` B-Class` , Aerodynamics`Aero_2ad0e557-6e21-46a6-8ab1-003608366afe
+
+R_REAR_DRIVE_SC 1
+PMAX_SC 125
+PARSFILE Powertrain\Rwd\RWD_773b5373-7fdd-4a7a-8296-37bf0e693904.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`125 kW, 6-spd., 4.1 Ratio` 125 kW Powertrains` , Powertrain`RWD_773b5373-7fdd-4a7a-8296-37bf0e693904
+
+PARSFILE Brakes\4W_System\Brk4W_e0a33082-d8fd-4b80-8c76-a8b2036812f5.par
+#BlueLink6 Brakes: Four-Wheel System`(Sprt Cr): MC Press, ABS` B-Class` , Brake System`Brk4W_e0a33082-d8fd-4b80-8c76-a8b2036812f5
+
+PARSFILE Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`B-Class, Sports Car` B-Class` , Vehicle 3D Shape`AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+
+#EMBEDDED_NOTES
+#Generic B-Class sports car with SLA front and 5-Link rear suspension.
+#
+#B-Class vehicles include the Audi TT, BMW Z4, Honda S2000, Mazda MX-5, and Mercedes-Benz SLK.
+#
+#Optional chassis flexibility has been added on the Sprung Mass: Flexible Sprung Mass link.
+#
+#A "CarSim with Frame Twist" license is needed to run the math model with this vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { B-Class } B-Class, Sports Car w/ Chassis Flex
+#Library : Vehicle: Assembly
+#DataSet : B-Class, Sports Car w/ Chassis Flex
+#Category: B-Class
+#FileID  : Vehicle_967e93c0-0c88-4759-934c-62bf4a5dc7a2
+#Product : CarSim 2020.0
+#VehCode F_Ind_Ind
+
+END

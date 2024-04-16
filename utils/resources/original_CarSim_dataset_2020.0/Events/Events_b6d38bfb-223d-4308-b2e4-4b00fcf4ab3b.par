@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Events`Run to Start Line`Optimize Controls for Lap Time
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 sv_n_start_cross
+*VALUE1 1
+MAKE_EVENT sv_n_start_cross >= 1 ; Events\Events_5c250f0c-e8f0-4977-82a8-29e43ea3103d.par
+#BlueLink0 Events`Run to Finish Line` Optimize Controls for Lap Time` , Events`Events_5c250f0c-e8f0-4977-82a8-29e43ea3103d
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Optimize Controls for Lap Time } Run to Start Line
+#Library : Events
+#DataSet : Run to Start Line
+#Category: Optimize Controls for Lap Time
+#FileID  : Events_b6d38bfb-223d-4308-b2e4-4b00fcf4ab3b
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

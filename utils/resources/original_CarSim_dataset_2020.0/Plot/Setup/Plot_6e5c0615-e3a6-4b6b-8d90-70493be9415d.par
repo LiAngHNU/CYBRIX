@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Pitch Angle: PitchO1`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PitchO1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Pitch Angle: PitchO1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Pitch Angle: PitchO1
+#Library : Plot: Setup
+#DataSet : Pitch Angle: PitchO1
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_6e5c0615-e3a6-4b6b-8d90-70493be9415d
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

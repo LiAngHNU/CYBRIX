@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`Update Path`Simple Path Planning
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 station
+*VALUE1 det_station
+#MiscYellow0
+
+shift_station = station
+! Run the routine
+RUN_PYTHON_PROG simplepathplan.pathtoavoidspp LTARGNPATH intab_table None
+
+! Now load the new table that was created
+LOAD_TABLE_FILE LTARGNPATH.vstb
+FILE_TO_TABLE LTARG_TABLE XLABEL VALUE
+ECHO_LOADED_TABLE LTARG_TABLE
+#ENDMYellow
+
+MAKE_EVENT station > det_station ; Events\Events_b29d0a5f-fa7f-4acd-86f9-da2ee3a69d3c.par
+#BlueLink0 Events`Returned to Path` Simple Path Planning` , Events`Events_b29d0a5f-fa7f-4acd-86f9-da2ee3a69d3c
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Using the inputs from the input table, Python creates a new LTARG path to avoid the object.
+#
+#Wait for a period of time and then return to looking for obstructions.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Simple Path Planning } Update Path
+#Library : Events
+#DataSet : Update Path
+#Category: Simple Path Planning
+#FileID  : Events_b7c9e996-92e8-4202-95a4-8624b021f5f6
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

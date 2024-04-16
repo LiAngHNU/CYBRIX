@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Force for X DOF`Suspension Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fx_C_L1, Time
+PLOTCHANNELS Fx_C_R1, Time
+PLOTCHANNELS Fx_C_L2, Time
+PLOTCHANNELS Fx_C_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Force for X DOF
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The variables referenced in this dataset only exist when the additional longitudinal degree of freedom is enabled for the suspension.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Forces and Moments } Force for X DOF
+#Library : Plot: Setup
+#DataSet : Force for X DOF
+#Category: Suspension Forces and Moments
+#FileID  : Plot_ecb034be-dc31-4cab-909d-eaa6abafa5d6
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

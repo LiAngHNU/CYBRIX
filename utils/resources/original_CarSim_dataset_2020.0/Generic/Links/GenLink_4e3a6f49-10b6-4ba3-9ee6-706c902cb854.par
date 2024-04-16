@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Generic Group of Links`Animated Deer for Update Path`ADAS: Moving Objects, incl. Pedestrians
+#VehCode Animated Deer
+PARSFILE Sensors_Traffic\Targets\Target_50812fa1-7024-4caa-97cc-e155c28c8582.par
+#BlueLink0 Single Moving Object (Custom)`Deer #1, Update Path` Animals Crossing` , Miscellaneous`Target_50812fa1-7024-4caa-97cc-e155c28c8582
+
+PARSFILE Sensors_Traffic\Targets\Target_7e99e2f5-a3b1-4c9e-b3d3-9581fdd472ce.par
+#BlueLink1 Single Moving Object (Custom)`Deer #2, Update Path` Animals Crossing` , Miscellaneous`Target_7e99e2f5-a3b1-4c9e-b3d3-9581fdd472ce
+
+PARSFILE Sensors_Traffic\Targets\Target_f0681712-af5e-43cf-8a7b-5c243e9e872c.par
+#BlueLink2 Single Moving Object (Custom)`Deer #3, Update Path` Animals Crossing` , Miscellaneous`Target_f0681712-af5e-43cf-8a7b-5c243e9e872c
+
+PARSFILE Animator\Groups\Group_c5f567bb-78c8-4d05-8568-054d59b39f3d.par
+#BlueLink3 Animator: Group`Environment` Roads and Environment` , Miscellaneous`Group_c5f567bb-78c8-4d05-8568-054d59b39f3d
+
+#MiscYellow0
+! Let Cpar know we use python module 
+*CPAR_INCLUDE Extensions\Python\makepath.py
+#ENDMYellow
+
+#MiscYellow1
+! Some setup for python call
+OPT_ENABLE_PYTHON = 1
+! Load the module
+RUN_PYTHON_STRING "import makepath"
+
+define_variable det_time = 0
+define_table intab
+intab_table step
+1,1
+2,2
+3,3
+4,4
+5,5
+endtable
+#ENDMYellow
+
+#MiscYellow2
+define_variable SEEDVAL
+! Uncomment next line to randomize
+! location of last deer
+!SEEDVAL = SRAND(GENSEED(1.0))
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_35d410cc-5081-4148-b1f9-c884165cb829.par
+#BlueLink13 Single Moving Object (Custom)`Deer #4, Update Path (RND)` Animals Crossing` , Miscellaneous`Target_35d410cc-5081-4148-b1f9-c884165cb829
+
+*MODELCODE Animated Deer
+
+#EMBEDDED_NOTES
+#Four idle deer: location of fourth deer can be optionally randomized.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Moving Objects, incl. Pedestrians } Animated Deer for Update Path
+#Library : Generic Group of Links
+#DataSet : Animated Deer for Update Path
+#Category: ADAS: Moving Objects, incl. Pedestrians
+#FileID  : GenLink_4e3a6f49-10b6-4ba3-9ee6-706c902cb854
+#Product : CarSim 2020.0
+#VehCode Animated Deer
+
+END

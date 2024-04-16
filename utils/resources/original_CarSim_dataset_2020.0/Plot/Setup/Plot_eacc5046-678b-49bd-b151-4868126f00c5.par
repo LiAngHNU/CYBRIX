@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Plot: Setup`Road ID for Objects`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#BlueLink2 CarSim Run Control`Roundabout (3D, 36 m), C-Class, Traffic` Road Networks: Intersections and Roundabouts` , example run`Run_ca34d07c-8777-4d8e-b971-e2c7dc582db3
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_bbc9ee7c-77d7-44f1-a3f6-8efd7e8cc99e\Run_out_tab.txt
+
+#MiscYellow1
+define_output RdID_O_1 = ROAD_ID_OBJ(1)
+define_output RdID_O_2 = ROAD_ID_OBJ(2)
+define_output RdID_O_3 = ROAD_ID_OBJ(3)
+define_output RdID_O_4 = ROAD_ID_OBJ(4)
+define_output RdID_O_5 = ROAD_ID_OBJ(5)
+define_output RdID_O_6 = ROAD_ID_OBJ(6)
+define_output RdID_O_7 = ROAD_ID_OBJ(7)
+define_output RdID_O_8 = ROAD_ID_OBJ(8)
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS RdID_O_1, Time
+PLOTCHANNELS RdID_O_2, Time
+PLOTCHANNELS RdID_O_3, Time
+PLOTCHANNELS RdID_O_4, Time
+PLOTCHANNELS RdID_O_5, Time
+PLOTCHANNELS RdID_O_6, Time
+PLOTCHANNELS RdID_O_7, Time
+PLOTCHANNELS RdID_O_8, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 1
+#RingCtrl8 1
+
+
+PTITLE Road ID for Objects
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Road ID for Objects
+#Library : Plot: Setup
+#DataSet : Road ID for Objects
+#Category: Tracking
+#FileID  : Plot_eacc5046-678b-49bd-b151-4868126f00c5
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

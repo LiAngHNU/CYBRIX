@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Suspension: Jounce and Rebound Stops`+80 mm / -50 mm`Jounce Range: 50 mm to 99 mm
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR
+#RingCtrl1 LINEAR
+#DiagramOne0
+F_JNC_STOP_TABLE LINEAR
+78, 0
+79, 0
+80, 10000
+ENDTABLE
+#DiagramOne1
+F_REB_STOP_TABLE LINEAR
+-50, -10000
+-49, 0
+-48, 0
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+LOG_ENTRY Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 50 mm to 99 mm } +80 mm / -50 mm
+#Library : Suspension: Jounce and Rebound Stops
+#DataSet : +80 mm / -50 mm
+#Category: Jounce Range: 50 mm to 99 mm
+#FileID  : JncReb_6e30ecaa-9ad1-40e5-b1eb-59a802001bd6
+#Product : CarSim 2020.0
+#VehCode 
+
+END

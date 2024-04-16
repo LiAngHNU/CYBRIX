@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName CarSim Run Control`Electric: OL, Regen. Brk.100%`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f3e06146-dde0-420e-9d9f-02a2cefeb92c
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0 0.6 1
+SET_RUN_COLOR 0 0.6 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_6e6ea2d6-0df3-427a-b34e-1b40ec477f03.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hbk: Electric RWD, Regen. Brk.` B-Class` , Math Model`Vehicle_6e6ea2d6-0df3-427a-b34e-1b40ec477f03
+
+PARSFILE Procedures\Proc_96be71da-7554-4c77-ae09-58e2596d581e.par
+#BlueLink28 Procedures`Hybrid/Electric: Accel then Regen. Brk.` Accel. and Brake Testing` , Procedure`Proc_96be71da-7554-4c77-ae09-58e2596d581e
+
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink15 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink16 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.png
+WRITE_SENSOR_DETECT
+Title Electric: OL, Regen. Brk.100% <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Electric: OL, Regen. Brk.100%
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with an electric powertrain is modeled within CarSim (GUI and math model).
+#
+#CarSim supports for electric powertrains include an electric motor, electric powertrain assembly, and power management control.
+#
+#The Procedure has open-loop controls for throttle and braking.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Electric: OL, Regen. Brk.100%
+#Library : CarSim Run Control
+#DataSet : Electric: OL, Regen. Brk.100%
+#Category: Powertrain Tests
+#FileID  : Run_f3e06146-dde0-420e-9d9f-02a2cefeb92c
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

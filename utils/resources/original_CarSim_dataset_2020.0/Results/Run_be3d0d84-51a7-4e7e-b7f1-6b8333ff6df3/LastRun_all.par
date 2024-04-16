@@ -1,0 +1,987 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Runs\Run_be3d0d84-51a7-4e7e-b7f1-6b8333ff6df3.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 21:03 on December 18, 2019 by CarSim 2020.0
+
+PRODUCT_NAME CarSim
+
+tstep 0.0005
+iprint 50
+
+ENTER_PARSFILE Runs\Run_be3d0d84-51a7-4e7e-b7f1-6b8333ff6df3.par
+#FullDataName CarSim Run Control`MF-Tyre Frict. Ellipse - Alpha = -2 deg`Tire Tester
+VEHICLE_CODE tire
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+RT_WINDOW_CLOSE off
+LIVE_SERVER_MAX_CONNECTIONS 0
+ENTER_PARSFILE Tires\External\TireExt_e621552e-a61c-4879-928c-9d0fcc445622.par
+#FullDataName Tire (External)`225/60 R18 (Tyre 6.2, Static)`MF-Tyre/MF-Swift
+FZ_REF 30000
+Y_LENGTH 225
+OPT_TIRE_MODEL 8
+X_LENGTH 364
+Z_LENGTH 364
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+#FullDataName Animator: Shape Assembly`Sports Car`Tires
+ENTER_PARSFILE Animator\STL\Shape_9e9cf3ff-6a77-4076-a9f0-1b70114e603e.par
+#FullDataName Animator: Shape File Link`195/45 R16: Tire`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\195_45R16\tire.obj
+SET_COLOR 1 1 1
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.3 0.3 0.3
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 195/45 R16: Tire
+EXIT_PARSFILE Animator\STL\Shape_9e9cf3ff-6a77-4076-a9f0-1b70114e603e.par
+
+ENTER_PARSFILE Animator\STL\Shape_e8969a6e-9ef6-43c7-9f40-228c21b5b4a1.par
+#FullDataName Animator: Shape File Link`195/45 R16: Wheel`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\195_45R16\wheel.obj
+SET_COLOR .62 .62 .62
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 195/45 R16: Wheel
+EXIT_PARSFILE Animator\STL\Shape_e8969a6e-9ef6-43c7-9f40-228c21b5b4a1.par
+
+ENTER_PARSFILE Animator\STL\Shape_8ffa6ffc-1b17-4180-964d-d52d768c1b70.par
+#FullDataName Animator: Shape File Link`195/45 R16: Stripe`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\195_45R16\stripe.obj
+SET_COLOR white
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.01
+SET_OFFSET_Z 0.01
+set_lighting on
+set_fogging on
+SET_SPECULAR 0 0 0
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } 195/45 R16: Stripe
+EXIT_PARSFILE Animator\STL\Shape_8ffa6ffc-1b17-4180-964d-d52d768c1b70.par
+
+x_ref_length 291
+y_ref_length 195
+z_ref_length 291
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Tires } Sports Car
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+
+WRITE_WHEEL_OFFSET
+SET_OFFSET_Y 0
+KY_TIRE 956.08
+OPT_TIRE_INERTIA_EXTERNAL 1
+IT 25
+M_TIRE 2
+EXTERNAL_TIRE_MODULE_DLL D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Prog\Resources\Extensions\External_Tire_API\win32\DelftTyreWrapper.dll
+INSTALL_EXTERNAL_TIRE_API
+DELFT_TYRE_DATA Extensions\TNO_DelftTyre\CS_car225_60R18.tir
+DELFT_TYRE_DLL D:\Product_Dev\Product_Checkouts\trunk\Image\CarSim\Core\CarSim_Prog\Resources\Extensions\TNO_DelftTyre\win32\TNO_DelftTyre.dll
+DELFT_TYRE_SW 1104
+DELFT_TYRE_INIT
+LOG_ENTRY Used Dataset: Tire (External); { MF-Tyre/MF-Swift } 225/60 R18 (Tyre 6.2, Static)
+EXIT_PARSFILE Tires\External\TireExt_e621552e-a61c-4879-928c-9d0fcc445622.par
+
+ENTER_PARSFILE Tire_Tester\TestTire_e6d12311-dd3f-4c6e-940a-37ce28b78abc.par
+#FullDataName Tire Tester`Sweep Kappa: Fz = 4000 N`Sweep Kappa +/- 1.0
+MUX_TEST -1
+MUY_TEST -1
+SPEED_TEST 10
+RR_SURF 1
+OPT_TEST_MODE 2
+KAPPA_LOWER -1
+KAPPA_UPPER 1
+KAPPA_STEP 0.01
+FZ_TEST 4000
+ALPHA_TEST 0
+GAMMA_TEST 0
+ENTER_PARSFILE Generic\VS_commands\GenVS_495524ba-1c7f-4365-8a05-84434effacfe.par
+#FullDataName Generic VS Commands`Derived Outputs for Tire Tester`Miscellaneous Custom Output Variables
+define_output mu_y_l1 = if( fz_l1, fy_l1 / fz_l1, 0); -;
+set_output_long_name mu_y_l1 Normalized lateral force
+set_output_component mu_y_l1 Test tire
+define_output mu_x_l1 = if(fz_l1, fx_l1 / fz_l1, 0); -;
+set_output_long_name mu_x_l1 Normalized longitudinal force
+set_output_component mu_x_l1 Test tire
+define_output slip_l1 = tan(alpha_l1); -;
+set_output_long_name slip_l1 Tangent of slip angle
+set_output_component slip_l1 Test tire
+define_output y_ctc_l1 = if( fz_l1, mx_l1 / fz_l1, 0); mm;
+set_output_long_name y_ctc_l1 CTC lateral shift
+set_output_component y_ctc_l1 Test tire
+define_output mz_fx_l1 = fx_l1 * y_ctc_l1; N-m;
+set_output_long_name mz_fx_l1 Mz due to Fx and CTC lat. shift
+set_output_component mz_fx_l1 Test tire
+define_output mz_fy_l1 = mz_l1 - mz_fx_l1; N-m;
+set_output_long_name mz_fy_l1 Aligning moment due to Fy
+set_output_component mz_fy_l1 Test tire
+define_output trail_l1 = if(fy_l1, mz_fy_l1 / fy_l1, 0); mm;
+set_output_long_name trail_l1 Pneumatic trail
+set_output_component trail_l1 Test tire
+ENTER_PARSFILE Plot\Setup\Plot_638658a8-89ef-4773-afd9-00fe53fc8cd4.par
+#FullDataName Plot: Setup`Normalized Lateral Force vs. Alpha`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS mu_y_l1, alpha_l1
+WRT_MU_Y_L1
+WRT_ALPHA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Normalized Lateral Force vs. Alpha
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Lateral Force vs. Alpha
+EXIT_PARSFILE Plot\Setup\Plot_638658a8-89ef-4773-afd9-00fe53fc8cd4.par
+
+ENTER_PARSFILE Plot\Setup\Plot_d19086db-bb3d-4f63-a7f3-6d7c40f1dcb6.par
+#FullDataName Plot: Setup`Normalized Longitudinal Force vs. Alpha`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS mu_x_l1, alpha_l1
+WRT_MU_X_L1
+WRT_ALPHA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Normalized Longitudinal Force vs. Alpha
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Longitudinal Force vs. Alpha
+EXIT_PARSFILE Plot\Setup\Plot_d19086db-bb3d-4f63-a7f3-6d7c40f1dcb6.par
+
+ENTER_PARSFILE Plot\Setup\Plot_6fbd2be1-8ca2-4e4e-89d1-246a2e5a4478.par
+#FullDataName Plot: Setup`Tangent of Slip Angle vs. Alpha`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS slip_l1, alpha_l1
+WRT_SLIP_L1
+WRT_ALPHA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Tangent of Slip Angle vs. Alpha
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Tangent of Slip Angle vs. Alpha
+EXIT_PARSFILE Plot\Setup\Plot_6fbd2be1-8ca2-4e4e-89d1-246a2e5a4478.par
+
+ENTER_PARSFILE Plot\Setup\Plot_0a2ea03c-6551-4c38-a9ef-c70f16641502.par
+#FullDataName Plot: Setup`Lateral Shift of CTC vs. Alpha`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS y_ctc_l1, alpha_l1
+WRT_Y_CTC_L1
+WRT_ALPHA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Lateral Shift of CTC vs. Alpha
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Lateral Shift of CTC vs. Alpha
+EXIT_PARSFILE Plot\Setup\Plot_0a2ea03c-6551-4c38-a9ef-c70f16641502.par
+
+ENTER_PARSFILE Plot\Setup\Plot_16b66348-8461-4c4a-82d2-be0fe4e137d5.par
+#FullDataName Plot: Setup`Mz from Fx vs Alpha`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS mz_fx_l1, Alpha_l1
+WRT_MZ_FX_L1
+WRT_ALPHA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Mz from Fx vs Alpha
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fx vs Alpha
+EXIT_PARSFILE Plot\Setup\Plot_16b66348-8461-4c4a-82d2-be0fe4e137d5.par
+
+ENTER_PARSFILE Plot\Setup\Plot_9ff74ee3-819a-42ac-b06c-a1eba074faf6.par
+#FullDataName Plot: Setup`Mz from Fy and Pneumatic Trail vs Alpha`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS mz_fy_l1, Alpha_l1
+WRT_MZ_FY_L1
+WRT_ALPHA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Mz from Fy and Pneumatic Trail vs Alpha
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fy and Pneumatic Trail vs Alpha
+EXIT_PARSFILE Plot\Setup\Plot_9ff74ee3-819a-42ac-b06c-a1eba074faf6.par
+
+ENTER_PARSFILE Plot\Setup\Plot_b4053864-ac64-41fb-810b-4b3c14b4ddfa.par
+#FullDataName Plot: Setup`Pneumatic Trail vs. Alpha`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS trail_l1, alpha_l1
+WRT_TRAIL_L1
+WRT_ALPHA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Pneumatic Trail vs. Alpha
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Pneumatic Trail vs. Alpha
+EXIT_PARSFILE Plot\Setup\Plot_b4053864-ac64-41fb-810b-4b3c14b4ddfa.par
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Output Variables } Derived Outputs for Tire Tester
+EXIT_PARSFILE Generic\VS_commands\GenVS_495524ba-1c7f-4365-8a05-84434effacfe.par
+
+ENTER_PARSFILE Plot\Setup\Plot_81aa0eb0-51d5-4728-96fa-898f84fb8171.par
+#FullDataName Plot: Setup`Fx vs. Fy`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS Fx_L1, Fy_L1
+WRT_FX_L1
+WRT_FY_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Fx vs. Fy
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Fx vs. Fy
+EXIT_PARSFILE Plot\Setup\Plot_81aa0eb0-51d5-4728-96fa-898f84fb8171.par
+
+ENTER_PARSFILE Plot\Setup\Plot_3831669c-feed-4154-a0f0-ba348004da41.par
+#FullDataName Plot: Setup`Fx vs. Kappa`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS Fx_L1, Kappa_L1
+WRT_FX_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Fx vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Fx vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_3831669c-feed-4154-a0f0-ba348004da41.par
+
+ENTER_PARSFILE Plot\Setup\Plot_652e42f0-c742-4ae7-9a97-bab6d281491b.par
+#FullDataName Plot: Setup`Fy vs. Kappa`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS Fy_L1, Kappa_L1
+WRT_FY_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Fy vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_652e42f0-c742-4ae7-9a97-bab6d281491b.par
+
+ENTER_PARSFILE Plot\Setup\Plot_d2505c43-445e-40d2-9e2f-52c32ff9c3fe.par
+#FullDataName Plot: Setup`Mz vs. Kappa`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS Mz_L1, Kappa_L1
+WRT_MZ_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Mz vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Mz vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_d2505c43-445e-40d2-9e2f-52c32ff9c3fe.par
+
+ENTER_PARSFILE Plot\Setup\Plot_12f391a9-368d-4c42-8d07-d5e811244483.par
+#FullDataName Plot: Setup`Mx vs. Kappa`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS Mx_L1, Kappa_L1
+WRT_MX_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Mx vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Mx vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_12f391a9-368d-4c42-8d07-d5e811244483.par
+
+ENTER_PARSFILE Plot\Setup\Plot_51b7a99d-97e2-47c4-a9c1-d79b2411f4da.par
+#FullDataName Plot: Setup`My vs. Kappa`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS My_L1, Kappa_L1
+WRT_MY_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE My vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } My vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_51b7a99d-97e2-47c4-a9c1-d79b2411f4da.par
+
+ENTER_PARSFILE Plot\Setup\Plot_0b809826-f2f1-4794-a421-2e2adf4a38c9.par
+#FullDataName Plot: Setup`Fy vs. Fx`Tire Tester
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS Fy_L1, Fx_L1
+WRT_FY_L1
+WRT_FX_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Fy vs. Fx
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Fx
+EXIT_PARSFILE Plot\Setup\Plot_0b809826-f2f1-4794-a421-2e2adf4a38c9.par
+
+ENTER_PARSFILE Plot\Setup\Plot_93d6f0a3-3c1f-4eb3-93ab-ee1a647a387c.par
+#FullDataName Plot: Setup`Normalized Lateral Force vs. Kappa`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS mu_y_l1, kappa_l1
+WRT_MU_Y_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Normalized Lateral Force vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Lateral Force vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_93d6f0a3-3c1f-4eb3-93ab-ee1a647a387c.par
+
+ENTER_PARSFILE Plot\Setup\Plot_a8618010-521a-462f-8d54-8b32d0c9dd1a.par
+#FullDataName Plot: Setup`Normalized Longitudinal Force vs. Kappa`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS mu_x_l1, kappa_l1
+WRT_MU_X_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Normalized Longitudinal Force vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Longitudinal Force vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_a8618010-521a-462f-8d54-8b32d0c9dd1a.par
+
+ENTER_PARSFILE Plot\Setup\Plot_607a8ee5-039d-4977-b7ec-61ca25574e37.par
+#FullDataName Plot: Setup`Tangent of Slip Angle vs. Kappa`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS slip_l1, kappa_l1
+WRT_SLIP_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Tangent of Slip Angle vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Tangent of Slip Angle vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_607a8ee5-039d-4977-b7ec-61ca25574e37.par
+
+ENTER_PARSFILE Plot\Setup\Plot_15e90b3f-9c74-4c92-813a-6b48501e3e49.par
+#FullDataName Plot: Setup`Lateral Shift of CTC vs. Kappa`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS y_ctc_l1, kappa_l1
+WRT_Y_CTC_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Lateral Shift of CTC vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Lateral Shift of CTC vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_15e90b3f-9c74-4c92-813a-6b48501e3e49.par
+
+ENTER_PARSFILE Plot\Setup\Plot_817e42e0-bbe4-431c-b6b6-5d51749d360c.par
+#FullDataName Plot: Setup`Mz from Fx vs Kappa`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS mz_fx_l1, kappa_l1
+WRT_MZ_FX_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Mz from Fx vs Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fx vs Kappa
+EXIT_PARSFILE Plot\Setup\Plot_817e42e0-bbe4-431c-b6b6-5d51749d360c.par
+
+ENTER_PARSFILE Plot\Setup\Plot_f879bb8d-f9cd-47de-9254-5b6d560a3bee.par
+#FullDataName Plot: Setup`Mz from Fy and Pneumatic Trail vs Kappa`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS mz_fy_l1, kappa_l1
+WRT_MZ_FY_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Mz from Fy and Pneumatic Trail vs Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Mz from Fy and Pneumatic Trail vs Kappa
+EXIT_PARSFILE Plot\Setup\Plot_f879bb8d-f9cd-47de-9254-5b6d560a3bee.par
+
+ENTER_PARSFILE Plot\Setup\Plot_1785cb39-7d63-4365-bbf0-d08123725ae0.par
+#FullDataName Plot: Setup`Pneumatic Trail vs. Kappa`Tire Tester Derived Outputs
+ADD_ENTITY Plot
+ENTER_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#FullDataName Plot: Format`Default Plot Settings`
+LEGENDPERCENT 60
+TITLEFONTSIZE 10
+TITLELOCATION -1
+AXES Axes
+FRAME Frame
+GRID CourseGrid
+LEGENDDATA_1 RigidBodyName
+TITLEFONTSTYLE Regular
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LEGENDFONTSIZE 10
+LEGENDFONTSTYLE Regular
+LABELFONTNAME Arial
+LABELFONTSIZE 10
+LABELFONTSTYLE Regular
+TICLABELFONTNAME Arial
+TICLABELFONTSIZE 10
+TICLABELFONTSTYLE Regular
+SYMBOLS 10,1,2,3,4,5,6,7,8,9,10,4,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,3,11,4,0,6,14,8,7,10,8,12,13,14,6,1,2,0,4
+LOG_ENTRY Used Dataset: Plot: Format; Default Plot Settings
+EXIT_PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+
+PLOTCHANNELS trail_l1, kappa_l1
+WRT_TRAIL_L1
+WRT_KAPPA_L1
+YMaxmin Auto
+XMaxmin Auto
+PTITLE Pneumatic Trail vs. Kappa
+END_ENTITY Plot
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Pneumatic Trail vs. Kappa
+EXIT_PARSFILE Plot\Setup\Plot_1785cb39-7d63-4365-bbf0-d08123725ae0.par
+
+LOG_ENTRY Used Dataset: Tire Tester; { Sweep Kappa +/- 1.0 } Sweep Kappa: Fz = 4000 N
+EXIT_PARSFILE Tire_Tester\TestTire_e6d12311-dd3f-4c6e-940a-37ce28b78abc.par
+
+ENTER_PARSFILE IO_Channels\W_Channels\Write_71bdebab-1d55-4f21-9f09-6c1936e267ce.par
+#FullDataName I/O Channels: Write`All Outputs with Tire for Excel`
+OPT_ALL_WRITE_CONVERT_CSV 0
+OPT_ALL_WRITE_CONVERT_MAT 0
+WRT_Kappa_L1
+WRTCVT Kappa_L1
+WRT_Alpha_L1
+WRTCVT Alpha_L1
+WRT_Gamma_L1
+WRTCVT Gamma_L1
+WRT_Fx_L1
+WRTCVT Fx_L1
+WRT_Fy_L1
+WRTCVT Fy_L1
+WRT_Fz_L1
+WRTCVT Fz_L1
+WRT_Mx_L1
+WRTCVT Mx_L1
+WRT_My_L1
+WRTCVT My_L1
+WRT_Mz_L1
+WRTCVT Mz_L1
+LOG_ENTRY Used Dataset: I/O Channels: Write; All Outputs with Tire for Excel
+EXIT_PARSFILE IO_Channels\W_Channels\Write_71bdebab-1d55-4f21-9f09-6c1936e267ce.par
+
+WRITE_SENSOR_DETECT
+Title MF-Tyre Frict. Ellipse - Alpha = -2 deg <Tire Tester>
+CATEGORY Tire Tester
+DATASET_TITLE MF-Tyre Frict. Ellipse - Alpha = -2 deg
+ALPHA_TEST  -2
+NUM_CACHED_RUNS 1
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Tester } MF-Tyre Frict. Ellipse - Alpha = -2 deg
+EXIT_PARSFILE Runs\Run_be3d0d84-51a7-4e7e-b7f1-6b8333ff6df3.par
+
+
+
+END

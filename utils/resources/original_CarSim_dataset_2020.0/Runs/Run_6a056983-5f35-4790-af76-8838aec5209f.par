@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName CarSim Run Control`Output to Excel (ERD to CSV/MAT)`Output Options
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6a056983-5f35-4790-af76-8838aec5209f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 37 m` Vehicle Reference` , Animator camera`Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 5
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan` E-Class` , Math Model`Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink15 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink16 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink17 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink18 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+PARSFILE IO_Channels\W_Channels\Write_5b47b01c-0292-4cac-a5b1-2a6775203969.par
+#BlueLink13 I/O Channels: Write`Copy Ay and AvZ to Excel and MATLAB` ` , Output Variables`Write_5b47b01c-0292-4cac-a5b1-2a6775203969
+
+WRITE_SENSOR_DETECT
+Title Output to Excel (ERD to CSV/MAT) <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE Output to Excel (ERD to CSV/MAT)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demsontrates setting up a simulation where both a .CSV file and .MAT file are created automatically and contain the simulation results of a selected number of data channels.
+#
+#The ERD File Utility is used to create an .INI file identifying outputs to be written to the .CSV and .MAT files. The list of outputs in the .INI file must be a subset of the outputs listed in the "Output variables: Write Channels" dataset linked on this screen. Click on the blue link "Excel CSV/MAT" to see how this is set up.
+#
+#More information on the ERD File Utility can be found by clicking on the Tools drop-down menu and  selecting "VS/ERD File Utility".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Output Options } Output to Excel (ERD to CSV/MAT)
+#Library : CarSim Run Control
+#DataSet : Output to Excel (ERD to CSV/MAT)
+#Category: Output Options
+#FileID  : Run_6a056983-5f35-4790-af76-8838aec5209f
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

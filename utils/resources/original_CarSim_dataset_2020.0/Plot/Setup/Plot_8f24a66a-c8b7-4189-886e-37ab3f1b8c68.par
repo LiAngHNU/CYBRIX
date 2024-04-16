@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Vertical Tire Force Sums`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FZ_L, T_Event, Left side
+PLOTCHANNELS FZ_R, T_Event, RIght side
+
+#ENDMYellow
+
+YAXISLABEL Sum of Front and Rear Tire Forces - N
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vertical Tire Force Sums
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Vertical Tire Force Sums
+#Library : Plot: Setup
+#DataSet : Vertical Tire Force Sums
+#Category: User-Defined Variables
+#FileID  : Plot_8f24a66a-c8b7-4189-886e-37ab3f1b8c68
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

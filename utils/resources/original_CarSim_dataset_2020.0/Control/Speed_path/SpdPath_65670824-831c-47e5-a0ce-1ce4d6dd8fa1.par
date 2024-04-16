@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`Normal Driving on Road Course`Miscellaneous
+INSTALL_SPEED_CONTROLLER
+SPEED_AX_THROTTLE_CONSTANT 0.3
+SPEED_AX_BRAKE_CONSTANT 0.3
+SPEED_AY_LEFT_CONSTANT 0.3
+SPEED_AY_RIGHT_CONSTANT 0.3
+#RingCtrl0 2
+OPT_SC_SKILL 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 2
+PARSFILE Control\Speed_t\SpdTime_6ee57edf-b277-48cb-9b79-bb9e9bcad9e1.par
+#BlueLink6 Control: Speed (Closed Loop) Using Target Speed`Normal Driving on Road Course` Handling and Performance Driving` , Speed vs. station`SpdTime_6ee57edf-b277-48cb-9b79-bb9e9bcad9e1
+
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC 4
+#CheckBox0 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox1 1    
+#CheckBox2 0    
+OPT_SC_3D 0
+#CheckBox3 0    
+OPT_SC_2018 0
+
+SPEED_KP 0.4
+SPEED_KI 0.1
+SPEED_KP3 4
+BK_PERF_SC 1
+FPD_PERF_SC 0.1
+SPEED_PREVIEW_STEP 2
+SPEED_CURV_LENGTH 50
+SPEED_PREVIEW_START 2
+SPEED_PREVIEW 200
+PBK_CON_MAX_SC 10
+#MiscYellow0
+VX_IERR_DEAD_SC = 0
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#A maximum of 0.3 G's in all directions.
+#
+#The speed limit for the run is obtained from the linked table. This table allows a higher speed on the straight part of the test track.
+#
+#2019.0 The parameter VX_IERR_DEAD_SC is set to 0 to produce the same results as seen in 2018.1.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Miscellaneous } Normal Driving on Road Course
+#Library : Control: Speed (Closed Loop) Using Path Preview
+#DataSet : Normal Driving on Road Course
+#Category: Miscellaneous
+#FileID  : SpdPath_65670824-831c-47e5-a0ce-1ce4d6dd8fa1
+#Product : CarSim 2020.0
+#VehCode Speed Using Path Preview
+
+END

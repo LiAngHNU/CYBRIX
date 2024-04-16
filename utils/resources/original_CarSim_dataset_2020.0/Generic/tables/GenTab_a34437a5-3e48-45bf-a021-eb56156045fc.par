@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Generic Table`CS_FY: Right R (2D)`Generic Suspension Comp.: Twist-Beam (2D)
+#RingCtrl0 2D_SPLINE
+#CheckBox0 1    
+
+*3D_XLabel Fy other side (N)
+*3D_YLabel Fy (N)
+*3D_ZLabel Steer (deg)
+
+#DiagramTwo0
+*3D_DATA 3, 21 ! columns x rows
+CS_FY_CARPET 2D_SPLINE
+0, -3000, 0, 3000
+-3000, 2.58742, 2.52698, 2.46843
+-2700, 2.39158, 2.3325, 2.27456
+-2400, 2.19425, 2.1365, 2.07912
+-2100, 1.99543, 1.93898, 1.88213
+-1800, 1.79511, 1.73994, 1.68356
+-1500, 1.59329, 1.53936, 1.4834
+-1200, 1.38997, 1.33723, 1.28165
+-900, 1.18513, 1.13356, 1.0783
+-600, 0.978781, 0.928322, 0.873333
+-300, 0.770906, 0.721519, 0.666745
+0, 0.561503, 0.513143, 0.458526
+300, 0.35057, 0.303187, 0.248666
+600, 0.1381, 0.0916427, 0.0371565
+900, -0.0759087, -0.121495, -0.176011
+1200, -0.291461, -0.336233, -0.390844
+1500, -0.508559, -0.552576, -0.607352
+1800, -0.727207, -0.77053, -0.825542
+2100, -0.947406, -0.9901, -1.04542
+2400, -1.16916, -1.21129, -1.26699
+2700, -1.39246, -1.4341, -1.49027
+3000, -1.61732, -1.65854, -1.71524
+ENDTABLE
+
+_CONSTANT 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD CS_FY
+*X_LABEL Fy (N)
+*Y_LABEL Steer (deg)
+*X_LABEL_2 Fy other side (N)
+*SCALAR2 1
+
+
+#EMBEDDED_NOTES
+#Twist-beam suspension compliance from David's SuspensionSim model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Generic Suspension Comp.: Twist-Beam (2D) } CS_FY: Right R (2D)
+#Library : Generic Table
+#DataSet : CS_FY: Right R (2D)
+#Category: Generic Suspension Comp.: Twist-Beam (2D)
+#FileID  : GenTab_a34437a5-3e48-45bf-a021-eb56156045fc
+#Product : CarSim 2020.0
+#VehCode table
+
+END

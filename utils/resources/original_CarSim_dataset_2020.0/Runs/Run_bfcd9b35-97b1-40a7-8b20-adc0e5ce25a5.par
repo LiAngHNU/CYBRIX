@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName CarSim Run Control`LabVIEW Ext. ABS: Split Mu`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_bfcd9b35-97b1-40a7-8b20-adc0e5ce25a5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\LabViewWin\LabVIEW_c73dc6ea-d5bf-4129-879d-6f5df9d34ec8.par
+#BlueLink12 Models: LabVIEW for Windows (VI)`ABS Example` ` , Models`LabVIEW_c73dc6ea-d5bf-4129-879d-6f5df9d34ec8
+
+PARSFILE Animator\Cameras\Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 5 El, 27 m` Road Reference` , Animator camera`Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+SET_RUN_COLOR 1 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback` B-Class` , Math Model`Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac
+
+PARSFILE Procedures\Proc_af7b7a9d-340b-49a4-ae1a-008e5c2b5b38.par
+#BlueLink28 Procedures`Split Mu from 65 km/h` Accel. and Brake Testing` , Procedure`Proc_af7b7a9d-340b-49a4-ae1a-008e5c2b5b38
+
+
+SPECIAL_PARSFILE Runs\Run_5b3d86e9-3bdc-4863-b51d-fa00438bded3.par
+#BlueLink24 CarSim Run Control`Braking - Split Mu: No ABS` Brake Tests` , Overlay run or ERD file`Run_5b3d86e9-3bdc-4863-b51d-fa00438bded3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.png
+WRITE_SENSOR_DETECT
+Title LabVIEW Ext. ABS: Split Mu <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE LabVIEW Ext. ABS: Split Mu
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates an ABS controller modeled in LabVIEW. (Libraries > Models > Models: LabVIEW for Windows (VI))
+#
+#Click on the blue link "LabVIEW ABS Example" to see how the LabVIEW model is connected to CarSim, and how to define the import and export variables that allow CarSim and LabVIEW to communicate.
+#
+#This simulation is overlaid with 2 other examples:
+#Braking - Split Mu: ABS
+#Braking - Split Mu: No ABS
+#
+#This allows you to compare the vehicle's performance with the LabVIEW-defined ABS controller to an equivalent vehicle using the CarSim ABS system, as well as a vehicle with no ABS stopping on a split mu surface.
+#
+#You can choose whether to Add, Replace, or Mulitply certain LabVIEW imported variables to their corresponding variables in CarSim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } LabVIEW Ext. ABS: Split Mu
+#Library : CarSim Run Control
+#DataSet : LabVIEW Ext. ABS: Split Mu
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_bfcd9b35-97b1-40a7-8b20-adc0e5ce25a5
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

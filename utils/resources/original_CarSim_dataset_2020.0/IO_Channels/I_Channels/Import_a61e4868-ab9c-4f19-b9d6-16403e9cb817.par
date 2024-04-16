@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Brake Control from Camera Sensor`Brake System: Control and External Models
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_60ad3516-acc5-485d-a3f5-fcfac51810e5\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_DIST Add 0.0! 0
+IMP_PCON_BK Replace 0.0! 1
+IMP_PED_DETECT Add 0.0! 0
+#ENDMYellow
+
+#MiscYellow1
+define_import IMP_DIST; m;
+define_output distance_to_veh = IMP_DIST;
+
+define_import IMP_PED_DETECT;
+define_output Show_FCW = IMP_PED_DETECT;
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Camera Sensor: Pedestrians  (Simulink)` ADAS and Active Safety` , example run`Run_60ad3516-acc5-485d-a3f5-fcfac51810e5
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Brake System: Control and External Models } Brake Control from Camera Sensor
+#Library : I/O Channels: Import
+#DataSet : Brake Control from Camera Sensor
+#Category: Brake System: Control and External Models
+#FileID  : Import_a61e4868-ab9c-4f19-b9d6-16403e9cb817
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

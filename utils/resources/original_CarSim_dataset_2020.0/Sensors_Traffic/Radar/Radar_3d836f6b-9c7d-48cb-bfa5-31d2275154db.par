@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`FCW and ACC`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME FCW and ACC
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_ffc93407-0e02-4f9d-8ab4-5dd50505b3d8.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`50-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_ffc93407-0e02-4f9d-8ab4-5dd50505b3d8
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_594e7ef9-3c2d-4d4e-99a8-dd535dbab2d7.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 20 deg FOV` Common Vehicle Assets` , Shape for Detection Field`Shape_594e7ef9-3c2d-4d4e-99a8-dd535dbab2d7
+
+SET_COLOR 1 0 0
+SET_TRANSPARENCY 0.15
+X_LENGTH 50
+Y_LENGTH 1.7
+Z_LENGTH 2
+X_SENSOR -1250
+Y_SENSOR 0
+Z_SENSOR 1450
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -1
+BEARING_MAX_SENSOR 1
+
+SPECIAL_PARSFILE Animator\STL\Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829.par
+#BlueLink3 Animator: Shape File Link`Square: 1m (Scale: Y = 0.1)` Geometric Shapes` , Shape for vector`Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829.par
+#MiscYellow0
+define_parameter time_gap = 2.0; s; ACC time gap
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_31cf5798-a219-45b8-af93-7fefa37b8577.par
+#BlueLink12 Generic VS Commands`ACC with HUD` ADAS Support` , Miscellaneous`GenVS_31cf5798-a219-45b8-af93-7fefa37b8577
+
+
+#EMBEDDED_NOTES
+#The sensor looks forward and is located near the rear view mirror for the C-class hatchback. It has a narrow field of view of 2 deg, and a range of 50 m.
+#
+#This dataset includes a link to the ACC with HUD dataset.  The ACC HUD has distance bars that indicate following distance.  The ACC time gap that is defined in the yellow custom settings field on this screen can be modified.  The number of bars displayed in the ACC HUD is dependent on the time gap.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } FCW and ACC
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : FCW and ACC
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_3d836f6b-9c7d-48cb-bfa5-31d2275154db
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

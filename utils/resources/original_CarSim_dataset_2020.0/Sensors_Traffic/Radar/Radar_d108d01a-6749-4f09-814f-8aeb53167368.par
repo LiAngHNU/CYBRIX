@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Sensor Without Wall Detection`Wall Detection
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Sensor Without Wall Detection
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 0    
+OPT_SORT_OUTPUTS_SENSOR 0
+#CheckBox3 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 2
+TYPE_SENSOR 2
+PARSFILE Sensors_Traffic\Radar_Range\Range_ffc93407-0e02-4f9d-8ab4-5dd50505b3d8.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`50-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_ffc93407-0e02-4f9d-8ab4-5dd50505b3d8
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b
+
+X_SENSOR -1250
+Y_SENSOR 0
+Z_SENSOR 1450
+YAW_AIM_SENSOR -90
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0.2
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -90
+BEARING_MAX_SENSOR 90
+
+SPECIAL_PARSFILE Animator\STL\Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc.par
+#BlueLink3 Animator: Shape File Link`Cube: 1m X, 0.1 Y, Z (Sensor Vector)` Geometric Shapes` , Shape for vector`Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc.par
+#MiscYellow0
+ani_global_interpolation off
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Wall Detection } Sensor Without Wall Detection
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Sensor Without Wall Detection
+#Category: Wall Detection
+#FileID  : Radar_d108d01a-6749-4f09-814f-8aeb53167368
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

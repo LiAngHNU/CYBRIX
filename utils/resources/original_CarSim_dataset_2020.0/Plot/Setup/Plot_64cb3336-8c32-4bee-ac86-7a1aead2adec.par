@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Overturning Moments`Tire Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Mx_L1, Time
+PLOTCHANNELS Mx_R1, Time
+PLOTCHANNELS Mx_L2, Time
+PLOTCHANNELS Mx_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Overturning Moments
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces and Moments } Overturning Moments
+#Library : Plot: Setup
+#DataSet : Overturning Moments
+#Category: Tire Forces and Moments
+#FileID  : Plot_64cb3336-8c32-4bee-ac86-7a1aead2adec
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

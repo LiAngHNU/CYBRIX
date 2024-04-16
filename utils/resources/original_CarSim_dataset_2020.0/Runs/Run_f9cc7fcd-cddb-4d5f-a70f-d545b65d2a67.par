@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName CarSim Run Control`Friction Ellipse - Alpha = -2 deg`Tire Tester
+#VEHICLECODE Tire
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f9cc7fcd-cddb-4d5f-a70f-d545b65d2a67
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Tires\Tire\Tire_6b0f83e5-b6b3-4c04-b601-2020613f0fcb.par
+#BlueLink2 Tire`Example Extended Tire` Extended Tire Model` , Math Model`Tire_6b0f83e5-b6b3-4c04-b601-2020613f0fcb
+
+PARSFILE Tire_Tester\TestTire_e6d12311-dd3f-4c6e-940a-37ce28b78abc.par
+#BlueLink28 Tire Tester`Sweep Kappa: Fz = 4000 N` Sweep Kappa +/- 1.0` , Procedure`TestTire_e6d12311-dd3f-4c6e-940a-37ce28b78abc
+
+
+*IMAGE_TYPE DEFAULT
+PARSFILE IO_Channels\W_Channels\Write_71bdebab-1d55-4f21-9f09-6c1936e267ce.par
+#BlueLink13 I/O Channels: Write`All Outputs with Tire for Excel` ` , Output Variables`Write_71bdebab-1d55-4f21-9f09-6c1936e267ce
+
+WRITE_SENSOR_DETECT
+Title Friction Ellipse - Alpha = -2 deg <Tire Tester>
+CATEGORY Tire Tester 
+DATASET_TITLE Friction Ellipse - Alpha = -2 deg
+#MiscYellow0
+! Set the slip angle for this test
+ALPHA_TEST  -2
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The Tire Tester makes direct use of the CarSim tire models to simulate a steady state tire test.
+#
+#With the Tire Tester, you can examine the output of the tire equations under any conditions of slip angle, slip ratio, inclination, vertical load, and road coefficient of friction.
+#
+#This example sweeps the slip ratio from -1 to 1 while holding the slip angle at a constant -2 degrees, defined here on the Run Control screen in the Misc. yellow field.
+#
+#Negative slip angles are chosen because they are associated with positive lateral forces.
+#
+#The Tire Tester produces outputs for 6 tire forces and moments: Fx, Fy, Fz, Mx, My, and Mz, and 3 kinematic variables: slip angle (alpha), slip ratio (kappa), and inclination angle (gamma).
+#
+#Plotting Fx vs Fy shows the well known "friction ellipse" for the selected tire.
+#
+#There is no animator camera linked because we are not interested in the animation for these simulations.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Tester } Friction Ellipse - Alpha = -2 deg
+#Library : CarSim Run Control
+#DataSet : Friction Ellipse - Alpha = -2 deg
+#Category: Tire Tester
+#FileID  : Run_f9cc7fcd-cddb-4d5f-a70f-d545b65d2a67
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

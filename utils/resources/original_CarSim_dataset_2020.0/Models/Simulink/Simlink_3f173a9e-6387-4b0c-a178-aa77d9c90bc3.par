@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Models: Simulink`Four Wheel Steering System`Steering and Steering Controls
+#RunMdlFile Extensions\Simulink\Mdl4ws_CS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Mdl4ws_CS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\I_Channels\Import_738a4aa2-9ff4-4abb-8837-65c72ca8872d.par
+#BlueLink0 I/O Channels: Import`Four-Wheel Steer` Steering System: Control and External Models` , Import`Import_738a4aa2-9ff4-4abb-8837-65c72ca8872d
+
+PARSFILE IO_Channels\O_Channels\Export_8fc3fd4c-bff8-42da-bafa-284d5f27947b.par
+#BlueLink1 I/O Channels: Export`Four-Wheel Steering` Steering System: Control and External Models` , Import/Export`Export_8fc3fd4c-bff8-42da-bafa-284d5f27947b
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This example is meant to be used with a Simulink-based 4-Wheel Steering system. Specifically, the Simulink model will calculate the road wheel steer angles of rear wheels using the Replace mode.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Steering and Steering Controls } Four Wheel Steering System
+#Library : Models: Simulink
+#DataSet : Four Wheel Steering System
+#Category: Steering and Steering Controls
+#FileID  : Simlink_3f173a9e-6387-4b0c-a178-aa77d9c90bc3
+#Product : CarSim 2020.0
+#VehCode 
+
+END

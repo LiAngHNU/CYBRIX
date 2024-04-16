@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Longitudinal force pct utilization`Tire utilization
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FxUseL1, time
+PLOTCHANNELS FxUseR1, time
+PLOTCHANNELS FxUseL2, time
+PLOTCHANNELS FxUseR2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Longitudinal force pct utilization
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire utilization } Longitudinal force pct utilization
+#Library : Plot: Setup
+#DataSet : Longitudinal force pct utilization
+#Category: Tire utilization
+#FileID  : Plot_f280b43a-133e-45e0-a339-2fd7c22f0dab
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

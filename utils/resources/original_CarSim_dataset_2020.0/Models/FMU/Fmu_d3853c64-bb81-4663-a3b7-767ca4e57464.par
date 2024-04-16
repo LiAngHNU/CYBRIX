@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Models: Export FMU/FMI`CarSim/GT-Suite: RWD`
+*FMU_PATH Extensions\GTI\Full_powertrain\CarSim_GT.fmu
+#CheckBox0 0    
+*PYTHON_RUN_FMU 0
+#CheckBox1 0    
+*SELF_CONTAIN_FMU 0
+#CheckBox3 1    
+OPT_IO_UPDATE 1
+#CheckBox4 0    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#RingCtrl2 1
+*FMI_VER 1
+#RingCtrl3 1
+*FMI_PORT_TYPE 1
+#MiscYellow0
+OPT_SHIFT_GT 1
+#ENDMYellow
+
+PARSFILE IO_Channels\I_Channels\Import_70355d76-73d6-412f-b909-94522e5ebc86.par
+#BlueLink0 I/O Channels: Import`Full Powertrain RWD` Powertrain: Sub-System Controls and External Models` , Import`Import_70355d76-73d6-412f-b909-94522e5ebc86
+
+PARSFILE IO_Channels\O_Channels\Export_2eb47caf-723e-4a30-a170-cf59d4d712d4.par
+#BlueLink1 I/O Channels: Export`Full Powertrain RWD` Powertrain: Sub-System Controls and External Models` , Import/Export`Export_2eb47caf-723e-4a30-a170-cf59d4d712d4
+
+PARSFILE Generic\VS_commands\GenVS_f12189c4-f8b3-47f0-8f2f-620980ca27e8.par
+#BlueLink2 Generic VS Commands`Available Engine Power` Powertrain` , Miscellaneous`GenVS_f12189c4-f8b3-47f0-8f2f-620980ca27e8
+
+
+#EMBEDDED_NOTES
+#This example dataset uses the GT-Suite powertrain model connected through FMI.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Export FMU/FMI; CarSim/GT-Suite: RWD
+#Library : Models: Export FMU/FMI
+#DataSet : CarSim/GT-Suite: RWD
+#Category: 
+#FileID  : Fmu_d3853c64-bb81-4663-a3b7-767ca4e57464
+#Product : CarSim 2020.0
+#VehCode 
+
+END

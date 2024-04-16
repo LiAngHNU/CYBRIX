@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName CarSim Run Control`MT, CL Shift & Clutch, Full Throt.`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_60c76e02-cea1-4ea8-bda8-330bdc6e5cef
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0.6 0 0
+SET_RUN_COLOR 0.6 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_0ac31fc2-d6c2-4624-b1b9-f5b58930d9ac.par
+#BlueLink2 Vehicle: Assembly`Exotic Car, Mid-Engine: MT` Exotic Sports Car` , Math Model`Vehicle_0ac31fc2-d6c2-4624-b1b9-f5b58930d9ac
+
+PARSFILE Procedures\Proc_1ecd6264-5a8f-45d2-b494-637c60cc92d7.par
+#BlueLink28 Procedures`Full Throttle Acceleration MT` Accel. and Brake Testing` , Procedure`Proc_1ecd6264-5a8f-45d2-b494-637c60cc92d7
+
+PARSFILE Roads\3D_Road\Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2
+
+PARSFILE Animator\Arrows\Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887.par
+#BlueLink10 Animator: Wheel Arrows and Other Indicators`Tire Skid Marks (2 Axles)` Skid Marks` , Miscellaneous`Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887
+
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+PARSFILE Plot\Setup\Plot_60c40b33-9b7a-4d9f-868c-fdfcd6c5ea90.par
+#BlueLink15 Plot: Setup`Clutch: Control Input` Controls: Driver` , Plot`Plot_60c40b33-9b7a-4d9f-868c-fdfcd6c5ea90
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_30f1b262-73d2-47f4-b117-69aefa4b7382.png
+WRITE_SENSOR_DETECT
+Title MT, CL Shift & Clutch, Full Throt. <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE MT, CL Shift & Clutch, Full Throt.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Events are used to set up an acceleration test which combines open-loop and closed-loop control of the shifting and clutch.
+#
+#Click on the Procedure screen dataset "Full Throttle Acceleration MT" and follow the links for the Event series to see how this was done.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } MT, CL Shift & Clutch, Full Throt.
+#Library : CarSim Run Control
+#DataSet : MT, CL Shift & Clutch, Full Throt.
+#Category: Powertrain Tests
+#FileID  : Run_60c76e02-cea1-4ea8-bda8-330bdc6e5cef
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

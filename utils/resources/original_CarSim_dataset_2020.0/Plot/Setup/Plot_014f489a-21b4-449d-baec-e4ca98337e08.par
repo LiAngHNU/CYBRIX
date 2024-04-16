@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Bearing Angles: Sensor 1 - Objects 1 to 5`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS BrCS1_1, Time
+PLOTCHANNELS BrCS1_2, Time
+PLOTCHANNELS BrCS1_3, Time
+PLOTCHANNELS BrCS1_4, Time
+PLOTCHANNELS BrCS1_5, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Bearing Angles: Sensor 1 - Objects 1 to 5
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Bearing Angles: Sensor 1 - Objects 1 to 5
+#Library : Plot: Setup
+#DataSet : Bearing Angles: Sensor 1 - Objects 1 to 5
+#Category: ADAS Sensor Detections
+#FileID  : Plot_014f489a-21b4-449d-baec-e4ca98337e08
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

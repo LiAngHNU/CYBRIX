@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Procedures`Intersection, 3-Way, Curbs, Speed Sign`Road Networks
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -120
+TSTART_WRITE = 0;
+TSTOP 50
+SSTOP 250
+OPT_DIRECTION 0
+*TSTOP 50
+*TSTART 0
+*SSTART -120
+*SSTOP 250
+
+PARSFILE Control\Driver\StrDM_ed2a95fa-cdad-460f-a4b4-e29a3b439a89.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.8m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_ed2a95fa-cdad-460f-a4b4-e29a3b439a89
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_07343a37-aaf9-402e-9caa-019f1df7e2cf.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.15/0.2 G Ax/Ay, SPEED_LIMIT_ID, mi/h` Miscellaneous` , Speed vs. station`SpdPath_07343a37-aaf9-402e-9caa-019f1df7e2cf
+
+#MiscYellow0
+! speed limit is initially 45mi/h
+SET_ISPEED_FOR_ID SPEED_LIMIT_ID
+SPEED_TARGET_CONSTANT 45;mi/h
+#ENDMYellow
+
+PARSFILE Generic\Links\GenLink_7be360fe-0ebe-4b38-ab76-6a3dc56cc646.par
+#BlueLink0 Generic Group of Links`Intersection, 3-Way with Curbs` Roads and Paths` , Miscellaneous`GenLink_7be360fe-0ebe-4b38-ab76-6a3dc56cc646
+
+PARSFILE Sensors_Traffic\Targets\Target_fc18cb39-6bee-4fed-9ccc-14c06a80c47f.par
+#BlueLink3 Single Moving Object (Custom)`Speed Limit 55 mi/h` Traffic Signs and Lights` , Miscellaneous`Target_fc18cb39-6bee-4fed-9ccc-14c06a80c47f
+
+#MiscYellow1
+path_id_dm = 1002 ! Use W entrance
+current_road_id = path_id_dm
+#ENDMYellow
+
+PARSFILE Animator\HUD\HUD_28cddbb9-94c6-4e76-a06f-7737ba30c08f.par
+#BlueLink34 Animator: HUD`Throttle and Speed` Vehicle Status Indicators` , Miscellaneous`HUD_28cddbb9-94c6-4e76-a06f-7737ba30c08f
+
+PARSFILE Generic\VS_commands\GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3.par
+#BlueLink8 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3
+
+PARSFILE Generic\VS_commands\GenVS_9adae0f9-c659-4690-8e88-e92525112141.par
+#BlueLink9 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_9adae0f9-c659-4690-8e88-e92525112141
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink11 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+PARSFILE Plot\Setup\Plot_59f74859-7f34-4878-a9b5-3ba45cf252ae.par
+#BlueLink18 Plot: Setup`Event Count` Event Control` , Plot`Plot_59f74859-7f34-4878-a9b5-3ba45cf252ae
+
+
+#EMBEDDED_NOTES
+#This dataset works with a vehicle that has an ADAS sensor that detects speed limit signs. The maximum speed used in the path preview dataset is set to a SPEED_TARGET dataset with ID = SPEED_LIMIT.
+#
+#The 3D road dataset has three roads with curbs and some cross-slope.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Road Networks } Intersection, 3-Way, Curbs, Speed Sign
+#Library : Procedures
+#DataSet : Intersection, 3-Way, Curbs, Speed Sign
+#Category: Road Networks
+#FileID  : Proc_bd3d060e-ee98-45e4-b4db-eea80a5c6727
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

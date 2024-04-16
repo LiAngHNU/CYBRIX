@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Engine RPM`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#BlueLink2 CarSim Run Control`Outrigger for Roll Stability Testing` Extended Models` , example run`Run_756d0204-ba6a-45dc-8a4d-3cabfb558523
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_756d0204-ba6a-45dc-8a4d-3cabfb558523\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS AV_Eng, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 0
+#RingCtrl8 1
+
+
+PTITLE Engine RPM
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Engine RPM
+#Library : Plot: Setup
+#DataSet : Engine RPM
+#Category: Powertrain
+#FileID  : Plot_92c3bffb-a766-4f7d-9f5e-73059542ee31
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Generic VS Commands`Sensor Target Motion: Back / Forward`ADAS Support
+#VehCode VS Commands
+
+#MiscYellow0
+define_table Station_Obj 1; 
+
+HeadO_1 = 180;            ! Sets the heading angle of the object to be 180 degrees
+
+! VS Commands used to scale and offset the Generic Table Station_Obj, used for the crossing
+! pedestrian example
+
+STATION_OBJ_GAIN 26
+STATION_OBJ_OFFSET 1.78
+XROW_SCALE_STATION_OBJ TSTOP/3.15
+eq_in Imp_S_Obj_1 = Station_Obj(0, T, 1);
+Imp_S_OBJ_1 vs_add 0;
+
+! This output variable is set equal to the import variable for the station position of the moving object,
+! allowing us to see in a plot the raw data that is being imported into the VS Solver via this import
+! variable. 
+
+define_output SenTrgS = Imp_S_Obj_1
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_87cb9815-b4c6-4631-8d33-6b7e76bb8f91.par
+#BlueLink0 Generic Table`Sensor Target Motion: Station_Obj (1 - 0)` ADAS Support` , Miscellaneous`GenTab_87cb9815-b4c6-4631-8d33-6b7e76bb8f91
+
+PARSFILE Plot\Setup\Plot_190aeec7-52f8-4e84-b2ca-be01ab8a94ae.par
+#BlueLink3 Plot: Setup`SenTrgS` ADAS Sensor Detections: Collision` , Plot`Plot_190aeec7-52f8-4e84-b2ca-be01ab8a94ae
+
+PARSFILE Plot\Setup\Plot_a222df56-a537-4a85-b37a-5502a3d89dac.par
+#BlueLink5 Plot: Setup`Moving Object Station: S_Obj_1` ADAS Sensor Target Properties` , Plot`Plot_a222df56-a537-4a85-b37a-5502a3d89dac
+
+PARSFILE Plot\Setup\Plot_4d28c07c-4401-4eed-a7c0-e51722ff09c9.par
+#BlueLink6 Plot: Setup`Moving Object X Position: X_Obj_1` ADAS Sensor Target Properties` , Plot`Plot_4d28c07c-4401-4eed-a7c0-e51722ff09c9
+
+PARSFILE Plot\Setup\Plot_c6b2cfb1-80b0-4f98-be7a-7b62486f55d4.par
+#BlueLink7 Plot: Setup`Moving Object Speed: V_Obj_1` ADAS Sensor Target Properties` , Plot`Plot_c6b2cfb1-80b0-4f98-be7a-7b62486f55d4
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Sensor Target Motion: Back / Forward
+#Library : Generic VS Commands
+#DataSet : Sensor Target Motion: Back / Forward
+#Category: ADAS Support
+#FileID  : GenVS_f16ef7e1-07c3-4d24-8f16-487fdf46b8eb
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

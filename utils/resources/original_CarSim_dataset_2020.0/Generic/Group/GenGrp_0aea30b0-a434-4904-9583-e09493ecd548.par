@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Generic Data Group`2 Lanes Fwd, 1 Lane Opp.`ADAS: Traffic for ACC & FCW
+#VehCode Generic Group
+#MiscYellow0
+SET_ILTARG_FOR_ID 0
+ltarg_constant = 2
+set_description ltarg_id ...
+  Lateral target for vehicles in the same lane
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_4b4574ee-6a0c-4483-9f6f-3092620bc8b2.par
+#BlueLink0 Multiple Moving Objects`2 Vehicles, Variable Speed for AAC` Traffic Vehicles (Forward)` , Link 1`TMotion_4b4574ee-6a0c-4483-9f6f-3092620bc8b2
+
+
+#MiscYellow1
+SET_ILTARG_FOR_ID 0
+ltarg_constant = -2
+set_description ltarg_id ...
+  Lateral target for slower vehicles
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_74382b95-3e56-40f1-8e90-73757d473f43.par
+#BlueLink1 Multiple Moving Objects`6 Vehicles, Vx * 0.95, w. S_SS + SS` Traffic Vehicles (Forward)` , Link 2`TMotion_74382b95-3e56-40f1-8e90-73757d473f43
+
+
+#MiscYellow2
+SET_ILTARG_FOR_ID 0
+ltarg_constant = 6
+set_description ltarg_id ...
+  Lateral target for oncoming vehicles
+define_parameter vx_ref = speed_target(0,0,1); ...
+  km/h; Reference speed
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_1cfdf50a-93d3-464f-9002-f9539e634c9f.par
+#BlueLink2 Multiple Moving Objects`6 Vehicles, -Vx_Ref` Traffic Vehicles (Oncoming)` , Link 3`TMotion_1cfdf50a-93d3-464f-9002-f9539e634c9f
+
+
+PARSFILE Control\Speed_t\SpdTime_26c077aa-689c-4a04-9d1f-8d53a9c20b10.par
+#BlueLink3 Control: Speed (Closed Loop) Using Target Speed`Traffic Speed for ACC` Traffic Vehicles and Sensor Targets` , Link 4`SpdTime_26c077aa-689c-4a04-9d1f-8d53a9c20b10
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset assembles some traffic vehicles in the same lane as the Ego vehicle, some in the right lane going slower. and some in the oncoming lane going at the initial target speed  speed_target(0,0,1).
+#
+#The moving objects from link 1 follow a target speed defined in link 4. The vehicles from link 2 use a speed that is 5% slower than the ego vehicle. The vehicles from link 3 use a speed assigned to a custom parameter VX_REF, set to the initial target speed  speed_target(0,0,1).
+#
+#The lateral positions of the moving objects are set using the LTARG function, with datasets specified with ltarg_constant. Descriptions are specified that will appear in the Echo file. A new command SET_ILTARG_FOR_ID adds LTARG datasets.
+#
+#2018.1: Removed ISPEED and N_SPEED_TARGET; use parameters for LTARG IDs.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic for ACC & FCW } 2 Lanes Fwd, 1 Lane Opp.
+#Library : Generic Data Group
+#DataSet : 2 Lanes Fwd, 1 Lane Opp.
+#Category: ADAS: Traffic for ACC & FCW
+#FileID  : GenGrp_0aea30b0-a434-4904-9583-e09493ecd548
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

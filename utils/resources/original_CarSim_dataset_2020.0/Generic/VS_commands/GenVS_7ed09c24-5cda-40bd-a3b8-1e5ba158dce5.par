@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Generic VS Commands`Force Euler Angles to Degrees`Alternate Unit Systems
+#VehCode VS Commands
+
+#MiscYellow0
+! Introduce alternate units for degrees to support animation angles (yaw, roll, pitch)
+DEFINE_UNITS Degrees  57.2957795
+SET_UNITS YAW DEGREES
+SET_UNITS ROLL_E DEGREES
+SET_UNITS PITCH DEGREES
+SET_UNITS YAW_L1 DEGREES
+SET_UNITS YAW_L2 DEGREES
+SET_UNITS YAW_R1 DEGREES
+SET_UNITS YAW_R2 DEGREES
+SET_UNITS ROLL_L1 DEGREES
+SET_UNITS ROLL_L2 DEGREES
+SET_UNITS ROLL_R1 DEGREES
+SET_UNITS ROLL_R2 DEGREES
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#The animator expects angles to be in degrees. If the default units for angles are not degrees, then there are several work arounds that can be used to obtain correct animations. One method  is to specify custom animator datasets and disable the default animator information that is automatically generated.
+#
+#A simpler method, used here, is to set the  relatively small set of angles used by the animator to have degrees. The angles for the sprung mass are yaw, roll, and pitch. For the wheels, they are yaw, roll, and rotation. Rotation is OK; it ihas units of "revolution" and the vehicle screens provide the correct scale factor.
+#
+#All of the angles with units associated with the symbol "DEG" are potentially reset to other units (e.g., radians). This dataset introduces new units symbol "DEGREES" that is independent of the units "DEG". The anglular variables of interest are set to "DEGREES"  with the VS commands here.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Alternate Unit Systems } Force Euler Angles to Degrees
+#Library : Generic VS Commands
+#DataSet : Force Euler Angles to Degrees
+#Category: Alternate Unit Systems
+#FileID  : GenVS_7ed09c24-5cda-40bd-a3b8-1e5ba158dce5
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`300 Azm, 21 El, 30 m`Fixed Camera
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+SET_CAMERA_REFERENCE_FRAME Frame_8d039c3c-753d-406b-9c28-9406943a988c
+PARSFILE Animator\Frames\Frame_8d039c3c-753d-406b-9c28-9406943a988c.par
+#BlueLink0 Animator: Reference Frame`Fixed` Shape Preview: Generic` , Reference frame for outside camera`Frame_8d039c3c-753d-406b-9c28-9406943a988c
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_8d039c3c-753d-406b-9c28-9406943a988c
+SET_LOOKPOINT_X 8
+SET_LOOKPOINT_Y 8
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 300
+SET_ELEVATION 21
+SET_DISTANCE 30
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X 8
+*SET_LOOKPOINT_Y 8
+*SET_LOOKPOINT_Z 0
+*SET_AZIMUTH 300
+*SET_ELEVATION 21
+*SET_DISTANCE 30
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 62
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Fixed Camera } 300 Azm, 21 El, 30 m
+#Library : Animator: Camera Setup
+#DataSet : 300 Azm, 21 El, 30 m
+#Category: Fixed Camera
+#FileID  : Camera_eafc05ab-1fc3-4810-9b6d-8dd5f4f589c5
+#Product : CarSim 2020.0
+#VehCode Camera
+
+END

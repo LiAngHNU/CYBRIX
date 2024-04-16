@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`New Detect`Simple Path Planning
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 DisS1_1
+*NAME2 abs_lat_veh
+*VALUE1 25.0
+*VALUE2 0.1
+*SPEED 40
+#MiscYellow0
+det_station = station+5.0
+! Set up the inputs
+eq_in intab(0,1,1) = Vx
+eq_in intab(0,2,1) = DisS1_1
+eq_in intab(0,3,1) = BrCS1_1
+eq_in intab(0,4,1) = Lat_Targ
+eq_in intab(0,5,1) = Station
+eq_in intab(0,6,1) = 0.0
+#ENDMYellow
+
+MAKE_EVENT DisS1_1 < 25.0 ; Events\Events_b7c9e996-92e8-4202-95a4-8624b021f5f6.par
+#BlueLink0 Events`Update Path` Simple Path Planning` , Events`Events_b7c9e996-92e8-4202-95a4-8624b021f5f6
+
+MAKE_EVENT abs_lat_veh > 0.1 ; Events\Events_cd869aa6-78c6-4e6c-9e3f-afbb4259cf8e.par
+#BlueLink1 Events`Move Back to Path` Simple Path Planning` , Events`Events_cd869aa6-78c6-4e6c-9e3f-afbb4259cf8e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Update input table to Python call and watch detection until it is closer than 35 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Simple Path Planning } New Detect
+#Library : Events
+#DataSet : New Detect
+#Category: Simple Path Planning
+#FileID  : Events_56dd4eae-710b-4424-b702-df7b026dff30
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

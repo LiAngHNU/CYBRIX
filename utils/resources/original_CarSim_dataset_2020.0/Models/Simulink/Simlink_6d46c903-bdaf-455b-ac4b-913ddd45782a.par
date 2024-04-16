@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Models: Simulink`Variable Effective Rolling Radius`Tire Kinematics
+#RunMdlFile Extensions\Simulink\rre.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\rre.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE IO_Channels\Ports\Port_8c2dcaab-01eb-43a5-bf4e-c2c4631ac205.par
+#BlueLink0 I/O Channels: Ports`Variable Effective Rolling Radius` Tire Kinematics` , Import`Port_8c2dcaab-01eb-43a5-bf4e-c2c4631ac205
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This "Models: Simulink" dataset links to a Simulink model which demonstrates variable effective rolling radii of the tires.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Tire Kinematics } Variable Effective Rolling Radius
+#Library : Models: Simulink
+#DataSet : Variable Effective Rolling Radius
+#Category: Tire Kinematics
+#FileID  : Simlink_6d46c903-bdaf-455b-ac4b-913ddd45782a
+#Product : CarSim 2020.0
+#VehCode 
+
+END

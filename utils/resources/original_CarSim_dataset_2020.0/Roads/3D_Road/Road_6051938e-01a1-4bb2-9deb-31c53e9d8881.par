@@ -1,0 +1,154 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Off-Road Hill Climb 20 deg.`Off-Road
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_6051938e-01a1-4bb2-9deb-31c53e9d8881.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Off-Road Hill Climb 20 deg.
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+PARSFILE Roads\Center_Z\RdRefZ_f02f4548-b12f-4bf6-8e65-1ba513015209.par
+#BlueLink1 Road: Reference Line Elevation`Slope 20 deg. @ 10 m, Flat after 104 m` Hills and Valleys` , Path Elevation`RdRefZ_f02f4548-b12f-4bf6-8e65-1ba513015209
+
+PARSFILE Roads\dZ_Map\RdMapZ_74992977-ad4d-4089-b524-f049da9e9a4f.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Off-Road Terrain, 75 m long, 10 m wide` Off-Road Terrain` , Miscellaneous`RdMapZ_74992977-ad4d-4089-b524-f049da9e9a4f
+
+PARSFILE Roads\Friction\RdMu_cb7d3ec0-64aa-48a0-9e57-7294b870a920.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.75` Constant` , Friction`RdMu_cb7d3ec0-64aa-48a0-9e57-7294b870a920
+
+PARSFILE Roads\Shapes\RdShape_a62c748c-f56c-49fd-9861-0046b0acef8c.par
+#BlueLink4 Road: Animator Surface Shapes`Off-Road Hill Climb` Ride Roads and Suspension Testing` , Road shape definitions`RdShape_a62c748c-f56c-49fd-9861-0046b0acef8c
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+add_reference_frame road_stuff_7_Trees_for_Hill_Climb
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_4bd13a46-0787-43f1-bb3d-bed6c1f810cb.par
+#BlueLink7 Road: Animator Repeated Object`Trees for Hill Climb` Trees` , 3D Shapes`AniRep_4bd13a46-0787-43f1-bb3d-bed6c1f810cb
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_6051938e-01a1-4bb2-9deb-31c53e9d8881.ani
+
+add_reference_frame road_stuff_1_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -99.5
+set_offset_var_y -13
+set_offset_var_z 0.254077099405
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_2_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -52.2
+set_offset_var_y -8
+set_offset_var_z 0.133294719487
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_3_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -24.1
+set_offset_var_y -15
+set_offset_var_z 0.0615402823685
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_4_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 10
+set_offset_var_y -22.8
+set_offset_var_z 1.234
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_5_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 15
+set_offset_var_y -12
+set_offset_var_z 3.034
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_6_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 38.4
+set_offset_var_y -13
+set_offset_var_z 12.0739905721
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_7_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 67
+set_offset_var_y -11
+set_offset_var_z 22.7266400545
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_8_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 95.5
+set_offset_var_y -19
+set_offset_var_z 33.4220221815
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_9_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 128.7
+set_offset_var_y -15
+set_offset_var_z 35.1540005288
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_10_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 156
+set_offset_var_y -14
+set_offset_var_z 35.1539886582
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_11_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 188.5
+set_offset_var_y -5
+set_offset_var_z 35.1539744809
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+add_reference_frame road_stuff_12_2_Pine:_Summer
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 217.1
+set_offset_var_y -9.75
+set_offset_var_z 35.1539620049
+parsfile Animator\STL\Shape_ad0ff622-c982-4151-ad8c-04baab43d318.par
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Off-Road } Off-Road Hill Climb 20 deg.
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Off-Road Hill Climb 20 deg.
+#Category: Off-Road
+#FileID  : Road_6051938e-01a1-4bb2-9deb-31c53e9d8881
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

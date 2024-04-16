@@ -1,0 +1,1528 @@
+ Keyword	8-Char Alias	Units	Units Type	Component Type	Full Label	Specific Component	Extra Info
+AAx	 	rad/s2	Angular acceleration	Chassis motion	Roll acc. (body-fixed), vehicle	Vehicle roll (body-fixed)	This is the [sx] component of the angular acceleration vector of the sprung mass.
+AAy	 	rad/s2	Angular acceleration	Chassis motion	Pitch acc. (body-fixed), vehicle	Vehicle pitch (body-fixed)	This is the [sy] component of the angular acceleration vector of the sprung mass.
+AAy_L1	 	rad/s2	Angular acceleration	Wheels	Wheel L1 spin acceleration	Wheel L1 spin
+AAy_L2	 	rad/s2	Angular acceleration	Wheels	Wheel L2 spin acceleration	Wheel L2 spin
+AAy_R1	 	rad/s2	Angular acceleration	Wheels	Wheel R1 spin acceleration	Wheel R1 spin
+AAy_R2	 	rad/s2	Angular acceleration	Wheels	Wheel R2 spin acceleration	Wheel R2 spin
+AAz	 	rad/s2	Angular acceleration	Chassis motion	Yaw acc. (body-fixed), vehicle	Vehicle yaw (body-fixed)	This is the [sz] component of the angular acceleration vector of the sprung mass.
+AA_Eng	 	rad/s2	Angular acceleration	Powertrain	Engine crankshaft angular accel.	Engine crankshaft
+AA_P	 	rad/s2	Angular acceleration	Chassis motion	Pitch accel. (Euler), vehicle	Vehicle pitch (Euler)	This is the second time derivative of the Euler pitch angle of the sprung mass. Be aware that the second derivatives AA_P, AA_R, and AA_Y are not measurable in physical vehicles.
+AA_R	 	rad/s2	Angular acceleration	Chassis motion	Roll accel. (Euler), vehicle	Vehicle roll (Euler)	This is the second time derivative of the Euler roll angle of the sprung mass.
+AA_Y	 	rad/s2	Angular acceleration	Chassis motion	Yaw accel. (Euler), vehicle	Vehicle yaw (Euler)	This is the second time derivative of the Euler yaw angle of the sprung mass.
+ABS_L1	 	-	ABS apply command	Brakes	ABS apply command, L1	ABS apply command, L1
+ABS_L2	 	-	ABS apply command	Brakes	ABS apply command, L2	ABS apply command, L2
+ABS_R1	 	-	ABS apply command	Brakes	ABS apply command, R1	ABS apply command, R1
+ABS_R2	 	-	ABS apply command	Brakes	ABS apply command, R2	ABS apply command, R2
+Alpha_L1	 	deg	Angle	Tires	Lateral slip angle, tire L1	Tire L1 lateral slip	Instant lateral slip is the arc-tangent of the ratio of lateral to longitudinal velocity at the center of tire contact in the plane of the ground at the tire contact: ATAN2(Vy, Vx).
+Alpha_L2	 	deg	Angle	Tires	Lateral slip angle, tire L2	Tire L2 lateral slip
+Alpha_R1	 	deg	Angle	Tires	Lateral slip angle, tire R1	Tire R1 lateral slip
+Alpha_R2	 	deg	Angle	Tires	Lateral slip angle, tire R2	Tire R2 lateral slip
+AlphL_L1	 	deg	Angle	Tires	Lateral slip (lagged), tire L1	Tire L1 slip (lagged)	Lagged slip angle is the arc-tangent of the state variable SV_SLIP_LAT_L1 that follows the tangent of the instant slip angle ALPHA_L1, subject to a dynamic lag based on lateral relaxation length.
+AlphL_L2	 	deg	Angle	Tires	Lateral slip (lagged), tire L2	Tire L2 slip (lagged)
+AlphL_R1	 	deg	Angle	Tires	Lateral slip (lagged), tire R1	Tire R1 slip (lagged)
+AlphL_R2	 	deg	Angle	Tires	Lateral slip (lagged), tire R2	Tire R2 slip (lagged)
+AVx	 	deg/s	Angular rate	Chassis motion	Roll rate (body-fixed), vehicle	Vehicle roll (body-fixed)	This is the [sx] component of the angular velocity vector of the sprung mass.
+AVx_L1	 	deg/s	Angular rate	Wheels	Roll rate, wheel L1	Roll rate, wheel L1	This is the roll componenent of the angular velocity vector of the wheel knuckle, in the body-fixed [wx] direction.
+AVx_L2	 	deg/s	Angular rate	Wheels	Roll rate, wheel L2	Roll rate, wheel L2
+AVx_R1	 	deg/s	Angular rate	Wheels	Roll rate, wheel R1	Roll rate, wheel R1
+AVx_R2	 	deg/s	Angular rate	Wheels	Roll rate, wheel R2	Roll rate, wheel R2
+AVy	 	deg/s	Angular rate	Chassis motion	Pitch rate (body-fixed), vehicle	Vehicle pitch (body-fixed)	This is the [sy] component of the angular velocity vector of the sprung mass.
+AVy_L1	 	rpm	Driveline speed	Wheels	Wheel L1 spin	Wheel L1 spin
+AVy_L2	 	rpm	Driveline speed	Wheels	Wheel L2 spin	Wheel L2 spin
+AVy_R1	 	rpm	Driveline speed	Wheels	Wheel R1 spin	Wheel R1 spin
+AVy_R2	 	rpm	Driveline speed	Wheels	Wheel R2 spin	Wheel R2 spin
+AVy_W_L1	 	deg/s	Angular rate	Wheels	Pitch rate, wheel L1	Pitch rate, wheel L1	This is the pitch componenent of the angular velocity vector of the wheel knuckle, in the body-fixed [wy] direction.
+AVy_W_L2	 	deg/s	Angular rate	Wheels	Pitch rate, wheel L2	Pitch rate, wheel L2
+AVy_W_R1	 	deg/s	Angular rate	Wheels	Pitch rate, wheel R1	Pitch rate, wheel R1
+AVy_W_R2	 	deg/s	Angular rate	Wheels	Pitch rate, wheel R2	Pitch rate, wheel R2
+AVz	 	deg/s	Angular rate	Chassis motion	Yaw rate (body-fixed), vehicle	Vehicle yaw (body-fixed)	This is the [sz] component of the angular velocity vector of the sprung mass.
+AVzKp_L1	 	deg/s	Angular rate	Steering	Steer rate about kingpin L1	Kingpin L1 steer rate	Component of angular velocity vector of wheel knuckle about the 3D inclined kingpin axis.
+AVzKp_L2	 	deg/s	Angular rate	Steering	Steer rate about kingpin L2	Kingpin L2 steer rate
+AVzKp_R1	 	deg/s	Angular rate	Steering	Steer rate about kingpin R1	Kingpin R1 steer rate	Component of angular velocity vector of wheel knuckle about the 3D inclined kingpin axis.
+AVzKp_R2	 	deg/s	Angular rate	Steering	Steer rate about kingpin R2	Kingpin R2 steer rate
+AVz_L1	 	deg/s	Angular rate	Wheels	Yaw rate, wheel L1	Yaw rate, wheel L1	This is the yaw componenent of the angular velocity vector of the wheel knuckle, in the body-fixed [wz] direction..
+AVz_L2	 	deg/s	Angular rate	Wheels	Yaw rate, wheel L2	Yaw rate, wheel L2
+AVz_R1	 	deg/s	Angular rate	Wheels	Yaw rate, wheel R1	Yaw rate, wheel R1
+AVz_R2	 	deg/s	Angular rate	Wheels	Yaw rate, wheel R2	Yaw rate, wheel R2
+AV_D3f	 	rpm	Driveline speed	Powertrain	Trans case shaft to drv. A1 spin	Transfer case front output shaft
+AV_D3r	 	rpm	Driveline speed	Powertrain	Trans case shaft to drv. A2 spin	Transfer case rear output shaft
+AV_DS_L1	 	rpm	Driveline speed	Powertrain	Left-front driveshaft speed	LF driveshaft
+AV_DS_L2	 	rpm	Driveline speed	Powertrain	Left-rear driveshaft speed	LR driveshaft
+AV_DS_R1	 	rpm	Driveline speed	Powertrain	Right-front driveshaft speed	RF driveshaft
+AV_DS_R2	 	rpm	Driveline speed	Powertrain	Right-rear driveshaft speed	RR driveshaft
+AV_Eng	 	rpm	Driveline speed	Powertrain	Engine crankshaft spin	Engine crankshaft
+AV_Gear1	 	deg/s	Angular rate	Steering	Pitman arm rotation rate, axle 1	Axle 1 steering
+AV_Gear2	 	deg/s	Angular rate	Steering	Pitman arm rotation rate, axle 2	Axle 2 steering
+AV_P	 	deg/s	Angular rate	Chassis motion	Pitch rate (Euler), vehicle	Vehicle pitch (Euler)	This is the time derivative of the Euler pitch angle of the sprung mass. Be aware that the derivatives AV_P, AV_R, and AV_Y are not measurable in physical vehicles.
+AV_R	 	deg/s	Angular rate	Chassis motion	Roll rate (Euler), vehicle	Vehicle roll (Euler)	This is the time derivative of the Euler roll angle of the sprung mass.
+AV_TC	 	rpm	Driveline speed	Powertrain	Trans input shaft spin	Transmission input shaft
+AV_Trans	 	rpm	Driveline speed	Powertrain	Trans. output shaft spin	Transmission output shaft
+AV_Y	 	deg/s	Angular rate	Chassis motion	Yaw rate (Euler), vehicle	Vehicle yaw (Euler)	This is the time derivative of the Euler yaw angle of the sprung mass.
+Ax	 	g	Longitudinal acceleration	Chassis motion	Long. accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit in the ISO/SAE [x] direction. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+Ax_Rd	 	g	Longitudinal acceleration	Chassis motion	Road X accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit, in the road [rx] direction.
+Ax_SCrq	 	g	Longitudinal acceleration	Speed controller	Ax request from SC PI controller	Ax request from SC PI controller
+Ax_SM	 	g	Longitudinal acceleration	Chassis motion	Long. accel., CG, sprung mass	CG, sprung mass	This is the [x] component of the acceleration vector of the sprung mass CG.
+Ay	 	g	Lateral acceleration	Chassis motion	Lat. accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit in the ISO/SAE [y] direction. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+Ay_Rd	 	g	Lateral acceleration	Chassis motion	Road Y accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit in the road [ry] direction.
+Ay_SM	 	g	Lateral acceleration	Chassis motion	Lat. accel., CG, sprung mass	CG, sprung mass	This is the [y] component of the acceleration vector of the sprung mass CG.
+Az	 	g	Vertical acceleration	Chassis motion	Vert. accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit, in the [nz] direction. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+Az_Rd	 	g	Vertical acceleration	Chassis motion	Road Y accel., inst. CG, vehicle	Instant CG, vehicle	This is the acceleration of the instant CG of the vehicle unit in the road [rz] direction.
+Az_SM	 	g	Vertical acceleration	Chassis motion	Vert. accel., CG, sprung mass	CG, sprung mass	This is the [nz] component of the acceleration vector of the sprung mass CG.
+A_Gear1	 	deg	Angle	Steering	Pitman arm rotation, axle 1	Axle 1 steering
+A_Gear2	 	deg	Angle	Steering	Pitman arm rotation, axle 2	Axle 2 steering
+A_Tbar	 	deg	Angle	Steering	Steering torsion bar angle	Steering
+Beta	 	deg	Angle	Chassis motion	Slip angle, vehicle	Vehicle slip (beta)	The side-slip angle of the vehicle unit is calculated with the ISO/SAE definition as ATAN2(Vy, Vx), where Vy and Vx are the ISO [y] and [x] components of the velocity of the instant center of gravity of the vehicle.
+BetaAir	 	deg	Angle	Aerodynamics	Aero slip angle, vehicle	Aero slip angle, vehicle	Angle of air velocity in the vehicle reference frame, relative to the instant CG for the vehicle unit. Head-on = 0. 90-deg is in the [y] direction.
+BetaR	 	deg/s	Angular rate	Chassis motion	Slip angle rate, vehicle	Vehicle slip rate
+BetaRd	 	deg	Angle	Chassis motion	Slip angle rel. to road, vehicle	Vehicle slip (beta) rel. to road	This is the side-slip angle of the vehicle unit relative to the Road Reference Frame: ATAN2(Vy_Rd, Vx_Rd).
+BetaRdR	 	deg/s	Angular rate	Chassis motion	Slip angle rate (road), vehicle	Vehicle slip rate (road)
+Bk_Boost	 	mm	Displacement	Brakes	Brake booster displacement	Brake Booster
+Bk_Pedal	 	mm	Displacement	Brakes	Brake pedal displacement	Brake Pedal
+Bk_Stat	 	-	Boolean	Brakes	Brake apply status	Brake Control	This is 0 (brake control not applied; Pbk_Con < 100 Pa) or 1 (brake control applied; Pbk_Con > 100 Pa).
+CamberL1	 	deg	Angle	Suspensions	Camber angle, wheel L1	Wheel camber L1
+CamberL2	 	deg	Angle	Suspensions	Camber angle, wheel L2	Wheel camber L2
+CamberR1	 	deg	Angle	Suspensions	Camber angle, wheel R1	Wheel camber R1
+CamberR2	 	deg	Angle	Suspensions	Camber angle, wheel R2	Wheel camber R2
+CamUSL1	 	deg	Angle	Suspensions	Camber (unsteered wheel) L1	Wheel camber (unsteered) L1	Roll angle of the unsteered wheel plane, using the camber sign convention.
+CamUSL2	 	deg	Angle	Suspensions	Camber (unsteered wheel) L2	Wheel camber (unsteered) L2	Roll angle of the unsteered wheel plane, using the camber sign convention.
+CamUSR1	 	deg	Angle	Suspensions	Camber (unsteered wheel) R1	Wheel camber (unsteered) R1
+CamUSR2	 	deg	Angle	Suspensions	Camber (unsteered wheel) R2	Wheel camber (unsteered) R2
+Clt_D1_2	 	-	Clutch control	Powertrain	Front diff. 2nd clutch control	Front diff. second clutch
+Clt_D2_2	 	-	Clutch control	Powertrain	Rear diff. 2nd clutch control	Rear diff. second clutch
+Clt_D3_2	 	-	Clutch control	Powertrain	Trans. case, 2nd clutch control	Transfer case second clutch
+ClutchD1	 	-	Clutch control	Powertrain	Drive A1 diff. clutch control	Front differential clutch
+ClutchD2	 	-	Clutch control	Powertrain	Drive A2 diff. clutch control	Rear differential clutch
+ClutchD3	 	-	Clutch control	Powertrain	Trns case drive A1-2 clutch ctrl	Transfer case clutch
+ClutchL1	 	-	Clutch control	Powertrain	Front left whl. clutch control	Front left wheel clutch
+ClutchL2	 	-	Clutch control	Powertrain	Rear left whl. clutch control	Rear left wheel clutch
+ClutchR1	 	-	Clutch control	Powertrain	Front right whl. clutch control	Front right wheel clutch
+ClutchR2	 	-	Clutch control	Powertrain	Rear right whl. clutch control	Rear right wheel clutch
+ClutchTr	 	-	Clutch control	Powertrain	Transmission clutch control	Transmission clutch
+Cl_Stat	 	-	Boolean	Powertrain	Clutch locked state	Clutch	Clutch lock status: 0 -> slipping, 1 -> locked.
+CmpAD_L1	 	g	Compression acceleration	Suspensions	Compression accel, damper L1	Damper L1
+CmpAD_L2	 	g	Compression acceleration	Suspensions	Compression accel, damper L2	Damper L2
+CmpAD_R1	 	g	Compression acceleration	Suspensions	Compression accel, damper R1	Damper R1
+CmpAD_R2	 	g	Compression acceleration	Suspensions	Compression accel, damper R2	Damper R2
+CmpD_L1	 	mm	Compression	Suspensions	Compression of damper L1	Damper L1
+CmpD_L2	 	mm	Compression	Suspensions	Compression of damper L2	Damper L2
+CmpD_R1	 	mm	Compression	Suspensions	Compression of damper R1	Damper R1
+CmpD_R2	 	mm	Compression	Suspensions	Compression of damper R2	Damper R2
+CmpJStL1	 	mm	Compression	Suspensions	Compression of jounce stop L1	L1 jounce stop
+CmpJStL2	 	mm	Compression	Suspensions	Compression of jounce stop L2	L2 jounce stop
+CmpJStR1	 	mm	Compression	Suspensions	Compression of jounce stop R1	R1 jounce stop
+CmpJStR2	 	mm	Compression	Suspensions	Compression of jounce stop R2	R2 jounce stop
+CmpRD_L1	 	mm/s	Compression rate	Suspensions	Compression rate for damper L1	Damper L1
+CmpRD_L2	 	mm/s	Compression rate	Suspensions	Compression rate for damper L2	Damper L2
+CmpRD_R1	 	mm/s	Compression rate	Suspensions	Compression rate for damper R1	Damper R1
+CmpRD_R2	 	mm/s	Compression rate	Suspensions	Compression rate for damper R2	Damper R2
+CmpRStL1	 	mm	Compression	Suspensions	Compression of rebound stop L1	L1 rebound stop
+CmpRStL2	 	mm	Compression	Suspensions	Compression of rebound stop L2	L2 rebound stop
+CmpRStR1	 	mm	Compression	Suspensions	Compression of rebound stop R1	R1 rebound stop
+CmpRStR2	 	mm	Compression	Suspensions	Compression of rebound stop R2	R2 rebound stop
+CmpS_L1	 	mm	Compression	Suspensions	Compression of ride spring L1	Ride spring L1
+CmpS_L2	 	mm	Compression	Suspensions	Compression of ride spring L2	Ride spring L2
+CmpS_R1	 	mm	Compression	Suspensions	Compression of ride spring R1	Ride spring R1
+CmpS_R2	 	mm	Compression	Suspensions	Compression of ride spring R2	Ride spring R2
+CmpT_L1	 	mm	Compression	Tires	Compression, tire L1	Tire L1 compression
+CmpT_L2	 	mm	Compression	Tires	Compression, tire L2	Tire L2 compression
+CmpT_R1	 	mm	Compression	Tires	Compression, tire R1	Tire R1 compression
+CmpT_R2	 	mm	Compression	Tires	Compression, tire R2	Tire R2 compression
+Dive_L1	 	deg	Angle	Suspensions	Wheel L1 dive	Wheel L1 dive
+Dive_L2	 	deg	Angle	Suspensions	Wheel L2 dive	Wheel L2 dive
+Dive_R1	 	deg	Angle	Suspensions	Wheel R1 dive	Wheel R1 dive
+Dive_R2	 	deg	Angle	Suspensions	Wheel R2 dive	Wheel R2 dive
+dZdXair	 	-	Ground slope	Aerodynamics	X slope at road aero reference 1	X slope: road refence frame 1	dZ/dX slope of the ground at the point where the Road Reference Frame is defined.
+dZdX_L1	 	-	Ground slope	Ground and road	Ground X slope under tire L1	X slope L1	Slope of the road or ground in the global [nx] direction at the center of tire contact.
+dZdX_L2	 	-	Ground slope	Ground and road	Ground X slope under tire L2	X slope L2
+dZdX_R1	 	-	Ground slope	Ground and road	Ground X slope under tire R1	X slope R1
+dZdX_R2	 	-	Ground slope	Ground and road	Ground X slope under tire R2	X slope R2
+dZdYair	 	-	Ground slope	Aerodynamics	Y slope at road aero reference 1	Y slope: road refence frame 1	dZ/dY slope of the ground at the point where the Road Reference Frame is defined.
+dZdY_L1	 	-	Ground slope	Ground and road	Ground Y slope under tire L1	Y slope L1	Slope of the road or ground in the global [ny] direction at the center of tire contact.
+dZdY_L2	 	-	Ground slope	Ground and road	Ground Y slope under tire L2	Y slope L2
+dZdY_R1	 	-	Ground slope	Ground and road	Ground Y slope under tire R1	Y slope R1
+dZdY_R2	 	-	Ground slope	Ground and road	Ground Y slope under tire R2	Y slope R2
+ESC_Stat	 	-	State	Powertrain	ESC engine torque control state	ESC engine toque control
+Event	 	-	Count	Time	Running count of events	Event	This output is initially set to 0, and is incremented every time a VS Event is triggered.
+FbkB_In	 	N	Force	Brakes	Brake input force before boost	Brake input force
+FbkB_Out	 	N	Force	Brakes	Brake booster output force	Brake Booster
+Fd_L1	 	N	Force	Suspensions	Force (compressive), damper L1	Damper L1
+Fd_L2	 	N	Force	Suspensions	Force (compressive), damper L2	Damper L2
+Fd_R1	 	N	Force	Suspensions	Force (compressive), damper R1	Damper R1
+Fd_R2	 	N	Force	Suspensions	Force (compressive), damper R2	Damper R2
+FJSt_L1	 	N	Force	Suspensions	Jounce-stop force L1	Jounce stop L1
+FJSt_L2	 	N	Force	Suspensions	Jounce-stop force L2	Jounce stop L2
+FJSt_R1	 	N	Force	Suspensions	Jounce-stop force R1	Jounce stop R1
+FJSt_R2	 	N	Force	Suspensions	Jounce-stop force R2	Jounce stop R2
+FRSt_L1	 	N	Force	Suspensions	Rebound-stop force L1	Rebound stop L1
+FRSt_L2	 	N	Force	Suspensions	Rebound-stop force L2	Rebound stop L2
+FRSt_R1	 	N	Force	Suspensions	Rebound-stop force R1	Rebound stop R1
+FRSt_R2	 	N	Force	Suspensions	Rebound-stop force R2	Rebound stop R2
+FsExt_L1	 	N	Force	Suspensions	Ext. spring force L1 (comp.)	Ext. spring L1 (comp.)	Spring force from external model (e.g., Simulink). The force applied in the multibody model is divided by the instant mechanical advantage.
+FsExt_L2	 	N	Force	Suspensions	Ext. spring force L2 (comp.)	Ext. spring L2 (comp.)	Spring force from external model (e.g., Simulink). The force applied in the multibody model is divided by the instant mechanical advantage.
+FsExt_R1	 	N	Force	Suspensions	Ext. spring force R1 (comp.)	Ext. spring R1 (comp.)
+FsExt_R2	 	N	Force	Suspensions	Ext. spring force R2 (comp.)	Ext. spring R2 (comp.)
+Fs_L1	 	N	Force	Suspensions	Spring force L1 (comp.)	Spring L1 (comp.)	Spring force from built-in model, including hysteresis. The force applied in the multibody model is divided by the instant mechanical advantage.
+Fs_L2	 	N	Force	Suspensions	Spring force L2 (comp.)	Spring L2 (comp.)	Spring force from built-in model, including hysteresis. The force applied in the multibody model is divided by the instant mechanical advantage.
+Fs_R1	 	N	Force	Suspensions	Spring force R1 (comp.)	Spring R1 (comp.)
+Fs_R2	 	N	Force	Suspensions	Spring force R2 (comp.)	Spring R2 (comp.)
+FullStep	 	-	Boolean	Time	Integrator full-step status	Integrator full-step status	Boolean that indicates whether the integrator is at a full step (1) or not (0). Be aware that changes to state variables from external equations that are not made at the full step are discarded. Also, events are processed only at the full step.
+FxExL1	 	N	Force	External actions	External Fx, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sx] direction
+FxExL2	 	N	Force	External actions	External Fx, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sx] direction
+FxExR1	 	N	Force	External actions	External Fx, R1	Wheel R1
+FxExR2	 	N	Force	External actions	External Fx, R2	Wheel R2
+FxGExL1	 	N	Force	External actions	External FxG, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nx] direction
+FxGExL2	 	N	Force	External actions	External FxG, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nx] direction
+FxGExR1	 	N	Force	External actions	External FxG, R1	Wheel R1
+FxGExR2	 	N	Force	External actions	External FxG, R2	Wheel R2
+FxSmMod1	 	N	Force	External actions	Fx applied by modules to SM 1	Sprung mass 1	Total reaction force in the [sx] direction from possible trailing hitch.
+Fx_A1	 	N	Force	Axles	Longitudinal tire force, axle 1	Axle 1 longitudinal tire force
+Fx_A2	 	N	Force	Axles	Longitudinal tire force, axle 2	Axle 2 longitudinal tire force
+Fx_Air	 	N	Force	Aerodynamics	Aero Fx, vehicle	Aero Fx, vehicle	Force applied to the sprung mass at the aerodynamic reference point in the [sx] direction.
+Fx_L1	 	N	Force	Tires	Longitudinal force, tire L1	Tire L1 longitudinal
+Fx_L2	 	N	Force	Tires	Longitudinal force, tire L2	Tire L2 longitudinal
+Fx_R1	 	N	Force	Tires	Longitudinal force, tire R1	Tire R1 longitudinal
+Fx_R2	 	N	Force	Tires	Longitudinal force, tire R2	Tire R2 longitudinal
+Fx_WC_L1	 	N	Force	Wheels	Tire Fx at wheel center L1	Tire Fx at wheel center L1	This is the component of the total tire force vector applied to the wheel center in the [wx] direction.
+Fx_WC_L2	 	N	Force	Wheels	Tire Fx at wheel center L2	Tire Fx at wheel center L2
+Fx_WC_R1	 	N	Force	Wheels	Tire Fx at wheel center R1	Tire Fx at wheel center R1
+Fx_WC_R2	 	N	Force	Wheels	Tire Fx at wheel center R2	Tire Fx at wheel center R2
+FyExL1	 	N	Force	External actions	External Fy, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sy] direction
+FyExL2	 	N	Force	External actions	External Fy, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sy] direction
+FyExR1	 	N	Force	External actions	External Fy, R1	Wheel R1
+FyExR2	 	N	Force	External actions	External Fy, R2	Wheel R2
+FyGExL1	 	N	Force	External actions	External FyG, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [ny] direction
+FyGExL2	 	N	Force	External actions	External FyG, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [ny] direction
+FyGExR1	 	N	Force	External actions	External FyG, R1	Wheel R1
+FyGExR2	 	N	Force	External actions	External FyG, R2	Wheel R2
+FySmMod1	 	N	Force	External actions	Fy applied by modules to SM 1	Sprung mass 1	Total reaction force in the [sy] direction from possible trailing hitch.
+Fy_A1	 	N	Force	Axles	Lateral tire force, axle 1	Axle 1 lateral tire force
+Fy_A2	 	N	Force	Axles	Lateral tire force, axle 2	Axle 2 lateral tire force
+Fy_Air	 	N	Force	Aerodynamics	Aero Fy, vehicle	Aero Fy, vehicle	Force applied to the sprung mass at the aerodynamic reference point in the [sy] direction.
+Fy_L1	 	N	Force	Tires	Lateral force, tire L1	Tire L1 lateral
+Fy_L2	 	N	Force	Tires	Lateral force, tire L2	Tire L2 lateral
+Fy_R1	 	N	Force	Tires	Lateral force, tire R1	Tire R1 lateral
+Fy_R2	 	N	Force	Tires	Lateral force, tire R2	Tire R2 lateral
+Fy_WC_L1	 	N	Force	Wheels	Tire Fy at wheel center L1	Tire Fy at wheel center L1	This is the component of the total tire force vector applied to the wheel center in the [wy] direction.
+Fy_WC_L2	 	N	Force	Wheels	Tire Fy at wheel center L2	Tire Fy at wheel center L2
+Fy_WC_R1	 	N	Force	Wheels	Tire Fy at wheel center R1	Tire Fy at wheel center R1
+Fy_WC_R2	 	N	Force	Wheels	Tire Fy at wheel center R2	Tire Fy at wheel center R2
+FzExL1	 	N	Force	External actions	External Fz, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sz] direction
+FzExL2	 	N	Force	External actions	External Fz, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the sprung mass in the [sz] direction
+FzExR1	 	N	Force	External actions	External Fz, R1	Wheel R1
+FzExR2	 	N	Force	External actions	External Fz, R2	Wheel R2
+FzGExL1	 	N	Force	External actions	External FzG, L1	Wheel L1	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nz] direction
+FzGExL2	 	N	Force	External actions	External FzG, L2	Wheel L2	Optional user-defined force applied to the wheel knuckle from the inertial reference N in the [nz] direction
+FzGExR1	 	N	Force	External actions	External FzG, R1	Wheel R1
+FzGExR2	 	N	Force	External actions	External FzG, R2	Wheel R2
+FzSmMod1	 	N	Force	External actions	Fz applied by modules to SM 1	Sprung mass 1	Total reaction force in the [sz] direction from possible trailing hitch.
+Fz_A1	 	N	Force	Axles	Vertical tire force, axle 1	Axle 1 vertical tire force
+Fz_A2	 	N	Force	Axles	Vertical tire force, axle 2	Axle 2 vertical tire force
+Fz_Air	 	N	Force	Aerodynamics	Aero Fz, vehicle	Aero Fz, vehicle	Force applied to the sprung mass at the aerodynamic reference point in the [sz] direction.
+Fz_L1	 	N	Force	Tires	Vertical force, tire L1	Tire L1 vertical
+Fz_L2	 	N	Force	Tires	Vertical force, tire L2	Tire L2 vertical
+Fz_R1	 	N	Force	Tires	Vertical force, tire R1	Tire R1 vertical
+Fz_R2	 	N	Force	Tires	Vertical force, tire R2	Tire R2 vertical
+Fz_WC_L1	 	N	Force	Wheels	Tire Fz at wheel center L1	Tire Fz at wheel center L1	This is the component of the total tire force vector applied to the wheel center in the [wz] direction.
+Fz_WC_L2	 	N	Force	Wheels	Tire Fz at wheel center L2	Tire Fz at wheel center L2
+Fz_WC_R1	 	N	Force	Wheels	Tire Fz at wheel center R1	Tire Fz at wheel center R1
+Fz_WC_R2	 	N	Force	Wheels	Tire Fz at wheel center R2	Tire Fz at wheel center R2
+F_boost	 	N	Force	Steering	Steering boost force	Power steering
+F_Pedal	 	N	Force	Brakes	Brake pedal force	Brake Pedal
+F_TRdL1	 	N	Force	Steering	Rack load from tierod L1	Tierod L1 rack load
+F_TRdL2	 	N	Force	Steering	Rack load from tierod L2	Tierod L2 rack load
+F_TRdR1	 	N	Force	Steering	Rack load from tierod R1	Tierod R1 rack load
+F_TRdR2	 	N	Force	Steering	Rack load from tierod R2	Tierod R2 rack load
+Gamma_L1	 	deg	Angle	Tires	Inclination angle, tire L1	Tire L1 inclination	Tire inclination is relative to the ground surface.
+Gamma_L2	 	deg	Angle	Tires	Inclination angle, tire L2	Tire L2 inclination
+Gamma_R1	 	deg	Angle	Tires	Inclination angle, tire R1	Tire R1 inclination
+Gamma_R2	 	deg	Angle	Tires	Inclination angle, tire R2	Tire R2 inclination
+GearStat	 	-	Gear	Powertrain	Transmission gear status	Transmission gear status
+Gear_CL	 	-	Gear	Powertrain	Closed-loop transmission gear	Closed-loop transmission gear
+Gear_Del	 	-	Gear	Powertrain	Delayed transmission gear status	Delayed transmission gear status
+Gear_OL	 	-	Gear	Powertrain	Open-loop transmission gear	Open-loop transmission gear
+GPSlongA	 	deg	GPS longitude	Chassis motion	GPS absolute longitude	Vehicle
+GPS_Altitude	GPSAlitd	m	GPS altitude	Chassis motion	GPS altitude (Zo + GPS_REF_ALT)	Vehicle
+GPS_Lat	 	deg	GPS latitude	Chassis motion	GPS relative latitude	Vehicle
+GPS_LatA	 	deg	GPS latitude	Chassis motion	GPS absolute latitude	Vehicle
+GPS_LatO_1	GPS_Lat1	deg	GPS latitude	Targets	GPS latitude, object 1	Moving object 1	GPS latitude of control point of moving object.
+GPS_LatO_10	GPS_Lt10	deg	GPS latitude	Targets	GPS latitude, object 10	Moving object 10
+GPS_LatO_11	GPS_Lt11	deg	GPS latitude	Targets	GPS latitude, object 11	Moving object 11
+GPS_LatO_12	GPS_Lt12	deg	GPS latitude	Targets	GPS latitude, object 12	Moving object 12
+GPS_LatO_13	GPS_Lt13	deg	GPS latitude	Targets	GPS latitude, object 13	Moving object 13
+GPS_LatO_14	GPS_Lt14	deg	GPS latitude	Targets	GPS latitude, object 14	Moving object 14
+GPS_LatO_15	GPS_Lt15	deg	GPS latitude	Targets	GPS latitude, object 15	Moving object 15
+GPS_LatO_16	GPS_Lt16	deg	GPS latitude	Targets	GPS latitude, object 16	Moving object 16
+GPS_LatO_17	GPS_Lt17	deg	GPS latitude	Targets	GPS latitude, object 17	Moving object 17
+GPS_LatO_18	GPS_Lt18	deg	GPS latitude	Targets	GPS latitude, object 18	Moving object 18
+GPS_LatO_19	GPS_Lt19	deg	GPS latitude	Targets	GPS latitude, object 19	Moving object 19
+GPS_LatO_2	GPS_Lat2	deg	GPS latitude	Targets	GPS latitude, object 2	Moving object 2
+GPS_LatO_20	GPS_Lt20	deg	GPS latitude	Targets	GPS latitude, object 20	Moving object 20
+GPS_LatO_21	GPS_Lt21	deg	GPS latitude	Targets	GPS latitude, object 21	Moving object 21
+GPS_LatO_22	GPS_Lt22	deg	GPS latitude	Targets	GPS latitude, object 22	Moving object 22
+GPS_LatO_23	GPS_Lt23	deg	GPS latitude	Targets	GPS latitude, object 23	Moving object 23
+GPS_LatO_24	GPS_Lt24	deg	GPS latitude	Targets	GPS latitude, object 24	Moving object 24
+GPS_LatO_25	GPS_Lt25	deg	GPS latitude	Targets	GPS latitude, object 25	Moving object 25
+GPS_LatO_26	GPS_Lt26	deg	GPS latitude	Targets	GPS latitude, object 26	Moving object 26
+GPS_LatO_27	GPS_Lt27	deg	GPS latitude	Targets	GPS latitude, object 27	Moving object 27
+GPS_LatO_28	GPS_Lt28	deg	GPS latitude	Targets	GPS latitude, object 28	Moving object 28
+GPS_LatO_29	GPS_Lt29	deg	GPS latitude	Targets	GPS latitude, object 29	Moving object 29
+GPS_LatO_3	GPS_Lat3	deg	GPS latitude	Targets	GPS latitude, object 3	Moving object 3
+GPS_LatO_30	GPS_Lt30	deg	GPS latitude	Targets	GPS latitude, object 30	Moving object 30
+GPS_LatO_31	GPS_Lt31	deg	GPS latitude	Targets	GPS latitude, object 31	Moving object 31
+GPS_LatO_32	GPS_Lt32	deg	GPS latitude	Targets	GPS latitude, object 32	Moving object 32
+GPS_LatO_33	GPS_Lt33	deg	GPS latitude	Targets	GPS latitude, object 33	Moving object 33
+GPS_LatO_34	GPS_Lt34	deg	GPS latitude	Targets	GPS latitude, object 34	Moving object 34
+GPS_LatO_35	GPS_Lt35	deg	GPS latitude	Targets	GPS latitude, object 35	Moving object 35
+GPS_LatO_36	GPS_Lt36	deg	GPS latitude	Targets	GPS latitude, object 36	Moving object 36
+GPS_LatO_4	GPS_Lat4	deg	GPS latitude	Targets	GPS latitude, object 4	Moving object 4
+GPS_LatO_5	GPS_Lat5	deg	GPS latitude	Targets	GPS latitude, object 5	Moving object 5
+GPS_LatO_6	GPS_Lat6	deg	GPS latitude	Targets	GPS latitude, object 6	Moving object 6
+GPS_LatO_7	GPS_Lat7	deg	GPS latitude	Targets	GPS latitude, object 7	Moving object 7
+GPS_LatO_8	GPS_Lat8	deg	GPS latitude	Targets	GPS latitude, object 8	Moving object 8
+GPS_LatO_9	GPS_Lat9	deg	GPS latitude	Targets	GPS latitude, object 9	Moving object 9
+GPS_Long	 	deg	GPS longitude	Chassis motion	GPS relative longitude	Vehicle
+GPS_LongO_1	GPS_Lng1	deg	GPS longitude	Targets	GPS longitude, object 1	Moving object 1	GPS longitude of control point of moving object.
+GPS_LongO_10	GPS_Lg10	deg	GPS longitude	Targets	GPS longitude, object 10	Moving object 10
+GPS_LongO_11	GPS_Lg11	deg	GPS longitude	Targets	GPS longitude, object 11	Moving object 11
+GPS_LongO_12	GPS_Lg12	deg	GPS longitude	Targets	GPS longitude, object 12	Moving object 12
+GPS_LongO_13	GPS_Lg13	deg	GPS longitude	Targets	GPS longitude, object 13	Moving object 13
+GPS_LongO_14	GPS_Lg14	deg	GPS longitude	Targets	GPS longitude, object 14	Moving object 14
+GPS_LongO_15	GPS_Lg15	deg	GPS longitude	Targets	GPS longitude, object 15	Moving object 15
+GPS_LongO_16	GPS_Lg16	deg	GPS longitude	Targets	GPS longitude, object 16	Moving object 16
+GPS_LongO_17	GPS_Lg17	deg	GPS longitude	Targets	GPS longitude, object 17	Moving object 17
+GPS_LongO_18	GPS_Lg18	deg	GPS longitude	Targets	GPS longitude, object 18	Moving object 18
+GPS_LongO_19	GPS_Lg19	deg	GPS longitude	Targets	GPS longitude, object 19	Moving object 19
+GPS_LongO_2	GPS_Lng2	deg	GPS longitude	Targets	GPS longitude, object 2	Moving object 2
+GPS_LongO_20	GPS_Lg20	deg	GPS longitude	Targets	GPS longitude, object 20	Moving object 20
+GPS_LongO_21	GPS_Lg21	deg	GPS longitude	Targets	GPS longitude, object 21	Moving object 21
+GPS_LongO_22	GPS_Lg22	deg	GPS longitude	Targets	GPS longitude, object 22	Moving object 22
+GPS_LongO_23	GPS_Lg23	deg	GPS longitude	Targets	GPS longitude, object 23	Moving object 23
+GPS_LongO_24	GPS_Lg24	deg	GPS longitude	Targets	GPS longitude, object 24	Moving object 24
+GPS_LongO_25	GPS_Lg25	deg	GPS longitude	Targets	GPS longitude, object 25	Moving object 25
+GPS_LongO_26	GPS_Lg26	deg	GPS longitude	Targets	GPS longitude, object 26	Moving object 26
+GPS_LongO_27	GPS_Lg27	deg	GPS longitude	Targets	GPS longitude, object 27	Moving object 27
+GPS_LongO_28	GPS_Lg28	deg	GPS longitude	Targets	GPS longitude, object 28	Moving object 28
+GPS_LongO_29	GPS_Lg29	deg	GPS longitude	Targets	GPS longitude, object 29	Moving object 29
+GPS_LongO_3	GPS_Lng3	deg	GPS longitude	Targets	GPS longitude, object 3	Moving object 3
+GPS_LongO_30	GPS_Lg30	deg	GPS longitude	Targets	GPS longitude, object 30	Moving object 30
+GPS_LongO_31	GPS_Lg31	deg	GPS longitude	Targets	GPS longitude, object 31	Moving object 31
+GPS_LongO_32	GPS_Lg32	deg	GPS longitude	Targets	GPS longitude, object 32	Moving object 32
+GPS_LongO_33	GPS_Lg33	deg	GPS longitude	Targets	GPS longitude, object 33	Moving object 33
+GPS_LongO_34	GPS_Lg34	deg	GPS longitude	Targets	GPS longitude, object 34	Moving object 34
+GPS_LongO_35	GPS_Lg35	deg	GPS longitude	Targets	GPS longitude, object 35	Moving object 35
+GPS_LongO_36	GPS_Lg36	deg	GPS longitude	Targets	GPS longitude, object 36	Moving object 36
+GPS_LongO_4	GPS_Lng4	deg	GPS longitude	Targets	GPS longitude, object 4	Moving object 4
+GPS_LongO_5	GPS_Lng5	deg	GPS longitude	Targets	GPS longitude, object 5	Moving object 5
+GPS_LongO_6	GPS_Lng6	deg	GPS longitude	Targets	GPS longitude, object 6	Moving object 6
+GPS_LongO_7	GPS_Lng7	deg	GPS longitude	Targets	GPS longitude, object 7	Moving object 7
+GPS_LongO_8	GPS_Lng8	deg	GPS longitude	Targets	GPS longitude, object 8	Moving object 8
+GPS_LongO_9	GPS_Lng9	deg	GPS longitude	Targets	GPS longitude, object 9	Moving object 9
+Hcg_TM	 	mm	Height (local Z coordinate)	Chassis motion	Height, inst. CG, vehicle	Instant CG, vehicle	This is the height (local Z coordinate) of the instant CG of the vehicle unit in the sprung mass coordinate system. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+HeadO_1	 	deg	Heading angle	Targets	Heading angle, moving object 1	Moving object 1
+HeadO_10	 	deg	Heading angle	Targets	Heading angle, moving object 10	Moving object 10
+HeadO_11	 	deg	Heading angle	Targets	Heading angle, moving object 11	Moving object 11
+HeadO_12	 	deg	Heading angle	Targets	Heading angle, moving object 12	Moving object 12
+HeadO_13	 	deg	Heading angle	Targets	Heading angle, moving object 13	Moving object 13
+HeadO_14	 	deg	Heading angle	Targets	Heading angle, moving object 14	Moving object 14
+HeadO_15	 	deg	Heading angle	Targets	Heading angle, moving object 15	Moving object 15
+HeadO_16	 	deg	Heading angle	Targets	Heading angle, moving object 16	Moving object 16
+HeadO_17	 	deg	Heading angle	Targets	Heading angle, moving object 17	Moving object 17
+HeadO_18	 	deg	Heading angle	Targets	Heading angle, moving object 18	Moving object 18
+HeadO_19	 	deg	Heading angle	Targets	Heading angle, moving object 19	Moving object 19
+HeadO_2	 	deg	Heading angle	Targets	Heading angle, moving object 2	Moving object 2
+HeadO_20	 	deg	Heading angle	Targets	Heading angle, moving object 20	Moving object 20
+HeadO_21	 	deg	Heading angle	Targets	Heading angle, moving object 21	Moving object 21
+HeadO_22	 	deg	Heading angle	Targets	Heading angle, moving object 22	Moving object 22
+HeadO_23	 	deg	Heading angle	Targets	Heading angle, moving object 23	Moving object 23
+HeadO_24	 	deg	Heading angle	Targets	Heading angle, moving object 24	Moving object 24
+HeadO_25	 	deg	Heading angle	Targets	Heading angle, moving object 25	Moving object 25
+HeadO_26	 	deg	Heading angle	Targets	Heading angle, moving object 26	Moving object 26
+HeadO_27	 	deg	Heading angle	Targets	Heading angle, moving object 27	Moving object 27
+HeadO_28	 	deg	Heading angle	Targets	Heading angle, moving object 28	Moving object 28
+HeadO_29	 	deg	Heading angle	Targets	Heading angle, moving object 29	Moving object 29
+HeadO_3	 	deg	Heading angle	Targets	Heading angle, moving object 3	Moving object 3
+HeadO_30	 	deg	Heading angle	Targets	Heading angle, moving object 30	Moving object 30
+HeadO_31	 	deg	Heading angle	Targets	Heading angle, moving object 31	Moving object 31
+HeadO_32	 	deg	Heading angle	Targets	Heading angle, moving object 32	Moving object 32
+HeadO_33	 	deg	Heading angle	Targets	Heading angle, moving object 33	Moving object 33
+HeadO_34	 	deg	Heading angle	Targets	Heading angle, moving object 34	Moving object 34
+HeadO_35	 	deg	Heading angle	Targets	Heading angle, moving object 35	Moving object 35
+HeadO_36	 	deg	Heading angle	Targets	Heading angle, moving object 36	Moving object 36
+HeadO_4	 	deg	Heading angle	Targets	Heading angle, moving object 4	Moving object 4
+HeadO_5	 	deg	Heading angle	Targets	Heading angle, moving object 5	Moving object 5
+HeadO_6	 	deg	Heading angle	Targets	Heading angle, moving object 6	Moving object 6
+HeadO_7	 	deg	Heading angle	Targets	Heading angle, moving object 7	Moving object 7
+HeadO_8	 	deg	Heading angle	Targets	Heading angle, moving object 8	Moving object 8
+HeadO_9	 	deg	Heading angle	Targets	Heading angle, moving object 9	Moving object 9
+ID_Event	 	-	ID number	Database	ID number of event	ID of event	This output gives the value of the system parameter ID_EVENT. The parameter will keep its default value of 0 unless it is changed by a VS Event or other VS Command.
+ID_Run	 	-	ID number	Database	ID number of run	ID of run	This output gives the value of the system parameter ID_RUN. The parameter will keep its default value of 0 unless it is changed by a VS Event or other VS Command.
+Ispin_Tr	 	kg-m2	inertia	Powertrain	Transmission spin inertia	Transmission spin inertia
+IW_DR_L1	 	kg-m2	Inertia	Powertrain	Driveline inertia for wheel L1	Drive wheel L1	Additional driveline inertia applied to the drive wheel.
+IW_DR_L2	 	kg-m2	Inertia	Powertrain	Driveline inertia for wheel L2	Drive wheel L2	Additional driveline inertia applied to the drive wheel.
+IW_DR_R1	 	kg-m2	Inertia	Powertrain	Driveline inertia for wheel R1	Drive wheel R1	Additional driveline inertia applied to the drive wheel.
+IW_DR_R2	 	kg-m2	Inertia	Powertrain	Driveline inertia for wheel R2	Drive wheel R2	Additional driveline inertia applied to the drive wheel.
+JncR_L1	 	mm/s	Compression rate	Suspensions	Wheel L1 jounce rate	Wheel L1 jounce
+JncR_L2	 	mm/s	Compression rate	Suspensions	Wheel L2 jounce rate	Wheel L2 jounce
+JncR_R1	 	mm/s	Compression rate	Suspensions	Wheel R1 jounce rate	Wheel R1 jounce
+JncR_R2	 	mm/s	Compression rate	Suspensions	Wheel R2 jounce rate	Wheel R2 jounce
+Jnc_L1	 	mm	Compression	Suspensions	Wheel L1 jounce (compression)	Wheel L1 jounce
+Jnc_L2	 	mm	Compression	Suspensions	Wheel L2 jounce (compression)	Wheel L2 jounce
+Jnc_R1	 	mm	Compression	Suspensions	Wheel R1 jounce (compression)	Wheel R1 jounce
+Jnc_R2	 	mm	Compression	Suspensions	Wheel R2 jounce (compression)	Wheel R2 jounce
+Kappa_L1	 	-	Dimensionless ratio	Tires	Longitudinal slip, tire L1	Tire L1 long. slip	Instant longitudinal slip: [AV of wheel]*RRE/Vx - 1.
+Kappa_L2	 	-	Dimensionless ratio	Tires	Longitudinal slip, tire L2	Tire L2 long. slip
+Kappa_R1	 	-	Dimensionless ratio	Tires	Longitudinal slip, tire R1	Tire R1 long. slip
+Kappa_R2	 	-	Dimensionless ratio	Tires	Longitudinal slip, tire R2	Tire R2 long. slip
+KappL_L1	 	-	Dimensionless ratio	Tires	Long. slip (lagged), tire L1	Tire L1 long. slip (lagged)	Lagged slip ratio is a state variable that follows the instant slip ratio KAPPA_L1, subject to a dynamic lag.
+KappL_L2	 	-	Dimensionless ratio	Tires	Long. slip (lagged), tire L2	Tire L2 long. slip (lagged)
+KappL_R1	 	-	Dimensionless ratio	Tires	Long. slip (lagged), tire R1	Tire R1 long. slip (lagged)
+KappL_R2	 	-	Dimensionless ratio	Tires	Long. slip (lagged), tire R2	Tire R2 long. slip (lagged)
+K_TC	 	Kinv	Inverse capacity	Powertrain	TC inverse capacity	Torque converter
+LatO_1	 	m	Lateral offset	Targets	Lateral offset, moving object 1	Moving object 1	Lateral position is associated with the path identified by the parameter PATH_ID_OBJ. If PATH_ID_OBJ is zero, then LatO is not used and is always zero.
+LatO_10	 	m	Lateral offset	Targets	Lateral offset, moving object 10	Moving object 10
+LatO_11	 	m	Lateral offset	Targets	Lateral offset, moving object 11	Moving object 11
+LatO_12	 	m	Lateral offset	Targets	Lateral offset, moving object 12	Moving object 12
+LatO_13	 	m	Lateral offset	Targets	Lateral offset, moving object 13	Moving object 13
+LatO_14	 	m	Lateral offset	Targets	Lateral offset, moving object 14	Moving object 14
+LatO_15	 	m	Lateral offset	Targets	Lateral offset, moving object 15	Moving object 15
+LatO_16	 	m	Lateral offset	Targets	Lateral offset, moving object 16	Moving object 16
+LatO_17	 	m	Lateral offset	Targets	Lateral offset, moving object 17	Moving object 17
+LatO_18	 	m	Lateral offset	Targets	Lateral offset, moving object 18	Moving object 18
+LatO_19	 	m	Lateral offset	Targets	Lateral offset, moving object 19	Moving object 19
+LatO_2	 	m	Lateral offset	Targets	Lateral offset, moving object 2	Moving object 2
+LatO_20	 	m	Lateral offset	Targets	Lateral offset, moving object 20	Moving object 20
+LatO_21	 	m	Lateral offset	Targets	Lateral offset, moving object 21	Moving object 21
+LatO_22	 	m	Lateral offset	Targets	Lateral offset, moving object 22	Moving object 22
+LatO_23	 	m	Lateral offset	Targets	Lateral offset, moving object 23	Moving object 23
+LatO_24	 	m	Lateral offset	Targets	Lateral offset, moving object 24	Moving object 24
+LatO_25	 	m	Lateral offset	Targets	Lateral offset, moving object 25	Moving object 25
+LatO_26	 	m	Lateral offset	Targets	Lateral offset, moving object 26	Moving object 26
+LatO_27	 	m	Lateral offset	Targets	Lateral offset, moving object 27	Moving object 27
+LatO_28	 	m	Lateral offset	Targets	Lateral offset, moving object 28	Moving object 28
+LatO_29	 	m	Lateral offset	Targets	Lateral offset, moving object 29	Moving object 29
+LatO_3	 	m	Lateral offset	Targets	Lateral offset, moving object 3	Moving object 3
+LatO_30	 	m	Lateral offset	Targets	Lateral offset, moving object 30	Moving object 30
+LatO_31	 	m	Lateral offset	Targets	Lateral offset, moving object 31	Moving object 31
+LatO_32	 	m	Lateral offset	Targets	Lateral offset, moving object 32	Moving object 32
+LatO_33	 	m	Lateral offset	Targets	Lateral offset, moving object 33	Moving object 33
+LatO_34	 	m	Lateral offset	Targets	Lateral offset, moving object 34	Moving object 34
+LatO_35	 	m	Lateral offset	Targets	Lateral offset, moving object 35	Moving object 35
+LatO_36	 	m	Lateral offset	Targets	Lateral offset, moving object 36	Moving object 36
+LatO_4	 	m	Lateral offset	Targets	Lateral offset, moving object 4	Moving object 4
+LatO_5	 	m	Lateral offset	Targets	Lateral offset, moving object 5	Moving object 5
+LatO_6	 	m	Lateral offset	Targets	Lateral offset, moving object 6	Moving object 6
+LatO_7	 	m	Lateral offset	Targets	Lateral offset, moving object 7	Moving object 7
+LatO_8	 	m	Lateral offset	Targets	Lateral offset, moving object 8	Moving object 8
+LatO_9	 	m	Lateral offset	Targets	Lateral offset, moving object 9	Moving object 9
+Lat_Targ	 	m	Lateral distance to path	Driver model path	Target lateral offset from path	Target
+Lat_Veh	 	m	Lateral distance to path	Driver model path	Vehicle lateral distance to path	Vehicle
+LxcgTM	 	mm	Lx distance (local -X coord.)	Chassis motion	Lx distance to inst. CG, vehicle	Instant CG, vehicle	This is the local X coordinate of the instant CG of the vehicle unit in the sprung mass coordinate system, with the sign flipped as needed to represent the distance behind the sprung-mass origin. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+Mfuel	 	kg	Fuel consumed	Powertrain	Mass of fuel consumed	Fuel
+ModeTran	 	-	Transmission control mode	Powertrain	Transmission control mode	Transmission control mode	Control option for transmission, from configurable function MODE_TRANS or imported variable. -1 is reverse, 0 is neutral, 1 specifies open-loop mode, 2 and higher specify a closed-loop limit (maximum gear available to the controller). The current gear in closed-loop mode is Gear_CL. The current gear in open-loop mode is Gear_OL.
+MsgObj_1	 	-	Message (code)	Targets	Message from object 1	Moving object 1	Each object has an output message (code) that can be set with VS Commands or imported from an external software tool. This can be used to provide content from objects representing signs and traffic signals.
+MsgObj_10	MsgObj10	-	Message (code)	Targets	Message from object 10	Moving object 10
+MsgObj_11	MsgObj11	-	Message (code)	Targets	Message from object 11	Moving object 11
+MsgObj_12	MsgObj12	-	Message (code)	Targets	Message from object 12	Moving object 12
+MsgObj_13	MsgObj13	-	Message (code)	Targets	Message from object 13	Moving object 13
+MsgObj_14	MsgObj14	-	Message (code)	Targets	Message from object 14	Moving object 14
+MsgObj_15	MsgObj15	-	Message (code)	Targets	Message from object 15	Moving object 15
+MsgObj_16	MsgObj16	-	Message (code)	Targets	Message from object 16	Moving object 16
+MsgObj_17	MsgObj17	-	Message (code)	Targets	Message from object 17	Moving object 17
+MsgObj_18	MsgObj18	-	Message (code)	Targets	Message from object 18	Moving object 18
+MsgObj_19	MsgObj19	-	Message (code)	Targets	Message from object 19	Moving object 19
+MsgObj_2	 	-	Message (code)	Targets	Message from object 2	Moving object 2
+MsgObj_20	MsgObj20	-	Message (code)	Targets	Message from object 20	Moving object 20
+MsgObj_21	MsgObj21	-	Message (code)	Targets	Message from object 21	Moving object 21
+MsgObj_22	MsgObj22	-	Message (code)	Targets	Message from object 22	Moving object 22
+MsgObj_23	MsgObj23	-	Message (code)	Targets	Message from object 23	Moving object 23
+MsgObj_24	MsgObj24	-	Message (code)	Targets	Message from object 24	Moving object 24
+MsgObj_25	MsgObj25	-	Message (code)	Targets	Message from object 25	Moving object 25
+MsgObj_26	MsgObj26	-	Message (code)	Targets	Message from object 26	Moving object 26
+MsgObj_27	MsgObj27	-	Message (code)	Targets	Message from object 27	Moving object 27
+MsgObj_28	MsgObj28	-	Message (code)	Targets	Message from object 28	Moving object 28
+MsgObj_29	MsgObj29	-	Message (code)	Targets	Message from object 29	Moving object 29
+MsgObj_3	 	-	Message (code)	Targets	Message from object 3	Moving object 3
+MsgObj_30	MsgObj30	-	Message (code)	Targets	Message from object 30	Moving object 30
+MsgObj_31	MsgObj31	-	Message (code)	Targets	Message from object 31	Moving object 31
+MsgObj_32	MsgObj32	-	Message (code)	Targets	Message from object 32	Moving object 32
+MsgObj_33	MsgObj33	-	Message (code)	Targets	Message from object 33	Moving object 33
+MsgObj_34	MsgObj34	-	Message (code)	Targets	Message from object 34	Moving object 34
+MsgObj_35	MsgObj35	-	Message (code)	Targets	Message from object 35	Moving object 35
+MsgObj_36	MsgObj36	-	Message (code)	Targets	Message from object 36	Moving object 36
+MsgObj_4	 	-	Message (code)	Targets	Message from object 4	Moving object 4
+MsgObj_5	 	-	Message (code)	Targets	Message from object 5	Moving object 5
+MsgObj_6	 	-	Message (code)	Targets	Message from object 6	Moving object 6
+MsgObj_7	 	-	Message (code)	Targets	Message from object 7	Moving object 7
+MsgObj_8	 	-	Message (code)	Targets	Message from object 8	Moving object 8
+MsgObj_9	 	-	Message (code)	Targets	Message from object 9	Moving object 9
+MuX_L1	 	-	Friction coefficient	Ground and road	Ground X friction, tire L1	Tire/Ground MuX L1	Friction from the built-in Configurable Functions is the same for the X and Y directions. However, different values can be imported for the X and Y directions for simulating unusual conditions such as sand or snow.
+MuX_L2	 	-	Friction coefficient	Ground and road	Ground X friction, tire L2	Tire/Ground MuX L2
+MuX_R1	 	-	Friction coefficient	Ground and road	Ground X friction, tire R1	Tire/Ground MuX R1
+MuX_R2	 	-	Friction coefficient	Ground and road	Ground X friction, tire R2	Tire/Ground MuX R2
+MuY_L1	 	-	Friction coefficient	Ground and road	Ground Y friction, tire L1	Tire/Ground MuY L1	Friction from the built-in Configurable Functions is the same for the X and Y directions. However, different values can be imported for the X and Y directions for simulating unusual conditions such as sand or snow.
+MuY_L2	 	-	Friction coefficient	Ground and road	Ground Y friction, tire L2	Tire/Ground MuY L2
+MuY_R1	 	-	Friction coefficient	Ground and road	Ground Y friction, tire R1	Tire/Ground MuY R1
+MuY_R2	 	-	Friction coefficient	Ground and road	Ground Y friction, tire R2	Tire/Ground MuY R2
+MxExL1	 	N-m	Moment	External actions	External Mx, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sx] direction
+MxExL2	 	N-m	Moment	External actions	External Mx, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sx] direction
+MxExR1	 	N-m	Moment	External actions	External Mx, R1	Wheel R1
+MxExR2	 	N-m	Moment	External actions	External Mx, R2	Wheel R2
+MxGExL1	 	N-m	Moment	External actions	External MxG, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nx] direction
+MxGExL2	 	N-m	Moment	External actions	External MxG, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nx] direction
+MxGExR1	 	N-m	Moment	External actions	External MxG, R1	Wheel R1
+MxGExR2	 	N-m	Moment	External actions	External MxG, R2	Wheel R2
+MxGExt	 	N-m	Moment	External actions	External MxG on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [sx] direction.
+MxSmMod1	 	N-m	Moment	External actions	Mx applied by modules to SM 1	Sprung mass 1	SumTotal reaction moment in the [sx] direction from possible trailing hitch.
+Mx_A1	 	N-m	Moment	Suspensions	Auxiliary roll moment, axle 1	Axle 1
+Mx_A2	 	N-m	Moment	Suspensions	Auxiliary roll moment, axle 2	Axle 2
+Mx_Air	 	N-m	Moment	Aerodynamics	Aero Mx, vehicle	Aero Mx, vehicle	Moment applied to the sprung mass in the [sx] direction.
+Mx_Ext	 	N-m	Moment	External actions	External Mx on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [nx] direction.
+Mx_L1	 	N-m	Moment	Tires	Overturning moment, tire L1	Tire L1 overturning
+Mx_L2	 	N-m	Moment	Tires	Overturning moment, tire L2	Tire L2 overturning
+Mx_R1	 	N-m	Moment	Tires	Overturning moment, tire R1	Tire R1 overturning
+Mx_R2	 	N-m	Moment	Tires	Overturning moment, tire R2	Tire R2 overturning
+Mx_WC_L1	 	N-m	Moment	Wheels	Tire Mx at wheel center L1	Tire Mx at wheel center L1	This is the [wx] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+Mx_WC_L2	 	N-m	Moment	Wheels	Tire Mx at wheel center L2	Tire Mx at wheel center L2
+Mx_WC_R1	 	N-m	Moment	Wheels	Tire Mx at wheel center R1	Tire Mx at wheel center R1
+Mx_WC_R2	 	N-m	Moment	Wheels	Tire Mx at wheel center R2	Tire Mx at wheel center R2
+MyExL1	 	N-m	Moment	External actions	External My, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sy] direction
+MyExL2	 	N-m	Moment	External actions	External My, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sy] direction
+MyExR1	 	N-m	Moment	External actions	External My, R1	Wheel R1
+MyExR2	 	N-m	Moment	External actions	External My, R2	Wheel R2
+MyGExL1	 	N-m	Moment	External actions	External MyG, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [ny] direction
+MyGExL2	 	N-m	Moment	External actions	External MyG, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [ny] direction
+MyGExR1	 	N-m	Moment	External actions	External MyG, R1	Wheel R1
+MyGExR2	 	N-m	Moment	External actions	External MyG, R2	Wheel R2
+MyGExt	 	N-m	Moment	External actions	External MyG on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [sy] direction.
+MyRR_L1	 	N-m	Moment	Tires	Rolling resist moment, tire L1	Tire L1 rolling resistance
+MyRR_L2	 	N-m	Moment	Tires	Rolling resist moment, tire L2	Tire L2 rolling resistance
+MyRR_R1	 	N-m	Moment	Tires	Rolling resist moment, tire R1	Tire R1 rolling resistance
+MyRR_R2	 	N-m	Moment	Tires	Rolling resist moment, tire R2	Tire R2 rolling resistance
+MySmMod1	 	N-m	Moment	External actions	My applied by modules to SM 1	Sprung mass 1	Total reaction moment in the [sy] direction from possible trailing hitch.
+My_Air	 	N-m	Moment	Aerodynamics	Aero My, vehicle	Aero My, vehicle	Moment applied to the sprung mass in the [sy] direction.
+My_Bk_L1	 	N-m	Moment	Brakes	Brake moment L1	Brake My L1
+My_Bk_L2	 	N-m	Moment	Brakes	Brake moment L2	Brake My L2
+My_Bk_R1	 	N-m	Moment	Brakes	Brake moment R1	Brake My R1
+My_Bk_R2	 	N-m	Moment	Brakes	Brake moment R2	Brake My R2
+MY_DR_L1	 	N-m	Moment	Powertrain	Total drive moment for wheel L1	Drive wheel L1
+MY_DR_L2	 	N-m	Moment	Powertrain	Total drive moment for wheel L2	Drive wheel L2
+MY_DR_R1	 	N-m	Moment	Powertrain	Total drive moment for wheel R1	Drive wheel R1
+MY_DR_R2	 	N-m	Moment	Powertrain	Total drive moment for wheel R2	Drive wheel R2
+My_Ext	 	N-m	Moment	External actions	External My on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [ny] direction.
+My_US_L1	 	N-m	Moment	Wheels	Ext moment on whl from usm L1	Wheel L1	This is an optional user-defined moment applied to the wheel from the unsprung mass.
+My_US_L2	 	N-m	Moment	Wheels	Ext moment on whl from usm L2	Wheel L2
+My_US_R1	 	N-m	Moment	Wheels	Ext moment on whl from usm R1	Wheel R1
+My_US_R2	 	N-m	Moment	Wheels	Ext moment on whl from usm R2	Wheel R2
+My_WC_L1	 	N-m	Moment	Wheels	Tire My at wheel center L1	Tire My at wheel center L1	This is the [wy] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+My_WC_L2	 	N-m	Moment	Wheels	Tire My at wheel center L2	Tire My at wheel center L2
+My_WC_R1	 	N-m	Moment	Wheels	Tire My at wheel center R1	Tire My at wheel center R1
+My_WC_R2	 	N-m	Moment	Wheels	Tire My at wheel center R2	Tire My at wheel center R2
+MzExL1	 	N-m	Moment	External actions	External Mz, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sz] direction
+MzExL2	 	N-m	Moment	External actions	External Mz, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the sprung mass in the [sz] direction
+MzExR1	 	N-m	Moment	External actions	External Mz, R1	Wheel R1
+MzExR2	 	N-m	Moment	External actions	External Mz, R2	Wheel R2
+MzGExL1	 	N-m	Moment	External actions	External MzG, L1	Wheel L1	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nz] direction
+MzGExL2	 	N-m	Moment	External actions	External MzG, L2	Wheel L2	Optional user-defined moment applied to the wheel knuckle from the inertial reference N in the [nz] direction
+MzGExR1	 	N-m	Moment	External actions	External MzG, R1	Wheel R1
+MzGExR2	 	N-m	Moment	External actions	External MzG, R2	Wheel R2
+MzGExt	 	N-m	Moment	External actions	External MzG on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [sz] direction.
+MzSmMod1	 	N-m	Moment	External actions	Mz applied by modules to SM 1	Sprung mass 1	Total reaction moment in the [sz] direction from possible trailing hitch.
+Mz_Air	 	N-m	Moment	Aerodynamics	Aero Mz, vehicle	Aero Mz, vehicle	Moment applied to the sprung mass in the [sz] direction.
+Mz_Ext	 	N-m	Moment	External actions	External Mz on sprung mass	Sprung mass	Optional user-defined moment applied from the inertial reference N in the [nz] direction.
+Mz_KP_L1	 	N-m	Moment	Steering	Steer moment about kingpin L1	Kingpin L1 steer moment
+Mz_KP_L2	 	N-m	Moment	Steering	Steer moment about kingpin L2	Kingpin L2 steer moment
+Mz_KP_R1	 	N-m	Moment	Steering	Steer moment about kingpin R1	Kingpin R1 steer moment
+Mz_KP_R2	 	N-m	Moment	Steering	Steer moment about kingpin R2	Kingpin R2 steer moment
+Mz_L1	 	N-m	Moment	Tires	Aligning moment, tire L1	Tire L1 aligning
+Mz_L2	 	N-m	Moment	Tires	Aligning moment, tire L2	Tire L2 aligning
+Mz_R1	 	N-m	Moment	Tires	Aligning moment, tire R1	Tire R1 aligning
+Mz_R2	 	N-m	Moment	Tires	Aligning moment, tire R2	Tire R2 aligning
+Mz_WC_L1	 	N-m	Moment	Wheels	Tire Mz at wheel center L1	Tire Mz at wheel center L1	This is the [wz] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+Mz_WC_L2	 	N-m	Moment	Wheels	Tire Mz at wheel center L2	Tire Mz at wheel center L2
+Mz_WC_R1	 	N-m	Moment	Wheels	Tire Mz at wheel center R1	Tire Mz at wheel center R1
+Mz_WC_R2	 	N-m	Moment	Wheels	Tire Mz at wheel center R2	Tire Mz at wheel center R2
+M_boost	 	N-m	Torque	Steering	Steering boost torque	Power steering
+M_Clutch	 	N-m	Torque	Powertrain	Torq. trans. device clutch torq.	Torque transfer device clutch	Torque of the mechanical clutch or lockup clutch on a hydraulic torque converter.
+M_Cl_Cap	 	N-m	Torque	Powertrain	Max. main clutch torque capacity	Torque transfer device clutch	Maximum torque capacity of the mechanical clutch or lockup clutch on a hydraulic torque converter. (This is not the actual transfered torque.)
+M_ColHys	 	N-m	Torque	Steering	Steering col. hysteresis torque	Steering
+M_ColVis	 	N-m	Torque	Steering	Steering column damping torque	Steering
+M_D1visc	 	N-m	Torque	Powertrain	Drive A1 diff. viscous torque	Front diff. viscous coupling
+M_D1_Cl	 	N-m	Torque	Powertrain	Drive A1 diff. clutch torque	Front differential clutch
+M_D1_Cl2	 	N-m	Torque	Powertrain	Front diff. 2nd clutch torque	Front diff. second clutch
+M_D2visc	 	N-m	Torque	Powertrain	Drive A2 diff. viscous torque	Rear diff. viscous coupling
+M_D2_Cl	 	N-m	Torque	Powertrain	Drive A2 diff. clutch torque	Rear differential clutch
+M_D2_Cl2	 	N-m	Torque	Powertrain	Rear diff. 2nd clutch torque	Rear diff. second clutch
+M_D3f	 	N-m	Torque	Powertrain	Trns case shaft to drv A1 torque	Transfer case front output shaft
+M_D3r	 	N-m	Torque	Powertrain	Trns case shaft to drv A2 torque	Transfer case rear output shaft
+M_D3visc	 	N-m	Torque	Powertrain	Trans case drv A1-2 visc torque	Transfer case viscous coupling
+M_D3_Cl	 	N-m	Torque	Powertrain	Trns case drv A1-2 clutch torque	Transfer case clutch
+M_D3_Cl2	 	N-m	Torque	Powertrain	Transfer case 2nd clutch torque	Transfer case second clutch
+M_EngEsc	 	N-m	Torque	Powertrain	ESC requesting engine torque	ESC requesting for engine
+M_EngOut	 	N-m	Torque	Powertrain	Engine crankshaft output torque	Engine crankshaft output	Input engine torque minus the inertial effect of the crankshaft rotational acceleration.
+M_Eng_In	 	N-m	Torque	Powertrain	Engine crankshaft input torque	Engine crankshaft input	Torque applied to the crankshaft by the pistons (or other source of torque).
+M_Eng_Rq	 	N-m	Torque	Powertrain	Driver requesting engine torque	Driver requesting for engine
+M_L1_Cl	 	N-m	Torque	Powertrain	Front left whl. clutch torque	Front left wheel clutch
+M_L2_Cl	 	N-m	Torque	Powertrain	Rear left whl. clutch torque	Rear left wheel clutch
+M_R1_Cl	 	N-m	Torque	Powertrain	Front right whl. clutch torque	Front right wheel clutch
+M_R2_Cl	 	N-m	Torque	Powertrain	Rear right whl. clutch torque	Rear right wheel clutch
+M_SW	 	N-m	Torque	Steering	Steering wheel torque	Steering wheel
+M_Tbar	 	N-m	Torque	Steering	Steering torsion bar torque	Steering
+M_TC	 	N-m	Torque	Powertrain	Trans input shaft torque	Transmission input shaft	Torque output from the torque converter or clutch. Torque input to the torque converter or clutch is the engine output torque.
+M_Trans	 	N-m	Torque	Powertrain	Trans. output shaft torque	Transmission output shaft
+M_TRdL1	 	N-m	Moment	Steering	Steer gear moment from tierod L1	Pitman arm L1 torque
+M_TRdL2	 	N-m	Moment	Steering	Steer gear moment from tierod L2	Pitman arm L2 torque
+M_TRdR1	 	N-m	Moment	Steering	Steer gear moment from tierod R1	Pitman arm R1 torque
+M_TRdR2	 	N-m	Moment	Steering	Steer gear moment from tierod R2	Pitman arm R2 torque
+PbkCh_L1	 	MPa	Pressure	Brakes	Brake actuator pressure L1	Brake actuator pressure L1	This is the input pressure for the brake actuator, used to determine mechanical brake torque. It includes lags from fluid dynamics relative to the control pressure.
+PbkCh_L2	 	MPa	Pressure	Brakes	Brake actuator pressure L2	Brake actuator pressure L2
+PbkCh_R1	 	MPa	Pressure	Brakes	Brake actuator pressure R1	Brake actuator pressure R1
+PbkCh_R2	 	MPa	Pressure	Brakes	Brake actuator pressure R2	Brake actuator pressure R2
+PbkD_L1	 	MPa	Pressure	Brakes	Delivery pressure, brake L1	Delivery pressure L1	This is the pressure after proportioning. It is the input pressure for the optional built-in ABS controller.
+PbkD_L2	 	MPa	Pressure	Brakes	Delivery pressure, brake L2	Delivery pressure L2
+PbkD_R1	 	MPa	Pressure	Brakes	Delivery pressure, brake R1	Delivery pressure R1
+PbkD_R2	 	MPa	Pressure	Brakes	Delivery pressure, brake R2	Delivery pressure R2
+Pbk_Con	 	MPa	Pressure	Brakes	Brake control input (M/C)	Brake master cylinder	Control input for braking. This is typically the pressure from the master cylinder.
+Pctl_L1	 	MPa	Pressure	Brakes	Pressure from controller L1	Control pressure L1	This is the pressure requested after all controls, but without lags due to fluid dynamics.
+Pctl_L2	 	MPa	Pressure	Brakes	Pressure from controller L2	Control pressure L2
+Pctl_R1	 	MPa	Pressure	Brakes	Pressure from controller R1	Control pressure R1
+Pctl_R2	 	MPa	Pressure	Brakes	Pressure from controller R2	Control pressure R2
+Pitch	 	deg	Angle	Chassis motion	Pitch, vehicle	Vehicle pitch	Euler pitch angle of the sprung mass. This is the pitch angle commonly used in vehicle dynamics.
+PitchGL1	 	deg	Angle	Ground and road	Pitch of ground, wheel L1	Pitch of ground, wheel L1	This is the pitch of the ground at the center of tire contact, based on the instant longitudinal direction of the wheel plane.
+PitchGL2	 	deg	Angle	Ground and road	Pitch of ground, wheel L2	Pitch of ground, wheel L2
+PitchGR1	 	deg	Angle	Ground and road	Pitch of ground, wheel R1	Pitch of ground, wheel R1
+PitchGR2	 	deg	Angle	Ground and road	Pitch of ground, wheel R2	Pitch of ground, wheel R2
+PitchO1	 	deg	Pitch angle	Targets	Pitch angle of moving object 1	Moving object 1
+PitchO10	 	deg	Pitch angle	Targets	Pitch angle of moving object 10	Moving object 10
+PitchO11	 	deg	Pitch angle	Targets	Pitch angle of moving object 11	Moving object 11
+PitchO12	 	deg	Pitch angle	Targets	Pitch angle of moving object 12	Moving object 12
+PitchO13	 	deg	Pitch angle	Targets	Pitch angle of moving object 13	Moving object 13
+PitchO14	 	deg	Pitch angle	Targets	Pitch angle of moving object 14	Moving object 14
+PitchO15	 	deg	Pitch angle	Targets	Pitch angle of moving object 15	Moving object 15
+PitchO16	 	deg	Pitch angle	Targets	Pitch angle of moving object 16	Moving object 16
+PitchO17	 	deg	Pitch angle	Targets	Pitch angle of moving object 17	Moving object 17
+PitchO18	 	deg	Pitch angle	Targets	Pitch angle of moving object 18	Moving object 18
+PitchO19	 	deg	Pitch angle	Targets	Pitch angle of moving object 19	Moving object 19
+PitchO2	 	deg	Pitch angle	Targets	Pitch angle of moving object 2	Moving object 2
+PitchO20	 	deg	Pitch angle	Targets	Pitch angle of moving object 20	Moving object 20
+PitchO21	 	deg	Pitch angle	Targets	Pitch angle of moving object 21	Moving object 21
+PitchO22	 	deg	Pitch angle	Targets	Pitch angle of moving object 22	Moving object 22
+PitchO23	 	deg	Pitch angle	Targets	Pitch angle of moving object 23	Moving object 23
+PitchO24	 	deg	Pitch angle	Targets	Pitch angle of moving object 24	Moving object 24
+PitchO25	 	deg	Pitch angle	Targets	Pitch angle of moving object 25	Moving object 25
+PitchO26	 	deg	Pitch angle	Targets	Pitch angle of moving object 26	Moving object 26
+PitchO27	 	deg	Pitch angle	Targets	Pitch angle of moving object 27	Moving object 27
+PitchO28	 	deg	Pitch angle	Targets	Pitch angle of moving object 28	Moving object 28
+PitchO29	 	deg	Pitch angle	Targets	Pitch angle of moving object 29	Moving object 29
+PitchO3	 	deg	Pitch angle	Targets	Pitch angle of moving object 3	Moving object 3
+PitchO30	 	deg	Pitch angle	Targets	Pitch angle of moving object 30	Moving object 30
+PitchO31	 	deg	Pitch angle	Targets	Pitch angle of moving object 31	Moving object 31
+PitchO32	 	deg	Pitch angle	Targets	Pitch angle of moving object 32	Moving object 32
+PitchO33	 	deg	Pitch angle	Targets	Pitch angle of moving object 33	Moving object 33
+PitchO34	 	deg	Pitch angle	Targets	Pitch angle of moving object 34	Moving object 34
+PitchO35	 	deg	Pitch angle	Targets	Pitch angle of moving object 35	Moving object 35
+PitchO36	 	deg	Pitch angle	Targets	Pitch angle of moving object 36	Moving object 36
+PitchO4	 	deg	Pitch angle	Targets	Pitch angle of moving object 4	Moving object 4
+PitchO5	 	deg	Pitch angle	Targets	Pitch angle of moving object 5	Moving object 5
+PitchO6	 	deg	Pitch angle	Targets	Pitch angle of moving object 6	Moving object 6
+PitchO7	 	deg	Pitch angle	Targets	Pitch angle of moving object 7	Moving object 7
+PitchO8	 	deg	Pitch angle	Targets	Pitch angle of moving object 8	Moving object 8
+PitchO9	 	deg	Pitch angle	Targets	Pitch angle of moving object 9	Moving object 9
+PitchRd	 	deg	Angle	Chassis motion	Pitch rel. to road, vehicle	Vehicle pitch (road)	Pitch angle of the sprung mass relative to the Road Reference Frame.
+Pitch_L1	 	deg	Angle	Wheels	Pitch, wheel L1	Pitch, wheel L1
+Pitch_L2	 	deg	Angle	Wheels	Pitch, wheel L2	Pitch, wheel L2
+Pitch_R1	 	deg	Angle	Wheels	Pitch, wheel R1	Pitch, wheel R1
+Pitch_R2	 	deg	Angle	Wheels	Pitch, wheel R2	Pitch, wheel R2
+PtchAero	 	deg	Pitch	Aerodynamics	Aero pitch of sprung mass	Aerodynamic pitch	Pitch angle of sprung mass relative to the ground at the aero reference point.
+PtchGnd	 	deg	Angle	Ground and road	Pitch angle of ground	Road reference frame 1
+PtchGndA	 	deg	Pitch	Aerodynamics	Pitch of ground for aero	Ground pitch for aero
+PtchPath	 	deg	Angle	Driver model path	Pitch at ground on driver path	Ground at driver path	Global pitch of the ground is calculated by the closed-loop speed controller when using path preview. If OPT_SC is not set to 4, then this is not calculated.
+PwrEngAv	 	kW	Power	Powertrain	Engine available power	Engine available	Power that would be obtained at the current crankshaft speed at full throttle. This is used by the closed-loop speed controller.
+PwrEngIn	 	kW	Power	Powertrain	Engine crankshaft input power	Engine crankshaft input	Power going into the engine before accounting for inertial effects of crankshaft angular acceleration.
+PwrEngO	 	kW	Power	Powertrain	Engine crankshaft output power	Engine crankshaft output	Power coming out of the engine after accounting for inertial effects of crankshaft angular acceleration.
+PwrTrans	 	kW	Power	Powertrain	Transmission output shaft power	Transmission output shaft
+PwrWheel	 	kW	Power	Powertrain	Power to wheels from powertrain	Drive wheels
+Pwr_SC	 	kW	Power	Speed controller	Power from speed control (no PT)	Speed controller (no powertrain)
+Pwr_SCrq	 	kW	Power	Speed controller	Power requested from speed ctrl	Speed controller requested power
+Pwr_TC	 	kW	Power	Powertrain	Trans input shaft power	Transmission input shaft
+Qfuel	 	kg/s	Fuel rate	Powertrain	Fuel rate	Fuel
+RdID_L1	 	-	Road ID Number	Tires	Road ID for tire L1	Tire L1
+RdID_L2	 	-	Road ID Number	Tires	Road ID for tire L2	Tire L2
+RdID_R1	 	-	Road ID Number	Tires	Road ID for tire R1	Tire R1
+RdID_R2	 	-	Road ID Number	Tires	Road ID for tire R2	Tire R2
+RgearDLT	 	-	Dimensionless ratio	Powertrain	Driveline total gear ratio	Driveline total gear
+Rgear_Tr	 	-	Dimensionless ratio	Powertrain	Transmission gear ratio	Transmission gear
+RhoPathY	 	1/m	Curvature	Driver model path	Curvature of path (road lateral)	Driver path (road lateral)	Lateral (parallel to ground) component of curvature of driver preview reference path. This is calculated by the closed-loop speed controller when using path preview. If OPT_SC is not set to 4, then this curvature is not calculated.
+RhoPathZ	 	1/m	Curvature	Driver model path	Curvature of path (road normal)	Driver path (road normal)	Normal (perpendicular to ground) component of curvature of driver preview reference path. This is calculated by the closed-loop speed controller when using path preview. If OPT_SC is not set to 4, then this curvature is not calculated.
+Rho_Road	 	1/m	Curvature	Driver model path	Curvature of road X-Y ref. path	Driver reference path	Lateral (perpendicular to gravity) component of curvature of driver reference path.
+RolA_A1r	 	deg/s2	Angular acceleration	Axles	Axle 1 relative roll acc.	Axle 1 relative roll
+RolA_A2r	 	deg/s2	Angular acceleration	Axles	Axle 2 relative roll acc.	Axle 2 relative roll
+Roll	 	deg	Angle	Chassis motion	Roll, vehicle	Vehicle roll	This is the angle between [sy] and the horizontal plane normal to [nz]. It is calculated as arcsin(dot([sy], [nz])), and is more easily measurable than Euler roll. However, VS Visualizer requires the Euler angle, Roll_E.
+RollGL1	 	deg	Angle	Ground and road	Roll of ground, wheel L1	Roll of ground, wheel L1	This is the roll of the ground at the center of tire contact, based on the instant longitudinal direction of the wheel plane.
+RollGL2	 	deg	Angle	Ground and road	Roll of ground, wheel L2	Roll of ground, wheel L2
+RollGnd	 	deg	Angle	Ground and road	Roll angle of ground	Road reference frame 
+RollGR1	 	deg	Angle	Ground and road	Roll of ground, wheel R1	Roll of ground, wheel R1
+RollGR2	 	deg	Angle	Ground and road	Roll of ground, wheel R2	Roll of ground, wheel R2
+RollO_1	 	deg	Roll angle	Targets	Roll angle of moving object 1	Moving object 1
+RollO_10	 	deg	Roll angle	Targets	Roll angle of moving object 10	Moving object 10
+RollO_11	 	deg	Roll angle	Targets	Roll angle of moving object 11	Moving object 11
+RollO_12	 	deg	Roll angle	Targets	Roll angle of moving object 12	Moving object 12
+RollO_13	 	deg	Roll angle	Targets	Roll angle of moving object 13	Moving object 13
+RollO_14	 	deg	Roll angle	Targets	Roll angle of moving object 14	Moving object 14
+RollO_15	 	deg	Roll angle	Targets	Roll angle of moving object 15	Moving object 15
+RollO_16	 	deg	Roll angle	Targets	Roll angle of moving object 16	Moving object 16
+RollO_17	 	deg	Roll angle	Targets	Roll angle of moving object 17	Moving object 17
+RollO_18	 	deg	Roll angle	Targets	Roll angle of moving object 18	Moving object 18
+RollO_19	 	deg	Roll angle	Targets	Roll angle of moving object 19	Moving object 19
+RollO_2	 	deg	Roll angle	Targets	Roll angle of moving object 2	Moving object 2
+RollO_20	 	deg	Roll angle	Targets	Roll angle of moving object 20	Moving object 20
+RollO_21	 	deg	Roll angle	Targets	Roll angle of moving object 21	Moving object 21
+RollO_22	 	deg	Roll angle	Targets	Roll angle of moving object 22	Moving object 22
+RollO_23	 	deg	Roll angle	Targets	Roll angle of moving object 23	Moving object 23
+RollO_24	 	deg	Roll angle	Targets	Roll angle of moving object 24	Moving object 24
+RollO_25	 	deg	Roll angle	Targets	Roll angle of moving object 25	Moving object 25
+RollO_26	 	deg	Roll angle	Targets	Roll angle of moving object 26	Moving object 26
+RollO_27	 	deg	Roll angle	Targets	Roll angle of moving object 27	Moving object 27
+RollO_28	 	deg	Roll angle	Targets	Roll angle of moving object 28	Moving object 28
+RollO_29	 	deg	Roll angle	Targets	Roll angle of moving object 29	Moving object 29
+RollO_3	 	deg	Roll angle	Targets	Roll angle of moving object 3	Moving object 3
+RollO_30	 	deg	Roll angle	Targets	Roll angle of moving object 30	Moving object 30
+RollO_31	 	deg	Roll angle	Targets	Roll angle of moving object 31	Moving object 31
+RollO_32	 	deg	Roll angle	Targets	Roll angle of moving object 32	Moving object 32
+RollO_33	 	deg	Roll angle	Targets	Roll angle of moving object 33	Moving object 33
+RollO_34	 	deg	Roll angle	Targets	Roll angle of moving object 34	Moving object 34
+RollO_35	 	deg	Roll angle	Targets	Roll angle of moving object 35	Moving object 35
+RollO_36	 	deg	Roll angle	Targets	Roll angle of moving object 36	Moving object 36
+RollO_4	 	deg	Roll angle	Targets	Roll angle of moving object 4	Moving object 4
+RollO_5	 	deg	Roll angle	Targets	Roll angle of moving object 5	Moving object 5
+RollO_6	 	deg	Roll angle	Targets	Roll angle of moving object 6	Moving object 6
+RollO_7	 	deg	Roll angle	Targets	Roll angle of moving object 7	Moving object 7
+RollO_8	 	deg	Roll angle	Targets	Roll angle of moving object 8	Moving object 8
+RollO_9	 	deg	Roll angle	Targets	Roll angle of moving object 9	Moving object 9
+RollPath	 	deg	Angle	Driver model path	Roll at ground on driver path	Ground at driver path	Global roll of the ground is calculated by the closed-loop speed controller when using path preview. If OPT_SC is not set to 4, then this is not calculated.
+RollWK_L1	RollWKL1	deg	Angle	Wheels	Roll, wheel knuckle L1	Roll, wheel knuckle L1	This is an Euler roll angle (3-2-1) for the wheel knuckle, used for VS STI tire models.
+RollWK_L2	RollWKL2	deg	Angle	Wheels	Roll, wheel knuckle L2	Roll, wheel knuckle L2
+RollWK_R1	RollWKR1	deg	Angle	Wheels	Roll, wheel knuckle R1	Roll, wheel knuckle R1
+RollWK_R2	RollWKR2	deg	Angle	Wheels	Roll, wheel knuckle R2	Roll, wheel knuckle R2
+Roll_A1r	 	deg	Angle	Axles	Axle 1 relative roll	Axle 1 relative roll
+Roll_A2r	 	deg	Angle	Axles	Axle 2 relative roll	Axle 2 relative roll
+Roll_E	 	deg	Angle	Chassis motion	Roll (Euler), vehicle	Vehicle roll (Euler)	This is the Euler roll angle of the sprung mass of the vehicle. This is needed by VS Visualizer, but is not the angle between [sy] and a horizontal reference unless the pitch angle is zero
+Roll_L1	 	deg	Angle	Wheels	Roll, wheel L1	Roll, wheel L1	This is the roll angle of the wheel spin axis, used to view with VS Visualizer.
+Roll_L2	 	deg	Angle	Wheels	Roll, wheel L2	Roll, wheel L2
+Roll_R1	 	deg	Angle	Wheels	Roll, wheel R1	Roll, wheel R1
+Roll_R2	 	deg	Angle	Wheels	Roll, wheel R2	Roll, wheel R2
+Roll_Rd	 	deg	Angle	Chassis motion	Roll rel. to road, vehicle	Vehicle roll (road)	Roll angle of the sprung mass relative to the Road Reference Frame.
+RolR_A1r	 	deg/s	Angular rate	Axles	Axle 1 relative roll rate	Axle 1 relative roll
+RolR_A2r	 	deg/s	Angular rate	Axles	Axle 2 relative roll rate	Axle 2 relative roll
+RotTrans	 	rev	Rotation	Powertrain	Trans. output shaft rotation	Transmission output shaft
+Rot_D3f	 	rev	Rotation	Powertrain	Trans case shaft to drv. A1 rot	Transfer case front output shaft
+Rot_D3r	 	rev	Rotation	Powertrain	Trans case shaft to drv. A2 rot	Transfer case rear output shaft
+Rot_L1	 	rev	Rotation	Wheels	Wheel L1 rotation (Euler)	Wheel L1 rotation
+Rot_L2	 	rev	Rotation	Wheels	Wheel L2 rotation (Euler)	Wheel L2 rotation
+Rot_R1	 	rev	Rotation	Wheels	Wheel R1 rotation (Euler)	Wheel R1 rotation
+Rot_R2	 	rev	Rotation	Wheels	Wheel R2 rotation (Euler)	Wheel R2 rotation
+Rot_TC	 	rev	Rotation	Powertrain	Trans input shaft rotation	Transmission input shaft
+RRE_L1	 	mm	Effective radius	Tires	Effective rolling rad., tire L1	Tire L1, eff. radius
+RRE_L2	 	mm	Effective radius	Tires	Effective rolling rad., tire L2	Tire L2, eff. radius
+RRE_R1	 	mm	Effective radius	Tires	Effective rolling rad., tire R1	Tire R1, eff. radius
+RRE_R2	 	mm	Effective radius	Tires	Effective rolling rad., tire R2	Tire R2, eff. radius
+R_AV_TC	 	-	Dimensionless ratio	Powertrain	TC output/input speed ratio	TC output/input speed
+R_M_TC	 	-	Dimensionless ratio	Powertrain	TC out./input shaft torque ratio	TC output/input shaft torque
+Station	 	m	Longitudinal distance	Driver model path	Station (path) at vehicle origin	Path station at vehicle origin
+Sta_Prof	 	m	Longitudinal distance	Ground and road	Station for road profiles	Road profile station	This is the travelled distance, calculated by integrating forward speed Vxz_Fwd. It is used to calculate incremental ground Z for "wandering profiles" that follow the tire contact points.
+Sta_Road	 	m	Longitudinal distance	Ground and road	Station (road) at vehicle origin	Road station at vehicle origin
+Steer_DM	 	deg	Angle	Steering	Steer angle from driver	Steering wheel
+Steer_L1	 	deg	Angle	Steering	Wheel steer L1	Wheel steer L1	Total road wheel steer due to kinematics and compliance, about the [sz] axis.
+Steer_L2	 	deg	Angle	Steering	Wheel steer L2	Wheel steer L2
+Steer_R1	 	deg	Angle	Steering	Wheel steer R1	Wheel steer R1
+Steer_R2	 	deg	Angle	Steering	Wheel steer R2	Wheel steer R2
+Steer_SW	 	deg	Angle	Steering	Steering wheel angle	Steering wheel
+StrAV_SW	 	deg/s	Angular rate	Steering	Steering wheel angular rate	Steering wheel
+StrC_L1	 	deg	Angle	Steering	Compliance steer, wheel L1	Wheel L1 compliance steer
+StrC_L2	 	deg	Angle	Steering	Compliance steer, wheel L2	Wheel L2 compliance steer
+StrC_R1	 	deg	Angle	Steering	Compliance steer, wheel R1	Wheel R1 compliance steer
+StrC_R2	 	deg	Angle	Steering	Compliance steer, wheel R2	Wheel R2 compliance steer
+StrKp_L1	 	deg	Angle	Steering	Steer angle about kingpin L1	Kingpin L1 steer angle	This steer is about the 3D inclined kingpin axis, which is a rotation axis in the multibody model.
+StrKp_L2	 	deg	Angle	Steering	Steer angle about kingpin L2	Kingpin L2 steer angle
+StrKp_R1	 	deg	Angle	Steering	Steer angle about kingpin R1	Kingpin R1 steer angle	This steer is about the 3D inclined kingpin axis, which is a rotation axis in the multibody model.
+StrKp_R2	 	deg	Angle	Steering	Steer angle about kingpin R2	Kingpin R2 steer angle
+StrK_L1	 	deg	Angle	Steering	Kinematic steer, wheel L1	Wheel L1 kinematic steer	Steering angle of wheel due to kinematical effects: control divided by gear ratio, subject to nonlinear kinematical shaping, added to toe.
+StrK_L2	 	deg	Angle	Steering	Kinematic steer, wheel L2	Wheel L2 kinematic steer
+StrK_R1	 	deg	Angle	Steering	Kinematic steer, wheel R1	Wheel R1 kinematic steer
+StrK_R2	 	deg	Angle	Steering	Kinematic steer, wheel R2	Wheel R2 kinematic steer
+StrSWr_1	 	deg	Angle	Steering	SW angle reduced for axle 1	SW angle reduced for axle 1	Steering wheel angle divided by the constant steering gear ratio for this axle.
+StrSWr_2	 	deg	Angle	Steering	SW angle reduced for axle 2	SW angle reduced for axle 2
+SusX_L1	 	mm	Displacement	Suspensions	Wheel L1 X displacement	Wheel L1 X displacement
+SusX_L2	 	mm	Displacement	Suspensions	Wheel L2 X displacement	Wheel L2 X displacement
+SusX_R1	 	mm	Displacement	Suspensions	Wheel R1 X displacement	Wheel R1 X displacement
+SusX_R2	 	mm	Displacement	Suspensions	Wheel R2 X displacement	Wheel R2 X displacement
+SusY_L1	 	mm	Displacement	Suspensions	Wheel L1 lateral displacement	Wheel L1 lateral displacement
+SusY_L2	 	mm	Displacement	Suspensions	Wheel L2 lateral displacement	Wheel L2 lateral displacement
+SusY_R1	 	mm	Displacement	Suspensions	Wheel R1 lateral displacement	Wheel R1 lateral displacement
+SusY_R2	 	mm	Displacement	Suspensions	Wheel R2 lateral displacement	Wheel R2 lateral displacement
+S_Obj_1	 	m	Station	Targets	Station of moving object 1	Moving object 1	Station is associated with the path identified by the parameter PATH_ID_OBJ. If the parameter OPT_SPEED_OBJ is 1 or 2, then station is also installed as an ODE state variable whose derivative is V_Obj. If PATH_ID_OBJ is zero, then station is not used and is always zero.
+S_Obj_10	 	m	Station	Targets	Station of moving object 10	Moving object 10
+S_Obj_11	 	m	Station	Targets	Station of moving object 11	Moving object 11
+S_Obj_12	 	m	Station	Targets	Station of moving object 12	Moving object 12
+S_Obj_13	 	m	Station	Targets	Station of moving object 13	Moving object 13
+S_Obj_14	 	m	Station	Targets	Station of moving object 14	Moving object 14
+S_Obj_15	 	m	Station	Targets	Station of moving object 15	Moving object 15
+S_Obj_16	 	m	Station	Targets	Station of moving object 16	Moving object 16
+S_Obj_17	 	m	Station	Targets	Station of moving object 17	Moving object 17
+S_Obj_18	 	m	Station	Targets	Station of moving object 18	Moving object 18
+S_Obj_19	 	m	Station	Targets	Station of moving object 19	Moving object 19
+S_Obj_2	 	m	Station	Targets	Station of moving object 2	Moving object 2
+S_Obj_20	 	m	Station	Targets	Station of moving object 20	Moving object 20
+S_Obj_21	 	m	Station	Targets	Station of moving object 21	Moving object 21
+S_Obj_22	 	m	Station	Targets	Station of moving object 22	Moving object 22
+S_Obj_23	 	m	Station	Targets	Station of moving object 23	Moving object 23
+S_Obj_24	 	m	Station	Targets	Station of moving object 24	Moving object 24
+S_Obj_25	 	m	Station	Targets	Station of moving object 25	Moving object 25
+S_Obj_26	 	m	Station	Targets	Station of moving object 26	Moving object 26
+S_Obj_27	 	m	Station	Targets	Station of moving object 27	Moving object 27
+S_Obj_28	 	m	Station	Targets	Station of moving object 28	Moving object 28
+S_Obj_29	 	m	Station	Targets	Station of moving object 29	Moving object 29
+S_Obj_3	 	m	Station	Targets	Station of moving object 3	Moving object 3
+S_Obj_30	 	m	Station	Targets	Station of moving object 30	Moving object 30
+S_Obj_31	 	m	Station	Targets	Station of moving object 31	Moving object 31
+S_Obj_32	 	m	Station	Targets	Station of moving object 32	Moving object 32
+S_Obj_33	 	m	Station	Targets	Station of moving object 33	Moving object 33
+S_Obj_34	 	m	Station	Targets	Station of moving object 34	Moving object 34
+S_Obj_35	 	m	Station	Targets	Station of moving object 35	Moving object 35
+S_Obj_36	 	m	Station	Targets	Station of moving object 36	Moving object 36
+S_Obj_4	 	m	Station	Targets	Station of moving object 4	Moving object 4
+S_Obj_5	 	m	Station	Targets	Station of moving object 5	Moving object 5
+S_Obj_6	 	m	Station	Targets	Station of moving object 6	Moving object 6
+S_Obj_7	 	m	Station	Targets	Station of moving object 7	Moving object 7
+S_Obj_8	 	m	Station	Targets	Station of moving object 8	Moving object 8
+S_Obj_9	 	m	Station	Targets	Station of moving object 9	Moving object 9
+S_RdO_1	 	m	Station	Targets	Station on road path, object 1	Moving object 1	S_Rd_O applies to the reference path for the road surface identified by the parameter ROAD_ID_OBJ. If ROAD_ID_OBJ is zero, then this station is not used and is always zero.
+S_RdO_10	 	m	Station	Targets	Station on road path, object 10	Moving object 10
+S_RdO_11	 	m	Station	Targets	Station on road path, object 11	Moving object 11
+S_RdO_12	 	m	Station	Targets	Station on road path, object 12	Moving object 12
+S_RdO_13	 	m	Station	Targets	Station on road path, object 13	Moving object 13
+S_RdO_14	 	m	Station	Targets	Station on road path, object 14	Moving object 14
+S_RdO_15	 	m	Station	Targets	Station on road path, object 15	Moving object 15
+S_RdO_16	 	m	Station	Targets	Station on road path, object 16	Moving object 16
+S_RdO_17	 	m	Station	Targets	Station on road path, object 17	Moving object 17
+S_RdO_18	 	m	Station	Targets	Station on road path, object 18	Moving object 18
+S_RdO_19	 	m	Station	Targets	Station on road path, object 19	Moving object 19
+S_RdO_2	 	m	Station	Targets	Station on road path, object 2	Moving object 2
+S_RdO_20	 	m	Station	Targets	Station on road path, object 20	Moving object 20
+S_RdO_21	 	m	Station	Targets	Station on road path, object 21	Moving object 21
+S_RdO_22	 	m	Station	Targets	Station on road path, object 22	Moving object 22
+S_RdO_23	 	m	Station	Targets	Station on road path, object 23	Moving object 23
+S_RdO_24	 	m	Station	Targets	Station on road path, object 24	Moving object 24
+S_RdO_25	 	m	Station	Targets	Station on road path, object 25	Moving object 25
+S_RdO_26	 	m	Station	Targets	Station on road path, object 26	Moving object 26
+S_RdO_27	 	m	Station	Targets	Station on road path, object 27	Moving object 27
+S_RdO_28	 	m	Station	Targets	Station on road path, object 28	Moving object 28
+S_RdO_29	 	m	Station	Targets	Station on road path, object 29	Moving object 29
+S_RdO_3	 	m	Station	Targets	Station on road path, object 3	Moving object 3
+S_RdO_30	 	m	Station	Targets	Station on road path, object 30	Moving object 30
+S_RdO_31	 	m	Station	Targets	Station on road path, object 31	Moving object 31
+S_RdO_32	 	m	Station	Targets	Station on road path, object 32	Moving object 32
+S_RdO_33	 	m	Station	Targets	Station on road path, object 33	Moving object 33
+S_RdO_34	 	m	Station	Targets	Station on road path, object 34	Moving object 34
+S_RdO_35	 	m	Station	Targets	Station on road path, object 35	Moving object 35
+S_RdO_36	 	m	Station	Targets	Station on road path, object 36	Moving object 36
+S_RdO_4	 	m	Station	Targets	Station on road path, object 4	Moving object 4
+S_RdO_5	 	m	Station	Targets	Station on road path, object 5	Moving object 5
+S_RdO_6	 	m	Station	Targets	Station on road path, object 6	Moving object 6
+S_RdO_7	 	m	Station	Targets	Station on road path, object 7	Moving object 7
+S_RdO_8	 	m	Station	Targets	Station on road path, object 8	Moving object 8
+S_RdO_9	 	m	Station	Targets	Station on road path, object 9	Moving object 9
+S_Rd_L1	 	m	Road Station	Tires	Road station for tire L1	Tire L1
+S_Rd_L2	 	m	Road Station	Tires	Road station for tire L2	Tire L2
+S_Rd_R1	 	m	Road Station	Tires	Road station for tire R1	Tire R1
+S_Rd_R2	 	m	Road Station	Tires	Road station for tire R2	Tire R2
+TC_Lock	 	-	Boolean	Powertrain	Torque converter lockup signal	Torque converter lockup clutch	Torque converter lockup clutch control signal: 0 -> free, 1 -> lockup.
+Throttle	 	-	Dimensionless ratio	Powertrain	Normalized throttle at Pedal	Pedal	Sum of the specified open-loop throttle control (internal + imported) plus throttle due to closed-loop speed control.
+Thrtl_SC	 	-	Dimensionless ratio	Powertrain	Throttle (speed controller)	Pedal (speed controller)
+Thr_Eng	 	-	Dimensionless ratio	Powertrain	Normalized throttle at Engine	Engine	Normalized throttle applied to the engine. This includes a 1st-order time lag.
+Thr_Intl	 	-	Dimensionless ratio	Powertrain	Normalized throttle (internal)	Pedal (internal)	Sum of the specified open-loop throttle control plus throttle due to closed-loop speed control. This excludes the optional imported value.
+TypeO_1	 	-	Type (code)	Targets	Type of object 1	Moving object 1	Each object has an output type (code) that can be set with VS Commands or imported from an external software tool. This can be used to provide content from objects representing signs and traffic signals.
+TypeO_10	 	-	Type (code)	Targets	Type of object 10	Moving object 10
+TypeO_11	 	-	Type (code)	Targets	Type of object 11	Moving object 11
+TypeO_12	 	-	Type (code)	Targets	Type of object 12	Moving object 12
+TypeO_13	 	-	Type (code)	Targets	Type of object 13	Moving object 13
+TypeO_14	 	-	Type (code)	Targets	Type of object 14	Moving object 14
+TypeO_15	 	-	Type (code)	Targets	Type of object 15	Moving object 15
+TypeO_16	 	-	Type (code)	Targets	Type of object 16	Moving object 16
+TypeO_17	 	-	Type (code)	Targets	Type of object 17	Moving object 17
+TypeO_18	 	-	Type (code)	Targets	Type of object 18	Moving object 18
+TypeO_19	 	-	Type (code)	Targets	Type of object 19	Moving object 19
+TypeO_2	 	-	Type (code)	Targets	Type of object 2	Moving object 2
+TypeO_20	 	-	Type (code)	Targets	Type of object 20	Moving object 20
+TypeO_21	 	-	Type (code)	Targets	Type of object 21	Moving object 21
+TypeO_22	 	-	Type (code)	Targets	Type of object 22	Moving object 22
+TypeO_23	 	-	Type (code)	Targets	Type of object 23	Moving object 23
+TypeO_24	 	-	Type (code)	Targets	Type of object 24	Moving object 24
+TypeO_25	 	-	Type (code)	Targets	Type of object 25	Moving object 25
+TypeO_26	 	-	Type (code)	Targets	Type of object 26	Moving object 26
+TypeO_27	 	-	Type (code)	Targets	Type of object 27	Moving object 27
+TypeO_28	 	-	Type (code)	Targets	Type of object 28	Moving object 28
+TypeO_29	 	-	Type (code)	Targets	Type of object 29	Moving object 29
+TypeO_3	 	-	Type (code)	Targets	Type of object 3	Moving object 3
+TypeO_30	 	-	Type (code)	Targets	Type of object 30	Moving object 30
+TypeO_31	 	-	Type (code)	Targets	Type of object 31	Moving object 31
+TypeO_32	 	-	Type (code)	Targets	Type of object 32	Moving object 32
+TypeO_33	 	-	Type (code)	Targets	Type of object 33	Moving object 33
+TypeO_34	 	-	Type (code)	Targets	Type of object 34	Moving object 34
+TypeO_35	 	-	Type (code)	Targets	Type of object 35	Moving object 35
+TypeO_36	 	-	Type (code)	Targets	Type of object 36	Moving object 36
+TypeO_4	 	-	Type (code)	Targets	Type of object 4	Moving object 4
+TypeO_5	 	-	Type (code)	Targets	Type of object 5	Moving object 5
+TypeO_6	 	-	Type (code)	Targets	Type of object 6	Moving object 6
+TypeO_7	 	-	Type (code)	Targets	Type of object 7	Moving object 7
+TypeO_8	 	-	Type (code)	Targets	Type of object 8	Moving object 8
+TypeO_9	 	-	Type (code)	Targets	Type of object 9	Moving object 9
+T_Event	 	s	Time	Time	Time since event clock reset	Event	This output is calculated each time step with the formula T_EVENT = T - TSTART_T_EVENT, where TSTART_T_EVENT is a system parameter that may be set to T when a VS Event is triggered.
+T_Record	 	s	Time	Time	Recording time in output file	Recording time in file	This variable is incremented when outputs are written to file or saved to a buffer. This matches the time that is obtained in post-processing by multiplying the sample number by the sample interval.
+T_Rtr_L1	 	C	Temperature	Brakes	Brake rotor L1 temperature	Brake rotor L1
+T_Rtr_L2	 	C	Temperature	Brakes	Brake rotor L2 temperature	Brake rotor L2
+T_Rtr_R1	 	C	Temperature	Brakes	Brake rotor R1 temperature	Brake rotor R1
+T_Rtr_R2	 	C	Temperature	Brakes	Brake rotor R2 temperature	Brake rotor R2
+T_Stamp	 	s	Time	Time	Simulation time stamp	Simulation time stamp	This is the simulation time. If writing to file is interupted by setting the system parameter OPT_WRITE to 0, then this variable will not match the recording time T_record.
+Vair	 	km/h	Speed	Aerodynamics	Air speed relative to vehicle	Air speed relative to vehicle
+Vbk_Tot	 	mm3	Volume	Brakes	Total brake corner volume	Brake system
+VisO_1	 	-	Visibility	Targets	Visibility of moving object 1	Moving object 1
+VisO_10	 	-	Visibility	Targets	Visibility of moving object 10	Moving object 10
+VisO_11	 	-	Visibility	Targets	Visibility of moving object 11	Moving object 11
+VisO_12	 	-	Visibility	Targets	Visibility of moving object 12	Moving object 12
+VisO_13	 	-	Visibility	Targets	Visibility of moving object 13	Moving object 13
+VisO_14	 	-	Visibility	Targets	Visibility of moving object 14	Moving object 14
+VisO_15	 	-	Visibility	Targets	Visibility of moving object 15	Moving object 15
+VisO_16	 	-	Visibility	Targets	Visibility of moving object 16	Moving object 16
+VisO_17	 	-	Visibility	Targets	Visibility of moving object 17	Moving object 17
+VisO_18	 	-	Visibility	Targets	Visibility of moving object 18	Moving object 18
+VisO_19	 	-	Visibility	Targets	Visibility of moving object 19	Moving object 19
+VisO_2	 	-	Visibility	Targets	Visibility of moving object 2	Moving object 2
+VisO_20	 	-	Visibility	Targets	Visibility of moving object 20	Moving object 20
+VisO_21	 	-	Visibility	Targets	Visibility of moving object 21	Moving object 21
+VisO_22	 	-	Visibility	Targets	Visibility of moving object 22	Moving object 22
+VisO_23	 	-	Visibility	Targets	Visibility of moving object 23	Moving object 23
+VisO_24	 	-	Visibility	Targets	Visibility of moving object 24	Moving object 24
+VisO_25	 	-	Visibility	Targets	Visibility of moving object 25	Moving object 25
+VisO_26	 	-	Visibility	Targets	Visibility of moving object 26	Moving object 26
+VisO_27	 	-	Visibility	Targets	Visibility of moving object 27	Moving object 27
+VisO_28	 	-	Visibility	Targets	Visibility of moving object 28	Moving object 28
+VisO_29	 	-	Visibility	Targets	Visibility of moving object 29	Moving object 29
+VisO_3	 	-	Visibility	Targets	Visibility of moving object 3	Moving object 3
+VisO_30	 	-	Visibility	Targets	Visibility of moving object 30	Moving object 30
+VisO_31	 	-	Visibility	Targets	Visibility of moving object 31	Moving object 31
+VisO_32	 	-	Visibility	Targets	Visibility of moving object 32	Moving object 32
+VisO_33	 	-	Visibility	Targets	Visibility of moving object 33	Moving object 33
+VisO_34	 	-	Visibility	Targets	Visibility of moving object 34	Moving object 34
+VisO_35	 	-	Visibility	Targets	Visibility of moving object 35	Moving object 35
+VisO_36	 	-	Visibility	Targets	Visibility of moving object 36	Moving object 36
+VisO_4	 	-	Visibility	Targets	Visibility of moving object 4	Moving object 4
+VisO_5	 	-	Visibility	Targets	Visibility of moving object 5	Moving object 5
+VisO_6	 	-	Visibility	Targets	Visibility of moving object 6	Moving object 6
+VisO_7	 	-	Visibility	Targets	Visibility of moving object 7	Moving object 7
+VisO_8	 	-	Visibility	Targets	Visibility of moving object 8	Moving object 8
+VisO_9	 	-	Visibility	Targets	Visibility of moving object 9	Moving object 9
+VJStL1	 	mm/s	Compression rate	Suspensions	Comp. rate, jounce stop L1	Jounce stop L1
+VJStL2	 	mm/s	Compression rate	Suspensions	Comp. rate, jounce stop L2	Jounce stop L2
+VJStR1	 	mm/s	Compression rate	Suspensions	Comp. rate, jounce stop R1	Jounce stop R1
+VJStR2	 	mm/s	Compression rate	Suspensions	Comp. rate, jounce stop R2	Jounce stop R2
+VRStL1	 	mm/s	Compression rate	Suspensions	Comp. rate, rebound stop L1	Rebound stop L1
+VRStL2	 	mm/s	Compression rate	Suspensions	Comp. rate, rebound stop L2	Rebound stop L2
+VRStR1	 	mm/s	Compression rate	Suspensions	Comp. rate, rebound stop R1	Rebound stop R1
+VRStR2	 	mm/s	Compression rate	Suspensions	Comp. rate, rebound stop R2	Rebound stop R2
+Vwind	 	km/h	Speed	Aerodynamics	Wind speed	Wind
+Vx	 	km/h	Longitudinal speed	Chassis motion	Long. speed, inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the ISO/SAE [x] direction. Be aware  that the motion of the instant CG cannot be measured directly in physical vehicles.
+VxCenL1	 	km/h	Longitudinal speed	Tires	Vx, center of tire contact L1	Center of tire contact L1
+VxCenL2	 	km/h	Longitudinal speed	Tires	Vx, center of tire contact L2	Center of tire contact L2
+VxCenR1	 	km/h	Longitudinal speed	Tires	Vx, center of tire contact R1	Center of tire contact R1
+VxCenR2	 	km/h	Longitudinal speed	Tires	Vx, center of tire contact R2	Center of tire contact R2
+VxNf_SM	 	km/h	Speed	Chassis motion	Global X vel., CG, sprung mass	CG, sprung mass	This is the [nx] component of the velocity vector of the sprung mass CG.
+VxTarget	 	km/h	Longitudinal speed	Speed controller	Target speed	Target speed
+Vxz_Fwd	 	km/h	Longitudinal speed	Chassis motion	Longitudinal speed in XZ plane	Vehicle forward in XZ plane	This is the forward speed of the sprung mass CG, calculated as SQRT(Vx_SM^2 + Vz_SM^2), with the sign set to match Vx_SM.
+Vx_Err	 	km/h	Longitudinal speed	Speed controller	Speed controller error	Controller error
+Vx_IErr	 	m	Speed error integral	Speed controller	Integrated speed control error	Integrated speed error
+Vx_L1	 	km/h	Longitudinal speed	Wheels	Vx (equivalent), wheel L1	Wheel L1 (equivalent)	Equivalent wheel speed is defined as the spin (rad/sec) multiplied by the effective rolling radius. It is the translational speed that corresponds to the angular rate during free rolling.
+Vx_L2	 	km/h	Longitudinal speed	Wheels	Vx (equivalent), wheel L2	Wheel L2 (equivalent)
+Vx_R1	 	km/h	Longitudinal speed	Wheels	Vx (equivalent), wheel R1	Wheel R1 (equivalent)
+Vx_R2	 	km/h	Longitudinal speed	Wheels	Vx (equivalent), wheel R2	Wheel R2 (equivalent)
+Vx_Rd	 	km/h	Longitudinal speed	Chassis motion	Road X vel., inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the road [rx] direction.
+Vx_SM	 	km/h	Longitudinal speed	Chassis motion	Long. speed, CG, sprung mass	CG, sprung mass	This is the [x] component of the velocity vector of the sprung mass CG.
+Vx_WC_L1	 	km/h	Longitudinal speed	Wheels	Vx at wheel center L1	Vx at wheel center L1
+Vx_WC_L2	 	km/h	Longitudinal speed	Wheels	Vx at wheel center L2	Vx at wheel center L2
+Vx_WC_R1	 	km/h	Longitudinal speed	Wheels	Vx at wheel center R1	Vx at wheel center R1
+Vx_WC_R2	 	km/h	Longitudinal speed	Wheels	Vx at wheel center R2	Vx at wheel center R2
+Vy	 	km/h	Lateral speed	Chassis motion	Lat. speed, inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the ISO/SAE [y] direction. Be aware  that the motion of the instant CG cannot be measured directly in physical vehicles.
+VyNf_SM	 	km/h	Speed	Chassis motion	Global Y vel., CG, sprung mass	CG, sprung mass	This is the [ny] component of the velocity vector of the sprung mass CG.
+VyTC_L1	 	km/h	Lateral speed	Tires	Vy, L1 center of tire contact	Center of tire contact L1
+VyTC_L2	 	km/h	Lateral speed	Tires	Vy, L2 center of tire contact	Center of tire contact L2
+VyTC_R1	 	km/h	Lateral speed	Tires	Vy, R1 center of tire contact	Center of tire contact R1
+VyTC_R2	 	km/h	Lateral speed	Tires	Vy, R2 center of tire contact	Center of tire contact R2
+Vy_Rack1	 	mm/s	Speed	Steering	Steering rack disp. rate, axle 1	Axle 1 steering
+Vy_Rack2	 	mm/s	Speed	Steering	Steering rack disp. rate, axle 2	Axle 2 steering
+Vy_Rd	 	km/h	Lateral speed	Chassis motion	Road Y vel., inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the road [ry] direction.
+Vy_SM	 	km/h	Lateral speed	Chassis motion	Lateral speed, CG, sprung mass	CG, sprung mass	This is the [y] component of the velocity vector of the sprung mass CG.
+Vy_WC_L1	 	km/h	Lateral speed	Wheels	Vy at wheel center L1	Vy at wheel center L1
+Vy_WC_L2	 	km/h	Lateral speed	Wheels	Vy at wheel center L2	Vy at wheel center L2
+Vy_WC_R1	 	km/h	Lateral speed	Wheels	Vy at wheel center R1	Vy at wheel center R1
+Vy_WC_R2	 	km/h	Lateral speed	Wheels	Vy at wheel center R2	Vy at wheel center R2
+Vz	 	km/h	Vertical speed	Chassis motion	Vert. speed, inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the [nz] direction. Be aware  that the motion of the instant CG cannot be measured directly in physical vehicles.
+Vz_Rd	 	km/h	Vertical speed	Chassis motion	Road Z vel., inst. CG, vehicle	Instant CG, vehicle	This is the speed of the instant CG of the vehicle unit in the road [rz] direction.
+Vz_SM	 	km/h	Vertical speed	Chassis motion	Vert. speed, CG, sprung mass	CG, sprung mass	This is the [nz] component of the velocity vector of the sprung mass CG.
+Vz_WC_L1	 	km/h	Vertical speed	Wheels	Vz at wheel center L1	Vz at wheel center L1
+Vz_WC_L2	 	km/h	Vertical speed	Wheels	Vz at wheel center L2	Vz at wheel center L2
+Vz_WC_R1	 	km/h	Vertical speed	Wheels	Vz at wheel center R1	Vz at wheel center R1
+Vz_WC_R2	 	km/h	Vertical speed	Wheels	Vz at wheel center R2	Vz at wheel center R2
+V_Obj_1	 	km/h	Forward speed	Targets	Speed of moving object 1	Moving object 1	If the parameter PATH_ID_OBJ is nonzero it identifies a path for the object. If the parameter OPT_SPEED_OBJ is 1 or 2, then station is also installed as an ODE state variable whose derivative is V_Obj. In this case, V_Obj for each object can be imported or set with VS Commands such as EQ_OUT. Otherwise, V_Obj is calculated from changes in global X and Y coordinates.
+V_Obj_10	 	km/h	Forward speed	Targets	Speed of moving object 10	Moving object 10
+V_Obj_11	 	km/h	Forward speed	Targets	Speed of moving object 11	Moving object 11
+V_Obj_12	 	km/h	Forward speed	Targets	Speed of moving object 12	Moving object 12
+V_Obj_13	 	km/h	Forward speed	Targets	Speed of moving object 13	Moving object 13
+V_Obj_14	 	km/h	Forward speed	Targets	Speed of moving object 14	Moving object 14
+V_Obj_15	 	km/h	Forward speed	Targets	Speed of moving object 15	Moving object 15
+V_Obj_16	 	km/h	Forward speed	Targets	Speed of moving object 16	Moving object 16
+V_Obj_17	 	km/h	Forward speed	Targets	Speed of moving object 17	Moving object 17
+V_Obj_18	 	km/h	Forward speed	Targets	Speed of moving object 18	Moving object 18
+V_Obj_19	 	km/h	Forward speed	Targets	Speed of moving object 19	Moving object 19
+V_Obj_2	 	km/h	Forward speed	Targets	Speed of moving object 2	Moving object 2
+V_Obj_20	 	km/h	Forward speed	Targets	Speed of moving object 20	Moving object 20
+V_Obj_21	 	km/h	Forward speed	Targets	Speed of moving object 21	Moving object 21
+V_Obj_22	 	km/h	Forward speed	Targets	Speed of moving object 22	Moving object 22
+V_Obj_23	 	km/h	Forward speed	Targets	Speed of moving object 23	Moving object 23
+V_Obj_24	 	km/h	Forward speed	Targets	Speed of moving object 24	Moving object 24
+V_Obj_25	 	km/h	Forward speed	Targets	Speed of moving object 25	Moving object 25
+V_Obj_26	 	km/h	Forward speed	Targets	Speed of moving object 26	Moving object 26
+V_Obj_27	 	km/h	Forward speed	Targets	Speed of moving object 27	Moving object 27
+V_Obj_28	 	km/h	Forward speed	Targets	Speed of moving object 28	Moving object 28
+V_Obj_29	 	km/h	Forward speed	Targets	Speed of moving object 29	Moving object 29
+V_Obj_3	 	km/h	Forward speed	Targets	Speed of moving object 3	Moving object 3
+V_Obj_30	 	km/h	Forward speed	Targets	Speed of moving object 30	Moving object 30
+V_Obj_31	 	km/h	Forward speed	Targets	Speed of moving object 31	Moving object 31
+V_Obj_32	 	km/h	Forward speed	Targets	Speed of moving object 32	Moving object 32
+V_Obj_33	 	km/h	Forward speed	Targets	Speed of moving object 33	Moving object 33
+V_Obj_34	 	km/h	Forward speed	Targets	Speed of moving object 34	Moving object 34
+V_Obj_35	 	km/h	Forward speed	Targets	Speed of moving object 35	Moving object 35
+V_Obj_36	 	km/h	Forward speed	Targets	Speed of moving object 36	Moving object 36
+V_Obj_4	 	km/h	Forward speed	Targets	Speed of moving object 4	Moving object 4
+V_Obj_5	 	km/h	Forward speed	Targets	Speed of moving object 5	Moving object 5
+V_Obj_6	 	km/h	Forward speed	Targets	Speed of moving object 6	Moving object 6
+V_Obj_7	 	km/h	Forward speed	Targets	Speed of moving object 7	Moving object 7
+V_Obj_8	 	km/h	Forward speed	Targets	Speed of moving object 8	Moving object 8
+V_Obj_9	 	km/h	Forward speed	Targets	Speed of moving object 9	Moving object 9
+Xcg_SM	 	m	Global X coordinate	Chassis motion	X coordinate, CG, sprung mass	CG, sprung mass
+Xcg_TM	 	m	Global X coordinate	Chassis motion	X coordinate, inst. CG, vehicle	Instant CG, vehicle
+Xctc_L1	 	m	Global X coordinate	Tires	X coordinate, tire CTC L1	Center of tire contact L1
+Xctc_L2	 	m	Global X coordinate	Tires	X coordinate, tire CTC L2	Center of tire contact L2
+Xctc_R1	 	m	Global X coordinate	Tires	X coordinate, tire CTC R1	Center of tire contact R1
+Xctc_R2	 	m	Global X coordinate	Tires	X coordinate, tire CTC R2	Center of tire contact R2
+Xo	 	m	Global X coordinate	Chassis motion	X coordinate, vehicle origin	Vehicle
+Xrd_Air	 	m	Global X coordinate	Aerodynamics	X coord. of road aero ref. 1	Road reference frame 1
+Xv1_O_1	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 1	Each object has 4 vertices whose global X and Y coordinates are available as outputs Xv and Yv. For rectangular objects, v1 is left-front, v2 is right-front, v3 is left-rear, and v4 is right-rear. For cylinders, v1 is front, v2 is right, v3 is back, and v4 is left.
+Xv1_O_10	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 10
+Xv1_O_11	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 11
+Xv1_O_12	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 12
+Xv1_O_13	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 13
+Xv1_O_14	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 14
+Xv1_O_15	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 15
+Xv1_O_16	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 16
+Xv1_O_17	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 17
+Xv1_O_18	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 18
+Xv1_O_19	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 1	Moving object 19
+Xv1_O_2	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 2
+Xv1_O_20	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 20
+Xv1_O_21	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 21
+Xv1_O_22	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 22
+Xv1_O_23	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 23
+Xv1_O_24	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 24
+Xv1_O_25	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 25
+Xv1_O_26	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 26
+Xv1_O_27	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 27
+Xv1_O_28	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 28
+Xv1_O_29	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 2	Moving object 29
+Xv1_O_3	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 3	Moving object 3
+Xv1_O_30	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 3	Moving object 30
+Xv1_O_31	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 3	Moving object 31
+Xv1_O_32	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 3	Moving object 32
+Xv1_O_33	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 3	Moving object 33
+Xv1_O_34	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 3	Moving object 34
+Xv1_O_35	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 3	Moving object 35
+Xv1_O_36	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 3	Moving object 36
+Xv1_O_4	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 4	Moving object 4
+Xv1_O_5	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 5	Moving object 5
+Xv1_O_6	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 6	Moving object 6
+Xv1_O_7	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 7	Moving object 7
+Xv1_O_8	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 8	Moving object 8
+Xv1_O_9	 	m	Xv1_ coordinate	Targets	Xv1_ coordinate, moving object 9	Moving object 9
+Xv2_O_1	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 1
+Xv2_O_10	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 10
+Xv2_O_11	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 11
+Xv2_O_12	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 12
+Xv2_O_13	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 13
+Xv2_O_14	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 14
+Xv2_O_15	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 15
+Xv2_O_16	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 16
+Xv2_O_17	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 17
+Xv2_O_18	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 18
+Xv2_O_19	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 1	Moving object 19
+Xv2_O_2	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 2
+Xv2_O_20	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 20
+Xv2_O_21	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 21
+Xv2_O_22	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 22
+Xv2_O_23	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 23
+Xv2_O_24	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 24
+Xv2_O_25	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 25
+Xv2_O_26	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 26
+Xv2_O_27	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 27
+Xv2_O_28	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 28
+Xv2_O_29	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 2	Moving object 29
+Xv2_O_3	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 3	Moving object 3
+Xv2_O_30	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 3	Moving object 30
+Xv2_O_31	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 3	Moving object 31
+Xv2_O_32	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 3	Moving object 32
+Xv2_O_33	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 3	Moving object 33
+Xv2_O_34	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 3	Moving object 34
+Xv2_O_35	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 3	Moving object 35
+Xv2_O_36	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 3	Moving object 36
+Xv2_O_4	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 4	Moving object 4
+Xv2_O_5	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 5	Moving object 5
+Xv2_O_6	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 6	Moving object 6
+Xv2_O_7	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 7	Moving object 7
+Xv2_O_8	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 8	Moving object 8
+Xv2_O_9	 	m	Xv2_ coordinate	Targets	Xv2_ coordinate, moving object 9	Moving object 9
+Xv3_O_1	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 1
+Xv3_O_10	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 10
+Xv3_O_11	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 11
+Xv3_O_12	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 12
+Xv3_O_13	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 13
+Xv3_O_14	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 14
+Xv3_O_15	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 15
+Xv3_O_16	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 16
+Xv3_O_17	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 17
+Xv3_O_18	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 18
+Xv3_O_19	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 1	Moving object 19
+Xv3_O_2	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 2
+Xv3_O_20	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 20
+Xv3_O_21	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 21
+Xv3_O_22	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 22
+Xv3_O_23	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 23
+Xv3_O_24	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 24
+Xv3_O_25	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 25
+Xv3_O_26	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 26
+Xv3_O_27	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 27
+Xv3_O_28	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 28
+Xv3_O_29	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 2	Moving object 29
+Xv3_O_3	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 3	Moving object 3
+Xv3_O_30	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 3	Moving object 30
+Xv3_O_31	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 3	Moving object 31
+Xv3_O_32	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 3	Moving object 32
+Xv3_O_33	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 3	Moving object 33
+Xv3_O_34	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 3	Moving object 34
+Xv3_O_35	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 3	Moving object 35
+Xv3_O_36	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 3	Moving object 36
+Xv3_O_4	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 4	Moving object 4
+Xv3_O_5	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 5	Moving object 5
+Xv3_O_6	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 6	Moving object 6
+Xv3_O_7	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 7	Moving object 7
+Xv3_O_8	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 8	Moving object 8
+Xv3_O_9	 	m	Xv3_ coordinate	Targets	Xv3_ coordinate, moving object 9	Moving object 9
+Xv4_O_1	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 1
+Xv4_O_10	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 10
+Xv4_O_11	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 11
+Xv4_O_12	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 12
+Xv4_O_13	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 13
+Xv4_O_14	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 14
+Xv4_O_15	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 15
+Xv4_O_16	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 16
+Xv4_O_17	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 17
+Xv4_O_18	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 18
+Xv4_O_19	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 1	Moving object 19
+Xv4_O_2	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 2
+Xv4_O_20	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 20
+Xv4_O_21	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 21
+Xv4_O_22	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 22
+Xv4_O_23	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 23
+Xv4_O_24	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 24
+Xv4_O_25	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 25
+Xv4_O_26	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 26
+Xv4_O_27	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 27
+Xv4_O_28	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 28
+Xv4_O_29	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 2	Moving object 29
+Xv4_O_3	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 3	Moving object 3
+Xv4_O_30	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 3	Moving object 30
+Xv4_O_31	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 3	Moving object 31
+Xv4_O_32	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 3	Moving object 32
+Xv4_O_33	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 3	Moving object 33
+Xv4_O_34	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 3	Moving object 34
+Xv4_O_35	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 3	Moving object 35
+Xv4_O_36	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 3	Moving object 36
+Xv4_O_4	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 4	Moving object 4
+Xv4_O_5	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 5	Moving object 5
+Xv4_O_6	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 6	Moving object 6
+Xv4_O_7	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 7	Moving object 7
+Xv4_O_8	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 8	Moving object 8
+Xv4_O_9	 	m	Xv4_ coordinate	Targets	Xv4_ coordinate, moving object 9	Moving object 9
+X_Design	 	m	Global X coordinate	Driver model path	X coordinate of reference path	Driver reference path
+X_DM_1	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 1	Driver model preview point 1
+X_DM_10	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 10	Driver model preview point 10
+X_DM_2	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 2	Driver model preview point 2
+X_DM_3	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 3	Driver model preview point 3
+X_DM_4	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 4	Driver model preview point 4
+X_DM_5	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 5	Driver model preview point 5
+X_DM_6	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 6	Driver model preview point 6
+X_DM_7	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 7	Driver model preview point 7
+X_DM_8	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 8	Driver model preview point 8
+X_DM_9	 	m	Global X coordinate	Driver model preview	X coordinate of preview point 9	Driver model preview point 9
+X_L1	 	m	Global X coordinate	Wheels	X coordinate, wheel center L1	Wheel center L1
+X_L2	 	m	Global X coordinate	Wheels	X coordinate, wheel center L2	Wheel center L2
+X_Obj_1	 	m	X coordinate	Targets	X coordinate of moving object 1	Moving object 1	Station and lateral offset (S and L) are used to calculate global X and Y coordinates if the parameter PATH_ID_OBJ is nonzero. If PATH_ID_OBJ is zero, then X and Y can be imported or calculated with VS Commands such as EQ_IN.
+X_Obj_10	 	m	X coordinate	Targets	X coordinate of moving object 10	Moving object 10
+X_Obj_11	 	m	X coordinate	Targets	X coordinate of moving object 11	Moving object 11
+X_Obj_12	 	m	X coordinate	Targets	X coordinate of moving object 12	Moving object 12
+X_Obj_13	 	m	X coordinate	Targets	X coordinate of moving object 13	Moving object 13
+X_Obj_14	 	m	X coordinate	Targets	X coordinate of moving object 14	Moving object 14
+X_Obj_15	 	m	X coordinate	Targets	X coordinate of moving object 15	Moving object 15
+X_Obj_16	 	m	X coordinate	Targets	X coordinate of moving object 16	Moving object 16
+X_Obj_17	 	m	X coordinate	Targets	X coordinate of moving object 17	Moving object 17
+X_Obj_18	 	m	X coordinate	Targets	X coordinate of moving object 18	Moving object 18
+X_Obj_19	 	m	X coordinate	Targets	X coordinate of moving object 19	Moving object 19
+X_Obj_2	 	m	X coordinate	Targets	X coordinate of moving object 2	Moving object 2
+X_Obj_20	 	m	X coordinate	Targets	X coordinate of moving object 20	Moving object 20
+X_Obj_21	 	m	X coordinate	Targets	X coordinate of moving object 21	Moving object 21
+X_Obj_22	 	m	X coordinate	Targets	X coordinate of moving object 22	Moving object 22
+X_Obj_23	 	m	X coordinate	Targets	X coordinate of moving object 23	Moving object 23
+X_Obj_24	 	m	X coordinate	Targets	X coordinate of moving object 24	Moving object 24
+X_Obj_25	 	m	X coordinate	Targets	X coordinate of moving object 25	Moving object 25
+X_Obj_26	 	m	X coordinate	Targets	X coordinate of moving object 26	Moving object 26
+X_Obj_27	 	m	X coordinate	Targets	X coordinate of moving object 27	Moving object 27
+X_Obj_28	 	m	X coordinate	Targets	X coordinate of moving object 28	Moving object 28
+X_Obj_29	 	m	X coordinate	Targets	X coordinate of moving object 29	Moving object 29
+X_Obj_3	 	m	X coordinate	Targets	X coordinate of moving object 3	Moving object 3
+X_Obj_30	 	m	X coordinate	Targets	X coordinate of moving object 30	Moving object 30
+X_Obj_31	 	m	X coordinate	Targets	X coordinate of moving object 31	Moving object 31
+X_Obj_32	 	m	X coordinate	Targets	X coordinate of moving object 32	Moving object 32
+X_Obj_33	 	m	X coordinate	Targets	X coordinate of moving object 33	Moving object 33
+X_Obj_34	 	m	X coordinate	Targets	X coordinate of moving object 34	Moving object 34
+X_Obj_35	 	m	X coordinate	Targets	X coordinate of moving object 35	Moving object 35
+X_Obj_36	 	m	X coordinate	Targets	X coordinate of moving object 36	Moving object 36
+X_Obj_4	 	m	X coordinate	Targets	X coordinate of moving object 4	Moving object 4
+X_Obj_5	 	m	X coordinate	Targets	X coordinate of moving object 5	Moving object 5
+X_Obj_6	 	m	X coordinate	Targets	X coordinate of moving object 6	Moving object 6
+X_Obj_7	 	m	X coordinate	Targets	X coordinate of moving object 7	Moving object 7
+X_Obj_8	 	m	X coordinate	Targets	X coordinate of moving object 8	Moving object 8
+X_Obj_9	 	m	X coordinate	Targets	X coordinate of moving object 9	Moving object 9
+X_R1	 	m	Global X coordinate	Wheels	X coordinate, wheel center R1	Wheel center R1
+X_R2	 	m	Global X coordinate	Wheels	X coordinate, wheel center R2	Wheel center R2
+X_Target	 	m	Global X coordinate	Driver model path	X coordinate of target path	Target
+Yaw	 	deg	Angle	Chassis motion	Yaw, vehicle	Vehicle yaw
+YawO_1	 	deg	Yaw angle	Targets	Yaw angle of moving object 1	Moving object 1
+YawO_10	 	deg	Yaw angle	Targets	Yaw angle of moving object 10	Moving object 10
+YawO_11	 	deg	Yaw angle	Targets	Yaw angle of moving object 11	Moving object 11
+YawO_12	 	deg	Yaw angle	Targets	Yaw angle of moving object 12	Moving object 12
+YawO_13	 	deg	Yaw angle	Targets	Yaw angle of moving object 13	Moving object 13
+YawO_14	 	deg	Yaw angle	Targets	Yaw angle of moving object 14	Moving object 14
+YawO_15	 	deg	Yaw angle	Targets	Yaw angle of moving object 15	Moving object 15
+YawO_16	 	deg	Yaw angle	Targets	Yaw angle of moving object 16	Moving object 16
+YawO_17	 	deg	Yaw angle	Targets	Yaw angle of moving object 17	Moving object 17
+YawO_18	 	deg	Yaw angle	Targets	Yaw angle of moving object 18	Moving object 18
+YawO_19	 	deg	Yaw angle	Targets	Yaw angle of moving object 19	Moving object 19
+YawO_2	 	deg	Yaw angle	Targets	Yaw angle of moving object 2	Moving object 2
+YawO_20	 	deg	Yaw angle	Targets	Yaw angle of moving object 20	Moving object 20
+YawO_21	 	deg	Yaw angle	Targets	Yaw angle of moving object 21	Moving object 21
+YawO_22	 	deg	Yaw angle	Targets	Yaw angle of moving object 22	Moving object 22
+YawO_23	 	deg	Yaw angle	Targets	Yaw angle of moving object 23	Moving object 23
+YawO_24	 	deg	Yaw angle	Targets	Yaw angle of moving object 24	Moving object 24
+YawO_25	 	deg	Yaw angle	Targets	Yaw angle of moving object 25	Moving object 25
+YawO_26	 	deg	Yaw angle	Targets	Yaw angle of moving object 26	Moving object 26
+YawO_27	 	deg	Yaw angle	Targets	Yaw angle of moving object 27	Moving object 27
+YawO_28	 	deg	Yaw angle	Targets	Yaw angle of moving object 28	Moving object 28
+YawO_29	 	deg	Yaw angle	Targets	Yaw angle of moving object 29	Moving object 29
+YawO_3	 	deg	Yaw angle	Targets	Yaw angle of moving object 3	Moving object 3
+YawO_30	 	deg	Yaw angle	Targets	Yaw angle of moving object 30	Moving object 30
+YawO_31	 	deg	Yaw angle	Targets	Yaw angle of moving object 31	Moving object 31
+YawO_32	 	deg	Yaw angle	Targets	Yaw angle of moving object 32	Moving object 32
+YawO_33	 	deg	Yaw angle	Targets	Yaw angle of moving object 33	Moving object 33
+YawO_34	 	deg	Yaw angle	Targets	Yaw angle of moving object 34	Moving object 34
+YawO_35	 	deg	Yaw angle	Targets	Yaw angle of moving object 35	Moving object 35
+YawO_36	 	deg	Yaw angle	Targets	Yaw angle of moving object 36	Moving object 36
+YawO_4	 	deg	Yaw angle	Targets	Yaw angle of moving object 4	Moving object 4
+YawO_5	 	deg	Yaw angle	Targets	Yaw angle of moving object 5	Moving object 5
+YawO_6	 	deg	Yaw angle	Targets	Yaw angle of moving object 6	Moving object 6
+YawO_7	 	deg	Yaw angle	Targets	Yaw angle of moving object 7	Moving object 7
+YawO_8	 	deg	Yaw angle	Targets	Yaw angle of moving object 8	Moving object 8
+YawO_9	 	deg	Yaw angle	Targets	Yaw angle of moving object 9	Moving object 9
+YawWK_L1	 	deg	Angle	Wheels	Yaw, wheel knuckle L1	Yaw, wheel knuckle L1	This is an Euler yaw angle for the wheel knuckle, used for VS STI tire models.
+YawWK_L2	 	deg	Angle	Wheels	Yaw, wheel knuckle L2	Yaw, wheel knuckle L2
+YawWK_R1	 	deg	Angle	Wheels	Yaw, wheel knuckle R1	Yaw, wheel knuckle R1
+YawWK_R2	 	deg	Angle	Wheels	Yaw, wheel knuckle R2	Yaw, wheel knuckle R2
+Yaw_L1	 	deg	Angle	Wheels	Yaw, wheel L1	Yaw, wheel L1	This is the yaw angle of the wheel spin axis, used to view with VS Visualizer.
+Yaw_L2	 	deg	Angle	Wheels	Yaw, wheel L2	Yaw, wheel L2
+Yaw_R1	 	deg	Angle	Wheels	Yaw, wheel R1	Yaw, wheel R1
+Yaw_R2	 	deg	Angle	Wheels	Yaw, wheel R2	Yaw, wheel R2
+Yaw_Wind	 	deg	Angle	Aerodynamics	Global wind heading (yaw)	Wind heading
+Ycg_SM	 	m	Global Y coordinate	Chassis motion	Y coordinate, CG, sprung mass	CG, sprung mass
+Ycg_TM	 	m	Global Y coordinate	Chassis motion	Y coordinate, inst. CG, vehicle	Instant CG, vehicle
+Yctc_L1	 	m	Global Y coordinate	Tires	Y coordinate, tire CTC L1	Center of tire contact L1
+Yctc_L2	 	m	Global Y coordinate	Tires	Y coordinate, tire CTC L2	Center of tire contact L2
+Yctc_R1	 	m	Global Y coordinate	Tires	Y coordinate, tire CTC R1	Center of tire contact R1
+Yctc_R2	 	m	Global Y coordinate	Tires	Y coordinate, tire CTC R2	Center of tire contact R2
+YlcgTM	 	mm	Local Y coordinate	Chassis motion	Local Y, inst. CG, vehicle	Instant CG, vehicle	This is the local Y coordinate of the instant CG of the vehicle unit in the sprung mass coordinate system. Be aware that the motion of the instant CG cannot be measured directly in physical vehicles.
+Yo	 	m	Global Y coordinate	Chassis motion	Y coordinate, vehicle origin	Vehicle
+Yrd_Air	 	m	Global Y coordinate	Aerodynamics	Y coord. of road aero ref. 1	Road reference frame 1
+Yv1_O_1	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 1	Each object has 4 vertices whose global X and Y coordinates are available as outputs Xv and Yv. For rectangular objects, v1 is left-front, v2 is right-front, v3 is left-rear, and v4 is right-rear. For cylinders, v1 is front, v2 is right, v3 is back, and v4 is left.
+Yv1_O_10	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 10
+Yv1_O_11	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 11
+Yv1_O_12	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 12
+Yv1_O_13	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 13
+Yv1_O_14	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 14
+Yv1_O_15	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 15
+Yv1_O_16	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 16
+Yv1_O_17	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 17
+Yv1_O_18	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 18
+Yv1_O_19	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 1	Moving object 19
+Yv1_O_2	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 2
+Yv1_O_20	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 20
+Yv1_O_21	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 21
+Yv1_O_22	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 22
+Yv1_O_23	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 23
+Yv1_O_24	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 24
+Yv1_O_25	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 25
+Yv1_O_26	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 26
+Yv1_O_27	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 27
+Yv1_O_28	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 28
+Yv1_O_29	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 2	Moving object 29
+Yv1_O_3	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 3	Moving object 3
+Yv1_O_30	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 3	Moving object 30
+Yv1_O_31	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 3	Moving object 31
+Yv1_O_32	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 3	Moving object 32
+Yv1_O_33	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 3	Moving object 33
+Yv1_O_34	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 3	Moving object 34
+Yv1_O_35	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 3	Moving object 35
+Yv1_O_36	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 3	Moving object 36
+Yv1_O_4	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 4	Moving object 4
+Yv1_O_5	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 5	Moving object 5
+Yv1_O_6	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 6	Moving object 6
+Yv1_O_7	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 7	Moving object 7
+Yv1_O_8	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 8	Moving object 8
+Yv1_O_9	 	m	Yv1_ coordinate	Targets	Yv1_ coordinate, moving object 9	Moving object 9
+Yv2_O_1	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 1
+Yv2_O_10	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 10
+Yv2_O_11	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 11
+Yv2_O_12	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 12
+Yv2_O_13	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 13
+Yv2_O_14	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 14
+Yv2_O_15	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 15
+Yv2_O_16	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 16
+Yv2_O_17	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 17
+Yv2_O_18	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 18
+Yv2_O_19	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 1	Moving object 19
+Yv2_O_2	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 2
+Yv2_O_20	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 20
+Yv2_O_21	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 21
+Yv2_O_22	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 22
+Yv2_O_23	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 23
+Yv2_O_24	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 24
+Yv2_O_25	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 25
+Yv2_O_26	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 26
+Yv2_O_27	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 27
+Yv2_O_28	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 28
+Yv2_O_29	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 2	Moving object 29
+Yv2_O_3	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 3	Moving object 3
+Yv2_O_30	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 3	Moving object 30
+Yv2_O_31	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 3	Moving object 31
+Yv2_O_32	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 3	Moving object 32
+Yv2_O_33	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 3	Moving object 33
+Yv2_O_34	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 3	Moving object 34
+Yv2_O_35	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 3	Moving object 35
+Yv2_O_36	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 3	Moving object 36
+Yv2_O_4	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 4	Moving object 4
+Yv2_O_5	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 5	Moving object 5
+Yv2_O_6	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 6	Moving object 6
+Yv2_O_7	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 7	Moving object 7
+Yv2_O_8	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 8	Moving object 8
+Yv2_O_9	 	m	Yv2_ coordinate	Targets	Yv2_ coordinate, moving object 9	Moving object 9
+Yv3_O_1	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 1
+Yv3_O_10	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 10
+Yv3_O_11	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 11
+Yv3_O_12	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 12
+Yv3_O_13	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 13
+Yv3_O_14	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 14
+Yv3_O_15	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 15
+Yv3_O_16	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 16
+Yv3_O_17	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 17
+Yv3_O_18	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 18
+Yv3_O_19	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 1	Moving object 19
+Yv3_O_2	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 2
+Yv3_O_20	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 20
+Yv3_O_21	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 21
+Yv3_O_22	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 22
+Yv3_O_23	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 23
+Yv3_O_24	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 24
+Yv3_O_25	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 25
+Yv3_O_26	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 26
+Yv3_O_27	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 27
+Yv3_O_28	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 28
+Yv3_O_29	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 2	Moving object 29
+Yv3_O_3	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 3	Moving object 3
+Yv3_O_30	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 3	Moving object 30
+Yv3_O_31	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 3	Moving object 31
+Yv3_O_32	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 3	Moving object 32
+Yv3_O_33	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 3	Moving object 33
+Yv3_O_34	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 3	Moving object 34
+Yv3_O_35	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 3	Moving object 35
+Yv3_O_36	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 3	Moving object 36
+Yv3_O_4	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 4	Moving object 4
+Yv3_O_5	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 5	Moving object 5
+Yv3_O_6	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 6	Moving object 6
+Yv3_O_7	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 7	Moving object 7
+Yv3_O_8	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 8	Moving object 8
+Yv3_O_9	 	m	Yv3_ coordinate	Targets	Yv3_ coordinate, moving object 9	Moving object 9
+Yv4_O_1	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 1
+Yv4_O_10	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 10
+Yv4_O_11	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 11
+Yv4_O_12	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 12
+Yv4_O_13	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 13
+Yv4_O_14	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 14
+Yv4_O_15	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 15
+Yv4_O_16	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 16
+Yv4_O_17	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 17
+Yv4_O_18	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 18
+Yv4_O_19	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 1	Moving object 19
+Yv4_O_2	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 2
+Yv4_O_20	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 20
+Yv4_O_21	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 21
+Yv4_O_22	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 22
+Yv4_O_23	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 23
+Yv4_O_24	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 24
+Yv4_O_25	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 25
+Yv4_O_26	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 26
+Yv4_O_27	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 27
+Yv4_O_28	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 28
+Yv4_O_29	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 2	Moving object 29
+Yv4_O_3	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 3	Moving object 3
+Yv4_O_30	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 3	Moving object 30
+Yv4_O_31	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 3	Moving object 31
+Yv4_O_32	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 3	Moving object 32
+Yv4_O_33	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 3	Moving object 33
+Yv4_O_34	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 3	Moving object 34
+Yv4_O_35	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 3	Moving object 35
+Yv4_O_36	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 3	Moving object 36
+Yv4_O_4	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 4	Moving object 4
+Yv4_O_5	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 5	Moving object 5
+Yv4_O_6	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 6	Moving object 6
+Yv4_O_7	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 7	Moving object 7
+Yv4_O_8	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 8	Moving object 8
+Yv4_O_9	 	m	Yv4_ coordinate	Targets	Yv4_ coordinate, moving object 9	Moving object 9
+Y_Design	 	m	Global Y coordinate	Driver model path	Y coordinate of reference path	Driver reference path
+Y_DM_1	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 1	Driver model preview point 1
+Y_DM_10	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 10	Driver model preview point 10
+Y_DM_2	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 2	Driver model preview point 2
+Y_DM_3	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 3	Driver model preview point 3
+Y_DM_4	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 4	Driver model preview point 4
+Y_DM_5	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 5	Driver model preview point 5
+Y_DM_6	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 6	Driver model preview point 6
+Y_DM_7	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 7	Driver model preview point 7
+Y_DM_8	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 8	Driver model preview point 8
+Y_DM_9	 	m	Global Y coordinate	Driver model preview	Y coordinate of preview point 9	Driver model preview point 9
+Y_L1	 	m	Global Y coordinate	Wheels	Y coordinate, wheel center L1	Wheel center L1
+Y_L2	 	m	Global Y coordinate	Wheels	Y coordinate, wheel center L2	Wheel center L2
+Y_Obj_1	 	m	Y coordinate	Targets	Y coordinate of moving object 1	Moving object 1	Station and lateral offset (S and L) are used to calculate global X and Y coordinates if the parameter PATH_ID_OBJ is nonzero. If PATH_ID_OBJ is zero, then X and Y can be imported or calculated with VS Commands such as EQ_IN.
+Y_Obj_10	 	m	Y coordinate	Targets	Y coordinate of moving object 10	Moving object 10
+Y_Obj_11	 	m	Y coordinate	Targets	Y coordinate of moving object 11	Moving object 11
+Y_Obj_12	 	m	Y coordinate	Targets	Y coordinate of moving object 12	Moving object 12
+Y_Obj_13	 	m	Y coordinate	Targets	Y coordinate of moving object 13	Moving object 13
+Y_Obj_14	 	m	Y coordinate	Targets	Y coordinate of moving object 14	Moving object 14
+Y_Obj_15	 	m	Y coordinate	Targets	Y coordinate of moving object 15	Moving object 15
+Y_Obj_16	 	m	Y coordinate	Targets	Y coordinate of moving object 16	Moving object 16
+Y_Obj_17	 	m	Y coordinate	Targets	Y coordinate of moving object 17	Moving object 17
+Y_Obj_18	 	m	Y coordinate	Targets	Y coordinate of moving object 18	Moving object 18
+Y_Obj_19	 	m	Y coordinate	Targets	Y coordinate of moving object 19	Moving object 19
+Y_Obj_2	 	m	Y coordinate	Targets	Y coordinate of moving object 2	Moving object 2
+Y_Obj_20	 	m	Y coordinate	Targets	Y coordinate of moving object 20	Moving object 20
+Y_Obj_21	 	m	Y coordinate	Targets	Y coordinate of moving object 21	Moving object 21
+Y_Obj_22	 	m	Y coordinate	Targets	Y coordinate of moving object 22	Moving object 22
+Y_Obj_23	 	m	Y coordinate	Targets	Y coordinate of moving object 23	Moving object 23
+Y_Obj_24	 	m	Y coordinate	Targets	Y coordinate of moving object 24	Moving object 24
+Y_Obj_25	 	m	Y coordinate	Targets	Y coordinate of moving object 25	Moving object 25
+Y_Obj_26	 	m	Y coordinate	Targets	Y coordinate of moving object 26	Moving object 26
+Y_Obj_27	 	m	Y coordinate	Targets	Y coordinate of moving object 27	Moving object 27
+Y_Obj_28	 	m	Y coordinate	Targets	Y coordinate of moving object 28	Moving object 28
+Y_Obj_29	 	m	Y coordinate	Targets	Y coordinate of moving object 29	Moving object 29
+Y_Obj_3	 	m	Y coordinate	Targets	Y coordinate of moving object 3	Moving object 3
+Y_Obj_30	 	m	Y coordinate	Targets	Y coordinate of moving object 30	Moving object 30
+Y_Obj_31	 	m	Y coordinate	Targets	Y coordinate of moving object 31	Moving object 31
+Y_Obj_32	 	m	Y coordinate	Targets	Y coordinate of moving object 32	Moving object 32
+Y_Obj_33	 	m	Y coordinate	Targets	Y coordinate of moving object 33	Moving object 33
+Y_Obj_34	 	m	Y coordinate	Targets	Y coordinate of moving object 34	Moving object 34
+Y_Obj_35	 	m	Y coordinate	Targets	Y coordinate of moving object 35	Moving object 35
+Y_Obj_36	 	m	Y coordinate	Targets	Y coordinate of moving object 36	Moving object 36
+Y_Obj_4	 	m	Y coordinate	Targets	Y coordinate of moving object 4	Moving object 4
+Y_Obj_5	 	m	Y coordinate	Targets	Y coordinate of moving object 5	Moving object 5
+Y_Obj_6	 	m	Y coordinate	Targets	Y coordinate of moving object 6	Moving object 6
+Y_Obj_7	 	m	Y coordinate	Targets	Y coordinate of moving object 7	Moving object 7
+Y_Obj_8	 	m	Y coordinate	Targets	Y coordinate of moving object 8	Moving object 8
+Y_Obj_9	 	m	Y coordinate	Targets	Y coordinate of moving object 9	Moving object 9
+Y_R1	 	m	Global Y coordinate	Wheels	Y coordinate, wheel center R1	Wheel center R1
+Y_R2	 	m	Global Y coordinate	Wheels	Y coordinate, wheel center R2	Wheel center R2
+Y_Rack1	 	mm	Displacement	Steering	Steering rack disp., axle 1	Axle 1 steering
+Y_Rack2	 	mm	Displacement	Steering	Steering rack disp., axle 2	Axle 2 steering
+Y_Target	 	m	Global Y coordinate	Driver model path	Y coordinate of target path	Target
+Zcg_SM	 	m	Global Z coordinate	Chassis motion	Z coordinate, CG, sprung mass	CG, sprung mass
+Zcg_TM	 	m	Global Z coordinate	Chassis motion	Z coordinate, inst. CG, vehicle	Instant CG, vehicle
+ZgndAve1	 	m	Ground elevation	Aerodynamics	Average ground height, axle 1	Ground at axle 1
+ZgndAve2	 	m	Ground elevation	Aerodynamics	Average ground height, axle 2	Ground at axle 2
+Zgnd_L1	 	m	Global Z coordinate	Ground and road	Ground Z coord under tire L1	Ground under tire L1
+Zgnd_L2	 	m	Global Z coordinate	Ground and road	Ground Z coord under tire L2	Ground under tire L2
+Zgnd_R1	 	m	Global Z coordinate	Ground and road	Ground Z coord under tire R1	Ground under tire R1
+Zgnd_R2	 	m	Global Z coordinate	Ground and road	Ground Z coord under tire R2	Ground under tire R2
+Zo	 	m	Global Z coordinate	Chassis motion	Z coordinate, vehicle origin	Vehicle
+Zrd_Air	 	m	Global Z coordinate	Aerodynamics	Z coord. of road aero ref. 1	Road reference frame 1
+Z_Aero	 	m	Height above road	Aerodynamics	Height of aero ref pt above road	Aero reference point
+Z_DM_1	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 1	Driver model preview point 1
+Z_DM_10	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 10	Driver model preview point 10
+Z_DM_2	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 2	Driver model preview point 2
+Z_DM_3	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 3	Driver model preview point 3
+Z_DM_4	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 4	Driver model preview point 4
+Z_DM_5	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 5	Driver model preview point 5
+Z_DM_6	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 6	Driver model preview point 6
+Z_DM_7	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 7	Driver model preview point 7
+Z_DM_8	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 8	Driver model preview point 8
+Z_DM_9	 	m	Global Z coordinate	Driver model preview	Z coordinate of preview point 9	Driver model preview point 9
+Z_L1	 	m	Global Z coordinate	Wheels	Z coordinate, wheel center L1	Wheel center L1
+Z_L2	 	m	Global Z coordinate	Wheels	Z coordinate, wheel center L2	Wheel center L2
+Z_Obj_1	 	m	Z coordinate	Targets	Z coordinate of moving object 1	Moving object 1	The global Z coordinate of the object control point is calculated from the road surface specified with the parameter ROAD_ID_OBJ. If ROAD_ID_OBJ is set to zero, then Z_Obj can be imported or calculated with VS Commands such as EQ_IN.
+Z_Obj_10	 	m	Z coordinate	Targets	Z coordinate of moving object 10	Moving object 10
+Z_Obj_11	 	m	Z coordinate	Targets	Z coordinate of moving object 11	Moving object 11
+Z_Obj_12	 	m	Z coordinate	Targets	Z coordinate of moving object 12	Moving object 12
+Z_Obj_13	 	m	Z coordinate	Targets	Z coordinate of moving object 13	Moving object 13
+Z_Obj_14	 	m	Z coordinate	Targets	Z coordinate of moving object 14	Moving object 14
+Z_Obj_15	 	m	Z coordinate	Targets	Z coordinate of moving object 15	Moving object 15
+Z_Obj_16	 	m	Z coordinate	Targets	Z coordinate of moving object 16	Moving object 16
+Z_Obj_17	 	m	Z coordinate	Targets	Z coordinate of moving object 17	Moving object 17
+Z_Obj_18	 	m	Z coordinate	Targets	Z coordinate of moving object 18	Moving object 18
+Z_Obj_19	 	m	Z coordinate	Targets	Z coordinate of moving object 19	Moving object 19
+Z_Obj_2	 	m	Z coordinate	Targets	Z coordinate of moving object 2	Moving object 2
+Z_Obj_20	 	m	Z coordinate	Targets	Z coordinate of moving object 20	Moving object 20
+Z_Obj_21	 	m	Z coordinate	Targets	Z coordinate of moving object 21	Moving object 21
+Z_Obj_22	 	m	Z coordinate	Targets	Z coordinate of moving object 22	Moving object 22
+Z_Obj_23	 	m	Z coordinate	Targets	Z coordinate of moving object 23	Moving object 23
+Z_Obj_24	 	m	Z coordinate	Targets	Z coordinate of moving object 24	Moving object 24
+Z_Obj_25	 	m	Z coordinate	Targets	Z coordinate of moving object 25	Moving object 25
+Z_Obj_26	 	m	Z coordinate	Targets	Z coordinate of moving object 26	Moving object 26
+Z_Obj_27	 	m	Z coordinate	Targets	Z coordinate of moving object 27	Moving object 27
+Z_Obj_28	 	m	Z coordinate	Targets	Z coordinate of moving object 28	Moving object 28
+Z_Obj_29	 	m	Z coordinate	Targets	Z coordinate of moving object 29	Moving object 29
+Z_Obj_3	 	m	Z coordinate	Targets	Z coordinate of moving object 3	Moving object 3
+Z_Obj_30	 	m	Z coordinate	Targets	Z coordinate of moving object 30	Moving object 30
+Z_Obj_31	 	m	Z coordinate	Targets	Z coordinate of moving object 31	Moving object 31
+Z_Obj_32	 	m	Z coordinate	Targets	Z coordinate of moving object 32	Moving object 32
+Z_Obj_33	 	m	Z coordinate	Targets	Z coordinate of moving object 33	Moving object 33
+Z_Obj_34	 	m	Z coordinate	Targets	Z coordinate of moving object 34	Moving object 34
+Z_Obj_35	 	m	Z coordinate	Targets	Z coordinate of moving object 35	Moving object 35
+Z_Obj_36	 	m	Z coordinate	Targets	Z coordinate of moving object 36	Moving object 36
+Z_Obj_4	 	m	Z coordinate	Targets	Z coordinate of moving object 4	Moving object 4
+Z_Obj_5	 	m	Z coordinate	Targets	Z coordinate of moving object 5	Moving object 5
+Z_Obj_6	 	m	Z coordinate	Targets	Z coordinate of moving object 6	Moving object 6
+Z_Obj_7	 	m	Z coordinate	Targets	Z coordinate of moving object 7	Moving object 7
+Z_Obj_8	 	m	Z coordinate	Targets	Z coordinate of moving object 8	Moving object 8
+Z_Obj_9	 	m	Z coordinate	Targets	Z coordinate of moving object 9	Moving object 9
+Z_R1	 	m	Global Z coordinate	Wheels	Z coordinate, wheel center R1	Wheel center R1
+Z_R2	 	m	Global Z coordinate	Wheels	Z coordinate, wheel center R2	Wheel center R2

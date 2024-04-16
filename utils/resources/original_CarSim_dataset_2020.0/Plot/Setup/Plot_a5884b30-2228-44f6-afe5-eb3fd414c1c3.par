@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Aligning Moments`Tire Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Mz_L1, Time
+PLOTCHANNELS Mz_R1, Time
+PLOTCHANNELS Mz_L2, Time
+PLOTCHANNELS Mz_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Aligning Moments
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces and Moments } Aligning Moments
+#Library : Plot: Setup
+#DataSet : Aligning Moments
+#Category: Tire Forces and Moments
+#FileID  : Plot_a5884b30-2228-44f6-afe5-eb3fd414c1c3
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

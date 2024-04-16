@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Hitch Angular Rates`Hitch
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS ArtR_H, Time
+PLOTCHANNELS PitchR_H, Time
+PLOTCHANNELS RollR_H, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Hitch Angular Rates
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hitch } Hitch Angular Rates
+#Library : Plot: Setup
+#DataSet : Hitch Angular Rates
+#Category: Hitch
+#FileID  : Plot_9699ef3d-faca-404f-86a2-414490d3c4f1
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

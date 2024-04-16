@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Generic Table`SUV, Full Size - Lat. Disp. Comp. vs. Fy`Non-Linear Suspension Compliance
+#RingCtrl0 SPLINE_FLAT
+#CheckBox0 0    
+
+#DiagramOne0
+C_LAT_TABLE SPLINE_FLAT
+0, 0
+1, 1e-05
+2, 2e-05
+3, 3e-05
+4, 4e-05
+5, 6e-05
+7, 0.0001
+10, 0.00015
+15, 0.00025
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD C_LAT
+*X_LABEL Fy
+*Y_LABEL Displacement
+
+
+LOG_ENTRY Used Dataset: Generic Table; { Non-Linear Suspension Compliance } SUV, Full Size - Lat. Disp. Comp. vs. Fy
+#Library : Generic Table
+#DataSet : SUV, Full Size - Lat. Disp. Comp. vs. Fy
+#Category: Non-Linear Suspension Compliance
+#FileID  : GenTab_37f14113-98f9-4877-9900-16cf00a61837
+#Product : CarSim 2020.0
+#VehCode table
+
+END

@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Off-Road: Inflator Guard`Common Vehicle Assets: Tires
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\Off_Road\inflator_guard.obj
+#ENDMYellow
+
+SET_COLOR .3 .3 .3
+*SPECULAR 0.1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.1 0.1 0.1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Small Objects` Shape Preview` , Video Camera`Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_f86fa4fd-f252-43c4-bf31-3c623c28e5af.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Off-Road: Inflator Guard
+#Library : Animator: Shape File Link
+#DataSet : Off-Road: Inflator Guard
+#Category: Common Vehicle Assets: Tires
+#FileID  : Shape_f86fa4fd-f252-43c4-bf31-3c623c28e5af
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName Procedures`Small, Sharp Bump`Driving
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 103
+TSTART_WRITE = 0;
+TSTOP 3
+SSTOP 109
+OPT_DIRECTION 0
+*SPEED 40
+*TSTOP 3
+*TSTART 0
+*SSTART 103
+*SSTOP 109
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Small, Sharp Bump
+SPEED_TARGET_CONSTANT 40
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_b1b717a4-04d9-461d-8975-e1ef0b12d822.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_b1b717a4-04d9-461d-8975-e1ef0b12d822
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_3aad8099-4e43-4d4b-8064-c8ea3e43777d.par
+#BlueLink0 Road: 3D Surface (All Properties)`Bump (Very Sharp)` Ride Roads` , Miscellaneous`Road_3aad8099-4e43-4d4b-8064-c8ea3e43777d
+
+PARSFILE Generic\Group\GenGrp_35fa67a8-ecb6-40f6-a1bb-f355e58f92e6.par
+#BlueLink1 Generic Data Group`2 Axle - Wheel-center Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_35fa67a8-ecb6-40f6-a1bb-f355e58f92e6
+
+PARSFILE IO_Channels\W_Channels\Write_71bdebab-1d55-4f21-9f09-6c1936e267ce.par
+#BlueLink5 I/O Channels: Write`All Outputs with Tire for Excel` ` , Miscellaneous`Write_71bdebab-1d55-4f21-9f09-6c1936e267ce
+
+PARSFILE Plot\Setup\Plot_6dc9df6c-6139-4df3-a188-c2e37a2c9d60.par
+#BlueLink8 Plot: Setup`Bump Plot (Fx vs. X) L1` Wheel Center Forces` , Plot`Plot_6dc9df6c-6139-4df3-a188-c2e37a2c9d60
+
+PARSFILE Plot\Setup\Plot_aee80bb4-0786-44c2-90e0-c6c50b588248.par
+#BlueLink9 Plot: Setup`Bump Plot (Fx, Fz, vs. X) L1` Wheel Center Forces` , Plot`Plot_aee80bb4-0786-44c2-90e0-c6c50b588248
+
+PARSFILE Plot\Setup\Plot_0a1f719d-b6f9-44ab-97af-08129224d9d9.par
+#BlueLink10 Plot: Setup`Bump Plot (Fz vs. X) L1` Wheel Center Forces` , Plot`Plot_0a1f719d-b6f9-44ab-97af-08129224d9d9
+
+PARSFILE Plot\Setup\Plot_54a16f14-1cfe-4061-965b-bf139bd8a588.par
+#BlueLink11 Plot: Setup`Z vs X - Trajectory (Front)` Tracking` , Plot`Plot_54a16f14-1cfe-4061-965b-bf139bd8a588
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a vehicle driving over a very sharp bump and can be used to study an impact load to the tires and suspension.
+#
+#The bump was created using the off-center elevation dataset linked on the Road: 3D Surface screen.
+#
+#Click on the 3D road dataset "Bump (Very Sharp 3.5 cm High, 40 cm Long)" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 40 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Small, Sharp Bump
+#Library : Procedures
+#DataSet : Small, Sharp Bump
+#Category: Driving
+#FileID  : Proc_1f634f3b-3b9d-4c34-be98-bcddc7023ebe
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

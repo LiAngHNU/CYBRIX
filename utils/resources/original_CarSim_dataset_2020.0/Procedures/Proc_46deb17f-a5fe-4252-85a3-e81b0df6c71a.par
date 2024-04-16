@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName Procedures`Optimize Controls for Handling Course`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART -200
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 130
+*TSTOP -1
+*TSTART 0
+*SSTART -200
+
+PARSFILE Control\Driver\StrDM_f11c27c8-7d18-47ac-9922-9799f383e281.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.25s Single Preview` Constant Position: No Offset` , Steering`StrDM_f11c27c8-7d18-47ac-9922-9799f383e281
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_b4a3aeb5-d1cf-429c-b49c-c9649acba772.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`Sports Car on Racetrack` Aggressive Driving` , Speed vs. station`SpdPath_b4a3aeb5-d1cf-429c-b49c-c9649acba772
+
+PARSFILE Roads\3D_Road\Road_7ec95d0a-bd56-41d3-a0b5-eee40b6459f8.par
+#BlueLink0 Road: 3D Surface (All Properties)`Handling Course (No Boundaries)` Self-Contained Scenes` , Miscellaneous`Road_7ec95d0a-bd56-41d3-a0b5-eee40b6459f8
+
+PARSFILE Roads\Center_XY\PathXY_c507bbb7-cf7a-44da-a069-618a787b17a0.par
+#BlueLink1 Path: X-Y Coordinates`Handling Course Race Line` Handling Course` , Miscellaneous`PathXY_c507bbb7-cf7a-44da-a069-618a787b17a0
+
+PARSFILE Generic\VS_commands\GenVS_5d8ab8cd-0cd5-4363-b7be-15f274539b89.par
+#BlueLink4 Generic VS Commands`Lap Time Optimization Parameters` Miscellaneous Custom Controls` , Miscellaneous`GenVS_5d8ab8cd-0cd5-4363-b7be-15f274539b89
+
+PARSFILE Events\Events_b6d38bfb-223d-4308-b2e4-4b00fcf4ab3b.par
+#BlueLink5 Events`Run to Start Line` Optimize Controls for Lap Time` , Miscellaneous`Events_b6d38bfb-223d-4308-b2e4-4b00fcf4ab3b
+
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink8 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+PARSFILE Plot\Setup\Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1.par
+#BlueLink9 Plot: Setup`Longitudinal vs. Lateral Accel.` Vehicle Motion` , Plot`Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1
+
+PARSFILE Plot\Setup\Plot_28157809-95ed-4de0-9113-82d4a0dd0b42.par
+#BlueLink10 Plot: Setup`Steering Wheel Angle vs Station` Steering` , Plot`Plot_28157809-95ed-4de0-9113-82d4a0dd0b42
+
+PARSFILE Plot\Setup\Plot_8158864c-cc8e-44ba-8dd8-e3af665dd87c.par
+#BlueLink11 Plot: Setup`Throttle: Control Input vs Station` Controls: Driver` , Plot`Plot_8158864c-cc8e-44ba-8dd8-e3af665dd87c
+
+PARSFILE Plot\Setup\Plot_2069b93a-8ce4-4265-a146-4941167b0a8c.par
+#BlueLink12 Plot: Setup`Brake Control: M/C Pressure vs Station` Braking` , Plot`Plot_2069b93a-8ce4-4265-a146-4941167b0a8c
+
+PARSFILE Plot\Setup\Plot_0773e087-151d-42db-a308-f02b7b6ee48d.par
+#BlueLink13 Plot: Setup`Lateral Forces` Tire Forces and Moments` , Plot`Plot_0773e087-151d-42db-a308-f02b7b6ee48d
+
+PARSFILE Plot\Setup\Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b.par
+#BlueLink14 Plot: Setup`Longitudinal Forces` Tire Forces and Moments` , Plot`Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b
+
+PARSFILE Plot\Setup\Plot_ef39a2c7-73b1-4a60-b806-3c2f6bbb3539.par
+#BlueLink15 Plot: Setup`Roll Angle of Sprung Masses vs. Station` Vehicle Motion` , Plot`Plot_ef39a2c7-73b1-4a60-b806-3c2f6bbb3539
+
+PARSFILE Plot\Setup\Plot_033c55dc-d64e-4e15-89b2-56afa03c4255.par
+#BlueLink16 Plot: Setup`Vehicle Sideslip Angle vs. Station` Vehicle Motion` , Plot`Plot_033c55dc-d64e-4e15-89b2-56afa03c4255
+
+PARSFILE Plot\Setup\Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c.par
+#BlueLink17 Plot: Setup`Aerodynamic Forces` Aerodynamics and Wind` , Plot`Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c
+
+PARSFILE Plot\Setup\Plot_7206d25c-6cfe-42fa-9d2d-0c17692987ed.par
+#BlueLink18 Plot: Setup`Path Curvature vs. Station` Tracking` , Plot`Plot_7206d25c-6cfe-42fa-9d2d-0c17692987ed
+
+PARSFILE Plot\Setup\Plot_b3a6669c-ce2f-474d-a6e2-b8f6e738f598.par
+#BlueLink19 Plot: Setup`Ground Slope on Path vs. Station` Ground` , Plot`Plot_b3a6669c-ce2f-474d-a6e2-b8f6e738f598
+
+PARSFILE Plot\Setup\Plot_a883e5dc-fa62-4460-8b54-d60ead53be33.par
+#BlueLink20 Plot: Setup`Longitudinal Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a883e5dc-fa62-4460-8b54-d60ead53be33
+
+PARSFILE Plot\Setup\Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29.par
+#BlueLink21 Plot: Setup`Lateral Accel. of CG's vs. Station` Vehicle Motion` , Plot`Plot_a4006ff0-aa52-4565-9c0d-3a634efcbe29
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink22 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+
+#EMBEDDED_NOTES
+#The optimization relies on a set of defining parameters as well as an event sequence.
+#
+#The road here has no boundaries because these will be checked during the event sequence.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Optimize Controls for Handling Course
+#Library : Procedures
+#DataSet : Optimize Controls for Handling Course
+#Category: Driver Controls
+#FileID  : Proc_46deb17f-a5fe-4252-85a3-e81b0df6c71a
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

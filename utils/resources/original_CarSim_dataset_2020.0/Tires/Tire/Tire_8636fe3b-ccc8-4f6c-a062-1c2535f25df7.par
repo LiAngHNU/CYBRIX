@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Tire`Exotic Racecar Rear - 305/30 19`Performance Tires
+FZ_REF 4000
+Y_LENGTH 305
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_35e5f31f-e0a8-48bb-a54c-1f81814b0500.par
+#BlueLink4 Animator: Shape Assembly`Exotic Racecar Rear Tire` Tires` , Animator`ShpGrp_35e5f31f-e0a8-48bb-a54c-1f81814b0500
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 305
+PARSFILE Tires\Fz\TireFz_90f85365-0912-49f7-9d38-becb097ebef1.par
+#BlueLink12 Tire: Vertical Force vs. Compression`GT Rear - 28/71 - 18` GT` , Vertical force`TireFz_90f85365-0912-49f7-9d38-becb097ebef1
+
+M_TIRE 28
+IT 2.1
+IT_XXZZ 1.3
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.006
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 90
+L_CONTACT_Y_CONSTANT 305
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_be4634f3-6fc9-4d81-9ff4-404c66a6c48b.par
+#BlueLink0 Tire: Aligning Moment`GT Rear - 28/71 - 18` Racing Tires` , Aligning Moment`TireMz_be4634f3-6fc9-4d81-9ff4-404c66a6c48b
+
+PARSFILE Tires\Fy\TireFy_5638203e-1684-4acc-9b5d-61ecac82a8d9.par
+#BlueLink1 Tire: Lateral Force`GT Rear - 28/71 - 18` Racing Tires` , Lateral Force`TireFy_5638203e-1684-4acc-9b5d-61ecac82a8d9
+
+PARSFILE Tires\Fx\TireFx_f943d76a-1345-4591-af68-d0586b2c0a4c.par
+#BlueLink2 Tire: Longitudinal Force`GT Rear - 28/71 - 18` Racing Tires` , Longitudinal Force`TireFx_f943d76a-1345-4591-af68-d0586b2c0a4c
+
+PARSFILE Tires\Camber_Thrust\CamStiff_57e84082-6518-44f2-ac6f-6bbdb9badaee.par
+#BlueLink3 Tire: Camber Thrust Coefficient`GT Rear - 28/71 - 18` Racing Tires` , Camber Thrust`CamStiff_57e84082-6518-44f2-ac6f-6bbdb9badaee
+
+
+
+#EMBEDDED_NOTES
+#This tire is for the front axle of a top level GT car with curb mass approximately 1320 kg, approx 600 HP, and high aerodynamic downforce.
+#
+#Tire & Rim Association Load Rating: 600 kg
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Performance Tires } Exotic Racecar Rear - 305/30 19
+#Library : Tire
+#DataSet : Exotic Racecar Rear - 305/30 19
+#Category: Performance Tires
+#FileID  : Tire_8636fe3b-ccc8-4f6c-a062-1c2535f25df7
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

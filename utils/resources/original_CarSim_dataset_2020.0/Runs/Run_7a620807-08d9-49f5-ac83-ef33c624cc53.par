@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`CS 9 Normalized Tire Data`Tire Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_7a620807-08d9-49f5-ac83-ef33c624cc53
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0.6 0 0
+SET_RUN_COLOR 0.6 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_6f30a1e2-15ad-4565-85ce-bcb81d36d127.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: Normalized Tire Tables` E-Class` , Math Model`Vehicle_6f30a1e2-15ad-4565-85ce-bcb81d36d127
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink15 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+
+SPECIAL_PARSFILE Runs\Run_6a056983-5f35-4790-af76-8838aec5209f.par
+#BlueLink23 CarSim Run Control`Output to Excel (ERD to CSV/MAT)` Output Options` , Overlay run or ERD file`Run_6a056983-5f35-4790-af76-8838aec5209f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title CS 9 Normalized Tire Data <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE CS 9 Normalized Tire Data
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan with normalized 1D tire tables performing a double lane change maneuver at 120 km/h.
+#
+#These tire datasets have linear load sensitivity and can be used for any sized vehicle that is operating within normal load ranges, where the linear sensitivity is reasonable.
+#
+#It is overlaid with the simulation:
+#Output to Excel Format (From ERD to CSV/MAT), which uses Legacy 2D Tire Tables.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } CS 9 Normalized Tire Data
+#Library : CarSim Run Control
+#DataSet : CS 9 Normalized Tire Data
+#Category: Tire Models
+#FileID  : Run_7a620807-08d9-49f5-ac83-ef33c624cc53
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

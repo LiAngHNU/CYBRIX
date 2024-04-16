@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName CarSim Run Control`CS 9 Simple Camber: Asymmetric - DLC`Tire Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_743cd6c9-55b1-449f-9671-cf9b4cf831ff
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 37 m` Vehicle Reference` , Animator camera`Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_5be32b87-21e3-4f96-bf51-f0d7dc9b334c.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: (Simple Camber: Asym.)` E-Class` , Math Model`Vehicle_5be32b87-21e3-4f96-bf51-f0d7dc9b334c
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink15 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+
+SPECIAL_PARSFILE Runs\Run_41114021-c4d5-407e-bbde-5be8394d391f.par
+#BlueLink23 CarSim Run Control`MF-Tyre, Asymmetric: DLC` Tire Models` , Overlay run or ERD file`Run_41114021-c4d5-407e-bbde-5be8394d391f
+
+
+SPECIAL_PARSFILE Runs\Run_2bc84d0e-d3ab-430e-a250-9b5880edd1ac.par
+#BlueLink24 CarSim Run Control`CS 9 Extd. Camber: Asymmetric - DLC` Tire Models` , Overlay run or ERD file`Run_2bc84d0e-d3ab-430e-a250-9b5880edd1ac
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title CS 9 Simple Camber: Asymmetric - DLC <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE CS 9 Simple Camber: Asymmetric - DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan using the CarSim internal tire model with simple camber and asymmetric data performs a double lane change maneuver at 120 km/h.
+#
+#It is overlaid with two simulations:
+#MF-Tyre, Asymmetric: DLC
+#CS 9 Extended Camber: Asymmetric - DLC
+#
+#The MF-Tyre (Asymmetric) dataset and the CarSim camber extension tire model are based on different tire models, although they share the same tire characteristics.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } CS 9 Simple Camber: Asymmetric - DLC
+#Library : CarSim Run Control
+#DataSet : CS 9 Simple Camber: Asymmetric - DLC
+#Category: Tire Models
+#FileID  : Run_743cd6c9-55b1-449f-9671-cf9b4cf831ff
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName CarSim Run Control`Double Lane Change, Low Mu`Handling and Stability Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_2856146d-b1be-47b8-ac08-6ebab3ca95c3
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 5 El, 27 m` Road Reference` , Animator camera`Camera_8f7a3057-cb7d-444e-8cf2-c6f46989b6a4
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_6d512924-f6a9-45e1-af10-e839d3980fe9.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Low Mu Surface)` Handling Testing` , Procedure`Proc_6d512924-f6a9-45e1-af10-e839d3980fe9
+
+
+SPECIAL_PARSFILE Runs\Run_60ed91d9-d198-4454-aa7a-bbf27fe3b517.par
+#BlueLink23 CarSim Run Control`Yaw Control Diff., DLC w/ Low Mu` Simulink and LabVIEW Models` , Overlay run or ERD file`Run_60ed91d9-d198-4454-aa7a-bbf27fe3b517
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Double Lane Change, Low Mu <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Double Lane Change, Low Mu
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Sports Car performs a high-speed double lane change maneuver on a low mu surface. The vehicle spins out and goes off course.
+#
+#It is overlaid with a run using a Simulink model to implement a Yaw Control Differential
+#
+#Browse to the Procedure screen by clicking on the blue link "DLC @ 120 km/h (Low Mu Surface)" for more information on how this test was set up.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Handling and Stability Tests } Double Lane Change, Low Mu
+#Library : CarSim Run Control
+#DataSet : Double Lane Change, Low Mu
+#Category: Handling and Stability Tests
+#FileID  : Run_2856146d-b1be-47b8-ac08-6ebab3ca95c3
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

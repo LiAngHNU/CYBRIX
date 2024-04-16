@@ -1,0 +1,122 @@
+ Keyword	8-Char Alias	Units	Units Type	Component Type	Full Label	Specific Component	Extra Info
+Alpha_L1	 	deg	Angle	Tires	Slip angle	Test tire
+AlphL_L1	 	deg	Angle	Tires	Lateral slip (lagged), tire L1	Tire L1 slip (lagged)	Lagged slip angle is the arc-tangent of the state variable SV_SLIP_LAT_L1 that follows the tangent of the instant slip angle ALPHA_L1, subject to a dynamic lag based on lateral relaxation length.
+CmpT_L1	 	mm	Compression	Tires	Compression, tire L1	Tire L1 compression
+dZdX_L1	 	-	Ground slope	Ground and road	Ground X slope under tire L1	X slope L1	Slope of the road or ground in the global [nx] direction at the center of tire contact.
+dZdY_L1	 	-	Ground slope	Ground and road	Ground Y slope under tire L1	Y slope L1	Slope of the road or ground in the global [ny] direction at the center of tire contact.
+Event	 	-	Count	Time	Running count of events	Event	This output is initially set to 0, and is incremented every time a VS Event is triggered.
+FullStep	 	-	Boolean	Time	Integrator full-step status	Integrator full-step status	Boolean that indicates whether the integrator is at a full step (1) or not (0). Be aware that changes to state variables from external equations that are not made at the full step are discarded. Also, events are processed only at the full step.
+Fx_A1	 	N	Force	Axles	Longitudinal tire force, axle 1	Axle 1 longitudinal tire force
+Fx_L1	 	N	Force	Tires	Longitudinal force	Test tire
+Fx_WC_L1	 	N	Force	Wheels	Tire Fx at wheel center L1	Tire Fx at wheel center L1	This is the component of the total tire force vector applied to the wheel center in the [wx] direction.
+Fy_A1	 	N	Force	Axles	Lateral tire force, axle 1	Axle 1 lateral tire force
+Fy_L1	 	N	Force	Tires	Lateral force	Test tire
+Fy_WC_L1	 	N	Force	Wheels	Tire Fy at wheel center L1	Tire Fy at wheel center L1	This is the component of the total tire force vector applied to the wheel center in the [wy] direction.
+Fz_A1	 	N	Force	Axles	Vertical tire force, axle 1	Axle 1 vertical tire force
+Fz_L1	 	N	Force	Tires	Vertical force	Test tire
+Fz_WC_L1	 	N	Force	Wheels	Tire Fz at wheel center L1	Tire Fz at wheel center L1	This is the component of the total tire force vector applied to the wheel center in the [wz] direction.
+Gamma_L1	 	deg	Angle	Tires	Inclination angle	Test tire
+ID_Event	 	-	ID number	Database	ID number of event	ID of event	This output gives the value of the system parameter ID_EVENT. The parameter will keep its default value of 0 unless it is changed by a VS Event or other VS Command.
+ID_Run	 	-	ID number	Database	ID number of run	ID of run	This output gives the value of the system parameter ID_RUN. The parameter will keep its default value of 0 unless it is changed by a VS Event or other VS Command.
+Inf10_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #10 (L1)	TNO Delft-Tyre
+Inf11_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #11 (L1)	TNO Delft-Tyre
+Inf12_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #12 (L1)	TNO Delft-Tyre
+Inf13_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #13 (L1)	TNO Delft-Tyre
+Inf14_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #14 (L1)	TNO Delft-Tyre
+Inf15_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #15 (L1)	TNO Delft-Tyre
+Inf16_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #16 (L1)	TNO Delft-Tyre
+Inf17_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #17 (L1)	TNO Delft-Tyre
+Inf18_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #18 (L1)	TNO Delft-Tyre
+Inf19_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #19 (L1)	TNO Delft-Tyre
+Inf1_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #1 (L1)	TNO Delft-Tyre
+Inf20_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #20 (L1)	TNO Delft-Tyre
+Inf21_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #21 (L1)	TNO Delft-Tyre
+Inf22_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #22 (L1)	TNO Delft-Tyre
+Inf23_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #23 (L1)	TNO Delft-Tyre
+Inf24_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #24 (L1)	TNO Delft-Tyre
+Inf25_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #25 (L1)	TNO Delft-Tyre
+Inf26_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #26 (L1)	TNO Delft-Tyre
+Inf27_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #27 (L1)	TNO Delft-Tyre
+Inf28_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #28 (L1)	TNO Delft-Tyre
+Inf29_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #29 (L1)	TNO Delft-Tyre
+Inf2_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #2 (L1)	TNO Delft-Tyre
+Inf30_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #30 (L1)	TNO Delft-Tyre
+Inf31_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #31 (L1)	TNO Delft-Tyre
+Inf32_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #32 (L1)	TNO Delft-Tyre
+Inf33_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #33 (L1)	TNO Delft-Tyre
+Inf34_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #34 (L1)	TNO Delft-Tyre
+Inf35_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #35 (L1)	TNO Delft-Tyre
+Inf36_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #36 (L1)	TNO Delft-Tyre
+Inf37_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #37 (L1)	TNO Delft-Tyre
+Inf38_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #38 (L1)	TNO Delft-Tyre
+Inf39_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #39 (L1)	TNO Delft-Tyre
+Inf3_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #3 (L1)	TNO Delft-Tyre
+Inf40_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #40 (L1)	TNO Delft-Tyre
+Inf41_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #41 (L1)	TNO Delft-Tyre
+Inf42_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #42 (L1)	TNO Delft-Tyre
+Inf43_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #43 (L1)	TNO Delft-Tyre
+Inf44_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #44 (L1)	TNO Delft-Tyre
+Inf45_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #45 (L1)	TNO Delft-Tyre
+Inf46_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #46 (L1)	TNO Delft-Tyre
+Inf47_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #47 (L1)	TNO Delft-Tyre
+Inf48_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #48 (L1)	TNO Delft-Tyre
+Inf49_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #49 (L1)	TNO Delft-Tyre
+Inf4_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #4 (L1)	TNO Delft-Tyre
+Inf50_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #50 (L1)	TNO Delft-Tyre
+Inf51_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #51 (L1)	TNO Delft-Tyre
+Inf52_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #52 (L1)	TNO Delft-Tyre
+Inf53_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #53 (L1)	TNO Delft-Tyre
+Inf54_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #54 (L1)	TNO Delft-Tyre
+Inf55_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #55 (L1)	TNO Delft-Tyre
+Inf56_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #56 (L1)	TNO Delft-Tyre
+Inf57_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #57 (L1)	TNO Delft-Tyre
+Inf58_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #58 (L1)	TNO Delft-Tyre
+Inf59_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #59 (L1)	TNO Delft-Tyre
+Inf5_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #5 (L1)	TNO Delft-Tyre
+Inf60_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #60 (L1)	TNO Delft-Tyre
+Inf6_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #6 (L1)	TNO Delft-Tyre
+Inf7_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #7 (L1)	TNO Delft-Tyre
+Inf8_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #8 (L1)	TNO Delft-Tyre
+Inf9_L1	 	-	External tire VARINF	TNO Delft-Tyre	External tire VARINF #9 (L1)	TNO Delft-Tyre
+Kappa_L1	 	-	Longitudinal slip	Tires	Slip ratio	Test tire
+KappL_L1	 	-	Dimensionless ratio	Tires	Long. slip (lagged), tire L1	Tire L1 long. slip (lagged)	Lagged slip ratio is a state variable that follows the instant slip ratio KAPPA_L1, subject to a dynamic lag.
+MuX_L1	 	-	Friction coefficient	Ground and road	Ground X friction, tire L1	Tire/Ground MuX L1	Friction from the built-in Configurable Functions is the same for the X and Y directions. However, different values can be imported for the X and Y directions for simulating unusual conditions such as sand or snow.
+MuY_L1	 	-	Friction coefficient	Ground and road	Ground Y friction, tire L1	Tire/Ground MuY L1	Friction from the built-in Configurable Functions is the same for the X and Y directions. However, different values can be imported for the X and Y directions for simulating unusual conditions such as sand or snow.
+mu_x_l1	 	-	mu_x_l1	VS Commands	Normalized longitudinal force	Test tire
+mu_y_l1	 	-	mu_y_l1	VS Commands	Normalized lateral force	Test tire
+Mx_L1	 	N-m	Moment	Tires	Overturning moment, tire L1	Tire L1 overturning
+Mx_WC_L1	 	N-m	Moment	Wheels	Tire Mx at wheel center L1	Tire Mx at wheel center L1	This is the [wx] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+MyRR_L1	 	N-m	Moment	Tires	Rolling resist moment, tire L1	Tire L1 rolling resistance
+My_L1	 	N-m	Moment	Tires	Rolling resistance moment	Test tire
+My_WC_L1	 	N-m	Moment	Wheels	Tire My at wheel center L1	Tire My at wheel center L1	This is the [wy] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+mz_fx_l1	 	N-m	mz_fx_l1	VS Commands	Mz due to Fx and CTC lat. shift	Test tire
+mz_fy_l1	 	N-m	mz_fy_l1	VS Commands	Aligning moment due to Fy	Test tire
+Mz_L1	 	N-m	Moment	Tires	Aligning moment, tire L1	Tire L1 aligning
+Mz_WC_L1	 	N-m	Moment	Wheels	Tire Mz at wheel center L1	Tire Mz at wheel center L1	This is the [wz] component of the total moment vector due to tire moments and the tire force vector applied to the wheel center.
+PitchGL1	 	deg	Angle	Ground and road	Pitch of ground, wheel L1	Pitch of ground, wheel L1	This is the pitch of the ground at the center of tire contact, based on the instant longitudinal direction of the wheel plane.
+Pitch_L1	 	deg	Angle	Wheels	Pitch, wheel L1	Pitch, wheel L1
+RollGL1	 	deg	Angle	Ground and road	Roll of ground, wheel L1	Roll of ground, wheel L1	This is the roll of the ground at the center of tire contact, based on the instant longitudinal direction of the wheel plane.
+RollWK_L1	RollWKL1	deg	Angle	Wheels	Roll, wheel knuckle L1	Roll, wheel knuckle L1	This is an Euler roll angle (3-2-1) for the wheel knuckle, used for VS STI tire models.
+Roll_L1	 	deg	Angle	Wheels	Roll, wheel L1	Roll, wheel L1	This is the roll angle of the wheel spin axis, used to view with VS Visualizer.
+RRE_L1	 	mm	Effective radius	Tires	Effective rolling rad., tire L1	Tire L1, eff. radius
+Sigtb_L1	 	-	Combined slip	Tires	Normalized combined slip	Test tire
+Sigtt_L1	 	-	Combined slip	Tires	Theoretical combined slip	Test tire
+slip_l1	 	-	slip_l1	VS Commands	Tangent of slip angle	Test tire
+trail_l1	 	mm	trail_l1	VS Commands	Pneumatic trail	Test tire
+T_Event	 	s	Time	Time	Time since event clock reset	Event	This output is calculated each time step with the formula T_EVENT = T - TSTART_T_EVENT, where TSTART_T_EVENT is a system parameter that may be set to T when a VS Event is triggered.
+T_Record	 	s	Time	Time	Recording time in output file	Recording time in file	This variable is incremented when outputs are written to file or saved to a buffer. This matches the time that is obtained in post-processing by multiplying the sample number by the sample interval.
+T_Stamp	 	s	Time	Time	Simulation time stamp	Simulation time stamp	This is the simulation time. If writing to file is interupted by setting the system parameter OPT_WRITE to 0, then this variable will not match the recording time T_record.
+VxCenL1	 	km/h	Longitudinal speed	Tires	Vx, center of tire contact L1	Center of tire contact L1
+Vx_WC_L1	 	km/h	Longitudinal speed	Wheels	Vx at wheel center L1	Vx at wheel center L1
+VyTC_L1	 	km/h	Lateral speed	Tires	Vy, L1 center of tire contact	Center of tire contact L1
+Vy_WC_L1	 	km/h	Lateral speed	Wheels	Vy at wheel center L1	Vy at wheel center L1
+Vz_WC_L1	 	km/h	Vertical speed	Wheels	Vz at wheel center L1	Vz at wheel center L1
+Xctc_L1	 	m	Global X coordinate	Tires	X coordinate, tire CTC L1	Center of tire contact L1
+X_L1	 	m	Global X coordinate	Wheels	X coordinate, wheel center L1	Wheel center L1
+YawWK_L1	 	deg	Angle	Wheels	Yaw, wheel knuckle L1	Yaw, wheel knuckle L1	This is an Euler yaw angle for the wheel knuckle, used for VS STI tire models.
+Yaw_L1	 	deg	Angle	Wheels	Yaw, wheel L1	Yaw, wheel L1	This is the yaw angle of the wheel spin axis, used to view with VS Visualizer.
+Yctc_L1	 	m	Global Y coordinate	Tires	Y coordinate, tire CTC L1	Center of tire contact L1
+y_ctc_l1	 	mm	y_ctc_l1	VS Commands	CTC lateral shift	Test tire
+Y_L1	 	m	Global Y coordinate	Wheels	Y coordinate, wheel center L1	Wheel center L1
+Zgnd_L1	 	m	Global Z coordinate	Ground and road	Ground Z coord under tire L1	Ground under tire L1
+Z_L1	 	m	Global Z coordinate	Wheels	Z coordinate, wheel center L1	Wheel center L1

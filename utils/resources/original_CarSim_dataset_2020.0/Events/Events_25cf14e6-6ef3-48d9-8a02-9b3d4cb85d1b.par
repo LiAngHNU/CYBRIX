@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`CCRb B. Monitor Speed`Euro NCAP AEB Testing
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 vx
+*NAME2 vx
+*VALUE1 vx_evt
+*VALUE2 0
+#MiscYellow0
+eq_out SPEED_TARGET_CONSTANT(1) = vx_evt
+#ENDMYellow
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+MAKE_EVENT vx < vx_evt ; Events\Events_fb90a8dd-0fe8-475f-bbeb-ad50dd550e2f.par
+#BlueLink0 Events`CCRb C. Apply Brakes and Stop` Euro NCAP AEB Testing` , Events`Events_fb90a8dd-0fe8-475f-bbeb-ad50dd550e2f
+
+MAKE_EVENT vx < 0 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink1 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#As a quick way to show this type of test, the built-in CarSim speed controller is simply given a new target speed: Vx_EVT.
+#
+#The current Vx is much higher, so it will apply the brakes.
+#
+#The simulation will stop if Vx reaches zero.
+#
+#If the Vx is less than Vx_EVT, the vehicle will apply the brakes and stop.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Euro NCAP AEB Testing } CCRb B. Monitor Speed
+#Library : Events
+#DataSet : CCRb B. Monitor Speed
+#Category: Euro NCAP AEB Testing
+#FileID  : Events_25cf14e6-6ef3-48d9-8a02-9b3d4cb85d1b
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

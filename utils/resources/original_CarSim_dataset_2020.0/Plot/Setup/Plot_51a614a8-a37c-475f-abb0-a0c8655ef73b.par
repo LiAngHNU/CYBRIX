@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Peak longitudinal force at Fz`Tire utilization
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS FxPkL1, time
+PLOTCHANNELS FxPkR1, time
+PLOTCHANNELS FxPkL2, time
+PLOTCHANNELS FxPkR2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Peak longitudinal force at Fz
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire utilization } Peak longitudinal force at Fz
+#Library : Plot: Setup
+#DataSet : Peak longitudinal force at Fz
+#Category: Tire utilization
+#FileID  : Plot_51a614a8-a37c-475f-abb0-a0c8655ef73b
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

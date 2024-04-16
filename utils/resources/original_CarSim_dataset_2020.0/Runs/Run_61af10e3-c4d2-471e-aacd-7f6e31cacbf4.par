@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName CarSim Run Control`Steer Controller Parameter Optimization`Extended Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_61af10e3-c4d2-471e-aacd-7f6e31cacbf4
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_6ee7b251-3362-4e47-80d3-90ca59581138.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 3 El, 36 m` Vehicle Reference` , Animator camera`Camera_6ee7b251-3362-4e47-80d3-90ca59581138
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 2
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0.4 0.6 0.988
+SET_RUN_COLOR 0.4 0.6 0.988
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_3abd5c12-fced-4407-913d-1ea8f8ce45d1.par
+#BlueLink28 Procedures`Extended Driver Model (Steer Ctrl Opt)` Driver Model, Extended and External` , Procedure`Proc_3abd5c12-fced-4407-913d-1ea8f8ce45d1
+
+PARSFILE Generic\VS_commands\GenVS_b25c9caa-bfd5-4f46-9834-85a340f423fc.par
+#BlueLink9 Generic VS Commands`Steer Controller, Parameter Optimization` Embedded Python` , Miscellaneous`GenVS_b25c9caa-bfd5-4f46-9834-85a340f423fc
+
+PARSFILE Generic\VS_commands\GenVS_0b4b0318-ef48-400b-bc3f-75fe523794eb.par
+#BlueLink10 Generic VS Commands`Parameter Setting Options` Custom Steering Controls` , Miscellaneous`GenVS_0b4b0318-ef48-400b-bc3f-75fe523794eb
+
+PARSFILE Events\Events_d6094df8-6172-4d4f-b335-2a2ed06f395a.par
+#BlueLink11 Events`Reset to S = 0 based on Iteration` Steer Controller Parameter Optimization` , Miscellaneous`Events_d6094df8-6172-4d4f-b335-2a2ed06f395a
+
+PARSFILE Plot\Setup\Plot_28157809-95ed-4de0-9113-82d4a0dd0b42.par
+#BlueLink15 Plot: Setup`Steering Wheel Angle vs Station` Steering` , Plot`Plot_28157809-95ed-4de0-9113-82d4a0dd0b42
+
+
+SPECIAL_PARSFILE Runs\Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc.par
+#BlueLink23 CarSim Run Control`Steer Controller with VS Commands` Extended Models` , Overlay run or ERD file`Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Steer Controller Parameter Optimization <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Steer Controller Parameter Optimization
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Embedded Python code is used to search for an optimal parameter of a model.
+#
+#Help -> Technical Memos -> Example: Extending a Model with Embedded Python Utility
+#
+#The L_FORWARD parameter is examined, using the total difference of the vehicle path from the desired path as an error metric. By examining the metric over various runs, a more optimal L_FORWARD value can be found.
+#
+#Setting the variable PrintVals to 1 ("Parameter Setting Options") enables a pop-up output at the end of the simulation. The optimal value can be viewed in the variable BESTVAL in the Echo file (final conditions). The error value is in the variable BESTVALERROR.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Extended Models } Steer Controller Parameter Optimization
+#Library : CarSim Run Control
+#DataSet : Steer Controller Parameter Optimization
+#Category: Extended Models
+#FileID  : Run_61af10e3-c4d2-471e-aacd-7f6e31cacbf4
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

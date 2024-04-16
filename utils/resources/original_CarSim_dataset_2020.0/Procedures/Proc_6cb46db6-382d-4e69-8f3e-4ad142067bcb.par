@@ -1,0 +1,115 @@
+PARSFILE
+#FullDataName Procedures`Highway Merge Avoidance`Driving
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 1
+OPT_STOP 0
+TSTART 0
+SSTART 810
+TSTART_WRITE = 0;
+TSTOP 22
+SSTOP =  SSTART - 1 ;
+OPT_DIRECTION -1
+*SPEED 120
+*TSTOP 22
+*TSTART 0
+*SSTART 810
+*SSTOP 2235
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_7b6a4433-a25f-4f01-a217-ab62a35a1e4a.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Highway Avoidance` Avoidance, Merges, and Drifiting` , Steering`StrDM_7b6a4433-a25f-4f01-a217-ab62a35a1e4a
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_t\SpdTime_cf657bb1-ae7f-4f59-a797-79861d0a6594.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Highway Accident Avoidance` Speed vs Station` , Speed vs. time`SpdTime_cf657bb1-ae7f-4f59-a797-79861d0a6594
+
+#MiscYellow0
+ltarg_offset 36
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_6501c74f-705d-473e-b64e-77f66cd87537.par
+#BlueLink0 Road: 3D Surface (All Properties)`Highway Merge Lane` Variable Width Roads` , Miscellaneous`Road_6501c74f-705d-473e-b64e-77f66cd87537
+
+PARSFILE Events\Events_7b99ab9a-26ee-4c5e-95e6-67974fd6698d.par
+#BlueLink1 Events`A. Determine Lateral Position` Highway Merge` , Miscellaneous`Events_7b99ab9a-26ee-4c5e-95e6-67974fd6698d
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink8 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink9 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+PARSFILE Plot\Setup\Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b.par
+#BlueLink10 Plot: Setup`Longitudinal Forces` Tire Forces and Moments` , Plot`Plot_c7306601-bee0-4edc-92fb-2c670cb34a1b
+
+PARSFILE Plot\Setup\Plot_0773e087-151d-42db-a308-f02b7b6ee48d.par
+#BlueLink11 Plot: Setup`Lateral Forces` Tire Forces and Moments` , Plot`Plot_0773e087-151d-42db-a308-f02b7b6ee48d
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink12 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink13 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink14 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink15 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink16 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f.par
+#BlueLink17 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f
+
+PARSFILE Plot\Setup\Plot_1cac48ae-4def-47a2-9ac8-a1a1093d6ba8.par
+#BlueLink18 Plot: Setup`Spring: Force vs. Compression` Suspension Forces and Moments` , Plot`Plot_1cac48ae-4def-47a2-9ac8-a1a1093d6ba8
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink19 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_b86d8c49-db4e-400a-a282-322334d38a2e.par
+#BlueLink20 Plot: Setup`Vehicle Sideslip Angle` Vehicle Motion` , Plot`Plot_b86d8c49-db4e-400a-a282-322334d38a2e
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink21 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink23 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e.par
+#BlueLink24 Plot: Setup`Wheel Cylinder Pressures` Braking` , Plot`Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e
+
+PARSFILE Plot\Setup\Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53.par
+#BlueLink25 Plot: Setup`Brake Torque` Braking` , Plot`Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink26 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a highway merge situation in which two lanes converge to one.
+#
+#This is accomplished through the use of the variable width roads in CarSim and a highway merge path defined using the closed-loop driver path follower.
+#
+#In this Procedure, the vehicle is travelling and attempts to merge too late. When the driver realizes this he overcorrects and, depending on whether the vehicle has stability control or not, either spins out or is able to recover.
+#
+#For more information on the variable width roads, click on the 3D road dataset "Highway Merge Lane."
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Highway Merge Avoidance
+#Library : Procedures
+#DataSet : Highway Merge Avoidance
+#Category: Driving
+#FileID  : Proc_6cb46db6-382d-4e69-8f3e-4ad142067bcb
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

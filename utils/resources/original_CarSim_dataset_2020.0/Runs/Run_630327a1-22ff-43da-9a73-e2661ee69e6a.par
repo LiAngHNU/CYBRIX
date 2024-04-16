@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName CarSim Run Control`Crosswind w/o Steering`Aero Effects
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_630327a1-22ff-43da-9a73-e2661ee69e6a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f03d9875-14be-49f8-b43b-b9eee65b0fba.par
+#BlueLink0 Animator: Camera Setup`270 Azm, 90 El, 13 m` Vehicle Reference` , Animator camera`Camera_f03d9875-14be-49f8-b43b-b9eee65b0fba
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.996 1
+SET_RUN_COLOR 1 0.996 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_a784163a-f05c-4f73-9d83-f8b678f344f7.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan w/ Aero Ref. Point` D-Class` , Math Model`VehLoad_a784163a-f05c-4f73-9d83-f8b678f344f7
+
+PARSFILE Procedures\Proc_469d1b08-84b3-4525-9ecf-d708012040f5.par
+#BlueLink28 Procedures`Crosswind Test w/ Steering` Stability Testing` , Procedure`Proc_469d1b08-84b3-4525-9ecf-d708012040f5
+
+PARSFILE Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par
+#BlueLink3 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Steering`StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c
+
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+
+SPECIAL_PARSFILE Runs\Run_446b1399-fe9f-49ed-89ae-b5a6082162c3.par
+#BlueLink23 CarSim Run Control`Crosswind w/ Steering` Aero Effects` , Overlay run or ERD file`Run_446b1399-fe9f-49ed-89ae-b5a6082162c3
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Crosswind w/o Steering <Aero Effects>
+CATEGORY Aero Effects 
+DATASET_TITLE Crosswind w/o Steering
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan is subjected to a 40 km/h crosswind encountered 2 seconds into the simulation.
+#
+#This example uses the same Procedure as the overlay, "Crosswind w/ Steering", but here the Closed-Loop steering control has been overridden with an Open-Loop Steering Control dataset for a constant zero degrees, linked at the bottom of the Run Control screen.
+#
+#Animation shapes representing the aerodynamic forces and moments on the vehicle make it easier to visualize the vehicle's responses to the crosswind.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Aero Effects } Crosswind w/o Steering
+#Library : CarSim Run Control
+#DataSet : Crosswind w/o Steering
+#Category: Aero Effects
+#FileID  : Run_630327a1-22ff-43da-9a73-e2661ee69e6a
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

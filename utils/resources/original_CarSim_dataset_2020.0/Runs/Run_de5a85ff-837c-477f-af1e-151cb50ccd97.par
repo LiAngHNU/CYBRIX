@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName CarSim Run Control`2D-Spline: Off-Road Driving`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE SA_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_de5a85ff-837c-477f-af1e-151cb50ccd97
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b29555d1-4e9c-41b5-b8fc-d8367ca7db37.par
+#BlueLink0 Animator: Camera Setup`LR Fender View` Vehicle Fixed Camera` , Animator camera`Camera_b29555d1-4e9c-41b5-b8fc-d8367ca7db37
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+SET_RUN_COLOR 1 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b840ee4e-e79f-4208-886e-649036d1d9a3.par
+#BlueLink2 Vehicle: Assembly`Pickup, Full Size: Lifted (SA_SA)` Pickup Trucks` , Math Model`Vehicle_b840ee4e-e79f-4208-886e-649036d1d9a3
+
+PARSFILE Procedures\Proc_6e09c54b-3643-416e-85cc-4a0125bdb770.par
+#BlueLink28 Procedures`Off-Road Driving` Driving` , Procedure`Proc_6e09c54b-3643-416e-85cc-4a0125bdb770
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_9eaaef41-90b6-4bab-988c-23d84c8adabf.png
+WRITE_SENSOR_DETECT
+Title 2D-Spline: Off-Road Driving <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE 2D-Spline: Off-Road Driving
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example creates roads with spline interpolated tables. Click on the Procedure blue link "Off-Road Driving" and browse to the road dataset for more information.
+#
+#In addition, this dataset shows an alternative method of using the Vehicle occupant point of view only camera setting (click on the blue link for the camera, "LR Fender View"). Since you can place the camera anywhere relative to the vehicle's sprung mass reference frame, you can move the occupant's point of view to somewhere other than inside the vehicle.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: 3D Geometry and Terrain } 2D-Spline: Off-Road Driving
+#Library : CarSim Run Control
+#DataSet : 2D-Spline: Off-Road Driving
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_de5a85ff-837c-477f-af1e-151cb50ccd97
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

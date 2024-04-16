@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Sleeper Cab: Body`Trucks: Cabs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Sleeper\body.obj
+#ENDMYellow
+
+SET_COLOR 0 0.2 0.4
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_9b4c5cd2-92e8-495b-8821-3533af8d141d.par
+#BlueLink2 Animator: Camera Setup`Vehicles and Drivers - Trucks (Heavy)` Shape Preview` , Video Camera`Camera_9b4c5cd2-92e8-495b-8821-3533af8d141d
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_d14fd777-b1b7-426b-a7e2-10201f95d121.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Sleeper Cab: Body
+#Library : Animator: Shape File Link
+#DataSet : Sleeper Cab: Body
+#Category: Trucks: Cabs
+#FileID  : Shape_d14fd777-b1b7-426b-a7e2-10201f95d121
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

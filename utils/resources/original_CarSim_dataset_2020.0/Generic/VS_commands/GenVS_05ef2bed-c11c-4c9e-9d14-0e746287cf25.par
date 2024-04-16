@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Generic VS Commands`Camera Sensor on Upper Front Window`Camera Sensors
+#VehCode ADD_ENTITY blocks
+
+#MiscYellow0
+ADD_ENTITY Cameraman Orbit
+  NAME Emergency Sensor Camera
+  BASE_REFERENCE_FRAME Upper Front Window
+  SET_FIELD_OF_VIEW 55
+END_ENTITY Cameraman Orbit
+
+ADD_ENTITY RenderView Emergency Sensor RenderView
+  CAMERAMAN_NAME Emergency Sensor Camera
+  TEX_W 320
+  TEX_H 200
+END_ENTITY RenderView Emergency Sensor RenderView
+
+ADD_ENTITY SharedBuffer
+  BUFFER_NAME EBS
+  BUFFER_RENDERVIEW Emergency Sensor RenderView
+  BUFFER_ADD_CONTENT_TYPE rgb
+  BUFFER_ADD_CONTENT_TYPE distance
+  BUFFER_ADD_CONTENT_TYPE normal
+END_ENTITY SharedBuffer
+#ENDMYellow
+
+*MODELCODE ADD_ENTITY blocks
+
+#EMBEDDED_NOTES
+#This dataset has commands for VS Visualizer to create a camera sensor that has an image size of 320x240 . Three shared buffers are defined: RGB (color), DISTANCE, and (vector) NORMAL.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Camera Sensors } Camera Sensor on Upper Front Window
+#Library : Generic VS Commands
+#DataSet : Camera Sensor on Upper Front Window
+#Category: Camera Sensors
+#FileID  : GenVS_05ef2bed-c11c-4c9e-9d14-0e746287cf25
+#Product : CarSim 2020.0
+#VehCode ADD_ENTITY blocks
+
+END

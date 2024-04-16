@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Forward Radar`C-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink0 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Lead Unit`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Generic\VS_commands\GenVS_1e0e0e3e-4182-45f6-b1f3-6711c0b07997.par
+#BlueLink1 Generic VS Commands`Parameters for Signs and Pedestrians` ADAS Support` , Miscellaneous`GenVS_1e0e0e3e-4182-45f6-b1f3-6711c0b07997
+
+PARSFILE Sensors_Traffic\Radar\Radar_4b95c614-70c8-4a1a-8ba4-92e35fbd0ce0.par
+#BlueLink2 ADAS Sensors for Range and Tracking`Signs` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_4b95c614-70c8-4a1a-8ba4-92e35fbd0ce0
+
+PARSFILE Sensors_Traffic\Radar\Radar_57d87b07-949a-4e24-bdc9-174ab31a7c42.par
+#BlueLink3 ADAS Sensors for Range and Tracking`Pedestrian` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_57d87b07-949a-4e24-bdc9-174ab31a7c42
+
+PARSFILE Sensors_Traffic\Radar\Radar_a95bf852-7f52-461a-899f-608715abadc6.par
+#BlueLink4 ADAS Sensors for Range and Tracking`Forward Radar` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_a95bf852-7f52-461a-899f-608715abadc6
+
+PARSFILE Sensors_Traffic\Type_Map\TypeMap_95f2c3f0-5c94-444d-b7f4-3b1b29cb8321.par
+#BlueLink6 Sensor Reflectiveness Map`3 Sensor, 3 Target - Wide FWD Radar` ` , Miscellaneous`TypeMap_95f2c3f0-5c94-444d-b7f4-3b1b29cb8321
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+
+#EMBEDDED_NOTES
+#C-Class Hatchback with three sensors: one for traffic signs, one for pedestrians and traffic vehicles, and one with a wide beam to detect objects that are not directly in front of the vehicle.
+#
+#All three use a map so they only see what they're supposed to see.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { C-Class } C-Class Hatchback w/ Forward Radar
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : C-Class Hatchback w/ Forward Radar
+#Category: C-Class
+#FileID  : VehLoad_01171607-f8fb-43bb-9b07-db83e893689a
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName CarSim Run Control`External Powertrain, Acceleration`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5bc168fc-c04f-4fe2-9bf8-68b25a5cd6f9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_6d82afb7-c4f0-4c01-9e15-ae2254e9e3f8.par
+#BlueLink12 Models: Simulink`All Powertrain Components (4WD)` External Powertrain` , Models`Simlink_6d82afb7-c4f0-4c01-9e15-ae2254e9e3f8
+
+PARSFILE Animator\Cameras\Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 37 m` Vehicle Reference` , Animator camera`Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_84a033fe-b611-4700-b52b-c5d08a9a47fd.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: Ext. Full Powertrain` External Powertrains` , Math Model`Vehicle_84a033fe-b611-4700-b52b-c5d08a9a47fd
+
+PARSFILE Procedures\Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc.par
+#BlueLink28 Procedures`Ramp to 0.5 Throttle` Accel. and Brake Testing` , Procedure`Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc
+
+PARSFILE Roads\3D_Road\Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2
+
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.01
+*FREQ_OUT 100
+tstep 0.0005
+iprint 20
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title External Powertrain, Acceleration <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE External Powertrain, Acceleration
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates a complete powertrain modeled in Simulink. (Libraries > Models > Models: Simulink)
+#
+#Browse to the Vehicle: Assembly screen and click on the powertrain blue link to see the settings for the externally defined powertrain.
+#
+#Click on the blue link "All Powertrain Components (4WD)" to see how the Simulink model is connected to CarSim, and how to define the import and export variables that allow CarSim and Simulink to communicate.
+#
+#You can choose whether to Add, Replace, or Mulitply certain Simulink imported variables to their corresponding variables in CarSim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } External Powertrain, Acceleration
+#Library : CarSim Run Control
+#DataSet : External Powertrain, Acceleration
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_5bc168fc-c04f-4fe2-9bf8-68b25a5cd6f9
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

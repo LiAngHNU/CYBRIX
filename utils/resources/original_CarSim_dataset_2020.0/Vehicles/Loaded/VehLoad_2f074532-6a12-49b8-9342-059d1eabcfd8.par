@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ AEB Sensor`C-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink0 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Lead Unit`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Sensors_Traffic\Radar\Radar_1b69f057-a1f8-4590-a77c-11eeb105459c.par
+#BlueLink1 ADAS Sensors for Range and Tracking`FCW` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_1b69f057-a1f8-4590-a77c-11eeb105459c
+
+PARSFILE Generic\VS_commands\GenVS_f5d3fc7f-8b94-4993-ab09-d188ba2405ec.par
+#BlueLink3 Generic VS Commands`FCW  Alert and AEB control` ADAS Support` , Miscellaneous`GenVS_f5d3fc7f-8b94-4993-ab09-d188ba2405ec
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+
+#EMBEDDED_NOTES
+#C-Class Hatchback with a forward collision warning (FCW) sensor and VS Commands.
+#
+#A CarSim Sensors license is required to run a simulation with these sensors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { C-Class } C-Class Hatchback w/ AEB Sensor
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : C-Class Hatchback w/ AEB Sensor
+#Category: C-Class
+#FileID  : VehLoad_2f074532-6a12-49b8-9342-059d1eabcfd8
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

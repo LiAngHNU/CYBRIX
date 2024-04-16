@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`Semi-Active Susp.: Bounce Sine Sweep`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_3bc95eaa-3d1e-4ba5-965e-1fd07d198fa7
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_ec90090a-571c-4a0f-98ac-1d14d3f80d97.par
+#BlueLink12 Models: Simulink`Semi-Active Suspension` Suspension and Suspension Controls` , Models`Simlink_ec90090a-571c-4a0f-98ac-1d14d3f80d97
+
+PARSFILE Animator\Cameras\Camera_09439551-c64a-4943-9211-22177923f7cf.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 23 m` Road Reference` , Animator camera`Camera_09439551-c64a-4943-9211-22177923f7cf
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.596 0.988
+SET_RUN_COLOR 1 0.596 0.988
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_33846176-a317-4e8b-ac1e-69dfb74840d7.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan w/ 5 Motion Sensors` D-Class` , Math Model`VehLoad_33846176-a317-4e8b-ac1e-69dfb74840d7
+
+PARSFILE Procedures\Proc_5a89142f-1f49-4856-b138-d0b22d42c412.par
+#BlueLink28 Procedures`Bounce Sine Sweep Test` Ride Tests` , Procedure`Proc_5a89142f-1f49-4856-b138-d0b22d42c412
+
+
+SPECIAL_PARSFILE Runs\Run_db4bb818-8634-450e-8fee-ebd655e9283b.par
+#BlueLink23 CarSim Run Control`Bounce Sine Sweep` Suspension and Ride Tests` , Overlay run or ERD file`Run_db4bb818-8634-450e-8fee-ebd655e9283b
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Semi-Active Susp.: Bounce Sine Sweep <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Semi-Active Susp.: Bounce Sine Sweep
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates a Semi-Active Suspension Controller modeled in Simulink. (Libraries > Models > Models: Simulink)
+#
+#Click on the blue link "Semi-Active Suspension" to see how the Simulink model is connected to CarSim, and how to define the import and export variables that allow CarSim and Simulink to communicate.
+#
+#You can choose whether to Add, Replace, or Mulitply the Simulink imported variables to their corresponding variables in CarSim.
+#
+#This example is overlaid with an equivalent D-Class Sedan that does not have a Simulink-controlled Semi-Active Suspension.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Semi-Active Susp.: Bounce Sine Sweep
+#Library : CarSim Run Control
+#DataSet : Semi-Active Susp.: Bounce Sine Sweep
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_3bc95eaa-3d1e-4ba5-965e-1fd07d198fa7
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

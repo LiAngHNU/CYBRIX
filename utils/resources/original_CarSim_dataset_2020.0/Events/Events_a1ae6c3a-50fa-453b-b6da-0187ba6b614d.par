@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`Stop Due to Long. Speed Stop Condition`Steady-State Speed Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+*NAME1 Vx_Tolerance
+*NAME2 Lat_Veh
+*VALUE1 abs(Vx_Err)
+*VALUE2 -0.5
+#MiscYellow0
+stop_run_now  due to Longitudinal Speed Test stop condition
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This event is used to stop the simulation, indicating simulation stop  due to Longitudinal Speed Test stop condition.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Steady-State Speed Series } Stop Due to Long. Speed Stop Condition
+#Library : Events
+#DataSet : Stop Due to Long. Speed Stop Condition
+#Category: Steady-State Speed Series
+#FileID  : Events_a1ae6c3a-50fa-453b-b6da-0187ba6b614d
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

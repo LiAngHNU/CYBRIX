@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Animator: HUD`Rearview Mirror`
+#CheckBox1 1    
+
+#RingCtrl0 1
+#RingCtrl1 12
+#RingCtrl2 2
+#RingCtrl3 0
+#RingCtrl4 1
+*LOCX_1 0
+*LOCY_1 0
+*VAR_NAME_1 Rear View Camera33
+
+
+#MiscYellow0
+ADD_ENTITY Cameraman fixed
+  NAME Rear View Camera33
+  BASE_REFERENCE_FRAME rear view mirror
+  SET_FIELD_OF_VIEW 33
+END_ENTITY Cameraman fixed
+#ENDMYellow
+
+#Selection 12 for Icon 0
+#Selection_1 12 for Icon
+#Selection_2 Title:  AlX 2 AlY 0
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: Rear View Camera33  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+! Rear view render area
+ADD_ENTITY hud_view Rear View Widget
+location 0 0 512 128
+align_x right
+align_y top
+size_mode absolute
+place_mode absolute
+cameraman_name Rear View Camera33
+flip_x on
+END_ENTITY hud_view Rear View Widget
+! Frame around the rear view render
+ADD_ENTITY hud_image Rear View Frame
+location -10 -4 532 138
+align_x right
+align_y top
+size_mode absolute
+place_mode absolute
+opacity 1
+image_file Resources\Animator\2D_HUD_Icons\RearView_Mirror\RearViewFrame.dds
+END_ENTITY hud_image Rear View Frame
+
+#EMBEDDED_NOTES
+#Rear View Mirror display
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: HUD; Rearview Mirror
+#Library : Animator: HUD
+#DataSet : Rearview Mirror
+#Category: 
+#FileID  : HUD_be2da55f-e0d2-4547-9074-dfbb79adcf74
+#Product : CarSim 2020.0
+#VehCode HUD
+
+END

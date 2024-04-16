@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Full Size - Rear (HD DRW)`Pickup Trucks
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 2
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+#RingCtrl13 1
+*L_SPG_ADJ_L 0
+*R_SPRING_L 0.9
+*R_JOUNCE_L 0.9
+*R_REBOUND_L 0.9
+*CT_FX_L 0
+*CS_FY_L -0.56e-5
+*CS_MZ_L 0.95e-3
+*CC_FX_L 0
+*CI_FY_L 0
+*CI_MZ_L 0
+C_LONG_AXLE_COEFFICIENT 7e-5
+C_LAT_AXLE_COEFFICIENT 3.8e-5
+DAUX 0
+L_SPRINGS 1200
+L_DAMPERS 1100
+L_JNC_STOPS 1200
+L_REB_STOPS 1200
+
+iside 1
+OPT_EXT_SP 0
+PARSFILE Suspensions\Springs\Spring_4b83ef0f-ff8a-454b-9f8c-8ad4c9d228ba.par
+#BlueLink0 Suspension: Spring`Pickup - Rear (HD)` Pickup` , Spring force`Spring_4b83ef0f-ff8a-454b-9f8c-8ad4c9d228ba
+
+CMP_SPR_SEAT_COEFFICIENT 0.9
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_dbc5d64c-f2ac-444d-8d70-5c528cb23c96.par
+#BlueLink1 Suspension: Shock Absorber`Linear: 10 kN-s/m` Linear` , Left damper`Shock_dbc5d64c-f2ac-444d-8d70-5c528cb23c96
+
+PARSFILE Suspensions\Jounce_Rebound\JncReb_fe30e411-2398-4b94-9afe-2228426e4410.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+150 mm / -110 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_fe30e411-2398-4b94-9afe-2228426e4410
+
+CMP_JSTOP_COEFFICIENT 0.9
+CMP_RSTOP_COEFFICIENT 0.9
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT -0.56e-5
+CS_MZ_COEFFICIENT 0.95e-3
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+
+iside 2
+OPT_EXT_SP 0
+PARSFILE Suspensions\Springs\Spring_4b83ef0f-ff8a-454b-9f8c-8ad4c9d228ba.par
+#BlueLink0 Suspension: Spring`Pickup - Rear (HD)` Pickup` , Spring force`Spring_4b83ef0f-ff8a-454b-9f8c-8ad4c9d228ba
+
+CMP_SPR_SEAT_COEFFICIENT 0.9
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_dbc5d64c-f2ac-444d-8d70-5c528cb23c96.par
+#BlueLink1 Suspension: Shock Absorber`Linear: 10 kN-s/m` Linear` , Left damper`Shock_dbc5d64c-f2ac-444d-8d70-5c528cb23c96
+
+PARSFILE Suspensions\Jounce_Rebound\JncReb_fe30e411-2398-4b94-9afe-2228426e4410.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+150 mm / -110 mm` Jounce Range: 100 mm to 150 mm` , Jounce / rebound stop force`JncReb_fe30e411-2398-4b94-9afe-2228426e4410
+
+CMP_JSTOP_COEFFICIENT 0.9
+CMP_RSTOP_COEFFICIENT 0.9
+CT_FX_COEFFICIENT 0
+CS_FY_COEFFICIENT -0.56e-5
+CS_MZ_COEFFICIENT 0.95e-3
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 0
+CI_MZ_COEFFICIENT 0
+PARSFILE Suspensions\Aux_Roll\AuxMx_9ca51acb-d8e5-4861-855a-333231fd7dff.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Linear: 510 N-m/deg` Linear` , Roll Moment`AuxMx_9ca51acb-d8e5-4861-855a-333231fd7dff
+
+
+LOG_ENTRY Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Pickup Trucks } Pickup, Full Size - Rear (HD DRW)
+#Library : Suspension: Solid Axle Compliance, Springs, and Dampers
+#DataSet : Pickup, Full Size - Rear (HD DRW)
+#Category: Pickup Trucks
+#FileID  : CmpSA_2b052e56-5b5f-4c85-a43d-77dd8e2e8bb8
+#Product : CarSim 2020.0
+#VehCode Solid Axle
+
+END

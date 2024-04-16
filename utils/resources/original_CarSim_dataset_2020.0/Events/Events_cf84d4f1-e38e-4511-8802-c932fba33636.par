@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`Speed Limit`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 SPEED_TOL
+*VALUE1 ABS(Vxz_Fwd - SPEED_TARGET_S_CONSTANT)
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+#MiscYellow0
+set_ispeed_for_id SPEED_ID_SC
+SPEED_TARGET_CONSTANT = SpdLimit
+#ENDMYellow
+
+MAKE_EVENT SPEED_TOL > ABS(Vxz_Fwd - SPEED_TARGET_S_CONSTANT) ; Events\Events_4453ad56-51ea-4e6f-913b-f7bff8720bed.par
+#BlueLink0 Events`Look for Objects` ADAS Detection` , Events`Events_4453ad56-51ea-4e6f-913b-f7bff8720bed
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Speed Limit
+#Library : Events
+#DataSet : Speed Limit
+#Category: ADAS Detection
+#FileID  : Events_cf84d4f1-e38e-4511-8802-c932fba33636
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

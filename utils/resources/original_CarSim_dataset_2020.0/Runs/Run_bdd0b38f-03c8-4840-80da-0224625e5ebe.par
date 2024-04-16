@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName CarSim Run Control`5 Accel. and Rate Sensors: Rollover`Output Options
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_bdd0b38f-03c8-4840-80da-0224625e5ebe
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 5 El, 30 m` Vehicle Reference` , Animator camera`Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 6
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_ae39e168-23e4-4de6-9be9-6b4459be8c5c.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`E-Class, Sedan w/ 5 Motion Sensors` E-Class` , Math Model`VehLoad_ae39e168-23e4-4de6-9be9-6b4459be8c5c
+
+PARSFILE Procedures\Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84.par
+#BlueLink28 Procedures`Rollover Steer Input` Stability Testing` , Procedure`Proc_a0851ee1-9bdf-4e52-9626-6e255ef6ca84
+
+PARSFILE Animator\Arrows\Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887.par
+#BlueLink9 Animator: Wheel Arrows and Other Indicators`Tire Skid Marks (2 Axles)` Skid Marks` , Miscellaneous`Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887
+
+PARSFILE Plot\Setup\Plot_fcbc9efc-8deb-4f63-98e3-0a47ad14931d.par
+#BlueLink15 Plot: Setup`Sensor Lateral Acceleration w/ G` Position, Accel. and Rate Sensors` , Plot`Plot_fcbc9efc-8deb-4f63-98e3-0a47ad14931d
+
+PARSFILE Plot\Setup\Plot_e59dcdae-7fd0-4187-94ae-29f0f0b587ef.par
+#BlueLink16 Plot: Setup`Sensor Longitudinal Acceleration w/ G` Position, Accel. and Rate Sensors` , Plot`Plot_e59dcdae-7fd0-4187-94ae-29f0f0b587ef
+
+PARSFILE Plot\Setup\Plot_bf6163f2-ea85-48b2-b856-f09d1f6c4cfc.par
+#BlueLink17 Plot: Setup`Sensor Pitch Rate` Position, Accel. and Rate Sensors` , Plot`Plot_bf6163f2-ea85-48b2-b856-f09d1f6c4cfc
+
+PARSFILE Plot\Setup\Plot_a78e70b9-5132-4c0d-8561-c52fe49ce797.par
+#BlueLink18 Plot: Setup`Sensor Roll Rate` Position, Accel. and Rate Sensors` , Plot`Plot_a78e70b9-5132-4c0d-8561-c52fe49ce797
+
+PARSFILE Plot\Setup\Plot_43d9b2ae-0bc8-4112-ad93-ef6e25eed1a4.par
+#BlueLink19 Plot: Setup`Sensor Vertical Acceleration w/ G` Position, Accel. and Rate Sensors` , Plot`Plot_43d9b2ae-0bc8-4112-ad93-ef6e25eed1a4
+
+PARSFILE Plot\Setup\Plot_01ef99e6-9f1e-47ce-8930-1521e8738c0d.par
+#BlueLink20 Plot: Setup`Sensor Yaw Rate` Position, Accel. and Rate Sensors` , Plot`Plot_01ef99e6-9f1e-47ce-8930-1521e8738c0d
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title 5 Accel. and Rate Sensors: Rollover <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE 5 Accel. and Rate Sensors: Rollover
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class sedan with five acceleration and rate sensors performs a rollover steer input maneuver. The acceleration and rate sensors simulate the accelerometers and rate sensors you would instrument a test vehicle with.
+#
+#Use the sensor acceleration and rate plots, linked on this Run Control screen, to measure the vehicle's responses to the steering input.
+#
+#You can use this example as a starting point to build your own vehicle and test procedure using the simulated acceleration and rate sensors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Output Options } 5 Accel. and Rate Sensors: Rollover
+#Library : CarSim Run Control
+#DataSet : 5 Accel. and Rate Sensors: Rollover
+#Category: Output Options
+#FileID  : Run_bdd0b38f-03c8-4840-80da-0224625e5ebe
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

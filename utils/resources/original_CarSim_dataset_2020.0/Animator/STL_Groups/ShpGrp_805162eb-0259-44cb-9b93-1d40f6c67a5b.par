@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`House`Buildings
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+
+#RingCtrl1 0
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\ShpGrp_805162eb-0259-44cb-9b93-1d40f6c67a5b.png
+PARSFILE Animator\STL\Shape_fdb2c0d3-24fe-402a-946e-d5ff6d1e9128.par
+#BlueLink0 Animator: Shape File Link`House: Roof` Environment: Buildings` , Shape File`Shape_fdb2c0d3-24fe-402a-946e-d5ff6d1e9128
+
+set_lighting on
+PARSFILE Animator\STL\Shape_d47d6ed4-1c69-485d-8dad-12c31ceef7e1.par
+#BlueLink1 Animator: Shape File Link`House` Environment: Buildings` , Shape File`Shape_d47d6ed4-1c69-485d-8dad-12c31ceef7e1
+
+set_lighting on
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink17 Animator: Camera Setup`YZ-Plane, No Offsets (with Yaw)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Buildings } House
+#Library : Animator: Shape Assembly
+#DataSet : House
+#Category: Buildings
+#FileID  : ShpGrp_805162eb-0259-44cb-9b93-1d40f6c67a5b
+#Product : CarSim 2020.0
+#VehCode Shape Assembly
+
+END

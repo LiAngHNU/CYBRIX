@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Fishhook Steer Ramp: 720 deg/s`Ramp
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE LINEAR_FLAT
+0, 0
+0.00138888888889, 1
+ENDTABLE
+*SCALAR 13.5
+
+
+#EMBEDDED_NOTES
+#This waveform goes to 1 deg of steer at a rate of 720 deg/sec.
+#
+#It is indended to be rescaled using STEER_SW_GAIN and TSCALE_STEER. Both should be given the same value to provide the same scaling in both steer and time.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { Ramp } Fishhook Steer Ramp: 720 deg/s
+#Library : Control: Steering (Open Loop)
+#DataSet : Fishhook Steer Ramp: 720 deg/s
+#Category: Ramp
+#FileID  : StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c
+#Product : CarSim 2020.0
+#VehCode Open-Loop Steering
+
+END

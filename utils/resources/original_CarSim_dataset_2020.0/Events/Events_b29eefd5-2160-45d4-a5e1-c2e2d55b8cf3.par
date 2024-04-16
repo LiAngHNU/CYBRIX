@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`Reset to S = 0 based on station`Steer Controller Parameter Optimization
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Station
+*VALUE1 1150
+MAKE_EVENT Station > 1150 ; Events\Events_6c2e277e-61e3-48ef-9dc2-a175afd407e9.par
+#BlueLink0 Events`Reset to S= 0` Steer Controller Parameter Optimization` , Events`Events_6c2e277e-61e3-48ef-9dc2-a175afd407e9
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Steer Controller Parameter Optimization } Reset to S = 0 based on station
+#Library : Events
+#DataSet : Reset to S = 0 based on station
+#Category: Steer Controller Parameter Optimization
+#FileID  : Events_b29eefd5-2160-45d4-a5e1-c2e2d55b8cf3
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

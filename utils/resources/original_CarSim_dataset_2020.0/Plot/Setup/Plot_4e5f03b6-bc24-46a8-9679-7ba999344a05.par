@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Vertical Accel. of Sprung Mass CG's`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Az_SM, Time
+PLOTCHANNELS Az_SM_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vertical Accel. of Sprung Mass CG's
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Vertical Accel. of Sprung Mass CG's
+#Library : Plot: Setup
+#DataSet : Vertical Accel. of Sprung Mass CG's
+#Category: Vehicle Motion
+#FileID  : Plot_4e5f03b6-bc24-46a8-9679-7ba999344a05
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

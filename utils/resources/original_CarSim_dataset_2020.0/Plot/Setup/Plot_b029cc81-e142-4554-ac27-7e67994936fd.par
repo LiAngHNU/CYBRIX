@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Rack position from external`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS r_con_l1, time
+PLOTCHANNELS r_con_r1, time
+
+#ENDMYellow
+
+YAXISLABEL Steering rack position
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Rack position from external
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Rack position from external
+#Library : Plot: Setup
+#DataSet : Rack position from external
+#Category: Steering
+#FileID  : Plot_b029cc81-e142-4554-ac27-7e67994936fd
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

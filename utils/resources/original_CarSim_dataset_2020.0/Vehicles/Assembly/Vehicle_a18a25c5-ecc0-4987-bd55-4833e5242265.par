@@ -1,0 +1,108 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`B-Class, Hatchback w/ Column Assist`B-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 1
+OPT_PT 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_579f9125-3bbb-49b5-868b-6a8d0bc15046.par
+#BlueLink7 Steering`B-Class, Hbk: Col Asst R&P` CS B-Class` , Steering System`StrSys2_579f9125-3bbb-49b5-868b-6a8d0bc15046
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_74151e37-72c6-4592-aa45-2f4b19ad1152.par
+#BlueLink19 Suspension: Independent System Kinematics`B-Class, Hatchback - Front` B-Class` , Kinematics`KinInd_74151e37-72c6-4592-aa45-2f4b19ad1152
+
+PARSFILE Suspensions\Compliance\CmpInd_75f33e4d-a05c-47e1-a809-10c0d59b38de.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`B-Class, Hatchback - Front` B-Class` , Compliance`CmpInd_75f33e4d-a05c-47e1-a809-10c0d59b38de
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf.par
+#BlueLink999 Tire`185/65 R15` Touring Tires` , Tire`Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf.par
+#BlueLink10 Tire`185/65 R15` Touring Tires` , Tire`Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_49a0d2c0-088d-44d0-8dd5-3656c3b35c27.par
+#BlueLink20 Suspension: Independent System Kinematics`B-Class, Hatchback - Rear` B-Class` , Kinematics`KinInd_49a0d2c0-088d-44d0-8dd5-3656c3b35c27
+
+PARSFILE Suspensions\Compliance\CmpInd_de979640-7f0d-460e-8a33-c60537f41e3d.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`B-Class, Hatchback - Rear` B-Class` , Compliance`CmpInd_de979640-7f0d-460e-8a33-c60537f41e3d
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf.par
+#BlueLink999 Tire`185/65 R15` Touring Tires` , Tire`Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf.par
+#BlueLink999 Tire`185/65 R15` Touring Tires` , Tire`Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_157164b3-b535-4195-a7f6-e96c2f566c82.par
+#BlueLink0 Vehicle: Sprung Mass`B-Class, Hatchback` B-Class` , Sprung Mass`SprMass_157164b3-b535-4195-a7f6-e96c2f566c82
+
+PARSFILE Aerodynamics\Aero_Main\Aero_db988a1d-4f04-40ca-b2eb-75902adea4ca.par
+#BlueLink1 Aerodynamics: Basic`B-Class, Hatchback Aero` B-Class` , Aerodynamics`Aero_db988a1d-4f04-40ca-b2eb-75902adea4ca
+
+PARSFILE Powertrain\Fwd\FWD_520431f3-083c-4d94-ae2c-a5ab8d79f8f6.par
+#BlueLink3 Powertrain: Front-Wheel Drive`125 kW, 6-spd., 4.1 Ratio` 75 kW - 125 kW Powertrains` , Powertrain`FWD_520431f3-083c-4d94-ae2c-a5ab8d79f8f6
+
+PARSFILE Brakes\4W_System\Brk4W_e316aabe-1501-4c36-a1a2-40d148ae2c29.par
+#BlueLink6 Brakes: Four-Wheel System`(Hbk): MC Press, Tuned ABS` B-Class` , Brake System`Brk4W_e316aabe-1501-4c36-a1a2-40d148ae2c29
+
+PARSFILE Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`B-Class, Hatchback` B-Class` , Vehicle 3D Shape`AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13
+
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.png
+
+#EMBEDDED_NOTES
+#Generic B-Class (Compact) hatchback with Strut front and 5-Link rear suspension.
+#
+#B-Class vehicles include the Citroen C3, Ford Fiesta, Opal Corsa, and Volkswagen Polo.
+#
+#Updated for CarSim 2018: Steering data describes a column assist type power steering system.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { B-Class } B-Class, Hatchback w/ Column Assist
+#Library : Vehicle: Assembly
+#DataSet : B-Class, Hatchback w/ Column Assist
+#Category: B-Class
+#FileID  : Vehicle_a18a25c5-ecc0-4987-bd55-4833e5242265
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

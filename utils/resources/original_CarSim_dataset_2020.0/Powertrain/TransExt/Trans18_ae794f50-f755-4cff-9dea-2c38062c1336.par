@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`5-Speed`5-Speed Transmissions
+#RingCtrl0 5
+NGEARS 5
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -3.168
+R_GEAR_TR(1) 3.78
+R_GEAR_TR(2) 2.12
+R_GEAR_TR(3) 1.36
+R_GEAR_TR(4) 1.03
+R_GEAR_TR(5) 0.84
+R_GEAR_TR(6) 0.84
+R_GEAR_TR(7) 0.84
+ITR_REVERSE 0.034
+ITR_NEUTRAL 0.034
+ITR(1) 0.037
+ITR(2) 0.034
+ITR(3) 0.042
+ITR(4) 0.04
+ITR(5) 0.04
+R_EFF_TR_F_REVERSE 0.9
+R_EFF_TR_F(1) 0.92
+R_EFF_TR_F(2) 0.92
+R_EFF_TR_F(3) 0.95
+R_EFF_TR_F(4) 0.95
+R_EFF_TR_F(5) 0.98
+R_EFF_TR_R_REVERSE 0.9
+R_EFF_TR_R(1) 0.92
+R_EFF_TR_R(2) 0.92
+R_EFF_TR_R(3) 0.95
+R_EFF_TR_R(4) 0.95
+R_EFF_TR_R(5) 0.98
+T_SHIFT 0.25
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_607ef453-4a73-44bc-bd45-937e662b0d53.par
+#BlueLink0 Powertrain: Shift Schedule`5-speed, 1-2 Shift` 5-speed` , Shift schedule`Shift_607ef453-4a73-44bc-bd45-937e662b0d53
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_ae854a71-bdd0-4684-89cc-439653095ba0.par
+#BlueLink1 Powertrain: Shift Schedule`5-speed, 2-3 Shift` 5-speed` , Shift schedule`Shift_ae854a71-bdd0-4684-89cc-439653095ba0
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_e4e31aad-8078-4069-832b-30a530e15c24.par
+#BlueLink2 Powertrain: Shift Schedule`5-speed, 3-4 Shift` 5-speed` , Shift schedule`Shift_e4e31aad-8078-4069-832b-30a530e15c24
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_78c6e08f-896e-4ed6-9ab5-7e3754a067ea.par
+#BlueLink3 Powertrain: Shift Schedule`5-speed, 4-5 Shift` 5-speed` , Shift schedule`Shift_78c6e08f-896e-4ed6-9ab5-7e3754a067ea
+
+
+igear 5
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 5-Speed Transmissions } 5-Speed
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 5-Speed
+#Category: 5-Speed Transmissions
+#FileID  : Trans18_ae794f50-f755-4cff-9dea-2c38062c1336
+#Product : CarSim 2020.0
+#VehCode Transmission
+
+END

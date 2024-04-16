@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Models: LabVIEW for Windows (VI)`ABS Example`
+#RunMdlFile Extensions\LabViewWin\ABS_Example.vi
+#CheckBox0 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox2 1    
+#RingCtrl0 1
+#RingCtrl2 0
+*X64SOLVER 0
+PARSFILE IO_Channels\I_Channels\Import_a34dca41-ec1d-4d68-a2fe-4aa68169657e.par
+#BlueLink0 I/O Channels: Import`ABS: Wheel Cylinder Pressures` Brake System: Control and External Models` , Import`Import_a34dca41-ec1d-4d68-a2fe-4aa68169657e
+
+PARSFILE IO_Channels\O_Channels\Export_df421d7e-0823-442a-b07c-0057573f0076.par
+#BlueLink1 I/O Channels: Export`ABS: Vehicle Speed, M/C Pressure` Brake System: Control and External Models` , Import/Export`Export_df421d7e-0823-442a-b07c-0057573f0076
+
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox1 0    
+OPT_IO_UPDATE 0
+#CheckBox3 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.001
+iprint 25
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This example illustrates a LabVIEW model of an ABS Controller.
+#
+#(Libraries -> Models -> Models: LabVIEW for Windows (VI))
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: LabVIEW for Windows (VI); ABS Example
+#Library : Models: LabVIEW for Windows (VI)
+#DataSet : ABS Example
+#Category: 
+#FileID  : LabVIEW_c73dc6ea-d5bf-4129-879d-6f5df9d34ec8
+#Product : CarSim 2020.0
+#VehCode 
+
+END

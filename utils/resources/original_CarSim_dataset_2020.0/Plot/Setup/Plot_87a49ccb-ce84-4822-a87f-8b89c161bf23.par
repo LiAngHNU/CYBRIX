@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Outside Waypoint Limits`Parking Brake Control
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS outside, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Outside Waypoint Limits
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Parking Brake Control } Outside Waypoint Limits
+#Library : Plot: Setup
+#DataSet : Outside Waypoint Limits
+#Category: Parking Brake Control
+#FileID  : Plot_87a49ccb-ce84-4822-a87f-8b89c161bf23
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

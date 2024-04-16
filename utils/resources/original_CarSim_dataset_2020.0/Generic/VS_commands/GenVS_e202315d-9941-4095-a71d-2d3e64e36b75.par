@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Generic VS Commands`Blind Spot Detection, Either Side, Passing`ADAS Support
+#VehCode VS Commands
+
+#MiscYellow0
+! This example is set up so detection #1 is for the closest target.
+SYMBOL_PUSH <<raw>> AlertS<<LR>>
+SYMBOL_PUSH <<alert>> Alert<<LR>>
+
+DEFINE_OUTPUT <<raw>> = 0; - ; <<side>> blind-spot signal
+
+! Low-pass filter (tau = 0.2) for detection
+EQ_DIFFERENTIAL <<raw>> = ...
+    (((MagS<<s>>_1 > 0) & (ABS(Vy_S<<s>>_1) < 0.5*Vx)) - <<raw>>)/0.2 
+
+DEFINE_OUTPUT <<alert>> = NINT(0.8*<<raw>>) ; - ;   <<side>> on-off blind-spot alert
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_a0ac873b-6046-4208-adc9-f472d63fc29a.par
+#BlueLink3 Plot: Setup`Alerts: Blind Spot Passing` ADAS and AEB Alerts and Commands` , Plot`Plot_a0ac873b-6046-4208-adc9-f472d63fc29a
+
+
+#EMBEDDED_NOTES
+#When driving forward, the alert is triggered if a target is detected and if it has a relative speed that is less than 1/2 of the ego vehicle speed.
+#
+#The alert is low-pass filtered with a time constant of 0.2 s, to avoid flickers due to oncoming vehicles.
+#
+#This uses the Symbol Stack variables <<side>>, <<LR>>, and <<s>>, all from the Sensor dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } Blind Spot Detection, Either Side, Passing
+#Library : Generic VS Commands
+#DataSet : Blind Spot Detection, Either Side, Passing
+#Category: ADAS Support
+#FileID  : GenVS_e202315d-9941-4095-a71d-2d3e64e36b75
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

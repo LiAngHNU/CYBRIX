@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Procedures`Large Smooth Bump`Ride Tests
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP 50
+OPT_DIRECTION 0
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+*SSTOP 50
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_t\SpdTime_e6c774fc-69ba-42af-86a4-171a7400110d.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 18 km/h` Constant` , Speed vs. time`SpdTime_e6c774fc-69ba-42af-86a4-171a7400110d
+
+PARSFILE Roads\3D_Road\Road_aee2106b-058d-40a6-9ee3-3a7a9ea4a7b2.par
+#BlueLink0 Road: 3D Surface (All Properties)`Large Smooth Bump` Ride Roads` , Miscellaneous`Road_aee2106b-058d-40a6-9ee3-3a7a9ea4a7b2
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Plot\Setup\Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59.par
+#BlueLink8 Plot: Setup`Jounce - Front` Suspension Motion` , Plot`Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59
+
+PARSFILE Plot\Setup\Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d.par
+#BlueLink9 Plot: Setup`Jounce - Rear` Suspension Motion` , Plot`Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d
+
+PARSFILE Plot\Setup\Plot_925774b2-2830-4346-88bc-cd769b2daeeb.par
+#BlueLink10 Plot: Setup`Camber vs. Jounce - Rear` Suspension Motion` , Plot`Plot_925774b2-2830-4346-88bc-cd769b2daeeb
+
+PARSFILE Plot\Setup\Plot_3dbfdf7f-1ee1-4e16-babf-7b7db8d68c15.par
+#BlueLink11 Plot: Setup`Jounce Stop Compression` Suspension Motion` , Plot`Plot_3dbfdf7f-1ee1-4e16-babf-7b7db8d68c15
+
+PARSFILE Plot\Setup\Plot_9499cba9-dd80-4da9-a1bc-748b2466af2b.par
+#BlueLink12 Plot: Setup`Jounce Stop Force` Suspension Forces and Moments` , Plot`Plot_9499cba9-dd80-4da9-a1bc-748b2466af2b
+
+PARSFILE Plot\Setup\Plot_5d26eaea-7777-4566-b0f0-aa48ea31c1c6.par
+#BlueLink13 Plot: Setup`Rebound Stop Compression` Suspension Motion` , Plot`Plot_5d26eaea-7777-4566-b0f0-aa48ea31c1c6
+
+PARSFILE Plot\Setup\Plot_cfa040e5-a4d4-48f7-831c-8d712b9249f7.par
+#BlueLink14 Plot: Setup`Rebound Stop Force` Suspension Forces and Moments` , Plot`Plot_cfa040e5-a4d4-48f7-831c-8d712b9249f7
+
+PARSFILE Plot\Setup\Plot_1cac48ae-4def-47a2-9ac8-a1a1093d6ba8.par
+#BlueLink15 Plot: Setup`Spring: Force vs. Compression` Suspension Forces and Moments` , Plot`Plot_1cac48ae-4def-47a2-9ac8-a1a1093d6ba8
+
+PARSFILE Plot\Setup\Plot_46729ee2-e96e-4997-a694-fa9ca697aad0.par
+#BlueLink16 Plot: Setup`Spring Compression` Suspension Motion` , Plot`Plot_46729ee2-e96e-4997-a694-fa9ca697aad0
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink17 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+
+#EMBEDDED_NOTES
+#This Procedure is designed to demonstrate the use of a large smooth bump which can be used to test suspension and powertrain performance of vehicles with suspension lift kits, for example.
+#
+#The vehicle is travelling at a constant speed of 18 kph with driver controls set to no brake pressure and automatic gear selection using all available gears.
+#
+#To see how this road was set up, click on the 3D road blue link "Large Smooth Bump."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Ride Tests } Large Smooth Bump
+#Library : Procedures
+#DataSet : Large Smooth Bump
+#Category: Ride Tests
+#FileID  : Proc_d2506e36-2e85-4cee-b801-9dc4ba0c9194
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

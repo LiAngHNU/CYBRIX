@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Front-Facing Sensor: C-Class Bumper`Forward Facing Sensors: FCW and ACC
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Front-Facing Sensor: C-Class Bumper
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 2
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+PARSFILE Sensors_Traffic\Radar_Range\Range_a2b3441e-db94-43f3-9e08-0067abdf6f97.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`4-m Range` Limit from Range` , Range & Bearing Sensitivity`Range_a2b3441e-db94-43f3-9e08-0067abdf6f97
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_594e7ef9-3c2d-4d4e-99a8-dd535dbab2d7.par
+#BlueLink2 Animator: Shape File Link`Sensor Fields: 20 deg FOV` Common Vehicle Assets` , Shape for Detection Field`Shape_594e7ef9-3c2d-4d4e-99a8-dd535dbab2d7
+
+SET_COLOR 1 0 0
+SET_TRANSPARENCY 0.15
+X_LENGTH 50
+Y_LENGTH 1.7
+Z_LENGTH 2
+X_SENSOR 900
+Y_SENSOR 0
+Z_SENSOR 500
+YAW_AIM_SENSOR 0
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0 0
+*SET_TRANSPARENCY 0.15
+*SET_COLOR_FIELD 1 0 0
+BEARING_MIN_SENSOR -1
+BEARING_MAX_SENSOR 1
+
+SPECIAL_PARSFILE Animator\STL\Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829.par
+#BlueLink3 Animator: Shape File Link`Square: 1m (Scale: Y = 0.1)` Geometric Shapes` , Shape for vector`Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_54b4ab83-a807-40ed-8bd7-bccf9b467829.par
+PARSFILE Plot\Setup\Plot_c499b241-04e6-497e-848d-7e1e074bb3b9.par
+#BlueLink4 Plot: Setup`Distance: DisS1_1` ADAS Sensor Detections` , Plot`Plot_c499b241-04e6-497e-848d-7e1e074bb3b9
+
+PARSFILE Plot\Setup\Plot_91da62f5-6178-444d-89ee-867ef207b685.par
+#BlueLink5 Plot: Setup`Magnitude: MagS1_1` ADAS Sensor Detections` , Plot`Plot_91da62f5-6178-444d-89ee-867ef207b685
+
+
+#EMBEDDED_NOTES
+#The sensor is aimed forward and is located near the center of the front bumper of the C-Class Hatchback. It has a narrow field of view of 2 deg, and a range of 4 m.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Forward Facing Sensors: FCW and ACC } Front-Facing Sensor: C-Class Bumper
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Front-Facing Sensor: C-Class Bumper
+#Category: Forward Facing Sensors: FCW and ACC
+#FileID  : Radar_104ba02c-8145-47a2-8fcb-a7aa21287d27
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

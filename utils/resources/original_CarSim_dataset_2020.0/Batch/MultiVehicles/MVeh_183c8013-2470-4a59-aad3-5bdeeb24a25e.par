@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Multiple Vehicles`Adaptive Cruise Control`ADAS and Active Safety
+PARSFILE Runs\Run_87ece132-df4b-4285-b10a-244fbda604cb.par
+#BlueLink0 CarSim Run Control`Radar Active Cruise: First Car` Simulink and LabVIEW Models` , Vehicle 1:`Run_87ece132-df4b-4285-b10a-244fbda604cb
+
+PARSFILE Runs\Run_adbaf551-f5e1-4fe6-ae5d-3b735f6b021d.par
+#BlueLink1 CarSim Run Control`Radar Active Cruise: Second Car` Simulink and LabVIEW Models` , Vehicle 2:`Run_adbaf551-f5e1-4fe6-ae5d-3b735f6b021d
+
+#RingCtrl0 0
+*RUN_PLATFORM 0
+#RingCtrl1 2
+*SHOW_LINK 2
+
+#EMBEDDED_NOTES
+#To run this example in Windows:
+#1) click Open Model or Generate FMU
+#2) in Simulink, click the run button
+#3) review results from the last vehicle
+#
+#V: Video
+#P: Plot
+#
+#Each vehicle uses a shared simulink model that leverages parallel solvers to simulate the vehicles across multiple CarSim Runs.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Vehicles; { ADAS and Active Safety } Adaptive Cruise Control
+#Library : Multiple Vehicles
+#DataSet : Adaptive Cruise Control
+#Category: ADAS and Active Safety
+#FileID  : MVeh_183c8013-2470-4a59-aad3-5bdeeb24a25e
+#Product : CarSim 2020.0
+#VehCode mVeh
+
+END

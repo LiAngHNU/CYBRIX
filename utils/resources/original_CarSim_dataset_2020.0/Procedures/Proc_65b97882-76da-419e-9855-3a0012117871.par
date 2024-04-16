@@ -1,0 +1,68 @@
+PARSFILE
+#FullDataName Procedures`Blind Spot Detection, Reversing`ADAS and Active Safety
+#CheckBox3 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 8
+SSTOP 5
+OPT_DIRECTION 0
+*SPEED 65
+*TSTOP 8
+*TSTART 0
+*SSTART 0
+*SSTOP 5
+
+PARSFILE Animator\Groups\Group_0e6c9727-7b17-4db0-ae8f-6c5fecdd8772.par
+#BlueLink0 Animator: Group`Parking Lot Road Surfaces` Test Facilities` , Miscellaneous`Group_0e6c9727-7b17-4db0-ae8f-6c5fecdd8772
+
+PARSFILE Generic\Group\GenGrp_b5372c8e-4db6-4e6c-919e-744179ddf149.par
+#BlueLink1 Generic Data Group`Parking Lot Vehicles` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_b5372c8e-4db6-4e6c-919e-744179ddf149
+
+PARSFILE Roads\Center_XY\PathXY_9bef44df-efe9-4371-a467-a70fa2fbdcb8.par
+#BlueLink2 Path: X-Y Coordinates`Parking Lot: Back Out of Eastern Spot` Parking Lot` , Miscellaneous`PathXY_9bef44df-efe9-4371-a467-a70fa2fbdcb8
+
+PARSFILE Roads\Center_XY\PathXY_d563bfcb-d0ab-4c03-8ea3-e14819933447.par
+#BlueLink3 Path: X-Y Coordinates`Parking Lot: Vehicle Path` Parking Lot` , Miscellaneous`PathXY_d563bfcb-d0ab-4c03-8ea3-e14819933447
+
+PARSFILE Events\Events_d5eb9f38-4ffd-45ef-93fa-ad6d876b5130.par
+#BlueLink4 Events`1. Sit in Parking Space for 2 s` Blind Spot Reversing` , Miscellaneous`Events_d5eb9f38-4ffd-45ef-93fa-ad6d876b5130
+
+#BlueLink5 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#MiscYellow1
+PATH_ID_DM = 2001
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink8 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_7251a722-18c9-43db-a324-bd380d275618.par
+#BlueLink10 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7251a722-18c9-43db-a324-bd380d275618
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink11 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+
+#EMBEDDED_NOTES
+#This collection of links defines a scenario in which a vehicle slowly backs out from between two parked vehicles, with adjustments made based on user-defined variables ALERT_L and ALERT_R. These variables must be defined in order to use this Procedure dataset.
+#
+#VS Events are used to brake the vehicle when ( ALERT_L + ALERT_R) is non-zero.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { ADAS and Active Safety } Blind Spot Detection, Reversing
+#Library : Procedures
+#DataSet : Blind Spot Detection, Reversing
+#Category: ADAS and Active Safety
+#FileID  : Proc_65b97882-76da-419e-9855-3a0012117871
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

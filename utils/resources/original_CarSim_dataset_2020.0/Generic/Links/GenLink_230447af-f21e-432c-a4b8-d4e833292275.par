@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Generic Group of Links`Traffic Vehicles`Highway Intersection
+#VehCode Traffic Vehicles
+PARSFILE Sensors_Traffic\Traffic\TMotion_e9264268-4e12-4be2-96db-0ded8c075a49.par
+#BlueLink0 Multiple Moving Objects`Cars along I-94 North (Left Lane)` Highway Intersection` , Miscellaneous`TMotion_e9264268-4e12-4be2-96db-0ded8c075a49
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_74a5218d-860a-4a28-9e2b-9ecadc109129.par
+#BlueLink1 Multiple Moving Objects`Cars along I-94 North (Right Lane)` Highway Intersection` , Miscellaneous`TMotion_74a5218d-860a-4a28-9e2b-9ecadc109129
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_532bacff-a579-473c-857a-cc937440d03c.par
+#BlueLink2 Multiple Moving Objects`Cars along I-94 South (Left Lane)` Highway Intersection` , Miscellaneous`TMotion_532bacff-a579-473c-857a-cc937440d03c
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_b36f9043-b0a1-4b2c-8223-c0ce9da64ff9.par
+#BlueLink3 Multiple Moving Objects`Cars along I-94 South (Right Lane)` Highway Intersection` , Miscellaneous`TMotion_b36f9043-b0a1-4b2c-8223-c0ce9da64ff9
+
+PARSFILE Control\Speed_t\SpdTime_48de84e8-6e44-47bb-b6c2-ce27ace4d82f.par
+#BlueLink5 Control: Speed (Closed Loop) Using Target Speed`Exit Right onto Jackson` Speed vs Station` , Miscellaneous`SpdTime_48de84e8-6e44-47bb-b6c2-ce27ace4d82f
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_00dc6cc2-9e93-496d-80f8-c1a822b0630b.par
+#BlueLink6 Multiple Moving Objects`Cars Turning Right onto Jackson` Highway Intersection` , Miscellaneous`TMotion_00dc6cc2-9e93-496d-80f8-c1a822b0630b
+
+PARSFILE Control\Speed_t\SpdTime_b1d07846-67eb-4956-990f-c02b5555cfbf.par
+#BlueLink8 Control: Speed (Closed Loop) Using Target Speed`Exit Left onto Jackson` Speed vs Station` , Miscellaneous`SpdTime_b1d07846-67eb-4956-990f-c02b5555cfbf
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_5e3e6017-b287-447b-b35d-6cc774b67558.par
+#BlueLink9 Multiple Moving Objects`Cars Turning Left onto Jackson` Highway Intersection` , Miscellaneous`TMotion_5e3e6017-b287-447b-b35d-6cc774b67558
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_6d3cf54b-d68b-4f13-a8c3-e43a386c56c1.par
+#BlueLink10 Multiple Moving Objects`Cars along Jackson (East Left Lane)` Highway Intersection` , Miscellaneous`TMotion_6d3cf54b-d68b-4f13-a8c3-e43a386c56c1
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_80d9d643-da1c-4023-94c5-a88be636c965.par
+#BlueLink11 Multiple Moving Objects`Cars along Jackson (East Right Lane)` Highway Intersection` , Miscellaneous`TMotion_80d9d643-da1c-4023-94c5-a88be636c965
+
+*MODELCODE Traffic Vehicles
+
+#EMBEDDED_NOTES
+#Traffic vehicles for the Atlas Hiighway Exit (Scenic) example.
+#
+#Traffic vehicles drive along I-94 and some exit either left or right onto Jackson.
+#
+#Speed vs Station profiles define the speed of cars exiting the highway. Path Segment Builder datasets apply the respective paths of these vehicles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Highway Intersection } Traffic Vehicles
+#Library : Generic Group of Links
+#DataSet : Traffic Vehicles
+#Category: Highway Intersection
+#FileID  : GenLink_230447af-f21e-432c-a4b8-d4e833292275
+#Product : CarSim 2020.0
+#VehCode Traffic Vehicles
+
+END

@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName CarSim Run Control`Fishhook Procedure: E-Class SUV`Handling and Stability Tests
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_be8698b2-030b-40d1-88bc-cafa53a553b8
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_de1f5f31-cdc6-45aa-8fad-27588467e961.par
+#BlueLink0 Animator: Camera Setup`350 Azm, 3 El, 49 m` Vehicle Reference` , Animator camera`Camera_de1f5f31-cdc6-45aa-8fad-27588467e961
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.4 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276.par
+#BlueLink2 Vehicle: Assembly`E-Class, SUV` E-Class` , Math Model`Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276
+
+PARSFILE Procedures\Proc_cf1a1fd9-1945-4bf6-9c74-1c4e519ffcf7.par
+#BlueLink28 Procedures`Fishhook Procedure` Stability Testing` , Procedure`Proc_cf1a1fd9-1945-4bf6-9c74-1c4e519ffcf7
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+WRITE_SENSOR_DETECT
+Title Fishhook Procedure: E-Class SUV <Handling and Stability Tests>
+CATEGORY Handling and Stability Tests 
+DATASET_TITLE Fishhook Procedure: E-Class SUV
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example simulates a Fishhook test series as described in NHTSA-2001-9663, Notice 3, "New Car Assessment Program: Rollover Resistance."
+#
+#The vehicle is run through a test called "slowly increasing steer" to find a reference steering wheel angle, and then that angle is used to scale steering inputs similar to those that might be applied by a driver acting in panic to return a vehicle to its lane after it had drifted off course.
+#
+#This vehicle uses tire datasets featuring the user-defined tire contact patch dimensions. Click on the Vehicle: Assembly dataset "E-Class, SUV", then click on the tire dataset "265/75 R16" for more information.
+#
+#Vehicles with high centers of gravity are at risk of rollover in this maneuver at high speed. This procedure first tests the vehicle at 80 km/h (50 mi/h). If it lifts two tires off the ground, the test is repeated at lower speeds until it keeps the tires on the ground.
+#
+#The maximum speeds are written into the Echo file with final conditions with the keywords VLIMIT_L and VLIMIT_R. L and R indicate the maximum speeds used in left-hand and right-hand versions of the test.
+#
+#The as-shipped E-Class SUV used in this example went through the test at the original speed of 80 km/h (50 mi/h) OK.
+#
+#Details about this test are contained in the notes for the procedure.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Handling and Stability Tests } Fishhook Procedure: E-Class SUV
+#Library : CarSim Run Control
+#DataSet : Fishhook Procedure: E-Class SUV
+#Category: Handling and Stability Tests
+#FileID  : Run_be8698b2-030b-40d1-88bc-cafa53a553b8
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

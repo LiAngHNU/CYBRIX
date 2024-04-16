@@ -1,0 +1,23 @@
+PARSFILE
+#FullDataName Generic VS Commands`Define Throttle Reference`Parking Brake Control
+#VehCode VS Commands
+
+#MiscYellow0
+define_parameter Throt_Ref = 0; 
+! Throttle to be saved when service brakes are initially applied, before applying parking brake
+define_output ThrotRef = Throt_Ref; ! New output variable for plotting
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_e50a7869-1ae0-4046-9b80-8e64e63d190f.par
+#BlueLink3 Plot: Setup`Throt_Ref` Controls: Driver` , Plot`Plot_e50a7869-1ae0-4046-9b80-8e64e63d190f
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Parking Brake Control } Define Throttle Reference
+#Library : Generic VS Commands
+#DataSet : Define Throttle Reference
+#Category: Parking Brake Control
+#FileID  : GenVS_5cc93d15-771b-4779-b979-ed83c0c03960
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Control: Steering (Open Loop)`Low-Speed Parking`Ramp
+OPT_DM 0
+OPT_STR_BY_TRQ 0
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+#DiagramOne0
+STEER_SW_TABLE LINEAR_FLAT
+0, 0
+4, 0
+6, -280
+10, -280
+14, 360
+15, 360
+17.5, 0
+20, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { Ramp } Low-Speed Parking
+#Library : Control: Steering (Open Loop)
+#DataSet : Low-Speed Parking
+#Category: Ramp
+#FileID  : StrSW_7ec27355-b531-470c-b853-8429f42b758e
+#Product : CarSim 2020.0
+#VehCode Open-Loop Steering
+
+END

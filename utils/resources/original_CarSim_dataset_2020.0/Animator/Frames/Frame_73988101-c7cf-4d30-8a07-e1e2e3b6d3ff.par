@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Tire utilization (vertical) - LR`Tire Force and Moment
+ADD_REFERENCE_FRAME Frame_73988101-c7cf-4d30-8a07-e1e2e3b6d3ff
+#RingCtrl0 yaw_roll_pitch
+SET_EULER_ANGLES yaw_roll_pitch
+SET_X_NAME Xctc_L2
+SET_Y_NAME Yctc_L2
+SET_Z_NAME Zgnd_L2
+SET_ROLL_NAME RollGL2
+SET_PITCH_NAME PitchGL2
+SET_OFFSET_VAR_Z <<z_anim>>
+SET_FRAME_SCALE_Z_NAME Fz_L2
+
+WRT_Xctc_L2
+ANI_Xctc_L2
+WRT_Yctc_L2
+ANI_Yctc_L2
+WRT_Zgnd_L2
+ANI_Zgnd_L2
+WRT_RollGL2
+ANI_RollGL2
+WRT_PitchGL2
+ANI_PitchGL2
+WRT_Fz_L2
+ANI_Fz_L2
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Tire Force and Moment } Tire utilization (vertical) - LR
+#Library : Animator: Reference Frame
+#DataSet : Tire utilization (vertical) - LR
+#Category: Tire Force and Moment
+#FileID  : Frame_73988101-c7cf-4d30-8a07-e1e2e3b6d3ff
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

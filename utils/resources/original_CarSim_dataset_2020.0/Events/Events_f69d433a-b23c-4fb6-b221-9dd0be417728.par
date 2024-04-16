@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Events`Stop After Number of Laps`Speed Control with Path Preview
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ==
+#RingCtrl1 >=
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 lap
+*NAME2 lap
+*VALUE1 total_laps
+*VALUE2 1
+#MiscYellow1
+! Create an output variable for laps completed
+! Don't count the first crossing of the start finish line
+define_output lap = sv_n_start_cross - 1;; Current lap number
+
+! Total laps to be run
+define_parameter total_laps = 1; ; Number of laps for the simulation
+! Start 10 m before the start/finish line, correct station for
+! Direction of travel
+sstart = if_gt_0_then(opt_direction, -10, 10)
+#ENDMYellow
+
+MAKE_EVENT lap == total_laps ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+MAKE_EVENT lap >= 1 ; Events\Events_e97ef8d2-743d-42d6-9143-44d5bf6d3028.par
+#BlueLink1 Events`Don't Calculate Edges After First Lap` Speed Control with Path Preview` , Events`Events_e97ef8d2-743d-42d6-9143-44d5bf6d3028
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Note the use of the VS Command "define_output" in this dataset. In most situations, "define_output" may not be used on an event screen, because new outputs can't be defined once a run has started. However, this Event dataset is linked directly to the Procedures screen. Events linked to the Procedures screen are read before the run begins, like any ordinary parsfile. An event processed by a trigger would generate an error.
+#
+#One VS command sets the starting location so the car will cross the start/finish line 10m after the runs starts, whether it is traveling in the forward (increasing station) direction or the reverse (decreasing station) direction.
+#
+#An output variable is created to count laps. The state variable sv_n_start_cross is initialized to zero by default and incremented each time the car crosses the zero station line. The output variable subtracts one from sv_n_start_cross, so the crossing of the line at the beginning of the run is ignored. This method is preferred over starting at zero, because in the intialization process the vehicle origin may oscillate fore and aft somewhat, triggering false counts.
+#
+#A parameter is created to hold the total number of laps to be run, and set to 2. The first event linked ends the run when the total number is reached.
+#
+#The second event deletes the equations used to calculate the road edges after one lap, because they are no longer needed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Speed Control with Path Preview } Stop After Number of Laps
+#Library : Events
+#DataSet : Stop After Number of Laps
+#Category: Speed Control with Path Preview
+#FileID  : Events_f69d433a-b23c-4fb6-b221-9dd0be417728
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

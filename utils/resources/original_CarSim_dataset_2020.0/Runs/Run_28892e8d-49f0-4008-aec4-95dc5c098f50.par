@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName CarSim Run Control`Three-wheeled Vehicle`Vehicle Configurations
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_28892e8d-49f0-4008-aec4-95dc5c098f50
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_7494f208-cc22-4db1-a899-7fae313f359e.par
+#BlueLink2 Vehicle: Assembly`Three-wheeled Vehicle` Utility Vehicles` , Math Model`Vehicle_7494f208-cc22-4db1-a899-7fae313f359e
+
+PARSFILE Procedures\Proc_8eb941f0-f343-43da-8320-d30836d7295f.par
+#BlueLink28 Procedures`DLC @ 30 km/h` Handling Testing` , Procedure`Proc_8eb941f0-f343-43da-8320-d30836d7295f
+
+PARSFILE Generic\VS_commands\GenVS_189dd04a-5e43-48a3-b795-cc03127e547c.par
+#BlueLink9 Generic VS Commands`Animator Settings and Output Variables` CS Three-wheeled Vehicle` , Miscellaneous`GenVS_189dd04a-5e43-48a3-b795-cc03127e547c
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_20e27b7c-d1a2-442f-817e-d4e7a1c0989d.png
+WRITE_SENSOR_DETECT
+Title Three-wheeled Vehicle <Vehicle Configurations>
+CATEGORY Vehicle Configurations 
+DATASET_TITLE Three-wheeled Vehicle
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Three-wheeled vehicles are important in many parts of the world and the CarSim math models can be used to simulate them.
+#
+#The CarSim math model equations all include four wheels. Conceptually, a three-wheeled model can be created by placing both wheels of the front or rear axle at the same location. If all the component properties are reduced by half, the effect is just 2 * 1/2, or 1 wheel. The single-wheeled suspension is a "degenerate" two-wheeled suspension.
+#
+#Properties still need to be defined as left and right. VS Commands are used to cut the stiffnesses, masses, forces, and so forth by half so actual component properties can be put in the data screens. They are just entered or linked twice. VS Commands are also used to create output variables appropriate for the single front wheel. Plot setups are included.
+#
+#Tire property tables are created which represent one-half of a tire and are used for the left and right front. This preserves non-linear relationships such as cornering stiffness when the effects are summed.
+#
+#The independent suspension model is always used to describe a suspension reduced to one wheel.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Vehicle Configurations } Three-wheeled Vehicle
+#Library : CarSim Run Control
+#DataSet : Three-wheeled Vehicle
+#Category: Vehicle Configurations
+#FileID  : Run_28892e8d-49f0-4008-aec4-95dc5c098f50
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

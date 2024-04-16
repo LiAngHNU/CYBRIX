@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Generic VS Commands`C-Class Upper Front Window`Camera Sensors
+#VehCode ADD_ENTITY block
+
+#MiscYellow0
+ADD_ENTITY Transform Upper Front Window
+  TRANSLATE_X -1.150
+  TRANSLATE_Y 0
+  TRANSLATE_Z 1.450
+  ROTATE_PITCH 0.0
+  ROTATE_ROLL 0.0
+  ROTATE_YAW 0.0
+END_ENTITY Transform Upper Front Window
+#ENDMYellow
+
+*MODELCODE ADD_ENTITY block
+
+#EMBEDDED_NOTES
+#A camera sensor is located at the top of the windshield for the C-class vehicle. Output from this sensor will be processed in Simulink, using the Computer Vision System Toolbox.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Camera Sensors } C-Class Upper Front Window
+#Library : Generic VS Commands
+#DataSet : C-Class Upper Front Window
+#Category: Camera Sensors
+#FileID  : GenVS_e7e4db11-111a-4439-ac55-0d712bb0ee5d
+#Product : CarSim 2020.0
+#VehCode ADD_ENTITY block
+
+END

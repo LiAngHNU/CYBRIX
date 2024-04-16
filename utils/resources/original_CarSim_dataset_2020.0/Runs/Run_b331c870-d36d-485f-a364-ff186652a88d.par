@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName CarSim Run Control`Quick Start Example: CSV Only`Output Options
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b331c870-d36d-485f-a364-ff186652a88d
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 4
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 4
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+OPT_VS_FILETYPE 4
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Quick Start Example: CSV Only <Output Options>
+CATEGORY Output Options 
+DATASET_TITLE Quick Start Example: CSV Only
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is a copy of the double lane change run made for the Quick Start Guide. Two differences:
+#
+#1. The "Write all outputs" box is not checked. Only the outputs used for animation and plotting are written to file.
+#
+#2. The output type is set to Excel CSV.
+#
+#You should see that the animation is unaffected, and that the plots are the same. However, the automatic plot labeling is limited because the CSV file does not have the extra labels available in ERD and VS files.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Output Options } Quick Start Example: CSV Only
+#Library : CarSim Run Control
+#DataSet : Quick Start Example: CSV Only
+#Category: Output Options
+#FileID  : Run_b331c870-d36d-485f-a364-ff186652a88d
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

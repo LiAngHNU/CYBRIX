@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Tire: Camber Thrust Coefficient`Normalized`Normalized Tires
+#CheckBox0 1    
+
+#MiscYellow0
+kgamma_gain = FZ_REF
+fz_scale_kgamma = FZ_REF
+#ENDMYellow
+
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+#DiagramOne0
+KGAMMA_TABLE SPLINE
+0, 0
+0.1, -0.000837
+0.2, -0.001653
+0.3, -0.002447
+0.4, -0.003221
+0.5, -0.003973
+0.6, -0.004704
+0.7, -0.005414
+0.8, -0.006102
+0.9, -0.00677
+1, -0.007416
+1.1, -0.008041
+1.2, -0.008645
+1.3, -0.009228
+1.4, -0.009789
+1.5, -0.01033
+1.6, -0.01085
+1.7, -0.01135
+1.8, -0.01182
+1.9, -0.01228
+2, -0.01271
+ENDTABLE
+*SCALAR -60
+
+
+#EMBEDDED_NOTES
+#This normalized data was made by taking the table for the 205/55 R18 and dividing by the load rating of 5394 N (550 kg) for both dFy/Gamma and Fz.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Camber Thrust Coefficient; { Normalized Tires } Normalized
+#Library : Tire: Camber Thrust Coefficient
+#DataSet : Normalized
+#Category: Normalized Tires
+#FileID  : CamStiff_78c1548d-c68c-45de-aae0-7e2dfa7517f9
+#Product : CarSim 2020.0
+#VehCode Camber Thrust
+
+END

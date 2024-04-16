@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Events`K. Check Yaw Rate 1.75 sec after CoS`Sine with Dwell
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl1 <=
+#RingCtrl2 >=
+#RingCtrl3 ZERO ~=
+#RingCtrl4 ZERO ~=
+#RingCtrl10 5
+#RingCtrl11 4
+*NAME1 AVZ_PEAK
+*NAME2 Steer_SW_Gain
+*NAME3 Steer_SW_Gain
+*NAME4 OPT_SWD_RESTORE
+*NAME5 T
+*VALUE1 ABS(AVZ)/0.2
+*VALUE2 -270
+*VALUE3 270
+*VALUE4 OPT_SWD_RESTORE
+*VALUE5 1
+*SPEED 80
+MAKE_EVENT AVZ_PEAK < ABS(AVZ)/0.2 ; Events\Events_119753f3-7b95-4719-8a25-fb16ab7edebe.par
+#BlueLink0 Events`M. This Vehicle FAILED the Test` Sine with Dwell` , Events`Events_119753f3-7b95-4719-8a25-fb16ab7edebe
+
+MAKE_EVENT Steer_SW_Gain <= -270 ; Events\Events_39c363a3-8a7a-4eb5-9456-c867afe46689.par
+#BlueLink1 Events`N. This Vehicle PASSED the Test` Sine with Dwell` , Events`Events_39c363a3-8a7a-4eb5-9456-c867afe46689
+
+MAKE_EVENT Steer_SW_Gain >= 270 ; Events\Events_d30a9ffc-2ef2-4e60-850d-6ffa15505b04.par
+#BlueLink2 Events`L. Prepare Second Set of Tests` Sine with Dwell` , Events`Events_d30a9ffc-2ef2-4e60-850d-6ffa15505b04
+
+DEFINE_EVENT OPT_SWD_RESTORE ; Events\Events_45dfc0c2-ec53-46e9-9b36-2556a4b3dee0.par
+#BlueLink3 Events`D2. Restore State for 80 km/h` Sine with Dwell` , Events`Events_45dfc0c2-ec53-46e9-9b36-2556a4b3dee0
+
+DEFINE_EVENT 1 ; Events\Events_0fc1d317-a9d2-4cd8-892f-6269f90ad05a.par
+#BlueLink4 Events`B. Bring Vehicle Speed to 82 km/h` Sine with Dwell` , Events`Events_0fc1d317-a9d2-4cd8-892f-6269f90ad05a
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded 3.68 s after the start of the Sine input started (1.75 s after completion of steering).
+#
+#The absolute yaw rate at this time must be less than 20% of the peak yaw rate. If not, the vehicle failed and the VS solver will load the dataset M to terminate the run.
+#
+#If the vehicle did not fail, then checks are made to see if this is the last run in a series.
+#
+#If Steer_SW_Gain <= -270, then this was the last run in the second series, and the vehicle has passed all of the tests. The solver will load the dataset N to terminate.
+#
+#If Steer_SW_Gain >= 270, then this was the last run in the first series and the solver will load dataset L to start the second series of tests.
+#
+#Otherwise, there will be at least another run in the series. At the next time step, the solver will load dataset B. (If the option for using restore is set via OPT_SWD_RESTORE, than the next iteration is initiated using dataset D2.)
+#
+#There can be pending events when this dataset is loaded, so the box is checked to clear them.
+#
+#Revised 2018.1 because target speed uses new feature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } K. Check Yaw Rate 1.75 sec after CoS
+#Library : Events
+#DataSet : K. Check Yaw Rate 1.75 sec after CoS
+#Category: Sine with Dwell
+#FileID  : Events_f74c97f9-cc98-4298-b45e-60c392e821ff
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

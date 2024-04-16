@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Generic Group of Links`Front-Facing Sensor w/ Ani. location`ADAS: Sensor Groups
+#VehCode Generic Links
+PARSFILE Sensors_Traffic\Radar\Radar_104ba02c-8145-47a2-8fcb-a7aa21287d27.par
+#BlueLink0 ADAS Sensors for Range and Tracking`Front-Facing Sensor: C-Class Bumper` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_104ba02c-8145-47a2-8fcb-a7aa21287d27
+
+PARSFILE Output\Sensors\MoSen_29d9d595-0cef-458e-94c1-883fcc393b70.par
+#BlueLink1 Positions, Velocities, and Accelerations`ADAS Sensor: Motion Sensor` ADAS Sensors` , Miscellaneous`MoSen_29d9d595-0cef-458e-94c1-883fcc393b70
+
+PARSFILE Animator\Frames\Frame_620196e9-044c-4cae-bbc3-a534b5be2872.par
+#BlueLink2 Animator: Reference Frame`ADAS Sensor:  Animated location` ADAS Sensors` , Miscellaneous`Frame_620196e9-044c-4cae-bbc3-a534b5be2872
+
+
+#EMBEDDED_NOTES
+#Generic Group of Links dataset, used to assemble the ADAS Sensor, a Motion Sensor, and an Animator Reference Frame with a linked animation asset consisting of a small sphere.
+#
+#Although not required to run the simulation, the animated sphere helps aid in the placement of the ADAS Sensor.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Sensor Groups } Front-Facing Sensor w/ Ani. location
+#Library : Generic Group of Links
+#DataSet : Front-Facing Sensor w/ Ani. location
+#Category: ADAS: Sensor Groups
+#FileID  : GenLink_e689755b-7127-4192-8c7b-03426fc89c98
+#Product : CarSim 2020.0
+#VehCode Generic Links
+
+END

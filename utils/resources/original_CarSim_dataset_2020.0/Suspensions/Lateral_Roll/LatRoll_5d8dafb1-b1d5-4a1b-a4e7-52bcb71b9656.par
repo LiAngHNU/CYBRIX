@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Suspension: Lateral Movement Due to Roll and Jounce`Roll Center: 100 mm Below Axle`Solid Axle
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_Y_AXLE_ROLL_COMBINE ADD
+
+! Note: if *TABLE_KEYWORD is not set to "SUSP_Y_AXLE_ROLL" then Y values read from the table will be reversed.
+*SCALAR2 0
+*TABLE_KEYWORD SUSP_Y_AXLE_ROLL
+
+#DiagramOne0
+SUSP_Y_AXLE_ROLL_TABLE SPLINE
+-10, -17.412
+-8, -13.955
+-6, -10.481
+-4, -6.995
+-2, -3.499
+0, 0
+2, 3.499
+4, 6.995
+6, 10.481
+8, 13.955
+10, 17.412
+ENDTABLE
+SUSP_LAT_AXLE_JOUNCE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Solid Axle } Roll Center: 100 mm Below Axle
+#Library : Suspension: Lateral Movement Due to Roll and Jounce
+#DataSet : Roll Center: 100 mm Below Axle
+#Category: Solid Axle
+#FileID  : LatRoll_5d8dafb1-b1d5-4a1b-a4e7-52bcb71b9656
+#Product : CarSim 2020.0
+#VehCode Lateral Movement
+
+END

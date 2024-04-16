@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Path_ID_DM vs. Time`IDs: Driver Model, Paths, Roads
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS PathIDDM, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Path_ID_DM vs. Time
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { IDs: Driver Model, Paths, Roads } Path_ID_DM vs. Time
+#Library : Plot: Setup
+#DataSet : Path_ID_DM vs. Time
+#Category: IDs: Driver Model, Paths, Roads
+#FileID  : Plot_78cefe03-dc69-4bb9-beee-3de2007bce26
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

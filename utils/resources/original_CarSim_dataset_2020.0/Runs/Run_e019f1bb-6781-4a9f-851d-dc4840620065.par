@@ -1,0 +1,99 @@
+PARSFILE
+#FullDataName CarSim Run Control`MT, OL Shift & Clutch, 0.5 Throt.`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e019f1bb-6781-4a9f-851d-dc4840620065
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_0ac31fc2-d6c2-4624-b1b9-f5b58930d9ac.par
+#BlueLink2 Vehicle: Assembly`Exotic Car, Mid-Engine: MT` Exotic Sports Car` , Math Model`Vehicle_0ac31fc2-d6c2-4624-b1b9-f5b58930d9ac
+
+PARSFILE Procedures\Proc_b00b7a49-01d1-421e-81af-22af71dbd23a.par
+#BlueLink28 Procedures`Ramp to 0.5 Throttle for MT` Accel. and Brake Testing` , Procedure`Proc_b00b7a49-01d1-421e-81af-22af71dbd23a
+
+PARSFILE Roads\3D_Road\Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2
+
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_60c40b33-9b7a-4d9f-868c-fdfcd6c5ea90.par
+#BlueLink15 Plot: Setup`Clutch: Control Input` Controls: Driver` , Plot`Plot_60c40b33-9b7a-4d9f-868c-fdfcd6c5ea90
+
+PARSFILE Plot\Setup\Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823.par
+#BlueLink16 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823
+
+PARSFILE Plot\Setup\Plot_7251a722-18c9-43db-a324-bd380d275618.par
+#BlueLink17 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7251a722-18c9-43db-a324-bd380d275618
+
+PARSFILE Plot\Setup\Plot_2cd77a14-4a29-44d1-a8e0-03a81f9c74cf.par
+#BlueLink18 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_2cd77a14-4a29-44d1-a8e0-03a81f9c74cf
+
+PARSFILE Plot\Setup\Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823.par
+#BlueLink19 Plot: Setup`Spin Rates in Powertrain` Powertrain` , Plot`Plot_c4bdb93b-47a3-4cbc-b25d-a177bdb75823
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_30f1b262-73d2-47f4-b117-69aefa4b7382.png
+WRITE_SENSOR_DETECT
+Title MT, OL Shift & Clutch, 0.5 Throt. <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE MT, OL Shift & Clutch, 0.5 Throt.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is a simulation of a vehicle equiped with a manual transmission using open-loop control for the throttle, shifting, and clutch.
+#
+#Browse to the Procedures screen and see the datasets for both open-loop throttle and open-loop shifting control. The dataset for the open-loop clutch control is linked at the bottom of the open-loop shifting control screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } MT, OL Shift & Clutch, 0.5 Throt.
+#Library : CarSim Run Control
+#DataSet : MT, OL Shift & Clutch, 0.5 Throt.
+#Category: Powertrain Tests
+#FileID  : Run_e019f1bb-6781-4a9f-851d-dc4840620065
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

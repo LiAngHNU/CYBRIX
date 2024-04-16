@@ -1,0 +1,86 @@
+PARSFILE
+#FullDataName CarSim Run Control`S-Turn with Optimized Speed`Restore, Restart, Optimize
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_bcdcffbe-8d23-4bec-bdd3-3257a518c2a2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_a01aadd8-0654-4d00-85ec-f12edfa72d07.par
+#BlueLink28 Procedures`Find Out Where to Slow Down` Restoring to a Previous State` , Procedure`Proc_a01aadd8-0654-4d00-85ec-f12edfa72d07
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title S-Turn with Optimized Speed <Restore, Restart, Optimize>
+CATEGORY Restore, Restart, Optimize 
+DATASET_TITLE S-Turn with Optimized Speed
+#MiscYellow0
+opt_buffer_write 1
+nsamp_buffer 1200
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Restoring to a Previous State
+#
+#In this example, the car approaches an S turn.
+#
+#The first part of the S has a radius of 200 m, and the second part has a radius of 100 m.
+#
+#At the speed the vehicle is traveling, it can negotiate the first part of the turn without trouble, but the vehicle slides off the road in the second part.
+#
+#When the car leaves the target path, the run is suspended and restored at successively earlier points in order to find a location where reducing the target speed gives the car sufficent time to slow down for the second part.
+#
+#Comment out the lines in the "Advance settings" box to see all the intermediate steps; un-comment them to see only the "optimal" result.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Restore, Restart, Optimize } S-Turn with Optimized Speed
+#Library : CarSim Run Control
+#DataSet : S-Turn with Optimized Speed
+#Category: Restore, Restart, Optimize
+#FileID  : Run_bcdcffbe-8d23-4bec-bdd3-3257a518c2a2
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

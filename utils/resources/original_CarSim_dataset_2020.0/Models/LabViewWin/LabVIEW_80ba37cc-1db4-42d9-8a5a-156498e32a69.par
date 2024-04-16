@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Models: LabVIEW for Windows (VI)`ACC 1st Car w/ Custom Timestep`labview_two_vehicles
+#RunMdlFile Extensions\LabViewWin\Multi_Vehicle\i_i_ACC.vi
+#CheckBox0 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox2 1    
+#RingCtrl0 1
+#RingCtrl2 0
+*X64SOLVER 0
+#MiscYellow0
+IMP_PCON_BK Add 0.0! 1
+#ENDMYellow
+
+PARSFILE IO_Channels\O_Channels\Export_cd46af09-813a-451b-b6bb-def0b4b3623a.par
+#BlueLink1 I/O Channels: Export`Radar Active Cruise Control (Ext. Sen.)` RADAR: Active Cruise Control` , Import/Export`Export_cd46af09-813a-451b-b6bb-def0b4b3623a
+
+#MiscYellow1
+simfile Car1.sim
+#ENDMYellow
+
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox1 0    
+OPT_IO_UPDATE 0
+#CheckBox3 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.001
+iprint 25
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This dataset was updated in 2018 version to use a modular solver dll.
+#
+#This example illustrates a simple LabVIEW model that displays the tire lateral forces based on 4 exported variables from CarSim.  (Libraries -> Models -> Models: LabVIEW for Windows (VI))
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: LabVIEW for Windows (VI); { labview_two_vehicles } ACC 1st Car w/ Custom Timestep
+#Library : Models: LabVIEW for Windows (VI)
+#DataSet : ACC 1st Car w/ Custom Timestep
+#Category: labview_two_vehicles
+#FileID  : LabVIEW_80ba37cc-1db4-42d9-8a5a-156498e32a69
+#Product : CarSim 2020.0
+#VehCode 
+
+END

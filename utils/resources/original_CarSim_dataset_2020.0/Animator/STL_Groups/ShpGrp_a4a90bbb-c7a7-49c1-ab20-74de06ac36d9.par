@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`S Divider Posts S`Road Networks
+*ANGLE_Z 90
+*OFFSET_Y -57
+#CheckBox0 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+
+#RingCtrl1 2
+#RingCtrl2 2
+*IMAGE_TYPE DEFAULT
+PARSFILE Animator\STL\Shape_9a906c44-4824-478a-b30c-eb880229563f.par
+#BlueLink0 Animator: Shape File Link`Cylinder: 0.3m D, 1.5m L (Divider Post 3)` Geometric Shapes` , Shape File`Shape_9a906c44-4824-478a-b30c-eb880229563f
+
+set_angle_z 90
+set_offset_y -57
+PARSFILE Animator\STL\Shape_611a46c2-2875-4331-ab58-4ecd7b0e7401.par
+#BlueLink1 Animator: Shape File Link`Cylinder: 0.3m D, 1.5m L (Divider Post 1)` Geometric Shapes` , Shape File`Shape_611a46c2-2875-4331-ab58-4ecd7b0e7401
+
+set_angle_z 90
+set_offset_y -57
+PARSFILE Animator\STL\Shape_e0c56a16-f2e4-4f07-92c1-515dbd70cbe6.par
+#BlueLink2 Animator: Shape File Link`Cylinder: 0.3m D, 1.5m L (Divider Post 2)` Geometric Shapes` , Shape File`Shape_e0c56a16-f2e4-4f07-92c1-515dbd70cbe6
+
+set_angle_z 90
+set_offset_y -57
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink17 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Video Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Road Networks } S Divider Posts S
+#Library : Animator: Shape Assembly
+#DataSet : S Divider Posts S
+#Category: Road Networks
+#FileID  : ShpGrp_a4a90bbb-c7a7-49c1-ab20-74de06ac36d9
+#Product : CarSim 2020.0
+#VehCode Shape Assembly
+
+END

@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Alt 3 from FHWA (No Scene Data)`Scenic Roads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_b4a0b032-d6fe-425c-96f8-a1409f1e15da.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Alt 3 from FHWA (No Scene Data)
+PARSFILE Roads\Center_XY\PathXY_7b12e040-94c4-4afc-b112-02ea4acca62d.par
+#BlueLink0 Path: X-Y Coordinates`Alt 3 Road from FHWA` Public Road Section` , Reference Path`PathXY_7b12e040-94c4-4afc-b112-02ea4acca62d
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Alt 3 Road from FHWA
+PARSFILE Roads\Center_Z\RdRefZ_47577ac2-52b8-4ac8-82e1-07c7e0a8782a.par
+#BlueLink1 Road: Reference Line Elevation`FHWA Alt 3` Hills and Valleys` , Path Elevation`RdRefZ_47577ac2-52b8-4ac8-82e1-07c7e0a8782a
+
+PARSFILE Roads\dZ_Map\RdMapZ_5447066d-0ab0-4d71-80c7-eaca890bd8a8.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Road w/ Low Shoulder at 5 m` Roads` , Miscellaneous`RdMapZ_5447066d-0ab0-4d71-80c7-eaca890bd8a8
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1.par
+#BlueLink4 Road: Animator Surface Shapes`No Machine-Generated Shapes` ` , Road shape definitions`RdShape_5a0d0496-c52b-465a-9469-50c21390f2b1
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_b4a0b032-d6fe-425c-96f8-a1409f1e15da.ani
+
+#EMBEDDED_NOTES
+#This is a road description provided by FHWA for a university research project in the 1990s. The lanes are a little narrow to work with a number of existing examples where the lane centers are at  +-1.65 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Scenic Roads } Alt 3 from FHWA (No Scene Data)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Alt 3 from FHWA (No Scene Data)
+#Category: Scenic Roads
+#FileID  : Road_b4a0b032-d6fe-425c-96f8-a1409f1e15da
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

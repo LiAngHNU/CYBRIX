@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`150 kW, 6-spd., R4.1 (Eng. Mount Fr. Diff.)`150 kW Powertrains
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+OPT_ENGINE_PITCH_REACTION(1) 1
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 1    
+#CheckBox1 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(1) 1
+OPT_DIFF_INTERNAL(2) 1
+OPT_DIFF_INTERNAL(3) 1
+
+PARSFILE Powertrain\Engine\Engine_5fd8cccf-3f87-4967-bf2c-05672393be86.par
+#BlueLink0 Powertrain: Engine`150 kW Engine` 150 kW Engines` , Engine`Engine_5fd8cccf-3f87-4967-bf2c-05672393be86
+
+PARSFILE Powertrain\TConv\TC_6167f7ca-1ba7-4746-98f1-f7e38f6f5f0a.par
+#BlueLink1 Powertrain: Torque Converter`Torque Converter: 150 kW Engine` Torque Converters: 150 kW to 250 kW` , Torque Conv.`TC_6167f7ca-1ba7-4746-98f1-f7e38f6f5f0a
+
+PARSFILE Powertrain\TransExt\Trans18_55b3d8ee-e987-4803-8615-8a5b5c910733.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`6-Speed` 6-Speed Transmissions` , Transmission (Extended)`Trans18_55b3d8ee-e987-4803-8615-8a5b5c910733
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_eab57451-9d2c-4c0a-91ca-a1c4a8b73a1a.par
+#BlueLink3 Powertrain: Transfer Case`Viscous Coupling: 50/50, Gear Ratio 1:1` Limited Slip and Viscous Coupling` , Transfer case`XC_eab57451-9d2c-4c0a-91ca-a1c4a8b73a1a
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_0e6d0a7d-5a3d-4cf9-b4d6-7adbda9605b1.par
+#BlueLink4 Powertrain: Front Differential`Open Differential: Gear Ratio 4.1:1` Open` , Differential front`DiffF_0e6d0a7d-5a3d-4cf9-b4d6-7adbda9605b1
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_d0834241-b61e-470e-9545-8f24c80f4365.par
+#BlueLink5 Powertrain: Rear Differential`Open Differential: Gear Ratio 4.1:1` Open` , Differential rear`DiffR_d0834241-b61e-470e-9545-8f24c80f4365
+
+
+#EMBEDDED_NOTES
+#If the engine (and any rigid parts which move together with the engine, e.g. transmission, clutch/torque converter) is treated as one independent rigid body by selecting the "Engine Mount" option, the engine body reacts in pitch and/or roll direction with the drive torque through the drive shafts and/or propeller shaft(s) as specified on this screen.
+#
+#In this particular example, the drive torque pitch effect is checked for front and un-checked for rear. Therefore, the engine body would react in pitch direction through the front drive torque while it also reacts in roll direction (either positive or negative depending on the drop-down menu) through the rear propeller shaft torque.
+#
+#Such types of the reaction effect include Audi Quattro and Subaru AWD.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { 150 kW Powertrains } 150 kW, 6-spd., R4.1 (Eng. Mount Fr. Diff.)
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 150 kW, 6-spd., R4.1 (Eng. Mount Fr. Diff.)
+#Category: 150 kW Powertrains
+#FileID  : 4WD_a70bf04b-350b-4fea-b9bb-57697c349925
+#Product : CarSim 2020.0
+#VehCode 4WD
+
+END

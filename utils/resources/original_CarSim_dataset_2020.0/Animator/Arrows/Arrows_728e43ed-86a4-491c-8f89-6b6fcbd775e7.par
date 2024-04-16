@@ -1,0 +1,218 @@
+PARSFILE
+#FullDataName Animator: Wheel Arrows and Other Indicators`Paint Tire Path (Blue)`Tire Paths
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox4 0    
+
+#RingCtrl0 2
+#RingCtrl1 T
+#RingCtrl2 B
+#RingCtrl3 0
+*VISIBLE_NAME 1
+*ALPHA_NAME 1
+*DYN_X 1
+*REF_X 1
+*OFFSET_Z 0.005
+*ID_AXLE 1
+
+#MiscYellow0
+default_ghost off ! disable ghosts for vehicle
+ghost_count 250 ! number of markers
+ghost_period -0.05
+DEFINE_PARAMETER TireMarkLen = 0.06 ; m; Length of tire marks
+DEFINE_PARAMETER TireMarkOffset = 0.0 ; ; Overall darkness of tire marks
+DEFINE_PARAMETER TireMarkScale = 1.0 ; ; Overall darkness of tire marks
+#ENDMYellow
+
+#MiscYellow1
+#reference_frame_ghosts on
+#DEFINE_OUTPUT VYaw_<<o>> =  IF_GT_0_THEN(VxCen<<o>>, Yaw_<<o>> + Alpha_<<o>>, pi + Yaw_<<o>> -Alpha_<<o>>); deg ; Tire mark <<o>> yaw
+#SET_YAW_NAME VYaw_<<o>>
+#WRT_VYaw_<<o>>
+#ANI_VYaw_<<o>>
+#ENDMYellow
+
+#BlueLink0 Animator: Shape File Link`Tire Path Paint (Blue)` Common Vehicle Assets` , Animator Shape(s)`Shape_cede343e-7c90-47ea-a3eb-a6a203033a62
+
+ADD_REFERENCE_FRAME wheel L1 indicator: Paint Tire Path (Blue)
+PARSFILE Animator\STL\Shape_cede343e-7c90-47ea-a3eb-a6a203033a62.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L1
+WRT_Xctc_L1
+ANI_Xctc_L1
+SET_Y_NAME Yctc_L1
+WRT_Yctc_L1
+ANI_Yctc_L1
+SET_Z_NAME Zgnd_L1
+WRT_Zgnd_L1
+ANI_Zgnd_L1
+SET_PITCH_NAME PitchGL1
+WRT_PitchGL1
+ANI_PitchGL1
+SET_ROLL_NAME RollGL1
+WRT_RollGL1
+ANI_RollGL1
+SET_YAW_NAME Yaw_L1
+WRT_Yaw_L1
+ANI_Yaw_L1
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L1 =  IF_GT_0_THEN(VxCenL1, Yaw_L1 + Alpha_L1, pi + Yaw_L1 -Alpha_L1); deg ; Tire mark L1 yaw
+SET_YAW_NAME VYaw_L1
+WRT_VYaw_L1
+ANI_VYaw_L1
+
+SET_FRAME_SCALE_X_NAME 1
+WRT_1
+ANI_1
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.005
+SET_FRAME_VISIBLE_NAME 1
+WRT_1
+ANI_1
+REFERENCE_FRAME_ALPHA_NAME 1
+WRT_1
+ANI_1
+
+ADD_REFERENCE_FRAME wheel L2 indicator: Paint Tire Path (Blue)
+PARSFILE Animator\STL\Shape_cede343e-7c90-47ea-a3eb-a6a203033a62.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L2
+WRT_Xctc_L2
+ANI_Xctc_L2
+SET_Y_NAME Yctc_L2
+WRT_Yctc_L2
+ANI_Yctc_L2
+SET_Z_NAME Zgnd_L2
+WRT_Zgnd_L2
+ANI_Zgnd_L2
+SET_PITCH_NAME PitchGL2
+WRT_PitchGL2
+ANI_PitchGL2
+SET_ROLL_NAME RollGL2
+WRT_RollGL2
+ANI_RollGL2
+SET_YAW_NAME Yaw_L2
+WRT_Yaw_L2
+ANI_Yaw_L2
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_L2 =  IF_GT_0_THEN(VxCenL2, Yaw_L2 + Alpha_L2, pi + Yaw_L2 -Alpha_L2); deg ; Tire mark L2 yaw
+SET_YAW_NAME VYaw_L2
+WRT_VYaw_L2
+ANI_VYaw_L2
+
+SET_FRAME_SCALE_X_NAME 1
+WRT_1
+ANI_1
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.005
+SET_FRAME_VISIBLE_NAME 1
+WRT_1
+ANI_1
+REFERENCE_FRAME_ALPHA_NAME 1
+WRT_1
+ANI_1
+
+ADD_REFERENCE_FRAME wheel R1 indicator: Paint Tire Path (Blue)
+PARSFILE Animator\STL\Shape_cede343e-7c90-47ea-a3eb-a6a203033a62.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R1
+WRT_Xctc_R1
+ANI_Xctc_R1
+SET_Y_NAME Yctc_R1
+WRT_Yctc_R1
+ANI_Yctc_R1
+SET_Z_NAME Zgnd_R1
+WRT_Zgnd_R1
+ANI_Zgnd_R1
+SET_PITCH_NAME PitchGR1
+WRT_PitchGR1
+ANI_PitchGR1
+SET_ROLL_NAME RollGR1
+WRT_RollGR1
+ANI_RollGR1
+SET_YAW_NAME Yaw_R1
+WRT_Yaw_R1
+ANI_Yaw_R1
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R1 =  IF_GT_0_THEN(VxCenR1, Yaw_R1 + Alpha_R1, pi + Yaw_R1 -Alpha_R1); deg ; Tire mark R1 yaw
+SET_YAW_NAME VYaw_R1
+WRT_VYaw_R1
+ANI_VYaw_R1
+
+SET_FRAME_SCALE_X_NAME 1
+WRT_1
+ANI_1
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.005
+SET_FRAME_VISIBLE_NAME 1
+WRT_1
+ANI_1
+REFERENCE_FRAME_ALPHA_NAME 1
+WRT_1
+ANI_1
+
+ADD_REFERENCE_FRAME wheel R2 indicator: Paint Tire Path (Blue)
+PARSFILE Animator\STL\Shape_cede343e-7c90-47ea-a3eb-a6a203033a62.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_R2
+WRT_Xctc_R2
+ANI_Xctc_R2
+SET_Y_NAME Yctc_R2
+WRT_Yctc_R2
+ANI_Yctc_R2
+SET_Z_NAME Zgnd_R2
+WRT_Zgnd_R2
+ANI_Zgnd_R2
+SET_PITCH_NAME PitchGR2
+WRT_PitchGR2
+ANI_PitchGR2
+SET_ROLL_NAME RollGR2
+WRT_RollGR2
+ANI_RollGR2
+SET_YAW_NAME Yaw_R2
+WRT_Yaw_R2
+ANI_Yaw_R2
+reference_frame_ghosts on
+DEFINE_OUTPUT VYaw_R2 =  IF_GT_0_THEN(VxCenR2, Yaw_R2 + Alpha_R2, pi + Yaw_R2 -Alpha_R2); deg ; Tire mark R2 yaw
+SET_YAW_NAME VYaw_R2
+WRT_VYaw_R2
+ANI_VYaw_R2
+
+SET_FRAME_SCALE_X_NAME 1
+WRT_1
+ANI_1
+X_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0.005
+SET_FRAME_VISIBLE_NAME 1
+WRT_1
+ANI_1
+REFERENCE_FRAME_ALPHA_NAME 1
+WRT_1
+ANI_1
+
+
+#EMBEDDED_NOTES
+#This dataset defines the equations and settings necessary for the tire paths of a 2-axle vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Paths } Paint Tire Path (Blue)
+#Library : Animator: Wheel Arrows and Other Indicators
+#DataSet : Paint Tire Path (Blue)
+#Category: Tire Paths
+#FileID  : Arrows_728e43ed-86a4-491c-8f89-6b6fcbd775e7
+#Product : CarSim 2020.0
+#VehCode Wheel Indicators
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Normalized Lateral Force vs. Kappa`Tire Tester Derived Outputs
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS mu_y_l1, kappa_l1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Normalized Lateral Force vs. Kappa
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester Derived Outputs } Normalized Lateral Force vs. Kappa
+#Library : Plot: Setup
+#DataSet : Normalized Lateral Force vs. Kappa
+#Category: Tire Tester Derived Outputs
+#FileID  : Plot_93d6f0a3-3c1f-4eb3-93ab-ee1a647a387c
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

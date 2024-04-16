@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`Path Planner with Embedded Python`Embedded Python
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6199c191-5339-4cbc-a74b-14a02f86666b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_de93188e-85a0-4e48-a39b-ef07b4e54be0.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m, No Yaw` Vehicle Reference` , Animator camera`Camera_de93188e-85a0-4e48-a39b-ef07b4e54be0
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 0
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_880ded2c-d5b7-469a-8486-55f0a2728310.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class for Simple Path Planning` C-Class` , Math Model`VehLoad_880ded2c-d5b7-469a-8486-55f0a2728310
+
+PARSFILE Procedures\Proc_a7cb0cc4-adb6-4499-99ad-07bb57d918f0.par
+#BlueLink28 Procedures`Straight Ahead @ 40 km/h` Handling Testing` , Procedure`Proc_a7cb0cc4-adb6-4499-99ad-07bb57d918f0
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a.par
+#BlueLink9 Multiple Moving Objects`10 Driver Preview Points` Points of Interest` , Miscellaneous`TMotion_7eebfaf2-736d-4fc8-8710-ce4ecdfcfa7a
+
+PARSFILE Generic\Links\GenLink_f411e9dd-b56a-4016-ba39-1c818af890d4.par
+#BlueLink10 Generic Group of Links`Deer and Objects` Simple Path Planning` , Miscellaneous`GenLink_f411e9dd-b56a-4016-ba39-1c818af890d4
+
+PARSFILE Events\Events_0fe798be-f905-4760-a607-b2361a7ebbcf.par
+#BlueLink11 Events`Avoid Obstruction` Simple Path Planning` , Miscellaneous`Events_0fe798be-f905-4760-a607-b2361a7ebbcf
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Path Planner with Embedded Python <Embedded Python>
+CATEGORY Embedded Python 
+DATASET_TITLE Path Planner with Embedded Python
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is a simple demonstration that uses Embedded Python and VS Commands to plan novel paths based on multiple detections sensed by the running vehicle to produce updated paths to avoid the detected obstructions.
+#
+#When obstructions are not present, the vehicle also senses this and returns to its original course.
+#
+#The example also includes an ADAS Sensor, AEB / FCW, and Events.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Embedded Python } Path Planner with Embedded Python
+#Library : CarSim Run Control
+#DataSet : Path Planner with Embedded Python
+#Category: Embedded Python
+#FileID  : Run_6199c191-5339-4cbc-a74b-14a02f86666b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

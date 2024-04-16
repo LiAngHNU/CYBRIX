@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Vertical Forces (Rear)`Tire Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fz_L2, Time
+PLOTCHANNELS Fz_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vertical Forces (Rear)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces and Moments } Vertical Forces (Rear)
+#Library : Plot: Setup
+#DataSet : Vertical Forces (Rear)
+#Category: Tire Forces and Moments
+#FileID  : Plot_4fae6e50-2618-44f6-8ed7-08b8ed3fe10e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

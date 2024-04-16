@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Generic VS Commands`Ext. Steer - All`External Steering
+#VehCode VS Commands
+
+#MiscYellow0
+! This example replaces the entire steering system.
+! It works with steering wheel angle as control input,
+! in either open-loop or closed-loop control mode.
+
+! opt_steer_ext, when set to 4, indicates the entire steering system
+! is replaced by an external model
+opt_steer_ext(1) 4
+
+! Output variables used
+!    Steer_SW -- Steering wheel angle from open or closed loop (could be imported)
+!    StrAV_SW -- Steering wheel angle rate
+!    Mz_Kp_L1 -- Steer torque, LF
+!    Mz_Kp_R1 -- Steer torque, RF
+
+! Steer effects imported to CarSim
+!    imp_steer_l1       -- Road wheel steer angle, LF
+!    imp_dsteer_l1      -- Road wheel steer angle rate, LF
+!    imp_steer_r1       -- Road wheel steer angle, RF
+!    imp_dsteer_r1      -- Road wheel steer angle rate, RF
+!    imp_r_str_ext_l1   -- Overall steer ratio LF (steering wheel angle rate / road wheel steer angle rate)
+!    imp_r_str_ext_r1   -- Overall steer ratio RF (steering wheel angle rate / road wheel steer angle rate)
+!    imp_steer_t_in     -- Steer torque at steering wheel
+
+! For this example, the steering system is represented by a simple overall
+! ratio, applied to both front wheels (parallel steer)
+define_parameter rstr_ext = 16;; Overall steer ratio
+
+! Calculate the left and right wheel steer angles and speeds based
+! on steering wheel angle and the ratio.
+! Then, activate the variables for import
+! Left front
+eq_out imp_steer_l1 = steer_sw / rstr_ext;
+eq_out imp_dsteer_l1 = strav_sw / rstr_ext;
+import imp_steer_l1 vs_add 0
+import imp_dsteer_l1 vs_add 0
+
+! Right front
+eq_out imp_steer_r1 = steer_sw / rstr_ext;
+eq_out imp_dsteer_r1 = strav_sw / rstr_ext;
+import imp_steer_r1 vs_add 0
+import imp_dsteer_r1 vs_add 0
+
+! The closed loop driver model needs the overall steering
+! ratio for each steered wheel
+eq_out imp_r_str_ext_l1 = rstr_ext;
+eq_out imp_r_str_ext_r1 = rstr_ext;
+import imp_r_str_ext_l1 vs_add rstr_ext
+import imp_r_str_ext_r1 vs_add rstr_ext
+
+! Calculate the steering wheel torque
+eq_out imp_steer_t_in = mz_kp_l1 / imp_r_str_ext_l1  + mz_kp_r1 / imp_r_str_ext_r1;
+import imp_steer_t_in vs_add 0
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This data set replaces the entire steering system.
+#CarSim internally has no information about any element of the system.
+#
+#To make use of the closed-loop driver model, the instantaneous overall steering ratio for each steered wheel must be supplied as an import variable.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { External Steering } Ext. Steer - All
+#Library : Generic VS Commands
+#DataSet : Ext. Steer - All
+#Category: External Steering
+#FileID  : GenVS_34ad46fb-2683-41b2-a134-261ed20342cf
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

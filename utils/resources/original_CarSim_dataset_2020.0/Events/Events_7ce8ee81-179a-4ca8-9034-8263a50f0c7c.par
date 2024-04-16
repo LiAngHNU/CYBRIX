@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Events`E. Start Sine with Dwell`Sine with Dwell
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T_Event
+*VALUE1 0.714
+*SPEED 80
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+#MiscYellow0
+OPT_WRITE 1
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_ff9a8fb4-4a22-4d48-b040-df47ab9efb73.par
+#BlueLink10 Control: Steering (Open Loop)`Sine with Dwell Waveform` Sine Wave` , Miscellaneous`StrSW_ff9a8fb4-4a22-4d48-b040-df47ab9efb73
+
+PARSFILE Generic\VS_commands\GenVS_afc5a996-25a3-4795-ab5a-eb6c47fe2f91.par
+#BlueLink11 Generic VS Commands`Increment Sine with Dwell Amplitude` Sine with Dwell` , Miscellaneous`GenVS_afc5a996-25a3-4795-ab5a-eb6c47fe2f91
+
+MAKE_EVENT T_Event >= 0.714 ; Events\Events_95a3e702-828b-4de4-b102-5017d14930b5.par
+#BlueLink0 Events`F. Reset Peak Yaw Rate at 0.714s` Sine with Dwell` , Events`Events_95a3e702-828b-4de4-b102-5017d14930b5
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded after the vehicle has coasted down to 80 km/h.
+#
+#Writing to file is resumed to support plotting and animation. The vehicle is again reset to original X and Y coordinates to provide nice overlays of plots and consistent animator repeats.
+#
+#Clocks for the controls are also reset, including the steer control and the T_Event time.
+#
+#The steering is set to open-loop, with a waveform that follows the sine with dwell shape. The amplitude of the waveform is 1 degree and is scaled by the amplitude SWA_ABS. SWA_ABS and some other supporting parameters are updated with VS commands in the linked dataset.
+#
+#The steering control will cross zero when T_Event reaches 0.714; at that time, the peak yaw rate statistic will be reset by dataset F.
+#
+#Revised 2018.1 because target speed uses new feature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } E. Start Sine with Dwell
+#Library : Events
+#DataSet : E. Start Sine with Dwell
+#Category: Sine with Dwell
+#FileID  : Events_7ce8ee81-179a-4ca8-9034-8263a50f0c7c
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

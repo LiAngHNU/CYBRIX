@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Damper Force vs. Damper Rate (Axle 2)`Suspension Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fd_L2, CmpRD_L2
+PLOTCHANNELS Fd_R2, CmpRD_R2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Damper Force vs. Damper Rate (Axle 2)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Forces and Moments } Damper Force vs. Damper Rate (Axle 2)
+#Library : Plot: Setup
+#DataSet : Damper Force vs. Damper Rate (Axle 2)
+#Category: Suspension Forces and Moments
+#FileID  : Plot_03e02490-57c9-403b-85be-e4eb01ae6330
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

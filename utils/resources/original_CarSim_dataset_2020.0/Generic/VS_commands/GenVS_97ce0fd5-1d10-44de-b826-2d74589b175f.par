@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Generic VS Commands`Electric motor torque distribution`Powertrain
+#VehCode VS Commands
+
+#MiscYellow0
+define_variable bias_ratio 0.5; -; Torque bias ratio to rear axle
+
+! Activate e-transfer case fraction import
+IMP_R_REAR_MOTOR_BIAS_D3 vs_replace 0.5
+
+! Add equation for imported e-transfer case fraction.
+eq_in bias_ratio = if_gt_0_then(ModeHybr,  ...
+                                                                     if(ModeHybr > 1, ... 
+                                                                       if(ModeHybr > 2, ...
+                                                                         0.5, ...        ! Assist mode -> AWD (50/50)
+                                                                       0), ...          ! Engine mode -> FWD (100/0)
+                                                                     1), ...          ! Motor mode -> RWD (0/100)
+                                                                   0.5) ;          ! Brake mode -> AWD (50/50)
+
+eq_in IMP_R_REAR_MOTOR_BIAS_D3 = bias_ratio;
+
+!  When FWD, amplifying the electric motor on front axle by factor of 2.
+eq_in MMOTOR_MAX_GAIN(1) = if(bias_ratio < 0.1 , 2, 1);
+
+!  When RWD, amplifying the electric motor on rear axle by factor of 2.
+eq_in MMOTOR_MAX_GAIN(2) = if(bias_ratio > 0.9 , 2, 1);
+#ENDMYellow
+
+#BlueLink4 Plot: Setup`Sensor Vx -- Rear Blind Spot` Object Sensors` , Plot`
+
+#BlueLink5 Plot: Setup`Sensor Dist -- Rear Blind Spot` Object Sensors` , Plot`
+
+
+#EMBEDDED_NOTES
+#This dataset controls electric motor torque distribution between front and rear axle depending on the hybrid power mode such as:
+#
+#Brake mode -> AWD (50/50)
+#Motor mode -> RWD (0/100)
+#Engine mode -> FWD (100/0)
+#Assist mode -> AWD (50/50)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Powertrain } Electric motor torque distribution
+#Library : Generic VS Commands
+#DataSet : Electric motor torque distribution
+#Category: Powertrain
+#FileID  : GenVS_97ce0fd5-1d10-44de-b826-2d74589b175f
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

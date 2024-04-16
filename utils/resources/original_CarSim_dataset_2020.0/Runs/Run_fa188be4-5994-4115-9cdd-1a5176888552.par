@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName CarSim Run Control`Van w/ 3A Trailer, Left Lane Change`Validation of Vehicle Data
+#VEHICLECODE Ind_SA + SSS
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_fa188be4-5994-4115-9cdd-1a5176888552
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_6a11c7ab-48b8-4c1e-8c5d-f856fb38883f.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Large Euro Van w/ 3-Axle Flatbed Trailer` European Van` , Math Model`VehLoad_6a11c7ab-48b8-4c1e-8c5d-f856fb38883f
+
+PARSFILE Procedures\Proc_994a5340-070d-43c3-8fc2-e715b24dc86c.par
+#BlueLink28 Procedures`ISO 14791 Ay Target Lane Change` Stability Testing` , Procedure`Proc_994a5340-070d-43c3-8fc2-e715b24dc86c
+
+PARSFILE Generic\Group\GenGrp_dfd6b38e-7dd8-44b1-bcd4-2be02cc25297.par
+#BlueLink9 Generic Data Group`5 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_dfd6b38e-7dd8-44b1-bcd4-2be02cc25297
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink10 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Plot\Setup\Plot_e63c50d7-929d-4614-87b0-e3aa73ef250a.par
+#BlueLink15 Plot: Setup`Hitch Forces` Hitch` , Plot`Plot_e63c50d7-929d-4614-87b0-e3aa73ef250a
+
+PARSFILE Plot\Setup\Plot_9699ef3d-faca-404f-86a2-414490d3c4f1.par
+#BlueLink16 Plot: Setup`Hitch Angular Rates` Hitch` , Plot`Plot_9699ef3d-faca-404f-86a2-414490d3c4f1
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_a8aec856-9536-4ef7-a407-8f78b29909e9.png
+WRITE_SENSOR_DETECT
+Title Van w/ 3A Trailer, Left Lane Change <Validation of Vehicle Data>
+CATEGORY Validation of Vehicle Data 
+DATASET_TITLE Van w/ 3A Trailer, Left Lane Change
+#MiscYellow0
+! Do not reduce speed overshoot in Speed
+! Controller. See Echo File for more details.
+OPT_AUTO_RESET_IC = 0
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Euro Van w/ 3-Axle Flatbed Utility Trailer performing an ISO lane change maneuver to the left (positive lateral acceleration).
+#
+#This example applies a lane change procedure as defined in ISO 14791.
+#
+#The ISO lane change is set to match the following specifications: lateral acceleration of 0.15 g's, speed of 88 km/h, and frequency of 0.4 Hz.
+#
+#The driver tracking error is set to be less than 30 mm. A new output variable is defined with a VS Command and plotted.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Validation of Vehicle Data } Van w/ 3A Trailer, Left Lane Change
+#Library : CarSim Run Control
+#DataSet : Van w/ 3A Trailer, Left Lane Change
+#Category: Validation of Vehicle Data
+#FileID  : Run_fa188be4-5994-4115-9cdd-1a5176888552
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

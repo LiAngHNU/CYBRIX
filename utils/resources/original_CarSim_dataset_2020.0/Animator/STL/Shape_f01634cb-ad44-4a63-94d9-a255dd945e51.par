@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Cylinder: 1m Radius, 1m Long`Geometric Shapes
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_1m_radius_1m_long.obj
+#ENDMYellow
+
+SET_COLOR 0.502 0.502 0.502
+SET_SCALE_X 1
+SET_SCALE_Y 0.5
+SET_SCALE_Z 0.5
+SET_ANGLE_Z 90
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0
+X_REF_LENGTH 10
+Y_REF_LENGTH 1000
+Z_REF_LENGTH 10
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_5f245a76-02e8-4402-ad4f-d68e6778dc25.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Medium Objects` Shape Preview` , Video Camera`Camera_5f245a76-02e8-4402-ad4f-d68e6778dc25
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_f01634cb-ad44-4a63-94d9-a255dd945e51.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Geometric Shapes } Cylinder: 1m Radius, 1m Long
+#Library : Animator: Shape File Link
+#DataSet : Cylinder: 1m Radius, 1m Long
+#Category: Geometric Shapes
+#FileID  : Shape_f01634cb-ad44-4a63-94d9-a255dd945e51
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

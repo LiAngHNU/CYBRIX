@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName CarSim Run Control`Low Speed Left Turn, Track Tire`* CS 2020.0 - Low Speed Behavior
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_85e9fa6f-9851-4303-990f-6355e6adf297
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_9ba93351-650d-46b2-8969-7c73144dfbce.par
+#BlueLink0 Animator: Camera Setup`100 Azm, 6 El, 50 m, 20 FOV` Vehicle Reference` , Animator camera`Camera_9ba93351-650d-46b2-8969-7c73144dfbce
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_27c399ec-6a89-4818-90ab-290d201d6a4b.par
+#BlueLink2 Vehicle: Assembly`Large European Van` European Van` , Math Model`Vehicle_27c399ec-6a89-4818-90ab-290d201d6a4b
+
+PARSFILE Procedures\Proc_10708fe4-b656-4fdd-94e4-658766c42395.par
+#BlueLink28 Procedures`Low-Speed 12.5m Turn to Left, New DM` PBS (Performance Based Standards)` , Procedure`Proc_10708fe4-b656-4fdd-94e4-658766c42395
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_a8aec856-9536-4ef7-a407-8f78b29909e9.png
+WRITE_SENSOR_DETECT
+Title Low Speed Left Turn, Track Tire <* CS 2020.0 - Low Speed Behavior>
+CATEGORY * CS 2020.0 - Low Speed Behavior 
+DATASET_TITLE Low Speed Left Turn, Track Tire
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The vehicle is driven at a low speed (5 km/h or less) through a 90-deg turn with a 12.5-m radius, where the radius applies to the outer edge of the outer front tire.
+#
+#The example uses new parameters in the driver model, added in 2020.0.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Low Speed Behavior } Low Speed Left Turn, Track Tire
+#Library : CarSim Run Control
+#DataSet : Low Speed Left Turn, Track Tire
+#Category: * CS 2020.0 - Low Speed Behavior
+#FileID  : Run_85e9fa6f-9851-4303-990f-6355e6adf297
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

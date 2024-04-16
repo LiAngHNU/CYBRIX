@@ -1,0 +1,114 @@
+PARSFILE
+#FullDataName CarSim Run Control`TCS: Low Mu Acceleration`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_307779ee-0d75-4e55-985d-0c1653fc4d6e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_d4d0df2e-f303-4748-93f5-cf99b8323967.par
+#BlueLink12 Models: Simulink`TCS Controller` Traction Control for TCS and ESC` , Models`Simlink_d4d0df2e-f303-4748-93f5-cf99b8323967
+
+PARSFILE Animator\Cameras\Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 6
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_527cca93-c21c-4e44-9484-2a30a25b6ce6.par
+#BlueLink2 Vehicle: Assembly`F-Class, Sedan w/ 8-spd. Transmission` F-Class` , Math Model`Vehicle_527cca93-c21c-4e44-9484-2a30a25b6ce6
+
+PARSFILE Procedures\Proc_fa43ada2-6709-46dc-945f-fab14879675c.par
+#BlueLink28 Procedures`Full Throttle Acceleration` Accel. and Brake Testing` , Procedure`Proc_fa43ada2-6709-46dc-945f-fab14879675c
+
+PARSFILE Roads\3D_Road\Road_04d5b1c3-0cfe-4aba-a02c-a3e01f372904.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.3 @ 8m` Straight` , Miscellaneous`Road_04d5b1c3-0cfe-4aba-a02c-a3e01f372904
+
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 28
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 28
+*TSTART 0
+*SSTART 0
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_0aff382f-c589-4818-8024-b7e9c0e473fd.par
+#BlueLink15 Plot: Setup`Engine Torque` Powertrain` , Plot`Plot_0aff382f-c589-4818-8024-b7e9c0e473fd
+
+PARSFILE Plot\Setup\Plot_7251a722-18c9-43db-a324-bd380d275618.par
+#BlueLink16 Plot: Setup`Throttle: Control Input` Controls: Driver` , Plot`Plot_7251a722-18c9-43db-a324-bd380d275618
+
+PARSFILE Plot\Setup\Plot_84cf249c-520a-44d4-965b-f2a898a45ad5.par
+#BlueLink17 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_84cf249c-520a-44d4-965b-f2a898a45ad5
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink18 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e.par
+#BlueLink19 Plot: Setup`Wheel Cylinder Pressures` Braking` , Plot`Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e
+
+PARSFILE Plot\Setup\Plot_7a53fe59-fa92-48d4-a8a6-16440a9fce95.par
+#BlueLink20 Plot: Setup`Ground Mu` Ground` , Plot`Plot_7a53fe59-fa92-48d4-a8a6-16440a9fce95
+
+
+SPECIAL_PARSFILE Runs\Run_f88111e3-ba89-4067-9577-44388678411f.par
+#BlueLink23 CarSim Run Control`Low Mu Acceleration` Powertrain Tests` , Overlay run or ERD file`Run_f88111e3-ba89-4067-9577-44388678411f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7.png
+WRITE_SENSOR_DETECT
+Title TCS: Low Mu Acceleration <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE TCS: Low Mu Acceleration
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Starting with CarSim 2017, two new import variables and one new output variable were added to support engine torque management.
+#
+#The vehicle is equipped with a Traction Control System (TCS), modelled in Simulink, which controls excessive wheel spin via a combination of modulated brake pressures and engine torque management.
+#
+#F-Class sedan equipped with an 8-speed transmission performing a full-throttle, straight line acceleration test on a flat road whose Mu is transitioned from 1.0 to 0.3 at road station of 8 m.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } TCS: Low Mu Acceleration
+#Library : CarSim Run Control
+#DataSet : TCS: Low Mu Acceleration
+#Category: Powertrain Tests
+#FileID  : Run_307779ee-0d75-4e55-985d-0c1653fc4d6e
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance to Waypoints 1 and 2`Parking Brake Control
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS dist_1, Time
+PLOTCHANNELS dist_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance to Waypoints 1 and 2
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Parking Brake Control } Distance to Waypoints 1 and 2
+#Library : Plot: Setup
+#DataSet : Distance to Waypoints 1 and 2
+#Category: Parking Brake Control
+#FileID  : Plot_b4c68acc-2b23-4547-8a59-1809a9accf1a
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

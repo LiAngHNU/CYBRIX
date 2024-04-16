@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`4-Lane Section (Adjacent Lanes)`Many Lanes
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_ca0c8546-fea7-42d0-ba28-fc055fde52b8.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 4-Lane Section (Adjacent Lanes)
+PARSFILE Roads\BuilderSegment\RoadSeg_bc7a8b54-7094-4b6a-a89a-427da8f4532d.par
+#BlueLink0 Path: Segment Builder`Single Curve, R = 1000 m` Curves` , Reference Path`RoadSeg_bc7a8b54-7094-4b6a-a89a-427da8f4532d
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Single Curve, R = 1000 m
+PARSFILE Roads\Center_Z\RdRefZ_16e72c88-2feb-4bd2-bb8a-4a7746b0d925.par
+#BlueLink1 Road: Reference Line Elevation`1.5 km with Hills` Hills and Valleys` , Path Elevation`RdRefZ_16e72c88-2feb-4bd2-bb8a-4a7746b0d925
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_ee413c45-bb8b-4c31-90bd-55e3499ab9b9.par
+#BlueLink4 Road: Animator Surface Shapes`Four Lanes (Adjacent)` Lane-Keeping Assist Roads` , Road shape definitions`RdShape_ee413c45-bb8b-4c31-90bd-55e3499ab9b9
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_ca0c8546-fea7-42d0-ba28-fc055fde52b8.ani
+
+#EMBEDDED_NOTES
+#This road has a single curve with R  1000 m.
+#
+#The reference line is between the two right-most lanes. Both lanes are 4 m wide; one is from L = -4 to 0, the other L = 0 to 4 m.
+#
+#The oncoming road lanes go from L = 4 to 12 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Many Lanes } 4-Lane Section (Adjacent Lanes)
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 4-Lane Section (Adjacent Lanes)
+#Category: Many Lanes
+#FileID  : Road_ca0c8546-fea7-42d0-ba28-fc055fde52b8
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

@@ -1,0 +1,89 @@
+PARSFILE
+#FullDataName CarSim Run Control`Road Network - Roundabouts (Flat)`Road Networks: Intersections and Roundabouts
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_cb5fc92c-bf2f-40b8-8773-1bed819789b0
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_f7708b68-72a3-4f64-b324-ed2467cc3569.par
+#BlueLink0 Animator: Camera Setup`270 Azm, 30 El, 80 m` Fixed Camera` , Animator camera`Camera_f7708b68-72a3-4f64-b324-ed2467cc3569
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_40848c36-e8e8-4cf9-bd89-b78da1ff84d0.par
+#BlueLink28 Procedures`Roundabout Network (Flat)` Road Networks` , Procedure`Proc_40848c36-e8e8-4cf9-bd89-b78da1ff84d0
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink15 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_82ec975b-2dc8-4106-89ad-69f1aebbb167.par
+#BlueLink16 Plot: Setup`Distance to Waypoints` Road Network Driving` , Plot`Plot_82ec975b-2dc8-4106-89ad-69f1aebbb167
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink17 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+PARSFILE Plot\Setup\Plot_1d12dcbc-3a19-4dfa-a2dd-6af47489f067.par
+#BlueLink18 Plot: Setup`Current Path ID DM` User-Defined Variables` , Plot`Plot_1d12dcbc-3a19-4dfa-a2dd-6af47489f067
+
+PARSFILE Plot\Setup\Plot_3dcb19d1-d28a-4c82-9c0b-fa952eebd7ab.par
+#BlueLink19 Plot: Setup`Decision` Road Network Driving` , Plot`Plot_3dcb19d1-d28a-4c82-9c0b-fa952eebd7ab
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Road Network - Roundabouts (Flat) <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Road Network - Roundabouts (Flat)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A road network with 7 road datasets is used to generate animator graphics for visualization purposes. All of the roads are flat and level, so the math model works with a single simple ground description (ID = 999).
+#
+#On the other hand, the paths that define six road centerlines are used to control the driver model. In this example, way points are defined with VS Commands and used with a random-number function to have the simulated vehicle navigate through the network.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: Intersections and Roundabouts } Road Network - Roundabouts (Flat)
+#Library : CarSim Run Control
+#DataSet : Road Network - Roundabouts (Flat)
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_cb5fc92c-bf2f-40b8-8773-1bed819789b0
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

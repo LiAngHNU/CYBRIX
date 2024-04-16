@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName CarSim Run Control`Roundabout (3D, 36 m), Pickup w/ Trailer`Road Networks: Intersections and Roundabouts
+#VEHICLECODE Ind_SA + SS
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_0a663a35-c499-47ef-90a2-283e5db075cf
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_4a001961-663d-4bd9-96b5-becf8d43f06e.par
+#BlueLink0 Animator: Camera Setup`RL, Trailer Ref. (Frt. Facing)` Trailer Reference` , Animator camera`Camera_4a001961-663d-4bd9-96b5-becf8d43f06e
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 8
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+SET_RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Pickup, Full Size w/ 2A Gooseneck Trl.` Pickup, Full Size` , Math Model`VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497
+
+PARSFILE Procedures\Proc_77672b25-d6eb-4c76-abdc-454ede3246ed.par
+#BlueLink28 Procedures`Roundabout: D = 36 m` Road Networks` , Procedure`Proc_77672b25-d6eb-4c76-abdc-454ede3246ed
+
+PARSFILE Events\Events_bbd12a4d-9c5e-46d4-92ca-94c8c72f0a98.par
+#BlueLink9 Events`A. Start on SE Leg (Trailer in Roundabout)` Roundabout Network, D = 38m` , Miscellaneous`Events_bbd12a4d-9c5e-46d4-92ca-94c8c72f0a98
+
+PARSFILE Generic\Lists\GenList_e20a984f-5042-4839-a50a-93ddf35dd413.par
+#BlueLink10 Generic Data Lists`LTARG for Offtracking (Trailer)` ` , Miscellaneous`GenList_e20a984f-5042-4839-a50a-93ddf35dd413
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink11 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_92e94740-7813-4c8a-9bea-c62fff972287.par
+#BlueLink15 Plot: Setup`Road ID for Tires` Tracking` , Plot`Plot_92e94740-7813-4c8a-9bea-c62fff972287
+
+PARSFILE Plot\Setup\Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f.par
+#BlueLink16 Plot: Setup`Road Station for Tires` Tracking` , Plot`Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f
+
+PARSFILE Plot\Setup\Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f.par
+#BlueLink17 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink18 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink19 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6ba13624-c527-4355-b1e1-654631d3017e.png
+WRITE_SENSOR_DETECT
+Title Roundabout (3D, 36 m), Pickup w/ Trailer <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Roundabout (3D, 36 m), Pickup w/ Trailer
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This variant has the vehicle and trailer entering and taking the 3rd exit (a left turn).
+#
+#A CarSim with Trailer license is required to run this example. Results may still be viewed.
+#
+#This example shows preview points used by the driver model. You will see that the target path shifts to account for trailer offtracking. First the target is shifted to the left (to reduce offtracking off the right edge), and then in the circle it is shifted to the right (to reduce offtracking over the curb on the left). Adjustments of the target path are made with VS Events.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: Intersections and Roundabouts } Roundabout (3D, 36 m), Pickup w/ Trailer
+#Library : CarSim Run Control
+#DataSet : Roundabout (3D, 36 m), Pickup w/ Trailer
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_0a663a35-c499-47ef-90a2-283e5db075cf
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

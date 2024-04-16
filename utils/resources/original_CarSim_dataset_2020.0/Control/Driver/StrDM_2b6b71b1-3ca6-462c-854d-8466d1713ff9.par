@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Control: Steering by the Closed-loop Driver Model`0.25s Torque Control`Constant Position: No Offset
+SET_ILTARG_FOR_ID 0
+set_description LTARG_ID 0.25s Torque Control
+#RingCtrl0 0
+#RingCtrl1 CONSTANT
+#RingCtrl2 1
+LTARG_CONSTANT 0
+#RadioCtrl0 0    
+
+*SCALAR 0
+SET_PATH_WIDTH 0.1
+SET_PATH_DASH_INTERVAL 1.0
+SET_PATH_VERTEX_INTERVAL 1
+SET_PATH_DZ 0.03
+SET_PATH_COLOR 0.4 0.4 1
+#CheckBox2 0    
+#CheckBox3 1    
+LTARG_ID_DM LTARG_ID
+#CheckBox0 0    
+#CheckBox1 1    
+CREATE_PATH_OBJ on
+#CheckBox4 1    
+#CheckBox5 1    
+OPT_STR_BY_TRQ 1
+OPT_DM 3
+AV_SW_MAX_DM 1200
+A_SW_MAX_DM 720
+*TPREV 0.25
+*GAIN 0
+VLOW_DM 10
+K_TRQ_CON_DM 25
+D_TRQ_CON_DM 0.5
+M_TRQ_CON_MAX_DM 25
+TPREV_CONSTANT 0.25
+
+#EMBEDDED_NOTES
+#Checking the box "Driver model steers by torque" causes steering to be controlled by applying a torque to the steering wheel to obtain the steering angle calculated by  CarSim's closed loop steer angle control.
+#
+#Three parameters are involved: A maximum torque to be applied, and a stiffness and damping for the control. Using the stiffness and damping, a torque is calculated based on the position and speed error between the controller targets and the current wheel angle and speed. (Scroll)
+#
+#The option adds a degree of freedom for the steering column, so the column inertia affects its performance. When steer angle is controlled, the acceleration of the column isn't known, so the inertia has no effect.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 0.25s Torque Control
+#Library : Control: Steering by the Closed-loop Driver Model
+#DataSet : 0.25s Torque Control
+#Category: Constant Position: No Offset
+#FileID  : StrDM_2b6b71b1-3ca6-462c-854d-8466d1713ff9
+#Product : CarSim 2020.0
+#VehCode Driver Path Follower
+
+END

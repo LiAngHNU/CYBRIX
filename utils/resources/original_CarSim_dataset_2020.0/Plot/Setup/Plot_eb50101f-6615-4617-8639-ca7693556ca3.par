@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Locked Brake Status (Axle 1)`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output LkStatL1 = SV_LK_WHL_L1; units = -; Wheel L1 lockup state
+define_output LkStatR1 = SV_LK_WHL_R1; units = -; Wheel R1 lockup state
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS LkStatL1, Time
+PLOTCHANNELS LkStatR1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Locked Brake Status (Axle 1)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Locked Brake Status (Axle 1)
+#Library : Plot: Setup
+#DataSet : Locked Brake Status (Axle 1)
+#Category: Braking
+#FileID  : Plot_eb50101f-6615-4617-8639-ca7693556ca3
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

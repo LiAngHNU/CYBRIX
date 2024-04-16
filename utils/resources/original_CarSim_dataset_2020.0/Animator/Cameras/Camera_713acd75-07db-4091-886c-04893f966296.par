@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`210 Azm, 5 El, 49 m`Vehicle Reference
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+SET_CAMERA_REFERENCE_FRAME Frame_4784094f-08e1-404b-b742-340ae23fcffa
+PARSFILE Animator\Frames\Frame_4784094f-08e1-404b-b742-340ae23fcffa.par
+#BlueLink0 Animator: Reference Frame`Vehicle X-Y-Z-Yaw` Tracking: Vehicle` , Reference frame for outside camera`Frame_4784094f-08e1-404b-b742-340ae23fcffa
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_4784094f-08e1-404b-b742-340ae23fcffa
+SET_LOOKPOINT_X -3
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0.5
+SET_AZIMUTH 210
+SET_ELEVATION 5
+SET_DISTANCE 49
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X -3
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 0.5
+*SET_AZIMUTH 210
+*SET_ELEVATION 5
+*SET_DISTANCE 49
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 30
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Vehicle Reference } 210 Azm, 5 El, 49 m
+#Library : Animator: Camera Setup
+#DataSet : 210 Azm, 5 El, 49 m
+#Category: Vehicle Reference
+#FileID  : Camera_713acd75-07db-4091-886c-04893f966296
+#Product : CarSim 2020.0
+#VehCode Camera
+
+END

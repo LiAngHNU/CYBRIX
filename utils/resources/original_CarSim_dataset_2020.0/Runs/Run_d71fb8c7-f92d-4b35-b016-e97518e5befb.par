@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`City, Stop Sign, Animated Pedestrians`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d71fb8c7-f92d-4b35-b016-e97518e5befb
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_9522e6bd-d1bd-4cd7-924f-ff0322ccd5fe.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Sign Detection` C-Class` , Math Model`VehLoad_9522e6bd-d1bd-4cd7-924f-ff0322ccd5fe
+
+PARSFILE Procedures\Proc_95e0db4c-71b0-43d5-bcdf-a849faeda041.par
+#BlueLink28 Procedures`City 3-Way Intersection` ADAS and Active Safety` , Procedure`Proc_95e0db4c-71b0-43d5-bcdf-a849faeda041
+
+PARSFILE Generic\Links\GenLink_9a119ef6-f7aa-4d0c-b3e3-f293057aad09.par
+#BlueLink9 Generic Group of Links`Pedestrians at Cross Walk, City` ADAS: Moving Objects, incl. Pedestrians` , Miscellaneous`GenLink_9a119ef6-f7aa-4d0c-b3e3-f293057aad09
+
+PARSFILE Generic\VS_commands\GenVS_20e12e9f-430d-481d-9f6d-f9d501d178f0.par
+#BlueLink10 Generic VS Commands`Watch Bike Lane` ADAS Support` , Miscellaneous`GenVS_20e12e9f-430d-481d-9f6d-f9d501d178f0
+
+PARSFILE Sensors_Traffic\Targets\Target_a7fdc8c0-5873-40eb-b255-3c3a1e472362.par
+#BlueLink11 Single Moving Object (Custom)`Stop Sign, City (155, 337)` Traffic Signs and Lights` , Miscellaneous`Target_a7fdc8c0-5873-40eb-b255-3c3a1e472362
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title City, Stop Sign, Animated Pedestrians <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE City, Stop Sign, Animated Pedestrians
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This intersection was made using the VS Scene Builder (Tools -> VS Scene Builder). Moving objects were added: a pedestrian, two bicyclists, and a stop sign.
+#
+#The stop sign is detected by an ADAS sensor so it was built as a target rather than a VS Scene Builder prop.
+#
+#The speed limit for the Speed Controller is set on the Target Speed from Path Preview screen in units of mi/h (mph) to match the USA convention.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } City, Stop Sign, Animated Pedestrians
+#Library : CarSim Run Control
+#DataSet : City, Stop Sign, Animated Pedestrians
+#Category: ADAS and Active Safety
+#FileID  : Run_d71fb8c7-f92d-4b35-b016-e97518e5befb
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

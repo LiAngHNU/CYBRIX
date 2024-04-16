@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Vehicle Sideslip Angle Rate`Vehicle Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS BetaR, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vehicle Sideslip Angle Rate
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Vehicle Sideslip Angle Rate
+#Library : Plot: Setup
+#DataSet : Vehicle Sideslip Angle Rate
+#Category: Vehicle Motion
+#FileID  : Plot_e8a23cd9-8cc6-40b0-a6a5-1914cfd4937d
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

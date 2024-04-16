@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Procedures`DLC w/ Constant Speed Target`Driver Controls
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP 210
+OPT_DIRECTION 0
+*SPEED 120
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_8597394d-a68f-46f7-992e-beb4bd86bc2e.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Double Lane Change (Quick Start)` Vehicle Dynamics Tests` , Steering`StrDM_8597394d-a68f-46f7-992e-beb4bd86bc2e
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_t\SpdTime_34e41f1c-aaa3-4de4-a0ce-09b3e517369d.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 48 km/h (v. Station)` Constant` , Speed vs. time`SpdTime_34e41f1c-aaa3-4de4-a0ce-09b3e517369d
+
+#MiscYellow0
+TPREV_CONSTANT 0.5
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_c76ab0d9-60d9-4781-bd32-84e57bf8316e.par
+#BlueLink0 Road: 3D Surface (All Properties)`DLC, Mu = 0.85` Flat Test Pads` , Miscellaneous`Road_c76ab0d9-60d9-4781-bd32-84e57bf8316e
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Plot\Setup\Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470.par
+#BlueLink8 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink9 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_57fbe53b-9356-4cb1-9fd0-29f3e70d3894.par
+#BlueLink10 Plot: Setup`Road Wheel Steer Angle - Front` Steering` , Plot`Plot_57fbe53b-9356-4cb1-9fd0-29f3e70d3894
+
+PARSFILE Plot\Setup\Plot_3c5f8bac-e2f6-4ebc-ab48-a1828a269fd4.par
+#BlueLink11 Plot: Setup`Slip Angles: Instant` Tire Kinematics` , Plot`Plot_3c5f8bac-e2f6-4ebc-ab48-a1828a269fd4
+
+PARSFILE Plot\Setup\Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink13 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_310b0189-b08d-49fc-a484-ee359eb89744.par
+#BlueLink14 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_310b0189-b08d-49fc-a484-ee359eb89744
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink15 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink17 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink18 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 48 kph. In this example, both the speed and braking control are defined on the Target speed vs. Time/Station screen.
+#
+#Click on the blue link "Constant 48 km/h" for more information.
+#
+#Other driver controls include automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } DLC w/ Constant Speed Target
+#Library : Procedures
+#DataSet : DLC w/ Constant Speed Target
+#Category: Driver Controls
+#FileID  : Proc_8006150e-65e6-40bf-86e1-bee7f9c9b983
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

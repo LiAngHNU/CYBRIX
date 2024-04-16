@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`3-Wheeled Veh: Details`Cars: Other Vehicles
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Other_Vehicles\Three_Wheeler\details.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1.01
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.32
+*SPECULAR 0
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink2 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_73f90efe-64a6-4647-93ba-997b34b59d84.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Cars: Other Vehicles } 3-Wheeled Veh: Details
+#Library : Animator: Shape File Link
+#DataSet : 3-Wheeled Veh: Details
+#Category: Cars: Other Vehicles
+#FileID  : Shape_73f90efe-64a6-4647-93ba-997b34b59d84
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

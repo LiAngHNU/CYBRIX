@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName ADAS Sensors for Range and Tracking`Left Blind-Spot, Forward Vx`Blind-Spot Sensors
+DEFINE_SENSORS 1
+ISENSOR = NSENSOR
+NSENSORS_INCREMENT
+symbol_add <<s>> 1
+SET_DESCRIPTION SENSOR_NAME Left Blind-Spot, Forward Vx
+#CheckBox0 1    
+#CheckBox1 1    
+OPT_BLOCK_SENSOR 1
+#CheckBox2 1    
+OPT_SORT_OUTPUTS_SENSOR 1
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+#CheckBox6 1    
+
+#RingCtrl0 3
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl2 1
+IUNIT_SENSOR 1
+#RingCtrl3 99
+TYPE_SENSOR 99
+PARSFILE Sensors_Traffic\Radar_Range\Range_16491846-41a3-4023-8dde-7bf52ac43b71.par
+#BlueLink0 Sensor Range and Bearing Sensitivity`Blind Spot, Left Side, Passing` Blind Spot Detection` , Range & Bearing Sensitivity`Range_16491846-41a3-4023-8dde-7bf52ac43b71
+
+PARSFILE Sensors_Traffic\Radar_Elevation\SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b.par
+#BlueLink1 Sensor Elevation Sensitivity`Unity Gain` ` , Elevation Sensitivity`SenElev_c66981cb-e94b-4fb4-bfd8-9a51215edb7b
+
+WRITE_SENSOR_FIELD
+PARSFILE Animator\STL\Shape_c95bbbb3-6896-41b2-931b-72fd8fc9fc15.par
+#BlueLink2 Animator: Shape File Link`Cube: 1m (For Left Blind-Spot Sensor)` Geometric Shapes` , Shape for Detection Field`Shape_c95bbbb3-6896-41b2-931b-72fd8fc9fc15
+
+SET_COLOR 1 0.6 0
+SET_TRANSPARENCY 0.3
+X_LENGTH 4
+Y_LENGTH 5
+Z_LENGTH 2
+X_SENSOR -3500
+Y_SENSOR 800
+Z_SENSOR 500
+YAW_AIM_SENSOR 90
+PITCH_AIM_SENSOR 0
+ROLL_AIM_SENSOR 0
+SENSOR_DETECT_COLOR 1 0.6 0
+*SET_TRANSPARENCY 0.3
+*SET_COLOR_FIELD 1 0.6 0
+BEARING_MIN_SENSOR -2
+BEARING_MAX_SENSOR 90
+
+SPECIAL_PARSFILE Animator\STL\Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc.par
+#BlueLink3 Animator: Shape File Link`Cube: 1m X, 0.1 Y, Z (Sensor Vector)` Geometric Shapes` , Shape for vector`Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc
+
+SENSOR_DETECT_OBJ Animator\STL\Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc.par
+#MiscYellow0
+! String variables used for HUD and plots
+symbol_push <<side>> Left
+symbol_push <<LR>> _L
+ani_global_interpolation off
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_c58df9d1-7b58-4938-acb7-aec9380a5ce8.par
+#BlueLink4 Plot: Setup`Magnitude from Sensor on One Side` ADAS Sensor Detections, Symbol Stack` , Plot`Plot_c58df9d1-7b58-4938-acb7-aec9380a5ce8
+
+PARSFILE Plot\Setup\Plot_c2e116ca-9469-473d-a323-d898330501a9.par
+#BlueLink5 Plot: Setup`Y from Sensor on One Side` ADAS Sensor Detections, Symbol Stack` , Plot`Plot_c2e116ca-9469-473d-a323-d898330501a9
+
+PARSFILE Plot\Setup\Plot_6ceb5cef-8a56-402e-87a2-2190045043a4.par
+#BlueLink6 Plot: Setup`Vy from Sensor on One Side` ADAS Sensor Detections, Symbol Stack` , Plot`Plot_6ceb5cef-8a56-402e-87a2-2190045043a4
+
+PARSFILE Generic\VS_commands\GenVS_e202315d-9941-4095-a71d-2d3e64e36b75.par
+#BlueLink12 Generic VS Commands`Blind Spot Detection, Either Side, Passing` ADAS Support` , Miscellaneous`GenVS_e202315d-9941-4095-a71d-2d3e64e36b75
+
+
+#EMBEDDED_NOTES
+#The sensor is attached near the left rear corner of the vehicle body. The detection field is set to a box shape using an equation (see the Range & Bearing Senstivity link).
+#
+#This dataset includes a link with VS Commands that filrer the detection signal and trigger alerts if something is in the blind spot.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: ADAS Sensors for Range and Tracking; { Blind-Spot Sensors } Left Blind-Spot, Forward Vx
+#Library : ADAS Sensors for Range and Tracking
+#DataSet : Left Blind-Spot, Forward Vx
+#Category: Blind-Spot Sensors
+#FileID  : Radar_57a31db5-b7af-4675-88ac-0bafd95a07c8
+#Product : CarSim 2020.0
+#VehCode ADAS Sensor
+
+END

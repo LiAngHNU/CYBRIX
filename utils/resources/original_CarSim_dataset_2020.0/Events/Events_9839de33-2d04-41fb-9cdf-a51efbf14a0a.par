@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`001 Wait 1 s`Boost fault insertion
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 t_stamp
+*VALUE1 1
+MAKE_EVENT t_stamp > 1 ; Events\Events_2cf69500-190e-413c-8666-180c617634b4.par
+#BlueLink0 Events`002 Apply 10 Nm boost fault` Boost fault insertion` , Events`Events_2cf69500-190e-413c-8666-180c617634b4
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Boost fault insertion } 001 Wait 1 s
+#Library : Events
+#DataSet : 001 Wait 1 s
+#Category: Boost fault insertion
+#FileID  : Events_9839de33-2d04-41fb-9cdf-a51efbf14a0a
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

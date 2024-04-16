@@ -1,0 +1,85 @@
+!
+! MF-Tyre/MF-Swift 6.1.0 Limited parameter sample tyre property file
+! Aircraft Tyre H40x14
+!
+$----------------------------------------------------------------units
+[UNITS]
+LENGTH                   ='meter'
+FORCE                    ='newton'
+ANGLE                    ='radians'
+MASS                     ='kg'
+TIME                     ='second'
+$----------------------------------------------------------------model
+[MODEL]
+FITTYP                   = 61                $Magic Formula Version number             
+TYRESIDE                 ='LEFT'
+LONGVL                   = 16.667            $Measurement speed         
+VXLOW                    = 1                 $Lower boundary of slip calculation      
+ROAD_INCREMENT           = 0.01              $Increment in road sampling
+ROAD_DIRECTION           = 1                 $Direction of travelled distance
+!
+! The next lines are only used by ADAMS and ignored by other MBS codes
+!
+! USE_MODE specifies the type of calculation performed:
+!       0: Fz only, no Magic Formula evaluation
+!       1: Fx,My only
+!       2: Fy,Mx,Mz only
+!       3: Fx,Fy,Mx,My,Mz uncombined force/moment calculation
+!       4: Fx,Fy,Mx,My,Mz combined force/moment calculation
+!       5: Fx,Fy,Mx,My,Mz combined force/moment calculation + turnslip
+!      +0: steady state behaviour
+!     +10: including relaxation behaviour
+!     +20: including relaxation behaviour (nonlinear)
+!     +30: including rigid ring dynamics
+!    +100: smooth road contact
+!    +200: smooth road contact (circular cross section, motorcycles)
+!    +400: road contact for 2D roads (using travelled distance)
+!    +500: road contact for 3D roads
+!
+!  example: USE_MODE = 434 implies:
+!    -combined slip 
+!    -rigid ring dynamics
+!    -road contact for 2D roads
+!
+PROPERTY_FILE_FORMAT     ='USER'
+USER_SUB_ID              = 815
+N_TIRE_STATES            = 4
+USE_MODE                 = 434               $Tyre use mode switch (ADAMS only)
+HMAX_LOCAL               = 2.5E-4            $Local integration time step (ADAMS only)
+TIME_SWITCH_INTEG        = 0.1               $Time when local integrator is activated (ADAMS only)
+$-----------------------------------------------------------dimensions
+[DIMENSION]
+UNLOADED_RADIUS          = 0.50
+WIDTH                    = 0.35       
+$--------------------------------------------------------------inertia
+[INERTIA]
+MASS                     = 50                 
+IXX                      =  6
+IYY                      =  9
+$-------------------------------------------------------------vertical
+[VERTICAL]
+VERTICAL_STIFFNESS       = 1.7e6
+VERTICAL_DAMPING         = 500                
+FNOMIN                   = 1e5         
+$---------------------------------------------------------longitudinal
+[LONGITUDINAL_COEFFICIENTS]
+PDX1                     =  0.8           
+PDX2                     = -0.05        
+PKX1                     = 14
+PTX1                     =  1.6             
+$--------------------------------------------------------------lateral
+[LATERAL_COEFFICIENTS]
+PDY1                     =  0.65    
+PDY2                     = -0.15
+PKY1                     = -4  
+PKY2                     =  0.8
+PTY1                     =  1.2
+PTY2                     =  1.2
+$---------------------------------------------------rolling resistance
+[ROLLING_COEFFICIENTS]
+QSY1                     =  0.01
+$-------------------------------------------------------------aligning
+[ALIGNING_COEFFICIENTS]
+QBZ1                     =  6.5
+QCZ1                     =  1.1
+QDZ1                     =  0.3

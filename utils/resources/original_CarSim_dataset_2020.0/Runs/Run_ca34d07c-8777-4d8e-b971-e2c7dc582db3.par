@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName CarSim Run Control`Roundabout (3D, 36 m), C-Class, Traffic`Road Networks: Intersections and Roundabouts
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_ca34d07c-8777-4d8e-b971-e2c7dc582db3
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_713acd75-07db-4091-886c-04893f966296.par
+#BlueLink0 Animator: Camera Setup`210 Azm, 5 El, 49 m` Vehicle Reference` , Animator camera`Camera_713acd75-07db-4091-886c-04893f966296
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_77672b25-d6eb-4c76-abdc-454ede3246ed.par
+#BlueLink28 Procedures`Roundabout: D = 36 m` Road Networks` , Procedure`Proc_77672b25-d6eb-4c76-abdc-454ede3246ed
+
+PARSFILE Generic\Group\GenGrp_a09ddd56-ee40-456a-8955-5114823514f7.par
+#BlueLink9 Generic Data Group`Traffic for Roundabout` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_a09ddd56-ee40-456a-8955-5114823514f7
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink10 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Roads\BuilderSegment\RoadSeg_4f16aa74-7dd0-4ae7-9a8f-af78d75daa9a.par
+#BlueLink11 Path: Segment Builder`South Entrance, 3d Exit, 1021` Roundabout, D = 36 m` , Miscellaneous`RoadSeg_4f16aa74-7dd0-4ae7-9a8f-af78d75daa9a
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_92e94740-7813-4c8a-9bea-c62fff972287.par
+#BlueLink15 Plot: Setup`Road ID for Tires` Tracking` , Plot`Plot_92e94740-7813-4c8a-9bea-c62fff972287
+
+PARSFILE Plot\Setup\Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f.par
+#BlueLink16 Plot: Setup`Road Station for Tires` Tracking` , Plot`Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f
+
+PARSFILE Plot\Setup\Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f.par
+#BlueLink17 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink18 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Roundabout (3D, 36 m), C-Class, Traffic <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Roundabout (3D, 36 m), C-Class, Traffic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example has a vehicle entering and taking the 3rd exit (a left turn).
+#
+#12 Paths have been created in the database for using this roundabout. Several of them are used to show traffic vehicles in this example. The traffic vehicles are included to show how to provide alternate paths and speeds for sets of moving objects that are animated to look like vehicles.
+#
+#The last link (path 1021) will be used by the driver model (both steering and speed) because it is the last one scanned. Change this link to choose a different path (e.g., take a different entrance or exit).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: Intersections and Roundabouts } Roundabout (3D, 36 m), C-Class, Traffic
+#Library : CarSim Run Control
+#DataSet : Roundabout (3D, 36 m), C-Class, Traffic
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_ca34d07c-8777-4d8e-b971-e2c7dc582db3
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName Procedures`Changing Paths: Closest Point`Event Triggered Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 60
+*TSTOP 15
+*TSTART 0
+*SSTART 0
+*SSTOP 150
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Changing Paths: Closest Point
+SPEED_TARGET_CONSTANT 60
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_b1b717a4-04d9-461d-8975-e1ef0b12d822.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.75s Single Preview` Constant Position: No Offset` , Steering`StrDM_b1b717a4-04d9-461d-8975-e1ef0b12d822
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_a6e218ae-29fe-405c-9569-38917872727d.par
+#BlueLink0 Road: 3D Surface (All Properties)`Road 1000: Highway` Path Change Roads` , Miscellaneous`Road_a6e218ae-29fe-405c-9569-38917872727d
+
+PARSFILE Roads\3D_Road\Road_d0d17c48-e5e4-49d4-b2b7-f8df584a897f.par
+#BlueLink1 Road: 3D Surface (All Properties)`Road 2000: Entrance Ramp` Path Change Roads` , Miscellaneous`Road_d0d17c48-e5e4-49d4-b2b7-f8df584a897f
+
+PARSFILE Roads\Boundaries\RdBnd_c52309db-0be8-4a70-b5da-1db962f91f09.par
+#BlueLink2 Road: Boundaries`Lane Change: Road IDs 1000 and 2000` ` , Miscellaneous`RdBnd_c52309db-0be8-4a70-b5da-1db962f91f09
+
+#MiscYellow1
+PATH_ID_DM = 1000
+CURRENT_ROAD_ID = 1000
+#ENDMYellow
+
+PARSFILE Events\Events_bbd735a0-3c49-46c0-abcd-e7659914cde9.par
+#BlueLink7 Events`B1. Look for Station` Lane Change` , Miscellaneous`Events_bbd735a0-3c49-46c0-abcd-e7659914cde9
+
+
+#EMBEDDED_NOTES
+#This procedure includes a pending event that will change the path used by the driver model from 1000 to 2000.
+#
+#When the change is made, the VS Command INIT_CURRENT_PATH_SWEEP is applied to find the station where the path is closest to the vehicle. This is when L is minimized.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Event Triggered Tests } Changing Paths: Closest Point
+#Library : Procedures
+#DataSet : Changing Paths: Closest Point
+#Category: Event Triggered Tests
+#FileID  : Proc_8d1a70b0-f82a-4e9f-bc3e-4622c4275677
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

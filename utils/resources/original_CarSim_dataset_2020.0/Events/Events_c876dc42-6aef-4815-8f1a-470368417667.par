@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Events`J. Check Yaw Rate 1.0 sec after CoS`Sine with Dwell
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl1 >=
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 AVZ_PEAK
+*NAME2 T_Event
+*VALUE1 ABS(AVz)/0.35
+*VALUE2 3.679
+*SPEED 80
+MAKE_EVENT AVZ_PEAK < ABS(AVz)/0.35 ; Events\Events_119753f3-7b95-4719-8a25-fb16ab7edebe.par
+#BlueLink0 Events`M. This Vehicle FAILED the Test` Sine with Dwell` , Events`Events_119753f3-7b95-4719-8a25-fb16ab7edebe
+
+MAKE_EVENT T_Event >= 3.679 ; Events\Events_f74c97f9-cc98-4298-b45e-60c392e821ff.par
+#BlueLink1 Events`K. Check Yaw Rate 1.75 sec after CoS` Sine with Dwell` , Events`Events_f74c97f9-cc98-4298-b45e-60c392e821ff
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded 2.93 s after the start of the Sine input started (1.0 s after the completion of steering ).
+#
+#The absolute yaw rate at this time must be less than 35% of the peak yaw rate. If not, the vehicle failed and the testing is terminated.
+#
+#If the yaw rate (AVz) is under the limit, then the run proceeds. The next check point is at 3.68s after the start of the Sine test (1.75s after the completion of steering).
+#
+#Revised 2018.1 because target speed uses new feature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } J. Check Yaw Rate 1.0 sec after CoS
+#Library : Events
+#DataSet : J. Check Yaw Rate 1.0 sec after CoS
+#Category: Sine with Dwell
+#FileID  : Events_c876dc42-6aef-4815-8f1a-470368417667
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

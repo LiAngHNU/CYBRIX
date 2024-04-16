@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`Utility Truck w/ Barrels`Utility Vehicles
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_f46a9969-42d4-4569-8b20-0a0572925334.par
+#BlueLink0 Vehicle: Assembly`Utility Truck` Utility Vehicles` , Lead Unit`Vehicle_f46a9969-42d4-4569-8b20-0a0572925334
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_d10d11c5-b81a-4836-83ff-24626a979fd6.par
+#BlueLink1 Payload: Custom`Large Barrel (Back, Utility Truck)` ` , Miscellaneous`Custom_d10d11c5-b81a-4836-83ff-24626a979fd6
+
+PARSFILE Payloads\Custom\Custom_21a7c4e2-1360-449a-8911-08710e10b908.par
+#BlueLink2 Payload: Custom`Large Barrel (FL, Utility Truck)` ` , Miscellaneous`Custom_21a7c4e2-1360-449a-8911-08710e10b908
+
+PARSFILE Payloads\Custom\Custom_e0d1f64f-23d3-4295-92b9-13c8bc578d28.par
+#BlueLink3 Payload: Custom`Large Barrel (FR, Utility Truck)` ` , Miscellaneous`Custom_e0d1f64f-23d3-4295-92b9-13c8bc578d28
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Loaded\VehLoad_280d395a-c3f8-4029-b0d6-d019a5c6c64a.png
+
+#EMBEDDED_NOTES
+#This example shows a small utility truck with three payloads added to the vehicle's sprung mass, each of which represent barrels placed at various locations in the truck's cargo bed.
+#
+#The payload type is Custom as opposed to a box shape, meaning the payloads are defined by their mass and inertia properties. Links are then made to an appropriate animation shape to provide a visual representation of the modeled payload.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { Utility Vehicles } Utility Truck w/ Barrels
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : Utility Truck w/ Barrels
+#Category: Utility Vehicles
+#FileID  : VehLoad_280d395a-c3f8-4029-b0d6-d019a5c6c64a
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

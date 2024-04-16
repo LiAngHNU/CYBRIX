@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`D-Class, Sedan`D-Class
+
+PARSFILE Generic\Lists\GenList_ec9e5cbd-d1b9-40ca-92e2-16fe3f1b7149.par
+#BlueLink9 Generic Data Lists`Rear View Mirror (D -Class Example)` ` , Misc`GenList_ec9e5cbd-d1b9-40ca-92e2-16fe3f1b7149
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 2866
+OBJ_Y_LENGTH 2162
+OBJ_Z_LENGTH 1380
+*DZ_V 0
+*LAT_WC 1550
+*LAT_WC_2 1550
+*HWC 334
+*WHEEL_RATIO 1.15
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.775
+SET_OFFSET_Z 0.3173
+TIRE_ANI_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.775
+SET_OFFSET_Z 0.3173
+TIRE_ANI_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_OFFSET_X -2.866
+SET_OFFSET_Y 0.775
+SET_OFFSET_Z 0.3173
+TIRE_ANI_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+SET_SCALE_X 1.15
+SET_SCALE_Y 1.15
+SET_SCALE_Z 1.15
+SET_ANGLE_X 180
+SET_OFFSET_X -2.866
+SET_OFFSET_Y -0.775
+SET_OFFSET_Z 0.3173
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_987fa235-c5d1-41c6-bc38-1fde3b00ac07.par
+#BlueLink1 Animator: Shape Assembly`D-Class Sedan` Passenger Cars` , Vehicle Body`ShpGrp_987fa235-c5d1-41c6-bc38-1fde3b00ac07
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_2a7c319a-553a-4d83-adce-bea9ed7383c7.par
+#BlueLink3 Animator: Shape File Link`Sedan: Brake Lights` Cars: D-Class` , Brake Lights`Shape_2a7c319a-553a-4d83-adce-bea9ed7383c7
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_7d24c432-e5b7-4bce-bab4-52ae0e5d4f38.par
+#BlueLink10 Animator: Shape File Link`Sedan: Reverse Lights` Cars: D-Class` , Reverse lights`Shape_7d24c432-e5b7-4bce-bab4-52ae0e5d4f38
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car - Width 185 mm` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_8583d59f-acbe-4278-a2f5-d247f399fbba
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { D-Class } D-Class, Sedan
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : D-Class, Sedan
+#Category: D-Class
+#FileID  : AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

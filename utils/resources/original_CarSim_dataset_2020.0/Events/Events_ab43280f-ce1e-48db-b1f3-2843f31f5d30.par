@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Events`A. Hold at Stop`Braking
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 t_event
+*NAME2 bk_cycle
+*VALUE1 2
+*VALUE2 8
+#MiscYellow0
+! Increments brake cycles
+bk_cycle = bk_cycle +1;
+#ENDMYellow
+
+MAKE_EVENT t_event > 2 ; Events\Events_8655fc59-67f3-4536-8450-1e6b81269bb3.par
+#BlueLink0 Events`B. Reset Position and Accelerate` Braking` , Events`Events_8655fc59-67f3-4536-8450-1e6b81269bb3
+
+MAKE_EVENT bk_cycle > 8 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink1 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Vehicle is held at a stop for 0.5 seconds.
+#
+#The variable bk_cycle is incremented.  If bk_cycle is greater than 8, the simulation ends.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Braking } A. Hold at Stop
+#Library : Events
+#DataSet : A. Hold at Stop
+#Category: Braking
+#FileID  : Events_ab43280f-ce1e-48db-b1f3-2843f31f5d30
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

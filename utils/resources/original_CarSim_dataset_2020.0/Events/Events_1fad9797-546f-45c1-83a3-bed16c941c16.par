@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`H. Reduce Speed and Try Again`Fishhook with Roll Rate Feedback
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 t_stamp
+*VALUE1 1
+#MiscYellow0
+VTEST = VTEST - VINC
+#ENDMYellow
+
+DEFINE_EVENT 1 ; Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par
+#BlueLink0 Events`B. Let Vehicle Settle for Next Fishhook` Fishhook with Roll Rate Feedback` , Events`Events_709edbcc-6812-4629-9d36-16dedb024adc
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Fishhook with Roll Rate Feedback } H. Reduce Speed and Try Again
+#Library : Events
+#DataSet : H. Reduce Speed and Try Again
+#Category: Fishhook with Roll Rate Feedback
+#FileID  : Events_1fad9797-546f-45c1-83a3-bed16c941c16
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

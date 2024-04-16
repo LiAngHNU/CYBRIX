@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`E-Class, SUV: High CG from Roof Load`E-Class
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276.par
+#BlueLink0 Vehicle: Assembly`E-Class, SUV` E-Class` , Lead Unit`Vehicle_e00c4865-3865-4ec0-9c09-9719622bb276
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_28a78a3c-9df3-4bfc-a830-2dc2e37f9883.par
+#BlueLink1 Payload: Custom`Roof Cargo Box` ` , Miscellaneous`Custom_28a78a3c-9df3-4bfc-a830-2dc2e37f9883
+
+#BlueLink6 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink7 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+
+#EMBEDDED_NOTES
+#E-Class SUV with a single payload representing a roof load.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { E-Class } E-Class, SUV: High CG from Roof Load
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : E-Class, SUV: High CG from Roof Load
+#Category: E-Class
+#FileID  : VehLoad_6ebde7a8-2379-4049-8ee1-807afd704ab7
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Blurred Tire: Tractor (Rear)`Common Vehicle Assets: Tires
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\Blurred_Tractor_Rear\Blurred_Tractor_Rear.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_5f245a76-02e8-4402-ad4f-d68e6778dc25.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Medium Objects` Shape Preview` , Video Camera`Camera_5f245a76-02e8-4402-ad4f-d68e6778dc25
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_014a6480-fca7-405c-b970-5cc818b20b98.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Blurred Tire: Tractor (Rear)
+#Library : Animator: Shape File Link
+#DataSet : Blurred Tire: Tractor (Rear)
+#Category: Common Vehicle Assets: Tires
+#FileID  : Shape_014a6480-fca7-405c-b970-5cc818b20b98
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

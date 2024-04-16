@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName CarSim Run Control`Steer Controller w/ External C & Simulink`Extended Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_934d3c29-edc0-479e-8bee-3ce0b01896d5
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_9406c6e4-db64-4aa0-8f83-26c6910c0f13.par
+#BlueLink12 Models: Simulink`Custom Steer S-Function` Steering and Steering Controls` , Models`Simlink_9406c6e4-db64-4aa0-8f83-26c6910c0f13
+
+PARSFILE Animator\Cameras\Camera_6ee7b251-3362-4e47-80d3-90ca59581138.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 3 El, 36 m` Vehicle Reference` , Animator camera`Camera_6ee7b251-3362-4e47-80d3-90ca59581138
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_b51258ba-42c7-4b7e-b55d-077cd21c37c6.par
+#BlueLink28 Procedures`Extended Driver Model` Driver Model, Extended and External` , Procedure`Proc_b51258ba-42c7-4b7e-b55d-077cd21c37c6
+
+
+SPECIAL_PARSFILE Runs\Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc.par
+#BlueLink23 CarSim Run Control`Steer Controller with VS Commands` Extended Models` , Overlay run or ERD file`Run_9b11b3d4-dbe6-4c46-a2d5-e94f0e1260dc
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Steer Controller w/ External C & Simulink <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Steer Controller w/ External C & Simulink
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A steering controller is built with external C code and Simulink.
+#
+#The C source code file is used to make an alternative Simulink S-Function. The C-code is located in the CarSim database in the folder Extensions\Custom_C.
+#
+#Help -> Technical Memos -> Example: Extending a Model with VS Commands and the API
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Extended Models } Steer Controller w/ External C & Simulink
+#Library : CarSim Run Control
+#DataSet : Steer Controller w/ External C & Simulink
+#Category: Extended Models
+#FileID  : Run_934d3c29-edc0-479e-8bee-3ce0b01896d5
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

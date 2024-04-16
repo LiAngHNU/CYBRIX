@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Animator: HUD`FCW Alert (small) Update path`ADAS Alerts
+#CheckBox1 1    
+#CheckBox3 1    
+
+#RingCtrl0 1
+#RingCtrl1 9
+#RingCtrl2 2
+#RingCtrl3 0
+#RingCtrl4 0
+*LOCX_1 5
+*LOCY_1 5
+*SCALE_1 .6
+*VAR_NAME_1 Show_FCW
+*COLOR_4 0 0 0
+*VAR_NAME_5 Station
+
+*IMG_NAME_1 Animator\2D_HUD_Icons\Distance_Warning\Distance_Warning.png
+
+#Selection 9 for Icon 0
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 2 AlY 0
+#Selection_3 Scale 0.666667 locX 100 locY 50
+#Selection_4 Fixed: 1 VarName: Show_FCW  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\Distance_Warning\Distance_Warning.png
+! General Icon
+ANI_Show_FCW
+WRT_Show_FCW
+ADD_ENTITY hud_image General Icon
+location 100 50 85 85
+align_x right
+align_y top
+size_mode absolute
+place_mode absolute
+opacity Show_FCW
+image_file Animator\2D_HUD_Icons\Distance_Warning\Distance_Warning.png
+END_ENTITY hud_image General Icon
+
+#EMBEDDED_NOTES
+#Forward collision warning, located on the left edge of the window.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: HUD; { ADAS Alerts } FCW Alert (small) Update path
+#Library : Animator: HUD
+#DataSet : FCW Alert (small) Update path
+#Category: ADAS Alerts
+#FileID  : HUD_f962b882-e93b-494f-8154-f035fc781271
+#Product : CarSim 2020.0
+#VehCode HUD
+
+END

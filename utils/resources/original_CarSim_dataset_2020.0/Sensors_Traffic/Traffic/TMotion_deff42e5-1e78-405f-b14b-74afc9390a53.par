@@ -1,0 +1,107 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`Tractor Semitrailer S_SS + SS`Traffic Vehicles (Forward)
+#RingCtrl0 2
+DEFINE_MOVING_OBJECTS 2
+#RingCtrl1 2
+#RingCtrl2 4
+#RingCtrl4 1
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox25 0    
+#CheckBox26 0    
+#CheckBox27 0    
+#CheckBox38 1    
+#CheckBox39 1    
+
+DZ_OBJECT 0
+*L 0
+*PATH_ID PATH_ID_DM
+*ROAD_ID CURRENT_ROAD_ID
+*V N_SPEED_TARGET
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Tractor Semitrailer S_SS + SS, Object #1
+OPT_SPEED_OBJ 2
+OPT_DIR_OBJ 1
+
+*L_WB_1 0
+L_WB_OBJ 0
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_1 -130
+EQ_INIT S_OBJ_<<o>> = -130
+SPEED_ID_OBJ = N_SPEED_TARGET
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, PATH_ID_DM, 0, 1) + HEADO_<<o>>
+*COLOR_1 1 0 0
+SET_RUN_COLOR 1 0 0
+*H_TARGET_1 -3.1
+H_OBJ -3.1
+PARSFILE Animator\Vehicles\AniVeh_33721b41-6022-4532-a1de-0739c2de9e79.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`3A Day Cab, 0 @ Hitch` Traffic and Moving Objects: Commercial` , 3D Shape for Video`AniVeh_33721b41-6022-4532-a1de-0739c2de9e79
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_1 3
+LENGTH_OBJ 3
+*WIDTH_1 2.5
+WIDTH_OBJ 2.5
+*LX_FRONT_1 4.6
+LX_FRONT_OBJ 4.6
+*REFLECT_1 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Tractor Semitrailer S_SS + SS, Object #2
+OPT_SPEED_OBJ 2
+OPT_DIR_OBJ 1
+
+*L_WB_2 11.3
+L_WB_OBJ 11.3
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ PATH_ID_DM
+ROAD_ID_OBJ CURRENT_ROAD_ID
+OPT_RECYCLE_OBJ 0
+*SINIT_2 -130
+EQ_INIT S_OBJ_<<o>> = -130
+SPEED_ID_OBJ = N_SPEED_TARGET
+EQ_INIT YawO_<<o>> = PATH_YAW_ID(S_OBJ_<<o>>, PATH_ID_DM, 0, 1) + HEADO_<<o>>
+*COLOR_2 0 0.4 1
+SET_RUN_COLOR 0 0.4 1
+*H_TARGET_2 -3.5
+H_OBJ -3.5
+PARSFILE Animator\Vehicles\AniVeh_a90af010-8fb5-4716-8655-7f9e2c5d8b84.par
+#BlueLink1 Animator: Vehicles and Sensor Targets`Conventional Box Trailer (2A)` Traffic and Moving Objects: Trailers` , Traffic Vehicle Ani File`AniVeh_a90af010-8fb5-4716-8655-7f9e2c5d8b84
+
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE_2 13.8
+LENGTH_OBJ 13.8
+*WIDTH_2 2.5
+WIDTH_OBJ 2.5
+*LX_FRONT_2 1
+LX_FRONT_OBJ 1
+*REFLECT_2 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Traffic Vehicles (Forward) } Tractor Semitrailer S_SS + SS
+#Library : Multiple Moving Objects
+#DataSet : Tractor Semitrailer S_SS + SS
+#Category: Traffic Vehicles (Forward)
+#FileID  : TMotion_deff42e5-1e78-405f-b14b-74afc9390a53
+#Product : CarSim 2020.0
+#VehCode Multiple Objects
+
+END

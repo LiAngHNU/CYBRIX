@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName CarSim Run Control`Tire Force Visualization`Extended Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_893220d0-a5d1-4fdd-98f0-4ced6eeff111
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car (6-speed AT)` B-Class` , Math Model`Vehicle_b976c570-0e0b-4b78-827d-fa6a24ef9fb3
+
+PARSFILE Procedures\Proc_4c68d016-aaa5-4a5b-8dd3-9718e63e14db.par
+#BlueLink28 Procedures`Tire Force Visualization` Tire Force Visualization` , Procedure`Proc_4c68d016-aaa5-4a5b-8dd3-9718e63e14db
+
+PARSFILE Animator\Arrows\Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887.par
+#BlueLink10 Animator: Wheel Arrows and Other Indicators`Tire Skid Marks (2 Axles)` Skid Marks` , Miscellaneous`Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink11 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+PARSFILE Plot\Setup\Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1.par
+#BlueLink15 Plot: Setup`Longitudinal vs. Lateral Accel.` Vehicle Motion` , Plot`Plot_f30c8f6e-f4c5-457d-9587-3baaad0f98b1
+
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+PARSFILE Plot\Setup\Plot_84cf249c-520a-44d4-965b-f2a898a45ad5.par
+#BlueLink17 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_84cf249c-520a-44d4-965b-f2a898a45ad5
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink18 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Tire Force Visualization <Extended Models>
+CATEGORY Extended Models 
+DATASET_TITLE Tire Force Visualization
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is a duplicate of the example "Driver Model > Speed Control From Driver Path" with the addition of some VS Commands to implement a tire force visualization feature.
+#
+#Details are included in the Procedure and in the screens with the implementation.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Extended Models } Tire Force Visualization
+#Library : CarSim Run Control
+#DataSet : Tire Force Visualization
+#Category: Extended Models
+#FileID  : Run_893220d0-a5d1-4fdd-98f0-4ced6eeff111
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

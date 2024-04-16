@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Electric: EPA Urban Cycle`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8a88ed07-084f-40bb-9aeb-fd44f68a56f2
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.6 1
+SET_RUN_COLOR 0 0.6 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_fd2e27a4-6bef-400e-a9e5-24bd98e6baec.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback: Electric RWD` B-Class` , Math Model`Vehicle_fd2e27a4-6bef-400e-a9e5-24bd98e6baec
+
+PARSFILE Procedures\Proc_b72aff54-cc5c-4024-9ee3-af49dd19730a.par
+#BlueLink28 Procedures`Hybrid/Electric: EPA Urban Cycle` Accel. and Brake Testing` , Procedure`Proc_b72aff54-cc5c-4024-9ee3-af49dd19730a
+
+*TSTOP 1369
+*TSTART 0
+*SSTART 0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.png
+WRITE_SENSOR_DETECT
+Title Electric: EPA Urban Cycle <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Electric: EPA Urban Cycle
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with an electric powertrain is modeled within CarSim (GUI and math model).
+#
+#CarSim supports for electric powertrains include an electric motor, electric powertrain assembly, and power management control.
+#
+#The Procedure is a US EPA Urban Cycle, represented with a Target Speed vs. Time profile.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Electric: EPA Urban Cycle
+#Library : CarSim Run Control
+#DataSet : Electric: EPA Urban Cycle
+#Category: Powertrain Tests
+#FileID  : Run_8a88ed07-084f-40bb-9aeb-fd44f68a56f2
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

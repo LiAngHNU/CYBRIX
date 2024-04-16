@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Events`Don't Calculate Edges After First Lap`Speed Control with Path Preview
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+delete_eqs_out x_left
+delete_eqs_out y_left
+delete_eqs_out x_right
+delete_eqs_out y_right
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#After one lap of the test track, the coordinates of the edges have been completely calculated. The equations can then be deleted, to improve efficiency somewhat.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Speed Control with Path Preview } Don't Calculate Edges After First Lap
+#Library : Events
+#DataSet : Don't Calculate Edges After First Lap
+#Category: Speed Control with Path Preview
+#FileID  : Events_e97ef8d2-743d-42d6-9143-44d5bf6d3028
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

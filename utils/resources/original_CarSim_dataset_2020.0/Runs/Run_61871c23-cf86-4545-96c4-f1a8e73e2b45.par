@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName CarSim Run Control`Highway Merge Avoidance w ESC`Driver Model
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_61871c23-cf86-4545-96c4-f1a8e73e2b45
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_de1f5f31-cdc6-45aa-8fad-27588467e961.par
+#BlueLink0 Animator: Camera Setup`350 Azm, 3 El, 49 m` Vehicle Reference` , Animator camera`Camera_de1f5f31-cdc6-45aa-8fad-27588467e961
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 1
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.4 0.596
+SET_RUN_COLOR 0.2 0.4 0.596
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_b33d0470-7675-4784-bccf-0454dff86bc3.par
+#BlueLink2 Vehicle: Assembly`D-Class, SUV` D-Class` , Math Model`Vehicle_b33d0470-7675-4784-bccf-0454dff86bc3
+
+PARSFILE Procedures\Proc_6cb46db6-382d-4e69-8f3e-4ad142067bcb.par
+#BlueLink28 Procedures`Highway Merge Avoidance` Driving` , Procedure`Proc_6cb46db6-382d-4e69-8f3e-4ad142067bcb
+
+PARSFILE Animator\Arrows\Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887.par
+#BlueLink9 Animator: Wheel Arrows and Other Indicators`Tire Skid Marks (2 Axles)` Skid Marks` , Miscellaneous`Arrows_0707108a-af33-4db9-b1d3-bdbd23eea887
+
+PARSFILE Control\ESC\ESC_1e86a8a7-4b44-4af7-b2a9-9fce931e7896.par
+#BlueLink10 Control: Electronic Stability (ESC)`ESC for SUV higher gain` ` , Miscellaneous`ESC_1e86a8a7-4b44-4af7-b2a9-9fce931e7896
+
+*SPEED 125
+
+SPECIAL_PARSFILE Runs\Run_1c51fd7b-f2a3-42b7-9752-36655ceb4468.par
+#BlueLink23 CarSim Run Control`Highway Merge` Driver Model` , Overlay run or ERD file`Run_1c51fd7b-f2a3-42b7-9752-36655ceb4468
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_b33d0470-7675-4784-bccf-0454dff86bc3.png
+WRITE_SENSOR_DETECT
+Title Highway Merge Avoidance w ESC <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Highway Merge Avoidance w ESC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#In 2019.1, ESC is added to the example.
+#
+#The following modeling techniques are demonstrated:
+#
+#1. A D-Class SUV performing an evasize steering maneuver to avoid the merging full-size SUV while driving on a road that decreases from two lanes to one.
+#
+#2. How to create variable width roads with features such as a four-lane highway with drainage ditches and road crown.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Driver Model } Highway Merge Avoidance w ESC
+#Library : CarSim Run Control
+#DataSet : Highway Merge Avoidance w ESC
+#Category: Driver Model
+#FileID  : Run_61871c23-cf86-4545-96c4-f1a8e73e2b45
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

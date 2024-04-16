@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan (New Twist-Beam): K Test`D-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_f4f1c5b8-d3fa-42b8-b81a-a9bf7d14d283.par
+#BlueLink0 Vehicle: Assembly`D-Class, Sedan: Twist-Beam (No Comp.)` D-Class` , Lead Unit`Vehicle_f4f1c5b8-d3fa-42b8-b81a-a9bf7d14d283
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Output\Points\RefPt_e37d0f08-dc8d-464a-a0ca-a3be7bed5438.par
+#BlueLink6 Custom Forces and Reference Points`K and C Table (X=-1388mm, Z=200mm)` ` , Miscellaneous`RefPt_e37d0f08-dc8d-464a-a0ca-a3be7bed5438
+
+*FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Loaded\VehLoad_6f54e4e7-bc2b-425e-bd1a-fabd8d1cd76e.png
+
+#EMBEDDED_NOTES
+#This example shows a D-Class sedan with a twist-beam suspension modelled by new Generic Suspension in 2018.
+#
+#Suspension compliances are excluded to focus on the kinematical effects of rear twist-beam suspension.
+#
+#A Reference Point is added on the Custom Forces and Sensors -> Positions, Velocities, and Accelerations dataset, linked below. When this vehicle is used with the Run Control K&C examples, this Reference Point defines the location of the applied forces and moments from the K&C table.
+#
+#Even though the suspension compliances are excluded, this twist-beam suspension is set very soft in order to exaggerate the twist-beam characteristics and the data may be too compliant to represent common suspensions.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { D-Class } D-Class, Sedan (New Twist-Beam): K Test
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : D-Class, Sedan (New Twist-Beam): K Test
+#Category: D-Class
+#FileID  : VehLoad_6f54e4e7-bc2b-425e-bd1a-fabd8d1cd76e
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

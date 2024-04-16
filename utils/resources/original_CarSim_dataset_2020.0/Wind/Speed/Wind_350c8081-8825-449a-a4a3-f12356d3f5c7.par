@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Wind Speed`Constant: 100 km/h`Constant
+#CheckBox0 0    
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+WIND_SPEED_COMBINE ADD
+WIND_SPEED_CONSTANT 100
+WIND_SPEED_S_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 100
+*SCALAR2 0
+D_AIR 1.206
+
+
+#EMBEDDED_NOTES
+#Wind Speed (kph)
+#
+#This dataset is used to represent a constant wind speed of 100 kph.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Wind Speed; { Constant } Constant: 100 km/h
+#Library : Wind Speed
+#DataSet : Constant: 100 km/h
+#Category: Constant
+#FileID  : Wind_350c8081-8825-449a-a4a3-f12356d3f5c7
+#Product : CarSim 2020.0
+#VehCode Wind Speed
+
+END

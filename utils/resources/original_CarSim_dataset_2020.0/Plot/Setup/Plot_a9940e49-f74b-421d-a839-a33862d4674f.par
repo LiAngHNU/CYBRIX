@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`C7: Swept Path to Left`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_1be0ac68-126c-4e86-ab08-b38a12551deb.par
+#BlueLink0 Plot: Format`Fine Grid` ` , Plot format`PlotFmt_1be0ac68-126c-4e86-ab08-b38a12551deb
+
+#CheckBox1 1    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_Ref_R1, X_Ref_R1, Tire Sidewall
+PLOTCHANNELS Y_S6, X_S6, P6 Unit 1
+PLOTCHANNELS Y_S3, X_S3, P3 Unit 1
+PLOTCHANNELS Y_S4, X_S4, P4 Unit 1
+PLOTCHANNELS Y_S13, X_S13, P3 Unit 2
+PLOTCHANNELS Y_S14, X_S14, P4 Unit 2
+
+#ENDMYellow
+
+ASPECTRATIO 1
+YAXISLABEL Global Y coordinate - m
+
+#RingCtrl8 1
+
+
+PTITLE C7: Swept Path to Left
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } C7: Swept Path to Left
+#Library : Plot: Setup
+#DataSet : C7: Swept Path to Left
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_a9940e49-f74b-421d-a839-a33862d4674f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Inner Circle, Path ID = 1001`Roundabout Network, Flat
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_f8a39ebc-3862-4da7-9262-15096e089b5b.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 999
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Inner Circle, Path ID = 1001
+PARSFILE Roads\BuilderSegment\RoadSeg_8ccb3594-9905-4716-9923-ba6daab7aac2.par
+#BlueLink0 Path: Segment Builder`24 m Radius Loop, ID = 1001` Roundabout Network, Flat` , Reference Path`RoadSeg_8ccb3594-9905-4716-9923-ba6daab7aac2
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: 24 m Radius Loop, ID = 1001
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.9` Constant` , Friction`RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba
+
+PARSFILE Roads\Shapes\RdShape_8fff63fe-c860-4318-aa19-0d2d210f4332.par
+#BlueLink4 Road: Animator Surface Shapes`Roundabout S 2-lane Circle` Roundabout Network, Flat` , Road shape definitions`RdShape_8fff63fe-c860-4318-aa19-0d2d210f4332
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1.0
+add_reference_frame road_stuff_6_Small_Roundabout_Dividers
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_9591748d-959f-44fc-9098-ea5b45aca60f.par
+#BlueLink6 Animator: Group`Small Roundabout Dividers` Roads and Environment` , 3D Shapes`Group_9591748d-959f-44fc-9098-ea5b45aca60f
+
+add_reference_frame road_stuff_7__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink7 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_f8a39ebc-3862-4da7-9262-15096e089b5b.ani
+
+#EMBEDDED_NOTES
+#This is one of seven roads used to generate animator graphics to show a road network.
+#
+#The same road ID = 999 is used for all seven of the roads. The surface shape files from all seven go to VS Visualizer, but only the last one loaded is used by the math model.
+#
+#On the other hand, each road has a distinct reference path with its own ID. The reference paths are used to generate the surface shapes, and are also used in the math model  by the closed-loop steering controller.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Roundabout Network, Flat } Inner Circle, Path ID = 1001
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Inner Circle, Path ID = 1001
+#Category: Roundabout Network, Flat
+#FileID  : Road_f8a39ebc-3862-4da7-9262-15096e089b5b
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

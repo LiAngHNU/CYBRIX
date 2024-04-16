@@ -1,0 +1,121 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Off-Road`Ride Road Shapes
+NLANES 9
+OPTTHRESHOLD 0.1
+#MiscYellow0
+# 1 1 1, Dirt, 1, 10, 1, -1.8, m, 1.8, m, 17, , 0, 70, 0.1, , , Road
+# 1 1 1, Grass (Light), 1, 10, 5, 2.8, m, 50, m, , , -50, 100, 0.1, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 5, -2.8, m, -50, m, , , -50, 100, 0.1, , , Foliage
+# 1 1 1, Dirt, 1, 10, 1, -1.8, m, 1.8, m, , , -50, 0.5, 5, , , Foliage
+# 1 1 1, Dirt, 1, 10, 1, -1.8, m, 1.8, m, , , 69.5, 100, 5, , , Foliage
+# 1 1 1, Dirt Transition, 1, 10, -1, -2.8, m, -1.8, m, , , -50, 100, 0.1, , , Random
+# 1 1 1, Dirt Transition, 1, 10, 1, 1.8, m, 2.8, m, , , -50, 100, 0.1, , , Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Dirt
+SPECULAR(1) 1
+SCALE(1) 10
+LTILES(1) 1
+LIN(1) -1.8
+LINUNITS(1) m
+LOUT(1) 1.8
+LOUTUNITS(1) m
+LDIV(1) 17
+SSTART(1) 0
+SSTOP(1) 70
+SINT(1) 0.1
+AUTODETAIL(1) Road
+COLOR(2) 1 1 1
+MATERIAL(2) Grass (Light)
+SPECULAR(2) 1
+SCALE(2) 10
+LTILES(2) 5
+LIN(2) 2.8
+LINUNITS(2) m
+LOUT(2) 50
+LOUTUNITS(2) m
+SSTART(2) -50
+SSTOP(2) 100
+SINT(2) 0.1
+AUTODETAIL(2) Foliage
+COLOR(3) 1 1 1
+MATERIAL(3) Grass (Light)
+SPECULAR(3) 1
+SCALE(3) 10
+LTILES(3) 5
+LIN(3) -2.8
+LINUNITS(3) m
+LOUT(3) -50
+LOUTUNITS(3) m
+SSTART(3) -50
+SSTOP(3) 100
+SINT(3) 0.1
+AUTODETAIL(3) Foliage
+COLOR(4) 1 1 1
+MATERIAL(4) Dirt
+SPECULAR(4) 1
+SCALE(4) 10
+LTILES(4) 1
+LIN(4) -1.8
+LINUNITS(4) m
+LOUT(4) 1.8
+LOUTUNITS(4) m
+SSTART(4) -50
+SSTOP(4) 0.5
+SINT(4) 5
+AUTODETAIL(4) Foliage
+COLOR(5) 1 1 1
+MATERIAL(5) Dirt
+SPECULAR(5) 1
+SCALE(5) 10
+LTILES(5) 1
+LIN(5) -1.8
+LINUNITS(5) m
+LOUT(5) 1.8
+LOUTUNITS(5) m
+SSTART(5) 69.5
+SSTOP(5) 100
+SINT(5) 5
+AUTODETAIL(5) Foliage
+COLOR(6) 1 1 1
+MATERIAL(6) Dirt Transition
+SPECULAR(6) 1
+SCALE(6) 10
+LTILES(6) -1
+LIN(6) -2.8
+LINUNITS(6) m
+LOUT(6) -1.8
+LOUTUNITS(6) m
+SSTART(6) -50
+SSTOP(6) 100
+SINT(6) 0.1
+AUTODETAIL(6) Random
+COLOR(7) 1 1 1
+MATERIAL(7) Dirt Transition
+SPECULAR(7) 1
+SCALE(7) 10
+LTILES(7) 1
+LIN(7) 1.8
+LINUNITS(7) m
+LOUT(7) 2.8
+LOUTUNITS(7) m
+SSTART(7) -50
+SSTOP(7) 100
+SINT(7) 0.1
+AUTODETAIL(7) Random
+MTL_FILE Animator\Road_Materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Ride Road Shapes } Off-Road
+#Library : Road: Animator Surface Shapes
+#DataSet : Off-Road
+#Category: Ride Road Shapes
+#FileID  : RdShape_1d9621f7-8a8e-4d25-be5c-fb4d81612c4e
+#Product : CarSim 2020.0
+#VehCode Road Shapes
+
+END

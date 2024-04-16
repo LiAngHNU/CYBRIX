@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Events`2. Initiate Reverse`Blind Spot Reversing
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 5
+RESET_EVENTS
+*NAME1 zero
+*VALUE1 Alert_R | Alert_L
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_ed7638f9-d334-48f0-b8a2-42036a26c47f.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp: 0 to 0.1 in 5 sec.` Ramp` , Speed link`Throttle_ed7638f9-d334-48f0-b8a2-42036a26c47f
+
+#MiscYellow0
+TStart_Throttle T
+TStart_Brakes T
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_73dd8273-cecc-4a62-afb7-b1a8adae1c0c.par
+#BlueLink10 Control: Shifting (Closed Loop)`Reverse` ` , Miscellaneous`GearCL_73dd8273-cecc-4a62-afb7-b1a8adae1c0c
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink11 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+DEFINE_EVENT Alert_R | Alert_L ; Events\Events_e2d6dd5c-b9ea-4a3b-8e41-be4bbdc7a8f6.par
+#BlueLink0 Events`3. Brake` Blind Spot Reversing` , Events`Events_e2d6dd5c-b9ea-4a3b-8e41-be4bbdc7a8f6
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset initializes the vehicle reversing out of the parking space.
+#
+#It creates a pending event to look for a command to brake from either of two blind-spot detection sensors.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Blind Spot Reversing } 2. Initiate Reverse
+#Library : Events
+#DataSet : 2. Initiate Reverse
+#Category: Blind Spot Reversing
+#FileID  : Events_7665d151-eba4-4058-959a-0af42ad254bc
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Kingpin Torque`Steering
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Mz_KP_L1, Time
+PLOTCHANNELS Mz_KP_R1, Time
+PLOTCHANNELS Mz_KP_L2, Time
+PLOTCHANNELS Mz_KP_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Kingpin Torque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Kingpin Torque
+#Library : Plot: Setup
+#DataSet : Kingpin Torque
+#Category: Steering
+#FileID  : Plot_ec025d1b-deea-4ce8-a1c0-4fc60a992239
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

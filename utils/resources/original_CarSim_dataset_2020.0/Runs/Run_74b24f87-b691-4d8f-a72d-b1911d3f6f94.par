@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName CarSim Run Control`Fade Test, Repeated 0-100-0 km/h`Brake Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_74b24f87-b691-4d8f-a72d-b1911d3f6f94
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_ec3439cd-74d6-4a17-83a5-fb75bb464820.par
+#BlueLink12 Models: Simulink`Type A ABS Controller` Braking Controls` , Models`Simlink_ec3439cd-74d6-4a17-83a5-fb75bb464820
+
+PARSFILE Animator\Cameras\Camera_bd25e7bc-6118-49f0-b82d-de64d750ae36.par
+#BlueLink0 Animator: Camera Setup`45 Azm, 5 El, 25 m` Vehicle Reference` , Animator camera`Camera_bd25e7bc-6118-49f0-b82d-de64d750ae36
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0 0.4
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_7ab21131-024b-4f71-8b22-67653ed92d6d.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: w/ Temp. and Boost` E-Class` , Math Model`Vehicle_7ab21131-024b-4f71-8b22-67653ed92d6d
+
+PARSFILE Procedures\Proc_1a0efb3f-c4cf-4907-bd89-acbee10beac8.par
+#BlueLink28 Procedures`Brake Fade Test Initialization` Accel. and Brake Testing` , Procedure`Proc_1a0efb3f-c4cf-4907-bd89-acbee10beac8
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink10 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+*SPEED 120
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Fade Test, Repeated 0-100-0 km/h <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Fade Test, Repeated 0-100-0 km/h
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan with pedal force input, power boost, brake thermal effects, and ABS performs an Event-based brake fade test in which the speed is ramped from 0 - 100 km/h - 0 repeatedly.
+#
+#Plots show the brake rotors must reach their ideal operating temperature before they can generate enough brake torque to drive the wheels below their ABS slip target, engaging the ABS (stops 3, 4, 5, and 6). As the rotor temperatures increase beyond their operating range the amount of brake torque they can generate decreases, preventing the brakes from driving the wheels below their ABS slip target.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Brake Tests } Fade Test, Repeated 0-100-0 km/h
+#Library : CarSim Run Control
+#DataSet : Fade Test, Repeated 0-100-0 km/h
+#Category: Brake Tests
+#FileID  : Run_74b24f87-b691-4d8f-a72d-b1911d3f6f94
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Events`N. End Run: Roll-back Limit`Hill Hold with Parking Brake: Auto. Trans.
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+stop_run_now Roll-back Limit has been reached
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Hill Hold with Parking Brake: Auto. Trans. } N. End Run: Roll-back Limit
+#Library : Events
+#DataSet : N. End Run: Roll-back Limit
+#Category: Hill Hold with Parking Brake: Auto. Trans.
+#FileID  : Events_29cdaa0c-3562-4aa0-b7b1-dce2ae872997
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

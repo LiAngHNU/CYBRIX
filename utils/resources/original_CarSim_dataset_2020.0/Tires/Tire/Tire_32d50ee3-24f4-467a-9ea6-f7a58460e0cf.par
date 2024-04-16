@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Tire`185/65 R15`Touring Tires
+FZ_REF 5500
+X_LENGTH 310
+Z_LENGTH 310
+Y_LENGTH 185
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_a242724f-2fdb-4b77-9ec1-81739a7709cb.par
+#BlueLink4 Animator: Shape Assembly`Small Car` Tires` , Animator`ShpGrp_a242724f-2fdb-4b77-9ec1-81739a7709cb
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 185
+RRE 298
+R0 310
+FZ_TIRE_COEFFICIENT 232
+FZ_MAX 100000
+M_TIRE 18
+IT 1
+IT_XXZZ 0.6
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 90
+L_CONTACT_Y_CONSTANT 185
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 1.1
+PARSFILE Tires\Mz\TireMz_252ff4ea-8385-4909-a1d8-aba950fe4eff.par
+#BlueLink0 Tire: Aligning Moment`185/65 R15 (SAE)` Touring Tires` , Aligning Moment`TireMz_252ff4ea-8385-4909-a1d8-aba950fe4eff
+
+PARSFILE Tires\Fy\TireFy_5f7799b4-7395-47c3-ba22-21f52a15dc2d.par
+#BlueLink1 Tire: Lateral Force`185/65 R15` Touring Tires` , Lateral Force`TireFy_5f7799b4-7395-47c3-ba22-21f52a15dc2d
+
+PARSFILE Tires\Fx\TireFx_69377a8e-4e90-4d23-981e-4ec37f1913e8.par
+#BlueLink2 Tire: Longitudinal Force`185/65 R15` Touring Tires` , Longitudinal Force`TireFx_69377a8e-4e90-4d23-981e-4ec37f1913e8
+
+PARSFILE Tires\Camber_Thrust\CamStiff_9fadad33-a832-4e17-8456-afae4628e59e.par
+#BlueLink3 Tire: Camber Thrust Coefficient`185/65 R15` Touring Tires` , Camber Thrust`CamStiff_9fadad33-a832-4e17-8456-afae4628e59e
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 530 kg
+#
+#Note:
+#The Aligning Moment data linked here replaces the previously shipping Aligning Moment data.
+#
+#The Mz values correspond to a pneumatic trail (deg) obtained from the averaged results of SAE Tire Tests.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Touring Tires } 185/65 R15
+#Library : Tire
+#DataSet : 185/65 R15
+#Category: Touring Tires
+#FileID  : Tire_32d50ee3-24f4-467a-9ea6-f7a58460e0cf
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

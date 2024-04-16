@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Rolling Resistance Moments`Tire Forces and Moments
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MyRR_L1, Time
+PLOTCHANNELS MyRR_R1, Time
+PLOTCHANNELS MyRR_L2, Time
+PLOTCHANNELS MyRR_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Rolling Resistance Moments
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Forces and Moments } Rolling Resistance Moments
+#Library : Plot: Setup
+#DataSet : Rolling Resistance Moments
+#Category: Tire Forces and Moments
+#FileID  : Plot_03fbad69-aa4b-4a36-ac43-364613d667c2
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

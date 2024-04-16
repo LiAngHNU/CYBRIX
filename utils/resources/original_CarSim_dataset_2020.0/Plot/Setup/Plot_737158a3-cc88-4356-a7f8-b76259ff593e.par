@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Wind Speed`Aerodynamics and Wind
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vwind, Time
+
+#ENDMYellow
+
+YAXISLABEL Global Wind Speed (km/h)
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wind Speed
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Wind speed is the magnitude of the wind velocity vector.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Aerodynamics and Wind } Wind Speed
+#Library : Plot: Setup
+#DataSet : Wind Speed
+#Category: Aerodynamics and Wind
+#FileID  : Plot_737158a3-cc88-4356-a7f8-b76259ff593e
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

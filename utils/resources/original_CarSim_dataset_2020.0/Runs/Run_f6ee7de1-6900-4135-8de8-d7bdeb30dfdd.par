@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName CarSim Run Control`Roll Sine Sweep`Suspension and Ride Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f6ee7de1-6900-4135-8de8-d7bdeb30dfdd
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_5feacfa5-2cee-4705-8aee-f5baa805e553.par
+#BlueLink0 Animator: Camera Setup`21 Azm, 5 El, 25 m` Road Reference` , Animator camera`Camera_5feacfa5-2cee-4705-8aee-f5baa805e553
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_33846176-a317-4e8b-ac1e-69dfb74840d7.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan w/ 5 Motion Sensors` D-Class` , Math Model`VehLoad_33846176-a317-4e8b-ac1e-69dfb74840d7
+
+PARSFILE Procedures\Proc_fce62114-6e9d-4cc6-90ff-2244a4447571.par
+#BlueLink28 Procedures`Cross Slope Sine Sweep Test` Ride Tests` , Procedure`Proc_fce62114-6e9d-4cc6-90ff-2244a4447571
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Roll Sine Sweep <Suspension and Ride Tests>
+CATEGORY Suspension and Ride Tests 
+DATASET_TITLE Roll Sine Sweep
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan with Motion Sensors drives on a Cross Slope Sine Sweep road.
+#
+#The 5 Motion Sensors are attached the vehicle's Sprung Mass and output position, velocity, and acceleration (with and without the effects of gravity).
+#
+#The Cross Slope Sine Sweep road data varies in both frequency and amplitude, exciting various bounce, pitch, and roll motions of the vehicle.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Suspension and Ride Tests } Roll Sine Sweep
+#Library : CarSim Run Control
+#DataSet : Roll Sine Sweep
+#Category: Suspension and Ride Tests
+#FileID  : Run_f6ee7de1-6900-4135-8de8-d7bdeb30dfdd
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

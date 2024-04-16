@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`SolidCon`ADAS Sensor Detections: Collision
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS SolidCon, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE SolidCon
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections: Collision } SolidCon
+#Library : Plot: Setup
+#DataSet : SolidCon
+#Category: ADAS Sensor Detections: Collision
+#FileID  : Plot_64388b6f-c60d-4589-9968-33d38d9541f4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

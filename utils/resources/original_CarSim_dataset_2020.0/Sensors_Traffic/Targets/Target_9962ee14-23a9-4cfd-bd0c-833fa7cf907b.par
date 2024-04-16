@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`City Environment: Building`ADAS Sensor: Building Occlusion
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME City Environment: Building
+OPT_SPEED_OBJ 0
+OPT_POLY_COORD 1
+
+OPT_ROAD_OBJ 0 ! Legacy pre-9
+PATH_ID_OBJ 0
+ROAD_ID_OBJ 0
+#CheckBox3 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 5
+#RingCtrl1 3
+#RingCtrl2 1
+H_OBJ -1
+*COLOR 0 0.2 1
+*S_INIT 150
+*L_INIT 150
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 3
+DZ_OBJECT 0
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+PARSFILE Sensors_Traffic\Poly\poly_014eae30-ad9a-46b9-92db-8c25078f4fd9.par
+#BlueLink1 Polygonal Shape Coordinates`City Intersection: Building` Building Occlusion` , Polygonal Coordinates`poly_014eae30-ad9a-46b9-92db-8c25078f4fd9
+
+POLY_SHAPE_ID_OBJ = IPOLYGON
+EQ_INIT X_Obj_<<o>> 150
+EQ_INIT Y_Obj_<<o>> 150
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { ADAS Sensor: Building Occlusion } City Environment: Building
+#Library : Single Moving Object (Custom)
+#DataSet : City Environment: Building
+#Category: ADAS Sensor: Building Occlusion
+#FileID  : Target_9962ee14-23a9-4cfd-bd0c-833fa7cf907b
+#Product : CarSim 2020.0
+#VehCode Moving Object (Custom)
+
+END

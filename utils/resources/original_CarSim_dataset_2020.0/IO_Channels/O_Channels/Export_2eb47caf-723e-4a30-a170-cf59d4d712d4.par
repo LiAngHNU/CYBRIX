@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName I/O Channels: Export`Full Powertrain RWD`Powertrain: Sub-System Controls and External Models
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_dd3e1f8a-00a1-47fa-9de5-c323714e33fb\Run_out_tab.txt
+
+
+EXPORT AVy_L2
+EXPORT AVy_R2
+EXPORT Vx
+EXPORT GearStat
+#MiscYellow0
+#Number of Selected Channels: 4
+#CHN_NAME: AVy_L2
+#CHN_NAME: AVy_R2
+#CHN_NAME: Vx
+#CHN_NAME: GearStat
+#ENDMYellow
+
+#MiscYellow1
+! OPT_PT is necessary in order to use the "Throttle" variable before the powertrain has been defined
+OPT_PT 2;
+
+define_parameter opt_shift_gt 1; units -;
+
+INSTALL_ENGINE;
+
+DEFINE_OUTPUT ACC = MIN(Throttle * 100, 70); -;
+DEFINE_OUTPUT SHIFT_GT = opt_shift_gt; -;
+EXP_ACC
+EXP_SHIFT_GT
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`GT-Suite: Accel. and Brake on Circle` * More Examples (Extra License Options)` , example run`Run_dd3e1f8a-00a1-47fa-9de5-c323714e33fb
+
+
+#EMBEDDED_NOTES
+#This is the dataset "Total Powertrain Export".
+#
+#Note that for CarSim 8.2, the export variable Gear_Man has been dropped and there are two new Export variables:
+#
+#Gear_CL = Closed Loop Transmission Gear
+#Gear_OL = Open Loop Transmission Gear
+#
+#For more information, please right-click on the variables in the fields on this screen, or search the "Outputs from math model file", available on the Run Control screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Powertrain: Sub-System Controls and External Models } Full Powertrain RWD
+#Library : I/O Channels: Export
+#DataSet : Full Powertrain RWD
+#Category: Powertrain: Sub-System Controls and External Models
+#FileID  : Export_2eb47caf-723e-4a30-a170-cf59d4d712d4
+#Product : CarSim 2020.0
+#VehCode Export Channels
+
+END

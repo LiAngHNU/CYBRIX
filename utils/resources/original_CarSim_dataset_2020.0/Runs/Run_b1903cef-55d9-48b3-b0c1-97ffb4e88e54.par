@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName CarSim Run Control`Camera Sensor: Vehicles (Matlab)`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_b1903cef-55d9-48b3-b0c1-97ffb4e88e54
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_5517eaa4-ec66-45f1-87b8-979b0dfc4a12.par
+#BlueLink0 Animator: Camera Setup`Camera Sensor: C-Class Hatchback` Custom Cameras` , Animator camera`Camera_5517eaa4-ec66-45f1-87b8-979b0dfc4a12
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Assembly\Vehicle_ca42f025-f59d-4e3c-b9f6-c2193adcf67c.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: Brk. Pedal, Camera` VS Visualizer Camera Sensor` , Math Model`Vehicle_ca42f025-f59d-4e3c-b9f6-c2193adcf67c
+
+PARSFILE Procedures\Proc_d9f05c4b-f080-4978-87a3-1e368783e2ca.par
+#BlueLink28 Procedures`Speed = 110, 2 m Left` Driver Controls` , Procedure`Proc_d9f05c4b-f080-4978-87a3-1e368783e2ca
+
+PARSFILE Roads\3D_Road\Road_9469fd2b-9552-4e7e-a1af-8621419d94ff.par
+#BlueLink9 Road: 3D Surface (All Properties)`4-Lane Section w/ Environment` Many Lanes` , Miscellaneous`Road_9469fd2b-9552-4e7e-a1af-8621419d94ff
+
+PARSFILE Generic\Group\GenGrp_ea243516-d139-4402-8771-8d657d48c037.par
+#BlueLink10 Generic Data Group`ACC, 2 Lanes Fwd w/o Display` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_ea243516-d139-4402-8771-8d657d48c037
+
+PARSFILE Generic\VS_commands\GenVS_05ef2bed-c11c-4c9e-9d14-0e746287cf25.par
+#BlueLink11 Generic VS Commands`Camera Sensor on Upper Front Window` Camera Sensors` , Miscellaneous`GenVS_05ef2bed-c11c-4c9e-9d14-0e746287cf25
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_ca42f025-f59d-4e3c-b9f6-c2193adcf67c.png
+WRITE_SENSOR_DETECT
+Title Camera Sensor: Vehicles (Matlab) <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Camera Sensor: Vehicles (Matlab)
+#MiscYellow0
+! ** Include Files for running in Matlab ** !
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\vs_sb_64.dll
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\vs_sb_64.lib
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\vs_sbutil_64.dll
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\vs_sbutil_64.lib
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\vs_SharedBuffer.h
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\vs_SharedBuffer_Utility.h
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\VsCameraSensor.hpp
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\VsSharedBufferExample.m
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\VsSharedBufferExample-Output.jpg
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\VsSharedBufferMex.cpp
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\VsSharedBufferMex.mexw64
+*CPAR_INCLUDE Extensions\VsSharedBufferMatlab\readme.txt
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#VS Visualizer Camera Sensors with Matlab
+#
+#A C-Class Hatchback with a Camera Sensor is traveling on a road with forward traffic in two lanes and on-coming traffic in a third lane. A VS Commands-based ACC controls the vehicle's speed via throttle and brakes.
+#
+#Executing the Matlab script while the VS Visualizer is running will sample data from the Sensor buffer and generate a 3D plot.
+#
+#The example Matlab script can be found in the database:
+#"Extensions\VsSharedBufferMatlab\VsSharedBufferExample.m".
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Camera Sensor: Vehicles (Matlab)
+#Library : CarSim Run Control
+#DataSet : Camera Sensor: Vehicles (Matlab)
+#Category: ADAS and Active Safety
+#FileID  : Run_b1903cef-55d9-48b3-b0c1-97ffb4e88e54
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

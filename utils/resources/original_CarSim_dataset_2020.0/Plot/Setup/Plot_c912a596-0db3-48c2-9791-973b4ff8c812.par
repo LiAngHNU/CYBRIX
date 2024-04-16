@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Tcycle for signals`ADAS Sensor Target Properties
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Tcycle1, time
+PLOTCHANNELS Tcycle2, time
+PLOTCHANNELS Tcycle3, time
+PLOTCHANNELS Tcycle4, time
+PLOTCHANNELS Tcycle5, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tcycle for signals
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Target Properties } Tcycle for signals
+#Library : Plot: Setup
+#DataSet : Tcycle for signals
+#Category: ADAS Sensor Target Properties
+#FileID  : Plot_c912a596-0db3-48c2-9791-973b4ff8c812
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

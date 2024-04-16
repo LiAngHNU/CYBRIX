@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`G. Shift to 2nd Gear`Opt_Engine_Running: Manual Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 29.5
+#MiscYellow0
+TSTART_T_EVENT = T
+opt_clutch_mode 1
+CLUTCH_TORQUE_GAIN = 1
+#ENDMYellow
+
+PARSFILE Control\Gear_mt\GearOL_80fb596e-cccf-45c7-9060-a846bf471e26.par
+#BlueLink10 Control: Shifting (Open Loop)`Constant: 2nd Gear (no Clutch)` Constant` , Miscellaneous`GearOL_80fb596e-cccf-45c7-9060-a846bf471e26
+
+MAKE_EVENT vx > 29.5 ; Events\Events_59820092-f6c2-45c4-a887-d8c64046781d.par
+#BlueLink0 Events`H. Cancel Open Loop Throttle` Opt_Engine_Running: Manual Transmission` , Events`Events_59820092-f6c2-45c4-a887-d8c64046781d
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Manual Transmission } G. Shift to 2nd Gear
+#Library : Events
+#DataSet : G. Shift to 2nd Gear
+#Category: Opt_Engine_Running: Manual Transmission
+#FileID  : Events_025ea4cb-8faf-40df-aafe-e40cb439a112
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

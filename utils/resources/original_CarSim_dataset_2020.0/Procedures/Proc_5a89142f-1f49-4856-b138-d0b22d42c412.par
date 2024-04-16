@@ -1,0 +1,108 @@
+PARSFILE
+#FullDataName Procedures`Bounce Sine Sweep Test`Ride Tests
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 23
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 35
+*TSTOP 23
+*TSTART 0
+*SSTART 0
+*SSTOP 2235
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Bounce Sine Sweep Test
+SPEED_TARGET_CONSTANT 35
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_bab0c5bb-34f6-4a15-aa43-799bdb947506.par
+#BlueLink0 Road: 3D Surface (All Properties)`Bounce Sine Sweep` Ride Roads` , Miscellaneous`Road_bab0c5bb-34f6-4a15-aa43-799bdb947506
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink8 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+PARSFILE Plot\Setup\Plot_4e5f03b6-bc24-46a8-9679-7ba999344a05.par
+#BlueLink9 Plot: Setup`Vertical Accel. of Sprung Mass CG's` Vehicle Motion` , Plot`Plot_4e5f03b6-bc24-46a8-9679-7ba999344a05
+
+PARSFILE Plot\Setup\Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f.par
+#BlueLink10 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink11 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink12 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+PARSFILE Plot\Setup\Plot_d5589fb5-7e70-4531-bceb-63f946be296d.par
+#BlueLink13 Plot: Setup`Damping Force` Suspension Forces and Moments` , Plot`Plot_d5589fb5-7e70-4531-bceb-63f946be296d
+
+PARSFILE Plot\Setup\Plot_1cac48ae-4def-47a2-9ac8-a1a1093d6ba8.par
+#BlueLink14 Plot: Setup`Spring: Force vs. Compression` Suspension Forces and Moments` , Plot`Plot_1cac48ae-4def-47a2-9ac8-a1a1093d6ba8
+
+PARSFILE Plot\Setup\Plot_cf056469-49e9-4ac2-b00b-fd526c2aebfe.par
+#BlueLink15 Plot: Setup`Camber vs. Jounce - Front` Suspension Motion` , Plot`Plot_cf056469-49e9-4ac2-b00b-fd526c2aebfe
+
+PARSFILE Plot\Setup\Plot_925774b2-2830-4346-88bc-cd769b2daeeb.par
+#BlueLink16 Plot: Setup`Camber vs. Jounce - Rear` Suspension Motion` , Plot`Plot_925774b2-2830-4346-88bc-cd769b2daeeb
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink17 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink18 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_46729ee2-e96e-4997-a694-fa9ca697aad0.par
+#BlueLink19 Plot: Setup`Spring Compression` Suspension Motion` , Plot`Plot_46729ee2-e96e-4997-a694-fa9ca697aad0
+
+PARSFILE Plot\Setup\Plot_0ca06a5e-1f85-4eef-a02e-4457ccf18ce7.par
+#BlueLink20 Plot: Setup`Sprung Mass Origin Vertical Position` Tracking` , Plot`Plot_0ca06a5e-1f85-4eef-a02e-4457ccf18ce7
+
+
+#EMBEDDED_NOTES
+#This Procedure is designed to demonstrate the use of a synthesized bounce sine sweep road to excite the ride dynamics of a vehicle.
+#
+#The vehicle is travelling at a constant speed of 35 kph with driver controls set to no brake pressure and automatic gear selection using all available gears.
+#
+#
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Ride Tests } Bounce Sine Sweep Test
+#Library : Procedures
+#DataSet : Bounce Sine Sweep Test
+#Category: Ride Tests
+#FileID  : Proc_5a89142f-1f49-4856-b138-d0b22d42c412
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

@@ -1,0 +1,108 @@
+PARSFILE
+#FullDataName Procedures`Brake Fade Test Initialization`Accel. and Brake Testing
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 0
+*TSTOP -1
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Brake Fade Test Initialization
+SPEED_TARGET_CONSTANT 0
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_2b2f9128-0a0e-4447-a64c-0be8f1a1e661.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.65m Left, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_2b2f9128-0a0e-4447-a64c-0be8f1a1e661
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+#MiscYellow0
+! Defines variable for
+! counting test cycles
+define_output bk_cycle 0;
+#ENDMYellow
+
+PARSFILE Animator\Groups\Group_a7286f86-f6bb-41f7-9365-8200edd88305.par
+#BlueLink0 Animator: Group`Temperature Dependent Brakes` Brake System` , Miscellaneous`Group_a7286f86-f6bb-41f7-9365-8200edd88305
+
+PARSFILE Roads\3D_Road\Road_1858fd7f-8c63-404a-a7a7-9f6c232bb1e9.par
+#BlueLink1 Road: 3D Surface (All Properties)`1200 m, Two Lanes, Mu = 0.85` Straight` , Miscellaneous`Road_1858fd7f-8c63-404a-a7a7-9f6c232bb1e9
+
+PARSFILE Events\Events_ab43280f-ce1e-48db-b1f3-2843f31f5d30.par
+#BlueLink6 Events`A. Hold at Stop` Braking` , Miscellaneous`Events_ab43280f-ce1e-48db-b1f3-2843f31f5d30
+
+PARSFILE Plot\Setup\Plot_c5ffea24-7e51-4de8-897e-1c95bc68bbbc.par
+#BlueLink8 Plot: Setup`Brake Booster Displacement` Braking` , Plot`Plot_c5ffea24-7e51-4de8-897e-1c95bc68bbbc
+
+PARSFILE Plot\Setup\Plot_4030bda4-33d9-49cc-97b9-e24584651b81.par
+#BlueLink9 Plot: Setup`Brake Booster Force In/Out` Braking` , Plot`Plot_4030bda4-33d9-49cc-97b9-e24584651b81
+
+PARSFILE Plot\Setup\Plot_0c2e606e-8f9d-46b0-8d35-c7d85066ab0a.par
+#BlueLink10 Plot: Setup`Brake Pedal Displacement` Braking` , Plot`Plot_0c2e606e-8f9d-46b0-8d35-c7d85066ab0a
+
+PARSFILE Plot\Setup\Plot_f4937cea-2692-4dfc-8e17-baabe744f6b6.par
+#BlueLink11 Plot: Setup`Brake Control: Pedal Force vs. Time` Braking` , Plot`Plot_f4937cea-2692-4dfc-8e17-baabe744f6b6
+
+PARSFILE Plot\Setup\Plot_54cc51ff-e81a-4580-9722-317a4cbf3505.par
+#BlueLink12 Plot: Setup`Brake Rotor Temperature` Braking` , Plot`Plot_54cc51ff-e81a-4580-9722-317a4cbf3505
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink13 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53.par
+#BlueLink14 Plot: Setup`Brake Torque` Braking` , Plot`Plot_6f0c0125-1c0c-4b0a-a06b-529aada16a53
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink15 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink17 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink18 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_eb50101f-6615-4617-8639-ca7693556ca3.par
+#BlueLink19 Plot: Setup`Locked Brake Status (Axle 1)` Braking` , Plot`Plot_eb50101f-6615-4617-8639-ca7693556ca3
+
+PARSFILE Plot\Setup\Plot_3adb6053-15ab-44c1-adf9-64e31969b810.par
+#BlueLink20 Plot: Setup`Locked Brake Status (Axle 2)` Braking` , Plot`Plot_3adb6053-15ab-44c1-adf9-64e31969b810
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a method of setting up and executing a brake fade test. The vehicle's initial conditions are defined on this screen, and an Events series is used to direct the acceleration/deceleration sequence.
+#
+#To see how this is done, click on the Events blue link "A. Hold at Stop" and follow the Events datasets.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Accel. and Brake Testing } Brake Fade Test Initialization
+#Library : Procedures
+#DataSet : Brake Fade Test Initialization
+#Category: Accel. and Brake Testing
+#FileID  : Proc_1a0efb3f-c4cf-4907-bd89-acbee10beac8
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

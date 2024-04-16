@@ -1,0 +1,436 @@
+$======================================================================
+$ Application: Project Data
+$ Object:      Task Folder
+$ created:     May 09, 2018 17:07:23
+$--------------------------------------Full Load Acceleration
+[VOLLASTBESCHLEUNIGUNG]
+#BERM_ID                  = 
+#BERM_ENTW_DATUM          = "Jan 15, 2005 18:21:41"
+IDX                       = 1
+BERECHNEN                 = 2
+VBESCHL_ID                = 
+VBESCHL_ENTW_DATUM        = "Jan 14, 2005 10:07:16"
+DATENSATZ_VERANTWORTLICHER = 'CST CV'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Manual FWD'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+NAME                      = 'Acceleration in all Gears, without Slip'
+FAHRWIDERSTAND            = 1
+WARMSTARTAUSWAHL          = 3
+TEILAUFGABE               = 1
+TEILLAST                  = 1
+LAST_STELLUNG <%>         = 
+FORWARD_BACKWARD          = 1
+ELASTSTARTGROESSE         = 1
+STARTGESCHWINDIGKEIT <km/h> = 0.0
+STARTDREHZAHL <1/min>     = 
+STARTGANG                 = 1
+SCHALTEN                  = 1
+FAHRERNAME                = 'Standard'
+STRECKENNAME              = 'Standard'
+TPL_AUSGABE               = 2
+MT_SWITCH                 = 1
+PPD_AUSGABE               = 2
+MS_AUSGABE                = 1
+MS_AUSGABE_OPTION         = 1
+MS_AUSGABE_SCHRITTE       = 
+SIM_QUAS                  = 0
+KURVENFAHRT               = 1
+RADSCHLUPF                = 1
+MESS_V_AKTIV              = 1
+MESS_DZ_AKTIV             = 1
+MESS_S_AKTIV              = 1
+MESS_T_AKTIV              = 1
+STARTERKENNUNG            = 1
+VORLAUFZEIT <s>           = 1.0
+SOC_NEUTRAL               = 1
+SOC_STARTWERT <%>         = 
+GANGWAHL                  = 5
+TIPTRONIC                 = 1
+KICKDOWN                  = 1
+STEUER_PROG               = 1
+ANFAHRMODUS               = 2
+LOCATION                  = 2
+BELADUNG_FAHRZEUG         = 1
+BELADUNG_LEER             = 2
+ZUSATZBELADUNGSSCHALTER   = 1
+ZUSATZLADUNG <kg>         = 100.0
+BELADUNG_HALB             = 1
+ZUSATZLADUNG_REL <%>      = 0.0
+BELADUNG_VOLL             = 1
+ZUSATZINSASSENSCHALTER    = 1
+NR_PERSON                 = 0
+GEWICHT_PRO_PERSON <kg>   = 
+VOLUMENSCHALTER           = 1
+FZG_VOLUMEN <m^3>         = 0.0
+BELADUNGSDICHTE <kg/m^3>  = 
+BELADUNG_ANHAENGER        = 1
+ZUSATZBELADUNGSSCHALTER_ANH = 1
+ZUSATZLADUNG_ANH <kg>     = 0.0
+ZUSATZLADUNG_REL_ANH <%>  = 0.0
+VOLUMENSCHALTER_ANH       = 1
+ANH_VOLUMEN <m^3>         = 0.0
+BELADUNGSDICHTE_ANH <kg/m^3> = 
+SCHWUNGMASSENAUSWAHL      = 2
+SCHWUNGMASSE <kg>         = 2000.0
+SMKNAME                   = 'Europe'
+STR_ID                    = 
+STR_ENTW_DATUM            = "Jan 14, 2005 10:07:17"
+FAH_ID                    = 
+FAH_ENTW_DATUM            = "Jan 14, 2005 10:07:16"
+SMK_ID                    = 
+SMK_ENTW_DATUM            = "Apr 25, 1998 17:48:22"
+MV_ID                     = 
+MV_ENTW_DATUM             = "Jan 14, 2005 10:07:16"
+MDZ_ID                    = 
+MDZ_ENTW_DATUM            = "Jan 14, 2005 10:07:16"
+MWEG_ID                   = 
+MWEG_ENTW_DATUM           = "Jan 14, 2005 10:07:16"
+MZEIT_ID                  = 
+MZEIT_ENTW_DATUM          = "Jan 14, 2005 10:07:16"
+WAY_FILE = 'ways\Standard_3.way'
+DRV_FILE = 'drivers\Standard_3.drv'
+SMK_FILE = 'ways\Europe.smk'
+$=============================================Velocity Measuring Points
+(MESSPUNKTE_V)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = 'km/h'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = 'km/h'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = 'km/h'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$================================================Speed Measuring Points
+(MESSPUNKTE_DZ)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$=============================================Distance Measuring Points
+(MESSPUNKTE_WEG)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = 'm'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = 'm'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = 'm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$=================================================Time Measuring Points
+(MESSPUNKTE_ZEIT)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = 's'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = 's'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = 's'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$--------------------------------------Full Load Acceleration
+[VOLLASTBESCHLEUNIGUNG]
+#BERM_ID                  = 
+#BERM_ENTW_DATUM          = "Jan 15, 2005 18:21:41"
+IDX                       = 2
+BERECHNEN                 = 2
+VBESCHL_ID                = 
+VBESCHL_ENTW_DATUM        = "Jan 14, 2005 10:07:16"
+DATENSATZ_VERANTWORTLICHER = 'CST CV'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Manual FWD'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+NAME                      = 'Shifting Gears from Standstill, without Slip - limited'
+FAHRWIDERSTAND            = 1
+WARMSTARTAUSWAHL          = 2
+TEILAUFGABE               = 2
+TEILLAST                  = 1
+LAST_STELLUNG <%>         = 
+FORWARD_BACKWARD          = 1
+ELASTSTARTGROESSE         = 1
+STARTGESCHWINDIGKEIT <km/h> = 0.0
+STARTDREHZAHL <1/min>     = 
+STARTGANG                 = 1
+SCHALTEN                  = 1
+FAHRERNAME                = 'Standard'
+STRECKENNAME              = 'Standard'
+TPL_AUSGABE               = 2
+MT_SWITCH                 = 1
+PPD_AUSGABE               = 2
+MS_AUSGABE                = 1
+MS_AUSGABE_OPTION         = 1
+MS_AUSGABE_SCHRITTE       = 
+SIM_QUAS                  = 1
+KURVENFAHRT               = 1
+RADSCHLUPF                = 3
+MESS_V_AKTIV              = 2
+MESS_DZ_AKTIV             = 1
+MESS_S_AKTIV              = 2
+MESS_T_AKTIV              = 2
+STARTERKENNUNG            = 1
+VORLAUFZEIT <s>           = 1.0
+SOC_NEUTRAL               = 1
+SOC_STARTWERT <%>         = 
+GANGWAHL                  = 5
+TIPTRONIC                 = 1
+KICKDOWN                  = 1
+STEUER_PROG               = 1
+ANFAHRMODUS               = 1
+LOCATION                  = 2
+BELADUNG_FAHRZEUG         = 2
+BELADUNG_LEER             = 1
+ZUSATZBELADUNGSSCHALTER   = 1
+ZUSATZLADUNG <kg>         = 100.0
+BELADUNG_HALB             = 2
+ZUSATZLADUNG_REL <%>      = 0.0
+BELADUNG_VOLL             = 1
+ZUSATZINSASSENSCHALTER    = 1
+NR_PERSON                 = 0
+GEWICHT_PRO_PERSON <kg>   = 
+VOLUMENSCHALTER           = 1
+FZG_VOLUMEN <m^3>         = 0.0
+BELADUNGSDICHTE <kg/m^3>  = 
+BELADUNG_ANHAENGER        = 1
+ZUSATZBELADUNGSSCHALTER_ANH = 1
+ZUSATZLADUNG_ANH <kg>     = 0.0
+ZUSATZLADUNG_REL_ANH <%>  = 0.0
+VOLUMENSCHALTER_ANH       = 1
+ANH_VOLUMEN <m^3>         = 0.0
+BELADUNGSDICHTE_ANH <kg/m^3> = 
+SCHWUNGMASSENAUSWAHL      = 2
+SCHWUNGMASSE <kg>         = 2000.0
+SMKNAME                   = 'Europe'
+STR_ID                    = 
+STR_ENTW_DATUM            = "Jan 14, 2005 10:07:18"
+FAH_ID                    = 
+FAH_ENTW_DATUM            = "Jan 14, 2005 10:07:16"
+SMK_ID                    = 
+SMK_ENTW_DATUM            = "Apr 25, 1998 17:48:22"
+MV_ID                     = 
+MV_ENTW_DATUM             = "Jan 14, 2005 10:07:16"
+MDZ_ID                    = 
+MDZ_ENTW_DATUM            = "Jan 14, 2005 10:07:16"
+MWEG_ID                   = 
+MWEG_ENTW_DATUM           = "Jan 14, 2005 10:07:16"
+MZEIT_ID                  = 
+MZEIT_ENTW_DATUM          = "Jan 14, 2005 10:07:16"
+WAY_FILE = 'ways\Standard_4.way'
+DRV_FILE = 'drivers\Standard_3.drv'
+SMK_FILE = 'ways\Europe.smk'
+$=============================================Velocity Measuring Points
+(MESSPUNKTE_V)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = 'km/h'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = 'km/h'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = 'km/h'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+  20.0           280.0          20.0           
+$================================================Speed Measuring Points
+(MESSPUNKTE_DZ)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$=============================================Distance Measuring Points
+(MESSPUNKTE_WEG)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = 'm'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = 'm'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = 'm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+  400.0          1000.0         600.0          
+$=================================================Time Measuring Points
+(MESSPUNKTE_ZEIT)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = 's'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = 's'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = 's'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+  10.0           10.0           10.0           
+$--------------------------------------Full Load Acceleration
+[VOLLASTBESCHLEUNIGUNG]
+#BERM_ID                  = 
+#BERM_ENTW_DATUM          = "Jan 15, 2005 18:21:41"
+IDX                       = 3
+BERECHNEN                 = 2
+VBESCHL_ID                = 
+VBESCHL_ENTW_DATUM        = "Jan 14, 2005 10:07:16"
+DATENSATZ_VERANTWORTLICHER = 'CST CV'
+DB_USER                   = ''
+SEC_ID                    = 
+BEMERKUNG                 = 'Manual FWD'
+IDENTIF_ATTR1             = ''
+IDENTIF_ATTR2             = ''
+IDENTIF_ATTR3             = ''
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+NAME                      = 'Elasticity 80-140 4th Gear, without Slip'
+FAHRWIDERSTAND            = 1
+WARMSTARTAUSWAHL          = 2
+TEILAUFGABE               = 3
+TEILLAST                  = 1
+LAST_STELLUNG <%>         = 
+FORWARD_BACKWARD          = 1
+ELASTSTARTGROESSE         = 1
+STARTGESCHWINDIGKEIT <km/h> = 80.0
+STARTDREHZAHL <1/min>     = 
+STARTGANG                 = 4
+SCHALTEN                  = 1
+FAHRERNAME                = 'Standard'
+STRECKENNAME              = 'Standard'
+TPL_AUSGABE               = 2
+MT_SWITCH                 = 1
+PPD_AUSGABE               = 2
+MS_AUSGABE                = 1
+MS_AUSGABE_OPTION         = 1
+MS_AUSGABE_SCHRITTE       = 
+SIM_QUAS                  = 1
+KURVENFAHRT               = 1
+RADSCHLUPF                = 1
+MESS_V_AKTIV              = 2
+MESS_DZ_AKTIV             = 1
+MESS_S_AKTIV              = 2
+MESS_T_AKTIV              = 2
+STARTERKENNUNG            = 1
+VORLAUFZEIT <s>           = 1.0
+SOC_NEUTRAL               = 1
+SOC_STARTWERT <%>         = 
+GANGWAHL                  = 3
+TIPTRONIC                 = 1
+KICKDOWN                  = 1
+STEUER_PROG               = 1
+ANFAHRMODUS               = 2
+LOCATION                  = 2
+BELADUNG_FAHRZEUG         = 3
+BELADUNG_LEER             = 1
+ZUSATZBELADUNGSSCHALTER   = 1
+ZUSATZLADUNG <kg>         = 100.0
+BELADUNG_HALB             = 1
+ZUSATZLADUNG_REL <%>      = 0.0
+BELADUNG_VOLL             = 2
+ZUSATZINSASSENSCHALTER    = 1
+NR_PERSON                 = 0
+GEWICHT_PRO_PERSON <kg>   = 
+VOLUMENSCHALTER           = 1
+FZG_VOLUMEN <m^3>         = 0.0
+BELADUNGSDICHTE <kg/m^3>  = 
+BELADUNG_ANHAENGER        = 1
+ZUSATZBELADUNGSSCHALTER_ANH = 1
+ZUSATZLADUNG_ANH <kg>     = 0.0
+ZUSATZLADUNG_REL_ANH <%>  = 0.0
+VOLUMENSCHALTER_ANH       = 1
+ANH_VOLUMEN <m^3>         = 0.0
+BELADUNGSDICHTE_ANH <kg/m^3> = 
+SCHWUNGMASSENAUSWAHL      = 2
+SCHWUNGMASSE <kg>         = 2000.0
+SMKNAME                   = 'Europe'
+STR_ID                    = 
+STR_ENTW_DATUM            = "Jan 14, 2005 10:07:20"
+FAH_ID                    = 
+FAH_ENTW_DATUM            = "Jan 14, 2005 10:07:16"
+SMK_ID                    = 
+SMK_ENTW_DATUM            = "Apr 25, 1998 17:48:22"
+MV_ID                     = 
+MV_ENTW_DATUM             = "Jan 14, 2005 10:07:16"
+MDZ_ID                    = 
+MDZ_ENTW_DATUM            = "Jan 14, 2005 10:07:16"
+MWEG_ID                   = 
+MWEG_ENTW_DATUM           = "Jan 14, 2005 10:07:16"
+MZEIT_ID                  = 
+MZEIT_ENTW_DATUM          = "Jan 14, 2005 10:07:16"
+WAY_FILE = 'ways\Standard_5.way'
+DRV_FILE = 'drivers\Standard_3.drv'
+SMK_FILE = 'ways\Europe.smk'
+$=============================================Velocity Measuring Points
+(MESSPUNKTE_V)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = 'km/h'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = 'km/h'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = 'km/h'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+  100.0          140.0          20.0           
+$================================================Speed Measuring Points
+(MESSPUNKTE_DZ)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = '1/min'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = '1/min'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = '1/min'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+$=============================================Distance Measuring Points
+(MESSPUNKTE_WEG)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = 'm'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = 'm'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = 'm'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+  0.0            2000.0         250.0          
+$=================================================Time Measuring Points
+(MESSPUNKTE_ZEIT)
+#VBESCHL_ID               = 
+#VBESCHL_ENTW_DATUM       = "Jan 14, 2005 10:07:16"
+GR_NAME_UNABH1            = 67
+GR_EINH_UNABH1            = 's'
+GR_NAME_UNABH2            = 30
+GR_EINH_UNABH2            = 's'
+GR_NAME_UNABH3            = 63
+GR_EINH_UNABH3            = 's'
+TP_ID                     = 
+{ GR_WERT_UNABH1 GR_WERT_UNABH2 GR_WERT_UNABH3 }
+  0.0            20.0           2.0            

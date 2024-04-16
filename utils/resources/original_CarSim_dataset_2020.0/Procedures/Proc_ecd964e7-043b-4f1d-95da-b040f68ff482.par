@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Procedures`Road X-Y-Z Edges`Driving
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 100
+SSTOP 1200
+OPT_DIRECTION 0
+*SPEED 30
+*TSTOP 100
+*TSTART 0
+*SSTART 0
+*SSTOP 1200
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Road X-Y-Z Edges
+SPEED_TARGET_CONSTANT 30
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_f354f716-9852-47d3-b84f-85521564aa03.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.65m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_f354f716-9852-47d3-b84f-85521564aa03
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_3a51f4ff-4c20-401d-acd1-744d7c75e416.par
+#BlueLink0 Road: 3D Surface (All Properties)`X-Y-Z Edges` Scenic Roads` , Miscellaneous`Road_3a51f4ff-4c20-401d-acd1-744d7c75e416
+
+PARSFILE Roads\Profiles\Profile_3bff0c88-84c1-408a-843d-956a1e2abe43.par
+#BlueLink1 Surface: Roughness Profiles`Example Road Roughness` ` , Miscellaneous`Profile_3bff0c88-84c1-408a-843d-956a1e2abe43
+
+PARSFILE Plot\Setup\Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f.par
+#BlueLink8 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink9 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink10 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how to build a road in CarSim by defining the edges of road using X, Y, and Z coordinates.
+#
+#Click on the 3D road dataset "X-Y-Z Edges" for more information.
+#
+#Combined with the X-Y-Z road definition, the Road Roughness example dataset is also used here to simulate the effects of a slightly rough looped road.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 35 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Road X-Y-Z Edges
+#Library : Procedures
+#DataSet : Road X-Y-Z Edges
+#Category: Driving
+#FileID  : Proc_ecd964e7-043b-4f1d-95da-b040f68ff482
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

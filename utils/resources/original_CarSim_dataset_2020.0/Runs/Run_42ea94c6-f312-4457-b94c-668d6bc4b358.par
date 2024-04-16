@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName CarSim Run Control`Irregularly Shaped Object Detection`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_42ea94c6-f312-4457-b94c-668d6bc4b358
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_514a8692-8a9c-4b5d-a5cb-1c10f231faa0.par
+#BlueLink0 Animator: Camera Setup`224 Azm, 9 El, 23 m` Fixed Camera` , Animator camera`Camera_514a8692-8a9c-4b5d-a5cb-1c10f231faa0
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_01171607-f8fb-43bb-9b07-db83e893689a.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Forward Radar` C-Class` , Math Model`VehLoad_01171607-f8fb-43bb-9b07-db83e893689a
+
+PARSFILE Procedures\Proc_767a5f23-90fc-41f8-8262-77e1f1a619ef.par
+#BlueLink28 Procedures`Intersection, 3-Way w/ Signals, Sidewalks` Road Networks` , Procedure`Proc_767a5f23-90fc-41f8-8262-77e1f1a619ef
+
+PARSFILE Generic\Links\GenLink_51b0334f-1c52-4bc4-a230-8352fc65da5a.par
+#BlueLink9 Generic Group of Links`Building with Support Pillar` Buildings and Props` , Miscellaneous`GenLink_51b0334f-1c52-4bc4-a230-8352fc65da5a
+
+PARSFILE Generic\Group\GenGrp_de038297-5956-4cc4-84c5-aef244e1df8f.par
+#BlueLink10 Generic Data Group`Bus for 3-Way Intersection` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_de038297-5956-4cc4-84c5-aef244e1df8f
+
+PARSFILE Generic\Group\GenGrp_f2373201-bd71-43fd-9d79-290c11940095.par
+#BlueLink11 Generic Data Group`Pedestrians at Intersection` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_f2373201-bd71-43fd-9d79-290c11940095
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Irregularly Shaped Object Detection <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Irregularly Shaped Object Detection
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates the functionality for defining an object bounding box as an XY-defined Polygon.
+#
+#The building on the southeast corner of the intersection has a diagonal face on its northwest corner. The polygonal bounding box follows this shape, allowing a number of objects to be detected in the space where the square bounding box would have obstructed the sensor.
+#
+#Additionally, the bus that pulls up to the traffic signal has a customized bounding box.  This allows the box to follow the curved face of the bus as well as the contours of the mirrors which extend significantly from the front and sides of the bus.
+#
+#Events and VS Commands are used to ensure that the traffic objects obey the traffic signal.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Irregularly Shaped Object Detection
+#Library : CarSim Run Control
+#DataSet : Irregularly Shaped Object Detection
+#Category: ADAS and Active Safety
+#FileID  : Run_42ea94c6-f312-4457-b94c-668d6bc4b358
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

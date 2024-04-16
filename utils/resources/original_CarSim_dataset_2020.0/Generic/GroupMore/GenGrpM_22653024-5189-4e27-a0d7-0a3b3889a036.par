@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`Throttle Fill`HUD Gauges
+#VehCode Generic Group (More)
+#MiscYellow0
+ADD_ENTITY hud_image Throttle Fill BG
+  location 10 10 100 200
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  image_file Animator\Hud\0_100.dds
+END_ENTITY hud_image Throttle Fill BG
+#ENDMYellow
+
+
+#MiscYellow1
+ANI_Throttle
+WRT_Throttle
+ADD_ENTITY hud_image Throttle Fill Bar
+  location 32 35 33 149
+  red 0
+  green Throttle
+  blue 0
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  scale_y Throttle
+  center_location 0.0 -0.5
+  image_file Animator\Hud\Bar_Fade.dds
+END_ENTITY hud_image Throttle Fill Bar
+#ENDMYellow
+
+
+
+#MiscYellow3
+ADD_ENTITY hud_text Throttle Header
+  prefix Throttle
+  location 15 205 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  color 1 1 1 1
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_ENTITY hud_text Throttle Header
+#ENDMYellow
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { HUD Gauges } Throttle Fill
+#Library : Generic Data Group (More)
+#DataSet : Throttle Fill
+#Category: HUD Gauges
+#FileID  : GenGrpM_22653024-5189-4e27-a0d7-0a3b3889a036
+#Product : CarSim 2020.0
+#VehCode Generic Group (More)
+
+END

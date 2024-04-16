@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Models: LabVIEW for Windows (VI)`ACC 2nd Car`labview_two_vehicles
+#RunMdlFile Extensions\LabView\Multi_Vehicle\i_i_ACC.vi
+#CheckBox0 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox2 0    
+#RingCtrl0 1
+#RingCtrl2 0
+*X64SOLVER 0
+PARSFILE IO_Channels\I_Channels\Import_d871efbf-a0fd-4aab-9a70-0b37d72c1dd4.par
+#BlueLink0 I/O Channels: Import`Radar Active Cruise Control (Ext. Sen.)` RADAR: Active Cruise Control` , Import`Import_d871efbf-a0fd-4aab-9a70-0b37d72c1dd4
+
+PARSFILE IO_Channels\O_Channels\Export_cd46af09-813a-451b-b6bb-def0b4b3623a.par
+#BlueLink1 I/O Channels: Export`Radar Active Cruise Control (Ext. Sen.)` RADAR: Active Cruise Control` , Import/Export`Export_cd46af09-813a-451b-b6bb-def0b4b3623a
+
+#MiscYellow1
+simfile Car2.sim
+#ENDMYellow
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This example illustrates a simple LabVIEW model that displays the tire lateral forces based on 4 exported variables from CarSim.  (Libraries -> Models -> Models: LabVIEW for Windows (VI))
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: LabVIEW for Windows (VI); { labview_two_vehicles } ACC 2nd Car
+#Library : Models: LabVIEW for Windows (VI)
+#DataSet : ACC 2nd Car
+#Category: labview_two_vehicles
+#FileID  : LabVIEW_4eaf357e-433f-40a7-b0fa-45a56c26478d
+#Product : CarSim 2020.0
+#VehCode 
+
+END

@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Animator: HUD`ESC`ADAS Alerts
+#CheckBox1 1    
+#CheckBox3 0    
+
+#RingCtrl0 1
+#RingCtrl1 6
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+*LOCX_1 -8
+*VAR_NAME_1 ESC_Active
+
+*IMG_NAME_1 Animator\2D_HUD_Icons\Distance_Warning\Distance_Warning.png
+
+#Selection 6 for Icon 0
+#Selection_1 6 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX -160 locY 0
+#Selection_4 Fixed: 1 VarName: ESC_Active  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+! ESC Alert
+ANI_ESC_Active
+WRT_ESC_Active
+ADD_ENTITY hud_image HUD_ESC_Alert
+location -160 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity ESC_Active
+image_file Resources\Animator\2D_HUD_Icons\Stability_Control\Stability_Control.png
+END_ENTITY hud_image HUD_ESC_Alert
+
+#EMBEDDED_NOTES
+#Forward collision warning, offset a little to allow for ACC indicator.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: HUD; { ADAS Alerts } ESC
+#Library : Animator: HUD
+#DataSet : ESC
+#Category: ADAS Alerts
+#FileID  : HUD_2756d552-9b8f-40af-b7ce-e7cd567c1caf
+#Product : CarSim 2020.0
+#VehCode HUD
+
+END

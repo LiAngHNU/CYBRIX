@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName CarSim Run Control`Rear Twin Clutch Control`Simulink and LabVIEW Models
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_7a75cdaa-a14e-4ad2-895e-1874493125be
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_4a4163eb-910b-402a-8faa-f6e187e1cc55.par
+#BlueLink12 Models: Simulink`Differential Controller` External Powertrain` , Models`Simlink_4a4163eb-910b-402a-8faa-f6e187e1cc55
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 5
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_5bed9acc-50c0-4422-8b1d-19c33d027020.par
+#BlueLink2 Vehicle: Assembly`D-Class, SUV: Ext. Rr. Twin Clutch Ctrl.` D-Class` , Math Model`Vehicle_5bed9acc-50c0-4422-8b1d-19c33d027020
+
+PARSFILE Procedures\Proc_fa43ada2-6709-46dc-945f-fab14879675c.par
+#BlueLink28 Procedures`Full Throttle Acceleration` Accel. and Brake Testing` , Procedure`Proc_fa43ada2-6709-46dc-945f-fab14879675c
+
+PARSFILE Roads\3D_Road\Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2
+
+PARSFILE Plot\Setup\Plot_8077fc50-941c-45ed-a470-23f6069121a5.par
+#BlueLink15 Plot: Setup`Wheel Drive Torques` Powertrain` , Plot`Plot_8077fc50-941c-45ed-a470-23f6069121a5
+
+PARSFILE Plot\Setup\Plot_2cd77a14-4a29-44d1-a8e0-03a81f9c74cf.par
+#BlueLink16 Plot: Setup`Torques in Powertrain` Powertrain` , Plot`Plot_2cd77a14-4a29-44d1-a8e0-03a81f9c74cf
+
+PARSFILE Plot\Setup\Plot_bb603a0f-832f-4898-a9d8-b54b1ed8d883.par
+#BlueLink17 Plot: Setup`Trans. Control: Gear From Closed-loop` Controls: Driver` , Plot`Plot_bb603a0f-832f-4898-a9d8-b54b1ed8d883
+
+PARSFILE Plot\Setup\Plot_fee9314f-6343-4691-83cc-3990f5bd08bd.par
+#BlueLink18 Plot: Setup`Twin Clutch Control Input` Controls: Chassis and Powertrain` , Plot`Plot_fee9314f-6343-4691-83cc-3990f5bd08bd
+
+PARSFILE Plot\Setup\Plot_9a7127aa-7b01-4699-9997-7e34388e70d6.par
+#BlueLink19 Plot: Setup`Twin Clutch Torque` Powertrain` , Plot`Plot_9a7127aa-7b01-4699-9997-7e34388e70d6
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_185d62e8-e27d-4be3-87c4-3eeed284ad17.png
+WRITE_SENSOR_DETECT
+Title Rear Twin Clutch Control <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Rear Twin Clutch Control
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates a Simulink-controlled twin clutch rear differential. (Libraries > Models > Models: Simulink)
+#
+#Browse to the Vehicle: Assembly screen and click on the powertrain blue link to see the settings for the externally controlled twin clutch rear differential.
+#
+#Click on the blue link "Differential Controller" to see how the Simulink model is connected to CarSim, and how to define the import and export variables that allow CarSim and Simulink to communicate.
+#
+#You can choose whether to Add, Replace, or Mulitply certain Simulink imported variables to their corresponding variables in CarSim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Rear Twin Clutch Control
+#Library : CarSim Run Control
+#DataSet : Rear Twin Clutch Control
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_7a75cdaa-a14e-4ad2-895e-1874493125be
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

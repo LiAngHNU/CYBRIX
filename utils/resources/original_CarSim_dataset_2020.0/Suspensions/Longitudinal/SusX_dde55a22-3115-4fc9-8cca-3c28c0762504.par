@@ -1,0 +1,119 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Twist Beam`Twist Beam (Legacy, Pre-CS 2018)
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+SUSP_X_COMBINE ADD
+*SCALAR2 0
+
+#DiagramOne0
+SUSP_X_TABLE SPLINE
+-86.5, -1.12
+-86.31, -1.15
+-85.38, -1.23
+-83.08, -1.45
+-78.67, -1.78
+-73.23, -2.12
+-67.5, -2.42
+-62.11, -2.6
+-56.79, -2.74
+-51.21, -2.78
+-45.84, -2.79
+-40.49, -2.72
+-34.92, -2.56
+-29.66, -2.36
+-24.31, -2.09
+-18.75, -1.72
+-13.47, -1.33
+-8.2, -0.86
+-2.71, -0.3
+2.58, 0.31
+7.92, 0.99
+13.4, 1.75
+18.62, 2.58
+23.91, 3.43
+29.42, 4.41
+34.65, 5.39
+39.89, 6.46
+45.31, 7.6
+50.45, 8.79
+55.6, 10.02
+60.9, 11.35
+66.01, 12.7
+71.06, 14.05
+76.21, 15.51
+81.17, 17
+85.58, 18.29
+89.69, 19.49
+93.61, 20.68
+96.64, 21.56
+98.19, 22
+98.6, 22.1
+ENDTABLE
+SUSP_X_JNC_OTHER_SIDE_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+SUSP_X_AXLE_TABLE SPLINE
+-86.5, -1.12
+-86.31, -1.15
+-85.38, -1.23
+-83.08, -1.45
+-78.67, -1.78
+-73.23, -2.12
+-67.5, -2.42
+-62.11, -2.6
+-56.79, -2.74
+-51.21, -2.78
+-45.84, -2.79
+-40.49, -2.72
+-34.92, -2.56
+-29.66, -2.36
+-24.31, -2.09
+-18.75, -1.72
+-13.47, -1.33
+-8.2, -0.86
+-2.71, -0.3
+2.58, 0.31
+7.92, 0.99
+13.4, 1.75
+18.62, 2.58
+23.91, 3.43
+29.42, 4.41
+34.65, 5.39
+39.89, 6.46
+45.31, 7.6
+50.45, 8.79
+55.6, 10.02
+60.9, 11.35
+66.01, 12.7
+71.06, 14.05
+76.21, 15.51
+81.17, 17
+85.58, 18.29
+89.69, 19.49
+93.61, 20.68
+96.64, 21.56
+98.19, 22
+98.6, 22.1
+ENDTABLE
+
+#EMBEDDED_NOTES
+#Trailing Arm Length = 609 mm
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { Twist Beam (Legacy, Pre-CS 2018) } Twist Beam
+#Library : Suspension: Longitudinal Movement
+#DataSet : Twist Beam
+#Category: Twist Beam (Legacy, Pre-CS 2018)
+#FileID  : SusX_dde55a22-3115-4fc9-8cca-3c28c0762504
+#Product : CarSim 2020.0
+#VehCode Longitudinal Movement
+
+END

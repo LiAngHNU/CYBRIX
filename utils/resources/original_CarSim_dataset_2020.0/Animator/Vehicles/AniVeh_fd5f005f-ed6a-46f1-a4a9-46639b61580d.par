@@ -1,0 +1,110 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`3A European Cab-Over`Traffic and Moving Objects: Commercial
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 3
+OBJ_X_LENGTH 5250
+OBJ_Y_LENGTH 2438
+OBJ_Z_LENGTH 3200
+*DZ_V 0
+*LAT_WC 2030
+*LAT_WC_2 1863
+*HWC 525
+*WHEEL_RATIO 1
+*LAXLE_1 0
+*LAXLE_2 4000
+*LAXLE_3 5250
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_fd5f005f-ed6a-46f1-a4a9-46639b61580d.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -4
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -4
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -5.25
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -5.25
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.49875
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_6656b801-4de9-4b63-94df-e9a490911372.par
+#BlueLink1 Animator: Shape Assembly`Euro Cab Over (3A): Chassis` Truck Lead Units` , Vehicle Body`ShpGrp_6656b801-4de9-4b63-94df-e9a490911372
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_90300621-176e-42fd-b8fa-a7bb713db646.par
+#BlueLink3 Animator: Shape File Link`Frame Rails (Long): Brake Lights` Trucks: Chassis` , Brake Lights`Shape_90300621-176e-42fd-b8fa-a7bb713db646
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_9beb714f-f234-4788-b286-3ba67f1f40e0.par
+#BlueLink7 Animator: Shape Assembly`Euro Cab Over: Cab` Truck Lead Units` , Vehicle Body`ShpGrp_9beb714f-f234-4788-b286-3ba67f1f40e0
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_09ade48c-1ac2-4680-a0bc-e53feab77176
+
+EXPORT_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Traffic and Moving Objects: Commercial } 3A European Cab-Over
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 3A European Cab-Over
+#Category: Traffic and Moving Objects: Commercial
+#FileID  : AniVeh_fd5f005f-ed6a-46f1-a4a9-46639b61580d
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

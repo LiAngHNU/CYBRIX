@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName CarSim Run Control`LabVIEW Baseline Example`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d78d5b25-60f1-4242-a3d8-2ce9e262c3e9
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\LabViewWin\LabVIEW_e5a4c891-2aad-46d4-96f7-bed35b2ddae3.par
+#BlueLink12 Models: LabVIEW for Windows (VI)`Base Model` ` , Models`LabVIEW_e5a4c891-2aad-46d4-96f7-bed35b2ddae3
+
+PARSFILE Animator\Cameras\Camera_173075a0-4016-49eb-8ce2-c8488776e092.par
+#BlueLink0 Animator: Camera Setup`3 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_173075a0-4016-49eb-8ce2-c8488776e092
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title LabVIEW Baseline Example <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE LabVIEW Baseline Example
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example demonstrates a simple LabVIEW model that displays the tire lateral forces based on 4 exported variables from CarSim. (Libraries > Models > Models: LabVIEW for Windows (VI))
+#
+#Click on the blue link "LabVIEW Base Model" to see how the LabVIEW model is connected to CarSim, and how to define the import and export variables that allow CarSim and LabVIEW to communicate.
+#
+#You can choose whether to Add, Replace, or Mulitply certain LabVIEW imported variables to their corresponding variables in CarSim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } LabVIEW Baseline Example
+#Library : CarSim Run Control
+#DataSet : LabVIEW Baseline Example
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_d78d5b25-60f1-4242-a3d8-2ce9e262c3e9
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

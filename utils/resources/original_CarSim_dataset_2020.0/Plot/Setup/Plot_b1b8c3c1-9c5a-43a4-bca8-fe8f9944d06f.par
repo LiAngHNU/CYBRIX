@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Plot: Setup`Road Station for Tires`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS S_Rd_L1, Time
+PLOTCHANNELS S_Rd_L2, Time
+PLOTCHANNELS S_Rd_R1, Time
+PLOTCHANNELS S_Rd_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road Station for Tires
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Road Station for Tires
+#Library : Plot: Setup
+#DataSet : Road Station for Tires
+#Category: Tracking
+#FileID  : Plot_b1b8c3c1-9c5a-43a4-bca8-fe8f9944d06f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

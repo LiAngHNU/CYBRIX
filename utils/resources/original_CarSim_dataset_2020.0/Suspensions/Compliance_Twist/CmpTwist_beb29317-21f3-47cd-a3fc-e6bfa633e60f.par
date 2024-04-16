@@ -1,0 +1,121 @@
+PARSFILE
+#FullDataName Suspension: Twist Beam Compliance, Springs, and Dampers (Legacy)`B-Class, Hatchback - Rear (Legacy)`
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+#RingCtrl13 1
+*KSPRING_L 35
+*FRICTION_L 20
+*BETA_C_L 3
+*BETA_E_L 3
+*L_SPG_ADJ_L 0
+*R_SPRING_L 0.8
+*R_DAMPER_L 0.8
+*R_JOUNCE_L 0.8
+*R_REBOUND_L 0.8
+*CT_FX_L 0.00015
+*CS_FY_L -0.000032
+*CS_MZ_L 1.2E-03
+*CC_FX_L 0
+*CI_FY_L 1.25E-03
+*CI_MZ_L 0.0002
+*C_LONG_L 3.65E-03
+*C_LAT_L 9.42E-06
+*CT_FZ_L 0.000011
+*CC_FZ_L -0.00015
+DAUX 0
+L_SPRINGS 1375
+L_DAMPERS 1375
+L_JNC_STOPS 1375
+L_REB_STOPS 1375
+
+iside 1
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 35
+FS_EXT_COEFFICIENT 35
+FS_COMP_OFFSET 20
+FS_EXT_OFFSET -20
+SPRING_COMP_BETA 3
+SPRING_EXT_BETA 3
+CMP_SPR_SEAT_COEFFICIENT 0.8
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_06339072-ca43-46c4-af82-ec3bf59d6ffc.par
+#BlueLink1 Suspension: Shock Absorber`Big Car` Passenger Car` , Left damper`Shock_06339072-ca43-46c4-af82-ec3bf59d6ffc
+
+CMP_DAMP_COEFFICIENT 0.8
+PARSFILE Suspensions\Jounce_Rebound\JncReb_a149b76b-e734-43ee-b840-d0fd8769d993.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+70 mm / -50 mm` Jounce Range: 50 mm to 99 mm` , Jounce / rebound stop force`JncReb_a149b76b-e734-43ee-b840-d0fd8769d993
+
+CMP_JSTOP_COEFFICIENT 0.8
+CMP_RSTOP_COEFFICIENT 0.8
+CT_FX_COEFFICIENT 0.00015
+CS_FY_COEFFICIENT -0.000032
+CS_MZ_COEFFICIENT 1.2E-03
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 1.25E-03
+CI_MZ_COEFFICIENT 0.0002
+C_LONG_COEFFICIENT 3.65E-03
+C_LAT_COEFFICIENT 9.42E-06
+CT_FZ_COEFFICIENT 0.000011
+CC_FZ_COEFFICIENT -0.00015
+
+iside 2
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 35
+FS_EXT_COEFFICIENT 35
+FS_COMP_OFFSET 20
+FS_EXT_OFFSET -20
+SPRING_COMP_BETA 3
+SPRING_EXT_BETA 3
+CMP_SPR_SEAT_COEFFICIENT 0.8
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_06339072-ca43-46c4-af82-ec3bf59d6ffc.par
+#BlueLink1 Suspension: Shock Absorber`Big Car` Passenger Car` , Left damper`Shock_06339072-ca43-46c4-af82-ec3bf59d6ffc
+
+CMP_DAMP_COEFFICIENT 0.8
+PARSFILE Suspensions\Jounce_Rebound\JncReb_a149b76b-e734-43ee-b840-d0fd8769d993.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+70 mm / -50 mm` Jounce Range: 50 mm to 99 mm` , Jounce / rebound stop force`JncReb_a149b76b-e734-43ee-b840-d0fd8769d993
+
+CMP_JSTOP_COEFFICIENT 0.8
+CMP_RSTOP_COEFFICIENT 0.8
+CT_FX_COEFFICIENT 0.00015
+CS_FY_COEFFICIENT -0.000032
+CS_MZ_COEFFICIENT 1.2E-03
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 1.25E-03
+CI_MZ_COEFFICIENT 0.0002
+C_LONG_COEFFICIENT 3.65E-03
+C_LAT_COEFFICIENT 9.42E-06
+CT_FZ_COEFFICIENT 0.000011
+CC_FZ_COEFFICIENT -0.00015
+PARSFILE Suspensions\Aux_Roll\AuxMx_071374ca-01d7-41fc-9780-36167f9d7948.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Linear: 251 N-m/deg` Linear` , Roll Moment`AuxMx_071374ca-01d7-41fc-9780-36167f9d7948
+
+
+#EMBEDDED_NOTES
+#Twist beam suspensions have been updated to include lateral spring and damper spacing.  If no value is entered for lateral spring spacing, the track width is used by default.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Twist Beam Compliance, Springs, and Dampers (Legacy); B-Class, Hatchback - Rear (Legacy)
+#Library : Suspension: Twist Beam Compliance, Springs, and Dampers (Legacy)
+#DataSet : B-Class, Hatchback - Rear (Legacy)
+#Category: 
+#FileID  : CmpTwist_beb29317-21f3-47cd-a3fc-e6bfa633e60f
+#Product : CarSim 2020.0
+#VehCode Twist Beam
+
+END

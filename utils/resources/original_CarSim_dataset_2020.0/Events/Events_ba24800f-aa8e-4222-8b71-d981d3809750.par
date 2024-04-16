@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Events`Braking for Object`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+
+#RingCtrl0 <
+#RingCtrl1 <
+#RingCtrl10 2
+#RingCtrl11 4
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 Vxz_Fwd
+*NAME2 Ax_Calc
+*VALUE1 .1
+*VALUE2 .25
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+#MiscYellow0
+set_ispeed_for_id STOP_ID ! set scope for next 2 lines
+speed_target_gain = Vxz_Fwd
+eq_in sstart_speed_target =  Station + ObjDist - StopDist
+speed_id_sc = STOP_ID ! have speed controller use this dataset
+#ENDMYellow
+
+MAKE_EVENT Vxz_Fwd < .1 ; Events\Events_587bc6cf-ca50-4d1f-9b2d-5e64051e05c5.par
+#BlueLink0 Events`Wait to go` Pedestrian and Bike Detection` , Events`Events_587bc6cf-ca50-4d1f-9b2d-5e64051e05c5
+
+MAKE_EVENT Ax_Calc < .25 ; Events\Events_6457ae0f-84a8-416b-a6d9-f376dd0ffd0a.par
+#BlueLink1 Events`Ensure Avoidance` ADAS Detection` , Events`Events_6457ae0f-84a8-416b-a6d9-f376dd0ffd0a
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Uses information from Sensor 1 and Ax parameter from speed controller.
+#
+#Target stop is Station + ObjDist - StopDist.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Braking for Object
+#Library : Events
+#DataSet : Braking for Object
+#Category: ADAS Detection
+#FileID  : Events_ba24800f-aa8e-4222-8b71-d981d3809750
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`Hitch Deflections`Hitch
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DefX_H, Time
+PLOTCHANNELS DefY_H, Time
+PLOTCHANNELS DefZ_H, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Hitch Deflections
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hitch } Hitch Deflections
+#Library : Plot: Setup
+#DataSet : Hitch Deflections
+#Category: Hitch
+#FileID  : Plot_7a92bb62-5e6e-4cc8-904e-55127e8e224f
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Brakes: Four-Wheel System`(Sdn): MC Press, No ABS`E-Class
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 1
+#RingCtrl4 1
+#RingCtrl6 1
+#RingCtrl8 2
+#RingCtrl10 1
+#RingCtrl12 1
+#RingCtrl14 0
+OPT_BK_PEDAL 0
+TL_L1 0
+TL_L2 0
+
+iaxle 1
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 300
+MY_BRAKE_COEFFICIENT 300
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 300
+MY_BRAKE_COEFFICIENT 300
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+
+iaxle 2
+iside 1
+symbol_add <<ax_bk>> 1
+symbol_set <<side>> L
+TLAG_BK 0
+PARSFILE Brakes\Proportioning\BrkProp_139de4eb-5c60-4501-a053-695e60ad9d1b.par
+#BlueLink6 Brakes: Proportioning / Limiting Valve`Unity until 2.0 MPa then 30%` ` , Proportioning`BrkProp_139de4eb-5c60-4501-a053-695e60ad9d1b
+
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 200
+MY_BRAKE_COEFFICIENT 200
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+PARSFILE Brakes\Proportioning\BrkProp_139de4eb-5c60-4501-a053-695e60ad9d1b.par
+#BlueLink6 Brakes: Proportioning / Limiting Valve`Unity until 2.0 MPa then 30%` ` , Proportioning`BrkProp_139de4eb-5c60-4501-a053-695e60ad9d1b
+
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 200
+MY_BRAKE_COEFFICIENT 200
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+
+LOG_ENTRY Used Dataset: Brakes: Four-Wheel System; { E-Class } (Sdn): MC Press, No ABS
+#Library : Brakes: Four-Wheel System
+#DataSet : (Sdn): MC Press, No ABS
+#Category: E-Class
+#FileID  : Brk4W_36269cc2-32ef-40e3-90d6-7c5619dfc973
+#Product : CarSim 2020.0
+#VehCode 4-Wheel System
+
+END

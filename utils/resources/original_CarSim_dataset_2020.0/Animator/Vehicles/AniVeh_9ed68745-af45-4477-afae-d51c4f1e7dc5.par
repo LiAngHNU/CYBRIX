@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Tractor`Traffic and Moving Objects: Commercial
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox6 1    
+#CheckBox8 0    
+
+OBJ_X_LENGTH 2050
+OBJ_Y_LENGTH 2240
+OBJ_Z_LENGTH 1944
+*DZ_V 0
+*LAT_WC 1450
+*LAT_WC_2 1705
+*HWC 550
+*WHEEL_RATIO 0.95
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_9ed68745-af45-4477-afae-d51c4f1e7dc5.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_81fcec4b-d0ea-4878-b3cc-82ad2f15edb2.par
+SET_SCALE_X 0.95
+SET_SCALE_Y 0.95
+SET_SCALE_Z 0.95
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.725
+SET_OFFSET_Z 0.5225
+TIRE_ANI_PARSFILE Animator\STL\Shape_81fcec4b-d0ea-4878-b3cc-82ad2f15edb2.par
+SET_SCALE_X 0.95
+SET_SCALE_Y 0.95
+SET_SCALE_Z 0.95
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.725
+SET_OFFSET_Z 0.5225
+TIRE_ANI_PARSFILE Animator\STL\Shape_014a6480-fca7-405c-b970-5cc818b20b98.par
+SET_SCALE_X 0.95
+SET_SCALE_Y 0.95
+SET_SCALE_Z 0.95
+SET_OFFSET_X -2.05
+SET_OFFSET_Y 0.8525
+SET_OFFSET_Z 0.5225
+TIRE_ANI_PARSFILE Animator\STL\Shape_014a6480-fca7-405c-b970-5cc818b20b98.par
+SET_SCALE_X 0.95
+SET_SCALE_Y 0.95
+SET_SCALE_Z 0.95
+SET_ANGLE_X 180
+SET_OFFSET_X -2.05
+SET_OFFSET_Y -0.8525
+SET_OFFSET_Z 0.5225
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_465fc825-198b-4715-baf6-b4c7accc4e53.par
+#BlueLink1 Animator: Shape Assembly`Tractor` Utility Vehicles` , Vehicle Body`ShpGrp_465fc825-198b-4715-baf6-b4c7accc4e53
+
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_014a6480-fca7-405c-b970-5cc818b20b98.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Tractor (Rear)` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_014a6480-fca7-405c-b970-5cc818b20b98
+
+EXPORT_PARSFILE Animator\STL\Shape_81fcec4b-d0ea-4878-b3cc-82ad2f15edb2.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Tractor (Front)` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_81fcec4b-d0ea-4878-b3cc-82ad2f15edb2
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Traffic and Moving Objects: Commercial } Tractor
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Tractor
+#Category: Traffic and Moving Objects: Commercial
+#FileID  : AniVeh_9ed68745-af45-4477-afae-d51c4f1e7dc5
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

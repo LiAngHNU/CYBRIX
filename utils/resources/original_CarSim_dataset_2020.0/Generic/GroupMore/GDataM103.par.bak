@@ -1,0 +1,70 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`Throttle Fill`HUD Gauges
+#VehCode Generic group
+#MiscYellow0
+HUD_ADD_ELEMENT image_widget
+hud_base_name Throttle Fill BG
+hud_base_location 10 10 100 200
+hud_base_align_x 0
+hud_base_align_y 2
+hud_base_size_mode 1
+hud_base_place_mode 1
+hud_base_alpha_scale_channel time - 0.75
+hud_image_file Images\Hud\0_100.dds
+HUD_END_ELEMENT
+#ENDMYellow
+
+
+#MiscYellow1
+HUD_ADD_ELEMENT image_widget
+hud_base_name Throttle Fill Bar
+hud_base_location 32 35 33 149
+hud_base_color_red_channel 0
+hud_base_color_green_channel Throttle
+hud_base_color_blue_channel 0
+hud_base_align_x 0
+hud_base_align_y 2
+hud_base_size_mode 1
+hud_base_place_mode 1
+hud_base_y_scale_channel Throttle
+hud_base_center_location 0.0 -0.5
+hud_base_alpha_scale_channel time - 0.75
+hud_image_file Images\Hud\Bar_Fade.dds
+HUD_END_ELEMENT
+#ENDMYellow
+
+
+
+#MiscYellow3
+HUD_ADD_ELEMENT text_widget
+hud_base_name Throttle Header
+hud_text_label Throttle
+hud_base_location 15 205 100 18
+hud_base_align_x 0
+hud_base_align_y 2
+hud_base_size_mode 1
+hud_base_place_mode 1
+hud_text_color 1 1 1 1
+hud_text_backdrop_color .3 .3 .3 0.5
+hud_text_font VeraMono.ttf
+hud_base_alpha_scale_channel time - 0.75
+HUD_END_ELEMENT
+#ENDMYellow
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { HUD Gauges } Throttle Fill
+#Library : Generic Data Group (More)
+#DataSet : Throttle Fill
+#Category: HUD Gauges
+#FileID  : GDataM103
+#Product : CarSim 8.2 Beta, September 2012
+#Last update: 10-11-2012 16:03
+#VehCode Generic group
+
+END

@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Models: Simulink`Differential Controller - Multi-Port`External Powertrain
+#RunMdlFile Extensions\Simulink\Differential_MP_CS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Differential_MP_CS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+#BlueLink0 ` , Import` , Import` , Import`
+
+#BlueLink1 ` , Import/Export` , Import/Export` , Import/Export`
+
+PARSFILE IO_Channels\Ports\Port_8e0bbf7e-e32e-4042-b165-a22d956735b6.par
+#BlueLink2 I/O Channels: Ports`Differential Controller: Multi-Port` Powertrain` , Miscellaneous`Port_8e0bbf7e-e32e-4042-b165-a22d956735b6
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This dataset specifies a Simulink model that is used for the Active Transfer Case Control and Rear Twin Clutch Control examples.
+#
+#The Simulink model exports control positions for the differential clutches, twin-clutches, and all differential torques that are used in 2-axle driven powertrain systems. The model simply varies the clutch control position sinusoidally. Therefore, the simulation results should show some sinusoidal control responses.
+#
+#The CarSim powertrain model involves some detailed interactions between variables, so the option to Add, Replace, or Multiply the Simulink imported variables with their corresponding variables in CarSim is not available for most powertrain variables.
+#
+#Instead, Add is the only import mode available for most powertrain import variables, and it is necessary to specify that certain components are handled with an external model on the powertrain library screen.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { External Powertrain } Differential Controller - Multi-Port
+#Library : Models: Simulink
+#DataSet : Differential Controller - Multi-Port
+#Category: External Powertrain
+#FileID  : Simlink_d255063b-5725-4cd9-a5bf-4d98821f8324
+#Product : CarSim 2020.0
+#VehCode 
+
+END

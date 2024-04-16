@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Models: Simulink`ABS Controller Multi-Port SLX Format`Braking Controls
+#RunMdlFile Extensions\Simulink\abs_SLX_CS9.slx
+SIMULINK_MODEL_FILE Extensions\Simulink\abs_SLX_CS9.slx
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+#BlueLink1 ` , Import/Export` , Import/Export` , Import/Export`
+
+PARSFILE IO_Channels\Ports\Port_bea93695-fba8-4f93-b416-da97a6f4dc53.par
+#BlueLink2 I/O Channels: Ports`ABS Controller: Multi-Port` Braking Controls` , Miscellaneous`Port_bea93695-fba8-4f93-b416-da97a6f4dc53
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This “Models: Simulink” dataset links to a Simulink model of an ABS controller with multiple ports for the import and export variables.
+#
+#The Simulink model calculates the brake system’s wheel cylinder pressure and this data is imported into CarSim. CarSim calculates a variety of vehicle properties including the equivalent longitudinal wheel speeds and brake master cylinder pressure, and this data is returned to Simulink.
+#
+#The Simulink .slx file format is used, introduced in Matlab / Simulink R2012b.
+#
+#The CarSim screen I/O Channels: Ports is used, which means up to 20 individual I/O Channels: Imports datasets and up 20 I/O Channels: Exports datasets can be specified, each with their own sets of import and export variables.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Braking Controls } ABS Controller Multi-Port SLX Format
+#Library : Models: Simulink
+#DataSet : ABS Controller Multi-Port SLX Format
+#Category: Braking Controls
+#FileID  : Simlink_17404883-f4f1-438c-b00a-ce20d3ee594e
+#Product : CarSim 2020.0
+#VehCode 
+
+END

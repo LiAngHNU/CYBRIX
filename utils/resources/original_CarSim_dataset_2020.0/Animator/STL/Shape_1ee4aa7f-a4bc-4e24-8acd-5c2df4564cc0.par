@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Utility Flatbed Trailer (2A): Fender`Trailers
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trailers\Ballast_Trailer\2A_Ballast_Trailer_Fenders.obj
+#ENDMYellow
+
+SET_COLOR 0.5 0.5 0.5
+SET_OFFSET_X -4.395
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.305
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 1    
+
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_67cc4229-fee5-4589-bc48-0f75aae5753d.par
+#BlueLink2 Animator: Camera Setup`Vehicles - Trailers` Shape Preview` , Video Camera`Camera_67cc4229-fee5-4589-bc48-0f75aae5753d
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_1ee4aa7f-a4bc-4e24-8acd-5c2df4564cc0.png
+
+#EMBEDDED_NOTES
+#The coordinate offsets for this shape come from the vehicle dimensions:
+#
+#X - This is the center of the axle group (+ = forward of hitch point)
+#Y - No Adjustment
+#Z - This is the distance from the hitch point to the trailer sprung mass origin
+#
+#No reference lengths are set because that information is controlled by the Animator Group.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trailers } Utility Flatbed Trailer (2A): Fender
+#Library : Animator: Shape File Link
+#DataSet : Utility Flatbed Trailer (2A): Fender
+#Category: Trailers
+#FileID  : Shape_1ee4aa7f-a4bc-4e24-8acd-5c2df4564cc0
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

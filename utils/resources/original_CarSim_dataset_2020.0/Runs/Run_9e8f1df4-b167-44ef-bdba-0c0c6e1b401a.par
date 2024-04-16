@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName CarSim Run Control`Clothoid Connectors (Automatic)`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_9e8f1df4-b167-44ef-bdba-0c0c6e1b401a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf.par
+#BlueLink2 Vehicle: Assembly`D-Class, Minivan` D-Class` , Math Model`Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf
+
+PARSFILE Procedures\Proc_ae1dc2ed-a4d3-48c4-b7ea-56a219556cb7.par
+#BlueLink28 Procedures`S-Turn w/ Clothoids` Road Networks` , Procedure`Proc_ae1dc2ed-a4d3-48c4-b7ea-56a219556cb7
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+
+SPECIAL_PARSFILE Runs\Run_a5ef4fec-83b2-4cc6-a250-dd541034ba6d.par
+#BlueLink23 CarSim Run Control`Clothoid Connectors (Table-Defined)` Road Networks: 3D Geometry and Terrain` , Overlay run or ERD file`Run_a5ef4fec-83b2-4cc6-a250-dd541034ba6d
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf.png
+WRITE_SENSOR_DETECT
+Title Clothoid Connectors (Automatic) <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Clothoid Connectors (Automatic)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is an example of building an S-turn.
+#
+#The Path Segment Builder is used to automatically generate clothoid connectors that blend the entry curvature with the existing curvature.
+#
+#The vehicle is controlled using the path for both steering and speed.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: 3D Geometry and Terrain } Clothoid Connectors (Automatic)
+#Library : CarSim Run Control
+#DataSet : Clothoid Connectors (Automatic)
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_9e8f1df4-b167-44ef-bdba-0c0c6e1b401a
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

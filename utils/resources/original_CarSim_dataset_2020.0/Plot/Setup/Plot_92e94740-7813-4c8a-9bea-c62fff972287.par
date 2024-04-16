@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Road ID for Tires`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS RdID_L1, Time
+PLOTCHANNELS RdID_R1, Time
+PLOTCHANNELS RdID_L2, Time
+PLOTCHANNELS RdID_R2, Time
+PLOTCHANNELS RdID_L3, Time
+PLOTCHANNELS RdID_R3, Time
+PLOTCHANNELS RdID_L4, Time
+PLOTCHANNELS RdID_R4, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Road ID for Tires
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Road ID for Tires
+#Library : Plot: Setup
+#DataSet : Road ID for Tires
+#Category: Tracking
+#FileID  : Plot_92e94740-7813-4c8a-9bea-c62fff972287
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`Pickup, Full Size w/ 2000 kg Payload`Pickup, Full Size
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_3de50dc1-0c16-4bc3-837d-70fa3695b844.par
+#BlueLink0 Vehicle: Assembly`Pickup, Full Size Sup Cab 8 Bed` Pickup Trucks` , Lead Unit`Vehicle_3de50dc1-0c16-4bc3-837d-70fa3695b844
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_224495de-fe46-484d-a42c-fb917224aabd.par
+#BlueLink1 Payload: Custom`Crate for Pickup` ` , Miscellaneous`Custom_224495de-fe46-484d-a42c-fb917224aabd
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_3de50dc1-0c16-4bc3-837d-70fa3695b844.png
+
+#EMBEDDED_NOTES
+#This example shows a full-size pickup truck with a single payload representing a crate in the truck's cargo bed.
+#
+#The payload type is Custom as opposed to a box shape, meaning the payloads are defined by their mass and inertia properties. Links are then made to an appropriate animation shape to provide a visual representation of the modeled payload.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { Pickup, Full Size } Pickup, Full Size w/ 2000 kg Payload
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : Pickup, Full Size w/ 2000 kg Payload
+#Category: Pickup, Full Size
+#FileID  : VehLoad_0a552f6e-d626-4fb0-b6a4-e4a75eed5b0b
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

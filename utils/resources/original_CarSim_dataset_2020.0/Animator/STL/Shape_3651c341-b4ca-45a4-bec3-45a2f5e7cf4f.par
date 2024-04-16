@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Solid Axles: Light Duty (Front, Driven)`Common Vehicle Assets
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Solid_Axles\LD_Axle_Driven\solid_axle.obj
+#ENDMYellow
+
+SET_COLOR 0.502 0.502 0.502
+SET_ANGLE_Z 180
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.007
+SET_OFFSET_Z 0
+Y_REF_LENGTH 1700
+*SPECULAR 0
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0 0 0
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Small Objects` Shape Preview` , Video Camera`Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_3651c341-b4ca-45a4-bec3-45a2f5e7cf4f.png
+
+#EMBEDDED_NOTES
+#This representation of a Light Duty solid axle only has reference length information for the Y-direction.  This allows the axle to be scaled automatically according to the data entered in the Suspension: Kinematics libraries, while maintaining the X and Z dimensions of the shape.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Light Duty (Front, Driven)
+#Library : Animator: Shape File Link
+#DataSet : Solid Axles: Light Duty (Front, Driven)
+#Category: Common Vehicle Assets
+#FileID  : Shape_3651c341-b4ca-45a4-bec3-45a2f5e7cf4f
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

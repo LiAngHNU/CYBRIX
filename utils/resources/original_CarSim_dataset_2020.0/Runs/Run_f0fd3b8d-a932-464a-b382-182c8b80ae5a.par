@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName CarSim Run Control`Baseline COM`External Control: COM, FMU, MATLAB, Python, VB
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f0fd3b8d-a932-464a-b382-182c8b80ae5a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_173075a0-4016-49eb-8ce2-c8488776e092.par
+#BlueLink0 Animator: Camera Setup`3 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_173075a0-4016-49eb-8ce2-c8488776e092
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.796 1 1
+SET_RUN_COLOR 0.796 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+
+SPECIAL_PARSFILE Runs\Run_6cb07365-85a3-4a3b-95f9-c5c844687601.par
+#BlueLink23 CarSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_6cb07365-85a3-4a3b-95f9-c5c844687601
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Baseline COM <External Control: COM, FMU, MATLAB, Python, VB>
+CATEGORY External Control: COM, FMU, MATLAB, Python, VB 
+DATASET_TITLE Baseline COM
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is the baseline run used when following the CarSim Quick Start Guide. It will be used to show automation via COM using external programs located in the database folder Extensions\RemoteControl
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { External Control: COM, FMU, MATLAB, Python, VB } Baseline COM
+#Library : CarSim Run Control
+#DataSet : Baseline COM
+#Category: External Control: COM, FMU, MATLAB, Python, VB
+#FileID  : Run_f0fd3b8d-a932-464a-b382-182c8b80ae5a
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName CarSim Run Control`Hybrid: EPA Urban Cycle`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_63c62563-5673-4656-a8b3-1174b4a1336b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_ebb0a846-741f-40bb-8567-604122d2aecd.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback: Hybrid RWD` B-Class` , Math Model`Vehicle_ebb0a846-741f-40bb-8567-604122d2aecd
+
+PARSFILE Procedures\Proc_b72aff54-cc5c-4024-9ee3-af49dd19730a.par
+#BlueLink28 Procedures`Hybrid/Electric: EPA Urban Cycle` Accel. and Brake Testing` , Procedure`Proc_b72aff54-cc5c-4024-9ee3-af49dd19730a
+
+*TSTOP 1369
+*TSTART 0
+*SSTART 0
+PARSFILE Plot\Setup\Plot_99e48c5c-b21e-4b39-b8ec-6aa8f61b800b.par
+#BlueLink15 Plot: Setup`Fuel Consumed (gallon)` Powertrain (Hybrid)` , Plot`Plot_99e48c5c-b21e-4b39-b8ec-6aa8f61b800b
+
+PARSFILE Plot\Setup\Plot_033b13aa-a635-4ea4-a1b3-cebbfea1b76b.par
+#BlueLink16 Plot: Setup`Miles per gallon` Powertrain (Hybrid)` , Plot`Plot_033b13aa-a635-4ea4-a1b3-cebbfea1b76b
+
+PARSFILE Plot\Setup\Plot_50f46a40-9207-462f-95eb-1f0a9f7660f8.par
+#BlueLink17 Plot: Setup`Wheel Drive Torques - Rear` Powertrain` , Plot`Plot_50f46a40-9207-462f-95eb-1f0a9f7660f8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.png
+WRITE_SENSOR_DETECT
+Title Hybrid: EPA Urban Cycle <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Hybrid: EPA Urban Cycle
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with a hybrid powertrain is modeled within CarSim (GUI and math model).
+#
+#CarSim support for hybrid powertrains include an engine, hybrid powertrain assembly, and power management control.
+#
+#The Procedure is a US EPA Urban Cycle, represented with a Target Speed vs. Time profile.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Hybrid: EPA Urban Cycle
+#Library : CarSim Run Control
+#DataSet : Hybrid: EPA Urban Cycle
+#Category: Powertrain Tests
+#FileID  : Run_63c62563-5673-4656-a8b3-1174b4a1336b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

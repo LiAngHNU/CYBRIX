@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Events`B2. Change Lanes (Finds Global Min.)`Lane Change
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T_EVENT
+*VALUE1 5
+#MiscYellow0
+TSTART_T_EVENT = T !Reset Clock
+PATH_ID_DM 2000
+INIT_CURRENT_PATH_SWEEP
+#ENDMYellow
+
+MAKE_EVENT T_EVENT > 5 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#In this case, the Command INIT_CURRENT_PATH_SWEEP is used to find a value for S on the new path (ID = 2000) that is closest to the vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Lane Change } B2. Change Lanes (Finds Global Min.)
+#Library : Events
+#DataSet : B2. Change Lanes (Finds Global Min.)
+#Category: Lane Change
+#FileID  : Events_f755916d-dabd-4bc5-9d04-f2255e1e2072
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

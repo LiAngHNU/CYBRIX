@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Trans. Control: Gear From Open-loop`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Gear_OL, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Trans. Control: Gear From Open-loop
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#When the transmission is shifted by open-loop control, the commanded gear is written into this output variable.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Trans. Control: Gear From Open-loop
+#Library : Plot: Setup
+#DataSet : Trans. Control: Gear From Open-loop
+#Category: Controls: Driver
+#FileID  : Plot_bd37c98a-be84-45d7-b4c9-a8f18f2391eb
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

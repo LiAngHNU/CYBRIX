@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Mcity Proving Grounds`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_81fb1b1a-d2de-4865-b56c-69d2820973a4
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Math Model`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+PARSFILE Procedures\Proc_1e8ce24c-4d4b-4aed-88d9-f6fd1ee5fd33.par
+#BlueLink28 Procedures`Mcity: North-South, 30 km/h` Mcity` , Procedure`Proc_1e8ce24c-4d4b-4aed-88d9-f6fd1ee5fd33
+
+PARSFILE Roads\Center_XY\PathXY_45b54a15-0770-45cc-996e-b86886ef6c9a.par
+#BlueLink9 Path: X-Y Coordinates`Mcity North-South (X = 38.8m)` Mcity` , Miscellaneous`PathXY_45b54a15-0770-45cc-996e-b86886ef6c9a
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Mcity Proving Grounds <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Mcity Proving Grounds
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The roads of this example is updated from loaded table grid to 3D tiles from VS Scene Builder.
+#
+#Mcity environment, with the vehicle following a North-South path at 30 km/h.
+#
+#The North-South Path, represented by a dataset from the X-Y Coordinates of Path library, is linked on the Run Control screen and serves as a path for the CarSim Closed-Loop Path Following Driver Model.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Mcity Proving Grounds
+#Library : CarSim Run Control
+#DataSet : Mcity Proving Grounds
+#Category: ADAS and Active Safety
+#FileID  : Run_81fb1b1a-d2de-4865-b56c-69d2820973a4
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

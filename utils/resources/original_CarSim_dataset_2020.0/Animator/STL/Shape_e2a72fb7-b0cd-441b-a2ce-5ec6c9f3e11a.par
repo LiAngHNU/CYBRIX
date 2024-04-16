@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`SUV: Steering Wheel`Cars: E-Class
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Cars\E_Class_SUV\steering_wheel.obj
+#ENDMYellow
+
+SET_COLOR 0.878 0.878 0.878
+SET_SCALE_X 1.03
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.4
+*SPECULAR 0.3
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.3 0.3 0.3
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink2 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_e2a72fb7-b0cd-441b-a2ce-5ec6c9f3e11a.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Cars: E-Class } SUV: Steering Wheel
+#Library : Animator: Shape File Link
+#DataSet : SUV: Steering Wheel
+#Category: Cars: E-Class
+#FileID  : Shape_e2a72fb7-b0cd-441b-a2ce-5ec6c9f3e11a
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

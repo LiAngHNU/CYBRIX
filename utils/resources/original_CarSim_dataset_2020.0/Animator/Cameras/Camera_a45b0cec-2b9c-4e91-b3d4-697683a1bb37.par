@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`180 Azm, 25 El, 49 m`Road Reference
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+SET_CAMERA_REFERENCE_FRAME Frame_0d19114f-a5d3-40a0-b63b-e67f85442aa7
+PARSFILE Animator\Frames\Frame_0d19114f-a5d3-40a0-b63b-e67f85442aa7.par
+#BlueLink0 Animator: Reference Frame`Camera Rear Point w/ Yaw` Tracking: Road` , Reference frame for outside camera`Frame_0d19114f-a5d3-40a0-b63b-e67f85442aa7
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_0d19114f-a5d3-40a0-b63b-e67f85442aa7
+SET_LOOKPOINT_X 4
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 180
+SET_ELEVATION 25
+SET_DISTANCE 49
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X 4
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 0
+*SET_AZIMUTH 180
+*SET_ELEVATION 25
+*SET_DISTANCE 49
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 30
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Road Reference } 180 Azm, 25 El, 49 m
+#Library : Animator: Camera Setup
+#DataSet : 180 Azm, 25 El, 49 m
+#Category: Road Reference
+#FileID  : Camera_a45b0cec-2b9c-4e91-b3d4-697683a1bb37
+#Product : CarSim 2020.0
+#VehCode Camera
+
+END

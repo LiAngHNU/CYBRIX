@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Slip angle for peak lateral force`Tire utilization
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AlpPkL1, time
+PLOTCHANNELS AlpPkR1, time
+PLOTCHANNELS AlpPkL2, time
+PLOTCHANNELS AlpPkR2, time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Slip angle for peak lateral force
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire utilization } Slip angle for peak lateral force
+#Library : Plot: Setup
+#DataSet : Slip angle for peak lateral force
+#Category: Tire utilization
+#FileID  : Plot_784fa5fa-ba2b-4145-9b95-cec2849c09f4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

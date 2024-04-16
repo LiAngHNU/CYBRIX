@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`External Full Powertrain`Ext. Powertrain
+
+OPT_PT 2
+R_REAR_DRIVE_SC 1
+
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl4 0
+#RingCtrl5 0
+OPT_HEV 0
+
+#CheckBox0 0    
+
+OPT_ENGINE_INTERNAL 0
+OPT_PWR_CPL_INTERNAL 0
+OPT_TRANS_INTERNAL 0
+OPT_DIFF_INTERNAL(2) 0
+
+PARSFILE Powertrain\Extrans\TransExt_af12a1fb-2189-4c80-aaa1-dca12ff3e927.par
+#BlueLink7 Powertrain: Transmission (External)`External Shift Schedule` ` , External Transmission`TransExt_af12a1fb-2189-4c80-aaa1-dca12ff3e927
+
+
+IDIFF 2
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { Ext. Powertrain } External Full Powertrain
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : External Full Powertrain
+#Category: Ext. Powertrain
+#FileID  : RWD_034ad81e-b07f-4754-9485-6b010b11433d
+#Product : CarSim 2020.0
+#VehCode RWD
+
+END

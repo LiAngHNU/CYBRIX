@@ -1,0 +1,61 @@
+PARSFILE
+#FullDataName Generic VS Commands`Steer Controller with Defined Functions`Custom Steering Controls
+#VehCode VS Commands
+
+#MiscYellow0
+define_units deg/m DR ! new units
+
+! New parameters
+define_parameter LAT_TRACK -1.6; m; Distance vehicle is offset from road centerline
+define_parameter STRAIGHT_GAIN 10; deg/m
+define_parameter CURVE_GAIN 15; deg/m
+
+! New output variables
+define_output L_Fwd = 20; m; Distance to preview point
+define_output Xpreview = XCG_TM + L_Fwd*cos(YAW); m ; X coordinate of preview point
+define_output Ypreview = YCG_TM + L_Fwd*sin(YAW); m ; Y coordinate of preview point
+define_output RoadCurve = 0;1/m;Absolute value of road curvature
+define_output SteerType = 0;-;Type: 0 = straight, 1 = curve
+define_variable GainSteer 10; deg/m; Control gain
+
+! Function for steering when road is straight
+begin_function straight()
+GainSteer = STRAIGHT_GAIN
+L_Fwd = 25
+return 0.0
+end_function
+
+! Function for steering when road is curved
+begin_function curve(pcurv)
+GainSteer = CURVE_GAIN + PCURV*500
+L_Fwd = 15
+return 1.0
+end_function
+
+! Find curvature of the road at present Station
+eq_out RoadCurve =  ABS(PATH_CURV_ID(Station, 0, PATH_ID, 1))
+eq_out SteerType = IF(RoadCurve < 0.001, straight(), curve(RoadCurve))
+
+! Activate steering import
+IMP_STEER_SW vs_replace
+
+! Add equation for imported steering wheel angle. Start at 0 when T = 0.
+eq_out IMP_STEER_SW = (LAT_TRACK - road_l(Xpreview,Ypreview))*GainSteer
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#These VS commands are for the example steer controller described in the tech memo "Example: Extending a Model with VS commands and the API."
+#
+#Updated 2019.1 to use different settings for straight and curved roads.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Custom Steering Controls } Steer Controller with Defined Functions
+#Library : Generic VS Commands
+#DataSet : Steer Controller with Defined Functions
+#Category: Custom Steering Controls
+#FileID  : GenVS_148f4dbf-6b91-4451-9259-ef7a0a8209ff
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

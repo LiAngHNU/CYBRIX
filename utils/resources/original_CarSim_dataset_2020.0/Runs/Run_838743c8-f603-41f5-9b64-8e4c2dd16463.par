@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Ext. Driver Model`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_838743c8-f603-41f5-9b64-8e4c2dd16463
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_269e358c-77c3-4364-99fb-8baf8b94de3b.par
+#BlueLink12 Models: Simulink`Driver Model` Steering and Steering Controls` , Models`Simlink_269e358c-77c3-4364-99fb-8baf8b94de3b
+
+PARSFILE Animator\Cameras\Camera_12cb229c-38c4-4b06-897b-5b5858dacd53.par
+#BlueLink0 Animator: Camera Setup`190 Azm, 12 El, 30 m` Vehicle Reference` , Animator camera`Camera_12cb229c-38c4-4b06-897b-5b5858dacd53
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 8
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.2 0.4 0.6
+SET_RUN_COLOR 0.2 0.4 0.6
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_f0558012-9b84-4424-a9a1-2401522b62dc.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`E-Class, Sedan w/ 5 Driver Sensors` E-Class` , Math Model`VehLoad_f0558012-9b84-4424-a9a1-2401522b62dc
+
+PARSFILE Procedures\Proc_b0ac9acf-bdb1-4afe-bafb-be6dc62da5ae.par
+#BlueLink28 Procedures`Constant Speed for Ext. Driver Control` Driver Model, Extended and External` , Procedure`Proc_b0ac9acf-bdb1-4afe-bafb-be6dc62da5ae
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Ext. Driver Model <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Ext. Driver Model
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#CarSim supports up to 9 Driver Model Preview Points, used to develop driver models defined in VS Commands, Simulink, etc.
+#
+#In this example, 5 Driver Model Preview Points are defined, and the Driver Model is built in Simulink.
+#
+#Output variables used to monitor the vehicle's position include the area between the preview points and the target path, as well as X and Y global coordinates.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Ext. Driver Model
+#Library : CarSim Run Control
+#DataSet : Ext. Driver Model
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_838743c8-f603-41f5-9b64-8e4c2dd16463
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

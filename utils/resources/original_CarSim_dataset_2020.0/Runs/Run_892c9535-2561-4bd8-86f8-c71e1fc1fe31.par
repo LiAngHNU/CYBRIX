@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName CarSim Run Control`Target Import: Vehicle at Zero Speed`Driver Model
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_892c9535-2561-4bd8-86f8-c71e1fc1fe31
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Math Model`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+PARSFILE Procedures\Proc_e074789f-ee60-41e6-9825-d4f592479eb6.par
+#BlueLink28 Procedures`Single Point Steer Control - 0 km/h` Driver Controls` , Procedure`Proc_e074789f-ee60-41e6-9825-d4f592479eb6
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Target Import: Vehicle at Zero Speed <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Target Import: Vehicle at Zero Speed
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Because the Single Point Steering Controller relies solely on a geometric solution based on a target point location, it can function at zero speed.
+#
+#At zero speed, the notion of obtaining a target point from a path and preview time doesn't make sense, but the single point has only 2 coordinates, so importing them from VS Commands or any valid import source is a simple matter.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Driver Model } Target Import: Vehicle at Zero Speed
+#Library : CarSim Run Control
+#DataSet : Target Import: Vehicle at Zero Speed
+#Category: Driver Model
+#FileID  : Run_892c9535-2561-4bd8-86f8-c71e1fc1fe31
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

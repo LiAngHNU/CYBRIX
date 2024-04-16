@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`JP: T-Intersection`Environment: Road Signs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Road_Signs\Japan\T_Intersection\yellow_T.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_OFFSET_Z 1.8
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink2 Animator: Camera Setup`YZ-Plane, No Offsets (with Yaw)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_5f418725-7a83-4bad-bd5f-86feea5d9d5e.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Road Signs } JP: T-Intersection
+#Library : Animator: Shape File Link
+#DataSet : JP: T-Intersection
+#Category: Environment: Road Signs
+#FileID  : Shape_5f418725-7a83-4bad-bd5f-86feea5d9d5e
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

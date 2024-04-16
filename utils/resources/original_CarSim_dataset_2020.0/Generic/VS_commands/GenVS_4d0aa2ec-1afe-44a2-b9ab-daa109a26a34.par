@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Generic VS Commands`VS Visualizer HUD Handling Course Map`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+ADD_ENTITY hud_image Handling Course (BG)
+  location 10 10 256 256
+  align_x right
+  align_y top
+  size_mode absolute
+  place_mode absolute
+  image_file Animator\2D_HUD_Icons\Mini-Maps\HandlingCourse_MiniMap.tga
+  opacity 0.4
+END_ENTITY hud_image GGDiagram (BG)
+
+
+ADD_ENTITY hud_image Location Indicator
+  location 10 10 256 256
+  align_x right
+  align_y top
+  center_location 0.0 0.0
+  scale_x 0.08
+  scale_y 0.08
+  ! matching color of GG dot
+  red 248.0 / 255.0
+  green 153.0 / 255.0
+  blue 0
+  ! rotate indicator based on vehicle yaw
+  rotate yaw - 90
+  ! (x=0) on map is 6 pixels off
+  ! render size X is 256
+  ! world extents on map image are (roughly) 507.5 meters on X
+  place_x (-Xo * (256 / 507.5)) + 6
+  ! (y=0) on map is 35 pixels off
+  ! render size Y is 256
+  ! world extents on map image are (roughly) 512 meters on Y
+  place_y (-Yo * (256 / 512)) + 35
+  size_mode absolute
+  place_mode absolute
+  image_file Animator\2D_HUD_Icons\Mini-Maps\MiniMap_Arrow.tga
+END_ENTITY hud_image OrangeDOT (BG)
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } VS Visualizer HUD Handling Course Map
+#Library : Generic VS Commands
+#DataSet : VS Visualizer HUD Handling Course Map
+#Category: HUD Gauges
+#FileID  : GenVS_4d0aa2ec-1afe-44a2-b9ab-daa109a26a34
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

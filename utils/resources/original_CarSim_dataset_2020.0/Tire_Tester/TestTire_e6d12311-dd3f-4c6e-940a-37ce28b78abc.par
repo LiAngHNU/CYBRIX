@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Tire Tester`Sweep Kappa: Fz = 4000 N`Sweep Kappa +/- 1.0
+*KAPPA_LOWER -1
+*KAPPA_UPPER 1
+*KAPPA_STEP 0.01
+*FZ_TEST 4000
+*ALPHA_TEST 0
+*GAMMA_TEST 0
+MUX_TEST -1
+MUY_TEST -1
+SPEED_TEST 10
+RR_SURF 1
+
+
+#RingCtrl0 2
+OPT_TEST_MODE 2
+KAPPA_LOWER -1
+KAPPA_UPPER 1
+KAPPA_STEP 0.01
+FZ_TEST 4000
+ALPHA_TEST 0
+GAMMA_TEST 0
+
+PARSFILE Generic\VS_commands\GenVS_495524ba-1c7f-4365-8a05-84434effacfe.par
+#BlueLink0 Generic VS Commands`Derived Outputs for Tire Tester` Miscellaneous Custom Output Variables` , Miscellaneous`GenVS_495524ba-1c7f-4365-8a05-84434effacfe
+
+PARSFILE Plot\Setup\Plot_81aa0eb0-51d5-4728-96fa-898f84fb8171.par
+#BlueLink1 Plot: Setup`Fx vs. Fy` Tire Tester` , Plot`Plot_81aa0eb0-51d5-4728-96fa-898f84fb8171
+
+PARSFILE Plot\Setup\Plot_3831669c-feed-4154-a0f0-ba348004da41.par
+#BlueLink2 Plot: Setup`Fx vs. Kappa` Tire Tester` , Plot`Plot_3831669c-feed-4154-a0f0-ba348004da41
+
+PARSFILE Plot\Setup\Plot_652e42f0-c742-4ae7-9a97-bab6d281491b.par
+#BlueLink3 Plot: Setup`Fy vs. Kappa` Tire Tester` , Plot`Plot_652e42f0-c742-4ae7-9a97-bab6d281491b
+
+PARSFILE Plot\Setup\Plot_d2505c43-445e-40d2-9e2f-52c32ff9c3fe.par
+#BlueLink4 Plot: Setup`Mz vs. Kappa` Tire Tester` , Plot`Plot_d2505c43-445e-40d2-9e2f-52c32ff9c3fe
+
+PARSFILE Plot\Setup\Plot_12f391a9-368d-4c42-8d07-d5e811244483.par
+#BlueLink5 Plot: Setup`Mx vs. Kappa` Tire Tester` , Plot`Plot_12f391a9-368d-4c42-8d07-d5e811244483
+
+PARSFILE Plot\Setup\Plot_51b7a99d-97e2-47c4-a9c1-d79b2411f4da.par
+#BlueLink6 Plot: Setup`My vs. Kappa` Tire Tester` , Plot`Plot_51b7a99d-97e2-47c4-a9c1-d79b2411f4da
+
+PARSFILE Plot\Setup\Plot_0b809826-f2f1-4794-a421-2e2adf4a38c9.par
+#BlueLink7 Plot: Setup`Fy vs. Fx` Tire Tester` , Plot`Plot_0b809826-f2f1-4794-a421-2e2adf4a38c9
+
+PARSFILE Plot\Setup\Plot_93d6f0a3-3c1f-4eb3-93ab-ee1a647a387c.par
+#BlueLink9 Plot: Setup`Normalized Lateral Force vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_93d6f0a3-3c1f-4eb3-93ab-ee1a647a387c
+
+PARSFILE Plot\Setup\Plot_a8618010-521a-462f-8d54-8b32d0c9dd1a.par
+#BlueLink10 Plot: Setup`Normalized Longitudinal Force vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_a8618010-521a-462f-8d54-8b32d0c9dd1a
+
+PARSFILE Plot\Setup\Plot_607a8ee5-039d-4977-b7ec-61ca25574e37.par
+#BlueLink11 Plot: Setup`Tangent of Slip Angle vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_607a8ee5-039d-4977-b7ec-61ca25574e37
+
+PARSFILE Plot\Setup\Plot_15e90b3f-9c74-4c92-813a-6b48501e3e49.par
+#BlueLink12 Plot: Setup`Lateral Shift of CTC vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_15e90b3f-9c74-4c92-813a-6b48501e3e49
+
+PARSFILE Plot\Setup\Plot_817e42e0-bbe4-431c-b6b6-5d51749d360c.par
+#BlueLink13 Plot: Setup`Mz from Fx vs Kappa` Tire Tester Derived Outputs` , Plot`Plot_817e42e0-bbe4-431c-b6b6-5d51749d360c
+
+PARSFILE Plot\Setup\Plot_f879bb8d-f9cd-47de-9254-5b6d560a3bee.par
+#BlueLink14 Plot: Setup`Mz from Fy and Pneumatic Trail vs Kappa` Tire Tester Derived Outputs` , Plot`Plot_f879bb8d-f9cd-47de-9254-5b6d560a3bee
+
+PARSFILE Plot\Setup\Plot_1785cb39-7d63-4365-bbf0-d08123725ae0.par
+#BlueLink15 Plot: Setup`Pneumatic Trail vs. Kappa` Tire Tester Derived Outputs` , Plot`Plot_1785cb39-7d63-4365-bbf0-d08123725ae0
+
+
+#EMBEDDED_NOTES
+#The Tire Tester makes direct use of the tire models to simulate a steady state tire performance test.
+#
+#This tire test varies the slip ratio from -1 (representing a sliding tire, as during brake lockup) through 0 (free rolling) to 1 (representing the condition when the tire is moving forward at one-half the speed indicated by its speed of rotation). Slip ratio is varied in increments of 0.01.
+#
+#For this test, slip angle is held constant at 0 degrees.
+#
+#Coefficents of friction are set to -1. When a negative coefficent of friction is passed to the tire model, scaling for friction is bypassed, and the table data is used directly, interpolated for load and slip.
+#
+#Except for the TNO MF-Tyre, the tire speed data field has no effect on the magnitude of calculated forces or moments. In a steady-state test (e.g., no relaxation effect), the tire models use this parameter only to identify the direction of travel.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire Tester; { Sweep Kappa +/- 1.0 } Sweep Kappa: Fz = 4000 N
+#Library : Tire Tester
+#DataSet : Sweep Kappa: Fz = 4000 N
+#Category: Sweep Kappa +/- 1.0
+#FileID  : TestTire_e6d12311-dd3f-4c6e-940a-37ce28b78abc
+#Product : CarSim 2020.0
+#VehCode Tire Tester
+
+END

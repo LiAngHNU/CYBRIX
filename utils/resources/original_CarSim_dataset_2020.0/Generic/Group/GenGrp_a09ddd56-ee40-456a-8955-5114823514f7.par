@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic for Roundabout`ADAS: Traffic Scenarios
+#VehCode Generic Group
+PARSFILE Roads\BuilderSegment\RoadSeg_e0a187ca-e802-4004-ab91-058e514ac938.par
+#BlueLink0 Path: Segment Builder`North Entrance, 2nd Exit, 1013` Roundabout, D = 36 m` , Link 1`RoadSeg_e0a187ca-e802-4004-ab91-058e514ac938
+
+
+PARSFILE Roads\BuilderSegment\RoadSeg_09ab857f-ccff-429d-89e9-d799ee84f41d.par
+#BlueLink1 Path: Segment Builder`East Entrance, 2nd Exit, 1012` Roundabout, D = 36 m` , Link 2`RoadSeg_09ab857f-ccff-429d-89e9-d799ee84f41d
+
+
+PARSFILE Roads\BuilderSegment\RoadSeg_29872f79-5545-4579-8f70-d32b21fe73be.par
+#BlueLink2 Path: Segment Builder`West Entrance, 3d Exit, 1024` Roundabout, D = 36 m` , Link 3`RoadSeg_29872f79-5545-4579-8f70-d32b21fe73be
+
+
+PARSFILE Control\Speed_t\SpdTime_cfe2a02c-111a-4d15-9b62-9d06cad3b4af.par
+#BlueLink3 Control: Speed (Closed Loop) Using Target Speed`Roundabout Traffic, 2nd Exit (Through)` Speed vs Station` , Link 4`SpdTime_cfe2a02c-111a-4d15-9b62-9d06cad3b4af
+
+
+PARSFILE Control\Speed_t\SpdTime_e1593691-be1f-4c64-856f-084c26193b57.par
+#BlueLink4 Control: Speed (Closed Loop) Using Target Speed`Roundabout Traffic, 3d Exit (Left)` Speed vs Station` , Link 5`SpdTime_e1593691-be1f-4c64-856f-084c26193b57
+
+
+#MiscYellow5
+set_ipath_for_id 1013
+set_iroad_for_id 1003
+symbol_push <<L>> 0
+symbol_push <<START>> 120
+symbol_push <<ISPEED>> 2
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_f3ed1056-c814-4e79-b50b-3188d078dfcd.par
+#BlueLink5 Multiple Moving Objects`3 Vehicles, Blue, PATH_ID and ROAD_ID` Traffic Vehicles (Low Speed, Reusable)` , Link 6`TMotion_f3ed1056-c814-4e79-b50b-3188d078dfcd
+
+
+#MiscYellow6
+set_ipath_for_id 1024
+set_iroad_for_id 1004
+symbol_push <<ISPEED>> 3
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_57a09d0f-f56e-43e3-a41c-96a6e96fbbcb.par
+#BlueLink6 Multiple Moving Objects`3 Vehicles, Red, Path_ID and ROAD_ID` Traffic Vehicles (Low Speed, Reusable)` , Link 7`TMotion_57a09d0f-f56e-43e3-a41c-96a6e96fbbcb
+
+
+#BlueLink7 ` , Link 8` , Link 8` , Link 8`
+
+
+#MiscYellow8
+set_ipath_for_id 1012
+set_iroad_for_id 1002
+symbol_push <<START>> 70
+symbol_set <<ISPEED>> 2
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_96451337-ebad-4588-8a27-c7f90df972ee.par
+#BlueLink8 Multiple Moving Objects`3 Vehicles, Black, Path_ID and Road_ID` Traffic Vehicles (Low Speed, Reusable)` , Link 9`TMotion_96451337-ebad-4588-8a27-c7f90df972ee
+
+
+
+#EMBEDDED_NOTES
+#This dataset links reference paths, multiple moving objects, and target speed profiles to show traffic in the roundabout example.
+#
+#2018.1 - simplified management of target speed datasets.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic Scenarios } Traffic for Roundabout
+#Library : Generic Data Group
+#DataSet : Traffic for Roundabout
+#Category: ADAS: Traffic Scenarios
+#FileID  : GenGrp_a09ddd56-ee40-456a-8955-5114823514f7
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

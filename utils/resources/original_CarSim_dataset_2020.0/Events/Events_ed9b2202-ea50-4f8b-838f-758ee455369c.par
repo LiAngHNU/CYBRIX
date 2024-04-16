@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Events`F. Return Throttle to Throt_Ref`Opt_Engine_Running: Manual Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 AV_Trans
+*VALUE1 880
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_fc56c35e-26bc-4ac2-a11a-5205f42ded77.par
+#BlueLink18 Control: Throttle (Open Loop)`Throt_Ref` Opt_Engine_Running` , Speed link`Throttle_fc56c35e-26bc-4ac2-a11a-5205f42ded77
+
+#MiscYellow0
+TSTART_THROTTLE = T
+TSTART_BRAKES = T
+TSTART_GEAR = T
+TSTART_CLUTCH = T
+#ENDMYellow
+
+PARSFILE Control\Gear_mt\GearOL_2c740a6e-385b-4482-82be-f91ae62e3861.par
+#BlueLink10 Control: Shifting (Open Loop)`1st Gear w/ 3 sec. Clutch Engagement` Constant` , Miscellaneous`GearOL_2c740a6e-385b-4482-82be-f91ae62e3861
+
+PARSFILE Control\Braking\PbkCon_fd9ef75a-c7fa-48ec-a814-9563f688340e.par
+#BlueLink11 Control: Braking MC Pressure (Open Loop)`Smooth Brake Release: 1 to 0 MPa` Sigmoid` , Miscellaneous`PbkCon_fd9ef75a-c7fa-48ec-a814-9563f688340e
+
+#MiscYellow1
+CLUTCH_TORQUE_GAIN = 0.5; ! Allow for clutch slip
+
+THROTTLE_ENGINE_GAIN = 1.45; ! Gain applied to Throt_Ref
+
+! Throttle was saved in an earlier Event and used here to reset the throttle
+! to that same position. Adjust THROTTLE_ENGINE_GAIN to increase or
+! decrease the amount of throttle applied, necessary to accelerate the car
+! through 1st gear.
+#ENDMYellow
+
+MAKE_EVENT AV_Trans > 880 ; Events\Events_025ea4cb-8faf-40df-aafe-e40cb439a112.par
+#BlueLink0 Events`G. Shift to 2nd Gear` Opt_Engine_Running: Manual Transmission` , Events`Events_025ea4cb-8faf-40df-aafe-e40cb439a112
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Manual Transmission } F. Return Throttle to Throt_Ref
+#Library : Events
+#DataSet : F. Return Throttle to Throt_Ref
+#Category: Opt_Engine_Running: Manual Transmission
+#FileID  : Events_ed9b2202-ea50-4f8b-838f-758ee455369c
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

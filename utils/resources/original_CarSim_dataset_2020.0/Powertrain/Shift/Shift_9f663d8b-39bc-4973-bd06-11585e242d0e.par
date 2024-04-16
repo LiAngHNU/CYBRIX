@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Powertrain: Shift Schedule`6-speed, 3-4 Shift (MT, High RPM)`6-speed, MT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+#DiagramOne0
+UPSHIFT_TRANS_TABLE
+0, 1800
+0.2, 1800
+0.8, 4785
+1, 4785
+ENDTABLE
+#DiagramOne1
+DOWNSHIFT_TRANS_TABLE
+0, 1400
+0.2, 1400
+0.8, 2500
+1, 2500
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Shift Schedule; { 6-speed, MT } 6-speed, 3-4 Shift (MT, High RPM)
+#Library : Powertrain: Shift Schedule
+#DataSet : 6-speed, 3-4 Shift (MT, High RPM)
+#Category: 6-speed, MT
+#FileID  : Shift_9f663d8b-39bc-4973-bd06-11585e242d0e
+#Product : CarSim 2020.0
+#VehCode Shift Schedule
+
+END

@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Steering System: Compliance`0.001 deg/N-m, 29 deg steer limits.`Linear
+#CheckBox0 0    
+
+#RingCtrl0 COEFFICIENT
+#RadioCtrl0 0    
+
+STEER_COMP_COEFFICIENT 0.001
+*SCALAR 0.001
+
+
+
+#EMBEDDED_NOTES
+#The steering limits are chosen to function on the wheel on the outside of a turn (right side turning left, left side turning right).
+#
+#The stiffness doesn't have to be a measured parameter. I thould just be high enough to produce realistic steer torque feedback at the limit, but not so high that the model becomes stiff and unstable.
+#
+#Steer stops are ordinarliy only used in open loop steer control to prevent excessive steer, and driving simulators to provide steer torque feedback at the limits of steer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering System: Compliance; { Linear } 0.001 deg/N-m, 29 deg steer limits.
+#Library : Steering System: Compliance
+#DataSet : 0.001 deg/N-m, 29 deg steer limits.
+#Category: Linear
+#FileID  : StrCmp_6cd02e19-bea1-4d02-9783-7bc469f3547a
+#Product : CarSim 2020.0
+#VehCode Steering Compliance
+
+END

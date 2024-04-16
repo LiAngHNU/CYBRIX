@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`X-Y Tracking for Outside Tire Sidewall, R1`PBS (Performance Based Standards)
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_1be0ac68-126c-4e86-ab08-b38a12551deb.par
+#BlueLink0 Plot: Format`Fine Grid` ` , Plot format`PlotFmt_1be0ac68-126c-4e86-ab08-b38a12551deb
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_Ref_R1, X_Ref_R1, Tire Sidewall
+
+#ENDMYellow
+
+YAXISLABEL Global Y Coordinate of Outside Tire Point - m
+XAXISLABEL Global X Coordinate - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE X-Y Tracking for Outside Tire Sidewall, R1
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { PBS (Performance Based Standards) } X-Y Tracking for Outside Tire Sidewall, R1
+#Library : Plot: Setup
+#DataSet : X-Y Tracking for Outside Tire Sidewall, R1
+#Category: PBS (Performance Based Standards)
+#FileID  : Plot_6118dabe-9c1e-44b1-ae87-6aca5beb90ea
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

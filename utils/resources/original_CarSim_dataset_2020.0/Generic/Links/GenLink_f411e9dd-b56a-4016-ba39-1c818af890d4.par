@@ -1,0 +1,100 @@
+PARSFILE
+#FullDataName Generic Group of Links`Deer and Objects`Simple Path Planning
+#VehCode Animated Deer
+PARSFILE Sensors_Traffic\Targets\Target_ee1da297-0f3f-4f3d-a75c-22b950f8c5fa.par
+#BlueLink0 Single Moving Object (Custom)`Deer #1, Simple Path Planning` Simple Path Planning` , Miscellaneous`Target_ee1da297-0f3f-4f3d-a75c-22b950f8c5fa
+
+PARSFILE Sensors_Traffic\Targets\Target_1e50e8a3-7a96-42a0-a85a-ddb0b77fef8e.par
+#BlueLink1 Single Moving Object (Custom)`Deer #2, Simple Path Planning` Simple Path Planning` , Miscellaneous`Target_1e50e8a3-7a96-42a0-a85a-ddb0b77fef8e
+
+PARSFILE Sensors_Traffic\Targets\Target_4d619e89-3e63-42a7-a042-a289bbbb392e.par
+#BlueLink2 Single Moving Object (Custom)`Deer #3, Simple Path Planning` Simple Path Planning` , Miscellaneous`Target_4d619e89-3e63-42a7-a042-a289bbbb392e
+
+PARSFILE Animator\Groups\Group_c5f567bb-78c8-4d05-8568-054d59b39f3d.par
+#BlueLink3 Animator: Group`Environment` Roads and Environment` , Miscellaneous`Group_c5f567bb-78c8-4d05-8568-054d59b39f3d
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_be25197a-a546-4e25-a7b7-835024b50de4.par
+#BlueLink4 Multiple Moving Objects`Posts #1` Simple Path Planning` , Miscellaneous`TMotion_be25197a-a546-4e25-a7b7-835024b50de4
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_273c462d-f3f7-47a2-b79a-7557a25fe75d.par
+#BlueLink5 Multiple Moving Objects`Posts #2` Simple Path Planning` , Miscellaneous`TMotion_273c462d-f3f7-47a2-b79a-7557a25fe75d
+
+PARSFILE Animator\HUD\HUD_9b9c1d13-3c5e-4ed6-a450-f276f1128d3f.par
+#BlueLink6 Animator: HUD`Collision Alert  - Simple Path Planning` Simple Path Planning` , Miscellaneous`HUD_9b9c1d13-3c5e-4ed6-a450-f276f1128d3f
+
+#MiscYellow0
+! Let Cpar know we use python module 
+*CPAR_INCLUDE Extensions\Python\simplepathplan.py
+#ENDMYellow
+
+#MiscYellow1
+! Some setup for python call
+OPT_ENABLE_PYTHON = 1
+! Load the module
+RUN_PYTHON_STRING "import simplepathplan"
+
+define_variable det_station = 0
+define_variable shift_station = 0
+define_variable stat_next = 0
+define_variable abs_lat_veh = 0
+define_table intab
+intab_table step
+1,1
+2,2
+3,3
+4,4
+5,5
+6,6
+endtable
+#ENDMYellow
+
+#MiscYellow2
+define_variable SEEDVAL
+! Uncomment next line to randomize
+! location of last deer
+!SEEDVAL = SRAND(GENSEED(1.0))
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_138d18a0-745e-4395-906a-d9a684d315aa.par
+#BlueLink13 Single Moving Object (Custom)`Deer #4, Simple Path Planning (RND)` Simple Path Planning` , Miscellaneous`Target_138d18a0-745e-4395-906a-d9a684d315aa
+
+#MiscYellow3
+! Define variable that Python can access
+define_variable num_obs = NOBJECT
+#ENDMYellow
+
+#MiscYellow4
+! Check for collisions
+define_variable colcheck = 0
+define_variable coltime = 0
+
+EQ_IN coltime = coltime+1
+EQ_IN colcheck = if_gt_0_then(FMOD(coltime,200), 0, 1)
+#ENDMYellow
+
+#MiscYellow5
+! Check for collisions
+define_variable colret = 0
+define_output collision_time = 0
+EQ_IN colret = python(colcheck,"simplepathplan.collisions","None",None,None)
+#ENDMYellow
+
+*MODELCODE Animated Deer
+
+#EMBEDDED_NOTES
+#Four idle deer: location of fourth deer can be optionally randomized.
+#
+#To put fourth deer in path of vehicle, add 5 meters (+5) to lateral offset in 'Deer #4, Simple Path Planning (RND)'
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { Simple Path Planning } Deer and Objects
+#Library : Generic Group of Links
+#DataSet : Deer and Objects
+#Category: Simple Path Planning
+#FileID  : GenLink_f411e9dd-b56a-4016-ba39-1c818af890d4
+#Product : CarSim 2020.0
+#VehCode Animated Deer
+
+END

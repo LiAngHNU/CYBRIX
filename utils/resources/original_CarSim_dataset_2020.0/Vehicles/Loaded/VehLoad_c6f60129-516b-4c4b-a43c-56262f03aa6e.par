@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Four Sensors`C-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.par
+#BlueLink0 Vehicle: Assembly`C-Class, Hatchback` C-Class` , Lead Unit`Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Sensors_Traffic\Radar\Radar_3d836f6b-9c7d-48cb-bfa5-31d2275154db.par
+#BlueLink2 ADAS Sensors for Range and Tracking`FCW and ACC` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_3d836f6b-9c7d-48cb-bfa5-31d2275154db
+
+PARSFILE Sensors_Traffic\Radar\Radar_57a31db5-b7af-4675-88ac-0bafd95a07c8.par
+#BlueLink4 ADAS Sensors for Range and Tracking`Left Blind-Spot, Forward Vx` Blind-Spot Sensors` , Miscellaneous`Radar_57a31db5-b7af-4675-88ac-0bafd95a07c8
+
+PARSFILE Sensors_Traffic\Radar\Radar_4f130510-328a-4f29-a328-43628a7b3768.par
+#BlueLink5 ADAS Sensors for Range and Tracking`Right Blind-Spot, Forward Vx` Blind-Spot Sensors` , Miscellaneous`Radar_4f130510-328a-4f29-a328-43628a7b3768
+
+PARSFILE Animator\HUD\HUD_2e2493a8-9b50-4867-8eb4-6060a81a368f.par
+#BlueLink6 Animator: HUD`Blind Spots` ADAS Alerts` , Miscellaneous`HUD_2e2493a8-9b50-4867-8eb4-6060a81a368f
+
+PARSFILE Sensors_Traffic\Radar\Radar_ffbbbf63-b473-4d79-a798-a3c3923ac5d8.par
+#BlueLink7 ADAS Sensors for Range and Tracking`Lane-Detection` Forward Facing Sensors: FCW and ACC` , Miscellaneous`Radar_ffbbbf63-b473-4d79-a798-a3c3923ac5d8
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+
+#EMBEDDED_NOTES
+#C-Class Hatchback with adapative cruise control (ACC), lane detection, and two blind-spot sensors.
+#
+#The ACC requires that the speed_target dataset used by the driver model is ISPEED = 1,
+#
+#The lane-detection sensor has to be linked very last because another dataset uses the X_SENSOR parameter to locate the points using this sensor.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { C-Class } C-Class Hatchback w/ Four Sensors
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : C-Class Hatchback w/ Four Sensors
+#Category: C-Class
+#FileID  : VehLoad_c6f60129-516b-4c4b-a43c-56262f03aa6e
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

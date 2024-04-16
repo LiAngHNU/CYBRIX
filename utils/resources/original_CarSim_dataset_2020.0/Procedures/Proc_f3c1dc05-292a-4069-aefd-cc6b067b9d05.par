@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Procedures`Drift into Curb`Driving
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 125
+TSTART_WRITE = 0;
+TSTOP 10
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 99
+*TSTOP 10
+*TSTART 0
+*SSTART 125
+*SSTOP 2235
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_995dd7b5-0b2a-4654-83e5-878b1bf59878.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`Drifts to the Left` Avoidance, Merges, and Drifiting` , Steering`StrDM_995dd7b5-0b2a-4654-83e5-878b1bf59878
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_t\SpdTime_e6c774fc-69ba-42af-86a4-171a7400110d.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 18 km/h` Constant` , Speed vs. time`SpdTime_e6c774fc-69ba-42af-86a4-171a7400110d
+
+PARSFILE Roads\3D_Road\Road_96fe92ac-11a1-4401-a1f4-c3f456a99d39.par
+#BlueLink0 Road: 3D Surface (All Properties)`Road w/ Median` Variable Width Roads` , Miscellaneous`Road_96fe92ac-11a1-4401-a1f4-c3f456a99d39
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink1 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+#MiscYellow1
+TSTART_WRITE 1
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink8 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_d680a116-2530-4566-80e7-0dfa293cd7ae.par
+#BlueLink9 Plot: Setup`Ground Elevation vs. Station` Ground` , Plot`Plot_d680a116-2530-4566-80e7-0dfa293cd7ae
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink10 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_dafae624-d48a-4548-93eb-fa73d080e21a.par
+#BlueLink11 Plot: Setup`Brake Control: M/C Pressure` Braking` , Plot`Plot_dafae624-d48a-4548-93eb-fa73d080e21a
+
+PARSFILE Plot\Setup\Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470.par
+#BlueLink12 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink13 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+
+#EMBEDDED_NOTES
+#This Procedure is designed to be used with the "Variable Contact Patch Dimensions" example.
+#
+#In this case, the vehicle is travelling at 18 kph and slowly drifts to the left side of the road. As it makes contact with the curb, the dataset for the CarSim driver model directs the vehicle to the right and eventually to straighten out.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Drift into Curb
+#Library : Procedures
+#DataSet : Drift into Curb
+#Category: Driving
+#FileID  : Proc_f3c1dc05-292a-4069-aefd-cc6b067b9d05
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

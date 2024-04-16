@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Pickup, Baja`Pickup Trucks
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 2780
+OBJ_Y_LENGTH 2248
+OBJ_Z_LENGTH 1628
+*DZ_V 0
+*LAT_WC 1850
+*LAT_WC_2 1725
+*HWC 402
+*WHEEL_RATIO 1.38
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_eb06e89d-a83e-4844-b6db-5f71ce5ff9a1.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+SET_SCALE_X 1.38
+SET_SCALE_Y 1.38
+SET_SCALE_Z 1.38
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.925
+SET_OFFSET_Z 0.3819
+TIRE_ANI_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+SET_SCALE_X 1.38
+SET_SCALE_Y 1.38
+SET_SCALE_Z 1.38
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.925
+SET_OFFSET_Z 0.3819
+TIRE_ANI_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+SET_SCALE_X 1.38
+SET_SCALE_Y 1.38
+SET_SCALE_Z 1.38
+SET_OFFSET_X -2.78
+SET_OFFSET_Y 0.8625
+SET_OFFSET_Z 0.3819
+TIRE_ANI_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+SET_SCALE_X 1.38
+SET_SCALE_Y 1.38
+SET_SCALE_Z 1.38
+SET_ANGLE_X 180
+SET_OFFSET_X -2.78
+SET_OFFSET_Y -0.8625
+SET_OFFSET_Z 0.3819
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_b2130610-85f6-4b4e-9b86-e333f2cab82c.par
+#BlueLink1 Animator: Group`Pickup, Baja Truck` Pickup Trucks, Baja` , Vehicle Body`Group_b2130610-85f6-4b4e-9b86-e333f2cab82c
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_6365e6d0-bf95-47f8-85b2-48a16c2b909a.par
+#BlueLink3 Animator: Shape File Link`Baja Truck: Brake Lights` Cars: Exotic` , Brake Lights`Shape_6365e6d0-bf95-47f8-85b2-48a16c2b909a
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_1381a93c-4728-44a0-93f9-f10cc0ed9aca.par
+#BlueLink10 Animator: Shape File Link`Baja Truck: Reverse Lights` Cars: Exotic` , Reverse lights`Shape_1381a93c-4728-44a0-93f9-f10cc0ed9aca
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_8583d59f-acbe-4278-a2f5-d247f399fbba.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car - Width 185 mm` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_8583d59f-acbe-4278-a2f5-d247f399fbba
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Pickup Trucks } Pickup, Baja
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Pickup, Baja
+#Category: Pickup Trucks
+#FileID  : AniVeh_eb06e89d-a83e-4844-b6db-5f71ce5ff9a1
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

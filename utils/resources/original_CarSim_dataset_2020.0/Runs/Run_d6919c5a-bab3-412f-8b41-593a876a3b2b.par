@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName CarSim Run Control`Ext. Center Diff.`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d6919c5a-bab3-412f-8b41-593a876a3b2b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_5b30aa52-5657-480e-b65d-57d7715dbedb.par
+#BlueLink12 Models: Simulink`External Center Differential` External Powertrain` , Models`Simlink_5b30aa52-5657-480e-b65d-57d7715dbedb
+
+PARSFILE Animator\Cameras\Camera_09439551-c64a-4943-9211-22177923f7cf.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 23 m` Road Reference` , Animator camera`Camera_09439551-c64a-4943-9211-22177923f7cf
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 11
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.753 0.753 0.753
+SET_RUN_COLOR 0.753 0.753 0.753
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_7718cde5-6aea-4718-be17-7baa7852af27.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: Ext. Center Diff.` External Powertrains` , Math Model`Vehicle_7718cde5-6aea-4718-be17-7baa7852af27
+
+PARSFILE Procedures\Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc.par
+#BlueLink28 Procedures`Ramp to 0.5 Throttle` Accel. and Brake Testing` , Procedure`Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc
+
+PARSFILE Roads\3D_Road\Road_1858fd7f-8c63-404a-a7a7-9f6c232bb1e9.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, Two Lanes, Mu = 0.85` Straight` , Miscellaneous`Road_1858fd7f-8c63-404a-a7a7-9f6c232bb1e9
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink6 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.01
+*FREQ_OUT 100
+tstep 0.0005
+iprint 20
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Ext. Center Diff. <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Ext. Center Diff.
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan with an External Center Differential modeled in Simulink performs a 1/2 throttle acceleration test on a flat, level road.
+#
+#The CarSim math model imports data representing the front and rear output shaft torques from the Center Differential, where these torques are provided to the front and rear differentials.
+#
+#From CarSim, the Simulink model receives the rotational speeds of the front and rear differentials in response to the torque control.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Ext. Center Diff.
+#Library : CarSim Run Control
+#DataSet : Ext. Center Diff.
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_d6919c5a-bab3-412f-8b41-593a876a3b2b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

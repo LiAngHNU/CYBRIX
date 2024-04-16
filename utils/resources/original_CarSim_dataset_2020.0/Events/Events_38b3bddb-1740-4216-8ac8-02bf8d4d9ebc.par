@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Events`D. Turn and Reverse`Trailer Reverse
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Art_H
+*VALUE1 -47.5
+#MiscYellow0
+Tstart_Steer T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Steer\StrSW_4c854d83-72b9-4ec3-9e2a-a4878f9d677e.par
+#BlueLink11 Control: Steering (Open Loop)`Ramp: 0 to -180 deg. in 1 sec.` Ramp` , Miscellaneous`StrSW_4c854d83-72b9-4ec3-9e2a-a4878f9d677e
+
+MAKE_EVENT Art_H < -47.5 ; Events\Events_80838a8d-805c-4a17-96a2-cb4b0febe164.par
+#BlueLink0 Events`E. Opposite Steer` Trailer Reverse` , Events`Events_80838a8d-805c-4a17-96a2-cb4b0febe164
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle then initiates the steering control.  Once the hitch articulation reaches -47.5 deg, the next event is triggered.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reverse } D. Turn and Reverse
+#Library : Events
+#DataSet : D. Turn and Reverse
+#Category: Trailer Reverse
+#FileID  : Events_38b3bddb-1740-4216-8ac8-02bf8d4d9ebc
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

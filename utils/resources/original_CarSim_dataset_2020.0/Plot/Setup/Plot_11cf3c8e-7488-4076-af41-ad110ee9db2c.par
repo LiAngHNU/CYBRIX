@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Central ClutchTorque`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_D3_Cl, Time
+PLOTCHANNELS M_D3_Cl2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Central ClutchTorque
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Central ClutchTorque
+#Library : Plot: Setup
+#DataSet : Central ClutchTorque
+#Category: Powertrain
+#FileID  : Plot_11cf3c8e-7488-4076-af41-ad110ee9db2c
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

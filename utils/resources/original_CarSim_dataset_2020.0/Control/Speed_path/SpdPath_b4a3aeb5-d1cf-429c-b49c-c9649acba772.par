@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`Sports Car on Racetrack`Aggressive Driving
+INSTALL_SPEED_CONTROLLER
+PARSFILE Generic\tables\GenTab_fe881375-174d-421d-bbf0-eb0a20f650d7.par
+#BlueLink0 Generic Table`Ax Limit Throttle for RWD Sports Car` Speed Controller: Accel Limits` , table function`GenTab_fe881375-174d-421d-bbf0-eb0a20f650d7
+
+SPEED_AX_BRAKE_CONSTANT 1.0
+SPEED_AY_LEFT_CONSTANT 0.7
+SPEED_AY_RIGHT_CONSTANT 0.7
+#RingCtrl0 2
+OPT_SC_SKILL 2
+#RingCtrl1 2
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+SET_ISPEED_FOR_ID 0
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Path Preview: Sports Car on Racetrack
+SPEED_TARGET_CONSTANT 150
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC 4
+#CheckBox0 1    
+OPT_SC_ENGINE_BRAKING 1
+#CheckBox1 0    
+#CheckBox2 1    
+OPT_SC_3D 1
+#CheckBox3 0    
+OPT_SC_2018 0
+
+SPEED_KP 0.4
+SPEED_KI 0
+SPEED_KP3 2
+BK_PERF_SC 1
+FPD_PERF_SC 0.1
+SPEED_PREVIEW_STEP 2
+SPEED_CURV_LENGTH 50
+SPEED_PREVIEW_START 2
+SPEED_PREVIEW 200
+PBK_CON_MAX_SC 10
+
+#EMBEDDED_NOTES
+#This screen assembles information used to calculate a speed target over a previewed path segment.
+#
+#"Aggressiveness" describes the acceleration limits the driver is allowed to use in calculating target speeds. Note that the capabilities of the car may be greater or less than those specified. For typical highway driving, limits of 0.1 G to 0.3 G might be used.
+#
+#The target speed is obtained by calculating the path curvature over segments of a specified length, over a total preview distance forward from a starting point, and updated at intervals specified by the resolution. Speed is limited to a maximum value of 150 km/h.
+#
+#In this case, the vehicle accelerates and decelerates frequently, so integral gain is set to zero to minimize overshoot of the target speed. A new parameter for a gain applied to the cube of the proportional error produces more aggressive control as the car deviates farther from the target speed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Aggressive Driving } Sports Car on Racetrack
+#Library : Control: Speed (Closed Loop) Using Path Preview
+#DataSet : Sports Car on Racetrack
+#Category: Aggressive Driving
+#FileID  : SpdPath_b4a3aeb5-d1cf-429c-b49c-c9649acba772
+#Product : CarSim 2020.0
+#VehCode Speed Using Path Preview
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Vx_IErr: Integrated Speed Controller Error`Speed Controller
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx_IErr, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vx_IErr: Integrated Speed Controller Error
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Speed Controller } Vx_IErr: Integrated Speed Controller Error
+#Library : Plot: Setup
+#DataSet : Vx_IErr: Integrated Speed Controller Error
+#Category: Speed Controller
+#FileID  : Plot_65b6c441-0d2e-49fb-a262-7cb21b24a2e1
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

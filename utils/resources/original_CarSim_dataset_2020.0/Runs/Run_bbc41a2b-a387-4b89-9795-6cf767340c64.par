@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Road w/ Surface Roughness`Road Networks: 3D Geometry and Terrain
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_bbc41a2b-a387-4b89-9795-6cf767340c64
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 5 El, 30 m` Vehicle Reference` , Animator camera`Camera_d988c2d4-cc54-46a0-bd8a-31056567ae48
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+SET_RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf.par
+#BlueLink2 Vehicle: Assembly`D-Class, Minivan` D-Class` , Math Model`Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf
+
+PARSFILE Procedures\Proc_0c74603a-6b31-412f-a727-d20cbf4d8196.par
+#BlueLink28 Procedures`Constant Speed, Road w/ Roughness` Driving` , Procedure`Proc_0c74603a-6b31-412f-a727-d20cbf4d8196
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_3b948136-1e34-4e97-8fd6-8cb5e8346ccf.png
+WRITE_SENSOR_DETECT
+Title Road w/ Surface Roughness <Road Networks: 3D Geometry and Terrain>
+CATEGORY Road Networks: 3D Geometry and Terrain 
+DATASET_TITLE Road w/ Surface Roughness
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example uses road roughness profiles. In this case, the road roughness dataset is linked on the Procedure screen after the road dataset.
+#
+#Since road roughness may be different at the left and right wheel tracks of a vehicle, CarSim supports two sets of data on the Surface: Roughness Profiles screen: one for each measured wheel track. These roughness profiles are not applied to the entire road surface; rather, they follow the vehicle as it performs its maneuver. These roughness profiles may be applied to any road dataset in CarSim.
+#
+#For more information, please see the following reference document available from the Help drop-down menu:
+#Reference Manuals: The Little Book of Profiling
+#
+#An additional six roughness profiles are available as a downloadable Consolidated Parsfile from the Mechanical Simulation website for customers in maintenance.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: 3D Geometry and Terrain } Road w/ Surface Roughness
+#Library : CarSim Run Control
+#DataSet : Road w/ Surface Roughness
+#Category: Road Networks: 3D Geometry and Terrain
+#FileID  : Run_bbc41a2b-a387-4b89-9795-6cf767340c64
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

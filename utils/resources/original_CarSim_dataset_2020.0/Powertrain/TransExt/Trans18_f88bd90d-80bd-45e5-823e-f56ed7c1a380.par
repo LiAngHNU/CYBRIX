@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`6-Speed Manual (Shift at Max RPM)`6-Speed Transmissions
+#RingCtrl0 6
+NGEARS 6
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -2.86
+R_GEAR_TR(1) 3.82
+R_GEAR_TR(2) 2.26
+R_GEAR_TR(3) 1.64
+R_GEAR_TR(4) 1.25
+R_GEAR_TR(5) 1.06
+R_GEAR_TR(6) 0.92
+ITR_REVERSE 0.034
+ITR_NEUTRAL 0.034
+ITR(1) 0.037
+ITR(2) 0.034
+ITR(3) 0.042
+ITR(4) 0.04
+ITR(5) 0.04
+ITR(6) 0.04
+R_EFF_TR_F_REVERSE 0.9
+R_EFF_TR_F(1) 0.92
+R_EFF_TR_F(2) 0.92
+R_EFF_TR_F(3) 0.95
+R_EFF_TR_F(4) 0.95
+R_EFF_TR_F(5) 0.98
+R_EFF_TR_F(6) 0.99
+R_EFF_TR_R_REVERSE 0.9
+R_EFF_TR_R(1) 0.92
+R_EFF_TR_R(2) 0.92
+R_EFF_TR_R(3) 0.95
+R_EFF_TR_R(4) 0.95
+R_EFF_TR_R(5) 0.98
+R_EFF_TR_R(6) 0.99
+T_SHIFT 0.15
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift_707f5898-d413-44a0-b4c4-0f045dcc3bff.par
+#BlueLink0 Powertrain: Shift Schedule`6-speed, 1-2 Shift (MT, Max RPM)` 6-speed, MT` , Shift schedule`Shift_707f5898-d413-44a0-b4c4-0f045dcc3bff
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift_e22aa01c-697d-43d2-a2fb-83fbc2395498.par
+#BlueLink1 Powertrain: Shift Schedule`6-speed, 2-3 Shift (MT, Max RPM)` 6-speed, MT` , Shift schedule`Shift_e22aa01c-697d-43d2-a2fb-83fbc2395498
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift_6fbd8a33-be81-4485-8f8e-2c61f1d5e42e.par
+#BlueLink2 Powertrain: Shift Schedule`6-speed, 3-4 Shift (MT, Max RPM)` 6-speed, MT` , Shift schedule`Shift_6fbd8a33-be81-4485-8f8e-2c61f1d5e42e
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift_09f22dfd-d8cc-4085-868f-e82a4cda029f.par
+#BlueLink3 Powertrain: Shift Schedule`6-speed, 4-5 Shift (MT, Max RPM)` 6-speed, MT` , Shift schedule`Shift_09f22dfd-d8cc-4085-868f-e82a4cda029f
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift_8da325ff-c72f-4428-b3a3-b5faa84ca0b3.par
+#BlueLink4 Powertrain: Shift Schedule`6-speed, 5-6 Shift (MT, Max RPM)` 6-speed, MT` , Shift schedule`Shift_8da325ff-c72f-4428-b3a3-b5faa84ca0b3
+
+
+igear 6
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); { 6-Speed Transmissions } 6-Speed Manual (Shift at Max RPM)
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 6-Speed Manual (Shift at Max RPM)
+#Category: 6-Speed Transmissions
+#FileID  : Trans18_f88bd90d-80bd-45e5-823e-f56ed7c1a380
+#Product : CarSim 2020.0
+#VehCode Transmission
+
+END

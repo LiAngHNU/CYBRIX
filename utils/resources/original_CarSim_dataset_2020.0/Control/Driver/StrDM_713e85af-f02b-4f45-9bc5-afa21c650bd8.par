@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Control: Steering by the Closed-loop Driver Model`2m Left, Variable Preview`Constant Position: Non-Zero Offset
+SET_ILTARG_FOR_ID 0
+set_description LTARG_ID 2m Left, Variable Preview
+#RingCtrl0 1
+#RingCtrl1 CONSTANT
+#RingCtrl2 1
+LTARG_CONSTANT 2
+#RadioCtrl0 0    
+
+*SCALAR 2
+#CheckBox2 0    
+#CheckBox3 1    
+LTARG_ID_DM LTARG_ID
+#CheckBox0 0    
+#CheckBox1 0    
+CREATE_PATH_OBJ off
+#CheckBox4 0    
+#CheckBox5 0    
+OPT_STR_BY_TRQ 0
+OPT_DM 1
+#CheckBox6 1    
+#CheckBox7 0    
+OPT_DM_2019 0
+TLAG_DM 0
+AV_SW_MAX_DM 1200
+A_SW_MAX_DM 720
+*TPREV 1.0
+VLOW_DM 20
+PARSFILE Control\Preview\Tprev_bb983917-6a82-49cb-bff9-9b55d3ce762f.par
+#BlueLink1 Control: Steering Preview Time for the Driver Model`0.2 sec @ 10 kph, 1 sec @ 20 kph` ` , Preview time`Tprev_bb983917-6a82-49cb-bff9-9b55d3ce762f
+
+
+LOG_ENTRY Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: Non-Zero Offset } 2m Left, Variable Preview
+#Library : Control: Steering by the Closed-loop Driver Model
+#DataSet : 2m Left, Variable Preview
+#Category: Constant Position: Non-Zero Offset
+#FileID  : StrDM_713e85af-f02b-4f45-9bc5-afa21c650bd8
+#Product : CarSim 2020.0
+#VehCode Driver Path Follower
+
+END

@@ -1,0 +1,62 @@
+PARSFILE
+#FullDataName Models: Simulink`All Powertrain Components (4WD)`External Powertrain
+#RunMdlFile Extensions\Simulink\pt_all4wd\Pt_All4WD_CS9.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\pt_all4wd\Pt_All4WD_CS9.mdl
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 1    
+OPT_IO_SYNC_FM 1
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+*ALTERNATE_PATH Programs\Simulink_MDL
+PARSFILE IO_Channels\I_Channels\Import_0e537772-3ee8-40df-9bef-bbe9d8366aa0.par
+#BlueLink0 I/O Channels: Import`Total Powertrain` Powertrain: Sub-System Controls and External Models` , Import`Import_0e537772-3ee8-40df-9bef-bbe9d8366aa0
+
+PARSFILE IO_Channels\O_Channels\Export_42ba9dac-23b7-426b-bef7-84437ffb601e.par
+#BlueLink1 I/O Channels: Export`Total Powertrain` Powertrain: Sub-System Controls and External Models` , Import/Export`Export_42ba9dac-23b7-426b-bef7-84437ffb601e
+
+#MiscYellow1
+*cpar_include Extensions\Simulink\pt_all4wd\lsd_parameta_eclass.m
+*cpar_include Extensions\Simulink\pt_all4wd\mengine_carpet_eclass.m
+*cpar_include Extensions\Simulink\pt_all4wd\pt_parame_ft4wd_eclass.m
+*cpar_include Extensions\Simulink\pt_all4wd\Run_ft4wd_eclass.m
+*cpar_include Extensions\Simulink\pt_all4wd\shift_table_eclass.m
+*cpar_include Extensions\Simulink\pt_all4wd\torq_conv_map_eclass.m
+#ENDMYellow
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This “Models: Simulink” dataset specifies that a Simulink model is used to replace the entire CarSim 4WD powertrain.
+#
+#In conjunction, the CarSim Powertrain screen is set to use External Powertrain options.
+#
+#This dataset also uses the *cpar_include option to ensure that a variety of supporting Matlab .m files are included when a Consolidated Parsfile (.cpar) is created.
+#
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { External Powertrain } All Powertrain Components (4WD)
+#Library : Models: Simulink
+#DataSet : All Powertrain Components (4WD)
+#Category: External Powertrain
+#FileID  : Simlink_6d82afb7-c4f0-4c01-9e15-ae2254e9e3f8
+#Product : CarSim 2020.0
+#VehCode 
+
+END

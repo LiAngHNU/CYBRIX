@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName CarSim Run Control`Atlas: 3D Highway Exit (Basic)`Scene Import
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_a0650240-baa9-4bcd-82ba-e182655d6624
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 6
+#RingCtrl1 3
+#RingCtrl2 1
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89.par
+#BlueLink2 Vehicle: Assembly`D-Class, Sedan` D-Class` , Math Model`Vehicle_4c56d437-56bf-48a1-b545-6f016e2bae89
+
+PARSFILE Procedures\Proc_c19198f5-4977-46d3-8453-994f9d25cc85.par
+#BlueLink28 Procedures`Highway Intersection` Driving` , Procedure`Proc_c19198f5-4977-46d3-8453-994f9d25cc85
+
+PARSFILE Generic\Links\GenLink_398707e9-6d76-4382-8f62-da03a754e6d9.par
+#BlueLink9 Generic Group of Links`3D Highway Exit, I-94 Exit 172, Basic` Roads and Paths` , Miscellaneous`GenLink_398707e9-6d76-4382-8f62-da03a754e6d9
+
+OPT_STOP 1
+TSTART 0
+SSTART 500
+TSTART_WRITE = 0;
+TSTOP 120
+SSTOP 1500
+OPT_DIRECTION 0
+*SPEED 120
+*TSTOP 120
+*TSTART 0
+*SSTART 500
+*SSTOP 1500
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4ce91de0-b4f4-4075-a4a9-d4fc5b973de3.png
+WRITE_SENSOR_DETECT
+Title Atlas: 3D Highway Exit (Basic) <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE Atlas: 3D Highway Exit (Basic)
+#MiscYellow0
+CURRENT_ROAD_ID 1094
+PATH_ID_DM 2001
+LTARG_ID_DM 2001
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This run takes place near exit 172 from north-bound I-94 in Ann Arbor. Three road surfaces are joined to define the interchange: I-94 North, Jackson Ave., and Exit 172. All three are based on GPS data downloaded from atlas.carsim.com. This example is described in the Help document "Connecting 3D Roads from Atlas."
+#
+#This dataset can be set to drive along I-94 (PATH_ID = 1094), Jackson Ave  (PATH_ID = 1001), or exit I-94 onto Jackson Ave  (PATH_ID = 2001 and 2002). Ensure the CURRENT_ROAD_ID value is set to the 1094 or 1001 (Jackson).
+#
+#Set LTARG_ID_DM to 1 if continuing along I-94, 2001 if turning right onto Jackson, or 2002 if turning left.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Scene Import } Atlas: 3D Highway Exit (Basic)
+#Library : CarSim Run Control
+#DataSet : Atlas: 3D Highway Exit (Basic)
+#Category: Scene Import
+#FileID  : Run_a0650240-baa9-4bcd-82ba-e182655d6624
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

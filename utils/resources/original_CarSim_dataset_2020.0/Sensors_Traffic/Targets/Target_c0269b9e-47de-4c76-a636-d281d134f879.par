@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`Animated Deer (Running)`Animals Crossing
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME Animated Deer (Running)
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ 1
+ROAD_ID_OBJ 1
+#CheckBox0 1    
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+
+#RingCtrl0 1
+#RingCtrl1 1
+H_OBJ .87
+*COLOR 1 0 0.2
+*S_INIT 1300
+*L_INIT -67.7
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 2.1
+LENGTH_OBJ 2.1
+WIDTH_OBJ .6
+LX_FRONT_OBJ .95
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+*SPEED 10
+EQ_INIT HeadO_<<o>> 90/DR
+*START station > 1055
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_788d2df0-d733-4399-8bf1-bfdc6353f59c.par
+#BlueLink0 Animator: Shape File Link`Deer: Running (45 km/h)` Environment: Animals (Animated)` , 3D Shape for Video`Shape_788d2df0-d733-4399-8bf1-bfdc6353f59c
+
+EQ_INIT S_Obj_<<o>> 1300
+EQ_INIT LatO_<<o>> -67.7
+DEFINE_VARIABLE V_CMD_OBJ_<<o>>;KM/H; Speed command
+DEFINE_VARIABLE HeadV_O_<<o>> 90/DR;-; Heading vector for ODEs
+DEFINE_VARIABLE COND_START_OBJ_<<o>>;-; Boolean to start motion
+EQ_FULL_STEP COND_START_OBJ_<<o>> = station > 1055 ;
+DEFINE_VARIABLE COND_STOP_OBJ_<<o>>; - ; Boolean to stop motion
+EQ_FULL_STEP COND_STOP_OBJ_<<o>> = 0 ;
+EQ_OUT V_CMD_OBJ_<<o>> = IF(COND_START_OBJ_<<o>> & ~COND_STOP_OBJ_<<o>>, 10, 0);
+EQ_DIFFERENTIAL LatO_<<o>> = V_CMD_OBJ_<<o>>
+
+#EMBEDDED_NOTES
+#The deer will start running to cross the highway along its specified path, "Deer Crossing Highway," when the driver's vehicle reaches station 1020m along his respective path.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { Animals Crossing } Animated Deer (Running)
+#Library : Single Moving Object (Custom)
+#DataSet : Animated Deer (Running)
+#Category: Animals Crossing
+#FileID  : Target_c0269b9e-47de-4c76-a636-d281d134f879
+#Product : CarSim 2020.0
+#VehCode Moving Object (Custom)
+
+END

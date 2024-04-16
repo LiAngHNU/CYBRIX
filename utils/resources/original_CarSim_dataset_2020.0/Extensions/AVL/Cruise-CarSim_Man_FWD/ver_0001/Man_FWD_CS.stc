@@ -1,0 +1,152 @@
+$======================================================================
+$ Applikation: CRUISE - Driving Performance, Fuel Consumption and Emissions Calculation
+$ CAE-Strukturinformation
+$ erstellt am: April 22, 2010 - Uhrzeit: 4:36:03 pm
+$======================================================================
+$------------------------------------------------------Engine
+[VERBR_MOTOR] 2
+AUSGABE           = 2
+REFERENZ          = 1
+VERWENDUNG        = 3
+TEMP_MODELL_HAUPTSCHALTER = 1
+TEMPERATURMODELL  = 2
+VERBRAUCHSMODELL  = 2
+REIBMODELL        = 1
+LL_VERBRAUCH_EMISSIONEN = 2
+SCHUBKENNLINIE_1  = 1
+SCHUBKENNLINIE_2  = 1
+STARTANREICHERUNG = 1
+BESCHL_ANREICHERUNG = 1
+VERBR_MASSENSTROM_EXTERN_S = 1
+VERBR_KOEFF_EXTERN_S = 1
+LL_DREHZAHL_ERMITTLUNG = 1
+LL_REGELUNG       = 1
+MAX_DREHZAHL_ERMITTLUNG = 1
+VERLUSTMOMENTKENNLINIE = 1
+ANSPRECHVERHALTEN_TURBO = 1
+TC_PTX_SCHALT     = 1
+LL_LADEDRUCK_SCHALTER = 1
+KORREKTURVERFAHREN = 1
+SPEZ_VERBRAUCHSKENNFELD = 1
+REDUZIERTE_VOLLAST_1 = 1
+REDUZIERTE_VOLLAST_2 = 1
+REDUZIERTE_VOLLAST_3 = 1
+REDUZIERTE_VOLLAST_4 = 1
+REDUZIERTE_VOLLAST_5 = 1
+REDUZ_VOLLASTREDUKTION = 1
+MOTORBREMSKENNLINIE = 1
+ANLASSERSTROM     = 1
+DROSSELKLAPPENKENNFELD = 1
+STEUERGROESSE     = 1
+AUSWAHL_ABGSANLAGE = 1
+{ VERBINDUNG }
+  300       
+  -1        
+  -1        
+LASTSTELLUNG      = 1905
+STARTSCHALTER     = 1908
+$------------------------------------------------------Clutch
+[KUPPLUNG] 3
+AUSGABE           = 2
+MODELLIERUNG      = 1
+OPERATIONMODE     = 1
+DYNMODE           = 1
+REIBKENNLINIESCHALTER = 1
+{ VERBINDUNG }
+  300       
+  400       
+KUPPLUNGSAUSRUECKUNG = 1906
+AUSGANGSDREHZAHL  = 2
+$----------------------------------------------------Gear Box
+[GETRIEBE] 4
+AUSGABE           = 2
+GANGWECHSELZEITSCHALTER = 1
+WIDERSTANDSSCHALTER = 3
+GANGWECHSELVERLUSTE = 1
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+UNTERTEILUNG_SCHALTER = 1
+{ MOMENTUNTERTEILUNG <%> }
+  0.0                   
+  100.0                 
+{ DREHZAHLUNTERTEILUNG <%> }
+  0.0                     
+  100.0                   
+{ VERBINDUNG }
+  400       
+  500       
+GANGPOSITION      = 1907
+AUSGANGSDREHZAHL  = 3
+$-----------------------------------Single Ratio Transmission
+[UEBERSETZUNGSSTUFE] 5
+VARIIERT          = 2
+AUSGABE           = 2
+ANGABE            = 1
+WIDERSTANDSSCHALTER = 3
+VERLUSTMOMENT_TEMP = 1
+WIRKUNGSGRADEINGABE = 1
+VERLUSTMOMENT_TEMP_T1 = 2
+VERLUSTMOMENT_TEMP_T2 = 1
+VERLUSTMOMENT_TEMP_T3 = 1
+VERLUSTMOMENT_TEMP_T4 = 1
+VERLUSTMOMENT_TEMP_T5 = 1
+UNTERTEILUNG_SCHALTER = 1
+{ MOMENTUNTERTEILUNG <%> }
+  0.0                   
+  100.0                 
+{ DREHZAHLUNTERTEILUNG <%> }
+  0.0                     
+  100.0                   
+{ VERBINDUNG }
+  500       
+  1600      
+$---------------------------------------------------------Hub
+[NABE] 14
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 4
+{ VERBINDUNG }
+  1602      
+WIDERSTANDSMOMENT = 1904
+BREMSMOMENT       = 1903
+$---------------------------------------------------------Hub
+[NABE] 15
+AUSGABE           = 2
+DYNAMISCH_SCHALTER = 1
+EINBAUORT         = 1
+{ VERBINDUNG }
+  1601      
+WIDERSTANDSMOMENT = 1902
+BREMSMOMENT       = 1901
+$------------------------------------------------Differential
+[DIFFERENTIAL] 16
+AUSGABE           = 2
+WIDERSTANDSSCHALTER = 1
+{ VERBINDUNG }
+  1600      
+  1601      
+  1602      
+AUSGANGSMOMENT_1  = 5
+AUSGANGSMOMENT_2  = 6
+$--------------------------------------------Cruise Interface
+[MATLAB_INTERFACE] 19
+AUSGABE           = 2
+{ VERBINDUNG }
+INPORT0           = 1605
+INPORT1           = 1606
+INPORT2           = 203
+INPORT3           = 302
+INPORT4           = 403
+OUTPORT0          = 1
+OUTPORT1          = 2
+OUTPORT2          = 3
+OUTPORT3          = 4
+OUTPORT4          = 5
+OUTPORT5          = 6
+OUTPORT6          = 7
+OUTPORT7          = 8

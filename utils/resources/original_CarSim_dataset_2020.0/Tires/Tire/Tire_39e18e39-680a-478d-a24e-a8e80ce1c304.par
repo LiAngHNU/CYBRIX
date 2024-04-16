@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName Tire`235/65 R17`Touring Tires
+FZ_REF 8000
+X_LENGTH 356
+Z_LENGTH 356
+Y_LENGTH 235
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+#BlueLink4 Animator: Shape Assembly`Sports Car` Tires` , Animator`ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 235
+RRE 346
+R0 356
+FZ_TIRE_COEFFICIENT 362
+FZ_MAX 100000
+M_TIRE 25
+IT 2
+IT_XXZZ 1.2
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0042
+RR_V 0.000031
+L_CONTACT_X_CONSTANT 100
+L_CONTACT_Y_CONSTANT 235
+RR_FX 1
+OPT_TIRE_COMB 1
+R_TIRE_COMB 1.1
+PARSFILE Tires\Mz\TireMz_47de72e5-1448-4bb7-ab21-678022953c4b.par
+#BlueLink0 Tire: Aligning Moment`235/65 R17 (SAE)` Touring Tires` , Aligning Moment`TireMz_47de72e5-1448-4bb7-ab21-678022953c4b
+
+PARSFILE Tires\Fy\TireFy_e8067372-444a-4b4e-845e-16468a3da484.par
+#BlueLink1 Tire: Lateral Force`235/65 R17` Touring Tires` , Lateral Force`TireFy_e8067372-444a-4b4e-845e-16468a3da484
+
+PARSFILE Tires\Fx\TireFx_8b0058da-db8c-4a15-a2ac-02f95d6a9065.par
+#BlueLink2 Tire: Longitudinal Force`235/65 R17` Touring Tires` , Longitudinal Force`TireFx_8b0058da-db8c-4a15-a2ac-02f95d6a9065
+
+PARSFILE Tires\Camber_Thrust\CamStiff_a7067b54-0e3b-44a5-ac78-acdf619982f3.par
+#BlueLink3 Tire: Camber Thrust Coefficient`235/65 R17` Touring Tires` , Camber Thrust`CamStiff_a7067b54-0e3b-44a5-ac78-acdf619982f3
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 875 kg
+#
+#Note:
+#The Aligning Moment data linked here replaces the previously shipping Aligning Moment data.
+#
+#The Mz values correspond to a pneumatic trail (deg) obtained from the averaged results of SAE Tire Tests.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Touring Tires } 235/65 R17
+#Library : Tire
+#DataSet : 235/65 R17
+#Category: Touring Tires
+#FileID  : Tire_39e18e39-680a-478d-a24e-a8e80ce1c304
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

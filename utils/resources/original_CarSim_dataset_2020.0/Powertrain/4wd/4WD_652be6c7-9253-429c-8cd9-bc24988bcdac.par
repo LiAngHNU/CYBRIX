@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`300 kW, 6-spd., 4.1 Ratio`300 kW Powertrains
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 0
+OPT_HEV 0
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(1) 1
+OPT_DIFF_INTERNAL(2) 1
+OPT_DIFF_INTERNAL(3) 1
+
+PARSFILE Powertrain\Engine\Engine_8040b1ad-5f06-4c6c-a6e6-740997750fc3.par
+#BlueLink0 Powertrain: Engine`300 kW Engine` 300 kW Engines` , Engine`Engine_8040b1ad-5f06-4c6c-a6e6-740997750fc3
+
+PARSFILE Powertrain\TConv\TC_29ab28a7-2a3e-463d-b7ff-f3104bb4a545.par
+#BlueLink1 Powertrain: Torque Converter`Torque Converter: 300 kW Engine` Torque Converters: 251 kW to 350 kW` , Torque Conv.`TC_29ab28a7-2a3e-463d-b7ff-f3104bb4a545
+
+PARSFILE Powertrain\TransExt\Trans18_55b3d8ee-e987-4803-8615-8a5b5c910733.par
+#BlueLink10 Powertrain: Transmission (18 Gears or CVT)`6-Speed` 6-Speed Transmissions` , Transmission (Extended)`Trans18_55b3d8ee-e987-4803-8615-8a5b5c910733
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_eab57451-9d2c-4c0a-91ca-a1c4a8b73a1a.par
+#BlueLink3 Powertrain: Transfer Case`Viscous Coupling: 50/50, Gear Ratio 1:1` Limited Slip and Viscous Coupling` , Transfer case`XC_eab57451-9d2c-4c0a-91ca-a1c4a8b73a1a
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_4679a40b-781f-464d-8a83-fb07685b3ee6.par
+#BlueLink4 Powertrain: Front Differential`Viscous Coupling: Gear Ratio 4.1:1` Limited Slip and Viscous Coupling` , Differential front`DiffF_4679a40b-781f-464d-8a83-fb07685b3ee6
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_14eeb77f-6816-40cf-8e35-7b770f740673.par
+#BlueLink5 Powertrain: Rear Differential`Locked Differential: Gear Ratio 4.1:1` Locked` , Differential rear`DiffR_14eeb77f-6816-40cf-8e35-7b770f740673
+
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { 300 kW Powertrains } 300 kW, 6-spd., 4.1 Ratio
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 300 kW, 6-spd., 4.1 Ratio
+#Category: 300 kW Powertrains
+#FileID  : 4WD_652be6c7-9253-429c-8cd9-bc24988bcdac
+#Product : CarSim 2020.0
+#VehCode 4WD
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`City Intersection`Fixed Camera
+#RingCtrl1 0
+
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+SET_CAMERA_REFERENCE_FRAME Frame_8d039c3c-753d-406b-9c28-9406943a988c
+PARSFILE Animator\Frames\Frame_8d039c3c-753d-406b-9c28-9406943a988c.par
+#BlueLink0 Animator: Reference Frame`Fixed` Shape Preview: Generic` , Reference frame for outside camera`Frame_8d039c3c-753d-406b-9c28-9406943a988c
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_8d039c3c-753d-406b-9c28-9406943a988c
+SET_LOOKPOINT_X 150
+SET_LOOKPOINT_Y 150
+SET_LOOKPOINT_Z 1.2
+SET_AZIMUTH 135
+SET_ELEVATION 30
+SET_DISTANCE 25
+SET_CAMERAMAN_NAME External camera
+*SET_LOOKPOINT_X 150
+*SET_LOOKPOINT_Y 150
+*SET_LOOKPOINT_Z 1.2
+*SET_AZIMUTH 135
+*SET_ELEVATION 30
+*SET_DISTANCE 25
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 90
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Fixed Camera } City Intersection
+#Library : Animator: Camera Setup
+#DataSet : City Intersection
+#Category: Fixed Camera
+#FileID  : Camera_3abb6cb7-82f2-4567-b52d-fa76e8c9a9c9
+#Product : CarSim 2020.0
+#VehCode Camera
+
+END

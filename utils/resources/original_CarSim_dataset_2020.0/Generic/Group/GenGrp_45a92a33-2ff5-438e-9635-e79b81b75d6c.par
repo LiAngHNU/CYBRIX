@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic Lights for 3-way`Traffic Lights
+#VehCode Generic Group
+
+
+
+#MiscYellow3
+symbol_push <<x>> 2
+symbol_push <<y>> 7
+symbol_push <<psi>> (-pi/2)
+symbol_push <<rstart>> (0.5 + r_sig_start)
+symbol_push <<dist>> 24
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1.par
+#BlueLink3 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 4`Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1
+
+
+#MiscYellow4
+set_description object_name ...
+  Traffic light facing south ! previous link
+define_output LightNS = TypeO_<<o>>;-;...
+  Light color for N-S lights
+symbol_set <<x>> -2
+symbol_set <<y>> -7
+symbol_set <<psi>> (pi/2)
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1.par
+#BlueLink4 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 5`Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1
+
+
+#MiscYellow5
+set_description object_name ...
+   Traffic light facing north ! previous link
+symbol_set <<x>> -6
+symbol_set <<y>> 2
+symbol_set <<psi>> 0
+symbol_set <<rstart>> r_sig_start
+symbol_set <<dist>> 23
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1.par
+#BlueLink5 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 6`Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1
+
+
+#MiscYellow6
+set_description object_name ...
+  Traffic light facing east ! previous link
+define_output LightE = TypeO_<<o>>;-;...
+  Light color for E-facing lights
+symbol_set <<x>> 5
+symbol_set <<y>> 7
+symbol_set <<psi>> (pi/2)
+#ENDMYellow
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Traffic Lights } Traffic Lights for 3-way
+#Library : Generic Data Group
+#DataSet : Traffic Lights for 3-way
+#Category: Traffic Lights
+#FileID  : GenGrp_45a92a33-2ff5-438e-9635-e79b81b75d6c
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

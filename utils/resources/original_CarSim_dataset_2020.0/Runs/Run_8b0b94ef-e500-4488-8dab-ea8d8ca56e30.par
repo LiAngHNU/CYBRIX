@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`HUD, Exotic Racecar, Sound`VS Visualizer Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8b0b94ef-e500-4488-8dab-ea8d8ca56e30
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5.par
+#BlueLink0 Animator: Camera Setup`254 Azm, 8 El, 15 m, No Yaw` Vehicle Reference` , Animator camera`Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_21938303-4641-4f6f-86a7-10165de0b5ed.par
+#BlueLink2 Vehicle: Assembly`Exotic Racecar: MT, MC Press Brakes` Exotic Sports Car` , Math Model`Vehicle_21938303-4641-4f6f-86a7-10165de0b5ed
+
+PARSFILE Procedures\Proc_68568516-45a1-4979-94e7-60e02041219d.par
+#BlueLink28 Procedures`Handling Course, Race Driving` Driver Controls` , Procedure`Proc_68568516-45a1-4979-94e7-60e02041219d
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+PARSFILE Generic\VS_commands\GenVS_4d0aa2ec-1afe-44a2-b9ab-daa109a26a34.par
+#BlueLink10 Generic VS Commands`VS Visualizer HUD Handling Course Map` HUD Gauges` , Miscellaneous`GenVS_4d0aa2ec-1afe-44a2-b9ab-daa109a26a34
+
+PARSFILE Generic\VS_commands\GenVS_6e8d6522-115f-41d2-872d-d9f6ec179bba.par
+#BlueLink11 Generic VS Commands`VS Visualizer HUD Handling Course Info` HUD Gauges` , Miscellaneous`GenVS_6e8d6522-115f-41d2-872d-d9f6ec179bba
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2c9c151a-13e0-4668-bd91-2b8ea79ed58a.png
+WRITE_SENSOR_DETECT
+Title HUD, Exotic Racecar, Sound <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE HUD, Exotic Racecar, Sound
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An exotic-type racecar performs one lap around a handling course.
+#
+#VS Commands and Generic Tables are used to represent variable gains for the Closed-Loop Speed Controller, replacing the individual numbers typically used (i.e., one each for KP, KI, and KP3).
+#
+#The vehicle's brake system uses Master Cylinder Pressure as the control input, and the tire datasets have links to sounds.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { VS Visualizer Examples } HUD, Exotic Racecar, Sound
+#Library : CarSim Run Control
+#DataSet : HUD, Exotic Racecar, Sound
+#Category: VS Visualizer Examples
+#FileID  : Run_8b0b94ef-e500-4488-8dab-ea8d8ca56e30
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

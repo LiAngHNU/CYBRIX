@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`3A Day Cab, 0 @ Hitch`Traffic and Moving Objects: Commercial
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 3
+OBJ_X_LENGTH 4270
+OBJ_Y_LENGTH 2438
+OBJ_Z_LENGTH 3200
+*DZ_V 0
+*LAT_WC 2030
+*LAT_WC_2 1863
+*HWC 525
+*WHEEL_RATIO 1
+*LAXLE_1 -3600
+*LAXLE_2 -600
+*LAXLE_3 600
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_33721b41-6022-4532-a1de-0739c2de9e79.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 3.6
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 3.6
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0.6
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 0.6
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -0.6
+SET_OFFSET_Y 0.9315
+SET_OFFSET_Z 0.49875
+TIRE_ANI_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -0.6
+SET_OFFSET_Y -0.9315
+SET_OFFSET_Z 0.49875
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_f7422c06-a934-4a2c-886e-a9a9fc54d02e.par
+#BlueLink1 Animator: Shape Assembly`Day Cab (3A): Chassis, forward 3600mm` Truck Lead Units` , Vehicle Body`ShpGrp_f7422c06-a934-4a2c-886e-a9a9fc54d02e
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_2f14e278-ac38-4fd3-a72c-255dda9f189a.par
+#BlueLink7 Animator: Shape Assembly`Day Cab: Cab, forward 3600mm` Truck Lead Units` , Vehicle Body`ShpGrp_2f14e278-ac38-4fd3-a72c-255dda9f189a
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_09ade48c-1ac2-4680-a0bc-e53feab77176.par
+#BlueLink2 Animator: Shape File Link`Blurred Dual Tire: Truck` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_09ade48c-1ac2-4680-a0bc-e53feab77176
+
+EXPORT_PARSFILE Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Truck` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa
+
+
+#EMBEDDED_NOTES
+#This shape is shifted for use with moving objects, such that when the moving object yaws,  the shape will rotate about a point near the hitch. This mimics the appearance of a vehicle making a low-speed turn.
+#
+#This is intended to be matched with a semitrailer with offtracking. Both will track at the hitch point.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Traffic and Moving Objects: Commercial } 3A Day Cab, 0 @ Hitch
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 3A Day Cab, 0 @ Hitch
+#Category: Traffic and Moving Objects: Commercial
+#FileID  : AniVeh_33721b41-6022-4532-a1de-0739c2de9e79
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

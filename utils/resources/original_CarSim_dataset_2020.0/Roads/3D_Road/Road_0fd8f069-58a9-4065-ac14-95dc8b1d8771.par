@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`6-Lane Highway: Left Wall`Many Lanes
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_0fd8f069-58a9-4065-ac14-95dc8b1d8771.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID left_wall
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 6-Lane Highway: Left Wall
+PARSFILE Roads\Center_XY\PathXY_7b12e040-94c4-4afc-b112-02ea4acca62d.par
+#BlueLink0 Path: X-Y Coordinates`Alt 3 Road from FHWA` Public Road Section` , Reference Path`PathXY_7b12e040-94c4-4afc-b112-02ea4acca62d
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Alt 3 Road from FHWA
+PARSFILE Roads\dZ_Map\RdMapZ_f1ee2cdc-532e-443f-b8b9-bc1679f04013.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`6-Lane Hwy w/ Walls and Access Roads` Highway` , Miscellaneous`RdMapZ_f1ee2cdc-532e-443f-b8b9-bc1679f04013
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_28bcac50-10ff-4419-9195-d3d58c434aed.par
+#BlueLink4 Road: Animator Surface Shapes`6-Ln Hwy: Left Wall for Access Roads` Scenic Road Shapes` , Road shape definitions`RdShape_28bcac50-10ff-4419-9195-d3d58c434aed
+
+PARSFILE Roads\dZ_Map\RdMapZ_86f99040-045d-4d23-b508-d469a175d0fa.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`6-Lane Highway Road Crown` Highway` , Miscellaneous`RdMapZ_86f99040-045d-4d23-b508-d469a175d0fa
+
+RR_SURF 1.1
+L_CAMERA_FRONT 10
+L_CAMERA_REAR 10
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Camera`Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af
+
+parsfile Roads\3D_Road\Road_0fd8f069-58a9-4065-ac14-95dc8b1d8771.ani
+
+#EMBEDDED_NOTES
+#In this dataset, only the shapes for the left (+L) wall are drawn.  If the vehicle operates on this road, it will behave the same as if it was on the main road dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Many Lanes } 6-Lane Highway: Left Wall
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 6-Lane Highway: Left Wall
+#Category: Many Lanes
+#FileID  : Road_0fd8f069-58a9-4065-ac14-95dc8b1d8771
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`S_Current, SLimit`Hill Hold w/ Parking Brake
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS SCurrent, Time
+PLOTCHANNELS SLimit, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE S_Current, SLimit
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Hill Hold w/ Parking Brake } S_Current, SLimit
+#Library : Plot: Setup
+#DataSet : S_Current, SLimit
+#Category: Hill Hold w/ Parking Brake
+#FileID  : Plot_12fcf574-953d-4efc-b11b-0b4b81e5847d
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

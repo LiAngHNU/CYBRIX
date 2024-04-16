@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName CarSim Run Control`Detectable Wall Objects`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f469accc-9a7e-4800-b685-873e8e8bab69
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 10 El, 36 m` Vehicle Reference` , Animator camera`Camera_7fd93935-5e80-4d39-bf60-d7ff5dbaa0af
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_294eb869-ad73-4565-9e2d-b0a04854b684.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Wall Detection` C-Class` , Math Model`VehLoad_294eb869-ad73-4565-9e2d-b0a04854b684
+
+PARSFILE Procedures\Proc_52341aff-82d5-46b8-86f6-e1387e0f3635.par
+#BlueLink28 Procedures`6-Lane Highway w/ Wall Objects` ADAS and Active Safety` , Procedure`Proc_52341aff-82d5-46b8-86f6-e1387e0f3635
+
+*TSTOP 50
+*SSTART -150
+*SSTOP 150
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Detectable Wall Objects <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Detectable Wall Objects
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback with a single ADAS Sensor mounted on the right-side mirror detects segment-based objects.
+#
+#The walls are represented as polygon-type Sensor Targets and are detectable by the ADAS Sensor. This allows them to occlude objects placed behind them.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Detectable Wall Objects
+#Library : CarSim Run Control
+#DataSet : Detectable Wall Objects
+#Category: ADAS and Active Safety
+#FileID  : Run_f469accc-9a7e-4800-b685-873e8e8bab69
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

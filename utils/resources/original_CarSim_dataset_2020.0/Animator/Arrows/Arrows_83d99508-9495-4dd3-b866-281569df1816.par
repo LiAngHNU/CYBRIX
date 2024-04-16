@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Animator: Wheel Arrows and Other Indicators`Fz Tire Force Arrows (L1)`Tire Force Arrows (2 Axles), Three-wheeled Vehicle
+#CheckBox1 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 T
+#RingCtrl2 L
+#RingCtrl3 0
+*DYN_Z Fz_L1
+*REF_Z 1000
+*OFFSET_Z 0
+*ID_AXLE 1
+
+#BlueLink0 Animator: Shape Assembly`Fz 3D, Offset (Tail Origin)` Arrows` , Animator Shape(s)`ShpGrp_cea899b5-fef5-46f2-a37e-8da55a09e847
+
+ADD_REFERENCE_FRAME wheel L1 indicator: Fz Tire Force Arrows (L1)
+PARSFILE Animator\STL_Groups\ShpGrp_cea899b5-fef5-46f2-a37e-8da55a09e847.par
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_L1
+WRT_Xctc_L1
+ANI_Xctc_L1
+SET_Y_NAME Yctc_L1
+WRT_Yctc_L1
+ANI_Yctc_L1
+SET_Z_NAME Zgnd_L1
+WRT_Zgnd_L1
+ANI_Zgnd_L1
+SET_PITCH_NAME PitchGL1
+WRT_PitchGL1
+ANI_PitchGL1
+SET_ROLL_NAME RollGL1
+WRT_RollGL1
+ANI_RollGL1
+SET_YAW_NAME Yaw_L1
+WRT_Yaw_L1
+ANI_Yaw_L1
+SET_FRAME_SCALE_Z_NAME Fz_L1
+WRT_Fz_L1
+ANI_Fz_L1
+Z_REF_LENGTH 1000
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+SET_OFFSET_VAR_Z 0
+
+
+LOG_ENTRY Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles), Three-wheeled Vehicle } Fz Tire Force Arrows (L1)
+#Library : Animator: Wheel Arrows and Other Indicators
+#DataSet : Fz Tire Force Arrows (L1)
+#Category: Tire Force Arrows (2 Axles), Three-wheeled Vehicle
+#FileID  : Arrows_83d99508-9495-4dd3-b866-281569df1816
+#Product : CarSim 2020.0
+#VehCode Wheel Indicators
+
+END

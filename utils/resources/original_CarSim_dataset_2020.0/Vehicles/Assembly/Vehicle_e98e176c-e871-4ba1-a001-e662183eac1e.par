@@ -1,0 +1,116 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Off-Road Pickup: Ind_SA`Pickup Trucks
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_53515216-2d4d-4852-aacd-4c6ae0bc8dbd.par
+#BlueLink7 Steering`Pickup, Compact: Power, Recirc. Ball` Pickup Trucks` , Steering System`StrSys2_53515216-2d4d-4852-aacd-4c6ae0bc8dbd
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_85588641-b484-4592-b16a-851ff908cb44.par
+#BlueLink19 Suspension: Independent System Kinematics`Pickup, Baja - Off-Road Front` Pickup Trucks` , Kinematics`KinInd_85588641-b484-4592-b16a-851ff908cb44
+
+PARSFILE Suspensions\Compliance\CmpInd_0673e2c9-c1c7-40c8-bd98-9be084f103c0.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Pickup, Baja - Front` Pickup Trucks` , Compliance`CmpInd_0673e2c9-c1c7-40c8-bd98-9be084f103c0
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_1e012516-ec35-487a-ae8c-32bd0b3bea42.par
+#BlueLink999 Tire`265/75 R16 Off-Road` Touring Tires` , Tire`Tire_1e012516-ec35-487a-ae8c-32bd0b3bea42
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_1e012516-ec35-487a-ae8c-32bd0b3bea42.par
+#BlueLink10 Tire`265/75 R16 Off-Road` Touring Tires` , Tire`Tire_1e012516-ec35-487a-ae8c-32bd0b3bea42
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_1049a66e-c995-4488-902a-e0fa40c8ee9e.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`Pickup, Baja - Rear (Off Road)` Pickup Trucks` , Kinematics`KinSA_1049a66e-c995-4488-902a-e0fa40c8ee9e
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_5b42e037-8518-4509-855f-fddde0456909.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Baja -  Rear` Pickup Trucks` , Compliance`CmpSA_5b42e037-8518-4509-855f-fddde0456909
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_1e012516-ec35-487a-ae8c-32bd0b3bea42.par
+#BlueLink999 Tire`265/75 R16 Off-Road` Touring Tires` , Tire`Tire_1e012516-ec35-487a-ae8c-32bd0b3bea42
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_1e012516-ec35-487a-ae8c-32bd0b3bea42.par
+#BlueLink999 Tire`265/75 R16 Off-Road` Touring Tires` , Tire`Tire_1e012516-ec35-487a-ae8c-32bd0b3bea42
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_738d5e3f-6aab-4f70-be98-414bd985d92d.par
+#BlueLink0 Vehicle: Sprung Mass`Pickup, Baja` Pickup Trucks: Baja` , Sprung Mass`SprMass_738d5e3f-6aab-4f70-be98-414bd985d92d
+
+PARSFILE Aerodynamics\Aero_Main\Aero_5f556566-acbf-4475-b2a2-ddbf30e34a3a.par
+#BlueLink1 Aerodynamics: Basic`Compact Pickup (2780 mm wheelbase)` Pickup Trucks` , Aerodynamics`Aero_5f556566-acbf-4475-b2a2-ddbf30e34a3a
+
+PARSFILE Powertrain\4wd\4WD_652be6c7-9253-429c-8cd9-bc24988bcdac.par
+#BlueLink5 Powertrain: 4-Wheel Drive`300 kW, 6-spd., 4.1 Ratio` 300 kW Powertrains` , Powertrain`4WD_652be6c7-9253-429c-8cd9-bc24988bcdac
+
+PARSFILE Brakes\4W_System\Brk4W_741784e7-899e-454b-b6d2-b395135bb215.par
+#BlueLink6 Brakes: Four-Wheel System`Pickup (Comp): MC Press, ABS` Pickup Trucks` , Brake System`Brk4W_741784e7-899e-454b-b6d2-b395135bb215
+
+PARSFILE Animator\Vehicles\AniVeh_eb06e89d-a83e-4844-b6db-5f71ce5ff9a1.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Pickup, Baja` Pickup Trucks` , Vehicle 3D Shape`AniVeh_eb06e89d-a83e-4844-b6db-5f71ce5ff9a1
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_eb06e89d-a83e-4844-b6db-5f71ce5ff9a1.png
+
+#EMBEDDED_NOTES
+#Generic off-road pickup truck with an SLA front and a Hotchkiss Solid Axle rear suspension.
+#
+#This example demonstrates two significant features:
+#
+#(1) Variable tire contact patch dimensions vs. tire compression.
+#
+#Click on the tire dataset "265/75 R16 Off-Road" to see the two new datasets for the contact dimensions in the lower right corner of the tire data screen.
+#
+#(2) How to add the animation shapes for front upper and lower suspension control arms that move with suspension articulation.
+#
+#To see how this was done, click on the blue link "Off-Road: Control Arms (Front Upper and Lower)."
+#
+#Note that these control arms are for animation purposes only; they aren't bodies that carry suspension loads.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Pickup Trucks } Off-Road Pickup: Ind_SA
+#Library : Vehicle: Assembly
+#DataSet : Off-Road Pickup: Ind_SA
+#Category: Pickup Trucks
+#FileID  : Vehicle_e98e176c-e871-4ba1-a001-e662183eac1e
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`Normalized 1D (11-pt spline)`Normalized Tires
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 COEFFICIENT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+MZ_TIRE_TABLE SPLINE
+-24, 0.003
+-8, -0.0005
+-4, -0.011
+-2, -0.021
+-1.5, -0.018
+-1, -0.013
+-0.5, -0.006
+0, 0
+0.5, 0.006
+1, 0.013
+1.5, 0.018
+2, 0.021
+4, 0.011
+8, 0.0005
+24, -0.003
+ENDTABLE
+MZ_TIRE_FZ_COEFFICIENT 1
+*SCALAR2 1
+
+
+#EMBEDDED_NOTES
+#This normalized data was made by taking the table for the 225/60 R18 and dividing by the load rating of 5000 N.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { Normalized Tires } Normalized 1D (11-pt spline)
+#Library : Tire: Aligning Moment
+#DataSet : Normalized 1D (11-pt spline)
+#Category: Normalized Tires
+#FileID  : TireMz_1abe8a26-87b7-4e48-9580-c42b7da80a71
+#Product : CarSim 2020.0
+#VehCode Tire: Mz
+
+END

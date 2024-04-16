@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName CarSim Run Control`Reverse DLC: Trailer (Extra License)`* CS 2020.0 - Low Speed Behavior
+#VEHICLECODE Ind_SA + SS
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_5463b5c8-e648-4457-adbb-eaa6feedb857
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_e35ca4da-dd8b-4473-b0d2-e0943831e7a9.par
+#BlueLink0 Animator: Camera Setup`10 Azm, 9 El, 30 m, No Yaw` Vehicle Reference` , Animator camera`Camera_e35ca4da-dd8b-4473-b0d2-e0943831e7a9
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 on
+RT_WINDOW_CLOSE on
+#RingCtrl5 1
+LIVE_SERVER_MAX_CONNECTIONS 1
+PARSFILE Vehicles\Loaded\VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Pickup, Full Size w/ 2A Gooseneck Trl.` Pickup, Full Size` , Math Model`VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497
+
+PARSFILE Procedures\Proc_ed41a7c8-5562-432b-bd15-4df9a6499422.par
+#BlueLink28 Procedures`DLC @ -10 km/h` Handling Testing` , Procedure`Proc_ed41a7c8-5562-432b-bd15-4df9a6499422
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+PARSFILE Output\Sensors\MoSen_a068ad5c-c56b-4caa-a64e-41df6523ef79.par
+#BlueLink10 Positions, Velocities, and Accelerations`Trailer Hitch Position` ` , Miscellaneous`MoSen_a068ad5c-c56b-4caa-a64e-41df6523ef79
+
+PARSFILE Generic\VS_commands\GenVS_c9885291-6618-4de4-a70a-a8633beead8e.par
+#BlueLink11 Generic VS Commands`Trailer Backing: PI Control` Custom Steering Controls` , Miscellaneous`GenVS_c9885291-6618-4de4-a70a-a8633beead8e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6ba13624-c527-4355-b1e1-654631d3017e.png
+WRITE_SENSOR_DETECT
+Title Reverse DLC: Trailer (Extra License) <* CS 2020.0 - Low Speed Behavior>
+CATEGORY * CS 2020.0 - Low Speed Behavior 
+DATASET_TITLE Reverse DLC: Trailer (Extra License)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#In this example, a pickup towing a trailer executes a low-speed "double lane change" maneuver in reverse.
+#
+#Steering control is implemented via VS Commands. For more detail, refer to the notes on the "Trailer Backing: PI Control" VS Commands dataset.
+#
+#NOTE: The CarSim Trailers license is required to run this example. You may still view video and plots without it.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Low Speed Behavior } Reverse DLC: Trailer (Extra License)
+#Library : CarSim Run Control
+#DataSet : Reverse DLC: Trailer (Extra License)
+#Category: * CS 2020.0 - Low Speed Behavior
+#FileID  : Run_5463b5c8-e648-4457-adbb-eaa6feedb857
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

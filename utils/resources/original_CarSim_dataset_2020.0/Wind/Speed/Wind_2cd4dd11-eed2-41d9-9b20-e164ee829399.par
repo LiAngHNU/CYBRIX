@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Wind Speed`Crosswind @ 40 km/h @ 2 sec`Wind Bursts and Gusts
+#CheckBox0 0    
+
+#RingCtrl0 LINEAR_FLAT
+#RingCtrl1 CONSTANT
+#RingCtrl2 ADD
+WIND_SPEED_COMBINE ADD
+#DiagramOne0
+WIND_SPEED_TABLE LINEAR_FLAT
+0, 0
+2, 0
+2.1, 40
+3, 40
+ENDTABLE
+WIND_SPEED_S_CONSTANT 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 50
+*SCALAR2 0
+D_AIR 1.206
+
+
+#EMBEDDED_NOTES
+#Wind Speed (kph) vs. Time (sec)
+#
+#This dataset is used to represent wind speed ramping from 0 kph to 40 kph in 0.1 seconds.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Wind Speed; { Wind Bursts and Gusts } Crosswind @ 40 km/h @ 2 sec
+#Library : Wind Speed
+#DataSet : Crosswind @ 40 km/h @ 2 sec
+#Category: Wind Bursts and Gusts
+#FileID  : Wind_2cd4dd11-eed2-41d9-9b20-e164ee829399
+#Product : CarSim 2020.0
+#VehCode Wind Speed
+
+END

@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName CarSim Run Control`OL: Replace Entire System (Simulink)`Steering Models, Ext. Elements, Open/Closed-Loop
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f71db3e7-de18-4a7f-8679-b8f889f5524b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_fea9fb3a-47de-4289-bc58-4c6b83f72fff.par
+#BlueLink12 Models: Simulink`Replace Entire System` External Steer` , Models`Simlink_fea9fb3a-47de-4289-bc58-4c6b83f72fff
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 8
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0 0 1
+SET_RUN_COLOR 0 0 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae.par
+#BlueLink2 Vehicle: Assembly`A-Class, Hatchback, No ABS` A-Class` , Math Model`Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae
+
+PARSFILE Procedures\Proc_41238189-18db-44af-b59a-0e9db1c4434d.par
+#BlueLink28 Procedures`Sine Sweep Steer Input` Driver Controls` , Procedure`Proc_41238189-18db-44af-b59a-0e9db1c4434d
+
+PARSFILE Generic\VS_commands\GenVS_30c1424f-7911-4806-96f0-8068b99fac37.par
+#BlueLink9 Generic VS Commands`Replace All` External Steering` , Miscellaneous`GenVS_30c1424f-7911-4806-96f0-8068b99fac37
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink15 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+PARSFILE Plot\Setup\Plot_b19280a2-8346-4fce-9410-a014d7ef86ac.par
+#BlueLink16 Plot: Setup`Kingpin Torque - Front` Steering` , Plot`Plot_b19280a2-8346-4fce-9410-a014d7ef86ac
+
+
+SPECIAL_PARSFILE Runs\Run_823efcb9-9af8-4faf-bc1a-27567275cc5b.par
+#BlueLink23 CarSim Run Control`OL: Replace Entire System` Steering Models, Ext. Elements, Open/Closed-Loop` , Overlay run or ERD file`Run_823efcb9-9af8-4faf-bc1a-27567275cc5b
+
+
+SPECIAL_PARSFILE Runs\Run_479ea568-2436-417b-a57b-052d58c340fd.par
+#BlueLink24 CarSim Run Control`OL: Full Internal Model` Steering Models, Ext. Elements, Open/Closed-Loop` , Overlay run or ERD file`Run_479ea568-2436-417b-a57b-052d58c340fd
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2ded7d52-8c7e-46a5-99e8-7c269916bfae.png
+WRITE_SENSOR_DETECT
+Title OL: Replace Entire System (Simulink) <Steering Models, Ext. Elements, Open/Closed-Loop>
+CATEGORY Steering Models, Ext. Elements, Open/Closed-Loop 
+DATASET_TITLE OL: Replace Entire System (Simulink)
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An A-Class Hatchback performs a Sine Sweep Steer Angle test.
+#
+#The entire steering system has been replaced with an external model implemented using Simulink, characterized as an overall steering ratio.
+#
+#A Generic VS Commands dataset is linked on the Run Control screen to provide the setting — opt_steer_ext(1) 4 — necessary to indicate to the CarSim math model that the entire steering system will be replaced.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Steering Models, Ext. Elements, Open/Closed-Loop } OL: Replace Entire System (Simulink)
+#Library : CarSim Run Control
+#DataSet : OL: Replace Entire System (Simulink)
+#Category: Steering Models, Ext. Elements, Open/Closed-Loop
+#FileID  : Run_f71db3e7-de18-4a7f-8679-b8f889f5524b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

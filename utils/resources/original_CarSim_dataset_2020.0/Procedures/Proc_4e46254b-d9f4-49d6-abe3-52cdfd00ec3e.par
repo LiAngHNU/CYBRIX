@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName Procedures`Crosswind and Tripped Rollover`Stability Testing
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -5
+TSTART_WRITE = 0;
+TSTOP 30
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 145
+*TSTOP 30
+*TSTART 0
+*SSTART -5
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Crosswind and Tripped Rollover
+SPEED_TARGET_CONSTANT 145
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Roads\3D_Road\Road_110846a2-02d3-4055-89c0-478f8d5fdf9b.par
+#BlueLink0 Road: 3D Surface (All Properties)`Coastal Highway w/ Gap` Scenic Roads` , Miscellaneous`Road_110846a2-02d3-4055-89c0-478f8d5fdf9b
+
+PARSFILE Events\Events_0c2a3e25-3f96-41de-b583-79ab424689d5.par
+#BlueLink7 Events`A. Driver Drifts to Right` Wind-tripped Rollover` , Miscellaneous`Events_0c2a3e25-3f96-41de-b583-79ab424689d5
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink8 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink9 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink10 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink11 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink12 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c.par
+#BlueLink13 Plot: Setup`Aerodynamic Forces` Aerodynamics and Wind` , Plot`Plot_3f15c9c3-0af9-463a-9ef0-afdf4ae9de1c
+
+PARSFILE Plot\Setup\Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0.par
+#BlueLink14 Plot: Setup`Longitudinal Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_2265b386-ffdf-44a9-92e9-e0a2a4c8fec0
+
+PARSFILE Plot\Setup\Plot_b86d8c49-db4e-400a-a282-322334d38a2e.par
+#BlueLink15 Plot: Setup`Vehicle Sideslip Angle` Vehicle Motion` , Plot`Plot_b86d8c49-db4e-400a-a282-322334d38a2e
+
+PARSFILE Plot\Setup\Plot_310b0189-b08d-49fc-a484-ee359eb89744.par
+#BlueLink16 Plot: Setup`Yaw Rate of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_310b0189-b08d-49fc-a484-ee359eb89744
+
+PARSFILE Plot\Setup\Plot_7a35820a-a0eb-411b-8232-4db8e14274c2.par
+#BlueLink17 Plot: Setup`Roll Rate (Body-fixed) of Sprung Mass` Vehicle Motion` , Plot`Plot_7a35820a-a0eb-411b-8232-4db8e14274c2
+
+PARSFILE Plot\Setup\Plot_b86d8c49-db4e-400a-a282-322334d38a2e.par
+#BlueLink18 Plot: Setup`Vehicle Sideslip Angle` Vehicle Motion` , Plot`Plot_b86d8c49-db4e-400a-a282-322334d38a2e
+
+PARSFILE Plot\Setup\Plot_737158a3-cc88-4356-a7f8-b76259ff593e.par
+#BlueLink19 Plot: Setup`Wind Speed` Aerodynamics and Wind` , Plot`Plot_737158a3-cc88-4356-a7f8-b76259ff593e
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how to simulate a vehicle travelling along a coastal road and, using Events, have the vehicle drift to the right side of the road which as a low shoulder.
+#
+#Just as the driver nears the edge of the road, a gust of wind comes through a gap in the cliff. The driver wildly adjusts and the combination of wind plus rapid steering correction results in a vehicle rollover.
+#
+#Click on the Events dataset "A. Driver Drifts to Right" to see how this test was set up.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Stability Testing } Crosswind and Tripped Rollover
+#Library : Procedures
+#DataSet : Crosswind and Tripped Rollover
+#Category: Stability Testing
+#FileID  : Proc_4e46254b-d9f4-49d6-abe3-52cdfd00ec3e
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

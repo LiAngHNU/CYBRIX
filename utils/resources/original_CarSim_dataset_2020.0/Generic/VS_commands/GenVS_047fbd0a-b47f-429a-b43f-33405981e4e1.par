@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Generic VS Commands`External Springs define w/ EQ_DYN`External Springs
+#VehCode VS Commands
+
+#MiscYellow0
+iprint 0 ! Print outputs at every time step
+
+! Linear spring rates and initial spring forces for ego vehicle
+define_parameter initial_spring_force_axle1 5081.6; N
+define_parameter initial_spring_force_axle2 4677.3; N
+define_parameter linear_spring_rate_axle1 34.2; N/mm
+define_parameter linear_spring_rate_axle2 46.3; N/mm
+
+! Define import variables for spring forces
+IMPORT IMP_FS_L1 ADD initial_spring_force_axle1
+IMPORT IMP_FS_R1 ADD initial_spring_force_axle1
+IMPORT IMP_FS_L2 ADD initial_spring_force_axle2
+IMPORT IMP_FS_R2 ADD initial_spring_force_axle2
+
+! Use EQ_DYN to calculate spring forces
+EQ_DYN IMP_FS_L1 CmpS_L1*linear_spring_rate_axle1+initial_spring_force_axle1
+EQ_DYN IMP_FS_R1 CmpS_R1*linear_spring_rate_axle1+initial_spring_force_axle1
+EQ_DYN IMP_FS_L2 CmpS_L2*linear_spring_rate_axle2+initial_spring_force_axle2
+EQ_DYN IMP_FS_R2 CmpS_R2*linear_spring_rate_axle2+initial_spring_force_axle2
+
+!output variables for plots
+define_output eq_in_IMP_FS_L1
+define_output eq_dyn_IMP_FS_L1
+define_output eq_out_IMP_FS_L1
+
+eq_in eq_in_IMP_FS_L1 IMP_FS_L1       !Capture IMP_FS_L1 before kinematical equations
+eq_dyn eq_dyn_IMP_FS_L1 IMP_FS_L1 !Capture IMP_FS_L1 after kinematical equations
+eq_out eq_out_IMP_FS_L1 IMP_FS_L1  !Capture IMP_FS_L1 after dynamical equations
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { External Springs } External Springs define w/ EQ_DYN
+#Library : Generic VS Commands
+#DataSet : External Springs define w/ EQ_DYN
+#Category: External Springs
+#FileID  : GenVS_047fbd0a-b47f-429a-b43f-33405981e4e1
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

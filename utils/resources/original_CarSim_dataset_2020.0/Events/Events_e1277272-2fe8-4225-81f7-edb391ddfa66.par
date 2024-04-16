@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`Speed Limit Sign`Sign Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 SPEED_TOL
+*VALUE1 ABS(Vxz_Fwd - SPEED_TARGET_S_CONSTANT)
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+#MiscYellow0
+set_ispeed_for_id SPEED_ID_SC
+SPEED_TARGET_CONSTANT = SpdLimit
+#ENDMYellow
+
+MAKE_EVENT SPEED_TOL > ABS(Vxz_Fwd - SPEED_TARGET_S_CONSTANT) ; Events\Events_bfcb01ff-fac9-46eb-b1ea-8664c9282176.par
+#BlueLink0 Events`Look for Traffic Signs` Sign Detection` , Events`Events_bfcb01ff-fac9-46eb-b1ea-8664c9282176
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Sign Detection } Speed Limit Sign
+#Library : Events
+#DataSet : Speed Limit Sign
+#Category: Sign Detection
+#FileID  : Events_e1277272-2fe8-4225-81f7-edb391ddfa66
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

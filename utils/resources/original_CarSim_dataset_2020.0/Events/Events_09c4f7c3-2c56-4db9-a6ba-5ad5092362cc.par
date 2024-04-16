@@ -1,0 +1,53 @@
+PARSFILE
+#FullDataName Events`Red or Yellow Light`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+
+#RingCtrl0 <
+#RingCtrl1 ==
+#RingCtrl10 2
+#RingCtrl11 4
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 VxTarget
+*NAME2 TypeSign
+*VALUE1 .1
+*VALUE2 LIGHT_GREEN
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+#MiscYellow0
+SET_ISPEED_FOR_ID STOP_ID ! Set context for blue link dataset
+SPEED_TARGET_GAIN = Vxz_Fwd
+SSTART_SPEED_TARGET =  Station + SignDist - StopDist
+SSCALE_SPEED_TARGET =  0.5*Vxz_Fwd^2/SPEED_AX_BRAKE_CONSTANT
+#ENDMYellow
+
+#MiscYellow1
+SPEED_ID_SC = STOP_ID
+#ENDMYellow
+
+MAKE_EVENT VxTarget < .1 ; Events\Events_4b02e1ae-d372-41f7-ab31-377e8234d59d.par
+#BlueLink0 Events`Check for Clear Path` ADAS Detection` , Events`Events_4b02e1ae-d372-41f7-ab31-377e8234d59d
+
+MAKE_EVENT TypeSign == LIGHT_GREEN ; Events\Events_7b48d6a7-3611-49a8-bb65-49d2d012e4c2.par
+#BlueLink1 Events`Continue Driving` ADAS Detection` , Events`Events_7b48d6a7-3611-49a8-bb65-49d2d012e4c2
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Uses information from Sensor 1 and Ax parameter from speed controller.
+#
+#Target stop is Station + dist to sign - 8m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Red or Yellow Light
+#Library : Events
+#DataSet : Red or Yellow Light
+#Category: ADAS Detection
+#FileID  : Events_09c4f7c3-2c56-4db9-a6ba-5ad5092362cc
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,83 @@
+PARSFILE
+#FullDataName Tire Tester`Sweep Alpha: Fz = 4000 N`Sweep Alpha +/- 10 deg
+*FZ_LOWER 1000
+*FZ_UPPER 10000
+*FZ_STEP 10
+*ALPHA_LOWER -10
+*ALPHA_UPPER 10
+*ALPHA_STEP 0.01
+*KAPPA_LOWER -1
+*KAPPA_UPPER 1
+*KAPPA_STEP 0.01
+*FZ_TEST 4000
+*ALPHA_TEST -9
+*KAPPA_TEST 0
+*GAMMA_TEST 0
+MUX_TEST -1
+MUY_TEST -1
+SPEED_TEST 10
+RR_SURF 1
+
+
+#RingCtrl0 1
+OPT_TEST_MODE 1
+ALPHA_LOWER -10
+ALPHA_UPPER 10
+ALPHA_STEP 0.01
+FZ_TEST 4000
+KAPPA_TEST 0
+GAMMA_TEST 0
+
+PARSFILE Generic\VS_commands\GenVS_495524ba-1c7f-4365-8a05-84434effacfe.par
+#BlueLink0 Generic VS Commands`Derived Outputs for Tire Tester` Miscellaneous Custom Output Variables` , Miscellaneous`GenVS_495524ba-1c7f-4365-8a05-84434effacfe
+
+PARSFILE Plot\Setup\Plot_5ead09bd-2b8f-470e-af04-1a232741844f.par
+#BlueLink1 Plot: Setup`Fy vs. Alpha` Tire Tester` , Plot`Plot_5ead09bd-2b8f-470e-af04-1a232741844f
+
+PARSFILE Plot\Setup\Plot_0c4e0346-f3ef-4967-95cc-11ee617bf881.par
+#BlueLink2 Plot: Setup`Mx vs. Alpha` Tire Tester` , Plot`Plot_0c4e0346-f3ef-4967-95cc-11ee617bf881
+
+PARSFILE Plot\Setup\Plot_78fa5051-de39-41b2-9ad6-a691c6d178f9.par
+#BlueLink3 Plot: Setup`Mz vs. Alpha` Tire Tester` , Plot`Plot_78fa5051-de39-41b2-9ad6-a691c6d178f9
+
+PARSFILE Plot\Setup\Plot_638658a8-89ef-4773-afd9-00fe53fc8cd4.par
+#BlueLink5 Plot: Setup`Normalized Lateral Force vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_638658a8-89ef-4773-afd9-00fe53fc8cd4
+
+PARSFILE Plot\Setup\Plot_d19086db-bb3d-4f63-a7f3-6d7c40f1dcb6.par
+#BlueLink6 Plot: Setup`Normalized Longitudinal Force vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_d19086db-bb3d-4f63-a7f3-6d7c40f1dcb6
+
+PARSFILE Plot\Setup\Plot_6fbd2be1-8ca2-4e4e-89d1-246a2e5a4478.par
+#BlueLink7 Plot: Setup`Tangent of Slip Angle vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_6fbd2be1-8ca2-4e4e-89d1-246a2e5a4478
+
+PARSFILE Plot\Setup\Plot_0a2ea03c-6551-4c38-a9ef-c70f16641502.par
+#BlueLink8 Plot: Setup`Lateral Shift of CTC vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_0a2ea03c-6551-4c38-a9ef-c70f16641502
+
+PARSFILE Plot\Setup\Plot_16b66348-8461-4c4a-82d2-be0fe4e137d5.par
+#BlueLink9 Plot: Setup`Mz from Fx vs Alpha` Tire Tester Derived Outputs` , Plot`Plot_16b66348-8461-4c4a-82d2-be0fe4e137d5
+
+PARSFILE Plot\Setup\Plot_9ff74ee3-819a-42ac-b06c-a1eba074faf6.par
+#BlueLink10 Plot: Setup`Mz from Fy and Pneumatic Trail vs Alpha` Tire Tester Derived Outputs` , Plot`Plot_9ff74ee3-819a-42ac-b06c-a1eba074faf6
+
+PARSFILE Plot\Setup\Plot_b4053864-ac64-41fb-810b-4b3c14b4ddfa.par
+#BlueLink11 Plot: Setup`Pneumatic Trail vs. Alpha` Tire Tester Derived Outputs` , Plot`Plot_b4053864-ac64-41fb-810b-4b3c14b4ddfa
+
+
+#EMBEDDED_NOTES
+#The Tire Tester makes direct use of the tire models to simulate a steady state tire performance test.
+#
+#This tire test sweeps the slip angle Alpha from -10 deg. to 10 deg., in increments of 0.01 deg.
+#
+#Coefficents of friction are set to -1. When a negative coefficent of friction is passed to the tire model, scaling for friction is bypassed, and the table data is used directly, interpolated for load and slip.
+#
+#Except for the TNO MF-Tyre, the tire speed data field has no effect on the magnitude of calculated forces or moments. In a steady-state test (e.g., no relaxation effect), the tire models use this parameter only to identify the direction of travel.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire Tester; { Sweep Alpha +/- 10 deg } Sweep Alpha: Fz = 4000 N
+#Library : Tire Tester
+#DataSet : Sweep Alpha: Fz = 4000 N
+#Category: Sweep Alpha +/- 10 deg
+#FileID  : TestTire_c40879d2-b79a-4bdb-a475-2a7fed4b67c0
+#Product : CarSim 2020.0
+#VehCode Tire Tester
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Events`B. Save Ackermann Steer`ISO Steady-State Circle Series
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T
+*NAME2 AY_REF
+*VALUE1 1
+*VALUE2 abs(ay)
+#MiscYellow0
+STR_ACK = Steer_SW
+STR_ACK1 = Steer_F
+#ENDMYellow
+
+DEFINE_EVENT 1 ; Events\Events_37a368e6-a61d-4f05-9aef-fa1acf6e4284.par
+#BlueLink0 Events`C. Go to Next Speed` ISO Steady-State Circle Series` , Events`Events_37a368e6-a61d-4f05-9aef-fa1acf6e4284
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Save the current steering wheel angle and average front wheel angle as Ackermann parameters.
+#
+#The pending event is set up to be triggered at the next step (T is always greater than zero), to set OPT_WRITE back to zero and to change the target speed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ISO Steady-State Circle Series } B. Save Ackermann Steer
+#Library : Events
+#DataSet : B. Save Ackermann Steer
+#Category: ISO Steady-State Circle Series
+#FileID  : Events_af9d66d2-5718-420d-bb2c-039f162ce175
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

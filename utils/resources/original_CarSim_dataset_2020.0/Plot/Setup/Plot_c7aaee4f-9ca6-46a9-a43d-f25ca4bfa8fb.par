@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Detection Alert`ADAS Sensor Detections: Collision
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Detect, Time, Detection Alert
+
+#ENDMYellow
+
+YAXISLABEL Detection Alert
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Detection Alert
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections: Collision } Detection Alert
+#Library : Plot: Setup
+#DataSet : Detection Alert
+#Category: ADAS Sensor Detections: Collision
+#FileID  : Plot_c7aaee4f-9ca6-46a9-a43d-f25ca4bfa8fb
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

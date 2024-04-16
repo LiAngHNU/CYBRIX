@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Procedures`Off-Road Driving`Driving
+#CheckBox3 0    
+
+#RingCtrl0 2
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -40
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP 40
+OPT_DIRECTION 0
+*TSTOP 15
+*TSTART 0
+*SSTART -40
+*SSTOP 40
+
+OPT_SC 2
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_mt\GearOL_2c740a6e-385b-4482-82be-f91ae62e3861.par
+#BlueLink30 Control: Shifting (Open Loop)`1st Gear w/ 3 sec. Clutch Engagement` Constant` , Shifting Control`GearOL_2c740a6e-385b-4482-82be-f91ae62e3861
+
+PARSFILE Control\Speed_t\SpdTime_e6c774fc-69ba-42af-86a4-171a7400110d.par
+#BlueLink31 Control: Speed (Closed Loop) Using Target Speed`Constant: 18 km/h` Constant` , Speed vs. time`SpdTime_e6c774fc-69ba-42af-86a4-171a7400110d
+
+#MiscYellow0
+iside 1
+z_profile_gain 2.5
+iside 2
+z_profile_gain 2.5
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_aa58e20f-f7b5-4c48-8972-9b50658df599.par
+#BlueLink0 Road: 3D Surface (All Properties)`Hilly Off-Road` Off-Road` , Miscellaneous`Road_aa58e20f-f7b5-4c48-8972-9b50658df599
+
+PARSFILE Roads\Profiles\Profile_3bff0c88-84c1-408a-843d-956a1e2abe43.par
+#BlueLink1 Surface: Roughness Profiles`Example Road Roughness` ` , Miscellaneous`Profile_3bff0c88-84c1-408a-843d-956a1e2abe43
+
+PARSFILE Plot\Setup\Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f.par
+#BlueLink8 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink9 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink10 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how to define roads in CarSim using spline interpolated tables.
+#
+#To see how this was done, click on the 3D road dataset "Hilly Off-Road".
+#
+#Road Roughness is applied to this example to simulate the effects of a bumpy off-road trail.
+#
+#VS Commands are used to apply a gain to the road's Z profile. See the miscellaneous yellow field for more information.
+#
+#The driver controls specify a Target speed vs. time of 18 kph, no brake pressure, and a closed-loop shift control set to 1st gear.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Off-Road Driving
+#Library : Procedures
+#DataSet : Off-Road Driving
+#Category: Driving
+#FileID  : Proc_6e09c54b-3643-416e-85cc-4a0125bdb770
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

@@ -1,0 +1,82 @@
+!
+! MF-Tyre/MF-Swift 6.1.0 Limited parameter sample tyre property file
+!
+$----------------------------------------------------------------units
+[UNITS]
+LENGTH                   ='meter'
+FORCE                    ='newton'
+ANGLE                    ='radians'
+MASS                     ='kg'
+TIME                     ='second'
+$----------------------------------------------------------------model
+[MODEL]
+FITTYP                   = 61                $Magic Formula Version number             
+TYRESIDE                 ='LEFT'
+LONGVL                   = 16.667            $Measurement speed         
+VXLOW                    = 1                 $Lower boundary of slip calculation      
+ROAD_INCREMENT           = 0.01              $Increment in road sampling
+ROAD_DIRECTION           = 1                 $Direction of travelled distance
+!
+! The next lines are only used by ADAMS and ignored by other MBS codes
+!
+! USE_MODE specifies the type of calculation performed:
+!       0: Fz only, no Magic Formula evaluation
+!       1: Fx,My only
+!       2: Fy,Mx,Mz only
+!       3: Fx,Fy,Mx,My,Mz uncombined force/moment calculation
+!       4: Fx,Fy,Mx,My,Mz combined force/moment calculation
+!       5: Fx,Fy,Mx,My,Mz combined force/moment calculation + turnslip
+!      +0: steady state behaviour
+!     +10: including relaxation behaviour
+!     +20: including relaxation behaviour (nonlinear)
+!     +30: including rigid ring dynamics
+!    +100: smooth road contact
+!    +200: smooth road contact (circular cross section, motorcycles)
+!    +400: road contact for 2D roads (using travelled distance)
+!    +500: road contact for 3D roads
+!
+!  example: USE_MODE = 434 implies:
+!    -combined slip 
+!    -rigid ring dynamics
+!    -road contact for 2D roads
+!
+PROPERTY_FILE_FORMAT     ='USER'
+USER_SUB_ID              = 815
+N_TIRE_STATES            = 4
+USE_MODE                 = 104                  $Tyre use mode switch (ADAMS only)
+HMAX_LOCAL               = 2.5E-4               $Local integration time step (ADAMS only)
+TIME_SWITCH_INTEG        = 0.1                  $Time when local integrator is activated (ADAMS only)
+$-----------------------------------------------------------dimensions
+[DIMENSION]
+UNLOADED_RADIUS          = 0.3                  $ Free tyre radius
+WIDTH                    = 0.2                  $ Nominal section width of the tyre
+RIM_RADIUS               = 0.2                  $ Nominal rim radius
+$--------------------------------------------------------------inertia
+[INERTIA]
+MASS                     = 9.3                  $ Tyre mass
+IXX                      = 0.4                  $ Tyre diametral moment of inertia 
+IYY                      = 0.7                  $ Tyre polar moment of inertia
+GRAVITY                  = -9.81                $ Gravity acting on tyre in Z-direction
+$--------------------------------------------------------------vertical
+[VERTICAL]
+VERTICAL_STIFFNESS       = 200000               $ vertical stiffness
+VERTICAL_DAMPING         = 50                   $ vertical damping
+FNOMIN                   = 4000                 $ Nominal wheel load
+$-------------------------------------------------------------structural
+[LONGITUDINAL_COEFFICIENTS]
+PDX1                     =  1.2                 $ Longitudinal friction Mux at Fznom
+PDX2                     = -0.04                $ Variation of friction Mux with load
+PKX1                     = 20                   $ Longitudinal slip stiffness Kfx/Fz at Fznom
+$--------------------------------------------------------------lateral
+[LATERAL_COEFFICIENTS]
+PDY1                     =  1.0                 $ Lateral friction Muy at Fznom
+PDY2                     = -0.15                $ Variation of friction Muy with load
+PKY1                     = -15                  $ Maximum value of stiffness Kfy/Fznom
+PKY2                     =  2                   $ factor times Fznom at which Kfy reaches maximum value
+!
+$---------------------------------------------------rolling resistance
+[ROLLING_COEFFICIENTS]
+QSY1                     = 0.01                 $ Rolling resistance torque coefficient
+$-------------------------------------------------------------aligning
+[ALIGNING_COEFFICIENTS]
+QDZ1                     = 0.12                 $ Peak trail/R0 at Fznom

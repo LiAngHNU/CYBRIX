@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Target Speed`Come to Stop with Constant Decel`Speed vs Station (Normalized)
+SET_ISPEED_FOR_ID SLOW_TO_STOP
+set_description SPEED_TARGET_ID Come to Stop with Constant Decel
+#CheckBox2 0    
+#CheckBox3 0    
+*SCALAR 0
+*SCALAR2 0
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RingCtrl2 ADD
+SPEED_TARGET_COMBINE ADD
+#RingCtrl3 2
+#RadioCtrl0 1    
+#RadioCtrl1 0    
+
+SPEED_TARGET_CONSTANT 0
+#DiagramOne1
+SPEED_TARGET_S_TABLE LINEAR_FLAT
+-0.5, 3.6
+-0.45125, 3.42
+-0.405, 3.24
+-0.36125, 3.06
+-0.32, 2.88
+-0.28125, 2.7
+-0.245, 2.52
+-0.21125, 2.34
+-0.18, 2.16
+-0.15125, 1.98
+-0.125, 1.8
+-0.10125, 1.62
+-0.08, 1.44
+-0.06125, 1.26
+-0.045, 1.08
+-0.03125, 0.9
+-0.02, 0.72
+-0.01125, 0.54
+-0.005, 0.36
+-0.00125, 0.18
+0, 0
+ENDTABLE
+
+#EMBEDDED_NOTES
+#With initial speed Vo and constant deceleration A, V(t) = Vo - A*t, and distance S(t) = Vo*t - A*t^2/2.
+#
+#This is a normalized table of target speed vs Station for intial speed  Vo = 1 and decel A = 1.
+#
+#To scale this plot, the Speed Gain should be the initial vehicle speed Vxz_Fwd, the Station gain should be Vxz_Fwd^2/A/2, and the Station offset should be the target stopping point.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Target Speed; { Speed vs Station (Normalized) } Come to Stop with Constant Decel
+#Library : Control: Speed (Closed Loop) Using Target Speed
+#DataSet : Come to Stop with Constant Decel
+#Category: Speed vs Station (Normalized)
+#FileID  : SpdTime_9978844e-0102-4917-9c95-801a09e002b9
+#Product : CarSim 2020.0
+#VehCode Target Speed
+
+END

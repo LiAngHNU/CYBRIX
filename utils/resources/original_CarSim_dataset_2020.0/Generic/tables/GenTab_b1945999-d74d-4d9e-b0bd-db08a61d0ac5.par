@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Generic Table`Width vs. Compression`Tire Contact Patch Dimensions
+#RingCtrl0 SPLINE_FLAT
+#CheckBox0 0    
+
+#DiagramOne0
+L_CONTACT_Y_TABLE SPLINE_FLAT
+0, 150
+5, 250
+12, 305
+22, 320
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD L_CONTACT_Y
+*X_LABEL Tire Compression
+*Y_LABEL L_CONTACT_Y
+
+
+#EMBEDDED_NOTES
+#The width of the tire contact patch ranges from 150 mm at contact to 320 at a compression of 22 mm (close to the rated load).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Tire Contact Patch Dimensions } Width vs. Compression
+#Library : Generic Table
+#DataSet : Width vs. Compression
+#Category: Tire Contact Patch Dimensions
+#FileID  : GenTab_b1945999-d74d-4d9e-b0bd-db08a61d0ac5
+#Product : CarSim 2020.0
+#VehCode table
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`Reset vehicle location when s = 1000`Infinity road
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 station
+*NAME2 station
+*VALUE1 1000
+*VALUE2 1200
+MAKE_EVENT station > 1000 ; Events\Events_e7bd4636-b5d2-4748-903a-59012cfd6412.par
+#BlueLink0 Events`Reset to S = 0` Infinity road` , Events`Events_e7bd4636-b5d2-4748-903a-59012cfd6412
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Set up the next steady-state test.
+#
+#Increment the target speed VX_TARG and assign the corresponding target speed SPEED_TIME_CONSTANT.
+#
+#Reset the local event time T_EVENT by setting the offset T_EVENT_START to the current time. Then set a pending event to trigger when the local time reaches T_WAIT.
+#
+#Four variables are updated here that are used for some plot descriptions that are still being developed at the time of this software release.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Infinity road } Reset vehicle location when s = 1000
+#Library : Events
+#DataSet : Reset vehicle location when s = 1000
+#Category: Infinity road
+#FileID  : Events_72d170af-7b13-45ad-aa79-7b9004596caa
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

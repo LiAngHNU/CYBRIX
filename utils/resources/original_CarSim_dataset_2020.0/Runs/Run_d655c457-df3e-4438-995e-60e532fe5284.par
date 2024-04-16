@@ -1,0 +1,91 @@
+PARSFILE
+#FullDataName CarSim Run Control`Generic EPAS, DLC`* CS 2020.0 - Miscellaneous
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d655c457-df3e-4438-995e-60e532fe5284
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e60dad72-dd7a-4a3d-8f8e-c37bac6a49b3.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback w Generic EPAS` C-Class` , Math Model`Vehicle_e60dad72-dd7a-4a3d-8f8e-c37bac6a49b3
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_685c5b22-b555-4300-90e6-7f354600c8d8.par
+#BlueLink9 Multiple Moving Objects`1 Driver Preview Point` Points of Interest` , Miscellaneous`TMotion_685c5b22-b555-4300-90e6-7f354600c8d8
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_3faaeb69-0190-43f5-aae7-f451bd194537.par
+#BlueLink15 Plot: Setup`Power Steering Assist Force` Steering` , Plot`Plot_3faaeb69-0190-43f5-aae7-f451bd194537
+
+PARSFILE Plot\Setup\Plot_e53f9f05-472a-4a7d-985a-ba7919cba54f.par
+#BlueLink16 Plot: Setup`Rack position` Steering` , Plot`Plot_e53f9f05-472a-4a7d-985a-ba7919cba54f
+
+PARSFILE Plot\Setup\Plot_547382a9-c023-4f99-930e-d5c9b2ff690f.par
+#BlueLink17 Plot: Setup`Rack Assist vs Torque Sensor Torque` Steering` , Plot`Plot_547382a9-c023-4f99-930e-d5c9b2ff690f
+
+
+SPECIAL_PARSFILE Runs\Run_6cb07365-85a3-4a3b-95f9-c5c844687601.par
+#BlueLink23 CarSim Run Control`Baseline` * * Quick Start Guide Example` , Overlay run or ERD file`Run_6cb07365-85a3-4a3b-95f9-c5c844687601
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_e60dad72-dd7a-4a3d-8f8e-c37bac6a49b3.png
+WRITE_SENSOR_DETECT
+Title Generic EPAS, DLC <* CS 2020.0 - Miscellaneous>
+CATEGORY * CS 2020.0 - Miscellaneous 
+DATASET_TITLE Generic EPAS, DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Here, generic screens have been used to implement an EPAS power steering boost system.
+#
+#Although the CarSim steering system was designed to represent any type of steering assist, it is sometimes useful to include detail for additional properties. In this case, a gear ratio has been provided to transform EPAS motor torque to a rack force.
+#
+#The Quick Start Guide example is overlaid for comparison.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Miscellaneous } Generic EPAS, DLC
+#Library : CarSim Run Control
+#DataSet : Generic EPAS, DLC
+#Category: * CS 2020.0 - Miscellaneous
+#FileID  : Run_d655c457-df3e-4438-995e-60e532fe5284
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

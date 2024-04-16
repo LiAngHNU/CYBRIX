@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Generic Data Group`Variable Gains (Vx_err)`Speed Controller
+#VehCode Generic Group
+#MiscYellow0
+! VS Commands used to define variables
+! and tables used.
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_7ad4f661-44dd-44bc-b981-781d7537281b.par
+#BlueLink0 Generic VS Commands`Speed Control Variables` Miscellaneous Custom Controls` , Link 1`GenVS_7ad4f661-44dd-44bc-b981-781d7537281b
+
+
+#MiscYellow1
+! Configurable table for propotional control coef.
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_42b6df19-f189-47e7-8ffc-9422c468cc5b.par
+#BlueLink1 Generic Table`Controller Gains: KP` Speed Controller: Accel Limits` , Link 2`GenTab_42b6df19-f189-47e7-8ffc-9422c468cc5b
+
+
+#MiscYellow2
+! Configurable table for integral control coefficient
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_5473ebfc-5050-4f0c-bd44-5540a48394c2.par
+#BlueLink2 Generic Table`Controller Gains: KI` Speed Controller: Accel Limits` , Link 3`GenTab_5473ebfc-5050-4f0c-bd44-5540a48394c2
+
+
+#MiscYellow3
+! Configurable table for cubic coefficient
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_8f9a2868-a304-43ac-998c-c34bf72ea899.par
+#BlueLink3 Generic Table`Controller Gains: KP3` Speed Controller: Accel Limits` , Link 4`GenTab_8f9a2868-a304-43ac-998c-c34bf72ea899
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Speed Controller } Variable Gains (Vx_err)
+#Library : Generic Data Group
+#DataSet : Variable Gains (Vx_err)
+#Category: Speed Controller
+#FileID  : GenGrp_d5a5cc59-213d-41da-b786-3e0c236e9f0f
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

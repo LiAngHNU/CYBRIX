@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Slip Ratios: Lagged`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS KappL_L1, Time
+PLOTCHANNELS KappL_R1, Time
+PLOTCHANNELS KappL_L2, Time
+PLOTCHANNELS KappL_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Slip Ratios: Lagged
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Slip values after applying relaxation lenth
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Slip Ratios: Lagged
+#Library : Plot: Setup
+#DataSet : Slip Ratios: Lagged
+#Category: Tire Kinematics
+#FileID  : Plot_71df6f9d-5f7f-43e1-a5d7-d556dc8678ab
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

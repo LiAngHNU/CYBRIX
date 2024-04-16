@@ -1,0 +1,127 @@
+PARSFILE
+#FullDataName Procedures`Sine with Dwell (Save/Restore Option)`Stability Testing
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 360
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 80
+*TSTOP 360
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Sine with Dwell (Save/Restore Option)
+SPEED_TARGET_CONSTANT 80
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par
+#BlueLink27 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Steering`StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+#MiscYellow0
+DEFINE_PARAMETER WRITE_ALL = 0
+OPT_WRITE WRITE_ALL
+DEFINE_PARAMETER INIT_DONE = 1
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road_89d4a142-808f-4480-8cb3-807e4c52ca45.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square w/ Cones, Mu = 0.9` Flat Test Pads` , Miscellaneous`Road_89d4a142-808f-4480-8cb3-807e4c52ca45
+
+PARSFILE Roads\Friction\RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba.par
+#BlueLink1 Road: Friction Map, S-L Grid`Constant: 0.9` Constant` , Miscellaneous`RdMu_76157e0a-7f92-4d03-8249-7715bd43a5ba
+
+PARSFILE Events\Events_7dea0a25-f1d6-45e0-bcfb-581ba9ad9017.par
+#BlueLink5 Events`A. Wait to Start Slowly Increasing Steer` Slowly Increasing Steer Test` , Miscellaneous`Events_7dea0a25-f1d6-45e0-bcfb-581ba9ad9017
+
+PARSFILE Events\Events_226f003f-92b8-41b5-8fdc-c53840395226.par
+#BlueLink6 Events`A. Wait to Start Sine with Dwell` Sine with Dwell` , Miscellaneous`Events_226f003f-92b8-41b5-8fdc-c53840395226
+
+#MiscYellow1
+OPT_LOG_VERBOSE 3 ! use to see save/restore
+OPT_SWD_RESTORE 1 ! restore state
+DEFINE_PARAMETER WRITE_SIS = 0
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_9a303e35-6889-4f7a-9e4f-f2bc6e3b4670.par
+#BlueLink8 Plot: Setup`Steer Angle vs. Event Elapsed Time` Sine with Dwell` , Plot`Plot_9a303e35-6889-4f7a-9e4f-f2bc6e3b4670
+
+PARSFILE Plot\Setup\Plot_302cd958-868f-45cb-80cf-e4055eab6bb7.par
+#BlueLink9 Plot: Setup`Yaw Rate vs. Event Elapsed Time` Sine with Dwell` , Plot`Plot_302cd958-868f-45cb-80cf-e4055eab6bb7
+
+PARSFILE Plot\Setup\Plot_62d40774-ed58-4044-8614-8feb9ce47098.par
+#BlueLink10 Plot: Setup`Yaw Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_62d40774-ed58-4044-8614-8feb9ce47098
+
+PARSFILE Plot\Setup\Plot_a54b3901-1398-43ff-bed9-7623668c94ae.par
+#BlueLink11 Plot: Setup`Peak Yaw Rate` Sine with Dwell` , Plot`Plot_a54b3901-1398-43ff-bed9-7623668c94ae
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink12 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_5ffebe57-72e0-441c-8c71-af663428998e.par
+#BlueLink13 Plot: Setup`Brake Torque vs. Event Elapsed Time` Braking` , Plot`Plot_5ffebe57-72e0-441c-8c71-af663428998e
+
+PARSFILE Plot\Setup\Plot_0773e087-151d-42db-a308-f02b7b6ee48d.par
+#BlueLink14 Plot: Setup`Lateral Forces` Tire Forces and Moments` , Plot`Plot_0773e087-151d-42db-a308-f02b7b6ee48d
+
+PARSFILE Plot\Setup\Plot_57031bd3-2bd2-4a97-9dd2-07cdda99d69e.par
+#BlueLink15 Plot: Setup`Y vs.Time` Sine with Dwell` , Plot`Plot_57031bd3-2bd2-4a97-9dd2-07cdda99d69e
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink16 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_84cf249c-520a-44d4-965b-f2a898a45ad5.par
+#BlueLink17 Plot: Setup`Trans. Control: Gear Selected` Controls: Driver` , Plot`Plot_84cf249c-520a-44d4-965b-f2a898a45ad5
+
+PARSFILE Plot\Setup\Plot_7fc8ec92-94fb-4009-939a-83028a688c75.par
+#BlueLink18 Plot: Setup`Event Time and Time Stamp vs. File Time` Event Control` , Plot`Plot_7fc8ec92-94fb-4009-939a-83028a688c75
+
+
+#EMBEDDED_NOTES
+#This is an alternate version of the sine-with-dwell procedure that takes advantage of an advanced feature in CarSim to save the vehicle state at some point in the run and then restore it later.
+#
+#More details about this example are provided in a technical memo available from the Help menu; in the Technical Memos section, see "Example: Electronic Stability Control Test."
+#
+#Each sine-with-dwell test begins by reaching a speed of 82 km/h and then coasting down to 80 km/h, at which point the steering robot applies a sine-with-dwell waveform.
+#
+#In this version, the vehicle state is saved in the first test when the 80 km/h speed is reached (defined on this screen). In all future tests, that condition is restored, saving the time that would otherwise be needed to reach 82 km/h and then coast down to 80 km/h.
+#
+#The restore option is activated by setting the parameter OPT_SWD_RESTORE to a non-zero value, defined using VS Commands on this screen.
+#
+#VS Commands also are used to define a new parameter INIT_DONE which is set equal to 1 on this screen. In the Event series beginning with "A. Wait to Start Slowly Increasing Steer", a non-zero value of INIT_DONE is used to trigger the slowly increasing steer portion of this test series.
+#
+#This method will not work with HIL or externally defined controllers that assume continuity in speed. However, it does work with the simple Simulink ESC controller provided with the CarSim installation.
+#
+#
+#NOTE: Mechanical Simulation Corporation supplies this example to illustrate how to set up a complex test procedure such as one that would be used for the FMVSS 126 test. The procedure in this example is not guaranteed to be in conformance with the requirements of FMVSS 126. Please be sure to review the approach used to create this dataset and modify as necessary to ensure that it will meet your requirements.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Stability Testing } Sine with Dwell (Save/Restore Option)
+#Library : Procedures
+#DataSet : Sine with Dwell (Save/Restore Option)
+#Category: Stability Testing
+#FileID  : Proc_10d6e1b8-bc50-4d27-a6ea-aff015d0b404
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

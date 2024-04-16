@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName CarSim Run Control`Simple Example 3: Braking`Embedded Python
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_8ce67aa2-ad35-4a18-bda9-2c43a94ee44b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hatchback` B-Class` , Math Model`Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac
+
+PARSFILE Procedures\Proc_1dc0727a-6406-44a7-9119-9580430ff6fd.par
+#BlueLink28 Procedures`Straight Driving, Constant Speed` Driving` , Procedure`Proc_1dc0727a-6406-44a7-9119-9580430ff6fd
+
+PARSFILE Generic\VS_commands\GenVS_a68d8f60-1ffb-4998-9099-ae7c0c0f7a5d.par
+#BlueLink9 Generic VS Commands`Constant Braking` Embedded Python` , Miscellaneous`GenVS_a68d8f60-1ffb-4998-9099-ae7c0c0f7a5d
+
+OPT_STOP 0
+TSTOP 10
+OPT_DIRECTION 1
+*TSTOP 10
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_2f9f653b-5d0c-4c2a-9470-0b2a5c5e79ac.png
+WRITE_SENSOR_DETECT
+Title Simple Example 3: Braking <Embedded Python>
+CATEGORY Embedded Python 
+DATASET_TITLE Simple Example 3: Braking
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example shows how to utilize an output table with an embedded Python script.
+#
+#The Python file can be found at:
+#Extensions\Python\constant_braking.py
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Embedded Python } Simple Example 3: Braking
+#Library : CarSim Run Control
+#DataSet : Simple Example 3: Braking
+#Category: Embedded Python
+#FileID  : Run_8ce67aa2-ad35-4a18-bda9-2c43a94ee44b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

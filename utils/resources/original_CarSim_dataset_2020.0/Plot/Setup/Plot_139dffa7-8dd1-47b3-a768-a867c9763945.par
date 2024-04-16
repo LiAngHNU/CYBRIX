@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Tracking vs. t_stamp`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Lat_Targ, t_stamp
+PLOTCHANNELS Lat_Veh, t_stamp
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Tracking vs. t_stamp
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Lateral Tracking vs. t_stamp
+#Library : Plot: Setup
+#DataSet : Lateral Tracking vs. t_stamp
+#Category: Tracking
+#FileID  : Plot_139dffa7-8dd1-47b3-a768-a867c9763945
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

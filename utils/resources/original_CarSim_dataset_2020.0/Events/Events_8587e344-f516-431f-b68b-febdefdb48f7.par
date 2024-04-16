@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Events`B. Reset Postion and Brake (Force)`Braking Distance
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 0.001
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+#MiscYellow0
+TSTART_BRAKES T
+#ENDMYellow
+
+PARSFILE Control\Brake_pedal\FbkCon_443620e9-de3a-43fd-9953-8fa6aa3bcd3c.par
+#BlueLink10 Control: Braking Pedal Force (Open Loop)`Spike: 155 N @ 0.1 sec.` Spike` , Miscellaneous`FbkCon_443620e9-de3a-43fd-9953-8fa6aa3bcd3c
+
+MAKE_EVENT vx < 0.001 ; Events\Events_2f57926f-fa38-4a2f-8ccf-db978155e36d.par
+#BlueLink0 Events`C. Stop and End Run (Pedal Force)` Braking Distance` , Events`Events_2f57926f-fa38-4a2f-8ccf-db978155e36d
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle position is reset and the brakes are applied at the same time.  TSTART_BRAKES is set to the current time, so the recorded open-loop control is applied now.
+#
+#The checkbox "Reset Vehicle X, Y, & Yaw" moves the vehicle back to the initial start position of station = 0, such that the final station is also the stopping distance.
+#
+#An event is set so that when the speed drops to 0.001 km/h the run stops.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Braking Distance } B. Reset Postion and Brake (Force)
+#Library : Events
+#DataSet : B. Reset Postion and Brake (Force)
+#Category: Braking Distance
+#FileID  : Events_8587e344-f516-431f-b68b-febdefdb48f7
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Procedures`Intersection, 3-Way with Curbs`Road Networks
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART -125
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART -125
+*SSTOP 40
+
+PARSFILE Control\Driver\StrDM_ed2a95fa-cdad-460f-a4b4-e29a3b439a89.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.8m Right, 0.75s Single Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_ed2a95fa-cdad-460f-a4b4-e29a3b439a89
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_f65b2b24-552e-478e-9b66-536a39f83ece.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, 80 km/h` Highway Driving` , Speed vs. station`SpdPath_f65b2b24-552e-478e-9b66-536a39f83ece
+
+PARSFILE Generic\Links\GenLink_7be360fe-0ebe-4b38-ab76-6a3dc56cc646.par
+#BlueLink0 Generic Group of Links`Intersection, 3-Way with Curbs` Roads and Paths` , Miscellaneous`GenLink_7be360fe-0ebe-4b38-ab76-6a3dc56cc646
+
+#BlueLink1 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink9 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Generic\VS_commands\GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3.par
+#BlueLink18 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3
+
+PARSFILE Generic\VS_commands\GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3.par
+#BlueLink19 Generic VS Commands`Acceleration` Plot Groups` , Plot`GenVS_8f7411b8-c46e-45ca-8259-b31bc7af7dd3
+
+PARSFILE Generic\VS_commands\GenVS_9adae0f9-c659-4690-8e88-e92525112141.par
+#BlueLink20 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_9adae0f9-c659-4690-8e88-e92525112141
+
+
+LOG_ENTRY Used Dataset: Procedures; { Road Networks } Intersection, 3-Way with Curbs
+#Library : Procedures
+#DataSet : Intersection, 3-Way with Curbs
+#Category: Road Networks
+#FileID  : Proc_bd966ed1-00c8-4040-b7b9-2b29752464c8
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

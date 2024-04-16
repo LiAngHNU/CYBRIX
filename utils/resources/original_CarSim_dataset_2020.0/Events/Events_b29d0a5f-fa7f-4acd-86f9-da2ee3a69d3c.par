@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`Returned to Path`Simple Path Planning
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 show_fcw
+*NAME2 abs_lat_veh
+*VALUE1 show_fcw
+*VALUE2 0.1
+#MiscYellow0
+eq_in abs_lat_veh = abs(lat_veh)
+eq_in abs_lat_veh = if(station>(shift_station+30.0),abs_lat_veh,0)
+#ENDMYellow
+
+DEFINE_EVENT show_fcw ; Events\Events_56dd4eae-710b-4424-b702-df7b026dff30.par
+#BlueLink0 Events`New Detect` Simple Path Planning` , Events`Events_56dd4eae-710b-4424-b702-df7b026dff30
+
+MAKE_EVENT abs_lat_veh > 0.1 ; Events\Events_cd869aa6-78c6-4e6c-9e3f-afbb4259cf8e.par
+#BlueLink1 Events`Move Back to Path` Simple Path Planning` , Events`Events_cd869aa6-78c6-4e6c-9e3f-afbb4259cf8e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Return to checking for a new obstruction.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Simple Path Planning } Returned to Path
+#Library : Events
+#DataSet : Returned to Path
+#Category: Simple Path Planning
+#FileID  : Events_b29d0a5f-fa7f-4acd-86f9-da2ee3a69d3c
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

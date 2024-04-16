@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName CarSim Run Control`AEB w/ Deceleration Command`AEB: Automated Emergency Braking
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_27b6dcce-c800-4f05-acf8-d4346b2ca94a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_a9a29c8e-4050-45dd-a1b0-68322cea8073.par
+#BlueLink0 Animator: Camera Setup`150 Azm, 10 El, 6.25 m` Vehicle Reference` , Animator camera`Camera_a9a29c8e-4050-45dd-a1b0-68322cea8073
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_4b7f213e-0859-4cc6-a796-7aa65a81b110.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`E-Class, Sedan w/ FCW Sensor` E-Class` , Math Model`VehLoad_4b7f213e-0859-4cc6-a796-7aa65a81b110
+
+PARSFILE Procedures\Proc_951d8eea-3f8c-4303-b47e-b654cc22fa22.par
+#BlueLink28 Procedures`AEB Single Test: CCRb w/ OPT_SC 5` AEB: Automated Emergency Braking` , Procedure`Proc_951d8eea-3f8c-4303-b47e-b654cc22fa22
+
+PARSFILE Control\Speed_t\SpdTime_d0416e8a-956a-459b-918e-0dc16c204214.par
+#BlueLink9 Control: Speed (Closed Loop) Using Target Speed`50 to 0, -2 m/s/s, ISPEED = 2` AEB CCRb Target Speed` , Miscellaneous`SpdTime_d0416e8a-956a-459b-918e-0dc16c204214
+
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_06150ef4-15e0-4019-ba8d-3cb46f38fa95.par
+#BlueLink15 Plot: Setup`AEB: Booleans` ADAS and AEB Alerts and Commands` , Plot`Plot_06150ef4-15e0-4019-ba8d-3cb46f38fa95
+
+PARSFILE Plot\Setup\Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed.par
+#BlueLink16 Plot: Setup`Distances for Closest 2 Objects, Sensor 1` ADAS Sensor Detections` , Plot`Plot_79f3157d-d29b-4f16-ba4e-cc4b4a19b7ed
+
+PARSFILE Plot\Setup\Plot_7e3ea4e2-d549-4687-b106-3f1bacbc7a48.par
+#BlueLink17 Plot: Setup`AEB: Longitudinal Speeds` ADAS and AEB Alerts and Commands` , Plot`Plot_7e3ea4e2-d549-4687-b106-3f1bacbc7a48
+
+PARSFILE Plot\Setup\Plot_5608ae47-21c9-479d-95fe-8c73f9f1f785.par
+#BlueLink18 Plot: Setup`Accel. Control: Commanded vs. Actual` Controls: Driver` , Plot`Plot_5608ae47-21c9-479d-95fe-8c73f9f1f785
+
+#BlueLink23 CarSim Run Control`AEB  CCRb: - 2 m/s2, 12 m` AEB: Automated Emergency Braking` , Overlay run or ERD file`Run_401dc88c-561c-41f4-a0c1-bd375b3c78bf
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title AEB w/ Deceleration Command <AEB: Automated Emergency Braking>
+CATEGORY AEB: Automated Emergency Braking 
+DATASET_TITLE AEB w/ Deceleration Command
+#MiscYellow0
+START_DISTANCE = 12; m
+IMPORT IMP_AX_SC VS_REPLACE 0
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This example is equivalent to the "AEB  CCRb: - 2 m/s2, 12 m" example in the category of 'AEB: Automated Emergency Braking', but uses the speed control mode OPT_SC 5 to control the deceleration of the ego vehicle rather than a target speed.
+#
+#See the other version of this example in the AEB category for full details of the scenario.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { AEB: Automated Emergency Braking } AEB w/ Deceleration Command
+#Library : CarSim Run Control
+#DataSet : AEB w/ Deceleration Command
+#Category: AEB: Automated Emergency Braking
+#FileID  : Run_27b6dcce-c800-4f05-acf8-d4346b2ca94a
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

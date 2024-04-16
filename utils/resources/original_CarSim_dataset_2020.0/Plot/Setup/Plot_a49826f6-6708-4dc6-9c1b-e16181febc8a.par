@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Lane Markers: Y vs. Station`ADAS Sensor Detections: Lane Edges
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Y_S1_1, Station
+PLOTCHANNELS Y_S1_2, Station
+PLOTCHANNELS Y_S1_3, Station
+PLOTCHANNELS Y_S1_4, Station
+PLOTCHANNELS Y_S1_5, Station
+PLOTCHANNELS Y_S1_6, Station
+PLOTCHANNELS Y_S1_7, Station
+PLOTCHANNELS Y_S1_8, Station
+PLOTCHANNELS Y_S1_9, Station
+PLOTCHANNELS Y_S1_10, Station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lane Markers: Y vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections: Lane Edges } Lane Markers: Y vs. Station
+#Library : Plot: Setup
+#DataSet : Lane Markers: Y vs. Station
+#Category: ADAS Sensor Detections: Lane Edges
+#FileID  : Plot_a49826f6-6708-4dc6-9c1b-e16181febc8a
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

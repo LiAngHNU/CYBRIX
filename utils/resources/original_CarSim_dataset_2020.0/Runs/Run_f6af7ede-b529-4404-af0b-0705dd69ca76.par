@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName CarSim Run Control`Japanese Signs, Trees, Shrubs`VS Visualizer Examples
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f6af7ede-b529-4404-af0b-0705dd69ca76
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+SET_RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_fcf39e9a-c6d9-4a07-b8c1-2c444f0f4105.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: Right-Hand Drive` E-Class` , Math Model`Vehicle_fcf39e9a-c6d9-4a07-b8c1-2c444f0f4105
+
+PARSFILE Procedures\Proc_e7e76165-3afc-4c52-a027-258d0c55b823.par
+#BlueLink28 Procedures`Japanese Signs, Shrubbery` Road Networks` , Procedure`Proc_e7e76165-3afc-4c52-a027-258d0c55b823
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Japanese Signs, Trees, Shrubs <VS Visualizer Examples>
+CATEGORY VS Visualizer Examples 
+DATASET_TITLE Japanese Signs, Trees, Shrubs
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan with a right-hand side driver animation shape in an environment demonstrating the following animation shapes:
+#
+#* Japanese road signs
+#* Shrubs
+#* New trees
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { VS Visualizer Examples } Japanese Signs, Trees, Shrubs
+#Library : CarSim Run Control
+#DataSet : Japanese Signs, Trees, Shrubs
+#Category: VS Visualizer Examples
+#FileID  : Run_f6af7ede-b529-4404-af0b-0705dd69ca76
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

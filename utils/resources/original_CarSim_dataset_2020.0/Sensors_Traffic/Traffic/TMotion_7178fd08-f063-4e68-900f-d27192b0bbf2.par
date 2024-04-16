@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Multiple Moving Objects`West-End Spots, Facing North`Parking Lot: Tractor Trailers
+#RingCtrl0 1
+DEFINE_MOVING_OBJECTS 1
+#RingCtrl1 0
+#RingCtrl2 2
+#RingCtrl3 1
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox38 0    
+
+DZ_OBJECT 0
+*L 57
+*PATH_ID 1002
+*ROAD_ID 1002
+
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME West-End Spots, Facing North
+OPT_SPEED_OBJ 0
+
+EQ_INIT HEADO_<<o>> = 0
+#RingCtrl4 1
+PATH_ID_OBJ 1002
+ROAD_ID_OBJ 1002
+OPT_RECYCLE_OBJ 0
+*SINIT_1 21.8
+EQ_INIT S_OBJ_<<o>> = 21.8
+EQ_INIT LATO_<<o>> = 57
+H_OBJ = 0 ! Default for blank field
+PARSFILE Animator\Vehicles\AniVeh_a90af010-8fb5-4716-8655-7f9e2c5d8b84.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`Conventional Box Trailer (2A)` Traffic and Moving Objects: Trailers` , 3D Shape for Video`AniVeh_a90af010-8fb5-4716-8655-7f9e2c5d8b84
+
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 0
+OPT_SHAPE_OBJ 0
+
+#EMBEDDED_NOTES
+#This bank of spots is on the western end of the parking lot.  The origin (S=0, L=0) is the South-Eastern corner of the lot.  The Path vector is straight north from there.
+#
+#There are 10 parking spots in this bank.
+#
+#The parking spot locations are (S, L):
+#
+#Spot A - ( 7.4, 55.3)
+#Spot B - ( 9.8, 55.3)
+#Spot C - (12.2, 55.3)
+#Spot D - (14.6, 55.3)
+#Spot E - (17.0, 55.3)
+#Spot F - (19.4, 55.3)
+#Spot G - (21.8, 55.3)
+#Spot H - (24.2, 55.3)
+#Spot I - (26.6, 55.3)
+#Spot J - (29.0, 55.3)
+#
+#These locations are reasonably accurate for vehicles of approximately similar dimensions.  To adjust for different wheelbases, it may be necessary to use additional copies of this dataset.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Moving Objects; { Parking Lot: Tractor Trailers } West-End Spots, Facing North
+#Library : Multiple Moving Objects
+#DataSet : West-End Spots, Facing North
+#Category: Parking Lot: Tractor Trailers
+#FileID  : TMotion_7178fd08-f063-4e68-900f-d27192b0bbf2
+#Product : CarSim 2020.0
+#VehCode Multiple Objects
+
+END

@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName CarSim Run Control`Mcity: ADAS - Cross Traffic w/ AEB`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f31ca111-242f-496c-bab7-5789a87b1a71
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 6
+#RingCtrl7 -1
+*RUN_COLOR 0 0 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_2f074532-6a12-49b8-9342-059d1eabcfd8.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ AEB Sensor` C-Class` , Math Model`VehLoad_2f074532-6a12-49b8-9342-059d1eabcfd8
+
+PARSFILE Procedures\Proc_d4cbb966-292c-425b-8f0d-c962738bfbb3.par
+#BlueLink28 Procedures`Mcity: ADAS Scenario, 30 km/h` Mcity` , Procedure`Proc_d4cbb966-292c-425b-8f0d-c962738bfbb3
+
+PARSFILE Generic\VS_commands\GenVS_e618a913-9ba0-4eee-b7af-82a9ab36de26.par
+#BlueLink20 Generic VS Commands`Sensor and Target Details` Plot Groups` , Plot`GenVS_e618a913-9ba0-4eee-b7af-82a9ab36de26
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_9db9b98a-6725-424b-9635-e1ca6e15979d.png
+WRITE_SENSOR_DETECT
+Title Mcity: ADAS - Cross Traffic w/ AEB <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Mcity: ADAS - Cross Traffic w/ AEB
+#MiscYellow0
+PATH_ID_DM = 1
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The roads of this example is updated from loaded table grid to 3D tiles from VS Scene Builder.
+#
+#A C-Class Hatchback with a single forward-facing ADAS sensor approaches an intersection on a North-South road in the Mcity environment.
+#
+#The ADAS Sensor Target crosses perpendicular to the ego vehicle's path, and is visually represented as a full size SUV.
+#
+#VS Commands are used to apply the ego vehicle's brakes when the crossing target is detected. A forward collision warning HUD alert, also controlled via VS Commands, is triggered and shown in the VsVisualizer.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Mcity: ADAS - Cross Traffic w/ AEB
+#Library : CarSim Run Control
+#DataSet : Mcity: ADAS - Cross Traffic w/ AEB
+#Category: ADAS and Active Safety
+#FileID  : Run_f31ca111-242f-496c-bab7-5789a87b1a71
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

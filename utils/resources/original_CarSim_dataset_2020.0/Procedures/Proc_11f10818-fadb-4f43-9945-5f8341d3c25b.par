@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName Procedures`Target Accel. & Steering Wheel Angle`Driver Controls
+#CheckBox0 1    
+OPT_INIT_CONFIG 1
+#CheckBox1 0    
+OPT_INIT_PATH 0
+#CheckBox2 1    
+OPT_INIT_SPEED 1
+#CheckBox3 1    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+
+PARSFILE Control\Steer\StrSW_d89d757e-8f1f-4279-9c93-2880ef14aa02.par
+#BlueLink27 Control: Steering (Open Loop)`Target Steering Wheel Angle vs. Time` Miscellaneous` , Steering`StrSW_d89d757e-8f1f-4279-9c93-2880ef14aa02
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+#MiscYellow0
+SV_YO = -2 ! Locates ego vehicle in right lane
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_f55bfd6a-cbe6-42bd-b153-fd5cffc05fc9.par
+#BlueLink0 Generic VS Commands`Target Acceleration vs. Time` Miscellaneous Custom Controls` , Miscellaneous`GenVS_f55bfd6a-cbe6-42bd-b153-fd5cffc05fc9
+
+PARSFILE Roads\3D_Road\Road_9469fd2b-9552-4e7e-a1af-8621419d94ff.par
+#BlueLink1 Road: 3D Surface (All Properties)`4-Lane Section w/ Environment` Many Lanes` , Miscellaneous`Road_9469fd2b-9552-4e7e-a1af-8621419d94ff
+
+PARSFILE Output\Sensors\MoSen_e040856c-b0ed-4021-99cb-3a0519cb1981.par
+#BlueLink2 Positions, Velocities, and Accelerations`Accelerometer at SM CG` SM and USM CGs` , Miscellaneous`MoSen_e040856c-b0ed-4021-99cb-3a0519cb1981
+
+PARSFILE Plot\Setup\Plot_5608ae47-21c9-479d-95fe-8c73f9f1f785.par
+#BlueLink9 Plot: Setup`Accel. Control: Commanded vs. Actual` Controls: Driver` , Plot`Plot_5608ae47-21c9-479d-95fe-8c73f9f1f785
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink10 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+
+#EMBEDDED_NOTES
+#This procedure demonstrates the control of a vehicle using targets for vehicle acceleration and steering wheel angle.
+#
+#The vehicle acceleration target is achieved using the VS Commands dataset 'Target Acceleration vs. Time', which uses the built-in speed controller's acceleration control option (OPT_SC 5).
+#
+#The target steering wheel angle is used directly with an open-loop steering dataset.
+#
+#The standard links on this procedure screen for speed control and braking are unused, because this information is provided by the acceleration controller.
+#
+#The 'Set vehicle X, Y, & yaw based on path?' box is unchecked so that the ego vehicle may be placed in the rightmost lane using SV_YO.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driver Controls } Target Accel. & Steering Wheel Angle
+#Library : Procedures
+#DataSet : Target Accel. & Steering Wheel Angle
+#Category: Driver Controls
+#FileID  : Proc_11f10818-fadb-4f43-9945-5f8341d3c25b
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

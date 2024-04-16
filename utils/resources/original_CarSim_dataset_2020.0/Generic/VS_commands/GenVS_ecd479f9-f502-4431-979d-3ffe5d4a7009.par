@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Generic VS Commands`Calculate Deriv. of Kinematic Tables`External Steering
+#VehCode VS Commands
+
+#MiscYellow0
+! The driver model needs the instant overall steer ratio for each wheel. To  calculate it, the derivative
+! of the tie rod / steer arm kinematics is needed. Get it by perturbing the tables using VS Commands
+! Make the derivative available to the Simulink model.
+
+! Note: A close approxiamtion of the ratio that doesn't need the table derivative could also be used, 
+! or the ratio could be calculated in Simulink via, for example, backward differencer.
+
+! Create a perturbation parameter
+define_parameter eps_str = 0.01; mm; Perturbation parameter
+
+! First, find a derivative of the table for tie rod and steer arm by perturbing it
+! Left side
+define_variable d_str_kin_l1 0;
+eq_init d_str_kin_l1 = (rack_kin(0, imp_steer_rack_con_l1 + eps_str, 1) - ...
+                     rack_kin(0, imp_steer_rack_con_l1, 1)) / eps_str;
+eq_out d_str_kin_l1 = (rack_kin(0, imp_steer_rack_con_l1 + eps_str, 1) - ...
+                     rack_kin(0, imp_steer_rack_con_l1, 1)) / eps_str;
+! Right side
+define_variable d_str_kin_r1 0;
+eq_init d_str_kin_r1 = (rack_kin(0, imp_steer_rack_con_r1 + eps_str, 2) - ...
+                     rack_kin(0, imp_steer_rack_con_r1, 2)) / eps_str;
+eq_out d_str_kin_r1 = (rack_kin(0, imp_steer_rack_con_r1 + eps_str, 2) - ...
+                     rack_kin(0, imp_steer_rack_con_r1, 2)) / eps_str;
+
+! Create output variables to pass to Simulink
+define_units rad/m  1; 
+define_output d_kin_l1 = d_str_kin_l1; rad/m ;Table derivative
+define_output d_kin_r1 = d_str_kin_r1; rad/m; Table derivative
+
+! Output the driver model ratios
+define_output r_dr_l1 = imp_r_str_ext_l1;
+define_output r_dr_r1 = imp_r_str_ext_r1;
+define_output r_con_l1 = imp_steer_rack_con_l1; mm;
+define_output r_con_r1 = imp_steer_rack_con_r1; mm;
+#ENDMYellow
+
+#BlueLink4 Plot: Setup`Sensor Vx -- Rear Blind Spot` Object Sensors` , Plot`
+
+#BlueLink5 Plot: Setup`Sensor Dist -- Rear Blind Spot` Object Sensors` , Plot`
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { External Steering } Calculate Deriv. of Kinematic Tables
+#Library : Generic VS Commands
+#DataSet : Calculate Deriv. of Kinematic Tables
+#Category: External Steering
+#FileID  : GenVS_ecd479f9-f502-4431-979d-3ffe5d4a7009
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

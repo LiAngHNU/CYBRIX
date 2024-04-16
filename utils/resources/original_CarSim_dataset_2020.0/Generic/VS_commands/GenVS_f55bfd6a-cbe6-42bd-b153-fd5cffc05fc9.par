@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Generic VS Commands`Target Acceleration vs. Time`Miscellaneous Custom Controls
+#VehCode VS Commands
+
+#MiscYellow0
+SV_VXS = 115.2 ! Sets initial forward speed of vehicle
+
+OPT_SC 5 ! Enables acceleration control option
+
+OPT_BK_SC 1 ! Use braking with acceleration control
+
+OPT_SC_ENGINE_BRAKING 1 ! Use engine braking with acceleration control
+
+ACCEL_KP_SC = 5 ! Proportional gain for acceleration control [-]
+
+BK_PERF_SC = 0.09 ! Approximate brake system performance [g/MPa]
+
+PBK_CON_MAX_SC = 20  ! Max. brake master cylinder pressure available to controller [MPa]
+
+IMPORT IMP_AX_SC REPLACE 0 ! Activates import variable for acceleration command
+
+DEFINE_TABLE GENERIC 1
+
+EQ_IN IMP_AX_SC = 9.80665*GENERIC(0,T,1) ! table is in [g], so convert to [m/s^2]
+#ENDMYellow
+
+PARSFILE Generic\tables\GenTab_683ad99e-1350-4a9f-870d-0078b96d1d22.par
+#BlueLink0 Generic Table`Target Acceleration Table` Speed Controller: Accel Limits` , Miscellaneous`GenTab_683ad99e-1350-4a9f-870d-0078b96d1d22
+
+
+#EMBEDDED_NOTES
+#This set of VS Commands enables acceleration control and defines the target acceleration using a Generic Table.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Controls } Target Acceleration vs. Time
+#Library : Generic VS Commands
+#DataSet : Target Acceleration vs. Time
+#Category: Miscellaneous Custom Controls
+#FileID  : GenVS_f55bfd6a-cbe6-42bd-b153-fd5cffc05fc9
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

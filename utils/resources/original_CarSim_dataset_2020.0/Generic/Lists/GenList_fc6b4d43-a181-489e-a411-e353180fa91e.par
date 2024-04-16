@@ -1,0 +1,101 @@
+PARSFILE
+#FullDataName Generic Data Lists`ESC Normally On`HUD Indicators
+#VehCode Generic Lists
+#MiscYellow0
+ANI_esc_non
+WRT_esc_non
+
+ADD_ENTITY hud_image HUD_ESC_normonon
+  location -360 -10 150 150
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity esc_non
+  image_file Animator\2D_HUD_Icons\Stability_Control\ESC_OFF_OFF.png
+END_ENTITY hud_image HUD_ESC_normonon
+
+ADD_ENTITY hud_text HUD_ESC_labelon
+  prefix ESC On
+  location -360 170 100 18
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+  opacity esc_non
+END_ENTITY hud_text HUD_ESC_labelon
+
+ADD_ENTITY hud_text HUD_ESC_labelline2
+  prefix (controlled by driver)
+  location -360 150 100 18
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+  opacity esc_non
+END_ENTITY hud_text HUD_ESC_labelline2
+
+
+ANI_esc_off
+WRT_esc_off
+
+ADD_ENTITY hud_image HUD_ESC_normonoff
+  location -360 -10 150 150
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity esc_off
+  image_file Animator\2D_HUD_Icons\Stability_Control\ESC_OFF_ON.png
+END_ENTITY hud_image HUD_ESC_normonoff
+
+ADD_ENTITY hud_text HUD_ESC_labeloff
+  prefix ESC Off
+  location -360 170 100 18
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+  opacity esc_off
+END_ENTITY hud_text HUD_ESC_labeloff
+
+ADD_ENTITY hud_text HUD_ESC_labeloffline2
+  prefix (controlled by driver)
+  location -360 150 100 18
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+  opacity esc_off
+END_ENTITY hud_text HUD_ESC_labeloffline2
+#ENDMYellow
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset is for VS Visualizer. It will show the ESC HUD icons for a normally on system.  Those output variables are defined with the VS Command DEFINE_OUTPUT in the VS Command dataset that links to this one.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Lists; { HUD Indicators } ESC Normally On
+#Library : Generic Data Lists
+#DataSet : ESC Normally On
+#Category: HUD Indicators
+#FileID  : GenList_fc6b4d43-a181-489e-a411-e353180fa91e
+#Product : CarSim 2020.0
+#VehCode Generic Lists
+
+END

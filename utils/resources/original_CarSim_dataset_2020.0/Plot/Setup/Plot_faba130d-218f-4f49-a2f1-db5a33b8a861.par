@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Distance from Sensor on One Side`ADAS Sensor Detections, Symbol Stack
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS DisS<<s>>_1, Time
+
+#ENDMYellow
+
+YAXISLABEL <<side>> distance to target - m
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Distance from Sensor on One Side
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Use Symbol Stack <<s>> to get closest object to current sensor.
+#
+#<<side>> (for the Y axis title) is either Left or Right.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections, Symbol Stack } Distance from Sensor on One Side
+#Library : Plot: Setup
+#DataSet : Distance from Sensor on One Side
+#Category: ADAS Sensor Detections, Symbol Stack
+#FileID  : Plot_faba130d-218f-4f49-a2f1-db5a33b8a861
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

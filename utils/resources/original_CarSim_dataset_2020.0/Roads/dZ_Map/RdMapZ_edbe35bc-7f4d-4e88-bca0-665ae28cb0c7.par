@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`Japanese Environment Main Road`Japanese Grid Environment
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: Japanese Environment Main Road
+set_description ROAD_DZ_ID Japanese Environment Main Road
+#RingCtrl0 CARPET
+#RingCtrl3 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 6, 6 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, 0, 15, 20, 115, 120, 125
+0, 0, 0, 0, 0, 0, 0
+15, 0, 0, 0, 0, 0, 0
+20, 0, 0, -5, -5, 0, 0
+475, 0, 0, -5, -5, 0, 0
+480, 0, 0, 0, 0, 0, 0
+500, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Japanese Grid Environment } Japanese Environment Main Road
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : Japanese Environment Main Road
+#Category: Japanese Grid Environment
+#FileID  : RdMapZ_edbe35bc-7f4d-4e88-bca0-665ae28cb0c7
+#Product : CarSim 2020.0
+#VehCode dZ via S-L Grid
+
+END

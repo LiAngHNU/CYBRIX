@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Events`L. Prepare Second Set of Tests`Sine with Dwell
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl1 ZERO ~=
+#RingCtrl10 2
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 OPT_SWD_RESTORE
+*NAME2 T
+*VALUE1 OPT_SWD_RESTORE
+*VALUE2 1
+*SPEED 80
+#MiscYellow0
+SWA_Sign = -1
+SWA_MULT = 1
+#ENDMYellow
+
+DEFINE_EVENT OPT_SWD_RESTORE ; Events\Events_45dfc0c2-ec53-46e9-9b36-2556a4b3dee0.par
+#BlueLink0 Events`D2. Restore State for 80 km/h` Sine with Dwell` , Events`Events_45dfc0c2-ec53-46e9-9b36-2556a4b3dee0
+
+DEFINE_EVENT 1 ; Events\Events_0fc1d317-a9d2-4cd8-892f-6269f90ad05a.par
+#BlueLink1 Events`B. Bring Vehicle Speed to 82 km/h` Sine with Dwell` , Events`Events_0fc1d317-a9d2-4cd8-892f-6269f90ad05a
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded after the successful completion of the first set of Sine with Dwell tests. The data here prepare for the second set of tests, with steering in the opposite direction:
+#
+#Set the sign convention for steering to -1, and reset the multiplier SWA_MULT to 1 (for the first test in the series).
+#
+#If save/restore is being used, then restore the 80 km/h state D2 and continue.
+#
+#Otherwise, bring the speed to 82 km/h using the speed controller with dataset B.
+#
+#Revised 2018.1 because target speed uses new feature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } L. Prepare Second Set of Tests
+#Library : Events
+#DataSet : L. Prepare Second Set of Tests
+#Category: Sine with Dwell
+#FileID  : Events_d30a9ffc-2ef2-4e60-850d-6ffa15505b04
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

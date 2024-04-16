@@ -1,0 +1,131 @@
+PARSFILE
+#FullDataName Generic Data Group`VS Visualizer HUD Text Display`HUD Gauges
+#VehCode Generic group
+#MiscYellow0
+hud_add_element text_widget
+  hud_base_name Text Output - Target Speed
+  hud_base_location 0.05 0.50 0.05 0.05
+  hud_text_prefix Target Speed (km/h)
+  hud_text_min_width_prefix 20
+  hud_text_channel VxTarget
+  hud_text_channel_precision 0
+  hud_text_color 1 1 1 1
+  hud_text_backdrop_color 0 0 0 0.5
+hud_end_element
+
+hud_add_element text_widget
+  hud_base_name Text Output - Speed
+  hud_base_location 0.05 0.55 0.05 0.05
+  hud_text_prefix Actual Speed (km/h)
+  hud_text_min_width_prefix 20
+  hud_text_channel Vx
+  hud_text_channel_precision 0
+  hud_text_color 1 1 .5 1
+  hud_text_backdrop_color 0 0 0 1
+hud_end_element
+
+hud_add_element text_widget
+  hud_base_name Text Output - Speed Error
+  hud_base_location 0.05 0.6 0.05 0.05
+  hud_text_prefix Speed Error (km/h)
+  hud_text_min_width_prefix 20
+  hud_text_channel VxTarget - Vx
+  hud_text_channel_precision 2
+  hud_text_color 1 1 .5 1
+  hud_text_backdrop_color 0 0 0 1
+hud_end_element
+#ENDMYellow
+
+
+#MiscYellow1
+hud_add_element text_widget
+  hud_base_name Text Output - Ax
+  hud_base_location 0.05 0.85 0.05 0.05
+  hud_text_prefix Ax (g's)
+  hud_text_min_width_prefix 20
+  hud_text_channel Ax
+  hud_text_channel_precision 3
+  hud_text_color 1 1 .5 1
+  hud_text_backdrop_color 0 0 0 1
+hud_end_element
+#ENDMYellow
+
+
+#MiscYellow2
+hud_add_element text_widget
+  hud_base_name Text Output - Ay
+  hud_base_location 0.05 0.9 0.05 0.05
+  hud_text_prefix Ay (g's)
+  hud_text_min_width_prefix 20
+  hud_text_channel Ay
+  hud_text_channel_precision 3
+  hud_text_color 1 1 .5 1
+  hud_text_backdrop_color 0 0 0 1
+hud_end_element
+#ENDMYellow
+
+
+#MiscYellow3
+hud_add_element text_widget
+  hud_base_name Text Output - GearStat
+  hud_base_location 0.05 0.8 0.05 0.05
+  hud_text_prefix Gear
+  hud_text_min_width_prefix 20
+  hud_text_channel GearStat
+  hud_text_channel_precision 0
+  hud_text_color 1 1 1 1
+  hud_text_backdrop_color 0 0 0 0.5
+hud_end_element
+#ENDMYellow
+
+
+#MiscYellow4
+hud_add_element text_widget
+  hud_base_name Text Output - Brake Pressure
+  hud_base_location 0.05 0.75 0.05 0.05
+  hud_text_prefix Brake Pressure (MPa)
+  hud_text_min_width_prefix 20
+  hud_text_channel Pbk_Con
+  hud_text_channel_precision 2
+  hud_text_color 1 1 1 1
+  hud_text_backdrop_color 0 0 0 0.5
+hud_end_element
+#ENDMYellow
+
+
+#MiscYellow5
+hud_add_element text_widget
+  hud_base_name Text Output - Throttle
+  hud_text_min_width_prefix 20
+  hud_base_location 0.05 0.7 0.05 0.05
+  hud_text_prefix Throttle
+  hud_text_channel Throttle
+  hud_text_channel_precision 2
+  hud_text_color 1 1 1 1
+  hud_text_backdrop_color 0 0 0 0.5
+hud_end_element
+#ENDMYellow
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset is setup to provide an example of how to use some of the new Heads Up Display (HUD) features of the VS Visualizer.
+#
+#The features on display show a selection of data channels output as plain text in a fixed width font.
+#
+#Note that these display elements will not show up in our older animation package, SurfAnim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { HUD Gauges } VS Visualizer HUD Text Display
+#Library : Generic Data Group
+#DataSet : VS Visualizer HUD Text Display
+#Category: HUD Gauges
+#FileID  : GData115
+#Product : CarSim 8.2 Beta, September 2012
+#Last update: 10-25-2012 15:20
+#VehCode Generic group
+
+END

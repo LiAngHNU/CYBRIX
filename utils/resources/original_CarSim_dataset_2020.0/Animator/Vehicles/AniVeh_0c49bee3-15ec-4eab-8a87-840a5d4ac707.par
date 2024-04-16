@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Euro NCAP EVT`Trailers
+
+#CheckBox0 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 1000
+OBJ_Y_LENGTH 1600
+OBJ_Z_LENGTH 1350
+*DZ_V 0
+*LAT_WC 1250
+*LAT_WC_2 1250
+*HWC 200
+*WHEEL_RATIO 0.75
+*LAXLE_1 -1200
+*LAXLE_2 -200
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_0c49bee3-15ec-4eab-8a87-840a5d4ac707.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_ce3abe70-3bce-40ee-a8a1-ee77ba0941f9.par
+#BlueLink1 Animator: Shape File Link`AEB Dummy Vehicle: Body` Trailers` , Vehicle Body`Shape_ce3abe70-3bce-40ee-a8a1-ee77ba0941f9
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_b823932a-7890-4984-bfd3-2c0025233781.par
+#BlueLink3 Animator: Shape File Link`AEB Dummy Vehicle: Brake Lights` Trailers` , Brake Lights`Shape_b823932a-7890-4984-bfd3-2c0025233781
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink5 Animator: Camera Setup`YZ-Plane, No Offsets (with Yaw)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Trailers } Euro NCAP EVT
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Euro NCAP EVT
+#Category: Trailers
+#FileID  : AniVeh_0c49bee3-15ec-4eab-8a87-840a5d4ac707
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

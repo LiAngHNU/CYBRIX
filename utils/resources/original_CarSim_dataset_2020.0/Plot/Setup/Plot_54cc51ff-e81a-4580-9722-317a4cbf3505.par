@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Rotor Temperature`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS T_Rtr_L1, Time
+PLOTCHANNELS T_Rtr_L2, Time
+PLOTCHANNELS T_Rtr_R1, Time
+PLOTCHANNELS T_Rtr_R2, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Rotor Temperature
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Brake Rotor Temperature
+#Library : Plot: Setup
+#DataSet : Brake Rotor Temperature
+#Category: Braking
+#FileID  : Plot_54cc51ff-e81a-4580-9722-317a4cbf3505
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

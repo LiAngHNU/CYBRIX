@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Generic Table`CC_FX: Rear (2D)`Generic Suspension Comp.: Twist-Beam (2D)
+#RingCtrl0 2D_SPLINE
+#CheckBox0 1    
+
+*3D_XLabel Fx other side (N)
+*3D_YLabel Fx (N)
+*3D_ZLabel Camber (deg)
+
+#DiagramTwo0
+*3D_DATA 3, 21 ! columns x rows
+CC_FX_CARPET 2D_SPLINE
+0, -3000, 0, 3000
+-3000, -1.54403, -1.67875, -1.86413
+-2700, -1.64493, -1.7809, -1.96784
+-2400, -1.74798, -1.88521, -2.07376
+-2100, -1.85323, -1.99176, -2.18192
+-1800, -1.96073, -2.10057, -2.2924
+-1500, -2.07054, -2.21171, -2.40523
+-1200, -2.18269, -2.32523, -2.52048
+-900, -2.29725, -2.44119, -2.63819
+-600, -2.41428, -2.55963, -2.75843
+-300, -2.53382, -2.68062, -2.88125
+0, -2.65594, -2.80421, -3.00672
+300, -2.78069, -2.93047, -3.13489
+600, -2.90815, -3.05946, -3.26582
+900, -3.03836, -3.19123, -3.39958
+1200, -3.17139, -3.32587, -3.53624
+1500, -3.30731, -3.46342, -3.67587
+1800, -3.44619, -3.60396, -3.81853
+2100, -3.5881, -3.74756, -3.96429
+2400, -3.7331, -3.8943, -4.11323
+2700, -3.88127, -4.04424, -4.26542
+3000, -4.03268, -4.19745, -4.42094
+ENDTABLE
+
+_CONSTANT 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD CC_FX
+*X_LABEL Fx (N)
+*Y_LABEL Camber (deg)
+*X_LABEL_2 Fx other side (N)
+*SCALAR2 1
+
+
+#EMBEDDED_NOTES
+#Twist-beam suspension compliance from David's SuspensionSim model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Generic Suspension Comp.: Twist-Beam (2D) } CC_FX: Rear (2D)
+#Library : Generic Table
+#DataSet : CC_FX: Rear (2D)
+#Category: Generic Suspension Comp.: Twist-Beam (2D)
+#FileID  : GenTab_a949f89a-5b08-4c21-831b-76ff7ebf0406
+#Product : CarSim 2020.0
+#VehCode table
+
+END

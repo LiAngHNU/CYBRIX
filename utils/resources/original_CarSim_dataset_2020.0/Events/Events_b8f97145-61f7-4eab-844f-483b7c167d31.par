@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Events`D. Go to Next Speed`Steady-State Speed Series
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl1 >
+#RingCtrl10 2
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 T_EVENT
+*NAME2 station
+*VALUE1 T_WAIT
+*VALUE2 1000
+#MiscYellow0
+VX_TARG = VX_TARG + VX_STEP
+SPEED_TIME_CONSTANT = VX_TARG
+T_EVENT_START = T
+#ENDMYellow
+
+#MiscYellow1
+!Save current values for optional plots
+VX_OLD = VX
+#ENDMYellow
+
+MAKE_EVENT T_EVENT > T_WAIT ; Events\Events_9c47d12e-9b58-4c59-bfbd-86a47e748c95.par
+#BlueLink0 Events`B. Check Longitudinal Speed` Steady-State Speed Series` , Events`Events_9c47d12e-9b58-4c59-bfbd-86a47e748c95
+
+MAKE_EVENT station > 1000 ; Events\Events_0d439614-58bb-4232-9345-a488c5c39d05.par
+#BlueLink1 Events`Reset to S = 0` Steady-State Speed Series` , Events`Events_0d439614-58bb-4232-9345-a488c5c39d05
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Set up the next steady-state test.
+#
+#Increment the target speed VX_TARG and assign the corresponding target speed SPEED_TIME_CONSTANT.
+#
+#Reset the local event time T_EVENT by setting the offset T_EVENT_START to the current time. Then set a pending event to trigger when the local time reaches T_WAIT.
+#
+#Four variables are updated here that are used for some plot descriptions that are still being developed at the time of this software release.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Steady-State Speed Series } D. Go to Next Speed
+#Library : Events
+#DataSet : D. Go to Next Speed
+#Category: Steady-State Speed Series
+#FileID  : Events_b8f97145-61f7-4eab-844f-483b7c167d31
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

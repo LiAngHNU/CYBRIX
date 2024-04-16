@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Traffic Signal: Body (Overhead, Left)`Environment: Props (2 of 2)
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Props\Traffic_Lights\Basic_Traffic_Light.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_ANGLE_Z 90
+SET_OFFSET_Y -7
+SET_OFFSET_Z 5
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_b9680920-2ae5-4b02-936d-c9ac3c0befd8.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Overhead Signal` Custom Cameras` , Video Camera`Camera_b9680920-2ae5-4b02-936d-c9ac3c0befd8
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_f0edc310-c185-4db0-aadb-e890be46c318.png
+
+#EMBEDDED_NOTES
+#This traffic light body has been rotated and offset to represent the left-hand signal of a two-signal overhead pair.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Signal: Body (Overhead, Left)
+#Library : Animator: Shape File Link
+#DataSet : Traffic Signal: Body (Overhead, Left)
+#Category: Environment: Props (2 of 2)
+#FileID  : Shape_f0edc310-c185-4db0-aadb-e890be46c318
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName Tire`215/55 R17`Touring Tires
+FZ_REF 6500
+X_LENGTH 334
+Z_LENGTH 334
+Y_LENGTH 215
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_b46bb8ca-2d76-4ce9-9459-7ed6afac0407.par
+#BlueLink4 Animator: Shape Assembly`Euro Sedan Tire` Tires` , Animator`ShpGrp_b46bb8ca-2d76-4ce9-9459-7ed6afac0407
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 215
+RRE 325
+R0 334
+FZ_TIRE_COEFFICIENT 268
+FZ_MAX 100000
+M_TIRE 22
+IT 1.5
+IT_XXZZ 0.8
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0038
+RR_V 0.000026
+L_CONTACT_X_CONSTANT 90
+L_CONTACT_Y_CONSTANT 215
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_3a71ed18-e842-4d21-9297-9e431964ca79.par
+#BlueLink0 Tire: Aligning Moment`215/55 R17 (SAE)` Touring Tires` , Aligning Moment`TireMz_3a71ed18-e842-4d21-9297-9e431964ca79
+
+PARSFILE Tires\Fy\TireFy_a3dbd701-dd04-4bbe-ae9d-4f8143ca326f.par
+#BlueLink1 Tire: Lateral Force`215/55 R17` Touring Tires` , Lateral Force`TireFy_a3dbd701-dd04-4bbe-ae9d-4f8143ca326f
+
+PARSFILE Tires\Fx\TireFx_912f5e84-bc6f-4cb3-a08e-430ac38b921c.par
+#BlueLink2 Tire: Longitudinal Force`215/55 R17` Touring Tires` , Longitudinal Force`TireFx_912f5e84-bc6f-4cb3-a08e-430ac38b921c
+
+PARSFILE Tires\Camber_Thrust\CamStiff_2a6821cf-8efc-4493-aa14-ff8fe1c2cd9a.par
+#BlueLink3 Tire: Camber Thrust Coefficient`215/55 R17` Touring Tires` , Camber Thrust`CamStiff_2a6821cf-8efc-4493-aa14-ff8fe1c2cd9a
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 650 kg
+#
+#Note:
+#The Aligning Moment data linked here replaces the previously shipping Aligning Moment data.
+#
+#The Mz values correspond to a pneumatic trail (deg) obtained from the averaged results of SAE Tire Tests.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Touring Tires } 215/55 R17
+#Library : Tire
+#DataSet : 215/55 R17
+#Category: Touring Tires
+#FileID  : Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

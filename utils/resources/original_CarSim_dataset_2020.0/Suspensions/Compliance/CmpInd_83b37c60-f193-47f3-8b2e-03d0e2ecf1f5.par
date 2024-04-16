@@ -1,0 +1,112 @@
+PARSFILE
+#FullDataName Suspension: Independent Compliance, Springs, and Dampers`D-Class, SUV - Front`D-Class
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 1
+#RingCtrl3 1
+#RingCtrl5 2
+#RingCtrl7 1
+#RingCtrl9 1
+#RingCtrl11 1
+#RingCtrl13 1
+*KSPRING_L 130
+*FRICTION_L 0
+*BETA_C_L 2
+*BETA_E_L 2
+*L_SPG_ADJ_L 0
+*R_SPRING_L 0.611
+*R_DAMPER_L 0.614
+*R_JOUNCE_L 0.614
+*R_REBOUND_L 0.614
+*CT_FX_L 4.45e-6
+*CS_FY_L -1.0e-06
+*CS_MZ_L 3.8e-4
+*CC_FX_L 0
+*CI_FY_L 1.5e-5
+*CI_MZ_L 3.1e-5
+*C_LONG_L 1.6e-5
+*C_LAT_L 1.6e-5
+DAUX 0
+*CD_MY_L 0
+
+iside 1
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 130
+FS_EXT_COEFFICIENT 130
+FS_COMP_OFFSET 0
+FS_EXT_OFFSET 0
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 0.611
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_0751644e-013f-45f4-8119-29f0d1bd5cc4.par
+#BlueLink1 Suspension: Shock Absorber`Big SUV` SUV and Light Truck` , Left damper`Shock_0751644e-013f-45f4-8119-29f0d1bd5cc4
+
+CMP_DAMP_COEFFICIENT 0.614
+PARSFILE Suspensions\Jounce_Rebound\JncReb_a149b76b-e734-43ee-b840-d0fd8769d993.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+70 mm / -50 mm` Jounce Range: 50 mm to 99 mm` , Jounce / rebound stop force`JncReb_a149b76b-e734-43ee-b840-d0fd8769d993
+
+CMP_JSTOP_COEFFICIENT 0.614
+CMP_RSTOP_COEFFICIENT 0.614
+CT_FX_COEFFICIENT 4.45e-6
+CS_FY_COEFFICIENT -1.0e-06
+CS_MZ_COEFFICIENT 3.8e-4
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 1.5e-5
+CI_MZ_COEFFICIENT 3.1e-5
+C_LONG_COEFFICIENT 1.6e-5
+C_LAT_COEFFICIENT 1.6e-5
+CD_MY_COEFFICIENT 0
+
+iside 2
+OPT_EXT_SP 0
+FS_COMP_COEFFICIENT 130
+FS_EXT_COEFFICIENT 130
+FS_COMP_OFFSET 0
+FS_EXT_OFFSET 0
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+CMP_SPR_SEAT_COEFFICIENT 0.611
+L_SPG_ADJ 0
+FS_OFFSET 0
+CMP_OFFSET 0
+PARSFILE Suspensions\Shocks\Shock_0751644e-013f-45f4-8119-29f0d1bd5cc4.par
+#BlueLink1 Suspension: Shock Absorber`Big SUV` SUV and Light Truck` , Left damper`Shock_0751644e-013f-45f4-8119-29f0d1bd5cc4
+
+CMP_DAMP_COEFFICIENT 0.614
+PARSFILE Suspensions\Jounce_Rebound\JncReb_a149b76b-e734-43ee-b840-d0fd8769d993.par
+#BlueLink5 Suspension: Jounce and Rebound Stops`+70 mm / -50 mm` Jounce Range: 50 mm to 99 mm` , Jounce / rebound stop force`JncReb_a149b76b-e734-43ee-b840-d0fd8769d993
+
+CMP_JSTOP_COEFFICIENT 0.614
+CMP_RSTOP_COEFFICIENT 0.614
+CT_FX_COEFFICIENT 4.45e-6
+CS_FY_COEFFICIENT -1.0e-06
+CS_MZ_COEFFICIENT 3.8e-4
+CC_FX_COEFFICIENT 0
+CI_FY_COEFFICIENT 1.5e-5
+CI_MZ_COEFFICIENT 3.1e-5
+C_LONG_COEFFICIENT 1.6e-5
+C_LAT_COEFFICIENT 1.6e-5
+CD_MY_COEFFICIENT 0
+PARSFILE Suspensions\Aux_Roll\AuxMx_fc3cce39-d0ac-49ff-8e08-dc224c7b9098.par
+#BlueLink2 Suspension: Auxiliary Roll Moment`Linear: 569 N-m/deg` Linear` , Roll Moment`AuxMx_fc3cce39-d0ac-49ff-8e08-dc224c7b9098
+
+
+#EMBEDDED_NOTES
+#Front spring rate chosen for a front ride frequency of 1.7 Hz and a front corner weight of 428 kg.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Independent Compliance, Springs, and Dampers; { D-Class } D-Class, SUV - Front
+#Library : Suspension: Independent Compliance, Springs, and Dampers
+#DataSet : D-Class, SUV - Front
+#Category: D-Class
+#FileID  : CmpInd_83b37c60-f193-47f3-8b2e-03d0e2ecf1f5
+#Product : CarSim 2020.0
+#VehCode Springs and Dampers
+
+END

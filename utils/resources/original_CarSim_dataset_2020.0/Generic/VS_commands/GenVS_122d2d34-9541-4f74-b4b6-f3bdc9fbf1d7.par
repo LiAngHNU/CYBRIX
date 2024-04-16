@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Generic VS Commands`New Variables for Ackermann Steer`Miscellaneous Custom Output Variables
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_PARAMETER Str_Ack = 0; deg; Ackermann angle for steering wheel
+DEFINE_PARAMETER Str_ack1 = 0; deg; Ackermann angle for front road wheels
+
+DEFINE_OUTPUT SteerRel = Steer_SW - STR_ACK; deg ; Steering wheel rel. to Ackermann
+DEFINE_OUTPUT Steer_F = (Steer_L1 + Steer_R1)/2; deg ; Ave steer of front road wheels
+DEFINE_OUTPUT StrF_Rel = Steer_F - STR_ACK1; deg; Ave str of F. whls rel. to Ackermann
+
+DEFINE_VARIABLE STR_OLD = 0; deg; Possibly used for optional plots
+DEFINE_VARIABLE ROLL_OLD = 0; deg; Possibly used for optional plots
+DEFINE_VARIABLE BETA_OLD = 0; deg; Possibly used for optional plots
+DEFINE_VARIABLE AY_OLD = 0; g's; Possibly used for optional plots
+#ENDMYellow
+
+PARSFILE Plot\Setup\Plot_0310a26e-cef1-49f8-bbeb-8b865ae1c40b.par
+#BlueLink3 Plot: Setup`Steering Wheel (Relative) vs. Lat Accel` Steering` , Plot`Plot_0310a26e-cef1-49f8-bbeb-8b865ae1c40b
+
+PARSFILE Plot\Setup\Plot_1f7cf090-93cd-4943-8c9b-4787a11adefb.par
+#BlueLink4 Plot: Setup`Steering (Front, Relative) vs. Lat Accel` Steering` , Plot`Plot_1f7cf090-93cd-4943-8c9b-4787a11adefb
+
+
+#EMBEDDED_NOTES
+#This datasets defines two parameters for Ackermann steer: one for the steering wheel angle (STR_ACK) and one for the average of the front wheels at the road (STR_ACK1).
+#
+#It defines three new outputs: the relative steering wheel angle (Steer_SW - STR_ACK), the average steer of the front wheels (Steer_F), and the relative steer of the front wheels.
+#
+#These variables are referenced by VS commands in events used in the understeer test. They are also plotted agains lateral accleration in the two plot setups linked here.
+#
+#Four variables are defined here that are used for some plot descriptions that are still being developed at the time of this software release.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Miscellaneous Custom Output Variables } New Variables for Ackermann Steer
+#Library : Generic VS Commands
+#DataSet : New Variables for Ackermann Steer
+#Category: Miscellaneous Custom Output Variables
+#FileID  : GenVS_122d2d34-9541-4f74-b4b6-f3bdc9fbf1d7
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

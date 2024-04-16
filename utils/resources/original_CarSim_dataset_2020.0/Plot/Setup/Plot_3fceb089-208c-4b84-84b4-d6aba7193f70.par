@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Transmission Clutch Torque`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS M_Clutch, Time
+PLOTCHANNELS M_Cl_Cap, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Transmission Clutch Torque
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#M_Clutch
+#Torque of the mechanical clutch or lockup clutch on a hydraulic torque converter.
+#
+#M_Cl_Cap
+#Maximum torque capacity of the mechanical clutch or lockup clutch on a hydraulic torque converter. (This is not the actual transfered torque.)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Transmission Clutch Torque
+#Library : Plot: Setup
+#DataSet : Transmission Clutch Torque
+#Category: Powertrain
+#FileID  : Plot_3fceb089-208c-4b84-84b4-d6aba7193f70
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

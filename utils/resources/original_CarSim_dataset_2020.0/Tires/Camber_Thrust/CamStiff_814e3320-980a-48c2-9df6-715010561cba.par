@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Tire: Camber Thrust Coefficient`Camber Thrust for One-half Tire`Three-wheeled Vehicle
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+#DiagramOne0
+KGAMMA_TABLE SPLINE
+0, 4.875
+250, 1.914485
+500, -0.599315
+750, -2.89212
+1000, -5.01265
+1250, -7.00965
+1500, -8.9319
+1750, -10.82805
+2000, -12.74695
+2250, -14.7372
+2500, -16.8476
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#To maintain correct non-linear properties (such as cornering stiffness), the tables for each component force and moment are modified, reducing the input vertical force and the output force or moment of each table by half. The result is a "half tire" such that, when the effect of two is combined, is equal to the single front tire.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Camber Thrust Coefficient; { Three-wheeled Vehicle } Camber Thrust for One-half Tire
+#Library : Tire: Camber Thrust Coefficient
+#DataSet : Camber Thrust for One-half Tire
+#Category: Three-wheeled Vehicle
+#FileID  : CamStiff_814e3320-980a-48c2-9df6-715010561cba
+#Product : CarSim 2020.0
+#VehCode Camber Thrust
+
+END

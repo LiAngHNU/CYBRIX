@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Powertrain: AVL Cruise`127 kW Automatic w/ 4WD`
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 2
+#RingCtrl1 1
+R_MDRIVE 1
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+OPT_SHIFT_INTERNAL 0
+OPT_SHIFT_AVL 1
+PARSFILE Powertrain\EngineFullPw\EngPwr_afa45811-e98d-40c5-a1bc-7d49be06afc9.par
+#BlueLink2 Powertrain: Engine Full Load Power`6 Cylinder Engine (Cruise)` ` , Full load power`EngPwr_afa45811-e98d-40c5-a1bc-7d49be06afc9
+
+
+#AVL Cruise setting data
+AVL_CRUISE_DLL C:\AVL\CRUISE\v2015\CRUISE\v2015\bin\bin.ia32-unknown-winnt_i11\cruise_m.dll
+AVL_CRUISE_PROJECT Extensions\AVL\Cruise-CarSim_Aut_4WD\ver_0001\Aut_4WD.prj
+#MiscYellow0
+LOCK_BK_R_FREQ     100
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#This example dataset uses the AVL Cruise model.
+#
+#CarSim supports the AVL Cruise model (version 2010 or newer), but the following separate licenses are required:
+#
+#1. AVL Cruise license (available from AVL) and
+#2. CarSim External Powertrain Interface license (available from Mechanical Simulation).
+#
+#In order to execute Cruise on CarSim correctly, you have to set the following files:
+#
+#a. Cruise solver file (cruiseNT.dll), which should be version 2010 or newer, or an optional project embedded solver (CMC dll), and
+#b. Cruise project file (***.prj), if the solver is not CMC dll.
+#
+#This particular dataset involves the following settings:
+#
+#1.  The Cruise model selected here is a 4WD automatic transmission. Therefore the shift schedule is selected for "AVL Cruise shift schedule",
+#2.  Full load engine characteristic is specified which is necessary to perform the CarSim speed controller.
+#3.  LOCK_BK_R_FREQ is set to 100 in order to avoid wheel oscillation during the vehicle stopping.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: AVL Cruise; 127 kW Automatic w/ 4WD
+#Library : Powertrain: AVL Cruise
+#DataSet : 127 kW Automatic w/ 4WD
+#Category: 
+#FileID  : Cruise_9e78cc24-da34-49ae-bae8-f046f900bf4f
+#Product : CarSim 2020.0
+#VehCode AVL Cruise Driveline
+
+END

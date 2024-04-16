@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`Record Lap Time, End Events`Recording a Lap
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+define_parameter lap_time = T-lap_start_time; s;
+stop_run_now End event triggered
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Record lap time using the simulation time minus the simulation time at the start of the lap.
+#
+#VS Command STOP_RUN_NOW is used to trigger the simulation to end. The keyword is typed and a user defined message may be displayed after the keyword.  The message may be seen in the Log file by using the View button on the Run screen.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Recording a Lap } Record Lap Time, End Events
+#Library : Events
+#DataSet : Record Lap Time, End Events
+#Category: Recording a Lap
+#FileID  : Events_674bbf86-833a-4670-8e5b-545e50e0e14e
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName Generic Data Group`Traffic Lights for 4-way in City`Traffic Lights
+#VehCode Generic Group
+PARSFILE Generic\VS_commands\GenVS_1e0e0e3e-4182-45f6-b1f3-6711c0b07997.par
+#BlueLink0 Generic VS Commands`Parameters for Signs and Pedestrians` ADAS Support` , Link 1`GenVS_1e0e0e3e-4182-45f6-b1f3-6711c0b07997
+
+
+#MiscYellow1
+symbol_push <<x>> 152
+symbol_push <<y>> 160
+symbol_push <<psi>> (-pi/2)
+symbol_push <<rstart>> (0.5 + r_sig_start)
+symbol_push <<dist>> 16
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1.par
+#BlueLink1 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 2`Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1
+
+
+#MiscYellow2
+set_description object_name ...
+  Traffic light facing south ! previous link
+symbol_set <<x>> 147
+symbol_set <<y>> 140
+symbol_set <<psi>> (pi/2)
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1.par
+#BlueLink2 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 3`Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1
+
+
+#MiscYellow3
+set_description object_name ...
+   Traffic light facing north ! previous link
+symbol_set <<x>> 138
+symbol_set <<y>>153
+symbol_set <<psi>> 0
+symbol_set <<rstart>> r_sig_start
+symbol_set <<dist>> 23
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1.par
+#BlueLink3 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 4`Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1
+
+
+#MiscYellow4
+set_description object_name ...
+  Traffic light facing east ! previous link
+symbol_set <<x>> 160
+symbol_set <<y>>146
+symbol_set <<psi>> pi
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Targets\Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1.par
+#BlueLink4 Single Moving Object (Custom)`Overhead Traffic Signal, Generic` Traffic Signs and Lights` , Link 5`Target_2d7a6689-c935-4069-ae3e-e95cb9597bd1
+
+
+#MiscYellow5
+set_description object_name ...
+  Traffic light facing west ! previous link
+#ENDMYellow
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Traffic Lights } Traffic Lights for 4-way in City
+#Library : Generic Data Group
+#DataSet : Traffic Lights for 4-way in City
+#Category: Traffic Lights
+#FileID  : GenGrp_d721139a-706a-49ad-abe0-2f8008aa3b89
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Models: Simulink`ACC: Second Car (Ext. Sen.)`Active Cruise Control
+#RunMdlFile Extensions\Simulink\Multi_Vehicle\Radar_Acc_ExtSen_CS2020.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Multi_Vehicle\Radar_Acc_ExtSen_CS2020.mdl
+#RingCtrl0 -1
+#CheckBox0 1    
+*USE_ALT_DIR 1
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.001
+iprint 25
+#AltPath Extensions\Simulink\Multi_Vehicle
+*ALTERNATE_PATH Extensions\Simulink\Multi_Vehicle
+PARSFILE IO_Channels\I_Channels\Import_d871efbf-a0fd-4aab-9a70-0b37d72c1dd4.par
+#BlueLink0 I/O Channels: Import`Radar Active Cruise Control (Ext. Sen.)` RADAR: Active Cruise Control` , Import`Import_d871efbf-a0fd-4aab-9a70-0b37d72c1dd4
+
+PARSFILE IO_Channels\O_Channels\Export_cd46af09-813a-451b-b6bb-def0b4b3623a.par
+#BlueLink1 I/O Channels: Export`Radar Active Cruise Control (Ext. Sen.)` RADAR: Active Cruise Control` , Import/Export`Export_cd46af09-813a-451b-b6bb-def0b4b3623a
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This “Models: Simulink” dataset is used in an example in which two vehicle models are simulated simultaneously under the control of Simulink. This dataset is used for the second vehicle, which has active radar-based cruise control.
+#
+#Both "Models: Simulink" datasets identify the same Simulink model.
+#- For the lead vehicle, there are only exports
+#- For the following vehicle there are imports and exports
+#
+#
+#
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Active Cruise Control } ACC: Second Car (Ext. Sen.)
+#Library : Models: Simulink
+#DataSet : ACC: Second Car (Ext. Sen.)
+#Category: Active Cruise Control
+#FileID  : Simlink_05c2fa91-7836-4930-b6f2-3ff5d121d2f6
+#Product : CarSim 2020.0
+#VehCode 
+
+END

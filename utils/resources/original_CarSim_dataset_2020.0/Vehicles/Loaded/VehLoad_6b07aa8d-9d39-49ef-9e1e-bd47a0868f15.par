@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`E-Class, SUV: Roof Load (Single Pt. Tire)`E-Class
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_723f0d87-1b4e-48f8-b397-d508912b52e4.par
+#BlueLink0 Vehicle: Assembly`E-Class, SUV: Single Contact Point Tire` E-Class` , Lead Unit`Vehicle_723f0d87-1b4e-48f8-b397-d508912b52e4
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Payloads\Custom\Custom_fcb38892-9dd5-4b88-930e-4722a5338d42.par
+#BlueLink1 Payload: Custom`Roof Cargo Box (Lighter)` ` , Miscellaneous`Custom_fcb38892-9dd5-4b88-930e-4722a5338d42
+
+*FIT_MODE 1
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+
+#EMBEDDED_NOTES
+#E-Class SUV with a single payload representing a roof load.
+#
+#This vehicle uses tire datasets which do not use the user-defined tire contact patch dimensions. Browse to the Vehicle: Assembly screen by clicking on the blue link "E-Class, SUV (Single Contact Point Tire)" and browse to the tire data screens for more information.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { E-Class } E-Class, SUV: Roof Load (Single Pt. Tire)
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : E-Class, SUV: Roof Load (Single Pt. Tire)
+#Category: E-Class
+#FileID  : VehLoad_6b07aa8d-9d39-49ef-9e1e-bd47a0868f15
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

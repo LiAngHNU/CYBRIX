@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName CarSim Run Control`Pacejka 5.2: DLC, Consumers Union`Tire Models
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1fac9d84-1256-4cc3-8e4b-08eb496feba4
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_280d395a-c3f8-4029-b0d6-d019a5c6c64a.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Utility Truck w/ Barrels` Utility Vehicles` , Math Model`VehLoad_280d395a-c3f8-4029-b0d6-d019a5c6c64a
+
+PARSFILE Procedures\Proc_59aac561-fc66-42a0-b3c0-08074697f758.par
+#BlueLink28 Procedures`Double Lane Change, Tight` Handling Testing` , Procedure`Proc_59aac561-fc66-42a0-b3c0-08074697f758
+
+INSTALL_SPEED_CONTROLLER
+Opt_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Set from the Run Control screen
+SPEED_TARGET_CONSTANT 35
+OPT_SC_ENGINE_BRAKING 0
+*SPEED 35
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Loaded\VehLoad_280d395a-c3f8-4029-b0d6-d019a5c6c64a.png
+WRITE_SENSOR_DETECT
+Title Pacejka 5.2: DLC, Consumers Union <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE Pacejka 5.2: DLC, Consumers Union
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A small utility truck with the PAC52 tire model performing a tight double lane change maneuver. This model features three payloads.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } Pacejka 5.2: DLC, Consumers Union
+#Library : CarSim Run Control
+#DataSet : Pacejka 5.2: DLC, Consumers Union
+#Category: Tire Models
+#FileID  : Run_1fac9d84-1256-4cc3-8e4b-08eb496feba4
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

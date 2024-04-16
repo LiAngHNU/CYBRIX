@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`MF-Tyre, Asymmetric: Acc./Brk`Tire Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_7e857b1a-453d-4393-89fc-ea50f3f9bc9b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_09439551-c64a-4943-9211-22177923f7cf.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 23 m` Road Reference` , Animator camera`Camera_09439551-c64a-4943-9211-22177923f7cf
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+SET_RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_178fd61e-e652-4c02-8946-1c9f5a35f66e.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: MF-Tyre 6.2, Asym.` External Tire Models` , Math Model`Vehicle_178fd61e-e652-4c02-8946-1c9f5a35f66e
+
+PARSFILE Procedures\Proc_d895948e-10ee-49da-bc45-cc14e63e6e15.par
+#BlueLink28 Procedures`Accel then Brake` Accel. and Brake Testing` , Procedure`Proc_d895948e-10ee-49da-bc45-cc14e63e6e15
+
+PARSFILE Plot\Setup\Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e.par
+#BlueLink15 Plot: Setup`Wheel Cylinder Pressures` Braking` , Plot`Plot_f5d0f978-49a4-4e36-9c25-7d47b1c2be3e
+
+
+SPECIAL_PARSFILE Runs\Run_5e7b6909-7ff5-47b2-87ef-acdb67727e88.par
+#BlueLink23 CarSim Run Control`MF-Tyre, Sym.: Acc./Braking` Tire Models` , Overlay run or ERD file`Run_5e7b6909-7ff5-47b2-87ef-acdb67727e88
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title MF-Tyre, Asymmetric: Acc./Brk <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE MF-Tyre, Asymmetric: Acc./Brk
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan using the MF-Tyre v6.2 model with asymmetric tire properties performs an acceleration and braking test.
+#
+#It is overlaid with the simulation:
+#MF-Tyre, Sym.: Acc./Braking
+#
+#The tire data used in the overlay uses symmetric tire properties.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } MF-Tyre, Asymmetric: Acc./Brk
+#Library : CarSim Run Control
+#DataSet : MF-Tyre, Asymmetric: Acc./Brk
+#Category: Tire Models
+#FileID  : Run_7e857b1a-453d-4393-89fc-ea50f3f9bc9b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

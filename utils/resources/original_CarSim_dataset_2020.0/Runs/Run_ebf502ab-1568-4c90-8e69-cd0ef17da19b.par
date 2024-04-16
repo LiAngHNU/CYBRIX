@@ -1,0 +1,80 @@
+PARSFILE
+#FullDataName CarSim Run Control`MF-Swift v7.3, Rigid Ring: Acc./Braking`* More Examples (Extra License Options)
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_ebf502ab-1568-4c90-8e69-cd0ef17da19b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_09439551-c64a-4943-9211-22177923f7cf.par
+#BlueLink0 Animator: Camera Setup`90 Azm, 5 El, 23 m` Road Reference` , Animator camera`Camera_09439551-c64a-4943-9211-22177923f7cf
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 12
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0.2
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_e535f15d-77c6-462a-8e11-3fb4552d4641.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hbk: MF-Swift 7.3, Rigid Ring` External Tire Models` , Math Model`Vehicle_e535f15d-77c6-462a-8e11-3fb4552d4641
+
+PARSFILE Procedures\Proc_d895948e-10ee-49da-bc45-cc14e63e6e15.par
+#BlueLink28 Procedures`Accel then Brake` Accel. and Brake Testing` , Procedure`Proc_d895948e-10ee-49da-bc45-cc14e63e6e15
+
+*TSTEP 0.00025
+*FREQ_MODEL 4000
+*TSTEP_OUT 0.002
+*FREQ_OUT 500
+tstep 0.00025
+iprint 8
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_e535f15d-77c6-462a-8e11-3fb4552d4641.png
+WRITE_SENSOR_DETECT
+Title MF-Swift v7.3, Rigid Ring: Acc./Braking <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE MF-Swift v7.3, Rigid Ring: Acc./Braking
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A C-Class Hatchback with the MF-Swift v7.3 (Rigid Ring) tire model performs an acceleration and braking maneuver using Open-Loop controls for the throttle and brakes.
+#
+#The tire model requires a small math model time step to ensure numerical stability:
+#Math model time step: 0.00025 sec (4000 Hz) Output file size: 0.002 sec (500 Hz)
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * More Examples (Extra License Options) } MF-Swift v7.3, Rigid Ring: Acc./Braking
+#Library : CarSim Run Control
+#DataSet : MF-Swift v7.3, Rigid Ring: Acc./Braking
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_ebf502ab-1568-4c90-8e69-cd0ef17da19b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

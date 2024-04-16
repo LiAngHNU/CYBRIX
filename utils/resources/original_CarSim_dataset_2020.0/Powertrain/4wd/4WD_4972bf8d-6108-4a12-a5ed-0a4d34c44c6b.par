@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`All External Powertrain Components`External Components
+INSTALL_ENGINE
+INSTALL_TORQUE_TRANSFER_DEVICE
+INSTALL_TRANSMISSION
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 0
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+OPT_HEV 0
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+OPT_ENGINE_INTERNAL 0
+OPT_PWR_CPL_INTERNAL 0
+OPT_TRANS_INTERNAL 0
+OPT_DIFF_INTERNAL(1) 0
+OPT_DIFF_INTERNAL(2) 0
+OPT_DIFF_INTERNAL(3) 0
+
+PARSFILE Powertrain\Extrans\TransExt_af12a1fb-2189-4c80-aaa1-dca12ff3e927.par
+#BlueLink7 Powertrain: Transmission (External)`External Shift Schedule` ` , External Transmission`TransExt_af12a1fb-2189-4c80-aaa1-dca12ff3e927
+
+
+IDIFF 3
+
+IDIFF 1
+
+IDIFF 2
+
+#EMBEDDED_NOTES
+#This dataset shows how to completely replace the CarSim powertrain model with an external model.  All dataset links are set to use external models.
+#
+#The diagram to the right details the input and output variables that are typically used when using an external powertrain model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { External Components } All External Powertrain Components
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : All External Powertrain Components
+#Category: External Components
+#FileID  : 4WD_4972bf8d-6108-4a12-a5ed-0a4d34c44c6b
+#Product : CarSim 2020.0
+#VehCode 4WD
+
+END

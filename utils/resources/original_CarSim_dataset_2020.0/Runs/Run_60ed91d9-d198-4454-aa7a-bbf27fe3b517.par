@@ -1,0 +1,98 @@
+PARSFILE
+#FullDataName CarSim Run Control`Yaw Control Diff., DLC w/ Low Mu`Simulink and LabVIEW Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_60ed91d9-d198-4454-aa7a-bbf27fe3b517
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_74255a1d-5a44-4537-93d1-6b0a78ea3a2a.par
+#BlueLink12 Models: Simulink`Yaw Control Diff. (Detailed) 2WD` External Powertrain` , Models`Simlink_74255a1d-5a44-4537-93d1-6b0a78ea3a2a
+
+PARSFILE Animator\Cameras\Camera_6ee7b251-3362-4e47-80d3-90ca59581138.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 3 El, 36 m` Vehicle Reference` , Animator camera`Camera_6ee7b251-3362-4e47-80d3-90ca59581138
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 1 0.8 0.012
+SET_RUN_COLOR 1 0.8 0.012
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_04ffd8c8-5f6c-42ee-a946-d3878d63fbb4.par
+#BlueLink2 Vehicle: Assembly`B-Class, Sports Car: Yaw Ctrl. Diff.` B-Class` , Math Model`Vehicle_04ffd8c8-5f6c-42ee-a946-d3878d63fbb4
+
+PARSFILE Procedures\Proc_6d512924-f6a9-45e1-af10-e839d3980fe9.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Low Mu Surface)` Handling Testing` , Procedure`Proc_6d512924-f6a9-45e1-af10-e839d3980fe9
+
+PARSFILE Plot\Setup\Plot_b3ef8646-beef-4024-9925-3f874e91a76b.par
+#BlueLink15 Plot: Setup`Wheel Speeds` Braking` , Plot`Plot_b3ef8646-beef-4024-9925-3f874e91a76b
+
+PARSFILE Plot\Setup\Plot_51f9bbfe-c7e4-425e-9156-de4094d7603e.par
+#BlueLink16 Plot: Setup`Differential Clutch Control Input` Controls: Chassis and Powertrain` , Plot`Plot_51f9bbfe-c7e4-425e-9156-de4094d7603e
+
+PARSFILE Plot\Setup\Plot_ebd10267-16af-4ebb-a594-212aefca291e.par
+#BlueLink17 Plot: Setup`Differential Clutch Torque` Powertrain` , Plot`Plot_ebd10267-16af-4ebb-a594-212aefca291e
+
+PARSFILE Plot\Setup\Plot_8077fc50-941c-45ed-a470-23f6069121a5.par
+#BlueLink18 Plot: Setup`Wheel Drive Torques` Powertrain` , Plot`Plot_8077fc50-941c-45ed-a470-23f6069121a5
+
+
+SPECIAL_PARSFILE Runs\Run_2856146d-b1be-47b8-ac08-6ebab3ca95c3.par
+#BlueLink23 CarSim Run Control`Double Lane Change, Low Mu` Handling and Stability Tests` , Overlay run or ERD file`Run_2856146d-b1be-47b8-ac08-6ebab3ca95c3
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_4986d2bf-e6a5-4076-b5cc-94a288fa5a6d.png
+WRITE_SENSOR_DETECT
+Title Yaw Control Diff., DLC w/ Low Mu <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Yaw Control Diff., DLC w/ Low Mu
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#In 2019.1, Differential 3 reference was removed from this example since it uses RWD. If the vehicle has a 4WD powetrain, Models: Simulink > External Powertrain > Yaw Control Diff. (Detailed) can be selected.
+#
+#This example demonstrates a Simulink-controlled yaw control differential. (Libraries > Models > Models: Simulink)
+#
+#Browse to the Vehicle: Assembly screen and click on the powertrain blue link to see the settings for the externally controlled yaw control differential.
+#
+#Click on the blue link "Yaw Control Diff. (Detailed)" to see how the Simulink model is connected to CarSim, and how to define the import and export variables that allow CarSim and Simulink to communicate.
+#
+#You can choose whether to Add, Replace, or Mulitply certain Simulink imported variables to their corresponding variables in CarSim.
+#
+#This example is overlaid with an equivalent B-Class Sports Car that does not have a Simulink-controlled yaw control differential.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Yaw Control Diff., DLC w/ Low Mu
+#Library : CarSim Run Control
+#DataSet : Yaw Control Diff., DLC w/ Low Mu
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_60ed91d9-d198-4454-aa7a-bbf27fe3b517
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

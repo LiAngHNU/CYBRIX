@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`Stop Condition: Record Exactly 1 Lap`Recording a Lap
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl1 >=
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 SV_N_START_CROSS
+*NAME2 SV_N_START_CROSS
+*VALUE1 1
+*VALUE2 2
+#MiscYellow0
+opt_write = 0
+#ENDMYellow
+
+MAKE_EVENT SV_N_START_CROSS >= 1 ; Events\Events_885e39b0-6bdc-484f-803a-eab5448b1537.par
+#BlueLink0 Events`Record Start Time, Write to File` Recording a Lap` , Events`Events_885e39b0-6bdc-484f-803a-eab5448b1537
+
+MAKE_EVENT SV_N_START_CROSS >= 2 ; Events\Events_674bbf86-833a-4670-8e5b-545e50e0e14e.par
+#BlueLink1 Events`Record Lap Time, End Events` Recording a Lap` , Events`Events_674bbf86-833a-4670-8e5b-545e50e0e14e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset sets up run that covers exactly one lap around a looped driver path. The run should start before the last turn before the start line (e.g., 200 m back) so the speed preview will cross the start line at the right speed (after having accelerated out of the last turn).
+#
+#Writing to file, specified with the parameter OPT_WRITE, is initially off.
+#
+#Two pending events are defined using the state variable SV_N_START_CROSS. The variable starts with a value of zero and is incremented each time the vehicle crosses the starting point of the looped driver path. The first time, writing to file is activated. The second time, the run is stopped.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Recording a Lap } Stop Condition: Record Exactly 1 Lap
+#Library : Events
+#DataSet : Stop Condition: Record Exactly 1 Lap
+#Category: Recording a Lap
+#FileID  : Events_a81087d1-a61e-4368-b969-d92ee798f876
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

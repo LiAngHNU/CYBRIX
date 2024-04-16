@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`M/C & Line Pressures (Axles 3-4)`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Pbk_Con, Time
+PLOTCHANNELS PbkL_L3, Time
+PLOTCHANNELS PbkL_R3, Time
+PLOTCHANNELS PbkL_L4, Time
+PLOTCHANNELS PbkL_R4, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE M/C & Line Pressures (Axles 3-4)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } M/C & Line Pressures (Axles 3-4)
+#Library : Plot: Setup
+#DataSet : M/C & Line Pressures (Axles 3-4)
+#Category: Braking
+#FileID  : Plot_6978b571-f1ab-4318-823c-3d2c9ee5e8cc
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

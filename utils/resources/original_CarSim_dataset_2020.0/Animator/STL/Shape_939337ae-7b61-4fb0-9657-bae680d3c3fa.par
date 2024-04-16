@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Blurred Tire: Truck`Common Vehicle Assets: Tires
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\Blurred_Single_Truck\blurred_tire.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+*SPECULAR 0.2
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Small Objects` Shape Preview` , Video Camera`Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Blurred Tire: Truck
+#Library : Animator: Shape File Link
+#DataSet : Blurred Tire: Truck
+#Category: Common Vehicle Assets: Tires
+#FileID  : Shape_939337ae-7b61-4fb0-9657-bae680d3c3fa
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Fx vs. toe - Rear`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output toe_l2 = -1*steer_l2; units = deg;
+define_output toe_r2 = steer_r2; units = deg;
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS toe_L2, Fx_L2
+PLOTCHANNELS toe_R2, Fx_R2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fx vs. toe - Rear
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Fx vs. toe - Rear
+#Library : Plot: Setup
+#DataSet : Fx vs. toe - Rear
+#Category: Suspension Motion
+#FileID  : Plot_444d4f38-b95c-44a3-be47-87acb852f97b
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

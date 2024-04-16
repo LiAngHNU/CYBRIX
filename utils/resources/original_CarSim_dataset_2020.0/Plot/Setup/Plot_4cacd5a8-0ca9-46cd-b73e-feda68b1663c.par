@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Tire Fy`Three-wheeled Vehicle
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output fy_1 = fy_l1 + fy_r1;
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS Fy_1, Time, Single Front lateral
+PLOTCHANNELS Fy_L2, Time
+PLOTCHANNELS Fy_R2, Time
+
+#ENDMYellow
+
+YAXISLABEL Tire Lateral Force - N
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Tire Fy
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This plot format includes plots created with VS Commands for the single front wheel of a three-wheeled vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Three-wheeled Vehicle } Tire Fy
+#Library : Plot: Setup
+#DataSet : Tire Fy
+#Category: Three-wheeled Vehicle
+#FileID  : Plot_4cacd5a8-0ca9-46cd-b73e-feda68b1663c
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

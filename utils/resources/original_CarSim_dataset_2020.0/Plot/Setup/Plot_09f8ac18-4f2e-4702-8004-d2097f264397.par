@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed -- S1, S2 (2 Objects)`Object Sensors
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink1 ` , Discontinued` , Discontinued` , Discontinued`
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS SpdS1_1, Time, Detected speed
+PLOTCHANNELS SpdS1_2, Time, Detected speed
+PLOTCHANNELS SpdS2_1, Time, Detected speed
+PLOTCHANNELS SpdS2_2, Time, Detected speed
+PLOTCHANNELS Vx, time, Vehicle speed
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed -- S1, S2 (2 Objects)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Object Sensors } Speed -- S1, S2 (2 Objects)
+#Library : Plot: Setup
+#DataSet : Speed -- S1, S2 (2 Objects)
+#Category: Object Sensors
+#FileID  : Plot_09f8ac18-4f2e-4702-8004-d2097f264397
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

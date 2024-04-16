@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Control: Braking MC Pressure (Open Loop)`Stop while pedestrian crosses`Low Speed Maneuvers
+#CheckBox0 0    
+
+#RingCtrl0 STEP
+#RadioCtrl0 0    
+
+#DiagramOne0
+PBK_CON_TABLE STEP
+10, 0
+12, 3
+22, 0
+ENDTABLE
+VLOW_STOP -1
+
+
+#EMBEDDED_NOTES
+#Brake application of 3 MPa for a duration of 10 seconds.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Braking MC Pressure (Open Loop); { Low Speed Maneuvers } Stop while pedestrian crosses
+#Library : Control: Braking MC Pressure (Open Loop)
+#DataSet : Stop while pedestrian crosses
+#Category: Low Speed Maneuvers
+#FileID  : PbkCon_68777c88-3931-4e92-9ce1-871d8f22150a
+#Product : CarSim 2020.0
+#VehCode Brake Control
+
+END

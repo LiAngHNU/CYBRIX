@@ -1,0 +1,120 @@
+PARSFILE
+#FullDataName Brakes: Four-Wheel System`(Sdn): P Frc, Boost, No ABS, Therm`E-Class
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl4 3
+#RingCtrl6 1
+#RingCtrl8 1
+#RingCtrl10 2
+#RingCtrl12 2
+#RingCtrl14 2
+OPT_BK_PEDAL 2
+TL_L1 0
+TL_L2 0
+R_BK_PEDAL 4.1
+D_MC 25
+PARSFILE Brakes\BOOST\BrkBst_c0983ab9-7c09-475b-b1de-6f08ddcd576c.par
+#BlueLink16 Brakes: Booster Force`Piecewise Linear, 5.56 Gain` ` , Boost`BrkBst_c0983ab9-7c09-475b-b1de-6f08ddcd576c
+
+TC_BK_APP 0.16
+TC_BK_REL 0.07
+
+iaxle 1
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+PARSFILE Brakes\PV_CAL\PvCal_f517e499-5313-488a-98b5-b9e19c24ae10.par
+#BlueLink8 Brakes: Caliper Pressure vs Volume`E-Class, Sedan: Front` ` , Volume`PvCal_f517e499-5313-488a-98b5-b9e19c24ae10
+
+PARSFILE Brakes\Caliper\BrkCal_67a913bd-e8da-4926-b645-3f5be7ea0c97.par
+#BlueLink12 Brakes: Caliper and Rotor Properties`E-Class, Sedan: Front` ` , Torque`BrkCal_67a913bd-e8da-4926-b645-3f5be7ea0c97
+
+*SV_TROT_L1 85
+SV_TROT_<<side>><<ax_bk>> 85
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+PARSFILE Brakes\PV_CAL\PvCal_f517e499-5313-488a-98b5-b9e19c24ae10.par
+#BlueLink8 Brakes: Caliper Pressure vs Volume`E-Class, Sedan: Front` ` , Volume`PvCal_f517e499-5313-488a-98b5-b9e19c24ae10
+
+PARSFILE Brakes\Caliper\BrkCal_67a913bd-e8da-4926-b645-3f5be7ea0c97.par
+#BlueLink12 Brakes: Caliper and Rotor Properties`E-Class, Sedan: Front` ` , Torque`BrkCal_67a913bd-e8da-4926-b645-3f5be7ea0c97
+
+*SV_TROT_L1 85
+SV_TROT_<<side>><<ax_bk>> 85
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+
+iaxle 2
+iside 1
+symbol_add <<ax_bk>> 1
+symbol_set <<side>> L
+TLAG_BK 0
+*P_L2 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+PARSFILE Brakes\PV_CAL\PvCal_9b537d05-e57d-4c05-bc3f-b108f5ec8a57.par
+#BlueLink10 Brakes: Caliper Pressure vs Volume`E-Class, Sedan: Rear` ` , Volume`PvCal_9b537d05-e57d-4c05-bc3f-b108f5ec8a57
+
+PARSFILE Brakes\Caliper\BrkCal_5a88da54-42a5-465d-9379-c1d873c0046b.par
+#BlueLink14 Brakes: Caliper and Rotor Properties`E-Class, Sedan: Rear` ` , Torque`BrkCal_5a88da54-42a5-465d-9379-c1d873c0046b
+
+*SV_TROT_L2 85
+SV_TROT_<<side>><<ax_bk>> 85
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+
+OPT_ABS_CTRL 0
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+*P_L2 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+PARSFILE Brakes\PV_CAL\PvCal_9b537d05-e57d-4c05-bc3f-b108f5ec8a57.par
+#BlueLink10 Brakes: Caliper Pressure vs Volume`E-Class, Sedan: Rear` ` , Volume`PvCal_9b537d05-e57d-4c05-bc3f-b108f5ec8a57
+
+PARSFILE Brakes\Caliper\BrkCal_5a88da54-42a5-465d-9379-c1d873c0046b.par
+#BlueLink14 Brakes: Caliper and Rotor Properties`E-Class, Sedan: Rear` ` , Torque`BrkCal_5a88da54-42a5-465d-9379-c1d873c0046b
+
+*SV_TROT_L2 85
+SV_TROT_<<side>><<ax_bk>> 85
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+T_AIR 20
+
+#EMBEDDED_NOTES
+#This example is an update for a brake system used in past versions (prior to 2017) for an E-Class sedan.
+#
+#This example uses pedal-force input with power boost, and includes thermal effects. The temperature sensitivity allows the user to study the effects of brake rotor temperature throughout a braking maneuver, and adverse effects such as brake fade may be studied.
+#
+# ABS control is provided with an external model (Simulink). Therefore, the built-in ABS control is disabled.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Four-Wheel System; { E-Class } (Sdn): P Frc, Boost, No ABS, Therm
+#Library : Brakes: Four-Wheel System
+#DataSet : (Sdn): P Frc, Boost, No ABS, Therm
+#Category: E-Class
+#FileID  : Brk4W_3df5b851-7934-4005-8c3c-c2806bd9852b
+#Product : CarSim 2020.0
+#VehCode 4-Wheel System
+
+END

@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Plot: Setup`Outrigger Fz`User-Defined Variables
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink2 CarSim Run Control`Outrigger for Roll Stability Testing` Extended Models` , example run`Run_756d0204-ba6a-45dc-8a4d-3cabfb558523
+
+#CheckBox1 0    
+
+*README_FILE Results\Run_756d0204-ba6a-45dc-8a4d-3cabfb558523\Run_out_tab.txt
+
+#MiscYellow0
+PLOTCHANNELS Fz_RP1, Time, L1 Outrigger
+PLOTCHANNELS Fz_RP2, Time, R1 Outrigger
+PLOTCHANNELS Fz_RP3, Time, L2 Outrigger
+PLOTCHANNELS Fz_RP4, Time, R2 Outrigger
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl6 0
+#RingCtrl8 1
+
+
+PTITLE Outrigger Fz
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset is intended to show vertical forces defined for an outrigger model. Notice that the labels are specified for each dataset to customize the plot.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Outrigger Fz
+#Library : Plot: Setup
+#DataSet : Outrigger Fz
+#Category: User-Defined Variables
+#FileID  : Plot_a0f8adef-d576-468e-a961-46c4a7c14431
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

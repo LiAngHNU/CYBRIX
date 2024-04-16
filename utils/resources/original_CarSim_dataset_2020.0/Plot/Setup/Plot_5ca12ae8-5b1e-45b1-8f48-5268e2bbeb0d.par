@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Fy vs. Gamma`Tire Tester
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Fy_L1, Gamma_L1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fy vs. Gamma
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This dataset defines a plot setup for variables that were created in external.c for a Custom C code example that simulates a tire test. You can plot these variables only from tire tester examples.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Tester } Fy vs. Gamma
+#Library : Plot: Setup
+#DataSet : Fy vs. Gamma
+#Category: Tire Tester
+#FileID  : Plot_5ca12ae8-5b1e-45b1-8f48-5268e2bbeb0d
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

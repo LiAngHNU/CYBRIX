@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName CarSim Run Control`MF-Tyre/MF-Swift v2020.1: DLC`* More Examples (Extra License Options)
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_34a895a4-f3af-4f65-8a43-54ebcf35d48b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 37 m` Vehicle Reference` , Animator camera`Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 12
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0 0.6 1
+SET_RUN_COLOR 0 0.6 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_32408f86-03a2-43c0-95e0-a912489517a4.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hbk: MF-Tyre/Swift v2020.1` External Tire Models` , Math Model`Vehicle_32408f86-03a2-43c0-95e0-a912489517a4
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink15 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.png
+WRITE_SENSOR_DETECT
+Title MF-Tyre/MF-Swift v2020.1: DLC <* More Examples (Extra License Options)>
+CATEGORY * More Examples (Extra License Options) 
+DATASET_TITLE MF-Tyre/MF-Swift v2020.1: DLC
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with the MF-Tyre/MF-Swift v2020.1 tire model performs a double lane change maneuver at 120 km/h.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * More Examples (Extra License Options) } MF-Tyre/MF-Swift v2020.1: DLC
+#Library : CarSim Run Control
+#DataSet : MF-Tyre/MF-Swift v2020.1: DLC
+#Category: * More Examples (Extra License Options)
+#FileID  : Run_34a895a4-f3af-4f65-8a43-54ebcf35d48b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

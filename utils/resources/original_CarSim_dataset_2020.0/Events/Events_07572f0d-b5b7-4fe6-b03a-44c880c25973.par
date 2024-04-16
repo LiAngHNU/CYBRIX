@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Events`F. Reverse Steer`Fishhook with Roll Rate Feedback
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 T_STAMP
+*NAME2 FZ_L
+*NAME3 FZ_R
+*VALUE1 TSTART_STEER + 3 + ABS(STEER_SW_GAIN/720)
+*VALUE2 .1
+*VALUE3 .1
+*SPEED 80
+#MiscYellow0
+STEER_SW_GAIN = -2*STEER_SW_GAIN
+TSCALE_STEER = ABS(2*TSCALE_STEER)
+STEER_SW_OFFSET = STEER_SW
+TSTART_STEER = T
+#ENDMYellow
+
+MAKE_EVENT T_STAMP > TSTART_STEER + 3 + ABS(STEER_SW_GAIN/720) ; Events\Events_b73f53f2-3ede-4689-acea-c3c269721e6c.par
+#BlueLink0 Events`G. Check for Reversing Steer Direction` Fishhook with Roll Rate Feedback` , Events`Events_b73f53f2-3ede-4689-acea-c3c269721e6c
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset applies the reverse steer. The simple waveform is not changed; instead, paramters related to the waveform are modified.
+#
+#The offset is set to the current steering wheel angle for continuity. The gain is doubled with a sign change, to reverse the direction and go to the same amplitude with the opposite sign. The gain is also doubled for the time sclae, to maintain the same velocity (720 deg/s).
+#
+#The steering start time for the ramp is set to the current time. However, the time offset used for the variable T_EVENT is not adjusted, to provide continuity in plots.
+#
+#The time to run is 3 sec after the ramp reaches its final value. At 720 deg/s, that is ABS(STEER_SW_GAIN/720)
+#
+#If this time is reached without the tires lifting off, the vehicle has succeeded with this test speed. The next dataset (G) determines whether the run is done, or whether the steering needs to be tested in the opposite direction.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Fishhook with Roll Rate Feedback } F. Reverse Steer
+#Library : Events
+#DataSet : F. Reverse Steer
+#Category: Fishhook with Roll Rate Feedback
+#FileID  : Events_07572f0d-b5b7-4fe6-b03a-44c880c25973
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Plot: Setup`Mag for Closest 15 Objects, Last Sensor`ADAS Sensor Detections
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#BlueLink2 CarSim Run Control`Lane Departure Warning, Divided` ADAS and Active Safety` , example run`Run_7c580df9-920f-4799-9744-159b06a9dac2
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS MagS<<s>>_1, Time
+PLOTCHANNELS MagS<<s>>_2, Time
+PLOTCHANNELS MagS<<s>>_3, Time
+PLOTCHANNELS MagS<<s>>_4, Time
+PLOTCHANNELS MagS<<s>>_5, Time
+PLOTCHANNELS MagS<<s>>_6, Time
+PLOTCHANNELS MagS<<s>>_7, Time
+PLOTCHANNELS MagS<<s>>_8, Time
+PLOTCHANNELS MagS<<s>>_9, Time
+PLOTCHANNELS MagS<<s>>_10, Time
+PLOTCHANNELS MagS<<s>>_11, Time
+PLOTCHANNELS MagS<<s>>_12, Time
+PLOTCHANNELS MagS<<s>>_13, Time
+PLOTCHANNELS MagS<<s>>_14, Time
+PLOTCHANNELS MagS<<s>>_15, Time
+
+#ENDMYellow
+
+YAXISLABEL Detection Magnitude
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Mag for Closest 15 Objects, Last Sensor
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections } Mag for Closest 15 Objects, Last Sensor
+#Library : Plot: Setup
+#DataSet : Mag for Closest 15 Objects, Last Sensor
+#Category: ADAS Sensor Detections
+#FileID  : Plot_cc8dbd2f-410e-4f66-86db-dfd240a451a4
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Generic Data Group`Tractor semitrailer making right turn`ADAS: Traffic for ACC & FCW
+#VehCode Generic Group
+
+
+#MiscYellow2
+Path_Id_Dm = 1 ! first path of 2
+#ENDMYellow
+
+
+PARSFILE Control\Speed_t\SpdTime_be2b7901-03fe-441f-b82c-59c2aba71997.par
+#BlueLink3 Control: Speed (Closed Loop) Using Target Speed`Rural Intersection Turn Right (Truck)` Speed vs Station` , Link 4`SpdTime_be2b7901-03fe-441f-b82c-59c2aba71997
+
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_deff42e5-1e78-405f-b14b-74afc9390a53.par
+#BlueLink4 Multiple Moving Objects`Tractor Semitrailer S_SS + SS` Traffic Vehicles (Forward)` , Link 5`TMotion_deff42e5-1e78-405f-b14b-74afc9390a53
+
+
+#MiscYellow5
+define_parameter vx_ref = 80 ; km/h
+IPATH = 2
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_27649648-f45f-4483-91d1-0e47092ed021.par
+#BlueLink5 Multiple Moving Objects`4 Vehicles, Vx_Ref` Traffic Vehicles (Forward)` , Link 6`TMotion_27649648-f45f-4483-91d1-0e47092ed021
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset links to two targets that mimic a tractor semitrailer combination. A target speed is used that is less aggressive than the target speed used by the ego vehicle. It was taken from another simulation involving the same intersections.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { ADAS: Traffic for ACC & FCW } Tractor semitrailer making right turn
+#Library : Generic Data Group
+#DataSet : Tractor semitrailer making right turn
+#Category: ADAS: Traffic for ACC & FCW
+#FileID  : GenGrp_40497b31-5381-4727-9df1-fe680aba4454
+#Product : CarSim 2020.0
+#VehCode Generic Group
+
+END

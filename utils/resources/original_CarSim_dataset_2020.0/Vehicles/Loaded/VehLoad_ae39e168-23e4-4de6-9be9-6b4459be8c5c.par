@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Vehicle with Loads, Sensors, Trailer, etc.`E-Class, Sedan w/ 5 Motion Sensors`E-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+PARSFILE Vehicles\Assembly\Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f.par
+#BlueLink0 Vehicle: Assembly`E-Class, Sedan` E-Class` , Lead Unit`Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f
+
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+PARSFILE Output\Sensors\MoSen_934770e5-cb1c-4e98-a975-b347bcd2b2ae.par
+#BlueLink5 Positions, Velocities, and Accelerations`Accelerometers at SM and USM CGs` SM and USM CGs` , Miscellaneous`MoSen_934770e5-cb1c-4e98-a975-b347bcd2b2ae
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+
+#EMBEDDED_NOTES
+#E-Class Sedan with five acceleration and rate sensors.
+#
+#The acceleration and rate sensors simulate the accelerometers and rate sensors you would instrument a test vehicle with.
+#
+#The Acceleration and Rate Sensors can be placed on the Sprung Mass, Solid Axle, Knuckle (non-spinning unsprung mass), and Engine body (if using the Engine Mount option).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle with Loads, Sensors, Trailer, etc.; { E-Class } E-Class, Sedan w/ 5 Motion Sensors
+#Library : Vehicle with Loads, Sensors, Trailer, etc.
+#DataSet : E-Class, Sedan w/ 5 Motion Sensors
+#Category: E-Class
+#FileID  : VehLoad_ae39e168-23e4-4de6-9be9-6b4459be8c5c
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

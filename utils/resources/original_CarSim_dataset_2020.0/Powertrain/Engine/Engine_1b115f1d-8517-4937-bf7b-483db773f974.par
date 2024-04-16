@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Powertrain: Engine`150 kW Engine-Off Motoring Torque`150 kW Engines
+#RingCtrl0 CARPET
+#CheckBox0 0    
+OPT_THROTTLE_DELAY 0
+
+*3D_XLabel Throttle (-)
+*3D_YLabel Engine speed (rpm)
+*3D_ZLabel Engine torque (N-m)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+MENGINE_CARPET 2D_LINEAR
+0, 0, 1
+0, 0, 0
+6700, -100, -200
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+AV_ENG_IDLE 0
+IENG 0.2
+
+#EMBEDDED_NOTES
+#This dataset represents the ignition-off motoring torque of an engine, used for simulations that include the engine on/off state being changed.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Engine; { 150 kW Engines } 150 kW Engine-Off Motoring Torque
+#Library : Powertrain: Engine
+#DataSet : 150 kW Engine-Off Motoring Torque
+#Category: 150 kW Engines
+#FileID  : Engine_1b115f1d-8517-4937-bf7b-483db773f974
+#Product : CarSim 2020.0
+#VehCode 2D Table 
+
+END

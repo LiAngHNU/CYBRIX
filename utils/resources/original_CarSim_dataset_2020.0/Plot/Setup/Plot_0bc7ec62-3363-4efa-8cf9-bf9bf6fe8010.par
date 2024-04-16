@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Plot: Setup`Slip Angles: Instant (dual tires - outer)`Tire Kinematics
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AlphaL1o, Time
+PLOTCHANNELS AlphaR1o, Time
+PLOTCHANNELS AlphaL2o, Time
+PLOTCHANNELS AlphaR2o, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Slip Angles: Instant (dual tires - outer)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tire Kinematics } Slip Angles: Instant (dual tires - outer)
+#Library : Plot: Setup
+#DataSet : Slip Angles: Instant (dual tires - outer)
+#Category: Tire Kinematics
+#FileID  : Plot_0bc7ec62-3363-4efa-8cf9-bf9bf6fe8010
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

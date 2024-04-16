@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName CarSim Run Control`Hybrid: OL, Reverse`Powertrain Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_bc9eec2f-daa4-4457-8222-71a300b7184f
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_d3f07569-3661-4ae1-9e3f-6da1342040eb.par
+#BlueLink2 Vehicle: Assembly`B-Class, Hbk: Hybrid RWD, Regen. Brk.` B-Class` , Math Model`Vehicle_d3f07569-3661-4ae1-9e3f-6da1342040eb
+
+PARSFILE Procedures\Proc_c1b78b5d-a742-47ba-9a85-76e595953a49.par
+#BlueLink28 Procedures`Reverse: Ramp to 0.1 Throttle` Accel. and Brake Testing` , Procedure`Proc_c1b78b5d-a742-47ba-9a85-76e595953a49
+
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_744dc54f-cca9-4d31-8bee-3535b6477b13.png
+WRITE_SENSOR_DETECT
+Title Hybrid: OL, Reverse <Powertrain Tests>
+CATEGORY Powertrain Tests 
+DATASET_TITLE Hybrid: OL, Reverse
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A B-Class Hatchback with a hybrid powertrain is modeled within CarSim (GUI and math model).
+#
+#CarSim support for hybrid powertrains include an engine, hybrid powertrain assembly, and power management control.
+#
+#The Procedure is a Open-Loop Reverse Controls for a gentle throttle input.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Powertrain Tests } Hybrid: OL, Reverse
+#Library : CarSim Run Control
+#DataSet : Hybrid: OL, Reverse
+#Category: Powertrain Tests
+#FileID  : Run_bc9eec2f-daa4-4457-8222-71a300b7184f
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

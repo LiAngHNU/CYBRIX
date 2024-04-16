@@ -1,0 +1,87 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`Three-wheeled Vehicle`Utility Vehicles: SUVs and Vans
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 2
+OBJ_X_LENGTH 2025
+OBJ_Y_LENGTH 1438
+OBJ_Z_LENGTH 1397
+*DZ_V 0
+*LAT_WC 0.000001
+*LAT_WC_2 1050
+*HWC 258
+*WHEEL_RATIO 0.9
+*LAXLE_1 0
+*LAXLE_2 2025
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_20e27b7c-d1a2-442f-817e-d4e7a1c0989d.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 0.9
+SET_SCALE_Y 0.9
+SET_SCALE_Z 0.9
+SET_OFFSET_X 0
+SET_OFFSET_Y 5e-10
+SET_OFFSET_Z 0.2451
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 0.9
+SET_SCALE_Y 0.9
+SET_SCALE_Z 0.9
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -5e-10
+SET_OFFSET_Z 0.2451
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 0.9
+SET_SCALE_Y 0.9
+SET_SCALE_Z 0.9
+SET_OFFSET_X -2.025
+SET_OFFSET_Y 0.525
+SET_OFFSET_Z 0.2451
+TIRE_ANI_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+SET_SCALE_X 0.9
+SET_SCALE_Y 0.9
+SET_SCALE_Z 0.9
+SET_ANGLE_X 180
+SET_OFFSET_X -2.025
+SET_OFFSET_Y -0.525
+SET_OFFSET_Z 0.2451
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_fb26f1c2-a86b-433d-bcdd-6c55ccd0ae98.par
+#BlueLink1 Animator: Shape Assembly`Three-wheeled Vehicle` Utility Vehicles` , Vehicle Body`ShpGrp_fb26f1c2-a86b-433d-bcdd-6c55ccd0ae98
+
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_a42c3474-8a83-4edf-b890-a781be4fbdd4
+
+EXPORT_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+#BlueLink8 Animator: Shape File Link`Blurred Tire: Car - Width 175 mm` Common Vehicle Assets: Tires` , Tire for axle 1 of traffic vehicle`Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Utility Vehicles: SUVs and Vans } Three-wheeled Vehicle
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : Three-wheeled Vehicle
+#Category: Utility Vehicles: SUVs and Vans
+#FileID  : AniVeh_20e27b7c-d1a2-442f-817e-d4e7a1c0989d
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

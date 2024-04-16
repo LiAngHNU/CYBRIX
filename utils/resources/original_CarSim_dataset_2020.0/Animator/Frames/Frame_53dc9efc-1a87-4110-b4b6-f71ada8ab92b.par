@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Motion Sensor 1: SM Origin`Animated Trace Lines
+ADD_REFERENCE_FRAME Frame_53dc9efc-1a87-4110-b4b6-f71ada8ab92b
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_S1
+SET_Y_NAME Y_S1
+SET_Z_NAME Z_S1
+SET_ROLL_NAME roll_e
+SET_PITCH_NAME pitch
+SET_YAW_NAME yaw
+
+PARSFILE Animator\STL\Shape_cd4c2f54-ebbc-4ea8-9275-94565481cfc5.par
+#BlueLink0 Animator: Shape File Link`Sphere: 0.1m Radius (Purple)` Geometric Shapes` , Animator Data`Shape_cd4c2f54-ebbc-4ea8-9275-94565481cfc5
+
+WRT_X_S1
+ANI_X_S1
+WRT_Y_S1
+ANI_Y_S1
+WRT_Z_S1
+ANI_Z_S1
+WRT_roll_e
+ANI_roll_e
+WRT_pitch
+ANI_pitch
+WRT_yaw
+ANI_yaw
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Animated Trace Lines } Motion Sensor 1: SM Origin
+#Library : Animator: Reference Frame
+#DataSet : Motion Sensor 1: SM Origin
+#Category: Animated Trace Lines
+#FileID  : Frame_53dc9efc-1a87-4110-b4b6-f71ada8ab92b
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

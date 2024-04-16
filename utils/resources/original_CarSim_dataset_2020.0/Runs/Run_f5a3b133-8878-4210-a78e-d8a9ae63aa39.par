@@ -1,0 +1,76 @@
+PARSFILE
+#FullDataName CarSim Run Control`Extended Tires: Sine Steer`Tire Models
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_f5a3b133-8878-4210-a78e-d8a9ae63aa39
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 37 m` Vehicle Reference` , Animator camera`Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_01493be6-8afe-4546-aee6-dd13b73d7f58.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan: (Ext. Tires: Symmetric)` E-Class` , Math Model`Vehicle_01493be6-8afe-4546-aee6-dd13b73d7f58
+
+PARSFILE Procedures\Proc_0ec91195-b0c3-43a4-b9b3-bfd6dd7b928b.par
+#BlueLink28 Procedures`Sine Wave Steer Input` Driver Controls` , Procedure`Proc_0ec91195-b0c3-43a4-b9b3-bfd6dd7b928b
+
+
+SPECIAL_PARSFILE Runs\Run_3130db69-636d-48c3-b3b2-434d2e462e83.par
+#BlueLink23 CarSim Run Control`MF-Tyre, Sym.: Sine Steer` Tire Models` , Overlay run or ERD file`Run_3130db69-636d-48c3-b3b2-434d2e462e83
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Extended Tires: Sine Steer <Tire Models>
+CATEGORY Tire Models 
+DATASET_TITLE Extended Tires: Sine Steer
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class Sedan using the CarSim internal camber extension tire model with symmetric tire data performs a Sine Wave Steer Input test.
+#
+#It is overlaid with the simulation:
+#MF-Tyre, Sym.: Sine Steer
+#
+#The MF-Tyre (Symmetric) dataset and the CarSim camber extension tire model are based on different tire models, although they share the same tire characteristics.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Tire Models } Extended Tires: Sine Steer
+#Library : CarSim Run Control
+#DataSet : Extended Tires: Sine Steer
+#Category: Tire Models
+#FileID  : Run_f5a3b133-8878-4210-a78e-d8a9ae63aa39
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

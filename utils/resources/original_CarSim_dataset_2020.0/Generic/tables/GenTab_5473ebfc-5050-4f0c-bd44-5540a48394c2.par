@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Generic Table`Controller Gains: KI`Speed Controller: Accel Limits
+#RingCtrl0 LINEAR_FLAT
+#CheckBox0 0    
+
+#DiagramOne0
+Ki_Vx_Tab_TABLE LINEAR_FLAT
+-10, 0.1
+-2.5, 0
+0, 0
+4.5, 0
+10, 0.75
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD Ki_Vx_Tab
+*X_LABEL vx_err
+*Y_LABEL Ki_Vx
+*SCALAR 0.5
+
+
+#EMBEDDED_NOTES
+#The path preview option in the speed controller allows the limits for acceleration to be functions of station and speed. This example defines controller gain KI.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { Speed Controller: Accel Limits } Controller Gains: KI
+#Library : Generic Table
+#DataSet : Controller Gains: KI
+#Category: Speed Controller: Accel Limits
+#FileID  : GenTab_5473ebfc-5050-4f0c-bd44-5540a48394c2
+#Product : CarSim 2020.0
+#VehCode table
+
+END

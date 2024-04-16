@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Generic Group of Links`Pedestrians, City Intersection`ADAS: Moving Objects, incl. Pedestrians
+#VehCode Pedestrians
+PARSFILE Sensors_Traffic\Targets\Target_b4cac29a-08cb-4e65-97c0-f488e05834db.par
+#BlueLink2 Single Moving Object (Custom)`Woman: City Environment` Pedestrians and Bicyclists` , Miscellaneous`Target_b4cac29a-08cb-4e65-97c0-f488e05834db
+
+#MiscYellow0
+symbol_push <<sstart>> 100
+symbol_push <<path>> 1
+symbol_push  <<road>> 1
+symbol_push <<ltarg>> -141
+symbol_push <<speed>> 6
+symbol_push <<heading>> 0
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_b4ab117e-1a75-4811-999b-7f0379072012.par
+#BlueLink11 Multiple Moving Objects`Bicyclist, Symbolic, Will Lean in Turn` Pedestrians and Bicyclists` , Miscellaneous`TMotion_b4ab117e-1a75-4811-999b-7f0379072012
+
+#MiscYellow1
+symbol_set <<sstart>> 110
+symbol_set <<path>> 3
+symbol_set  <<road>> 1
+symbol_set <<ltarg>> -1.4
+symbol_set <<speed>> 5
+symbol_set <<heading>> 0
+#ENDMYellow
+
+PARSFILE Sensors_Traffic\Traffic\TMotion_d3947bf6-49ca-4d65-a506-47ffa49e33b3.par
+#BlueLink12 Multiple Moving Objects`Bicyclist, Symbolic, No Lean` Pedestrians and Bicyclists` , Miscellaneous`TMotion_d3947bf6-49ca-4d65-a506-47ffa49e33b3
+
+#MiscYellow2
+! Make the original path the current path
+PATH_ID_DM = 1
+! Make the original road the current road
+CURRENT_ROAD_ID = 1
+#ENDMYellow
+
+*MODELCODE Pedestrians
+
+#EMBEDDED_NOTES
+#This dataset adds a pedestrian crossing and two bicyclists.
+#
+#The bicyclists datasets are reusable, but require symbols <<path>>, <<road>>, <<ltarg>>, <<sstart>>.  <<speed>>, and <<heading>> to be set before the links are read.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Moving Objects, incl. Pedestrians } Pedestrians, City Intersection
+#Library : Generic Group of Links
+#DataSet : Pedestrians, City Intersection
+#Category: ADAS: Moving Objects, incl. Pedestrians
+#FileID  : GenLink_f6b109f9-1c56-474a-972d-63de630e3787
+#Product : CarSim 2020.0
+#VehCode Pedestrians
+
+END

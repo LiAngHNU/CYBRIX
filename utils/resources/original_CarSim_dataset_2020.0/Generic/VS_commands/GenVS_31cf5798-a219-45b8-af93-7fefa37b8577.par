@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Generic VS Commands`ACC with HUD`ADAS Support
+#VehCode ACC with HUD Icon
+
+#MiscYellow0
+define_parameter speed_limit = 80; km/h ; Top speed limit for ACC
+DEFINE_OUTPUT vel_lead = SpdS<<s>>_1 + vx; km/h
+define_output Distance_ACC = vel_lead * time_gap ; m ; Target following distance for ACC
+
+! the following equations use speed_target for dataset #1, which must match the driver model
+EQ_INIT speed_limit = speed_target(station,t,1);
+EQ_OUT SPEED_TARGET_CONSTANT(1) = IF(MagS<<s>>_1 > 0, ...
+    MIN(speed_limit, vx + SpdS<<s>>_1*Distance_ACC/DisS<<s>>_1), ...
+    speed_limit)
+#ENDMYellow
+
+*MODELCODE ACC with HUD Icon
+PARSFILE Animator\HUD\HUD_a0c3575d-f20c-42e5-aa40-6481e560d0ec.par
+#BlueLink0 Animator: HUD`ACC Icon` ACC - Adaptive Cruise Control` , Miscellaneous`HUD_a0c3575d-f20c-42e5-aa40-6481e560d0ec
+
+PARSFILE Animator\HUD\HUD_88e83efe-5195-45f8-8d81-c334c2df8106.par
+#BlueLink1 Animator: HUD`ACC Bars` ACC - Adaptive Cruise Control` , Miscellaneous`HUD_88e83efe-5195-45f8-8d81-c334c2df8106
+
+
+#EMBEDDED_NOTES
+#One new parameter is created: speed_limit (an absolute speed limit to use if there is no detected target object).  Two new output variables are also created:  Distance_ACC (a target following distance) and vel_lead (velocity of the vehicle in front of the ego vehicle).  Distance_ACC is a function of time_gap, which is defined on the sensor screen.
+#
+#The misc. field defines a simple speed controller using the SPEED_TARGET Configurable function (for datset 1).  At each time step, the target speed is set to the speed of a leading target if there is one.
+#
+#The ACC HUD icon is a combination of HUD objects that are defined by two datasets.  The first dataset, ACC Icon, displays the base, lead car, active cruise alert, and brakes.  The second dataset, ACC Bars, displays the distance bars.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { ADAS Support } ACC with HUD
+#Library : Generic VS Commands
+#DataSet : ACC with HUD
+#Category: ADAS Support
+#FileID  : GenVS_31cf5798-a219-45b8-af93-7fefa37b8577
+#Product : CarSim 2020.0
+#VehCode ACC with HUD Icon
+
+END

@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Cube: 1m X, 0.1 Y, Z (Sensor Vector)`Geometric Shapes
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+#ENDMYellow
+
+SET_COLOR 0.376 0.376 0.376
+SET_SCALE_X 1
+SET_SCALE_Y 0.05
+SET_SCALE_Z 0.05
+SET_OFFSET_X 0.5
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+*SPECULAR 1
+*TRANSPARENCY 0.6
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 0    
+
+set_transparency 0.6
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Small Objects` Shape Preview` , Video Camera`Camera_af7c7c91-f09a-4493-9104-5b2725e3cf03
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc.png
+
+#EMBEDDED_NOTES
+#Intended to be detection vector of ADAS sensor. 0.1m Y and Z, 1m X.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Geometric Shapes } Cube: 1m X, 0.1 Y, Z (Sensor Vector)
+#Library : Animator: Shape File Link
+#DataSet : Cube: 1m X, 0.1 Y, Z (Sensor Vector)
+#Category: Geometric Shapes
+#FileID  : Shape_a83c927a-af50-4b45-9a13-ad040d8e2cfc
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

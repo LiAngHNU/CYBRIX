@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Events`I. Switch to Target Speed`Opt_Engine_Running: Manual Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+*NAME1 t_event
+*VALUE1 2.5
+*SPEED 30
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: I. Switch to Target Speed
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT 30
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_SPEED_CTRL = T
+#ENDMYellow
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink10 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Miscellaneous`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Manual Transmission } I. Switch to Target Speed
+#Library : Events
+#DataSet : I. Switch to Target Speed
+#Category: Opt_Engine_Running: Manual Transmission
+#FileID  : Events_27cca51c-e9be-4bc1-9c1a-cbf69bf8c5a2
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

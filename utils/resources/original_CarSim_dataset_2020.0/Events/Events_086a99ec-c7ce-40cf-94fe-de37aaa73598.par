@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Events`H. Exit Driveway`Trailer Reverse
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl10 1
+#RingCtrl11 0
+*NAME1 Yo
+*VALUE1 3
+*SPEED 0
+OPT_SC 0
+SV_VXS 0
+PARSFILE Control\Throttle\Throttle_a911e341-c2c7-4ea7-af54-f029204b2372.par
+#BlueLink18 Control: Throttle (Open Loop)`Ramp: 0 to 0.2 in 5 sec.` Ramp` , Speed link`Throttle_a911e341-c2c7-4ea7-af54-f029204b2372
+
+#MiscYellow0
+T_START_THROTTLE T
+#ENDMYellow
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink10 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Miscellaneous`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink11 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Miscellaneous`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+MAKE_EVENT Yo < 3 ; Events\Events_388ce37c-cdc7-41ab-a173-3eee85ca4b89.par
+#BlueLink0 Events`I. Complete Turn Around` Trailer Reverse` , Events`Events_388ce37c-cdc7-41ab-a173-3eee85ca4b89
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The vehicle begins to accelerate until has reached a point off of the driveway.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Trailer Reverse } H. Exit Driveway
+#Library : Events
+#DataSet : H. Exit Driveway
+#Category: Trailer Reverse
+#FileID  : Events_086a99ec-c7ce-40cf-94fe-de37aaa73598
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,106 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Large European Van`European Van
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_b80b3aa8-3588-494c-80f0-ed0e56ce3dc3.par
+#BlueLink7 Steering`Large European Van: Power Recirc. Ball` Utility Vehicles: SUVs and Vans` , Steering System`StrSys2_b80b3aa8-3588-494c-80f0-ed0e56ce3dc3
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_c6f312c1-cddb-4dd7-ac91-812f78353bb7.par
+#BlueLink19 Suspension: Independent System Kinematics`Large European Van - Front` Utility Vehicles: SUVs and Vans` , Kinematics`KinInd_c6f312c1-cddb-4dd7-ac91-812f78353bb7
+
+PARSFILE Suspensions\Compliance\CmpInd_b5da3192-0985-4d0f-903d-c110968f443b.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Large Euro. Van Ind. Compliance - Front` Utility Vehicles: SUVs and Vans` , Compliance`CmpInd_b5da3192-0985-4d0f-903d-c110968f443b
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_38403927-966a-47a5-81c3-0c9c4ff8520d.par
+#BlueLink999 Tire`265/75 R16` Touring Tires` , Tire`Tire_38403927-966a-47a5-81c3-0c9c4ff8520d
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_38403927-966a-47a5-81c3-0c9c4ff8520d.par
+#BlueLink10 Tire`265/75 R16` Touring Tires` , Tire`Tire_38403927-966a-47a5-81c3-0c9c4ff8520d
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_44c4fb02-1229-4ab3-8848-872c5e816673.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`Large European Van - Rear` Utility Vehicles: SUVs and Vans` , Kinematics`KinSA_44c4fb02-1229-4ab3-8848-872c5e816673
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_7f942c65-e9d1-416e-b223-51ea9c9d07bd.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Large Euro Van Solid Axle Comp. - Rear` Utility Vehicles: SUVs and Vans` , Compliance`CmpSA_7f942c65-e9d1-416e-b223-51ea9c9d07bd
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_38403927-966a-47a5-81c3-0c9c4ff8520d.par
+#BlueLink999 Tire`265/75 R16` Touring Tires` , Tire`Tire_38403927-966a-47a5-81c3-0c9c4ff8520d
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_38403927-966a-47a5-81c3-0c9c4ff8520d.par
+#BlueLink999 Tire`265/75 R16` Touring Tires` , Tire`Tire_38403927-966a-47a5-81c3-0c9c4ff8520d
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_1a648c0a-6290-4882-8661-dce79b56e179.par
+#BlueLink0 Vehicle: Sprung Mass`Large European Van` Utility Vehicles: SUVs and Vans` , Sprung Mass`SprMass_1a648c0a-6290-4882-8661-dce79b56e179
+
+PARSFILE Aerodynamics\Aero_Main\Aero_32dc7508-37ca-4167-8743-373cf780dd99.par
+#BlueLink1 Aerodynamics: Basic`Large Euro Van Aerodynamics` Utility Vehicles: SUVs and Vans` , Aerodynamics`Aero_32dc7508-37ca-4167-8743-373cf780dd99
+
+R_REAR_DRIVE_SC 0
+PMAX_SC 185
+PARSFILE Powertrain\Rwd\RWD_e4b51f72-175f-4ab5-b1dd-fabcd89dbf84.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`270 kW Diesel, 6-spd., 4.1 Ratio` 200 kW - 270 kW Powertrains` , Powertrain`RWD_e4b51f72-175f-4ab5-b1dd-fabcd89dbf84
+
+PARSFILE Brakes\4W_System\Brk4W_f597b0e1-2cd9-4e16-a090-83f75aa114f1.par
+#BlueLink6 Brakes: Four-Wheel System`Van (Lrg): MC Press, ABS` Utility Vehicles: SUVs and Vans` , Brake System`Brk4W_f597b0e1-2cd9-4e16-a090-83f75aa114f1
+
+PARSFILE Animator\Vehicles\AniVeh_a8aec856-9536-4ef7-a407-8f78b29909e9.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Large European Van` Utility Vehicles: SUVs and Vans` , Vehicle 3D Shape`AniVeh_a8aec856-9536-4ef7-a407-8f78b29909e9
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_a8aec856-9536-4ef7-a407-8f78b29909e9.png
+
+#EMBEDDED_NOTES
+#Generic Large European Van with an SLA front and a Hotchkiss Solid Axle rear suspension.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { European Van } Large European Van
+#Library : Vehicle: Assembly
+#DataSet : Large European Van
+#Category: European Van
+#FileID  : Vehicle_27c399ec-6a89-4818-90ab-290d201d6a4b
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

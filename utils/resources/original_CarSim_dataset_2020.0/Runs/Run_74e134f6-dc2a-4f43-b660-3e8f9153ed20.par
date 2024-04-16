@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName CarSim Run Control`Baseline FMI 2.0`External Control: COM, FMU, MATLAB, Python, VB
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_74e134f6-dc2a-4f43-b660-3e8f9153ed20
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\FMU\Fmu_af025bc2-6621-42f7-8042-91bfa355ce4b.par
+#BlueLink12 Models: Export FMU/FMI`Baseline FMI 2.0` ` , Models`Fmu_af025bc2-6621-42f7-8042-91bfa355ce4b
+
+PARSFILE Animator\Cameras\Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 9 El, 18 m, No Yaw` Vehicle Reference` , Animator camera`Camera_32ea6678-907c-4a10-af4b-b9431e3d2f8a
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure`Proc_3ae0353d-bd7c-43a3-9da4-150b6952a10e
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Baseline FMI 2.0 <External Control: COM, FMU, MATLAB, Python, VB>
+CATEGORY External Control: COM, FMU, MATLAB, Python, VB 
+DATASET_TITLE Baseline FMI 2.0
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This is the "Quick Start Guide Example" set to work in an FMI running environment. You need an FMU master to load/run this FMU.
+#
+#If you want to use the feature which allows you to save multiple sets of results, the ring control must be set prior generating the files for the run.
+#
+#We tested the FMU with these FMU masters:
+#1. Matlab 2015a/b with the Simulink package "Pilot Support Package".
+#
+#Win64: "Pilot Support Package v0.2.0 or later".
+#Win32: "Pilot Support Package v0.2.1 or later".
+#
+#2. A batch file comes in the folder of FMU "run_baseline2.bat".
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { External Control: COM, FMU, MATLAB, Python, VB } Baseline FMI 2.0
+#Library : CarSim Run Control
+#DataSet : Baseline FMI 2.0
+#Category: External Control: COM, FMU, MATLAB, Python, VB
+#FileID  : Run_74e134f6-dc2a-4f43-b660-3e8f9153ed20
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

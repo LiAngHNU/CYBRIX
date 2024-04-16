@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Tire (External)`205/55 R16 (FTire)`
+FZ_REF 30000
+Y_LENGTH 205
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+
+#RingCtrl0 10
+OPT_TIRE_MODEL 9
+
+X_LENGTH 316
+Z_LENGTH 316
+PARSFILE Animator\STL_Groups\ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2.par
+#BlueLink0 Animator: Shape Assembly`Sports Car` Tires` , Animator`ShpGrp_d5b55623-3c6f-43ea-b7a0-880a3303d1d2
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 205
+*SET_RADIUS 316
+KY_TIRE 1000
+OPT_TIRE_INERTIA_EXTERNAL 1
+IT 1.2
+M_TIRE 19
+
+#External API information
+EXTERNAL_TIRE_MODULE_DLL Extensions\External_Tire_API\win32\FTireWrapper.dll
+INSTALL_EXTERNAL_TIRE_API
+
+#COSIN Tire Interface (FTire) setting data
+FTIRE_DATA Extensions\FTire\passenger_car.tir
+FTIRE_CTI_DLL C:\Program Files (x86)\cosin\2019-1\lib\win32\cti.dll
+FTIRE_INIT
+
+#EMBEDDED_NOTES
+#This example uses the COSIN / FTire model.
+#
+#FTire runs much slower than real time due to the complexity of the COSIN / FTire model. Each tire takes about 20 times real-time, so a 4 tire simulation runs about 80 times real-time.
+#
+#CarSim will support the COSIN / FTire model (version 2.8 or newer version), but a separate license is required. The license is available from www.ftire.com.
+#
+#Tire program file (CTI.DLL): The file should be version 2.8 (license required from FTire).
+#
+#For purchased FTire licenses: You may obtain a license file from COSIN whose file name typically looks like "cosinlm_ftlib_mac_************.lic". You must rename the license file to "cosinlm.dat" and place the file under the CarSim working directory: CarSim's database default root, usually C:\CarSim_Data.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire (External); 205/55 R16 (FTire)
+#Library : Tire (External)
+#DataSet : 205/55 R16 (FTire)
+#Category: 
+#FileID  : TireExt_464e5584-4171-407d-9f32-0d0dc50ed310
+#Product : CarSim 2020.0
+#VehCode Tire (External)
+
+END

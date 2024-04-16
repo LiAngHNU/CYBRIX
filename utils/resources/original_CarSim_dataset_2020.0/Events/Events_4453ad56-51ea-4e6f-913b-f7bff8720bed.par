@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Events`Look for Objects`ADAS Detection
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 1    
+
+#RingCtrl0 ==
+#RingCtrl1 ==
+#RingCtrl2 ZERO ~=
+#RingCtrl3 ZERO ~=
+#RingCtrl10 4
+#RingCtrl11 5
+DELETE_EVENTS_ID SIGN_DETECT
+*NAME1 TypeSign
+*NAME2 TypeSign
+*NAME3 TypeSign
+*NAME4 1
+*VALUE1 STOP_SIGN
+*VALUE2 SPEED_SIGN
+*VALUE3 TypeSign == LIGHT_RED | TypeSign == LIGHT_YELLOW
+*VALUE4 ObjDtct&ApplyAEB
+*SET_EVENT_ID SIGN_DETECT
+SET_EVENT_ID SIGN_DETECT
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+SPEED_ID_SC = SPEED_LIMIT_ID
+OPT_SC = 4
+OPT_AUTO_RESET_IC 1
+VX_IERR_DEAD_SC 2
+SPEED_KI = 0.5
+#ENDMYellow
+
+MAKE_EVENT TypeSign == STOP_SIGN ; Events\Events_01526331-e915-4074-9756-4030d53885d4.par
+#BlueLink0 Events`Stop Sign` ADAS Detection` , Events`Events_01526331-e915-4074-9756-4030d53885d4
+
+MAKE_EVENT TypeSign == SPEED_SIGN ; Events\Events_cf84d4f1-e38e-4511-8802-c932fba33636.par
+#BlueLink1 Events`Speed Limit` ADAS Detection` , Events`Events_cf84d4f1-e38e-4511-8802-c932fba33636
+
+DEFINE_EVENT TypeSign == LIGHT_RED | TypeSign == LIGHT_YELLOW ; Events\Events_09c4f7c3-2c56-4db9-a6ba-5ad5092362cc.par
+#BlueLink2 Events`Red or Yellow Light` ADAS Detection` , Events`Events_09c4f7c3-2c56-4db9-a6ba-5ad5092362cc
+
+DEFINE_EVENT ObjDtct&ApplyAEB ; Events\Events_31395730-702c-44eb-b0a0-e828d8329c1f.par
+#BlueLink3 Events`Ensure Object Collision` ADAS Detection` , Events`Events_31395730-702c-44eb-b0a0-e828d8329c1f
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#The symbols for sign types are defined in the VS Command dataset "Define Target Messages"
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { ADAS Detection } Look for Objects
+#Library : Events
+#DataSet : Look for Objects
+#Category: ADAS Detection
+#FileID  : Events_4453ad56-51ea-4e6f-913b-f7bff8720bed
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

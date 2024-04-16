@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName CarSim Run Control`Bounce Sine Sweep`Suspension and Ride Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_db4bb818-8634-450e-8fee-ebd655e9283b
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_5feacfa5-2cee-4705-8aee-f5baa805e553.par
+#BlueLink0 Animator: Camera Setup`21 Azm, 5 El, 25 m` Road Reference` , Animator camera`Camera_5feacfa5-2cee-4705-8aee-f5baa805e553
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 1 0.6 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_33846176-a317-4e8b-ac1e-69dfb74840d7.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`D-Class, Sedan w/ 5 Motion Sensors` D-Class` , Math Model`VehLoad_33846176-a317-4e8b-ac1e-69dfb74840d7
+
+PARSFILE Procedures\Proc_5a89142f-1f49-4856-b138-d0b22d42c412.par
+#BlueLink28 Procedures`Bounce Sine Sweep Test` Ride Tests` , Procedure`Proc_5a89142f-1f49-4856-b138-d0b22d42c412
+
+
+*IMAGE_TYPE DEFAULT
+WRITE_SENSOR_DETECT
+Title Bounce Sine Sweep <Suspension and Ride Tests>
+CATEGORY Suspension and Ride Tests 
+DATASET_TITLE Bounce Sine Sweep
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#A D-Class Sedan with 5 Motion Sensors performs a Bounce Sine Sweep test.
+#
+#The Bounce Sine Sweep road data varies in both frequency and amplitude, exciting various bounce and pitch motions of the vehicle.
+#
+#The 5 Motion Sensors are attached the vehicle's Sprung Mass and output position, velocity, and acceleration (with and without the effects of gravity).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Suspension and Ride Tests } Bounce Sine Sweep
+#Library : CarSim Run Control
+#DataSet : Bounce Sine Sweep
+#Category: Suspension and Ride Tests
+#FileID  : Run_db4bb818-8634-450e-8fee-ebd655e9283b
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

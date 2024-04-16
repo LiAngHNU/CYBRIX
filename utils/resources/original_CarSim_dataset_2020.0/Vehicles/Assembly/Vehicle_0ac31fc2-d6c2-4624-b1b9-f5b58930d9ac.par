@@ -1,0 +1,110 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Exotic Car, Mid-Engine: MT`Exotic Sports Car
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+PARSFILE Steering\System2\StrSys2_7d1bcc8b-482e-4f5c-bebe-cab4c0727276.par
+#BlueLink7 Steering`Exotic: Manual R&P` CS Exotic Sports Car` , Steering System`StrSys2_7d1bcc8b-482e-4f5c-bebe-cab4c0727276
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_c714d705-474e-4717-8255-455252c00dd2.par
+#BlueLink19 Suspension: Independent System Kinematics`Exotic - Front` Exotic Sports Car` , Kinematics`KinInd_c714d705-474e-4717-8255-455252c00dd2
+
+PARSFILE Suspensions\Compliance\CmpInd_d6d9fdbb-bcd0-4f5b-a886-678330c3bbdc.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Exotic - Front` Exotic Sports Car` , Compliance`CmpInd_d6d9fdbb-bcd0-4f5b-a886-678330c3bbdc
+
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_68f15a93-cb0c-4c0e-9e42-4b2443f2766b.par
+#BlueLink999 Tire`Exotic Front - 235/35 19` Performance Tires` , Tire`Tire_68f15a93-cb0c-4c0e-9e42-4b2443f2766b
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_68f15a93-cb0c-4c0e-9e42-4b2443f2766b.par
+#BlueLink10 Tire`Exotic Front - 235/35 19` Performance Tires` , Tire`Tire_68f15a93-cb0c-4c0e-9e42-4b2443f2766b
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_d4b8f0c3-defb-4452-a69c-e46209c68032.par
+#BlueLink20 Suspension: Independent System Kinematics`Exotic - Rear` Exotic Sports Car` , Kinematics`KinInd_d4b8f0c3-defb-4452-a69c-e46209c68032
+
+PARSFILE Suspensions\Compliance\CmpInd_2b16f5ad-b911-4647-be70-43ea27928d9d.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`Exotic - Rear` Exotic Sports Car` , Compliance`CmpInd_2b16f5ad-b911-4647-be70-43ea27928d9d
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_ca639635-05d0-4e2c-aa22-d15d109a74b9.par
+#BlueLink999 Tire`Exotic Rear - 305/30 19` Performance Tires` , Rear Tire`Tire_ca639635-05d0-4e2c-aa22-d15d109a74b9
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_ca639635-05d0-4e2c-aa22-d15d109a74b9.par
+#BlueLink14 Tire`Exotic Rear - 305/30 19` Performance Tires` , Rear Tire`Tire_ca639635-05d0-4e2c-aa22-d15d109a74b9
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_5b6fd758-c01a-4126-825b-402d84c662c5.par
+#BlueLink0 Vehicle: Sprung Mass`Exotic, Mid-Engine` Exotic Sports Car` , Sprung Mass`SprMass_5b6fd758-c01a-4126-825b-402d84c662c5
+
+PARSFILE Aerodynamics\Aero_Main\Aero_2ad0e557-6e21-46a6-8ab1-003608366afe.par
+#BlueLink1 Aerodynamics: Basic`B-Class, Sports Car Aero` B-Class` , Aerodynamics`Aero_2ad0e557-6e21-46a6-8ab1-003608366afe
+
+PARSFILE Powertrain\4wd\4WD_0e5a1518-9386-4c6c-8ff8-718cb68c742b.par
+#BlueLink5 Powertrain: 4-Wheel Drive`300 kW, 6-spd., 3.1 Ratio, MT` 300 kW Powertrains` , Powertrain`4WD_0e5a1518-9386-4c6c-8ff8-718cb68c742b
+
+PARSFILE Brakes\4W_System\Brk4W_4db742b9-56de-4640-9b5a-25a60dc20e7f.par
+#BlueLink6 Brakes: Four-Wheel System`Exotic: MC Press, No ABS` Exotic Sports Car` , Brake System`Brk4W_4db742b9-56de-4640-9b5a-25a60dc20e7f
+
+PARSFILE Animator\Vehicles\AniVeh_30f1b262-73d2-47f4-b117-69aefa4b7382.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Exotic Car` Exotic Sports Car` , Vehicle 3D Shape`AniVeh_30f1b262-73d2-47f4-b117-69aefa4b7382
+
+PARSFILE Animator\Groups\Group_28686184-e800-4d0c-9e44-abbda7857611.par
+#BlueLink18 Animator: Group`Exotic Brake Calipers` Brake System` , Misc. Vehicle Data`Group_28686184-e800-4d0c-9e44-abbda7857611
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_30f1b262-73d2-47f4-b117-69aefa4b7382.png
+
+#EMBEDDED_NOTES
+#Generic Sports Car with a mid-mounted engine, manual transmission, Strut front and Semi-Trailing Arm rear suspension.
+#
+#Brake system uses Master Cylinder Pressure as the control input.
+#
+#2019.0 - Improved shifting performance
+# Powertrain changes for shift schedule
+# Tire changes for improved shift quality
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Exotic Sports Car } Exotic Car, Mid-Engine: MT
+#Library : Vehicle: Assembly
+#DataSet : Exotic Car, Mid-Engine: MT
+#Category: Exotic Sports Car
+#FileID  : Vehicle_0ac31fc2-d6c2-4624-b1b9-f5b58930d9ac
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

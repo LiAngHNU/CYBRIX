@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Generic Table`Suspension Damper, Rear (2D, Base)`2D Dampers
+#RingCtrl0 2D_SPLINE
+#CheckBox0 1    
+
+#MiscYellow0
+iDamper_2D_Base 2
+set_units Damper_2D_Base_carpet N
+set_units_table_row Damper_2D_Base_carpet mm/s
+set_units_table_col Damper_2D_Base_carpet mm
+#ENDMYellow
+
+*3D_XLabel Comp. (mm)
+*3D_YLabel Comp. Rate (mm/s)
+*3D_ZLabel Damper Force (N)
+
+#DiagramTwo0
+*3D_DATA 14, 13 ! columns x rows
+Damper_2D_Base_CARPET 2D_SPLINE
+0, 0, 1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 45
+-1410, -5008, -5008, -5008, -5008, -5008, -5008, -5008, -5008, -5008, -5008, -5008, -5008, -5008, -5008
+-720, -3436, -3436, -3436, -3436, -3436, -3436, -3436, -3436, -3436, -3436, -3436, -3436, -3436, -3436
+-390, -2324, -2324, -2324, -2324, -2324, -2324, -2324, -2324, -2324, -2324, -2324, -2324, -2324, -2324
+-210, -1792, -1792, -1792, -1792, -1792, -1792, -1792, -1792, -1792, -1792, -1792, -1792, -1792, -1792
+-90, -1008, -1008, -1008, -1008, -1008, -1008, -1008, -1008, -1008, -1008, -1008, -1008, -1008, -1008
+-20, -228, -228, -228, -228, -228, -228, -228, -228, -228, -228, -228, -228, -228, -228
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+20, 228, 228, 228, 228, 228, 228, 228, 228, 228, 228, 228, 228, 228, 228
+90, 596, 596, 596, 596, 596, 596, 596, 596, 596, 596, 596, 596, 596, 596
+200, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784
+390, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100
+760, 1796, 1796, 1796, 1796, 1796, 1796, 1796, 1796, 1796, 1796, 1796, 1796, 1796, 1796
+1160, 2560, 2560, 2560, 2560, 2560, 2560, 2560, 2560, 2560, 2560, 2560, 2560, 2560, 2560
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*KEYWORD Damper_2D_Base
+*X_LABEL Comp. Rate (mm/s)
+*Y_LABEL Damper Force (N)
+*X_LABEL_2 Comp. (mm)
+
+
+#EMBEDDED_NOTES
+#Generic Table representing a suspension damper with two independent variables:
+#* Damper Compression Rate
+#* Damper Compression
+#
+#The same data is used for all compression positions, and all data passes through zero.
+#
+#Units are defined for the:
+#* Table output
+#* Table Row
+#* Table Column
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Table; { 2D Dampers } Suspension Damper, Rear (2D, Base)
+#Library : Generic Table
+#DataSet : Suspension Damper, Rear (2D, Base)
+#Category: 2D Dampers
+#FileID  : GenTab_c585848e-94c4-4398-a4d7-09624b8b3052
+#Product : CarSim 2020.0
+#VehCode table
+
+END

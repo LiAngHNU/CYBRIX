@@ -1,0 +1,60 @@
+PARSFILE
+#FullDataName Single Moving Object (Custom)`F-Class Sedan, VS Commands control`ADAS Sensor: Collision Detection
+DEFINE_MOVING_OBJECTS 1
+IOBJECT_INCREMENT
+symbol_add <<o>> 1
+SET_DESCRIPTION OBJECT_NAME F-Class Sedan, VS Commands control
+OPT_SPEED_OBJ 0
+PATH_ID_OBJ Path_ID_DM
+ROAD_ID_OBJ Current_Road_ID
+#CheckBox1 0    
+OPT_RECYCLE_OBJ 0
+#CheckBox3 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+
+#RingCtrl0 4
+#RingCtrl1 1
+H_OBJ -1.6
+*COLOR 0.878 0.878 0.878
+*S_INIT 0
+*L_INIT LTARG_CONSTANT(1)
+OPT_SHAPE_OBJ 1
+SHAPE_TYPE_OBJ 1
+DZ_OBJECT 0
+*SIZE 5.1
+LENGTH_OBJ 5.1
+WIDTH_OBJ 2
+LX_FRONT_OBJ 0.8
+*REFLECT 1
+MATERIAL_TYPE_OBJ 0
+REFLECT_OBJ 1
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 5.1
+Y_LENGTH 2
+Z_LENGTH 1.6
+add_obj Resources\Animator\3D_Shape_Files\Geometric_Shapes\Cubes\cube_1m_wide.obj
+set_transparency 0.5
+SET_OFFSET_X -0.343137
+SET_OFFSET_Z 0.5
+SET_COLOR 0.878 0.878 0.878
+SET_RUN_COLOR 0.878 0.878 0.878
+PARSFILE Animator\Vehicles\AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`F-Class, Sedan` F-Class` , 3D Shape for Video`AniVeh_ecb4bc00-731a-4eec-9e10-b0fa5a9a76b7
+
+EQ_INIT S_Obj_<<o>> 0
+EQ_INIT LatO_<<o>> LTARG_CONSTANT(1)
+
+LOG_ENTRY Used Dataset: Single Moving Object (Custom); { ADAS Sensor: Collision Detection } F-Class Sedan, VS Commands control
+#Library : Single Moving Object (Custom)
+#DataSet : F-Class Sedan, VS Commands control
+#Category: ADAS Sensor: Collision Detection
+#FileID  : Target_07cc5a1b-b0a5-4d6f-a0eb-ffc58fca8f51
+#Product : CarSim 2020.0
+#VehCode Moving Object (Custom)
+
+END

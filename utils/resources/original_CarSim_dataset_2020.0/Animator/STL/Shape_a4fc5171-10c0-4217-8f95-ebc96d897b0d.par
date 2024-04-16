@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`JP: Straight Left`Environment: Road Signs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Road_Signs\Japan\Straight_Left\blue_c-12.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_OFFSET_Z 1.8
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink2 Animator: Camera Setup`YZ-Plane, No Offsets (with Yaw)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_a4fc5171-10c0-4217-8f95-ebc96d897b0d.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Road Signs } JP: Straight Left
+#Library : Animator: Shape File Link
+#DataSet : JP: Straight Left
+#Category: Environment: Road Signs
+#FileID  : Shape_a4fc5171-10c0-4217-8f95-ebc96d897b0d
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

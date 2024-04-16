@@ -1,0 +1,105 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Pickup, Compact: RWD`Pickup Trucks
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_53515216-2d4d-4852-aacd-4c6ae0bc8dbd.par
+#BlueLink7 Steering`Pickup, Compact: Power, Recirc. Ball` Pickup Trucks` , Steering System`StrSys2_53515216-2d4d-4852-aacd-4c6ae0bc8dbd
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_9099039d-dea2-4d61-8375-f58f0a94dff3.par
+#BlueLink19 Suspension: Independent System Kinematics`Pickup, Compact - Front` Pickup Trucks` , Kinematics`KinInd_9099039d-dea2-4d61-8375-f58f0a94dff3
+
+PARSFILE Suspensions\Compliance\CmpInd_a34b2265-f23e-40be-a7d6-c1e225f3fe24.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Pickup, Compact - Front` Pickup Trucks` , Compliance`CmpInd_a34b2265-f23e-40be-a7d6-c1e225f3fe24
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_6540dcf7-92a1-4881-91c5-2f26086fdcb3.par
+#BlueLink999 Tire`215/70 R15` Touring Tires` , Tire`Tire_6540dcf7-92a1-4881-91c5-2f26086fdcb3
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_6540dcf7-92a1-4881-91c5-2f26086fdcb3.par
+#BlueLink10 Tire`215/70 R15` Touring Tires` , Tire`Tire_6540dcf7-92a1-4881-91c5-2f26086fdcb3
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_a4d6de24-6ff7-430a-8dc2-052b0b0f8edf.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`Pickup, Compact - Rear` Pickup Trucks` , Kinematics`KinSA_a4d6de24-6ff7-430a-8dc2-052b0b0f8edf
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_ca3da429-1395-46b6-9a87-5587e3f77800.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Compact - Rear` Pickup Trucks` , Compliance`CmpSA_ca3da429-1395-46b6-9a87-5587e3f77800
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_6540dcf7-92a1-4881-91c5-2f26086fdcb3.par
+#BlueLink999 Tire`215/70 R15` Touring Tires` , Tire`Tire_6540dcf7-92a1-4881-91c5-2f26086fdcb3
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_6540dcf7-92a1-4881-91c5-2f26086fdcb3.par
+#BlueLink999 Tire`215/70 R15` Touring Tires` , Tire`Tire_6540dcf7-92a1-4881-91c5-2f26086fdcb3
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_5cbe911c-9ec1-4c7b-84fe-213b28b272bd.par
+#BlueLink0 Vehicle: Sprung Mass`Pickup, Compact` Pickup Trucks` , Sprung Mass`SprMass_5cbe911c-9ec1-4c7b-84fe-213b28b272bd
+
+PARSFILE Aerodynamics\Aero_Main\Aero_5f556566-acbf-4475-b2a2-ddbf30e34a3a.par
+#BlueLink1 Aerodynamics: Basic`Compact Pickup (2780 mm wheelbase)` Pickup Trucks` , Aerodynamics`Aero_5f556566-acbf-4475-b2a2-ddbf30e34a3a
+
+PARSFILE Powertrain\Rwd\RWD_e91083ef-0948-4998-9bff-bab111a8fc9a.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`200 kW, 6-spd., 4.1 Ratio` 200 kW - 270 kW Powertrains` , Powertrain`RWD_e91083ef-0948-4998-9bff-bab111a8fc9a
+
+PARSFILE Brakes\4W_System\Brk4W_741784e7-899e-454b-b6d2-b395135bb215.par
+#BlueLink6 Brakes: Four-Wheel System`Pickup (Comp): MC Press, ABS` Pickup Trucks` , Brake System`Brk4W_741784e7-899e-454b-b6d2-b395135bb215
+
+PARSFILE Animator\Vehicles\AniVeh_c792a4ad-7eb0-4eec-9424-c569edb3078f.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Pickup, Compact: Regular Cab` Pickup Trucks` , Vehicle 3D Shape`AniVeh_c792a4ad-7eb0-4eec-9424-c569edb3078f
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_323c9c7e-7f0d-4bc0-bdd2-fb23e54ea44f.png
+
+#EMBEDDED_NOTES
+#Generic compact pickup truck with an SLA front and a Hotchkiss Solid Axle rear suspension.
+#
+#Compact pickup trucks include the 2003-2012 Chevrolet Colorado and the 1995-2004 Toyota Tacoma.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Pickup Trucks } Pickup, Compact: RWD
+#Library : Vehicle: Assembly
+#DataSet : Pickup, Compact: RWD
+#Category: Pickup Trucks
+#FileID  : Vehicle_323c9c7e-7f0d-4bc0-bdd2-fb23e54ea44f
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

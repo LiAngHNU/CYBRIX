@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName Generic Data Lists`ESC Alert Norm On`HUD Indicators
+#VehCode Generic Lists
+#MiscYellow0
+ANI_esc_icon_active
+WRT_esc_icon_active
+
+ADD_ENTITY hud_image HUD_ESC_Icon_Active
+  location 30 17 150 150
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity esc_icon_active
+  image_file Animator\2D_HUD_Icons\Stability_Control\ESC_ON.png
+END_ENTITY hud_image HUD_ESC_Icon_Active
+
+ADD_ENTITY hud_text HUD_ESC_labelactive
+  prefix ESC active
+  location 30 185 100 18
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+  opacity esc_icon_active
+END_ENTITY hud_text HUD_ESC_labelactive
+
+ANI_esc_icon_inactive
+WRT_esc_icon_inactive
+
+ADD_ENTITY hud_image HUD_ESC_Icon_Inactive
+  location 30 17 150 150
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  opacity esc_icon_inactive
+  image_file Animator\2D_HUD_Icons\Stability_Control\ESC_Off.png
+END_ENTITY hud_image HUD_ESC_Icon_Inactive
+
+ADD_ENTITY hud_text HUD_ESC_labelinactive
+  prefix ESC inactive
+  location 30 185 100 18
+  align_x center
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+  opacity esc_icon_inactive
+END_ENTITY hud_text HUD_ESC_labelinactive
+#ENDMYellow
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset is for VS Visualizer. It will show the ESC alert icon if the output variable ESC_ICON_ACTIVE is not zero. That output variable is defined with the VS Command DEFINE_OUTPUT in the VS Commanss dataset that links to this one.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Lists; { HUD Indicators } ESC Alert Norm On
+#Library : Generic Data Lists
+#DataSet : ESC Alert Norm On
+#Category: HUD Indicators
+#FileID  : GenList_56ecc9a3-2fef-409b-900c-9e5e692df86c
+#Product : CarSim 2020.0
+#VehCode Generic Lists
+
+END

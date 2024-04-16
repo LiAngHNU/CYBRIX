@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName CarSim Run Control`Intersection, 4-Way, Pickup w/ Trailer`Road Networks: Intersections and Roundabouts
+#VEHICLECODE Ind_SA + SS
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_58a510d4-4833-477b-b944-b72fe23de623
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+#BlueLink12 ` , Models` , Models` , Models`
+
+PARSFILE Animator\Cameras\Camera_8caf6395-f62c-40cb-95a4-7af5739e6bee.par
+#BlueLink0 Animator: Camera Setup`Rear View, Trailer Ref. (Frt. Facing)` Trailer Reference` , Animator camera`Camera_8caf6395-f62c-40cb-95a4-7af5739e6bee
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 1 1 1
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Pickup, Full Size w/ 2A Gooseneck Trl.` Pickup, Full Size` , Math Model`VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497
+
+PARSFILE Procedures\Proc_878cefc6-c57c-4fcc-9111-4879dfc131bd.par
+#BlueLink28 Procedures`Intersection, 4-Way with Curbs` Road Networks` , Procedure`Proc_878cefc6-c57c-4fcc-9111-4879dfc131bd
+
+PARSFILE Generic\Group\GenGrp_88a558cd-6268-4c8d-9d16-1e62d4572906.par
+#BlueLink9 Generic Data Group`4 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_88a558cd-6268-4c8d-9d16-1e62d4572906
+
+PARSFILE Generic\Group\GenGrp_22d07344-49c4-48f0-886f-a03828594a3d.par
+#BlueLink10 Generic Data Group`Traffic for 4-Way Intersection` ADAS: Traffic Scenarios` , Miscellaneous`GenGrp_22d07344-49c4-48f0-886f-a03828594a3d
+
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+PARSFILE Plot\Setup\Plot_92e94740-7813-4c8a-9bea-c62fff972287.par
+#BlueLink15 Plot: Setup`Road ID for Tires` Tracking` , Plot`Plot_92e94740-7813-4c8a-9bea-c62fff972287
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6ba13624-c527-4355-b1e1-654631d3017e.png
+WRITE_SENSOR_DETECT
+Title Intersection, 4-Way, Pickup w/ Trailer <Road Networks: Intersections and Roundabouts>
+CATEGORY Road Networks: Intersections and Roundabouts 
+DATASET_TITLE Intersection, 4-Way, Pickup w/ Trailer
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#This intersection of two straight roads (East and North) has curbs on the edges, which can be an issue for vehicles with trailers.
+#
+#The intersection is made from four parts, one per curb.
+#
+#This shows the offtracking for a trailer. Be aware that you need an optional CarSim Trailer license to make a new run with this vehicle you need.
+#
+#This includes traffic vehicles to show how their paths and speeds can be controlled. However, there is no interaction with the simulated ego vehicle.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Road Networks: Intersections and Roundabouts } Intersection, 4-Way, Pickup w/ Trailer
+#Library : CarSim Run Control
+#DataSet : Intersection, 4-Way, Pickup w/ Trailer
+#Category: Road Networks: Intersections and Roundabouts
+#FileID  : Run_58a510d4-4833-477b-b944-b72fe23de623
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

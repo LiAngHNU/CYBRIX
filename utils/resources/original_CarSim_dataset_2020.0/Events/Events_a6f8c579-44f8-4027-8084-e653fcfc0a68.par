@@ -1,0 +1,30 @@
+PARSFILE
+#FullDataName Events`Returned to path`Embedded Python: Obstacle Detection
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 show_fcw
+*VALUE1 show_fcw
+DEFINE_EVENT show_fcw ; Events\Events_58f78e5f-17b9-475c-b90e-81a0cff36d6e.par
+#BlueLink0 Events`New Detect` Embedded Python: Obstacle Detection` , Events`Events_58f78e5f-17b9-475c-b90e-81a0cff36d6e
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#Return to checking for a new obstruction.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Embedded Python: Obstacle Detection } Returned to path
+#Library : Events
+#DataSet : Returned to path
+#Category: Embedded Python: Obstacle Detection
+#FileID  : Events_a6f8c579-44f8-4027-8084-e653fcfc0a68
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

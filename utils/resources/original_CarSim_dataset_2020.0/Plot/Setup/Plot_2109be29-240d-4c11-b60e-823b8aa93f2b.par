@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Wheel Drive Torques - Front`Powertrain
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS My_Dr_L1, Time
+PLOTCHANNELS My_Dr_R1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Wheel Drive Torques - Front
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Wheel Drive Torques - Front
+#Library : Plot: Setup
+#DataSet : Wheel Drive Torques - Front
+#Category: Powertrain
+#FileID  : Plot_2109be29-240d-4c11-b60e-823b8aa93f2b
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`43kW/20kW x2, Hybrid eAWD`Hybrid: 43kW/20kW x2 (Engine + 2 Motors)
+INSTALL_ENGINE
+
+OPT_PT 3
+R_REAR_DRIVE_SC 0.5
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 1
+OPT_HEV 1
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+OPT_ENGINE_INTERNAL 1
+OPT_PWR_CPL_INTERNAL 0
+OPT_TRANS_INTERNAL 0
+OPT_SHIFT_INTERNAL 0
+OPT_TR_GEAR_INTERNAL 0
+OPT_DIFF_INTERNAL(1) 1
+OPT_DIFF_INTERNAL(2) 1
+OPT_DIFF_INTERNAL(3) 1
+
+PARSFILE Powertrain\Engine\Engine_e10a2855-e13c-4e65-bf71-c813ed38a5fb.par
+#BlueLink0 Powertrain: Engine`1.5L, 43 kW  Engine` 43 kW - 125 kW Engines` , Engine`Engine_e10a2855-e13c-4e65-bf71-c813ed38a5fb
+
+PARSFILE Powertrain\HEV\HEV_d2ccf7d7-38b2-4ab2-a3d3-85963e91cdb6.par
+#BlueLink11 Powertrain: Hybrid/Electric System`Hybrid Motors on Axles Powertrain Assy` ` , Hybrid system`HEV_d2ccf7d7-38b2-4ab2-a3d3-85963e91cdb6
+
+PARSFILE Powertrain\HEV_PMC\PMC_3cd61080-bd7a-4dc1-b67a-95b58429656b.par
+#BlueLink12 Powertrain: Hybrid/Electric Power Management Control`Power Management: Full Load 55kW` ` , Hybrid power management control`PMC_3cd61080-bd7a-4dc1-b67a-95b58429656b
+
+
+IDIFF 3
+PARSFILE Powertrain\Centerdiff\XC_00c03ca3-4489-48aa-8c5a-d33c644b515a.par
+#BlueLink3 Powertrain: Transfer Case`OTC: 100/0, Gear Ratio 1:1` Open` , Transfer case`XC_00c03ca3-4489-48aa-8c5a-d33c644b515a
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_4688d8c7-78b5-4179-81a4-29c69561aeea.par
+#BlueLink4 Powertrain: Front Differential`EV Open Diff.: Gear Ratio 3.905:1` Electric Motor Drive (20 kW)` , Differential front`DiffF_4688d8c7-78b5-4179-81a4-29c69561aeea
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_9be4e6b7-54b7-4640-965f-3b0059166782.par
+#BlueLink5 Powertrain: Rear Differential`EV Open Diff.: Gear Ratio 3.905:1` Electric Motor Drive (20 kW)` , Differential rear`DiffR_9be4e6b7-54b7-4640-965f-3b0059166782
+
+
+#EMBEDDED_NOTES
+#Generic two 20 kW electric motors are equipped on each of front and rear drive axles.
+#
+#Power manegement range is 165kW with full loaded throttle pedal.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { Hybrid: 43kW/20kW x2 (Engine + 2 Motors) } 43kW/20kW x2, Hybrid eAWD
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : 43kW/20kW x2, Hybrid eAWD
+#Category: Hybrid: 43kW/20kW x2 (Engine + 2 Motors)
+#FileID  : 4WD_f0bebe7e-264e-4dfb-a489-905f09c4f002
+#Product : CarSim 2020.0
+#VehCode 4WD
+
+END

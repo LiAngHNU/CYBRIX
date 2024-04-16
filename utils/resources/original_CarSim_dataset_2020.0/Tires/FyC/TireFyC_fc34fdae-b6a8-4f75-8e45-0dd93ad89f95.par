@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Tire: Lateral Force vs. Inclination`MF-Tyre Example`MF-Tyre Example
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. inclination angle (deg)
+*3D_ZLabel Lateral force (N)
+
+#DiagramTwo0
+*3D_DATA 3, 12 ! columns x rows
+FYG_TIRE_CARPET 2D_FROM_ZERO
+0, 2000, 4000, 6000
+0.5, -13.4855, -31.0616, -52.728
+1, -26.9731, -62.1306, -105.471
+1.5, -40.4649, -93.2149, -158.246
+2, -53.9634, -124.323, -211.067
+2.5, -67.4709, -155.462, -263.953
+3, -80.9901, -186.641, -316.919
+3.5, -94.5236, -217.87, -369.983
+4, -108.075, -249.158, -423.162
+4.5, -121.646, -280.514, -476.476
+5, -135.24, -311.948, -529.942
+5.5, -135.24, -311.948, -529.942
+6, -135.24, -311.948, -529.942
+ENDTABLE
+
+CRO_FY 1
+
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force vs. Inclination; { MF-Tyre Example } MF-Tyre Example
+#Library : Tire: Lateral Force vs. Inclination
+#DataSet : MF-Tyre Example
+#Category: MF-Tyre Example
+#FileID  : TireFyC_fc34fdae-b6a8-4f75-8e45-0dd93ad89f95
+#Product : CarSim 2020.0
+#VehCode Tire: Fy
+
+END

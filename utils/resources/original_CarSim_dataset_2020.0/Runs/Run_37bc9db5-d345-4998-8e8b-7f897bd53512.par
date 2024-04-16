@@ -1,0 +1,81 @@
+PARSFILE
+#FullDataName CarSim Run Control`Accident Avoidance`Driver Model
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_37bc9db5-d345-4998-8e8b-7f897bd53512
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_2d36d2a8-7c60-4c72-86df-3ed32b1b0c5b.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 10 El, 36 m, No Yaw` Vehicle Reference` , Animator camera`Camera_2d36d2a8-7c60-4c72-86df-3ed32b1b0c5b
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.2 0.4
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f.par
+#BlueLink2 Vehicle: Assembly`E-Class, Sedan` E-Class` , Math Model`Vehicle_15d93ff3-2f67-41c1-baab-2c6b7d5d370f
+
+PARSFILE Procedures\Proc_5e9625da-2ad3-4116-8db8-aa1c0238b74a.par
+#BlueLink28 Procedures`Accident Avoidance Driving` Driving` , Procedure`Proc_5e9625da-2ad3-4116-8db8-aa1c0238b74a
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+
+SPECIAL_PARSFILE Runs\Run_7c9e3a86-8205-4009-acea-765ab03085b6.par
+#BlueLink23 CarSim Run Control`Distracted Driver` Driver Model` , Overlay run or ERD file`Run_7c9e3a86-8205-4009-acea-765ab03085b6
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_56213a52-605a-4200-ab95-2aae09c11489.png
+WRITE_SENSOR_DETECT
+Title Accident Avoidance <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Accident Avoidance
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Several modeling techniques are demonstrated:
+#
+#1. How to create variable width roads using features such as rounded curbs and a highway-type median.
+#
+#2. An accident avoidance maneuver, combined with a simulation overlay of another vehicle, to simulate the two vehicles steering to avoid one another.
+#
+#The two vehicles steer independently of one another; there is no interaction between the two vehicles.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Driver Model } Accident Avoidance
+#Library : CarSim Run Control
+#DataSet : Accident Avoidance
+#Category: Driver Model
+#FileID  : Run_37bc9db5-d345-4998-8e8b-7f897bd53512
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

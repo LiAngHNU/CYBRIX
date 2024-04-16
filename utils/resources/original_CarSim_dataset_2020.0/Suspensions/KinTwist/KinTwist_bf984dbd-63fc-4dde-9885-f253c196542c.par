@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Suspension: Twist Beam Kinematics (Legacy)`B-Class, Hatchback - Rear (Legacy)`
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 2
+#RingCtrl2 2
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+
+*IW_L 0.09
+*JNC_DESIGN_L 0
+*TOE_L 0
+*CAMBER_L 0.4
+*M_US_IND_L 27.25
+H_RC 165
+R_ROLL_STEER 0.09
+L_TRACK 1485
+Y_CL_SUSP 0
+M_US 54.5
+iside 1
+PARSFILE Suspensions\Dive\Dive_30e7b822-bd9a-4798-82f7-e658c005ce5c.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Twist Beam - Rear` Twist Beam (Legacy, Pre-CS 2018)` , Left wheel dive (caster change)`Dive_30e7b822-bd9a-4798-82f7-e658c005ce5c
+
+PARSFILE Suspensions\Longitudinal\SusX_dde55a22-3115-4fc9-8cca-3c28c0762504.par
+#BlueLink1 Suspension: Longitudinal Movement`Twist Beam` Twist Beam (Legacy, Pre-CS 2018)` , Left wheel X`SusX_dde55a22-3115-4fc9-8cca-3c28c0762504
+
+M_US_IND 27.25
+IW 0.09
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0.4
+
+iside 2
+PARSFILE Suspensions\Dive\Dive_30e7b822-bd9a-4798-82f7-e658c005ce5c.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Twist Beam - Rear` Twist Beam (Legacy, Pre-CS 2018)` , Left wheel dive (caster change)`Dive_30e7b822-bd9a-4798-82f7-e658c005ce5c
+
+PARSFILE Suspensions\Longitudinal\SusX_dde55a22-3115-4fc9-8cca-3c28c0762504.par
+#BlueLink1 Suspension: Longitudinal Movement`Twist Beam` Twist Beam (Legacy, Pre-CS 2018)` , Left wheel X`SusX_dde55a22-3115-4fc9-8cca-3c28c0762504
+
+M_US_IND 27.25
+IW 0.09
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0.4
+
+#EMBEDDED_NOTES
+#Trailing Arm Length = 609 mm
+#
+#Twist beam suspensions have been updated to include lateral spring and damper spacing.  If no value is entered for lateral spring spacing, the track width is used by default.  This data is entered on the Suspension: Twist Beam Compliance screen.
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Twist Beam Kinematics (Legacy); B-Class, Hatchback - Rear (Legacy)
+#Library : Suspension: Twist Beam Kinematics (Legacy)
+#DataSet : B-Class, Hatchback - Rear (Legacy)
+#Category: 
+#FileID  : KinTwist_bf984dbd-63fc-4dde-9885-f253c196542c
+#Product : CarSim 2020.0
+#VehCode Twist beam
+
+END

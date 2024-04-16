@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Generic Group of Links`Animated Pedestrians`ADAS: Moving Objects, incl. Pedestrians
+#VehCode Animated Pedestrian
+PARSFILE Sensors_Traffic\Traffic\TMotion_62ac241a-73f8-456c-a81c-13d3b00d761e.par
+#BlueLink1 Multiple Moving Objects`Animated Pedestrian (Walking)` Pedestrians and Bicyclists` , Miscellaneous`TMotion_62ac241a-73f8-456c-a81c-13d3b00d761e
+
+PARSFILE Sensors_Traffic\Targets\Target_4a3cf14d-9198-4eed-95ae-d4e1c90eb7e7.par
+#BlueLink2 Single Moving Object (Custom)`Animated Pedestrian (Bicycling)` Pedestrians and Bicyclists` , Miscellaneous`Target_4a3cf14d-9198-4eed-95ae-d4e1c90eb7e7
+
+#MiscYellow0
+! restore road settings
+PATH_ID_DM = 1000
+!CURRENT_ROAD_ID = 9998
+#ENDMYellow
+
+PARSFILE Generic\VS_commands\GenVS_8c1daed1-890c-4f63-a9da-5725c10ffcf7.par
+#BlueLink22 Generic VS Commands`Pedestrian Velocity and Station` Plot Groups` , Miscellaneous`GenVS_8c1daed1-890c-4f63-a9da-5725c10ffcf7
+
+*MODELCODE Animated Pedestrian
+
+LOG_ENTRY Used Dataset: Generic Group of Links; { ADAS: Moving Objects, incl. Pedestrians } Animated Pedestrians
+#Library : Generic Group of Links
+#DataSet : Animated Pedestrians
+#Category: ADAS: Moving Objects, incl. Pedestrians
+#FileID  : GenLink_e915cd44-80a1-4324-9f0f-bc1e4491a20d
+#Product : CarSim 2020.0
+#VehCode Animated Pedestrian
+
+END

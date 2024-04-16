@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Multiple Vehicles`Two-Car Platoon`Platooning
+PARSFILE Runs\Run_798d6914-50d8-4b5d-88eb-b5daf168e069.par
+#BlueLink0 CarSim Run Control`Two-Car Platoon: Lead Car` * CS 2020.0 - Platooning` , Vehicle 1:`Run_798d6914-50d8-4b5d-88eb-b5daf168e069
+
+PARSFILE Runs\Run_6e7d31e5-e974-49ab-b5a1-bb3794f9f5ab.par
+#BlueLink1 CarSim Run Control`Two-Car Platoon: Last Car` * CS 2020.0 - Platooning` , Vehicle 2:`Run_6e7d31e5-e974-49ab-b5a1-bb3794f9f5ab
+
+#RingCtrl0 0
+*RUN_PLATFORM 0
+#RingCtrl1 2
+*SHOW_LINK 2
+
+#EMBEDDED_NOTES
+#To run this example in Windows:
+#1) click Open Model or Generate FMU
+#2) in Simulink, click the run button
+#3) review results from Vehicle 2
+#
+#V: Video
+#P: Plot
+#
+#Each vehicle in the platoon uses a shared simulink model that leverages parallel solvers to simulate the vehicles across multiple CarSim Runs.
+#
+#In this example, each vehicle also has painted tire paths, to show the paths of the vehicle.
+#
+#The vehicles following the lead vehicle have negative station values so that they may properly obtain steering reference values from the vehicle(s) in front of them
+#
+#Up to 20 vehicles can be used with this multiple solver example, however you will need enough parallel licenses more than two vehicles
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Vehicles; { Platooning } Two-Car Platoon
+#Library : Multiple Vehicles
+#DataSet : Two-Car Platoon
+#Category: Platooning
+#FileID  : MVeh_caa2bfbc-c478-41ca-a934-887e63b4f553
+#Product : CarSim 2020.0
+#VehCode mVeh
+
+END

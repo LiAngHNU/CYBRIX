@@ -1,0 +1,90 @@
+PARSFILE
+#FullDataName CarSim Run Control`Exotic Racecar, Pedal Force`Brake Tests
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_c75bcc0f-2e75-4055-a139-cbb968a1aa29
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5.par
+#BlueLink0 Animator: Camera Setup`254 Azm, 8 El, 15 m, No Yaw` Vehicle Reference` , Animator camera`Camera_ecdefc4d-7cad-4145-8e71-fe30ae738fd5
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+SET_RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_f7206e07-1aad-46df-a232-7c042adab928.par
+#BlueLink2 Vehicle: Assembly`Exotic Racecar: MT, Pedal Force Brakes` Exotic Sports Car` , Math Model`Vehicle_f7206e07-1aad-46df-a232-7c042adab928
+
+PARSFILE Procedures\Proc_68568516-45a1-4979-94e7-60e02041219d.par
+#BlueLink28 Procedures`Handling Course, Race Driving` Driver Controls` , Procedure`Proc_68568516-45a1-4979-94e7-60e02041219d
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+PARSFILE Generic\VS_commands\GenVS_4d0aa2ec-1afe-44a2-b9ab-daa109a26a34.par
+#BlueLink10 Generic VS Commands`VS Visualizer HUD Handling Course Map` HUD Gauges` , Miscellaneous`GenVS_4d0aa2ec-1afe-44a2-b9ab-daa109a26a34
+
+PARSFILE Generic\VS_commands\GenVS_6e8d6522-115f-41d2-872d-d9f6ec179bba.par
+#BlueLink11 Generic VS Commands`VS Visualizer HUD Handling Course Info` HUD Gauges` , Miscellaneous`GenVS_6e8d6522-115f-41d2-872d-d9f6ec179bba
+
+PARSFILE Plot\Setup\Plot_f4937cea-2692-4dfc-8e17-baabe744f6b6.par
+#BlueLink15 Plot: Setup`Brake Control: Pedal Force vs. Time` Braking` , Plot`Plot_f4937cea-2692-4dfc-8e17-baabe744f6b6
+
+PARSFILE Plot\Setup\Plot_8a69690f-bd88-4cc1-9f87-d1395d5bdd85.par
+#BlueLink16 Plot: Setup`Brake Control: Pedal Force vs. Station` Braking` , Plot`Plot_8a69690f-bd88-4cc1-9f87-d1395d5bdd85
+
+
+SPECIAL_PARSFILE Runs\Run_8b0b94ef-e500-4488-8dab-ea8d8ca56e30.par
+#BlueLink23 CarSim Run Control`HUD, Exotic Racecar, Sound` VS Visualizer Examples` , Overlay run or ERD file`Run_8b0b94ef-e500-4488-8dab-ea8d8ca56e30
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_2c9c151a-13e0-4668-bd91-2b8ea79ed58a.png
+WRITE_SENSOR_DETECT
+Title Exotic Racecar, Pedal Force <Brake Tests>
+CATEGORY Brake Tests 
+DATASET_TITLE Exotic Racecar, Pedal Force
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An Exotic Racecar with a manual transmission, Variable Speed Controller gains, and brake pedal force control on the stand-alone Handling Course.
+#
+#This example is overlayed with an equivalent run in which the car uses Master Cylinder Pressure as the brake system control.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Brake Tests } Exotic Racecar, Pedal Force
+#Library : CarSim Run Control
+#DataSet : Exotic Racecar, Pedal Force
+#Category: Brake Tests
+#FileID  : Run_c75bcc0f-2e75-4055-a139-cbb968a1aa29
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

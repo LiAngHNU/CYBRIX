@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName CarSim Run Control`Lane Departure Warning, Adjacent`ADAS and Active Safety
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_4ae64b94-ad32-45b6-8ba1-9fa38e4dab7a
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_dc48416e-5207-488c-ac1e-befb81183b3f.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 15 El, 30 m` Vehicle Reference` , Animator camera`Camera_dc48416e-5207-488c-ac1e-befb81183b3f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 4
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_75ebaedc-a0dc-4dc7-a161-3bd3362da4b5.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`C-Class Hatchback w/ Lane & Blind-Spot` C-Class` , Math Model`VehLoad_75ebaedc-a0dc-4dc7-a161-3bd3362da4b5
+
+PARSFILE Procedures\Proc_372d46be-24c4-4680-ab9b-49c67337ca44.par
+#BlueLink28 Procedures`Lane Departure, 3 Lane Edges` ADAS and Active Safety` , Procedure`Proc_372d46be-24c4-4680-ab9b-49c67337ca44
+
+PARSFILE Roads\3D_Road\Road_9469fd2b-9552-4e7e-a1af-8621419d94ff.par
+#BlueLink9 Road: 3D Surface (All Properties)`4-Lane Section w/ Environment` Many Lanes` , Miscellaneous`Road_9469fd2b-9552-4e7e-a1af-8621419d94ff
+
+PARSFILE Generic\Group\GenGrp_4d69a071-885d-4b5f-8265-a79900c3bb0a.par
+#BlueLink10 Generic Data Group`Traffic, 2 Lanes Fwd, 1 Lane Opp` ADAS: Traffic for ACC & FCW` , Miscellaneous`GenGrp_4d69a071-885d-4b5f-8265-a79900c3bb0a
+
+PARSFILE Events\Events_8299462e-8a20-4d63-a5e2-206503741fb4.par
+#BlueLink11 Events`1. Lane Drifting Start - Drive Straight` Lane Departure Warning` , Miscellaneous`Events_8299462e-8a20-4d63-a5e2-206503741fb4
+
+PARSFILE Plot\Setup\Plot_274950bb-6467-4738-87b6-000a4d3edbc9.par
+#BlueLink15 Plot: Setup`IDs for Closest 15 Objects, Last Sensor` ADAS Sensor Detections` , Plot`Plot_274950bb-6467-4738-87b6-000a4d3edbc9
+
+PARSFILE Plot\Setup\Plot_cc8dbd2f-410e-4f66-86db-dfd240a451a4.par
+#BlueLink16 Plot: Setup`Mag for Closest 15 Objects, Last Sensor` ADAS Sensor Detections` , Plot`Plot_cc8dbd2f-410e-4f66-86db-dfd240a451a4
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink17 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_4ad16d5d-bcbd-4b85-8b72-719dc7096cd1.par
+#BlueLink18 Plot: Setup`Lateral Tracking` Tracking` , Plot`Plot_4ad16d5d-bcbd-4b85-8b72-719dc7096cd1
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+WRITE_SENSOR_DETECT
+Title Lane Departure Warning, Adjacent <ADAS and Active Safety>
+CATEGORY ADAS and Active Safety 
+DATASET_TITLE Lane Departure Warning, Adjacent
+#MiscYellow0
+set_iltarg_for_id ltarg_id_dm ! DM context
+ltarg_offset =  lane_width/2
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Lane Detection using ADAS Range and Tracking Sensors with Multiple Moving Objects
+#
+#A C-Class Hatchback has a front-facing sensor configured to detect targets down low. Moving point targets are defined to follow lane edges at 5-m intervals in front of the sensor.
+#
+#Lane detection for three edges is defined using LTARG datasets. Traffic vehicles occlude some of the lane edge points.
+#
+#A sequence of Events adjusts the lateral offset target for the Driver Model, causing the vehicle to drift until a correction is generated.
+#
+#The lateral position LTARG_OFFSET is set to half the lane width in the Miscellaneous yellow field on the Run Control screen.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { ADAS and Active Safety } Lane Departure Warning, Adjacent
+#Library : CarSim Run Control
+#DataSet : Lane Departure Warning, Adjacent
+#Category: ADAS and Active Safety
+#FileID  : Run_4ae64b94-ad32-45b6-8ba1-9fa38e4dab7a
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

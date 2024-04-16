@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Events`2. Drift Left`Lane Departure Warning
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+*VALUE1 FixSteer
+#MiscYellow0
+ltarg_coefficient(1) = 0.01
+SSTART_LTARG(1) = Station
+#ENDMYellow
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+DEFINE_EVENT FixSteer ; Events\Events_535aa625-1e5a-4c3e-ad20-eb243a6b6d73.par
+#BlueLink0 Events`3. Steer Back into Lane` Lane Departure Warning` , Events`Events_535aa625-1e5a-4c3e-ad20-eb243a6b6d73
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Lane Departure Warning } 2. Drift Left
+#Library : Events
+#DataSet : 2. Drift Left
+#Category: Lane Departure Warning
+#FileID  : Events_e8efaf5f-a81b-470f-a187-09348e0db569
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

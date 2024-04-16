@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Steer vs. Jounce - Front`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Jnc_L1, Steer_L1
+PLOTCHANNELS Jnc_R1, Steer_R1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Steer vs. Jounce - Front
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Steer vs. Jounce - Front
+#Library : Plot: Setup
+#DataSet : Steer vs. Jounce - Front
+#Category: Suspension Motion
+#FileID  : Plot_1d658b7a-d95c-4dcb-a910-5060d28ca6d2
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

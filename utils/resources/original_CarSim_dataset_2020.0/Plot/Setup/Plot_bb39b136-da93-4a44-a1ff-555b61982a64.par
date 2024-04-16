@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Stop Mode, Current Object`User-Defined Variables
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Stop_<<o>>, S_Obj_<<o>>
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Stop Mode, Current Object
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Stop Mode, Current Object
+#Library : Plot: Setup
+#DataSet : Stop Mode, Current Object
+#Category: User-Defined Variables
+#FileID  : Plot_bb39b136-da93-4a44-a1ff-555b61982a64
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

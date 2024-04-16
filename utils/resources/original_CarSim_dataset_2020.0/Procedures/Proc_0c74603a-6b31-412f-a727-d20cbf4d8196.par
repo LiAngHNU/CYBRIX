@@ -1,0 +1,111 @@
+PARSFILE
+#FullDataName Procedures`Constant Speed, Road w/ Roughness`Driving
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 10
+SSTOP 320
+OPT_DIRECTION 0
+*SPEED 50
+*TSTOP 10
+*TSTART 0
+*SSTART 0
+*SSTOP 320
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: Constant Speed, Road w/ Roughness
+SPEED_TARGET_CONSTANT 50
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Driver\StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`0.4 sec. Single Preview` Constant Position: No Offset` , Steering`StrDM_6bec9717-49f4-4c9c-8644-b5e0a402a44d
+
+PARSFILE Control\Braking\PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_bf4961f4-c4cf-4b18-a8f7-5f65e31ecd3f
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Roads\3D_Road\Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2.par
+#BlueLink0 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2
+
+PARSFILE Roads\Profiles\Profile_3bff0c88-84c1-408a-843d-956a1e2abe43.par
+#BlueLink1 Surface: Roughness Profiles`Example Road Roughness` ` , Miscellaneous`Profile_3bff0c88-84c1-408a-843d-956a1e2abe43
+
+PARSFILE Generic\Group\GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a.par
+#BlueLink2 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Miscellaneous`GenGrp_c11e4bbe-5e3a-4498-91a5-6c42d1db378a
+
+PARSFILE Plot\Setup\Plot_d680a116-2530-4566-80e7-0dfa293cd7ae.par
+#BlueLink8 Plot: Setup`Ground Elevation vs. Station` Ground` , Plot`Plot_d680a116-2530-4566-80e7-0dfa293cd7ae
+
+PARSFILE Plot\Setup\Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f.par
+#BlueLink9 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f
+
+PARSFILE Plot\Setup\Plot_6480bda8-8a2c-47e4-af8c-16140f47b086.par
+#BlueLink10 Plot: Setup`Road Wheel Steer Angles` Steering` , Plot`Plot_6480bda8-8a2c-47e4-af8c-16140f47b086
+
+PARSFILE Plot\Setup\Plot_076736e1-2cdd-49d5-8a36-d55940b011f0.par
+#BlueLink11 Plot: Setup`Steering: Handwheel Angle` Steering` , Plot`Plot_076736e1-2cdd-49d5-8a36-d55940b011f0
+
+PARSFILE Plot\Setup\Plot_ec025d1b-deea-4ce8-a1c0-4fc60a992239.par
+#BlueLink12 Plot: Setup`Kingpin Torque` Steering` , Plot`Plot_ec025d1b-deea-4ce8-a1c0-4fc60a992239
+
+PARSFILE Plot\Setup\Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab.par
+#BlueLink13 Plot: Setup`Steer Torque` Steering` , Plot`Plot_986ce074-9acb-4be0-8bd7-ac8e03eb16ab
+
+PARSFILE Plot\Setup\Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59.par
+#BlueLink14 Plot: Setup`Jounce - Front` Suspension Motion` , Plot`Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59
+
+PARSFILE Plot\Setup\Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d.par
+#BlueLink15 Plot: Setup`Jounce - Rear` Suspension Motion` , Plot`Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink16 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+PARSFILE Plot\Setup\Plot_1351817f-3ec4-4d44-b977-d9d4f9bb7e7b.par
+#BlueLink17 Plot: Setup`Vertical Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_1351817f-3ec4-4d44-b977-d9d4f9bb7e7b
+
+PARSFILE Plot\Setup\Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c.par
+#BlueLink18 Plot: Setup`Pitch Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_881b430b-dfba-4afc-a6ce-ff0d76b1c26c
+
+PARSFILE Plot\Setup\Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979.par
+#BlueLink19 Plot: Setup`Roll Angle of Sprung Masses vs. Time` Vehicle Motion` , Plot`Plot_2865bd77-14b2-4e51-9c7f-3484aa98e979
+
+PARSFILE Plot\Setup\Plot_0ca06a5e-1f85-4eef-a02e-4457ccf18ce7.par
+#BlueLink20 Plot: Setup`Sprung Mass Origin Vertical Position` Tracking` , Plot`Plot_0ca06a5e-1f85-4eef-a02e-4457ccf18ce7
+
+PARSFILE Plot\Setup\Plot_d680a116-2530-4566-80e7-0dfa293cd7ae.par
+#BlueLink21 Plot: Setup`Ground Elevation vs. Station` Ground` , Plot`Plot_d680a116-2530-4566-80e7-0dfa293cd7ae
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a vehicle driving down a straight road at a constant speed with the addition of road roughness.
+#
+#Road Roughness can be applied to any road in CarSim and is defined using the "Surface: Roughness Profiles" screen. The roughness profiles are defined for each vehicle track (i.e., one for the left wheels, one for the right) and are elevations of the road added under the tires. This means they follow the vehicle's path rather than being applied to the entire road surface.
+#
+#Note that there are no road animation shapes associated with the roughness profiles. This means that large values of roughness can result in the appearance of the vehicle travelling above or below the surface of the animated road surface.
+#
+#For more information, click on the roughness profile dataset "Example Road Roughness."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Driving } Constant Speed, Road w/ Roughness
+#Library : Procedures
+#DataSet : Constant Speed, Road w/ Roughness
+#Category: Driving
+#FileID  : Proc_0c74603a-6b31-412f-a727-d20cbf4d8196
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

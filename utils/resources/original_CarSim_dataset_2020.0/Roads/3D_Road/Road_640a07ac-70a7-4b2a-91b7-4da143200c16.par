@@ -1,0 +1,308 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`20 m Wide Pad, 5 m Grid, Mu = 0.85`Flat Test Pads
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_640a07ac-70a7-4b2a-91b7-4da143200c16.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 20 m Wide Pad, 5 m Grid, Mu = 0.85
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_a4743abb-8e2f-4533-baf3-37ec2c554afd.par
+#BlueLink4 Road: Animator Surface Shapes`5-m Grid` 3D Grid` , Road shape definitions`RdShape_a4743abb-8e2f-4533-baf3-37ec2c554afd
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+add_reference_frame road_stuff_7_Trees_(-100,_400)
+reference_frame_ghosts off
+PARSFILE Roads\AniGroup\AniRep_4d17b50f-122e-4db4-984d-68640daf38b7.par
+#BlueLink7 Road: Animator Repeated Object`Trees (-100, 400)` Trees` , 3D Shapes`AniRep_4d17b50f-122e-4db4-984d-68640daf38b7
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_640a07ac-70a7-4b2a-91b7-4da143200c16.ani
+
+add_reference_frame road_stuff_1_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -99.5
+set_offset_var_y -33
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_2_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -81.8
+set_offset_var_y 35.55
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_3_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -52.2
+set_offset_var_y -27.6
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_4_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -37.6
+set_offset_var_y 32.1
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_5_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x -24.1
+set_offset_var_y -30.75
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_6_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x -9.1
+set_offset_var_y 34.95
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_7_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 38.4
+set_offset_var_y -22.8
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_8_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 52.3
+set_offset_var_y 36.45
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_9_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 67
+set_offset_var_y -30.9
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_10_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 83.6
+set_offset_var_y 34.2
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_11_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 95.5
+set_offset_var_y -24.75
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_12_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 110.6
+set_offset_var_y 24
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_13_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 128.7
+set_offset_var_y -32.1
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_14_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 142.8
+set_offset_var_y 35.1
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_15_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 156
+set_offset_var_y -32.85
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_16_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 172.4
+set_offset_var_y 22.8
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_17_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 188.5
+set_offset_var_y -24.45
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_18_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 203
+set_offset_var_y 33
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_19_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 217.1
+set_offset_var_y -28.95
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_20_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 233.8
+set_offset_var_y 28.5
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_21_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 248.3
+set_offset_var_y -36
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_22_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 262.4
+set_offset_var_y 24.9
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_23_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 277.3
+set_offset_var_y -26.7
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_24_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 293.7
+set_offset_var_y 28.35
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_25_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 307
+set_offset_var_y -34.65
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_26_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 320.6
+set_offset_var_y 35.85
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_27_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 336.7
+set_offset_var_y -31.35
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_28_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 350.5
+set_offset_var_y 31.95
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_29_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 367.2
+set_offset_var_y -31.8
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_30_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 180
+set_offset_var_x 381.6
+set_offset_var_y 27.45
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+add_reference_frame road_stuff_31_2_Elm:_Summer,_Small
+reference_frame_ghosts off
+set_offset_var_yaw 0
+set_offset_var_x 397.8
+set_offset_var_y -28.65
+set_offset_var_z 0
+parsfile Animator\STL\Shape_a1860187-937f-4a26-bbf6-484e7ce439e3.par
+
+#EMBEDDED_NOTES
+#This is a flat level surface. A road is defined going east, such that global X = road station and global Y= road lateral coordinate L. Animator shapes are defined to show a 5 m grid for a test pad 20 m wide.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Flat Test Pads } 20 m Wide Pad, 5 m Grid, Mu = 0.85
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 20 m Wide Pad, 5 m Grid, Mu = 0.85
+#Category: Flat Test Pads
+#FileID  : Road_640a07ac-70a7-4b2a-91b7-4da143200c16
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

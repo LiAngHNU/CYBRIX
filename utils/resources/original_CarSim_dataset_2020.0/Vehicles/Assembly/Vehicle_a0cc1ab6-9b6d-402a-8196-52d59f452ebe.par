@@ -1,0 +1,111 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`D-Class, Sedan (Transparent)`D-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_a9f35dbf-b99a-4ebd-b214-0d37152bc6a3.par
+#BlueLink7 Steering`D-Class, Sdn: Power, R&P` CS D-Class` , Steering System`StrSys2_a9f35dbf-b99a-4ebd-b214-0d37152bc6a3
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_32f3439f-19f8-48df-b98a-6dbbda4aa6d7.par
+#BlueLink19 Suspension: Independent System Kinematics`D-Class, Sedan - Front` D-Class` , Kinematics`KinInd_32f3439f-19f8-48df-b98a-6dbbda4aa6d7
+
+PARSFILE Suspensions\Compliance\CmpInd_da70ea08-7da6-41b8-b80c-19fad9f297e0.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`D-Class, Sdn - Front` D-Class` , Compliance`CmpInd_da70ea08-7da6-41b8-b80c-19fad9f297e0
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7.par
+#BlueLink999 Tire`215/55 R17` Touring Tires` , Tire`Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7.par
+#BlueLink10 Tire`215/55 R17` Touring Tires` , Tire`Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_4c381c6c-f7fa-461a-8ebd-ad04f6225cdb.par
+#BlueLink20 Suspension: Independent System Kinematics`D-Class, Sedan - Rear` D-Class` , Kinematics`KinInd_4c381c6c-f7fa-461a-8ebd-ad04f6225cdb
+
+PARSFILE Suspensions\Compliance\CmpInd_39df7721-d21a-4116-ba8e-45be4d71ba08.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`D-Class, Sdn - Rear` D-Class` , Compliance`CmpInd_39df7721-d21a-4116-ba8e-45be4d71ba08
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7.par
+#BlueLink999 Tire`215/55 R17` Touring Tires` , Tire`Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7.par
+#BlueLink999 Tire`215/55 R17` Touring Tires` , Tire`Tire_a4933b6c-5f40-41ae-b564-99a89f2f99c7
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_b2807616-8bbe-4431-8fdb-70b7f9ab9b73.par
+#BlueLink0 Vehicle: Sprung Mass`D-Class, Sedan` D-Class` , Sprung Mass`SprMass_b2807616-8bbe-4431-8fdb-70b7f9ab9b73
+
+PARSFILE Aerodynamics\Aero_Main\Aero_a610d4fd-9cf5-4ffa-90af-33c3c3fe903c.par
+#BlueLink1 Aerodynamics: Basic`D-Class, Sedan Aero` D-Class` , Aerodynamics`Aero_a610d4fd-9cf5-4ffa-90af-33c3c3fe903c
+
+R_REAR_DRIVE_SC 0
+PMAX_SC 201
+PARSFILE Powertrain\4wd\4WD_c56301fc-5823-4528-95fd-9249f87d2cf1.par
+#BlueLink5 Powertrain: 4-Wheel Drive`150 kW, 6-spd., 4.1 Ratio` 150 kW Powertrains` , Powertrain`4WD_c56301fc-5823-4528-95fd-9249f87d2cf1
+
+PARSFILE Brakes\4W_System\Brk4W_f138e0c2-eba6-485e-be4c-6ea1d747f4a1.par
+#BlueLink6 Brakes: Four-Wheel System`(Sdn): MC Press, ABS` D-Class` , Brake System`Brk4W_f138e0c2-eba6-485e-be4c-6ea1d747f4a1
+
+PARSFILE Animator\Vehicles\AniVeh_f2dbf3b6-68ed-4f69-9064-eaa72ebcf53c.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Euro Sedan (Transparent)` D-Class` , Vehicle 3D Shape`AniVeh_f2dbf3b6-68ed-4f69-9064-eaa72ebcf53c
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_f2dbf3b6-68ed-4f69-9064-eaa72ebcf53c.png
+
+#EMBEDDED_NOTES
+#Generic D-Class Sedan (Mid-Size) with Strut front and Tri-Link Strut rear suspension.
+#
+#D-Class vehicles include the Alfa Romeo 159, Audi A4, BMW 3 Series, Cadillac CTS, Lexus IS, and Mercedes-Benz C-Class.
+#
+#This vehicle's shape has been made transparent and no interior animation shapes are linked.
+#
+#Updated for CarSim 2017:  Revised the steering system parameters.  Tested for: On-Center, Static Steer, and Free Response Stability.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { D-Class } D-Class, Sedan (Transparent)
+#Library : Vehicle: Assembly
+#DataSet : D-Class, Sedan (Transparent)
+#Category: D-Class
+#FileID  : Vehicle_a0cc1ab6-9b6d-402a-8196-52d59f452ebe
+#Product : CarSim 2020.0
+#VehCode Ind_Ind
+
+END

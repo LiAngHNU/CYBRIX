@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Pedestrian Waiting (Asian Female)`Pedestrians
+ADD_REFERENCE_FRAME Frame_76f67036-da64-4d32-abd2-f8634f8fba01
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_Obj_<<o>>
+SET_Y_NAME Y_Obj_<<o>>
+SET_Z_NAME Z_Obj_<<o>>
+SET_YAW_NAME YawO_<<o>>
+SET_FRAME_VISIBLE_NAME ~v_obj_<<o>>
+
+PARSFILE Animator\STL\Shape_edcacf74-ee4d-4a9e-ac2e-e86a2f91926a.par
+#BlueLink0 Animator: Shape File Link`Asian Female: Idle` Environment: Pedestrians (Animated)` , Animator Data`Shape_edcacf74-ee4d-4a9e-ac2e-e86a2f91926a
+
+#MiscYellow0
+wrt_v_obj_<<o>>
+ani_v_obj_<<o>>
+#ENDMYellow
+
+WRT_X_Obj_<<o>>
+ANI_X_Obj_<<o>>
+WRT_Y_Obj_<<o>>
+ANI_Y_Obj_<<o>>
+WRT_Z_Obj_<<o>>
+ANI_Z_Obj_<<o>>
+WRT_YawO_<<o>>
+ANI_YawO_<<o>>
+WRT_~v_obj_<<o>>
+ANI_~v_obj_<<o>>
+
+#EMBEDDED_NOTES
+#Reference frame for waiting pedestrian with location attached to current moving object <<o>>.
+#
+#Jan 2019: use formula for visibility variable.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Pedestrians } Pedestrian Waiting (Asian Female)
+#Library : Animator: Reference Frame
+#DataSet : Pedestrian Waiting (Asian Female)
+#Category: Pedestrians
+#FileID  : Frame_76f67036-da64-4d32-abd2-f8634f8fba01
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

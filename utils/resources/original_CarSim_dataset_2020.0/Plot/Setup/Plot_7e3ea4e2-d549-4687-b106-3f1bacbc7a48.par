@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Plot: Setup`AEB: Longitudinal Speeds`ADAS and AEB Alerts and Commands
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx, Time
+PLOTCHANNELS VxTarget, Time
+PLOTCHANNELS Vx_EVT, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE AEB: Longitudinal Speeds
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS and AEB Alerts and Commands } AEB: Longitudinal Speeds
+#Library : Plot: Setup
+#DataSet : AEB: Longitudinal Speeds
+#Category: ADAS and AEB Alerts and Commands
+#FileID  : Plot_7e3ea4e2-d549-4687-b106-3f1bacbc7a48
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

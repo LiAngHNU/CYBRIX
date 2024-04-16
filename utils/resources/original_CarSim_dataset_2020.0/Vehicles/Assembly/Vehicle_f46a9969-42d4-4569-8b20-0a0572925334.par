@@ -1,0 +1,107 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Utility Truck`Utility Vehicles
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 2
+OPT_PT 2
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_53515216-2d4d-4852-aacd-4c6ae0bc8dbd.par
+#BlueLink7 Steering`Pickup, Compact: Power, Recirc. Ball` Pickup Trucks` , Steering System`StrSys2_53515216-2d4d-4852-aacd-4c6ae0bc8dbd
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_0f1f72c7-8fc4-4842-9c0b-418e3c154ded.par
+#BlueLink19 Suspension: Independent System Kinematics`Utility Truck - Front` Utility Vehicles: SUVs and Vans` , Kinematics`KinInd_0f1f72c7-8fc4-4842-9c0b-418e3c154ded
+
+PARSFILE Suspensions\Compliance\CmpInd_20f124fb-1078-42c5-8027-6c6a4379d786.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Utility Truck - Front` Utility Vehicles: SUVs and Vans` , Compliance`CmpInd_20f124fb-1078-42c5-8027-6c6a4379d786
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_743136f5-e2e5-4d3f-bc2c-bd7c699c161f.par
+#BlueLink999 Tire`175/70R13 (Pacejka 5.2, Symmetric)` PAC52 Tire Model` , Tire`Tire_743136f5-e2e5-4d3f-bc2c-bd7c699c161f
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_743136f5-e2e5-4d3f-bc2c-bd7c699c161f.par
+#BlueLink10 Tire`175/70R13 (Pacejka 5.2, Symmetric)` PAC52 Tire Model` , Tire`Tire_743136f5-e2e5-4d3f-bc2c-bd7c699c161f
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_77f53793-0fa2-4e1b-8b75-27a6076a2298.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`Utility Truck - Rear` Utility Vehicles: SUVs and Vans` , Kinematics`KinSA_77f53793-0fa2-4e1b-8b75-27a6076a2298
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_0964123e-d1d8-4800-8d40-20e743b65898.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Utility Truck - Rear` Utility Vehicles: SUVs and Vans` , Compliance`CmpSA_0964123e-d1d8-4800-8d40-20e743b65898
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_743136f5-e2e5-4d3f-bc2c-bd7c699c161f.par
+#BlueLink999 Tire`175/70R13 (Pacejka 5.2, Symmetric)` PAC52 Tire Model` , Tire`Tire_743136f5-e2e5-4d3f-bc2c-bd7c699c161f
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_743136f5-e2e5-4d3f-bc2c-bd7c699c161f.par
+#BlueLink999 Tire`175/70R13 (Pacejka 5.2, Symmetric)` PAC52 Tire Model` , Tire`Tire_743136f5-e2e5-4d3f-bc2c-bd7c699c161f
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_b6a7533c-9151-4e82-a5b6-52ad83c607aa.par
+#BlueLink0 Vehicle: Sprung Mass`Compact Utility Truck` Utility Vehicles: SUVs and Vans` , Sprung Mass`SprMass_b6a7533c-9151-4e82-a5b6-52ad83c607aa
+
+PARSFILE Aerodynamics\Aero_Main\Aero_3479bdf1-b57e-4404-97d9-41c21f83ddb4.par
+#BlueLink1 Aerodynamics: Basic`No Aerodynamics` Generic Aerodynamic Properties` , Aerodynamics`Aero_3479bdf1-b57e-4404-97d9-41c21f83ddb4
+
+R_REAR_DRIVE_SC 1.0
+PMAX_SC 40
+PARSFILE Powertrain\Rwd\RWD_da815b40-6898-4198-829f-1268ac9b3049.par
+#BlueLink4 Powertrain: Rear-Wheel Drive`32 kW, 5 Speed MT` 32 kW Powertrains` , Powertrain`RWD_da815b40-6898-4198-829f-1268ac9b3049
+
+PARSFILE Brakes\4W_System\Brk4W_fe782403-49f0-41fe-9d31-b3b1cb8e31da.par
+#BlueLink6 Brakes: Four-Wheel System`(Hbk): MC Press, No ABS` A-Class` , Brake System`Brk4W_fe782403-49f0-41fe-9d31-b3b1cb8e31da
+
+PARSFILE Animator\Vehicles\AniVeh_eb6ed7de-9512-49f3-81cc-37823cfd4a3b.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Utility Truck` Utility Vehicles: SUVs and Vans` , Vehicle 3D Shape`AniVeh_eb6ed7de-9512-49f3-81cc-37823cfd4a3b
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_eb6ed7de-9512-49f3-81cc-37823cfd4a3b.png
+
+#EMBEDDED_NOTES
+#This example demonstrates a generic small utility truck with an independent front and solid axle rear suspension.
+#
+#Note that PAC52 screen is used to represent the tire data. This tire representation means the vehicle cannot be in used in a simulation that specifies an initial vehicle speed of 0 kph. However, small non-zero values (i.e., 0.001 kph) may be used.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Utility Vehicles } Utility Truck
+#Library : Vehicle: Assembly
+#DataSet : Utility Truck
+#Category: Utility Vehicles
+#FileID  : Vehicle_f46a9969-42d4-4569-8b20-0a0572925334
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

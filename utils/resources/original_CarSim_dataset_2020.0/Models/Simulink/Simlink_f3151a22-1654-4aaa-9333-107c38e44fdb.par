@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Models: Simulink`Camera Sensor`Live Video
+#RunMdlFile Extensions\Simulink\Camera_Sensor_CS2017.slx
+SIMULINK_MODEL_FILE Extensions\Simulink\Camera_Sensor_CS2017.slx
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.001
+iprint 25
+#MiscYellow0
+LIVE_SERVER localhost
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+#ENDMYellow
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This dataset links to a Simulink camera sensor model with an image processing to detect number of other cars on traffic and headway distance to a front vehicle.
+#
+#The camera sensor's image information is passed to the Simulink model, and headway distance and number of other cars are ditected by an image processing
+#
+#(Computer Vision System Toolbox is required).
+#
+#In this case, the time step is set at 0.001, the method is AM-2, and the option is checked to communicate with Simulink at an interval of 1/2 the time step (i.e., 0.0005 sec).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Live Video } Camera Sensor
+#Library : Models: Simulink
+#DataSet : Camera Sensor
+#Category: Live Video
+#FileID  : Simlink_f3151a22-1654-4aaa-9333-107c38e44fdb
+#Product : CarSim 2020.0
+#VehCode 
+
+END

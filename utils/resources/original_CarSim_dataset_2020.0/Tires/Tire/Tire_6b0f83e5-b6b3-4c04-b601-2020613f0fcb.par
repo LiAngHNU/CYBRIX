@@ -1,0 +1,84 @@
+PARSFILE
+#FullDataName Tire`Example Extended Tire`Extended Tire Model
+FZ_REF 5500
+X_LENGTH 301
+Z_LENGTH 301
+Y_LENGTH 205
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 6
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 6
+
+PARSFILE Animator\STL_Groups\ShpGrp_27c591f4-b392-4dda-bdc3-c1e97b86f0f5.par
+#BlueLink4 Animator: Shape Assembly`Big Car` Tires` , Animator`ShpGrp_27c591f4-b392-4dda-bdc3-c1e97b86f0f5
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 205
+RRE 296
+R0 301
+FZ_TIRE_COEFFICIENT 230
+FZ_MAX 100000
+M_TIRE 18
+IT 0.6
+IT_XXZZ 1
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 85
+L_CONTACT_Y_CONSTANT 205
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_0b888c63-3664-4deb-93d7-b428048d81b5.par
+#BlueLink0 Tire: Aligning Moment`Extended Tire Models` Extended` , Aligning Moment`TireMz_0b888c63-3664-4deb-93d7-b428048d81b5
+
+PARSFILE Tires\Fy\TireFy_2cfb438d-6559-4b2e-ae45-b27cda192291.par
+#BlueLink1 Tire: Lateral Force`Extended Tire` Extended` , Lateral Force`TireFy_2cfb438d-6559-4b2e-ae45-b27cda192291
+
+PARSFILE Tires\Fx\TireFx_6f4395b6-de2a-4ca6-93fd-614e171b60af.par
+#BlueLink2 Tire: Longitudinal Force`Extended Tire` Extended` , Longitudinal Force`TireFx_6f4395b6-de2a-4ca6-93fd-614e171b60af
+
+PARSFILE Tires\FyC\TireFyC_33d52156-5867-4432-9baf-fa5e34a2c882.par
+#BlueLink6 Tire: Lateral Force vs. Inclination`Extended Tire` ` , Lateral Force vs Gamma`TireFyC_33d52156-5867-4432-9baf-fa5e34a2c882
+
+PARSFILE Tires\MzC\TireMzC_d548fe88-45f6-4f81-a3e5-576b5af9bd23.par
+#BlueLink7 Tire: Aligning Moment vs. Inclination`Extended Tire` ` , Aligning Moment vs Gamma`TireMzC_d548fe88-45f6-4f81-a3e5-576b5af9bd23
+
+PARSFILE Tires\Mx\TireMx_8af2ee31-f73f-4b60-9309-74eb2fe4564b.par
+#BlueLink8 Tire: Overturning Moment`Extended Tire` ` , Overturning moment`TireMx_8af2ee31-f73f-4b60-9309-74eb2fe4564b
+
+PARSFILE Tires\MxC\TireMxC_f296fb62-d95d-4bf5-885b-047eb486c817.par
+#BlueLink9 Tire: Overturning Moment vs. Inclination`Extended Tire` ` , Overturning Moment vs Gamma`TireMxC_f296fb62-d95d-4bf5-885b-047eb486c817
+
+
+
+#EMBEDDED_NOTES
+#Example of a tire using the CarSim Internal Tire Model with Camber Extensions.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Extended Tire Model } Example Extended Tire
+#Library : Tire
+#DataSet : Example Extended Tire
+#Category: Extended Tire Model
+#FileID  : Tire_6b0f83e5-b6b3-4c04-b601-2020613f0fcb
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

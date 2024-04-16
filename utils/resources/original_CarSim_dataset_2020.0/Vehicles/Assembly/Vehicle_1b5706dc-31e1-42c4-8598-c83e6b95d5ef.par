@@ -1,0 +1,107 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`Pickup, Midsize: Part-Time 4WD (in 2WD)`Pickup Trucks
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_13379a4a-c670-4950-9a64-cab93afc8eab.par
+#BlueLink7 Steering`Pickup, Mid: Power, R&P` Pickup Trucks` , Steering System`StrSys2_13379a4a-c670-4950-9a64-cab93afc8eab
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_7eb894a6-45e7-462b-946d-98172e6ad5af.par
+#BlueLink19 Suspension: Independent System Kinematics`Pickup, Midsize - Front` Pickup Trucks` , Kinematics`KinInd_7eb894a6-45e7-462b-946d-98172e6ad5af
+
+PARSFILE Suspensions\Compliance\CmpInd_a34b2265-f23e-40be-a7d6-c1e225f3fe24.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`Pickup, Compact - Front` Pickup Trucks` , Compliance`CmpInd_a34b2265-f23e-40be-a7d6-c1e225f3fe24
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_d19681ed-f0d0-4d82-855c-4aefcfbc7b0a.par
+#BlueLink999 Tire`255/75 R16` Touring Tires` , Tire`Tire_d19681ed-f0d0-4d82-855c-4aefcfbc7b0a
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_d19681ed-f0d0-4d82-855c-4aefcfbc7b0a.par
+#BlueLink10 Tire`255/75 R16` Touring Tires` , Tire`Tire_d19681ed-f0d0-4d82-855c-4aefcfbc7b0a
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_c732aca8-da88-41a8-89cd-b0289f638dfe.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`Pickup, Midsize - Rear` Pickup Trucks` , Kinematics`KinSA_c732aca8-da88-41a8-89cd-b0289f638dfe
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_ca3da429-1395-46b6-9a87-5587e3f77800.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`Pickup, Compact - Rear` Pickup Trucks` , Compliance`CmpSA_ca3da429-1395-46b6-9a87-5587e3f77800
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_d19681ed-f0d0-4d82-855c-4aefcfbc7b0a.par
+#BlueLink999 Tire`255/75 R16` Touring Tires` , Tire`Tire_d19681ed-f0d0-4d82-855c-4aefcfbc7b0a
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_d19681ed-f0d0-4d82-855c-4aefcfbc7b0a.par
+#BlueLink999 Tire`255/75 R16` Touring Tires` , Tire`Tire_d19681ed-f0d0-4d82-855c-4aefcfbc7b0a
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Total_Mass\TotMass_01512d16-b2c0-41f8-a16e-73a2307cd77c.par
+#BlueLink0 Vehicle: Sprung Mass (from Whole Vehicle)`Pickup, Midsize` ` , Sprung Mass`TotMass_01512d16-b2c0-41f8-a16e-73a2307cd77c
+
+PARSFILE Aerodynamics\Aero_Main\Aero_f2c5b86f-1432-4de1-8afe-47fce77912fe.par
+#BlueLink1 Aerodynamics: Basic`Mid-Size Pickup (3261 mm wheelbase)` Pickup Trucks` , Aerodynamics`Aero_f2c5b86f-1432-4de1-8afe-47fce77912fe
+
+PARSFILE Powertrain\4wd\4WD_f4ff59db-6f39-4a73-9ff9-72a7f06701d9.par
+#BlueLink5 Powertrain: 4-Wheel Drive`200 kW, 6-spd, 4.1 Ratio, Open Diffs, 2WD` 200 kW Powertrains` , Powertrain`4WD_f4ff59db-6f39-4a73-9ff9-72a7f06701d9
+
+PARSFILE Brakes\4W_System\Brk4W_741784e7-899e-454b-b6d2-b395135bb215.par
+#BlueLink6 Brakes: Four-Wheel System`Pickup (Comp): MC Press, ABS` Pickup Trucks` , Brake System`Brk4W_741784e7-899e-454b-b6d2-b395135bb215
+
+PARSFILE Animator\Vehicles\AniVeh_8c1ef862-f575-48ef-bc5c-245201b31c42.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`Pickup, Midsize: Regular Cab` Pickup Trucks` , Vehicle 3D Shape`AniVeh_8c1ef862-f575-48ef-bc5c-245201b31c42
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle_1b5706dc-31e1-42c4-8598-c83e6b95d5ef.png
+
+#EMBEDDED_NOTES
+#Generic midsize pickup truck with 3261 mm wheelbase, an SLA front suspension, and a leaf-sprung solid axle rear suspension.
+#
+#Production vehicles similar in size include the extended cab versions of the 2015+ Chevrolet Colorado and 2005+Toyota Tacoma.
+#
+#The linked 4WD powertrain is configured as part-time and set to 2WD.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Pickup Trucks } Pickup, Midsize: Part-Time 4WD (in 2WD)
+#Library : Vehicle: Assembly
+#DataSet : Pickup, Midsize: Part-Time 4WD (in 2WD)
+#Category: Pickup Trucks
+#FileID  : Vehicle_1b5706dc-31e1-42c4-8598-c83e6b95d5ef
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

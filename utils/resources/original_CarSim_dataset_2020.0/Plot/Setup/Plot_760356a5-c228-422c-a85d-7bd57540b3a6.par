@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`GPS Altitude`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS GPS_Altitude, station
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE GPS Altitude
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } GPS Altitude
+#Library : Plot: Setup
+#DataSet : GPS Altitude
+#Category: Tracking
+#FileID  : Plot_760356a5-c228-422c-a85d-7bd57540b3a6
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

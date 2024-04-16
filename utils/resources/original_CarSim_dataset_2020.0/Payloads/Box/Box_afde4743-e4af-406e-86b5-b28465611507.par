@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Payload: Box Shape`Rental Trailer`Trailers
+DEFINE_PAYLOADS 1
+ILOAD = NLOAD
+OPT_PL_BODY_ID = IUNIT
+SET_DESCRIPTION PAYLOAD_NAME Rental Trailer
+*X_LENGTH 600
+*Y_LENGTH 800
+*Z_LENGTH 400
+Y_CG_PL 0
+H_BOX_BOTTOM 700
+LX_CG_PL 2500
+M_PL 200
+*SET_COLOR 0.6 0 0
+
+#CheckBox0 1    
+
+H_CG_PL 900.00
+IXX_PL 13.33
+IYY_PL 8.67
+IZZ_PL 16.67
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+WRITE_ADD_REFERENCE_FRAME_BODY
+add_obj Payloads\Box\Box_afde4743-e4af-406e-86b5-b28465611507.obj
+show_front on
+show_back off
+set_color 0.6 0 0
+
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Trailers } Rental Trailer
+#Library : Payload: Box Shape
+#DataSet : Rental Trailer
+#Category: Trailers
+#FileID  : Box_afde4743-e4af-406e-86b5-b28465611507
+#Product : CarSim 2020.0
+#VehCode Payload: Box
+
+END

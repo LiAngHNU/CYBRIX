@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Models: Simulink`Pedestrian Detection`Live Video
+#RunMdlFile Extensions\Simulink\Pedestrian_Detection_CS2018.slx
+SIMULINK_MODEL_FILE Extensions\Simulink\Pedestrian_Detection_CS2018.slx
+#RingCtrl0 -1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 0
+OPT_INT_METHOD 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.0005
+iprint 50
+#MiscYellow0
+LIVE_SERVER localhost
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+#ENDMYellow
+
+PARSFILE IO_Channels\I_Channels\Import_a61e4868-ab9c-4f19-b9d6-16403e9cb817.par
+#BlueLink0 I/O Channels: Import`Brake Control from Camera Sensor` Brake System: Control and External Models` , Import`Import_a61e4868-ab9c-4f19-b9d6-16403e9cb817
+
+PARSFILE IO_Channels\O_Channels\Export_7dbd2490-8152-422b-95dd-2aa6499f7eac.par
+#BlueLink1 I/O Channels: Export`Vehicle Speed: Vxz_Fwd` Brake System: Control and External Models` , Import/Export`Export_7dbd2490-8152-422b-95dd-2aa6499f7eac
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#This dataset links to a Simulink camera sensor model with an image processing to detect the pedestrian
+#
+#The camera sensor's image information is passed to the Simulink model, and the distance to the pedestrian and the time to collision is calculated using an image processing
+#
+#Matlab 2017a is required.
+#(Computer Vision System Toolbox is also required).
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Live Video } Pedestrian Detection
+#Library : Models: Simulink
+#DataSet : Pedestrian Detection
+#Category: Live Video
+#FileID  : Simlink_b18f5f5f-1e7f-4397-9f34-a154dad6ac11
+#Product : CarSim 2020.0
+#VehCode 
+
+END

@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Procedures`Japanese Signs, Shrubbery`Road Networks
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 1
+OPT_STOP 1
+TSTART 0
+SSTART -100
+TSTART_WRITE = 0;
+TSTOP 80
+SSTOP 300
+OPT_DIRECTION 0
+*SPEED 120
+*TSTOP 80
+*TSTART 0
+*SSTART -100
+*SSTOP 300
+
+PARSFILE Control\Driver\StrDM_713e85af-f02b-4f45-9bc5-afa21c650bd8.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`2m Left, Variable Preview` Constant Position: Non-Zero Offset` , Steering`StrDM_713e85af-f02b-4f45-9bc5-afa21c650bd8
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_61c2b593-e985-4565-87f0-e949117b8dfe.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.2/0.2 G Max Ax/Ay, Japan Env.` Intersections` , Speed vs. station`SpdPath_61c2b593-e985-4565-87f0-e949117b8dfe
+
+PARSFILE Roads\3D_Road\Road_8d3e1408-d180-481e-932f-99291d98f773.par
+#BlueLink0 Road: 3D Surface (All Properties)`Main Road` Japanese Environment` , Miscellaneous`Road_8d3e1408-d180-481e-932f-99291d98f773
+
+PARSFILE Roads\3D_Road\Road_9c51bee7-c078-4e2d-8ddd-e5a35c11b7b6.par
+#BlueLink1 Road: 3D Surface (All Properties)`Driver Path` Japanese Environment` , Miscellaneous`Road_9c51bee7-c078-4e2d-8ddd-e5a35c11b7b6
+
+PARSFILE Generic\Links\GenLink_e6e2471c-e28d-4d65-bb18-beebf10ecf3d.par
+#BlueLink6 Generic Group of Links`Environment` Japanese Environment` , Miscellaneous`GenLink_e6e2471c-e28d-4d65-bb18-beebf10ecf3d
+
+PARSFILE Plot\Setup\Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470.par
+#BlueLink8 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot`Plot_315ea46e-b7b6-40d8-84de-a7ef2624a470
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink9 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's vs. Time` Vehicle Motion` , Plot`Plot_8b22f20a-1297-43cf-9e59-a0b1d530d136
+
+PARSFILE Plot\Setup\Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be.par
+#BlueLink16 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_a243fc1c-fc6b-4404-89ac-bc8209a293be
+
+PARSFILE Generic\VS_commands\GenVS_9adae0f9-c659-4690-8e88-e92525112141.par
+#BlueLink18 Generic VS Commands`Driver Controls` Plot Groups` , Plot`GenVS_9adae0f9-c659-4690-8e88-e92525112141
+
+PARSFILE Generic\VS_commands\GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3.par
+#BlueLink19 Generic VS Commands`Velocity and Position` Plot Groups` , Plot`GenVS_aec8d12c-ea50-4614-babd-3631ce40b8a3
+
+
+#EMBEDDED_NOTES
+#Two roads make up the Japanese environment. A generic group of links is used to include and position the Japanese signs.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Road Networks } Japanese Signs, Shrubbery
+#Library : Procedures
+#DataSet : Japanese Signs, Shrubbery
+#Category: Road Networks
+#FileID  : Proc_e7e76165-3afc-4c52-a027-258d0c55b823
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

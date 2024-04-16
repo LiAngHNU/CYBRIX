@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Fy vs. SuspY - Rear`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output Flat_l2 = -1*Fy_L2; units = N;
+define_output Flat_r2 = Fy_R2; units = N;
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS SusY_L2, Flat_l2
+PLOTCHANNELS SusY_R2, Flat_r2
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Fy vs. SuspY - Rear
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Fy vs. SuspY - Rear
+#Library : Plot: Setup
+#DataSet : Fy vs. SuspY - Rear
+#Category: Suspension Motion
+#FileID  : Plot_eb3cf6a4-5fab-4596-9537-a2969e64ac07
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

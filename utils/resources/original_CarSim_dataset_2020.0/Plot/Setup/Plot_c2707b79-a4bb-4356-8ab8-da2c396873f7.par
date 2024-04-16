@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Plot: Setup`Spring Forces`Three-wheeled Vehicle
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow1
+define_output fs_1 = fs_l1 + fs_r1;
+#ENDMYellow
+
+#MiscYellow0
+PLOTCHANNELS Fs_1, Time, Single Front spring
+PLOTCHANNELS Fs_L2, Time
+PLOTCHANNELS Fs_R2, Time
+
+#ENDMYellow
+
+YAXISLABEL Spring Forces - N
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Spring Forces
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#This plot format includes plots created with VS Commands for the single front wheel of a three-wheeled vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Three-wheeled Vehicle } Spring Forces
+#Library : Plot: Setup
+#DataSet : Spring Forces
+#Category: Three-wheeled Vehicle
+#FileID  : Plot_c2707b79-a4bb-4356-8ab8-da2c396873f7
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

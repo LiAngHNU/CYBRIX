@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Sensor Reflectiveness Map`3 Sensor Types, 3 Target Types`
+#RingCtrl0 2D_STEP
+#RadioCtrl0 0    
+
+
+*3D_XLabel Sensor type
+*3D_YLabel Material type
+*3D_ZLabel Reflectiveness
+
+#DiagramTwo0
+*3D_DATA 3, 3 ! columns x rows
+SENSOR_MAP_CARPET 2D_STEP
+0, 1, 2, 3
+1, 1, 0, 0
+2, 0, 1, 0
+3, 0, 0, 1
+ENDTABLE
+
+
+#EMBEDDED_NOTES
+#This map shows that sensor types 1, 2, 3 only detect target with the same types.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Sensor Reflectiveness Map; 3 Sensor Types, 3 Target Types
+#Library : Sensor Reflectiveness Map
+#DataSet : 3 Sensor Types, 3 Target Types
+#Category: 
+#FileID  : TypeMap_58d5eba3-a279-46af-9150-d69a899e1b70
+#Product : CarSim 2020.0
+#VehCode Reflectiveness Map
+
+END

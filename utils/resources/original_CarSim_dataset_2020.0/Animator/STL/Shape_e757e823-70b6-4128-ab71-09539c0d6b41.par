@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Outriggers: Frame`Common Vehicle Assets
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Outriggers\outrigger_frame.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 0.815
+SET_SCALE_Z 1
+*SPECULAR 0.5
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+#MiscYellow0
+tranclucent_fix on
+#ENDMYellow
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_5f245a76-02e8-4402-ad4f-d68e6778dc25.par
+#BlueLink2 Animator: Camera Setup`Isometric View - Medium Objects` Shape Preview` , Video Camera`Camera_5f245a76-02e8-4402-ad4f-d68e6778dc25
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_e757e823-70b6-4128-ab71-09539c0d6b41.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Outriggers: Frame
+#Library : Animator: Shape File Link
+#DataSet : Outriggers: Frame
+#Category: Common Vehicle Assets
+#FileID  : Shape_e757e823-70b6-4128-ab71-09539c0d6b41
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

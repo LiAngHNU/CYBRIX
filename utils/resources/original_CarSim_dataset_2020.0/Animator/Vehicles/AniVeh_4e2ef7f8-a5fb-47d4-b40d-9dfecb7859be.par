@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`2A Utility Flatbed Trailer (HD)`Trailers
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox8 0    
+
+#RingCtrl0 2
+OBJ_X_LENGTH 4800
+OBJ_Y_LENGTH 2679
+OBJ_Z_LENGTH 1357
+*DZ_V 0
+*LAT_WC 2430
+*LAT_WC_2 2430
+*HWC 390
+*WHEEL_RATIO 1.34
+*LAXLE_1 3990
+*LAXLE_2 4800
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_4e2ef7f8-a5fb-47d4-b40d-9dfecb7859be.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 1.34
+SET_SCALE_Y 1.34
+SET_SCALE_Z 1.34
+SET_OFFSET_X -3.99
+SET_OFFSET_Y 1.215
+SET_OFFSET_Z 0.3705
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 1.34
+SET_SCALE_Y 1.34
+SET_SCALE_Z 1.34
+SET_ANGLE_X 180
+SET_OFFSET_X -3.99
+SET_OFFSET_Y -1.215
+SET_OFFSET_Z 0.3705
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 1.34
+SET_SCALE_Y 1.34
+SET_SCALE_Z 1.34
+SET_OFFSET_X -4.8
+SET_OFFSET_Y 1.215
+SET_OFFSET_Z 0.3705
+TIRE_ANI_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+SET_SCALE_X 1.34
+SET_SCALE_Y 1.34
+SET_SCALE_Z 1.34
+SET_ANGLE_X 180
+SET_OFFSET_X -4.8
+SET_OFFSET_Y -1.215
+SET_OFFSET_Z 0.3705
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\Groups\Group_04b6c674-7c11-4f6d-916c-a907b9a1dbe0.par
+#BlueLink1 Animator: Group`Utility Flatbed Trailer (2A)` Trailers` , Vehicle Body`Group_04b6c674-7c11-4f6d-916c-a907b9a1dbe0
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_4bbf4132-f1e7-4522-a36c-f0893b6393fb.par
+#BlueLink3 Animator: Shape File Link`Utility Flatbed Trailer: Brake Lights` Trailers` , Brake Lights`Shape_4bbf4132-f1e7-4522-a36c-f0893b6393fb
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL\Shape_39d9ff79-81e8-4cb3-8312-aa6afc58f0d2.par
+#BlueLink7 Animator: Shape File Link`Utility Flatbed Trailer: Tongue (Pintle)` Trailers` , Vehicle Body`Shape_39d9ff79-81e8-4cb3-8312-aa6afc58f0d2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car - Width 175 mm` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_a58f97d5-1a89-45af-a23f-a5b72f431c48
+
+
+#EMBEDDED_NOTES
+#The 175 mm Blurred tire is used here instead of a 235 mm blurred tire because of the large scale factor involved.  Scaling a 175 mm tire up by 1.34 results in a width of 234.5 mm.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Trailers } 2A Utility Flatbed Trailer (HD)
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : 2A Utility Flatbed Trailer (HD)
+#Category: Trailers
+#FileID  : AniVeh_4e2ef7f8-a5fb-47d4-b40d-9dfecb7859be
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

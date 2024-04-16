@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`30 kmh`Japanese Environment
+ADD_REFERENCE_FRAME Frame_f0305b74-0cac-4322-b471-7515ef69c3b4
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME -90
+SET_OFFSET_VAR_X 100
+SET_OFFSET_VAR_Y 10
+
+PARSFILE Animator\STL_Groups\ShpGrp_2d1e7243-fced-4386-ab90-e256142f9d00.par
+#BlueLink0 Animator: Shape Assembly`JP: Speed Limit 30 km/h` International Road Signs` , Animator Data`ShpGrp_2d1e7243-fced-4386-ab90-e256142f9d00
+
+WRT_-90
+ANI_-90
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Japanese Environment } 30 kmh
+#Library : Animator: Reference Frame
+#DataSet : 30 kmh
+#Category: Japanese Environment
+#FileID  : Frame_f0305b74-0cac-4322-b471-7515ef69c3b4
+#Product : CarSim 2020.0
+#VehCode Reference Frame
+
+END

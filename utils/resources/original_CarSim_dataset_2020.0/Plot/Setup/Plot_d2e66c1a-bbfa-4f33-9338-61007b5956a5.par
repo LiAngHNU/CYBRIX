@@ -1,0 +1,45 @@
+PARSFILE
+#FullDataName Plot: Setup`Vx from Sensor on One Side`ADAS Sensor Detections, Symbol Stack
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx_S<<s>>_1, Time
+
+#ENDMYellow
+
+YAXISLABEL <<side>> Vx detection - km/h
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vx from Sensor on One Side
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#Use Symbol Stack <<s>> to get closest object to current sensor.
+#
+#<<side>> (for the Y axis title) is either Left or Right.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { ADAS Sensor Detections, Symbol Stack } Vx from Sensor on One Side
+#Library : Plot: Setup
+#DataSet : Vx from Sensor on One Side
+#Category: ADAS Sensor Detections, Symbol Stack
+#FileID  : Plot_d2e66c1a-bbfa-4f33-9338-61007b5956a5
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

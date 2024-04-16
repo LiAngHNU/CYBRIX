@@ -1,0 +1,139 @@
+PARSFILE
+#FullDataName Animator: HUD`ACC Bars`ACC - Adaptive Cruise Control
+#CheckBox1 1    
+#CheckBox3 1    
+#CheckBox4 1    
+#CheckBox6 1    
+#CheckBox7 1    
+#CheckBox9 1    
+#CheckBox10 1    
+#CheckBox12 1    
+
+#RingCtrl0 4
+#RingCtrl1 9
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 3
+#RingCtrl5 9
+#RingCtrl6 1
+#RingCtrl7 2
+#RingCtrl8 3
+#RingCtrl9 9
+#RingCtrl10 1
+#RingCtrl11 2
+#RingCtrl12 3
+#RingCtrl13 9
+#RingCtrl14 1
+#RingCtrl15 2
+#RingCtrl16 3
+*SCALE_1 1
+*VAR_NAME_1 LB1_OPCT
+*SCALE_2 1
+*VAR_NAME_2 LB2_OPCT
+*SCALE_3 1
+*VAR_NAME_3 LB3_OPCT
+*SCALE_4 1
+*VAR_NAME_4 LB4_OPCT
+
+*IMG_NAME_1 Animator\2D_HUD_Icons\ACC\Distance_01.png
+*IMG_NAME_2 Animator\2D_HUD_Icons\ACC\Distance_02.png
+*IMG_NAME_3 Animator\2D_HUD_Icons\ACC\Distance_03.png
+*IMG_NAME_4 Animator\2D_HUD_Icons\ACC\Distance_04.png
+
+#MiscYellow0
+DEFINE_OUTPUT LB1_OPCT = 1
+DEFINE_OUTPUT LB2_OPCT = IF((time_gap >= 1.0), 1, 0)
+DEFINE_OUTPUT LB3_OPCT = IF((time_gap >= 2.0), 1, 0) 
+DEFINE_OUTPUT LB4_OPCT = IF((time_gap >= 3.0), 1, 0)
+#ENDMYellow
+
+#Selection 9 for Icon 0
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: LB1_OPCT  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\ACC\Distance_01.png
+! General Icon
+ANI_LB1_OPCT
+WRT_LB1_OPCT
+ADD_ENTITY hud_image General Icon
+location 0 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity LB1_OPCT
+image_file Animator\2D_HUD_Icons\ACC\Distance_01.png
+END_ENTITY hud_image General Icon
+#Selection 9 for Icon 1
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: LB2_OPCT  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\ACC\Distance_02.png
+! General Icon
+ANI_LB2_OPCT
+WRT_LB2_OPCT
+ADD_ENTITY hud_image General Icon
+location 0 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity LB2_OPCT
+image_file Animator\2D_HUD_Icons\ACC\Distance_02.png
+END_ENTITY hud_image General Icon
+#Selection 9 for Icon 2
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: LB3_OPCT  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\ACC\Distance_03.png
+! General Icon
+ANI_LB3_OPCT
+WRT_LB3_OPCT
+ADD_ENTITY hud_image General Icon
+location 0 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity LB3_OPCT
+image_file Animator\2D_HUD_Icons\ACC\Distance_03.png
+END_ENTITY hud_image General Icon
+#Selection 9 for Icon 3
+#Selection_1 9 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: LB4_OPCT  ColorStr: 0 0 0
+#Selection_5 ImgName: Animator\2D_HUD_Icons\ACC\Distance_04.png
+! General Icon
+ANI_LB4_OPCT
+WRT_LB4_OPCT
+ADD_ENTITY hud_image General Icon
+location 0 0 128 128
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity LB4_OPCT
+image_file Animator\2D_HUD_Icons\ACC\Distance_04.png
+END_ENTITY hud_image General Icon
+
+#EMBEDDED_NOTES
+#This dataset is used in conjuction with the ACC Icon dataset to define distance bars for the ACC icon.
+#
+#This dataset defines the distance bars only.  The number of distance bars displayed is dependent on the time_gap variable.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: HUD; { ACC - Adaptive Cruise Control } ACC Bars
+#Library : Animator: HUD
+#DataSet : ACC Bars
+#Category: ACC - Adaptive Cruise Control
+#FileID  : HUD_88e83efe-5195-45f8-8d81-c334c2df8106
+#Product : CarSim 2020.0
+#VehCode HUD
+
+END

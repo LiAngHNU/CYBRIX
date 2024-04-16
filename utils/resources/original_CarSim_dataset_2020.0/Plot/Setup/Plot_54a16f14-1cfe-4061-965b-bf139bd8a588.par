@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Z vs X - Trajectory (Front)`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Z_L1, X_L1
+PLOTCHANNELS Z_R1, X_R1
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Z vs X - Trajectory (Front)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Z vs X - Trajectory (Front)
+#Library : Plot: Setup
+#DataSet : Z vs X - Trajectory (Front)
+#Category: Tracking
+#FileID  : Plot_54a16f14-1cfe-4061-965b-bf139bd8a588
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

@@ -1,0 +1,85 @@
+PARSFILE
+#FullDataName Generic VS Commands`VS Visualizer HUD Handling Course Info`HUD Gauges
+#VehCode VS Commands
+
+#MiscYellow0
+ADD_ENTITY hud_image Text_BG_Outer
+  size_mode absolute
+  place_mode absolute
+  location 5 5 320 90
+  red 0
+  green 0
+  blue 0
+  opacity .5
+!  image_file Animator\Hud\Text_Box.tga
+END_ENTITY hud_image Tach (BG)
+
+MiscYellow0
+ADD_ENTITY hud_image Text_BG_Inner
+  size_mode absolute
+  place_mode absolute
+  location 10 10 310 80
+  red 0
+  green 0
+  blue 0
+  opacity .25
+!  image_file Animator\Hud\Text_Box.tga
+END_ENTITY hud_image Tach (BG)
+
+
+!Add Target Speed Display
+ANI_VxTarget
+WRT_VxTarget
+ADD_ENTITY hud_text Text Output - Target Speed
+  size_mode absolute
+  place_mode absolute
+  location 20 20 300 20
+  prefix Target Speed (km/h)
+  min_width_prefix 20
+  value VxTarget
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_ENTITY hud_text Text Output - Target Speed
+
+!Add Actual Speed Display
+ANI_Vx
+WRT_Vx
+ADD_ENTITY hud_text Text Output - Speed
+  size_mode absolute
+  place_mode absolute
+  location 20 40 300 20
+  prefix Actual Speed (km/h)
+  min_width_prefix 20
+  value Vx
+  precision 0
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - Speed
+!
+!Add Speed Error Display
+ANI_Vx_Err
+WRT_Vx_Err
+ADD_ENTITY hud_text Text Output - Speed Error
+  size_mode absolute
+  place_mode absolute
+  location 20 60 300 20
+  prefix Speed Error (km/h)
+  min_width_prefix 20
+  value Vx_ERR
+  precision 0
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_ENTITY hud_text Text Output - Speed Error
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } VS Visualizer HUD Handling Course Info
+#Library : Generic VS Commands
+#DataSet : VS Visualizer HUD Handling Course Info
+#Category: HUD Gauges
+#FileID  : GenVS_6e8d6522-115f-41d2-872d-d9f6ec179bba
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Plot: Setup`Vx_Err: Speed Controller Error (km/h)`Speed Controller
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Vx_Err, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Vx_Err: Speed Controller Error (km/h)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Speed Controller } Vx_Err: Speed Controller Error (km/h)
+#Library : Plot: Setup
+#DataSet : Vx_Err: Speed Controller Error (km/h)
+#Category: Speed Controller
+#FileID  : Plot_27933d38-d18e-49e3-9bf7-7b888191bb88
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

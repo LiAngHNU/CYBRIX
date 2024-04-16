@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Variable RRE Import`Tire Kinematics
+#RingCtrl0 0
+#RingCtrl1 1
+*README_FILE Results\Run_c7bcaa2b-2ecf-4342-85e6-0400a3d10db6\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_RRE_L1 Replace 296! 1
+IMP_RRE_R1 Replace 296! 1
+IMP_RRE_L2 Replace 302! 1
+IMP_RRE_R2 Replace 302! 1
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Variable Effective Rolling Radius` Tire Models` , example run`Run_c7bcaa2b-2ecf-4342-85e6-0400a3d10db6
+
+
+#EMBEDDED_NOTES
+#I/O Channels: Import dataset with four import variables for the tire effective rolling radius.
+#
+#Note that the initial values are not 0, but have been set equal to the nominal tire rolling radius for each tire.
+#
+#If the initial values were set to 0, then that would mean the CarSim simulation would start with the rolling radii equal to 0 mm.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Tire Kinematics } Variable RRE Import
+#Library : I/O Channels: Import
+#DataSet : Variable RRE Import
+#Category: Tire Kinematics
+#FileID  : Import_dcffbcd6-ef9f-4b4d-9a35-68708caf9ed7
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName CarSim Run Control`Highway Merge`Driver Model
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_1c51fd7b-f2a3-42b7-9752-36655ceb4468
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f.par
+#BlueLink0 Animator: Camera Setup`0 Azm, 1 El, 37 m` Vehicle Reference` , Animator camera`Camera_f672fe6b-6162-4c2f-8df7-54285c2c5a0f
+
+#CheckBox0 1    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 1
+#RingCtrl6 3
+#RingCtrl7 -1
+*RUN_COLOR 0.878 0.878 0.878
+SET_RUN_COLOR 0.878 0.878 0.878
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_ae739799-e1e6-4392-8847-b92b6c833931.par
+#BlueLink2 Vehicle: Assembly`SUV, Full Size` Utility Vehicles` , Math Model`Vehicle_ae739799-e1e6-4392-8847-b92b6c833931
+
+PARSFILE Procedures\Proc_4583a830-0b49-42c6-b11f-f6fad8bf464a.par
+#BlueLink28 Procedures`Highway Merge` Driving` , Procedure`Proc_4583a830-0b49-42c6-b11f-f6fad8bf464a
+
+PARSFILE Plot\Setup\Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f.par
+#BlueLink15 Plot: Setup`Ground Elevation` Ground` , Plot`Plot_2f48d77f-b760-4fab-a2c0-0fa2004b8b4f
+
+PARSFILE Plot\Setup\Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f.par
+#BlueLink16 Plot: Setup`Station vs. Time` Tracking` , Plot`Plot_4e56afb6-6de8-41b6-aaf4-1c1f35754a0f
+
+PARSFILE Plot\Setup\Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f.par
+#BlueLink17 Plot: Setup`Y vs X - Trajectory` Tracking` , Plot`Plot_a36e548a-8671-4d4e-9e37-36a10f06b90f
+
+
+SPECIAL_PARSFILE Runs\Run_61871c23-cf86-4545-96c4-f1a8e73e2b45.par
+#BlueLink23 CarSim Run Control`Highway Merge Avoidance w ESC` Driver Model` , Overlay run or ERD file`Run_61871c23-cf86-4545-96c4-f1a8e73e2b45
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_ae739799-e1e6-4392-8847-b92b6c833931.png
+WRITE_SENSOR_DETECT
+Title Highway Merge <Driver Model>
+CATEGORY Driver Model 
+DATASET_TITLE Highway Merge
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#Several modeling techniques are demonstrated:
+#
+#1. A full-size SUV performing a highway merging maneuver driving on a road that decreases from two lanes to one.
+#
+#2. An accident avoidance maneuver (overlaid vehicle) to simulate another vehicle steering to avoid the full-size SUV.
+#
+#3. How to create variable width roads with features such as a four-lane highway with drainage ditches and road crown.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Driver Model } Highway Merge
+#Library : CarSim Run Control
+#DataSet : Highway Merge
+#Category: Driver Model
+#FileID  : Run_1c51fd7b-f2a3-42b7-9752-36655ceb4468
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

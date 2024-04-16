@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Engine and Torque Coupler`Powertrain: Sub-System Controls and External Models
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_997a0e7e-6488-4674-a75c-4b0eb84ff737\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_M_OUT_TC Add 0.0! 0
+IMP_AV_ENG Add 0.0! 0
+IMP_PWR_ENGINE_AV Replace 0.0! 1
+#ENDMYellow
+
+#MiscYellow1
+INSTALL_SPEED_CONTROLLER
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Ext. Eng. and Torque Coupler` Simulink and LabVIEW Models` , example run`Run_997a0e7e-6488-4674-a75c-4b0eb84ff737
+
+
+#EMBEDDED_NOTES
+#In 2019.0, IMP_PWR_ENGINE_AV is not recognized in a open loop unless INSTALL_SPEED_CONTROLLER is used.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Powertrain: Sub-System Controls and External Models } Engine and Torque Coupler
+#Library : I/O Channels: Import
+#DataSet : Engine and Torque Coupler
+#Category: Powertrain: Sub-System Controls and External Models
+#FileID  : Import_8128d499-1ce8-46ce-b9ff-68ad9edfecfc
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

@@ -1,0 +1,109 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`E-Class, SUV: Single Contact Point Tire`E-Class
+#VehCode Ind_SA
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+INSTALL_SPEED_CONTROLLER
+
+#RingCtrl0 3
+OPT_PT 3
+#RingCtrl1 1
+#RingCtrl2 3
+#RingCtrl3 0
+PARSFILE Steering\System2\StrSys2_f3248047-f4f8-42b9-a287-59074190e82d.par
+#BlueLink7 Steering`E-Class, SUV: Power, R&P` CS E-Class` , Steering System`StrSys2_f3248047-f4f8-42b9-a287-59074190e82d
+
+
+* Front components
+iaxle 1
+symbol_push  <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\KinInd_0dbb317a-2d80-4b44-8d92-4c03ff5e0988.par
+#BlueLink19 Suspension: Independent System Kinematics`E-Class, SUV - Front` E-Class` , Kinematics`KinInd_0dbb317a-2d80-4b44-8d92-4c03ff5e0988
+
+PARSFILE Suspensions\Compliance\CmpInd_fef4adb0-d28a-4d13-b7e1-dc2b78930603.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`E-Class, SUV - Front` E-Class` , Compliance`CmpInd_fef4adb0-d28a-4d13-b7e1-dc2b78930603
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_03babb3e-337c-4746-afe5-157c2adfbb23.par
+#BlueLink999 Tire`265/75 R16 (Single Contact Point)` Touring Tires` , Tire`Tire_03babb3e-337c-4746-afe5-157c2adfbb23
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_03babb3e-337c-4746-afe5-157c2adfbb23.par
+#BlueLink10 Tire`265/75 R16 (Single Contact Point)` Touring Tires` , Tire`Tire_03babb3e-337c-4746-afe5-157c2adfbb23
+
+* Rear components
+iaxle 2
+symbol_add  <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_AXLE
+PARSFILE Suspensions\Kin_Solid\KinSA_5c9c46c7-756e-45f6-a989-c3134dd201c2.par
+#BlueLink23 Suspension: Solid Axle System Kinematics`E-Class, SUV - Rear` E-Class` , Kinematics`KinSA_5c9c46c7-756e-45f6-a989-c3134dd201c2
+
+PARSFILE Suspensions\Compliance_SA\CmpSA_956e17be-2a07-4ec2-ac98-efe532c02196.par
+#BlueLink22 Suspension: Solid Axle Compliance, Springs, and Dampers`E-Class, SUV - Rear` E-Class` , Compliance`CmpSA_956e17be-2a07-4ec2-ac98-efe532c02196
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire_03babb3e-337c-4746-afe5-157c2adfbb23.par
+#BlueLink999 Tire`265/75 R16 (Single Contact Point)` Touring Tires` , Tire`Tire_03babb3e-337c-4746-afe5-157c2adfbb23
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push  <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire_03babb3e-337c-4746-afe5-157c2adfbb23.par
+#BlueLink999 Tire`265/75 R16 (Single Contact Point)` Touring Tires` , Tire`Tire_03babb3e-337c-4746-afe5-157c2adfbb23
+
+symbol_set <<axle>> 1
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass_d2148fcf-3961-44b9-991b-990f1d8d0707.par
+#BlueLink0 Vehicle: Sprung Mass`E-Class, SUV` E-Class` , Sprung Mass`SprMass_d2148fcf-3961-44b9-991b-990f1d8d0707
+
+PARSFILE Aerodynamics\Aero_Main\Aero_0a8e2fef-05a4-4e91-8e75-37e405e5e0ce.par
+#BlueLink1 Aerodynamics: Basic`E-Class, SUV Aero` E-Class` , Aerodynamics`Aero_0a8e2fef-05a4-4e91-8e75-37e405e5e0ce
+
+PARSFILE Powertrain\4wd\4WD_4fb393ac-4d37-4955-a224-2b0a8d040914.par
+#BlueLink5 Powertrain: 4-Wheel Drive`200 kW, 6-spd, 4.1 Ratio` 200 kW Powertrains` , Powertrain`4WD_4fb393ac-4d37-4955-a224-2b0a8d040914
+
+PARSFILE Brakes\4W_System\Brk4W_bea2c409-da34-429e-9d51-ce0a8c008b79.par
+#BlueLink6 Brakes: Four-Wheel System`(SUV): MC Press, ABS` E-Class` , Brake System`Brk4W_bea2c409-da34-429e-9d51-ce0a8c008b79
+
+PARSFILE Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`E-Class, SUV` E-Class` , Vehicle 3D Shape`AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+
+#EMBEDDED_NOTES
+#Generic E-Class SUV with SLA front and Hotchkiss Solid Axle rear suspension.
+#
+#E-Class SUVs include the Chevrolet Equinox, Ford Explorer, Nissan Pathfinder, and Toyota 4Runner.
+#
+#This vehicle uses tire datasets which do not use the user-defined tire contact patch dimensions. Click on the tire dataset "265/75 R16 (Single Contact Point)" for more information.
+#
+#Updated for CarSim 2017:  Revised the Steering System Parameters, including changes to the Rear Suspension Kinematics (roll steer), and the Rear Suspension Compliance (compliance coefficients).  Evaluated for On Center, Static Steer (Brakes on and off), Transient Response, Torque Free Response, Turning Circle, and others.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { E-Class } E-Class, SUV: Single Contact Point Tire
+#Library : Vehicle: Assembly
+#DataSet : E-Class, SUV: Single Contact Point Tire
+#Category: E-Class
+#FileID  : Vehicle_723f0d87-1b4e-48f8-b397-d508912b52e4
+#Product : CarSim 2020.0
+#VehCode Ind_SA
+
+END

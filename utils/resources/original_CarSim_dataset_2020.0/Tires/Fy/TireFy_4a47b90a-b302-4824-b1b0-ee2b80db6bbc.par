@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Tire: Lateral Force`Normalized 1D (5-pt spline)`Normalized Tires
+#CheckBox0 0    
+
+#RingCtrl0 SPLINE
+#RingCtrl1 COEFFICIENT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#DiagramOne0
+FY_TIRE_TABLE SPLINE
+-9, -1
+-1, -0.28
+0, 0
+1, 0.28
+9, 1
+ENDTABLE
+FY_TIRE_FZ_COEFFICIENT 1
+*SCALAR2 1
+MU_REF_Y 1.0
+
+
+#EMBEDDED_NOTES
+#This normalized data was made by taking the table for the 225/60 R18 and dividing by the load rating of 5000 N.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force; { Normalized Tires } Normalized 1D (5-pt spline)
+#Library : Tire: Lateral Force
+#DataSet : Normalized 1D (5-pt spline)
+#Category: Normalized Tires
+#FileID  : TireFy_4a47b90a-b302-4824-b1b0-ee2b80db6bbc
+#Product : CarSim 2020.0
+#VehCode Tire: Fy
+
+END

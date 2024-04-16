@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Generic VS Commands`Define Sine with Dwell Variables`Sine with Dwell
+#VehCode VS Commands
+
+#MiscYellow0
+DEFINE_PARAMETER SWA_MULT 1; -; Sine with Dwell integer multiplier (checked at 5 and 6.5)
+DEFINE_PARAMETER SWA_ABS 1; -; Absolute value full multiplier for Sine with Dwell amplitude
+DEFINE_PARAMETER SWA_Sign = 1; -; sign for test (+1 or -1)
+DEFINE_PARAMETER ESC_OK = 0; -; pass/fail notice for echo file
+DEFINE_PARAMETER LatDisp  1.83; m; used for event at T = 1.07
+
+! Scan every time step for peak yaw rate
+define_output AVz_Peak = MAX(ABS(AVZ), AVZ_PEAK); deg/s; peak yaw rate
+
+! For Simulink/LabVIEW display
+DEFINE_OUTPUT ESC_FAIL = -0.1; -; For Simulink/LabVIEW/New Wrapper
+EXP_ESC_FAIL
+
+! For optional save/restore method
+DEFINE_PARAMETER OPT_SWD_RESTORE 0 ; -; option to save and restore vehicle state
+#ENDMYellow
+
+
+#EMBEDDED_NOTES
+#Introduce new parameters and variables to support the Sine with Dwell  test procedure.The parameters are given new values as the sequence of tests proceeds during the run.
+#
+#In addition, a parameter SWA_REF is used that was defined at the start of the slowly increasing steer sequence.
+#
+#The parameter OPT_SWD_RESTORE can be given a non-zero value to enable a shortcut in which the vehicle state is saved after it has coasted down to 80 km/h and is ready for a sine-with-dwell steering input. For repeat test, the vehicle state is restored, saving simulation time. This method works if the ESC controller is not affected by discontinuities in speed. It usually won't work with real controller tested with HIL.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Sine with Dwell } Define Sine with Dwell Variables
+#Library : Generic VS Commands
+#DataSet : Define Sine with Dwell Variables
+#Category: Sine with Dwell
+#FileID  : GenVS_77f6bff1-30bd-4e75-b7e8-526cb666f625
+#Product : CarSim 2020.0
+#VehCode VS Commands
+
+END

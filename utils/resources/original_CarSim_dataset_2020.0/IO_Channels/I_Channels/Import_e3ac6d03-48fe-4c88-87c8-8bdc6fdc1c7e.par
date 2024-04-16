@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName I/O Channels: Import`ABS (Type A): Line Pressure, before Prop.`Brake System: Control and External Models
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_a51cebc0-6291-46c6-a66f-e7abf4c8035a\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_PLIN_L1 Replace 0.0! 1
+IMP_PLIN_R1 Replace 0.0! 1
+IMP_PLIN_L2 Replace 0.0! 1
+IMP_PLIN_R2 Replace 0.0! 1
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Braking: Advanced, Type A Ext. ABS` Brake Tests` , example run`Run_a51cebc0-6291-46c6-a66f-e7abf4c8035a
+
+
+#EMBEDDED_NOTES
+#This example dataset has been included in past versions of CarSim as part of some examples using a "Type A" external ABS controller. As in past versions, it specifies that the line pressure to each wheel should be imported from the controller before any proportioning.
+#
+#The link to the external Simulink model has been modified for the 2017 version: MODE for each variable must be set to REPLACE. (In 2016 and earlier, the only supported mode was ADD; the effect of REPLACE was handled with a custom option that was used in the years before the REPLACE mode was added to VS Solvers.)
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Brake System: Control and External Models } ABS (Type A): Line Pressure, before Prop.
+#Library : I/O Channels: Import
+#DataSet : ABS (Type A): Line Pressure, before Prop.
+#Category: Brake System: Control and External Models
+#FileID  : Import_e3ac6d03-48fe-4c88-87c8-8bdc6fdc1c7e
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

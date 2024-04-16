@@ -1,0 +1,106 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, Variable Width`I-94 Exit Boundary Visualization WIP`Highway Intersection Boundaries
+SET_IROAD_DZ_FOR_ID 0
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: I-94 Exit Boundary Visualization WIP
+set_description ROAD_DZ_ID I-94 Exit Boundary Visualization WIP
+#RingCtrl0 CARPET
+#RingCtrl1 1
+*3D_DATA 9, 15 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+0, -2, 0, 0, 0, 0, 0, 0, 0, -1
+600, -2, 0, 0, 0, 0, 0, 0, 0, -5
+600.01, 0, 0, 0, 0, 0, 0, 0, 0, -5
+634.41, 0, 0, 0, 0, 0, 0, 0, 0, -5
+660.17, 0, 0, 0, 0, 0, 0, 0, 0, -5
+684.17, 0, 0, 0, 0, 0, 0, 0, 0, -5
+853.01, 0, 0, 0, 0, 0, 0, 0, 0, -7.5
+853.02, -1, 0, 0, 0, 0, 0, 0, 0, -7.5
+875.56, -1, 0, 0, 0, 0, 0, 0, 0, 0
+875.57, -1, 0, 0, 0, 0, 0, 0, 0, -1
+939.39, -1, 0, 0, 0, 0, 0, 0, 0, -1
+939.4, 0, 0, 0, 0, 0, 0, 0, 0, -1
+964.99, 0, 0, 0, 0, 0, 0, 0, 0, -1
+965, 0, 0, 0, 0, 0, 0, 0, 0, 0
+965.01, 0, 0, 0, 0, 0, 0, 0, 0, 0
+ENDDATA
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+0, -40, -10.2, -7.1, -4, 4, 20, 23.1, 23.101, 45
+600, -40, -10.2, -7.1, -4, 4, 20, 23.1, 23.101, 45
+600.01, -4.003, -4.002, -4.001, -4, 4, 20, 23.1, 23.101, 45
+634.41, -4.003, -4.002, -4.001, -4, 4, 20, 23.1, 23.101, 45
+660.17, -4.003, -4.002, -4.001, -4, 4, 20, 23.1, 23.101, 45
+684.17, -7.102, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 45
+853.02, -7.2, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 45
+875.57, -7.2, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 23.2
+939.39, -7.2, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 23.2
+964.99, -7.2, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 23.2
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 9, 15 ! columns x rows
+RdTb1_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+0, -2, 0, 0, 0, 0, 0, 0, 0, -1
+600, -2, 0, 0, 0, 0, 0, 0, 0, -5
+600.01, 0, 0, 0, 0, 0, 0, 0, 0, -5
+634.41, 0, 0, 0, 0, 0, 0, 0, 0, -5
+660.17, 0, 0, 0, 0, 0, 0, 0, 0, -5
+684.17, 0, 0, 0, 0, 0, 0, 0, 0, -5
+853.01, 0, 0, 0, 0, 0, 0, 0, 0, -7.5
+853.02, -1, 0, 0, 0, 0, 0, 0, 0, -7.5
+875.56, -1, 0, 0, 0, 0, 0, 0, 0, 0
+875.57, -1, 0, 0, 0, 0, 0, 0, 0, -1
+939.39, -1, 0, 0, 0, 0, 0, 0, 0, -1
+939.4, 0, 0, 0, 0, 0, 0, 0, 0, -1
+964.99, 0, 0, 0, 0, 0, 0, 0, 0, -1
+965, 0, 0, 0, 0, 0, 0, 0, 0, 0
+965.01, 0, 0, 0, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 9, 10 ! columns x rows
+RdTb2_CARPET 2D_LINEAR
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+0, -40, -10.2, -7.1, -4, 4, 20, 23.1, 23.101, 45
+600, -40, -10.2, -7.1, -4, 4, 20, 23.1, 23.101, 45
+600.01, -4.003, -4.002, -4.001, -4, 4, 20, 23.1, 23.101, 45
+634.41, -4.003, -4.002, -4.001, -4, 4, 20, 23.1, 23.101, 45
+660.17, -4.003, -4.002, -4.001, -4, 4, 20, 23.1, 23.101, 45
+684.17, -7.102, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 45
+853.02, -7.2, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 45
+875.57, -7.2, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 23.2
+939.39, -7.2, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 23.2
+964.99, -7.2, -7.101, -7.1, -4, 4, 20, 23.1, 23.101, 23.2
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SET_IROAD_DZ_FOR_ID 0
+
+
+#EMBEDDED_NOTES
+#Masiah version.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, Variable Width; { Highway Intersection Boundaries } I-94 Exit Boundary Visualization WIP
+#Library : Road: Off-Center Elevation Map, Variable Width
+#DataSet : I-94 Exit Boundary Visualization WIP
+#Category: Highway Intersection Boundaries
+#FileID  : VarWidZ_b54490c2-994d-4b24-a991-86907d9842c3
+#Product : CarSim 2020.0
+#VehCode dZ via S-L, Variable Width
+
+END

@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Multiple Vehicles`Five-Car Platoon`Platooning
+PARSFILE Runs\Run_086406aa-e54b-4004-a0cf-9afaa2cc27ef.par
+#BlueLink0 CarSim Run Control`Five-Car Platoon: Car 1` * CS 2020.0 - Platooning` , Vehicle 1:`Run_086406aa-e54b-4004-a0cf-9afaa2cc27ef
+
+PARSFILE Runs\Run_bc248d62-9ded-4369-a913-14f07c6b8ba0.par
+#BlueLink1 CarSim Run Control`Five-Car Platoon: Car 2` * CS 2020.0 - Platooning` , Vehicle 2:`Run_bc248d62-9ded-4369-a913-14f07c6b8ba0
+
+PARSFILE Runs\Run_49bc04f8-cb3d-428e-9f5f-2c7b2ce85449.par
+#BlueLink2 CarSim Run Control`Five-Car Platoon: Car 3` * CS 2020.0 - Platooning` , Vehicle 3:`Run_49bc04f8-cb3d-428e-9f5f-2c7b2ce85449
+
+PARSFILE Runs\Run_f5853921-2079-4f7d-9c73-a92f9dbb5dae.par
+#BlueLink3 CarSim Run Control`Five-Car Platoon: Car 4` * CS 2020.0 - Platooning` , Vehicle 4:`Run_f5853921-2079-4f7d-9c73-a92f9dbb5dae
+
+PARSFILE Runs\Run_0d5eac07-d4f6-4302-8173-094904f7c0fe.par
+#BlueLink4 CarSim Run Control`Five-Car Platoon: Car 5` * CS 2020.0 - Platooning` , Vehicle 5:`Run_0d5eac07-d4f6-4302-8173-094904f7c0fe
+
+#RingCtrl0 0
+*RUN_PLATFORM 0
+#RingCtrl1 5
+*SHOW_LINK 5
+
+#EMBEDDED_NOTES
+#To run this example in Windows:
+#1) click Open Model or Generate FMU
+#2) in Simulink, click the run button
+#3) review results from Vehicle 5
+#
+#V: Video
+#P: Plot
+#
+#Each vehicle in the platoon uses a shared simulink model, that leverages parallel solvers to simulate the vehicles across multiple CarSim Runs.
+#
+#In this example, each vehicle also has painted tire paths, to show the paths of the vehicle.
+#
+#The vehicles following the lead vehicle have negative station values so that they may properly obtain steering reference values from the vehicle(s) in front of them
+#
+#Up to 20 vehicles can be used with this multiple solver example, however you will need enough parallel licenses more than two vehicles
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Vehicles; { Platooning } Five-Car Platoon
+#Library : Multiple Vehicles
+#DataSet : Five-Car Platoon
+#Category: Platooning
+#FileID  : MVeh_f38ebf14-2492-48c1-a5f2-1f528a7b36c5
+#Product : CarSim 2020.0
+#VehCode mVeh
+
+END

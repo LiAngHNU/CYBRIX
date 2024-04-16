@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Plot: Setup`Brake Control: Pedal Force vs. Time`Braking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Lines without Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS F_Pedal, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Brake Control: Pedal Force vs. Time
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The input to the brake model with boost and thermal effects is a control signal representing pedal force.
+#
+#Its source may be the internal closed loop speed controller or direct open loop specification of force, or an import variable from any of the external sources.
+#
+#The speed controller can be configured either to modulate the brake, or to become disabled when open-loop braking is supplied.
+#
+#Signals from open-loop and closed-loop sources are added.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Braking } Brake Control: Pedal Force vs. Time
+#Library : Plot: Setup
+#DataSet : Brake Control: Pedal Force vs. Time
+#Category: Braking
+#FileID  : Plot_f4937cea-2692-4dfc-8e17-baabe744f6b6
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

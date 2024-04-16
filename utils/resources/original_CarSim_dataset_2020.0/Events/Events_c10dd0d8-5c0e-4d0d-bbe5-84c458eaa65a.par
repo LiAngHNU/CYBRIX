@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Events`I. Finished 1st Set (Left-Hand Starts)`Fishhook with Roll Rate Feedback
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 T_Stamp
+*NAME2 SWA_Sign
+*VALUE1 1
+*VALUE2 0
+#MiscYellow0
+SWA_Sign = -1
+Vlimit_L = VTEST
+VTEST = VTEST_Max
+STEER_SW_OFFSET = 0
+#ENDMYellow
+
+DEFINE_EVENT 1 ; Events\Events_709edbcc-6812-4629-9d36-16dedb024adc.par
+#BlueLink0 Events`B. Let Vehicle Settle for Next Fishhook` Fishhook with Roll Rate Feedback` , Events`Events_709edbcc-6812-4629-9d36-16dedb024adc
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset is loaded when the vehicle has finished the first sequence of fishhook steering tests.
+#
+#The current text speed is copied to the parameter Vlimit_L (limt obtained during the left-steering sequence), the sign is reversed, the test speed is reset, and control goes to the next test (B).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Fishhook with Roll Rate Feedback } I. Finished 1st Set (Left-Hand Starts)
+#Library : Events
+#DataSet : I. Finished 1st Set (Left-Hand Starts)
+#Category: Fishhook with Roll Rate Feedback
+#FileID  : Events_c10dd0d8-5c0e-4d0d-bbe5-84c458eaa65a
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

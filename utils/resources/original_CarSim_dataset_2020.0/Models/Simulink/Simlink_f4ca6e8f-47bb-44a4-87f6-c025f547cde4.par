@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Models: Simulink`Two-Car Platoon: Last`Multi-Vehicle
+#RunMdlFile Extensions\Simulink\Multi_Vehicle\Two_Car_Platoon_CS2020.mdl
+SIMULINK_MODEL_FILE Extensions\Simulink\Multi_Vehicle\Two_Car_Platoon_CS2020.mdl
+#RingCtrl0 -1
+#CheckBox0 1    
+*USE_ALT_DIR 1
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.001
+*FREQ_MODEL 1000
+*TSTEP_OUT 0.025
+*FREQ_OUT 40
+tstep 0.001
+iprint 25
+#AltPath Extensions\Simulink\Multi_Vehicle
+*ALTERNATE_PATH Extensions\Simulink\Multi_Vehicle
+PARSFILE IO_Channels\I_Channels\Import_988a8402-933a-4f86-8f68-042aa9c08d1c.par
+#BlueLink0 I/O Channels: Import`Imports: X-Y DM` Platoon` , Import`Import_988a8402-933a-4f86-8f68-042aa9c08d1c
+
+LIVE_SERVER_UPDATE_FREQ_MAX 60
+
+#EMBEDDED_NOTES
+#Models: Simulink dataset for use with the Platoon example and the first car.
+#
+#- The Models: Simulink Library for the platoon vehicles must have correct adaptations in a) use of model file, b) Working Directory (same as where the simulink .mdl file is located, and c) the correct imports/exports:
+#   - For the lead vehicle there are only exports
+#   - For the subsequent middle vehicles there are imports and exports
+#   - For the last vehicle there are only exports
+#
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Multi-Vehicle } Two-Car Platoon: Last
+#Library : Models: Simulink
+#DataSet : Two-Car Platoon: Last
+#Category: Multi-Vehicle
+#FileID  : Simlink_f4ca6e8f-47bb-44a4-87f6-c025f547cde4
+#Product : CarSim 2020.0
+#VehCode 
+
+END

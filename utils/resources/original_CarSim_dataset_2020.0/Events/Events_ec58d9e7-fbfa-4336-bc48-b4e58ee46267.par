@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`D. Disengage Clutch, Trigger Eng. State`Opt_Engine_Running: Manual Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 5
+*NAME1 t_event
+*VALUE1 2.5
+OPT_SC 0
+PARSFILE Control\Throttle\Throttle_768d3744-c109-4ff7-a65b-3b0bea560117.par
+#BlueLink18 Control: Throttle (Open Loop)`Constant: 0` Constant` , Speed link`Throttle_768d3744-c109-4ff7-a65b-3b0bea560117
+
+#MiscYellow0
+TSTART_T_EVENT = T
+TSTART_THROTTLE = T
+TSTART_CLUTCH = T
+TSTART_GEAR = T
+TSTART_BRAKES = T
+#ENDMYellow
+
+PARSFILE Control\Gear_mt\GearOL_98f2ae6c-4bd8-47ce-bf99-3c3f64529a22.par
+#BlueLink10 Control: Shifting (Open Loop)`Neutral w/ Clutch Disengaged` Constant` , Miscellaneous`GearOL_98f2ae6c-4bd8-47ce-bf99-3c3f64529a22
+
+PARSFILE Control\Braking\PbkCon_99b49306-162c-4ce6-91b0-49d4a608d2d8.par
+#BlueLink11 Control: Braking MC Pressure (Open Loop)`Constant: 1 MPa` Constant` , Miscellaneous`PbkCon_99b49306-162c-4ce6-91b0-49d4a608d2d8
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_2a64a807-d810-42bb-89b6-dd91add9fe7a.par
+#BlueLink0 Events`E. Set Opt_Engine_Running = 1` Opt_Engine_Running: Manual Transmission` , Events`Events_2a64a807-d810-42bb-89b6-dd91add9fe7a
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Manual Transmission } D. Disengage Clutch, Trigger Eng. State
+#Library : Events
+#DataSet : D. Disengage Clutch, Trigger Eng. State
+#Category: Opt_Engine_Running: Manual Transmission
+#FileID  : Events_ec58d9e7-fbfa-4336-bc48-b4e58ee46267
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

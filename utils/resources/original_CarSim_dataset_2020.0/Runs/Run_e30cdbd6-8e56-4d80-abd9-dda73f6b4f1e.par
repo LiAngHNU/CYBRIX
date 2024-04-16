@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName CarSim Run Control`Scene Builder: Intersection w/o ADAS`Scene Import
+#VEHICLECODE Ind_Ind
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_e30cdbd6-8e56-4d80-abd9-dda73f6b4f1e
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b.par
+#BlueLink0 Animator: Camera Setup`175 Azm, 5 El, 20 m` Vehicle Reference` , Animator camera`Camera_b3a6a2e3-3f98-4f6a-92de-c1f9cbe5cd9b
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 4
+#RingCtrl2 1
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 0.8 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback: No ABS` C-Class` , Math Model`Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987
+
+PARSFILE Procedures\Proc_68c6fd1e-c02d-4341-bfa6-31f65695fff5.par
+#BlueLink28 Procedures`Rural Intersection Scene w/ Path Preview` VS Scene Builder` , Procedure`Proc_68c6fd1e-c02d-4341-bfa6-31f65695fff5
+
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.2
+*FREQ_OUT 5
+tstep 0.0005
+iprint 400
+OPT_STOP 1
+SSTART -160
+SSTOP 220
+OPT_DIRECTION 0
+*SSTART -160
+*SSTOP 220
+PARSFILE Plot\Setup\Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1.par
+#BlueLink15 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Station` Vehicle Motion` , Plot`Plot_3e1c0cfc-5107-4f14-8fea-df655aa718f1
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle_02f34599-fa67-4a2d-b9f1-ec46601f2987.png
+PARSFILE IO_Channels\W_Channels\Write_9a06b78e-9c41-41a9-b22a-529b287e3963.par
+#BlueLink13 I/O Channels: Write`Copy Vx and Station to CSV` ` , Output Variables`Write_9a06b78e-9c41-41a9-b22a-529b287e3963
+
+WRITE_SENSOR_DETECT
+Title Scene Builder: Intersection w/o ADAS <Scene Import>
+CATEGORY Scene Import 
+DATASET_TITLE Scene Builder: Intersection w/o ADAS
+#MiscYellow0
+PATH_ID_DM = 1
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#The data representing the X-Y path of the road as well as the animated scenario were created using the VS Scene Builder tool.
+#
+#The VS Scene Builder tool is accessed from the Tools drop-down menu.
+#
+#This example was used to generate target speed vs. station for the vehicle and truck used in the companion simulation w/ ACC.
+#
+#For this special run, the truck and traffic vehicles are ommitted, and an Excel file is generated with station and target speed at 5Hz. The acceleration limits in the path preview speed controller are changed here to
+#0.15g and 0.12g to mimic a  heavy truck.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Scene Import } Scene Builder: Intersection w/o ADAS
+#Library : CarSim Run Control
+#DataSet : Scene Builder: Intersection w/o ADAS
+#Category: Scene Import
+#FileID  : Run_e30cdbd6-8e56-4d80-abd9-dda73f6b4f1e
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

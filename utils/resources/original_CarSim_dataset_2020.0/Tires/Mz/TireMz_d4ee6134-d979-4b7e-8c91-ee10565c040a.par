@@ -1,0 +1,50 @@
+PARSFILE
+#FullDataName Tire: Aligning Moment`MF-Tyre Example`MF-Tyre Example
+#CheckBox0 0    
+
+#RingCtrl0 CARPET_FROM_ZERO
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Abs. slip angle [Alpha] (deg)
+*3D_ZLabel Aligning moment (N-m)
+
+#DiagramTwo0
+*3D_DATA 3, 21 ! columns x rows
+MZ_TIRE_CARPET 2D_FROM_ZERO
+0, 2000, 4000, 6000
+0.5, 4.4575, 14.2035, 23.8405
+1, 8.54197, 27.5185, 46.5814
+1.5, 11.8204, 38.818, 66.7226
+2, 13.9506, 47.1166, 82.902
+2.5, 14.7774, 51.7856, 94.1031
+3, 14.3796, 52.723, 99.8419
+3.5, 13.0259, 50.3596, 100.244
+4, 11.066, 45.49, 95.9703
+4.5, 8.82493, 39.0252, 88.0291
+5, 6.69379, 32.2757, 78.2972
+5.5, 4.71407, 25.5739, 67.5595
+6, 2.91342, 19.1549, 56.4112
+6.5, 1.30985, 13.1965, 45.3657
+7, -0.10066, 7.77586, 34.7606
+7.5, -1.33311, 2.90662, 24.7956
+8, -2.40676, -1.43366, 15.5705
+8.5, -3.34151, -5.28576, 7.11705
+9, -4.15611, -8.69776, -0.576612
+9.5, -4.86737, -11.7187, -7.54805
+10, -4.86737, -11.7187, -7.54805
+10.5, -4.86737, -11.7187, -7.54805
+ENDTABLE
+
+
+
+LOG_ENTRY Used Dataset: Tire: Aligning Moment; { MF-Tyre Example } MF-Tyre Example
+#Library : Tire: Aligning Moment
+#DataSet : MF-Tyre Example
+#Category: MF-Tyre Example
+#FileID  : TireMz_d4ee6134-d979-4b7e-8c91-ee10565c040a
+#Product : CarSim 2020.0
+#VehCode Tire: Mz
+
+END

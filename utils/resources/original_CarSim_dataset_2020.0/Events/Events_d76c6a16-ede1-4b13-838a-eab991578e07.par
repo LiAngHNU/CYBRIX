@@ -1,0 +1,77 @@
+PARSFILE
+#FullDataName Events`D. Initial Steer Ramp`Fishhook with Roll Rate Feedback
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 <
+#RingCtrl1 ZERO ~=
+#RingCtrl10 2
+#RingCtrl11 4
+*NAME1 ROLL_RATE_CHECK
+*NAME2 FZ_L
+*NAME3 FZ_R
+*VALUE1 ABS(AVX)/2
+*VALUE2 FZ_L < 0.1 | FZ_R < 0.1
+*VALUE3 0.1
+*SPEED 80
+OPT_INIT_CONFIG 0
+OPT_INIT_PATH 1
+OPT_INIT_SPEED 0
+#MiscYellow0
+STEER_SW_GAIN = DR*6.5*SWA_REF*SWA_Sign
+TSCALE_STEER = ABS( STEER_SW_GAIN)
+OPT_WRITE 1
+#ENDMYellow
+
+PARSFILE Control\Steer\StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c.par
+#BlueLink11 Control: Steering (Open Loop)`Fishhook Steer Ramp: 720 deg/s` Ramp` , Miscellaneous`StrSW_2d0da4df-76c7-4152-888c-22d8fbe26c9c
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+TSTART_T_EVENT = T ;
+TSTART_BRAKES = T ;
+TSTART_STEER_TQ = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_TARGET = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+MAKE_EVENT ROLL_RATE_CHECK < ABS(AVX)/2 ; Events\Events_21396413-48ab-48f1-81cb-8cefec1cc1b2.par
+#BlueLink0 Events`E. Watch for Peak Roll` Fishhook with Roll Rate Feedback` , Events`Events_21396413-48ab-48f1-81cb-8cefec1cc1b2
+
+DEFINE_EVENT FZ_L < 0.1 | FZ_R < 0.1 ; Events\Events_1fad9797-546f-45c1-83a3-bed16c941c16.par
+#BlueLink1 Events`H. Reduce Speed and Try Again` Fishhook with Roll Rate Feedback` , Events`Events_1fad9797-546f-45c1-83a3-bed16c941c16
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This datasaet is loaded when the coasted down to the intended test speed for the fishhook steering.
+#
+#Writing to the output file is resumed, and the vehicle is places at the original start for nice overlays in the animation and plots.
+#
+#Control clocks are reset to start the steering ramp reset the time variable T_Event. The steer waveform is scaled based on SWA_REF from the slowly increasing steer tests.
+#
+#A pending event is set up to compare roll rate with a check value. When that occurs, another dataset (event E) is loaded to start checking for peak roll (event F).
+#
+#Pending events are also set for wheel lift-off. If two-wheel load drops to 0.1 N, this test is over. Another dataset is loaded (H) to reduce the test speed speed and try again.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Fishhook with Roll Rate Feedback } D. Initial Steer Ramp
+#Library : Events
+#DataSet : D. Initial Steer Ramp
+#Category: Fishhook with Roll Rate Feedback
+#FileID  : Events_d76c6a16-ede1-4b13-838a-eab991578e07
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

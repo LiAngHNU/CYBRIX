@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName I/O Channels: Import`Battery Variables`Hybrid Powertrain Imports
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_aa479559-f20c-4b95-a2cc-d8fb4563a531\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_BATTERY_CURRENT Add 0.0! 0
+IMP_BATTERY_VOLT_OPEN_CIRCUIT Add 0.0! 0
+IMP_BATTERY_VOLT_OUTPUT Add 0.0! 0
+IMP_BATTERY_LEVEL Add 0.0! 0
+#ENDMYellow
+
+#MiscYellow1
+define_import IMP_BATTERY_CURRENT
+define_output CurrBatt = IMP_BATTERY_CURRENT; -; Battery current
+define_import IMP_BATTERY_VOLT_OUTPUT
+define_output VoltBatt = IMP_BATTERY_VOLT_OUTPUT; -; Battery output voltage
+define_import IMP_BATTERY_VOLT_OPEN_CIRCUIT
+define_output VoltOC = IMP_BATTERY_VOLT_OPEN_CIRCUIT; -; Battery open-circuit voltage
+define_import IMP_BATTERY_LEVEL
+define_output BatLevel = IMP_BATTERY_LEVEL; -; Battery remain level (0-1)
+!
+define_output BattEff = IF(VoltOC, voltBatt/VoltOC, 1); -; Battery efficiency
+#ENDMYellow
+
+#BlueLink0 CarSim Run Control`Ext. Hybrid: US06 Acceleration` Simulink and LabVIEW Models` , example run`Run_aa479559-f20c-4b95-a2cc-d8fb4563a531
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { Hybrid Powertrain Imports } Battery Variables
+#Library : I/O Channels: Import
+#DataSet : Battery Variables
+#Category: Hybrid Powertrain Imports
+#FileID  : Import_7e1bff10-5c0a-4caf-9dae-4553ffad9666
+#Product : CarSim 2020.0
+#VehCode Import Channels
+
+END

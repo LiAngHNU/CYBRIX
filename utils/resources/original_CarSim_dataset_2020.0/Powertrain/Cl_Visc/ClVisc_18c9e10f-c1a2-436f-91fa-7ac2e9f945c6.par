@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Powertrain: Clutch with Viscous Differential`External Control`
+#RingCtrl0 CONSTANT
+#RingCtrl1 LINEAR_FLAT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+TC_CL_TWIN 0.06
+TLAG_CL_TWIN 0
+*SCALAR 0
+
+M_TWIN_CONSTANT 0
+#DiagramOne1
+CLUTCH_TWIN_TABLE LINEAR_FLAT
+0, 0
+1, 1000
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Powertrain: Clutch with Viscous Differential; External Control
+#Library : Powertrain: Clutch with Viscous Differential
+#DataSet : External Control
+#Category: 
+#FileID  : ClVisc_18c9e10f-c1a2-436f-91fa-7ac2e9f945c6
+#Product : CarSim 2020.0
+#VehCode Differential Clutch
+
+END

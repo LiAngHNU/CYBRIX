@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`1003: Enter North, Exit West`Intersection, 3D Roads with Curbs
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_d2973fbe-0536-43ed-ba1e-274a5de67fa8.png
+#RingCtrl0 2
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 1003
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 1003: Enter North, Exit West
+PARSFILE Roads\BuilderSegment\RoadSeg_3e53dfda-bbf4-49a4-80ab-a04a764ed6ae.par
+#BlueLink0 Path: Segment Builder`North Entrance, Right Turn, 1003` Crossing with Curbs` , Reference Path`RoadSeg_3e53dfda-bbf4-49a4-80ab-a04a764ed6ae
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: North Entrance, Right Turn, 1003
+PARSFILE Roads\dZ_Map\RdMapZ_6efd998e-857b-4b19-ab53-7e21922819e9.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Cross-slope and Curb for Intersection` Gutters, Curbs, Ditches` , Miscellaneous`RdMapZ_6efd998e-857b-4b19-ab53-7e21922819e9
+
+PARSFILE Roads\Friction\RdMu_25e73395-9471-44b9-9c60-27bd9cc24921.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.85` Constant` , Friction`RdMu_25e73395-9471-44b9-9c60-27bd9cc24921
+
+PARSFILE Roads\Shapes\RdShape_279934d1-1a5b-49a4-a267-2abe42e65532.par
+#BlueLink4 Road: Animator Surface Shapes`Right Turn w/ Curb` Intersections` , Road shape definitions`RdShape_279934d1-1a5b-49a4-a267-2abe42e65532
+
+RR_SURF 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink6 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+add_reference_frame road_stuff_7__,_3D_Shapes
+reference_frame_ghosts off
+#BlueLink7 ` , 3D Shapes` , 3D Shapes` , 3D Shapes`
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_d2973fbe-0536-43ed-ba1e-274a5de67fa8.ani
+
+#EMBEDDED_NOTES
+#The lane has cross-slope of about 2.5% when straight, but transitions to flat for the intersection. It enters from the North and exits West.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Intersection, 3D Roads with Curbs } 1003: Enter North, Exit West
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 1003: Enter North, Exit West
+#Category: Intersection, 3D Roads with Curbs
+#FileID  : Road_d2973fbe-0536-43ed-ba1e-274a5de67fa8
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

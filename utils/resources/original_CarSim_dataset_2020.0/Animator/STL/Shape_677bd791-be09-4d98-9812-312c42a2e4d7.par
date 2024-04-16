@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`US: Speed Limit - 70 mph (48 in x 60 in)`Environment: Road Signs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Environment\Road_Signs\United_States\Speed_Limit\Sign_70_MPH_48_60.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_ANGLE_Z -90
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+*SPECULAR 1
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60.par
+#BlueLink2 Animator: Camera Setup`YZ-Plane, No Offsets (with Yaw)` Shape Preview` , Video Camera`Camera_36f7b3ee-b8ff-46b0-8d75-a0bab22adf60
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_677bd791-be09-4d98-9812-312c42a2e4d7.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Road Signs } US: Speed Limit - 70 mph (48 in x 60 in)
+#Library : Animator: Shape File Link
+#DataSet : US: Speed Limit - 70 mph (48 in x 60 in)
+#Category: Environment: Road Signs
+#FileID  : Shape_677bd791-be09-4d98-9812-312c42a2e4d7
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

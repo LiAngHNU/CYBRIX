@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Plot: Setup`Speed_ID, Current Object`User-Defined Variables
+
+ADD_ENTITY Plot
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Speed_ID_<<o>>, S_Obj_<<o>>
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Speed_ID, Current Object
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { User-Defined Variables } Speed_ID, Current Object
+#Library : Plot: Setup
+#DataSet : Speed_ID, Current Object
+#Category: User-Defined Variables
+#FileID  : Plot_3b6886c3-fef2-4bd3-b433-8bbbc7298340
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

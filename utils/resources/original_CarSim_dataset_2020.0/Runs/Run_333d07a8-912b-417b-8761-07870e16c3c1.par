@@ -1,0 +1,95 @@
+PARSFILE
+#FullDataName CarSim Run Control`Active Transfer Case Control`Simulink and LabVIEW Models
+#VEHICLECODE Ind_SA
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_333d07a8-912b-417b-8761-07870e16c3c1
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_4a4163eb-910b-402a-8faa-f6e187e1cc55.par
+#BlueLink12 Models: Simulink`Differential Controller` External Powertrain` , Models`Simlink_4a4163eb-910b-402a-8faa-f6e187e1cc55
+
+PARSFILE Animator\Cameras\Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6.par
+#BlueLink0 Animator: Camera Setup`35 Azm, 5 El, 13.5 m` Vehicle Reference` , Animator camera`Camera_8eb08baf-478b-4574-8772-fb6308e8fbd6
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 1
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 2
+#RingCtrl7 -1
+*RUN_COLOR 1 0 0
+SET_RUN_COLOR 1 0 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Assembly\Vehicle_5d641ff1-95ec-43f2-92b9-9058844b24e2.par
+#BlueLink2 Vehicle: Assembly`E-Class, SUV: Active Trans. Case` E-Class` , Math Model`Vehicle_5d641ff1-95ec-43f2-92b9-9058844b24e2
+
+PARSFILE Procedures\Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc.par
+#BlueLink28 Procedures`Ramp to 0.5 Throttle` Accel. and Brake Testing` , Procedure`Proc_f8e78eff-e05e-43dc-a2b6-b8f6cd1a74bc
+
+PARSFILE Roads\3D_Road\Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2.par
+#BlueLink9 Road: 3D Surface (All Properties)`1200 m, One Lane, Mu = 0.9` Straight` , Miscellaneous`Road_3e4359e5-a484-45e2-827c-ad67b8aaa8f2
+
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 20
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 20
+*TSTART 0
+*SSTART 0
+PARSFILE Plot\Setup\Plot_0f00646f-8d3e-405d-816d-663799a16fbc.par
+#BlueLink15 Plot: Setup`Central Clutch Control Input` Controls: Chassis and Powertrain` , Plot`Plot_0f00646f-8d3e-405d-816d-663799a16fbc
+
+PARSFILE Plot\Setup\Plot_11cf3c8e-7488-4076-af41-ad110ee9db2c.par
+#BlueLink16 Plot: Setup`Central ClutchTorque` Powertrain` , Plot`Plot_11cf3c8e-7488-4076-af41-ad110ee9db2c
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6a406309-46ad-4966-bff0-ace339f3d75d.png
+WRITE_SENSOR_DETECT
+Title Active Transfer Case Control <Simulink and LabVIEW Models>
+CATEGORY Simulink and LabVIEW Models 
+DATASET_TITLE Active Transfer Case Control
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#An E-Class SUV with Active Transfer Case control from Simulink performs a 1/2 throttle acceleration test on a flat, level road.
+#
+#The powertrain's Transfer Case is set up to have two clutches, allowing torque to be distributed front to rear as a function of the clutch torques.
+#
+#Tables describing the clutch torque vs. the control signal are set up in CarSim, and the linked Simulink model controls the clutch signal (range is 0 to 1).
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { Simulink and LabVIEW Models } Active Transfer Case Control
+#Library : CarSim Run Control
+#DataSet : Active Transfer Case Control
+#Category: Simulink and LabVIEW Models
+#FileID  : Run_333d07a8-912b-417b-8761-07870e16c3c1
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

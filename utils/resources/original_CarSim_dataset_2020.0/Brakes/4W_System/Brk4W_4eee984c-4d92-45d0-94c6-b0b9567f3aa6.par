@@ -1,0 +1,106 @@
+PARSFILE
+#FullDataName Brakes: Four-Wheel System`(Hbk): MC Press, ABS`B-Class
+#CheckBox1 0    
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 1
+#RingCtrl4 1
+#RingCtrl6 1
+#RingCtrl8 1
+#RingCtrl10 1
+#RingCtrl12 1
+#RingCtrl14 0
+OPT_BK_PEDAL 0
+TL_L1 0
+TL_L2 0
+
+iaxle 1
+iside 1
+symbol_push <<ax_bk>> <<axle>>
+symbol_push <<side>> L
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 200
+MY_BRAKE_COEFFICIENT 200
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+
+INSTALL_ABS_CONTROLLER
+OPT_ABS_CTRL 2
+*OFF_F 0.2
+*ON_F 0.1
+*V_F 2
+ABS_SLIP_OFF 0.2
+ABS_SLIP_ON 0.1
+ABS_VMIN 2
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+*P_L1 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L1 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L1 200
+MY_BRAKE_COEFFICIENT 200
+*MY_FRIC_L1 0.5
+MY_FRICTION 0.5
+
+iaxle 2
+iside 1
+symbol_add <<ax_bk>> 1
+symbol_set <<side>> L
+TLAG_BK 0
+*P_L2 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 75
+MY_BRAKE_COEFFICIENT 75
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+
+OPT_ABS_CTRL 2
+*OFF_R 0.1
+*ON_R 0.06
+*V_R 2
+ABS_SLIP_OFF 0.1
+ABS_SLIP_ON 0.06
+ABS_VMIN 2
+
+iside 2
+symbol_set <<side>> R
+TLAG_BK 0
+*P_L2 1
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_L2 0.06
+TC_BK 0.06
+OPT_BK_DYN 1
+*TQ_L2 75
+MY_BRAKE_COEFFICIENT 75
+*MY_FRIC_L2 0.5
+MY_FRICTION 0.5
+
+LOG_ENTRY Used Dataset: Brakes: Four-Wheel System; { B-Class } (Hbk): MC Press, ABS
+#Library : Brakes: Four-Wheel System
+#DataSet : (Hbk): MC Press, ABS
+#Category: B-Class
+#FileID  : Brk4W_4eee984c-4d92-45d0-94c6-b0b9567f3aa6
+#Product : CarSim 2020.0
+#VehCode 4-Wheel System
+
+END

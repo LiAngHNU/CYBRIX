@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Events`N. Drive on Road 2`Road Network Driving
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 ZERO ~=
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 outside
+*VALUE1 outside
+#MiscYellow0
+path_id_dm = path2
+sstart = new_sta2;
+station = new_sta2;
+#ENDMYellow
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink14 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+DEFINE_EVENT outside ; Events\Events_c3d5d286-aa95-4d42-ac2f-6af6a42afc56.par
+#BlueLink0 Events`B. Random Decisions - Check Waypoints` Road Network Driving` , Events`Events_c3d5d286-aa95-4d42-ac2f-6af6a42afc56
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Road Network Driving } N. Drive on Road 2
+#Library : Events
+#DataSet : N. Drive on Road 2
+#Category: Road Network Driving
+#FileID  : Events_5393448a-30ce-41bd-98d5-8f08baa85b23
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Multiple Vehicles`City Environment (2 Cars)`ADAS and Active Safety
+PARSFILE Runs\Run_e8d52382-b2c9-4fdb-91f1-63d7c1788b3f.par
+#BlueLink0 CarSim Run Control`City (2-Car): Car 1` * CS 2020.0 - Multiple Autonomous Vehicles` , Vehicle 1:`Run_e8d52382-b2c9-4fdb-91f1-63d7c1788b3f
+
+PARSFILE Runs\Run_e35c3206-bfd5-4e5c-af7b-6a5868a6ed8c.par
+#BlueLink1 CarSim Run Control`City (2-Car): Car 2` * CS 2020.0 - Multiple Autonomous Vehicles` , Vehicle 2:`Run_e35c3206-bfd5-4e5c-af7b-6a5868a6ed8c
+
+PARSFILE Runs\Run_2c662592-f728-475b-8b8b-31ce4754401f.par
+#BlueLink2 CarSim Run Control`City Environment: Car 3` * CS 2020.0 - Multiple Autonomous Vehicles` , Vehicle 3:`Run_2c662592-f728-475b-8b8b-31ce4754401f
+
+PARSFILE Runs\Run_a2739cb3-3778-4884-8354-7ddd6a252932.par
+#BlueLink3 CarSim Run Control`City Environment: Car 4` * CS 2020.0 - Multiple Autonomous Vehicles` , Vehicle 4:`Run_a2739cb3-3778-4884-8354-7ddd6a252932
+
+#RingCtrl0 0
+*RUN_PLATFORM 0
+#RingCtrl1 2
+*SHOW_LINK 2
+
+#EMBEDDED_NOTES
+#To run this example in Windows:
+#1) click Open Model or Generate FMU
+#2) in Simulink, click the run button
+#3) view results for either vehicle
+#
+#V: Video
+#P: Plot
+#
+#Each vehicle in the platoon uses a shared simulink model, that leverages parallel solvers to simulate the vehicles across multiple CarSim Runs.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Multiple Vehicles; { ADAS and Active Safety } City Environment (2 Cars)
+#Library : Multiple Vehicles
+#DataSet : City Environment (2 Cars)
+#Category: ADAS and Active Safety
+#FileID  : MVeh_db0212b1-0199-426d-a44b-dc70fcef0ee3
+#Product : CarSim 2020.0
+#VehCode mVeh
+
+END

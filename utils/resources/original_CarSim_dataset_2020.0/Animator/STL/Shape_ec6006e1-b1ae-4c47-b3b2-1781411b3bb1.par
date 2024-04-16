@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`LD Utility Truck: Body`Trucks: Cabs
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Trucks\LD_Utility_Truck\body.obj
+#ENDMYellow
+
+SET_COLOR 1 0.6 0
+SET_OFFSET_X 0.01
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.29
+*SPECULAR 0.5
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 1    
+
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e6e4b5e2-348e-42ad-ab7c-62eacd66bb44.par
+#BlueLink2 Animator: Camera Setup`Vehicles and Drivers - Trucks` Shape Preview` , Video Camera`Camera_e6e4b5e2-348e-42ad-ab7c-62eacd66bb44
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_ec6006e1-b1ae-4c47-b3b2-1781411b3bb1.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } LD Utility Truck: Body
+#Library : Animator: Shape File Link
+#DataSet : LD Utility Truck: Body
+#Category: Trucks: Cabs
+#FileID  : Shape_ec6006e1-b1ae-4c47-b3b2-1781411b3bb1
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

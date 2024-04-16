@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName CarSim Run Control`Brake System Transport Delay`* CS 2020.0 - Miscellaneous
+#VEHICLECODE Ind_SA + SS
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_6b93d154-7c96-4640-bba0-0445d6e56876
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Animator\Cameras\Camera_b64f8781-7641-40ce-b0ed-bcc16a27d350.par
+#BlueLink0 Animator: Camera Setup`180 Azm, 15 El, 55 m` Vehicle Reference` , Animator camera`Camera_b64f8781-7641-40ce-b0ed-bcc16a27d350
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 0    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 10
+#RingCtrl2 0
+#RingCtrl3 0
+#RingCtrl6 1
+#RingCtrl7 -1
+*RUN_COLOR 1 1 0
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Loaded\VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497.par
+#BlueLink2 Vehicle with Loads, Sensors, Trailer, etc.`Pickup, Full Size w/ 2A Gooseneck Trl.` Pickup, Full Size` , Math Model`VehLoad_ef888e3b-53f4-4d12-9194-35ca1ac6a497
+
+PARSFILE Procedures\Proc_19a50617-f804-483a-a617-c536bdd3fa53.par
+#BlueLink28 Procedures`ADAS RP: Scenic Mountain Road` Driving` , Procedure`Proc_19a50617-f804-483a-a617-c536bdd3fa53
+
+PARSFILE Animator\HUD\HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43.par
+#BlueLink9 Animator: HUD`Throttle, Brakes, G-G, Speedo, Gear, Tach` Vehicle Status Indicators` , Miscellaneous`HUD_76ec3dd7-5fff-4651-881a-2dab4d3bed43
+
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 15
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*TSTOP 15
+*TSTART 0
+*SSTART 0
+DELETE_PLOT_GROUP default
+PLOT_GROUP default
+PARSFILE Plot\Setup\Plot_6978b571-f1ab-4318-823c-3d2c9ee5e8cc.par
+#BlueLink15 Plot: Setup`M/C & Line Pressures (Axles 3-4)` Braking` , Plot`Plot_6978b571-f1ab-4318-823c-3d2c9ee5e8cc
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_6ba13624-c527-4355-b1e1-654631d3017e.png
+WRITE_SENSOR_DETECT
+Title Brake System Transport Delay <* CS 2020.0 - Miscellaneous>
+CATEGORY * CS 2020.0 - Miscellaneous 
+DATASET_TITLE Brake System Transport Delay
+#MiscYellow0
+TLAG_BK(2,1,1) = 0.5;
+TLAG_BK(2,1,2) = 0.5;
+TLAG_BK(2,2,1) = 0.5;
+TLAG_BK(2,2,2) = 0.5;
+#ENDMYellow
+
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 1
+
+#EMBEDDED_NOTES
+#For CarSim 2020.0, the brake system transport delay parameter, math model keyword TLAG_BK, is now available for all CarSim brake systems regardless of control method. Previously, only systems controlled by master cylinder pressure with an open loop table were supported.
+#
+#NOTE: This example requires a CarSim Trailers license to run. You may still view the results without it. (The brake delay itself does not require a trailers license, however.)
+#
+#Here, the values for each of the four trailer brakes are manually set to large values, showing the effects of the delay in the linked plot. Notice that the delayed value does not become available until the simulation time has equaled the lag parameter.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * CS 2020.0 - Miscellaneous } Brake System Transport Delay
+#Library : CarSim Run Control
+#DataSet : Brake System Transport Delay
+#Category: * CS 2020.0 - Miscellaneous
+#FileID  : Run_6b93d154-7c96-4640-bba0-0445d6e56876
+#Product : CarSim 2020.0
+#VehCode Run
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup`Damper Compression (Axle 1)`Suspension Motion
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862.par
+#BlueLink0 Plot: Format`Default Plot Settings` ` , Plot format`PlotFmt_33e2becb-9fc8-474d-a6bb-685bf100d862
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS CmpD_L1, Time
+PLOTCHANNELS CmpD_R1, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Damper Compression (Axle 1)
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Suspension Motion } Damper Compression (Axle 1)
+#Library : Plot: Setup
+#DataSet : Damper Compression (Axle 1)
+#Category: Suspension Motion
+#FileID  : Plot_afa63bdd-493f-481e-a710-40050136d955
+#Product : CarSim 2020.0
+#VehCode Plot Setup
+
+END

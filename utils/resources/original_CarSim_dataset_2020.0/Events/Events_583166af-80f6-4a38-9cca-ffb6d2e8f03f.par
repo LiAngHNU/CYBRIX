@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Events`End`Optimize Controls for Lap Time
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl10 0
+#RingCtrl11 4
+#MiscYellow0
+current_lap_time = T-lap_start_time
+final_arc_length = speed_curv_length
+final_pvw_time = tprev_constant
+stop_run_now End event triggered
+#ENDMYellow
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Optimize Controls for Lap Time } End
+#Library : Events
+#DataSet : End
+#Category: Optimize Controls for Lap Time
+#FileID  : Events_583166af-80f6-4a38-9cca-ffb6d2e8f03f
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

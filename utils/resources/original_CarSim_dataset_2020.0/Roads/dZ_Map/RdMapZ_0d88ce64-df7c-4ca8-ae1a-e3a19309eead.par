@@ -1,0 +1,51 @@
+PARSFILE
+#FullDataName Road: Off-Center Elevation Map, S-L Grid`1002: Parking Lot: Major Geometry`Parking Lot
+#CheckBox0 0    
+
+SET_IROAD_DZ_FOR_ID 1002
+ROAD_N_DZ = ROAD_N_DZ + 1 ! increment count for the road
+IDZ_ROAD = ROAD_N_DZ ! set index for the new ID
+RD_DZ_ID = ROAD_DZ_ID ! Specify the user ID
+set_description RD_DZ_ID ROAD_DZ_ID for: 1002: Parking Lot: Major Geometry
+set_description ROAD_DZ_ID 1002: Parking Lot: Major Geometry
+#RingCtrl0 CARPET
+#RingCtrl3 2
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 18, 10 ! columns x rows
+ROAD_DZ_CARPET 2D_LINEAR
+0, -1, -0.6, -0.5, 6.3, 6.4, 23, 23.1, 23.9, 24, 30.7, 30.8, 36.3, 36.4, 53.4, 53.5, 60.3, 60.4, 65
+-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+-0.6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+-0.5, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0
+6.1, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0
+6.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+30.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+30.3, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0
+36.9, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0, 0.2, 0.2, 0, 0
+37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+ENDTABLE
+
+ROAD_DZ_L_CONSTANT 1
+*SCALAR2 1
+
+#EMBEDDED_NOTES
+#2018.1 added ID
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Parking Lot } 1002: Parking Lot: Major Geometry
+#Library : Road: Off-Center Elevation Map, S-L Grid
+#DataSet : 1002: Parking Lot: Major Geometry
+#Category: Parking Lot
+#FileID  : RdMapZ_0d88ce64-df7c-4ca8-ae1a-e3a19309eead
+#Product : CarSim 2020.0
+#VehCode dZ via S-L Grid
+
+END

@@ -1,0 +1,21 @@
+PARSFILE
+#FullDataName Sensor Elevation Sensitivity`Limit to -30deg (Up)`
+#CheckBox0 0    
+
+#RingCtrl0 EQUATION
+#RadioCtrl0 0    
+
+SENSOR_ANTENNA_ELEVATION_EQUATION (X >-30/DR) & (X < 0)
+*SCALAR 1
+*EQUATION (X >-30/DR) & (X < 0)
+
+
+LOG_ENTRY Used Dataset: Sensor Elevation Sensitivity; Limit to -30deg (Up)
+#Library : Sensor Elevation Sensitivity
+#DataSet : Limit to -30deg (Up)
+#Category: 
+#FileID  : SenElev_42135b79-9ed7-4eb0-89a8-d6585aac1027
+#Product : CarSim 2020.0
+#VehCode Sensor Elevation Sensitivity
+
+END

@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Events`I. Clear Events and Continue to 2.929s`Sine with Dwell
+#CheckBox1 1    
+*CLEAR
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >=
+#RingCtrl10 1
+#RingCtrl11 4
+RESET_EVENTS
+*NAME1 T_Event
+*VALUE1 2.929
+*SPEED 80
+MAKE_EVENT T_Event >= 2.929 ; Events\Events_c876dc42-6aef-4815-8f1a-470368417667.par
+#BlueLink0 Events`J. Check Yaw Rate 1.0 sec after CoS` Sine with Dwell` , Events`Events_c876dc42-6aef-4815-8f1a-470368417667
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#This dataset sets up a check point at 2.93s (1.0s after the completion of steering).
+#
+#There can be pending events when this dataset is loaded, so the box is checked to clear them.
+#
+#Revised 2018.1 because target speed uses new feature.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { Sine with Dwell } I. Clear Events and Continue to 2.929s
+#Library : Events
+#DataSet : I. Clear Events and Continue to 2.929s
+#Category: Sine with Dwell
+#FileID  : Events_032750d9-dfe7-47f9-90af-76504706df7a
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

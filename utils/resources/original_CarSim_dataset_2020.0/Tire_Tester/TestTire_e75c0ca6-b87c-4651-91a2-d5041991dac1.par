@@ -1,0 +1,65 @@
+PARSFILE
+#FullDataName Tire Tester`Sweep Gamma: Fz = 4000 N`Sweep Gamma +/- 5 deg
+*FZ_LOWER 1000
+*FZ_UPPER 10000
+*FZ_STEP 10
+*ALPHA_LOWER -10
+*ALPHA_UPPER 10
+*ALPHA_STEP 0.01
+*KAPPA_LOWER -1
+*KAPPA_UPPER 1
+*KAPPA_STEP 0.01
+*GAMMA_LOWER -5
+*GAMMA_UPPER 5
+*GAMMA_STEP 0.01
+*FZ_TEST 4000
+*ALPHA_TEST 0
+*KAPPA_TEST 0
+*GAMMA_TEST -4
+MUX_TEST -1
+MUY_TEST -1
+SPEED_TEST 10
+RR_SURF 1
+
+
+#RingCtrl0 3
+OPT_TEST_MODE 3
+GAMMA_LOWER -5
+GAMMA_UPPER 5
+GAMMA_STEP 0.01
+FZ_TEST 4000
+ALPHA_TEST 0
+KAPPA_TEST 0
+
+PARSFILE Plot\Setup\Plot_5ca12ae8-5b1e-45b1-8f48-5268e2bbeb0d.par
+#BlueLink1 Plot: Setup`Fy vs. Gamma` Tire Tester` , Plot`Plot_5ca12ae8-5b1e-45b1-8f48-5268e2bbeb0d
+
+PARSFILE Plot\Setup\Plot_50266de6-a184-4c4d-b724-740cd2c30398.par
+#BlueLink2 Plot: Setup`Mx vs. Gamma` Tire Tester` , Plot`Plot_50266de6-a184-4c4d-b724-740cd2c30398
+
+PARSFILE Plot\Setup\Plot_22cfdc32-ac0b-431f-89b2-cb1afdf3601f.par
+#BlueLink3 Plot: Setup`My vs. Gamma` Tire Tester` , Plot`Plot_22cfdc32-ac0b-431f-89b2-cb1afdf3601f
+
+PARSFILE Plot\Setup\Plot_4ae3f689-977d-4b5b-ac54-31cf8326ba52.par
+#BlueLink4 Plot: Setup`Mz vs. Gamma` Tire Tester` , Plot`Plot_4ae3f689-977d-4b5b-ac54-31cf8326ba52
+
+
+#EMBEDDED_NOTES
+#The Tire Tester makes direct use of the tire models to simulate a steady state tire performance test.
+#
+#This tire test sweeps the inclination angle Gamma from -5 deg. to 5 deg., in increments of 0.01 deg.
+#
+#Coefficents of friction are set to -1. When a negative coefficent of friction is passed to the tire model, scaling for friction is bypassed, and the table data is used directly, interpolated for load and slip.
+#
+#Except for the TNO MF-Tyre, the tire speed data field has no effect on the magnitude of calculated forces or moments. In a steady-state test (e.g., no relaxation effect), the tire models use this parameter only to identify the direction of travel.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire Tester; { Sweep Gamma +/- 5 deg } Sweep Gamma: Fz = 4000 N
+#Library : Tire Tester
+#DataSet : Sweep Gamma: Fz = 4000 N
+#Category: Sweep Gamma +/- 5 deg
+#FileID  : TestTire_e75c0ca6-b87c-4651-91a2-d5041991dac1
+#Product : CarSim 2020.0
+#VehCode Tire Tester
+
+END

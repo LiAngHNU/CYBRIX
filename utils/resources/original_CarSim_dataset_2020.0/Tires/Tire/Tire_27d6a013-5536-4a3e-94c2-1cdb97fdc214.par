@@ -1,0 +1,75 @@
+PARSFILE
+#FullDataName Tire`265/75 R16 for Duals`Trailer and Light Truck Tires
+FZ_REF 11500
+X_LENGTH 402
+Z_LENGTH 402
+Y_LENGTH 265
+#CheckBox2 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_659d470f-31c5-4b96-a28d-8c794617a2c3.par
+#BlueLink4 Animator: Shape Assembly`Dual Tire` Tires` , Animator`ShpGrp_659d470f-31c5-4b96-a28d-8c794617a2c3
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 265
+RRE 393
+R0 402
+FZ_TIRE_COEFFICIENT 502
+FZ_MAX 100000
+M_TIRE 28
+IT 2.8
+IT_XXZZ 1.6
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.0044
+RR_V 0.000028
+L_CONTACT_X_CONSTANT 85
+L_CONTACT_Y_CONSTANT 265
+RR_FX 0
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_9147d723-8515-454c-a219-32675f79a027.par
+#BlueLink0 Tire: Aligning Moment`265/75 R16` Touring Tires` , Aligning Moment`TireMz_9147d723-8515-454c-a219-32675f79a027
+
+PARSFILE Tires\Fy\TireFy_4a6a64d4-89b0-4460-b52b-6b8720461ac6.par
+#BlueLink1 Tire: Lateral Force`265/75 R16` Touring Tires` , Lateral Force`TireFy_4a6a64d4-89b0-4460-b52b-6b8720461ac6
+
+PARSFILE Tires\Fx\TireFx_e2eea0b6-a18f-49e9-acae-e78d4587afe6.par
+#BlueLink2 Tire: Longitudinal Force`265/75 R16` Touring Tires` , Longitudinal Force`TireFx_e2eea0b6-a18f-49e9-acae-e78d4587afe6
+
+PARSFILE Tires\Camber_Thrust\CamStiff_1d86a0fd-b5e5-4c66-8db7-7b6e5eba2b03.par
+#BlueLink3 Tire: Camber Thrust Coefficient`265/75 R16` Touring Tires` , Camber Thrust`CamStiff_1d86a0fd-b5e5-4c66-8db7-7b6e5eba2b03
+
+
+
+#EMBEDDED_NOTES
+#Tire & Rim Association Load Rating: 1180 kg
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Trailer and Light Truck Tires } 265/75 R16 for Duals
+#Library : Tire
+#DataSet : 265/75 R16 for Duals
+#Category: Trailer and Light Truck Tires
+#FileID  : Tire_27d6a013-5536-4a3e-94c2-1cdb97fdc214
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

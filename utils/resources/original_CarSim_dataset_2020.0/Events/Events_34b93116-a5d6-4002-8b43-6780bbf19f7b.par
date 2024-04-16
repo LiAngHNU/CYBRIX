@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Events`H. Switch to Closed Loop Target Speed`Opt_Engine_Running: Auto. Transmission
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+*NAME1 t_event
+*VALUE1 2.5
+*SPEED 30
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+SET_ISPEED_FOR_ID 0
+set_description SPEED_TARGET_ID Event: H. Switch to Closed Loop Target Speed
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+SPEED_ID_SC = SPEED_TARGET_ID
+OPT_SC_ENGINE_BRAKING 0
+SPEED_TARGET_CONSTANT 30
+#MiscYellow0
+TSTART_T_EVENT = T
+OPT_SC  3
+TSTART_SPEED_CTRL = T
+#ENDMYellow
+
+MAKE_EVENT t_event > 2.5 ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Opt_Engine_Running: Auto. Transmission } H. Switch to Closed Loop Target Speed
+#Library : Events
+#DataSet : H. Switch to Closed Loop Target Speed
+#Category: Opt_Engine_Running: Auto. Transmission
+#FileID  : Events_34b93116-a5d6-4002-8b43-6780bbf19f7b
+#Product : CarSim 2020.0
+#VehCode Events
+
+END

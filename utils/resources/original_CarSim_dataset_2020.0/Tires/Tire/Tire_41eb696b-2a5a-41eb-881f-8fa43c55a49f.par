@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Tire`Three-wheeled Vehicle - Front Tire`Utility Vehicle Tires
+FZ_REF 6000
+X_LENGTH 245
+Z_LENGTH 245
+Y_LENGTH 135
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\ShpGrp_c40dcf66-c86c-4383-9f67-841915970c80.par
+#BlueLink4 Animator: Shape Assembly`Trailer Tire` Tires` , Animator`ShpGrp_c40dcf66-c86c-4383-9f67-841915970c80
+
+WRITE_WHEEL_OFFSET
+*SET_THICKNESS 135
+RRE 243
+R0 245
+FZ_TIRE_COEFFICIENT 200
+FZ_MAX 100000
+M_TIRE 5.5
+IT 0.2
+IT_XXZZ 0.1
+PARSFILE Generic\tables\GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068.par
+#BlueLink14 Generic Table`Lx Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_6200ca2d-9af8-4768-9d04-87ea0bd47068
+
+PARSFILE Generic\tables\GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d.par
+#BlueLink15 Generic Table`Ly Variable, Scaled to Tire` Tire Relaxation Length` , Longitudinal relaxation length`GenTab_edb0dc74-f107-43df-b9cc-c9fa4d21267d
+
+VLOW_KAPPA 2
+VLOW_ALPHA 2
+RR_C 0.004
+RR_V 0.000025
+L_CONTACT_X_CONSTANT 35
+L_CONTACT_Y_CONSTANT 135
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz_13001f44-4c01-471f-b549-6ad8b7e0de00.par
+#BlueLink0 Tire: Aligning Moment`Mz for One-half Tire` Three-wheeled Vehicle` , Aligning Moment`TireMz_13001f44-4c01-471f-b549-6ad8b7e0de00
+
+PARSFILE Tires\Fy\TireFy_e7d88026-000c-4ef1-9d32-dbce0128fc23.par
+#BlueLink1 Tire: Lateral Force`Fy for One-half Tire` Three-wheeled Vehicle` , Lateral Force`TireFy_e7d88026-000c-4ef1-9d32-dbce0128fc23
+
+PARSFILE Tires\Fx\TireFx_af55f8a3-a78e-4aaa-95c4-3ba659ed2fca.par
+#BlueLink2 Tire: Longitudinal Force`Fx for One-half Tire` Three-wheeled Vehicle` , Longitudinal Force`TireFx_af55f8a3-a78e-4aaa-95c4-3ba659ed2fca
+
+PARSFILE Tires\Camber_Thrust\CamStiff_814e3320-980a-48c2-9df6-715010561cba.par
+#BlueLink3 Tire: Camber Thrust Coefficient`Camber Thrust for One-half Tire` Three-wheeled Vehicle` , Camber Thrust`CamStiff_814e3320-980a-48c2-9df6-715010561cba
+
+
+
+#EMBEDDED_NOTES
+#On the three-wheeled vehicle, VS Commands are used to reduce most forces by half.
+#
+#Two identical tires, each reduced in effect by half, at exactly the same location and carrying the same load equal one tire.
+#
+#To maintain correct non-linear properties (such as cornering stiffness), the tables for each component force and moment are modified, reducing the input vertical force and the output force or moment of each table by half. The result is a "half tire" such that, when the effect of two is combined, is equal to the single front tire.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Utility Vehicle Tires } Three-wheeled Vehicle - Front Tire
+#Library : Tire
+#DataSet : Three-wheeled Vehicle - Front Tire
+#Category: Utility Vehicle Tires
+#FileID  : Tire_41eb696b-2a5a-41eb-881f-8fa43c55a49f
+#Product : CarSim 2020.0
+#VehCode Tire
+
+END

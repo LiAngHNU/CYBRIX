@@ -1,0 +1,94 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`SUV, Full Size`Utility Vehicles: SUVs and Vans
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 0    
+#CheckBox8 1    
+
+OBJ_X_LENGTH 3140
+OBJ_Y_LENGTH 2384
+OBJ_Z_LENGTH 1677
+*DZ_V 0
+*LAT_WC 1725
+*LAT_WC_2 1750
+*HWC 395
+*WHEEL_RATIO 1.4
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\Shape_36396227-6877-46a9-a8f8-e7015d7eefdc.par
+SET_SCALE_X 1.4
+SET_SCALE_Y 1.4
+SET_SCALE_Z 1.4
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.8625
+SET_OFFSET_Z 0.37525
+TIRE_ANI_PARSFILE Animator\STL\Shape_36396227-6877-46a9-a8f8-e7015d7eefdc.par
+SET_SCALE_X 1.4
+SET_SCALE_Y 1.4
+SET_SCALE_Z 1.4
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.8625
+SET_OFFSET_Z 0.37525
+TIRE_ANI_PARSFILE Animator\STL\Shape_36396227-6877-46a9-a8f8-e7015d7eefdc.par
+SET_SCALE_X 1.4
+SET_SCALE_Y 1.4
+SET_SCALE_Z 1.4
+SET_OFFSET_X -3.14
+SET_OFFSET_Y 0.875
+SET_OFFSET_Z 0.37525
+TIRE_ANI_PARSFILE Animator\STL\Shape_36396227-6877-46a9-a8f8-e7015d7eefdc.par
+SET_SCALE_X 1.4
+SET_SCALE_Y 1.4
+SET_SCALE_Z 1.4
+SET_ANGLE_X 180
+SET_OFFSET_X -3.14
+SET_OFFSET_Y -0.875
+SET_OFFSET_Z 0.37525
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\ShpGrp_8bbb24d9-060d-4e02-85d1-21fe78bbec29.par
+#BlueLink1 Animator: Shape Assembly`SUV, Full Size` Utility Vehicles` , Vehicle Body`ShpGrp_8bbb24d9-060d-4e02-85d1-21fe78bbec29
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\Shape_8c62463f-ec19-484d-801f-e4d6bb8ec65a.par
+#BlueLink3 Animator: Shape File Link`Brake Lights` Cars: Large SUV` , Brake Lights`Shape_8c62463f-ec19-484d-801f-e4d6bb8ec65a
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_REVERSE_LIGHTS
+PARSFILE Animator\STL\Shape_3bc12e85-ea81-4fc9-afca-6027dbd9c39f.par
+#BlueLink10 Animator: Shape File Link`Reverse Lights` Cars: Large SUV` , Reverse lights`Shape_3bc12e85-ea81-4fc9-afca-6027dbd9c39f
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink5 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+EXPORT_PARSFILE Animator\STL\Shape_36396227-6877-46a9-a8f8-e7015d7eefdc.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire: Car - Width 205 mm` Common Vehicle Assets: Tires` , Tire for traffic vehicle`Shape_36396227-6877-46a9-a8f8-e7015d7eefdc
+
+
+#EMBEDDED_NOTES
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Utility Vehicles: SUVs and Vans } SUV, Full Size
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : SUV, Full Size
+#Category: Utility Vehicles: SUVs and Vans
+#FileID  : AniVeh_7a56a6bb-4fde-4cd3-a684-948ffdfa288a
+#Product : CarSim 2020.0
+#VehCode Vehicle Shape
+
+END

@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Parked: Body`Motorcycles: Touring Bike
+#MiscYellow3
+add_obj Animator\3D_Shape_Files\Motorcycles\Touring\Parked_Body.obj
+#ENDMYellow
+
+SET_COLOR 1 0 0
+*SPECULAR 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 1    
+USE_RUN_COLOR
+#CheckBox4 1    
+
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577.par
+#BlueLink2 Animator: Camera Setup`Vehicles and Drivers - Cars` Shape Preview` , Video Camera`Camera_aad9f5dd-7a61-4319-88b3-b90a1214f577
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\Shape_80301313-b6a0-42c2-85a5-8766777c565b.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Motorcycles: Touring Bike } Parked: Body
+#Library : Animator: Shape File Link
+#DataSet : Parked: Body
+#Category: Motorcycles: Touring Bike
+#FileID  : Shape_80301313-b6a0-42c2-85a5-8766777c565b
+#Product : CarSim 2020.0
+#VehCode Shape File
+
+END

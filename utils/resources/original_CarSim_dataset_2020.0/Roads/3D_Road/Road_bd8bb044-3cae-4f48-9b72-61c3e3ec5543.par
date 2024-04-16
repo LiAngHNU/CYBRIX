@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Big Grass`Roundabout, 3D, Single Lane, D = 36 m
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_bd8bb044-3cae-4f48-9b72-61c3e3ec5543.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Big Grass
+PARSFILE Roads\BuilderSegment\RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c.par
+#BlueLink0 Path: Segment Builder`Straight East` Straight` , Reference Path`RoadSeg_299f5dd8-31b0-44f2-9251-eaaf215df33c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight East
+#BlueLink1 ` , Path Elevation` , Path Elevation` , Path Elevation`
+
+#BlueLink2 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+#BlueLink3 ` , Friction` , Friction` , Friction`
+
+PARSFILE Roads\Shapes\RdShape_79825489-7473-40a2-b5dc-c2abe0ad1ca8.par
+#BlueLink4 Road: Animator Surface Shapes`Big Grass, Z = -0.3` Roundabout, 3D, D = 36 m` , Road shape definitions`RdShape_79825489-7473-40a2-b5dc-c2abe0ad1ca8
+
+#BlueLink10 ` , Miscellaneous` , Miscellaneous` , Miscellaneous`
+
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_4ccae742-4649-427a-8871-7b3629a730a2.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_4ccae742-4649-427a-8871-7b3629a730a2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 49 m` Road Reference` , Camera`Camera_36b2ee7b-54ec-4c39-9781-51b289ab39c0
+
+parsfile Roads\3D_Road\Road_bd8bb044-3cae-4f48-9b72-61c3e3ec5543.ani
+
+#EMBEDDED_NOTES
+#This dataset provides a flat reference surface with links to animator datasets that show grass and sky.
+#
+#It is intended for use with mulitple road datasets such as the example roundabout that each have animation shapes only for a portion of the network.
+#
+#In this case, the surface shape is lowered by 0.3 m to avoid visual interfence with the roundabout sections that have elevation as low as -0.2 m.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Roundabout, 3D, Single Lane, D = 36 m } Big Grass
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Big Grass
+#Category: Roundabout, 3D, Single Lane, D = 36 m
+#FileID  : Road_bd8bb044-3cae-4f48-9b72-61c3e3ec5543
+#Product : CarSim 2020.0
+#VehCode 3D Road
+
+END

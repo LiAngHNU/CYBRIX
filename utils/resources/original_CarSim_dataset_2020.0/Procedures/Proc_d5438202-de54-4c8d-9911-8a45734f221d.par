@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName Procedures`K & C Bounce Test`Test Rigs
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 10
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 0
+*TSTOP 10
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+INSTALL_SPEED_CONTROLLER
+OPT_SC 3
+N_SPEED_TARGET = N_SPEED_TARGET + 1
+ISPEED = N_SPEED_TARGET
+SPEED_TARGET_ID = ISPEED
+SPEED_ID_SC = ISPEED
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_S_CONSTANT 0
+set_description SPEED_TARGET_ID Procedure: K & C Bounce Test
+SPEED_TARGET_CONSTANT 0
+OPT_SC_ENGINE_BRAKING 0
+PARSFILE Control\Steer\StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c.par
+#BlueLink27 Control: Steering (Open Loop)`Constant: 0 deg.` Constant` , Steering`StrSW_d02d6236-3489-4162-b8b9-953cdc586f4c
+
+PARSFILE Control\Braking\PbkCon_12a24cb4-8d4b-4ff4-9710-416a675c1cd7.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0.3 MPa` Constant` , Braking`PbkCon_12a24cb4-8d4b-4ff4-9710-416a675c1cd7
+
+PARSFILE Control\Gear_at\GearCL_395374af-90fa-4fef-80e1-a8df607bfbef.par
+#BlueLink30 Control: Shifting (Closed Loop)`Neutral` ` , Shifting Control`GearCL_395374af-90fa-4fef-80e1-a8df607bfbef
+
+PARSFILE Roads\3D_Road\Road_3d3efdbc-9b94-40d6-aa37-04d5a6fb360d.par
+#BlueLink0 Road: 3D Surface (All Properties)`K & C Test Rig` Test Facilities` , Miscellaneous`Road_3d3efdbc-9b94-40d6-aa37-04d5a6fb360d
+
+PARSFILE Generic\VS_commands\GenVS_34444c22-3391-4bb2-8499-50842900679a.par
+#BlueLink5 Generic VS Commands`K & C Bounce Test VS` K & C Testing` , Miscellaneous`GenVS_34444c22-3391-4bb2-8499-50842900679a
+
+PARSFILE Plot\Setup\Plot_cf056469-49e9-4ac2-b00b-fd526c2aebfe.par
+#BlueLink8 Plot: Setup`Camber vs. Jounce - Front` Suspension Motion` , Plot`Plot_cf056469-49e9-4ac2-b00b-fd526c2aebfe
+
+PARSFILE Plot\Setup\Plot_925774b2-2830-4346-88bc-cd769b2daeeb.par
+#BlueLink9 Plot: Setup`Camber vs. Jounce - Rear` Suspension Motion` , Plot`Plot_925774b2-2830-4346-88bc-cd769b2daeeb
+
+PARSFILE Plot\Setup\Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59.par
+#BlueLink10 Plot: Setup`Jounce - Front` Suspension Motion` , Plot`Plot_cd3b5d36-ffa9-4760-83ee-3726d22d5a59
+
+PARSFILE Plot\Setup\Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d.par
+#BlueLink11 Plot: Setup`Jounce - Rear` Suspension Motion` , Plot`Plot_6e89fcc6-8e6b-4e4b-8f58-fef0a7f6d22d
+
+PARSFILE Plot\Setup\Plot_6480bda8-8a2c-47e4-af8c-16140f47b086.par
+#BlueLink12 Plot: Setup`Road Wheel Steer Angles` Steering` , Plot`Plot_6480bda8-8a2c-47e4-af8c-16140f47b086
+
+PARSFILE Plot\Setup\Plot_1d658b7a-d95c-4dcb-a910-5060d28ca6d2.par
+#BlueLink13 Plot: Setup`Steer vs. Jounce - Front` Suspension Motion` , Plot`Plot_1d658b7a-d95c-4dcb-a910-5060d28ca6d2
+
+PARSFILE Plot\Setup\Plot_5d0d34fa-0c67-420b-91e7-7ec4c84644d9.par
+#BlueLink14 Plot: Setup`Steer vs. Jounce - Rear` Suspension Motion` , Plot`Plot_5d0d34fa-0c67-420b-91e7-7ec4c84644d9
+
+PARSFILE Plot\Setup\Plot_d0e4f394-324b-4100-8ec2-8341d3833dd0.par
+#BlueLink15 Plot: Setup`Wheel Fore/Aft vs. Jounce - Front` Suspension Motion` , Plot`Plot_d0e4f394-324b-4100-8ec2-8341d3833dd0
+
+PARSFILE Plot\Setup\Plot_9dc6e17e-5560-4f58-a765-74943f7e82c7.par
+#BlueLink16 Plot: Setup`Wheel Fore/Aft vs. Jounce - Rear` Suspension Motion` , Plot`Plot_9dc6e17e-5560-4f58-a765-74943f7e82c7
+
+PARSFILE Plot\Setup\Plot_6e2f3a00-abab-44a5-bc5a-93bf8392e0a7.par
+#BlueLink17 Plot: Setup`Wheel Lateral vs. Jounce - Front` Suspension Motion` , Plot`Plot_6e2f3a00-abab-44a5-bc5a-93bf8392e0a7
+
+PARSFILE Plot\Setup\Plot_01214797-258a-46b4-bda1-87469cd6b93a.par
+#BlueLink18 Plot: Setup`Wheel Lateral vs. Jounce - Rear` Suspension Motion` , Plot`Plot_01214797-258a-46b4-bda1-87469cd6b93a
+
+PARSFILE Plot\Setup\Plot_0ca06a5e-1f85-4eef-a02e-4457ccf18ce7.par
+#BlueLink19 Plot: Setup`Sprung Mass Origin Vertical Position` Tracking` , Plot`Plot_0ca06a5e-1f85-4eef-a02e-4457ccf18ce7
+
+PARSFILE Plot\Setup\Plot_a146934a-339c-4983-9664-0f9749a0dfd6.par
+#BlueLink20 Plot: Setup`Vertical Forces` Tire Forces and Moments` , Plot`Plot_a146934a-339c-4983-9664-0f9749a0dfd6
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates how to set up a Kinematics and Compliance Bounce Test.
+#
+#Click on the blue links "K & C Test Rig" and "K & C Bounce Test VS" to see how this was done.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { Test Rigs } K & C Bounce Test
+#Library : Procedures
+#DataSet : K & C Bounce Test
+#Category: Test Rigs
+#FileID  : Proc_d5438202-de54-4c8d-9911-8a45734f221d
+#Product : CarSim 2020.0
+#VehCode Procedure
+
+END

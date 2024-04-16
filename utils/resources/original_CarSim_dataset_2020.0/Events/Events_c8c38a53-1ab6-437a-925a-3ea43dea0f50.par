@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Events`Stop at Speed = V_STOP`Validation Tests
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 Vxz_Fwd
+*VALUE1 V_STOP
+MAKE_EVENT Vxz_Fwd > V_STOP ; Events\Events_b5af09b5-d8ad-4e81-ae24-eebce691780e.par
+#BlueLink0 Events`End Events` ` , Events`Events_b5af09b5-d8ad-4e81-ae24-eebce691780e
+
+SET_EVENT_ID 0 ! reset to default
+
+LOG_ENTRY Used Dataset: Events; { Validation Tests } Stop at Speed = V_STOP
+#Library : Events
+#DataSet : Stop at Speed = V_STOP
+#Category: Validation Tests
+#FileID  : Events_c8c38a53-1ab6-437a-925a-3ea43dea0f50
+#Product : CarSim 2020.0
+#VehCode Events
+
+END
