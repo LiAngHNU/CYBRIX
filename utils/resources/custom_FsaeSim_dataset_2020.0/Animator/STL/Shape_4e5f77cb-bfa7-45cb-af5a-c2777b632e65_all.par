@@ -1,0 +1,59 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL\Shape_4e5f77cb-bfa7-45cb-af5a-c2777b632e65.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 20:29 on March 03, 2023 by CarSim 2020.0
+
+PRODUCT_NAME CarSim
+
+ENTER_PARSFILE Animator\STL\Shape_4e5f77cb-bfa7-45cb-af5a-c2777b632e65.par
+#FullDataName Animator: Shape File Link`Autocross Parking Lot`Mech. Sim. FSAE: Shape Files
+add_obj Animator\3D_Shape_Files_User\SAE\Formula SAE\Auto_x\parking_lot.OSG
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X -50
+SET_OFFSET_Y 0
+SET_OFFSET_Z -0.05
+set_lighting on
+set_fogging on
+SET_SPECULAR .2 .2 .2
+ENTER_PARSFILE Animator\Cameras\Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side) Static`Shape Preview
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_8d039c3c-753d-406b-9c28-9406943a988c
+ENTER_PARSFILE Animator\Frames\Frame_8d039c3c-753d-406b-9c28-9406943a988c.par
+#FullDataName Animator: Reference Frame`Fixed #2`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_8d039c3c-753d-406b-9c28-9406943a988c
+SET_EULER_ANGLES yaw_pitch_roll
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Fixed #2
+EXIT_PARSFILE Animator\Frames\Frame_8d039c3c-753d-406b-9c28-9406943a988c.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_8d039c3c-753d-406b-9c28-9406943a988c
+SET_LOOKPOINT_X -1.5
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 90
+SET_ELEVATION 0
+SET_DISTANCE 28
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 17
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side) Static
+EXIT_PARSFILE Animator\Cameras\Camera_f2e9fdc6-8eb7-4c80-a895-b3a3c8b4ed69.par
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Mech. Sim. FSAE: Shape Files } Autocross Parking Lot
+EXIT_PARSFILE Animator\STL\Shape_4e5f77cb-bfa7-45cb-af5a-c2777b632e65.par
+
+
+
+END
