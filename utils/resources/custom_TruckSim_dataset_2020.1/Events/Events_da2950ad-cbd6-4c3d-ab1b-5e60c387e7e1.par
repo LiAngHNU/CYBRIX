@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Events`Longitudinal Calibration: Stop Run @40 km/h`* * * CYBRIX: Events
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox9 0    
+#CheckBox10 0    
+
+#RingCtrl0 >=
+#RingCtrl10 1
+#RingCtrl11 4
+*NAME1 vx
+*VALUE1 40
+MAKE_EVENT vx >= 40 ; Events\Events_9b376ff0-310d-419e-87f0-0c4307dfa086.par
+#BlueLink0 Events`End Events` ` , Events`Events_9b376ff0-310d-419e-87f0-0c4307dfa086
+
+SET_EVENT_ID 0 ! reset to default
+
+#EMBEDDED_NOTES
+#In this Event, the brake control is set to a constant 10 MPa.
+#
+#Using the Event timer t_event, this Event is set to last 4 seconds, after which the simulation will stop when the "End Events" dataset is loaded.
+#
+#The "End Events" dataset uses a VS Command called stop_run_now. When the VS Solver processes this VS Command, the simulation stops.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; { * * * CYBRIX: Events } Longitudinal Calibration: Stop Run @40 km/h
+#Library : Events
+#DataSet : Longitudinal Calibration: Stop Run @40 km/h
+#Category: * * * CYBRIX: Events
+#FileID  : Events_da2950ad-cbd6-4c3d-ab1b-5e60c387e7e1
+#Product : TruckSim 2020.1
+#VehCode Events
+
+END

@@ -8,7 +8,7 @@ CATEGORY * * Quick Start Guide Example
 TITLE Baseline <* * Quick Start Guide Example>
 
 ! Echo: Results\Run_f02bf0b3-4066-447e-bb5e-40a929b281c7\LastRun_echo.par
-! This run was made 10:45 on June 29, 2020.
+! This run was made 19:53 on April 16, 2024.
 
 !------------------------------------------------------------------------------------
 ! SYSTEM PARAMETERS (SIMULATION OPTIONS)
@@ -71,7 +71,7 @@ OPT_VS_FILETYPE     2 ! Type of output file: 1-> 64-bit VS, 2-> 32-bit VS, 3 ->
                       ! 32-bit ERD, 4 -> text CSV (no binary), 0 -> no output file
 OPT_WRITE           1 ; - ! [D] Write outputs when T > TSTART_WRITE? 1 -> write, 0
                       ! -> don't write; change this using VS Commands or Events
-! RTIME 0.09268597244 ; - ! CALC -- Computational efficiency (sec/sim. sec)
+! RTIME   0.064139425 ; - ! CALC -- Computational efficiency (sec/sim. sec)
 TSTART             12 ; s ! Starting time for the simulation clock
 TSTART_T_EVENT      0 ; s ! [D] Event clock reset time: T_EVENT = T - TSTART_T_EVENT
 TSTART_WRITE       12 ; s ! Start writing outputs when this time is reached
@@ -4644,9 +4644,9 @@ SV_AERO_ROAD_ID_1   1 ; - ! Road surface ID for tracked aero road point
 SV_AERO_ROAD_STA_1 230.2425744 ; m ! Road path station for tracked aero road point
 SV_AT_LOCKED        0 ; - ! Lock state of automatic transmission
 SV_AVX -0.0004850089767 ; deg/s ! ODE: Body-X roll rate of sprung-mass {AVx}
-SV_AVX_A1 9.713487461e-05 ; deg/s ! ODE: Roll rate of axle 1
-SV_AVX_A2 0.0001945671652 ; deg/s ! ODE: Roll rate of axle 2
-SV_AVY -9.040802141e-05 ; deg/s ! ODE: Body-Y pitch rate of sprung-mass {AVy}
+SV_AVX_A1 9.713487468e-05 ; deg/s ! ODE: Roll rate of axle 1
+SV_AVX_A2 0.0001945671653 ; deg/s ! ODE: Roll rate of axle 2
+SV_AVY -9.040802144e-05 ; deg/s ! ODE: Body-Y pitch rate of sprung-mass {AVy}
 SV_AVY_L1 363.7064829 ; rpm ! ODE: Spin of wheel L1 {AVy_L1}
 SV_AVY_L1_OLD 363.7064882 ; rpm ! Spin of wheel L1 (previous time step)
 SV_AVY_L2 365.6001626 ; rpm ! ODE: Spin of wheel L2 {AVy_L2}
@@ -4795,7 +4795,7 @@ SV_IVERR 0.1817707938 ; m ! ODE: Integral of SC speed error {Vx_IErr}
 SV_I_GEAR_SHIFT   0.2 ; kg-m2 ! Transmission gear inertia modulated by shift
 SV_I_GEAR_SHIFT_START 0 ; kg-m2 ! Gear spin inertia when automatic shift started
 SV_JNCR_A1 -3.388527012e-06 ; m/s ! ODE: Jounce rate of axle 1
-SV_JNCR_A2 2.78126843e-06 ; m/s ! ODE: Jounce rate of axle 2
+SV_JNCR_A2 2.781268431e-06 ; m/s ! ODE: Jounce rate of axle 2
 SV_JNC_A1 -0.0005895720394 ; m ! ODE: Jounce of axle 1
 SV_JNC_A2 0.0002607900184 ; m ! ODE: Jounce of axle 2
 SV_LK_WHL_L1        0 ; - ! Lockup state for wheel L1

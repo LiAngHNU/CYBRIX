@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Models: Simulink`#1003 Calibration: Lateral Characteristic`* * * CYBRIX: Simulink Models
+#RunMdlFile D:\Project Files\CYBRIX\2024_04_14_vehicle_calibration\models\lateral_calibration.mdl
+SIMULINK_MODEL_FILE D:\Project Files\CYBRIX\2024_04_14_vehicle_calibration\models\lateral_calibration.mdl
+#RingCtrl0 -1
+#CheckBox0 1    
+*USE_ALT_DIR 1
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox3 1    
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox4 0    
+OPT_IO_SYNC_FM 0
+*TSTEP 0.0005
+*FREQ_MODEL 2000
+*TSTEP_OUT 0.01
+*FREQ_OUT 100
+tstep 0.0005
+iprint 20
+#AltPath D:\Project Files\CYBRIX\2024_04_14_vehicle_calibration\models
+*ALTERNATE_PATH D:\Project Files\CYBRIX\2024_04_14_vehicle_calibration\models
+#MiscYellow0
+LIVE_SERVER localhost
+ANI_T_STAMP
+TIME_CHANNEL T_STAMP
+#ENDMYellow
+
+PARSFILE IO_Channels\I_Channels\Import_71763a7c-db8c-46b4-a061-1bb470747f85.par
+#BlueLink0 I/O Channels: Import`#1003 Calibration: Lateral Characteristc` * * * CYBRIX: Import Channels` , Import`Import_71763a7c-db8c-46b4-a061-1bb470747f85
+
+PARSFILE IO_Channels\O_Channels\Export_0369b3a5-da11-4610-b34e-616c414acd48.par
+#BlueLink1 I/O Channels: Export`#1003 Calibration: Lateral Characteristic` * * * CYBRIX: Export Channels` , Import/Export`Export_0369b3a5-da11-4610-b34e-616c414acd48
+
+LIVE_SERVER_UPDATE_FREQ_MAX 165
+
+#EMBEDDED_NOTES
+#This "Models: Simulink" dataset is used in an example in which two vehicle models are simulated simultaneously under the control of Simulink. This dataset is used for the first vehicle, which is detected by a second vehicle.
+#
+#Both "Models: Simulink" datasets identify the same Simulink model.
+#- For the lead vehicle there are only exports
+#- For the following vehicle there exports and imports
+#For more details on this example, please see the Technical Memo: "Example: Running Multiple Vehicles in Simulink."
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Models: Simulink; { * * * CYBRIX: Simulink Models } #1003 Calibration: Lateral Characteristic
+#Library : Models: Simulink
+#DataSet : #1003 Calibration: Lateral Characteristic
+#Category: * * * CYBRIX: Simulink Models
+#FileID  : Simlink_57989199-984c-48d9-8c24-b4028d93bd15
+#Product : TruckSim 2020.1
+#VehCode 
+
+END

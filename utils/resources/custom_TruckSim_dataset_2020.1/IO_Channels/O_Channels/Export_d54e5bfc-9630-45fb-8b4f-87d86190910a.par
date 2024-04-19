@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName I/O Channels: Export`#1002 Calibration: Longitudinal Characteristic`* * * CYBRIX: Export Channels
+#RingCtrl0 2
+#RingCtrl1 1
+*README_FILE Results\Run_be54c7d5-79d5-468d-8ce8-9054adabce39\Run_out_tab.txt
+
+
+EXPORT Throttle
+EXPORT Vx
+EXPORT Ax
+#MiscYellow0
+#Number of Selected Channels: 3
+#CHN_NAME: Throttle
+#CHN_NAME: Vx
+#CHN_NAME: Ax
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`#1002 Calibration: Longitudinal Characteristic` * * * CYBRIX: Run Controls` , example run`Run_be54c7d5-79d5-468d-8ce8-9054adabce39
+
+
+#EMBEDDED_NOTES
+#Export variables dataset for the simple ABS/Simulink example.
+#
+#This dataset specifies the export variables for the equivalent longitudinal wheel speeds, the velocity at the sprung mass, and the master cylinder brake pressure.
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { * * * CYBRIX: Export Channels } #1002 Calibration: Longitudinal Characteristic
+#Library : I/O Channels: Export
+#DataSet : #1002 Calibration: Longitudinal Characteristic
+#Category: * * * CYBRIX: Export Channels
+#FileID  : Export_d54e5bfc-9630-45fb-8b4f-87d86190910a
+#Product : TruckSim 2020.1
+#VehCode Export Channels
+
+END

@@ -1,8 +1,8 @@
-Run made by TruckSim 2020.1 at 16:51 on June 29, 2020.
+Run made by TruckSim 2020.1 at 14:20 on April 17, 2024.
 
 Started with simfile: simfile.sim
 
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Results\Run_f1d0aff6-eeba-4bb9-b3b6-a501d7767cbc\Run_all.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Results\Run_f1d0aff6-eeba-4bb9-b3b6-a501d7767cbc\Run_all.par"
 Installed keywords into VS Solver for MODEL_LAYOUT S_SS
 Used Dataset: Models: Simulink; { Live Video } Live Video S-Function only
 Used Dataset: Animator: Reference Frame; { Tracking: Road } Camera Tracking X-Y-Z-Yaw
@@ -375,7 +375,7 @@ Used Dataset: Plot: Setup; { Steering } Steering Wheel Angle vs. Time
  Live Video: ISO Steady-State Circle <Simulink and LabVIEW>
 Used Dataset: TruckSim Run Control; { Simulink and LabVIEW } Live Video: ISO Steady-State Circle
 
-Time to read input = 0.0597203
+Time to read input = 0.0771066
 Function F_JNC_STOP_TABLE(1,1) extrapolated (out of range LOW) for X = -0.0561078 mm at T = 0
 Function F_REB_STOP_TABLE(1,1) extrapolated (out of range HIGH) for X = -0.0561078 mm at T = 0
 Function F_JNC_STOP_TABLE(1,2) extrapolated (out of range LOW) for X = 0.0547267 mm at T = 0
@@ -389,365 +389,83 @@ Function F_REB_STOP_TABLE(3,1) extrapolated (out of range HIGH) for X = 0 mm at 
 Function F_JNC_STOP_TABLE(3,2) extrapolated (out of range LOW) for X = 0 mm at T = 0
 Function F_REB_STOP_TABLE(3,2) extrapolated (out of range HIGH) for X = 0 mm at T = 0
 
-Run started: VS output file = D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Results\Run_f1d0aff6-eeba-4bb9-b3b6-a501d7767cbc\LastRun.vsb
+Run started: VS output file = D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Results\Run_f1d0aff6-eeba-4bb9-b3b6-a501d7767cbc\LastRun.vsb
 Function INV_CAP_TC_TABLE extrapolated (out of range HIGH) for X = 1.00001 - at T = 0.0005
 
 Event #1 occurred at t = 36.0005: T > 3*T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_808b67cb-3b3c-4967-a1d2-89e23063f838.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_808b67cb-3b3c-4967-a1d2-89e23063f838.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } B. Save Ackermann Steer
 
 Event #2 occurred at t = 36.001: T > 0
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
 
 Event #3 occurred at t = 48.0015: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
 
 Event #4 (Group #1000) occurred at t = 48.002: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
 Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
 Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
 
 Event #5 (Group #1000) occurred at t = 48.0025: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
 
 Event #6 occurred at t = 60.003: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
 
 Event #7 (Group #1000) occurred at t = 60.0035: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
 Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
 Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
 
 Event #8 (Group #1000) occurred at t = 60.004: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
 
 Event #9 occurred at t = 72.004: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
 
 Event #10 (Group #1000) occurred at t = 72.0045: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
 Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
 Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
 
 Event #11 (Group #1000) occurred at t = 72.005: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
 
 Event #12 occurred at t = 84.0055: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
 
 Event #13 (Group #1000) occurred at t = 84.006: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
 Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
 Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
 
 Event #14 (Group #1000) occurred at t = 84.0065: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
 
 Event #15 occurred at t = 96.007: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
 
 Event #16 (Group #1000) occurred at t = 96.0075: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
 Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
 Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
 
 Event #17 (Group #1000) occurred at t = 96.008: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
+Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
 Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
 
-Event #18 occurred at t = 108.008: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
+Run stopped at t = 105.311. External control (manual or external model)
 
-Event #19 (Group #1000) occurred at t = 108.009: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #20 (Group #1000) occurred at t = 108.01: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #21 occurred at t = 120.01: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #22 (Group #1000) occurred at t = 120.011: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #23 (Group #1000) occurred at t = 120.011: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #24 occurred at t = 132.012: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #25 (Group #1000) occurred at t = 132.012: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #26 (Group #1000) occurred at t = 132.012: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #27 occurred at t = 144.013: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #28 (Group #1000) occurred at t = 144.013: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #29 (Group #1000) occurred at t = 144.013: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-Function L_RELAX_X_FZ_TABLE(1,2,1) extrapolated (out of range HIGH) for X = 1 N at T = 146.063
-
-Event #30 occurred at t = 156.014: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #31 (Group #1000) occurred at t = 156.014: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #32 (Group #1000) occurred at t = 156.015: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #33 occurred at t = 168.016: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #34 (Group #1000) occurred at t = 168.016: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #35 (Group #1000) occurred at t = 168.017: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #36 occurred at t = 180.017: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #37 (Group #1000) occurred at t = 180.018: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #38 (Group #1000) occurred at t = 180.018: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #39 occurred at t = 192.019: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #40 (Group #1000) occurred at t = 192.019: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #41 (Group #1000) occurred at t = 192.019: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #42 occurred at t = 204.02: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #43 (Group #1000) occurred at t = 204.02: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #44 (Group #1000) occurred at t = 204.021: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #45 occurred at t = 216.022: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #46 (Group #1000) occurred at t = 216.022: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #47 (Group #1000) occurred at t = 216.023: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #48 occurred at t = 228.023: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #49 (Group #1000) occurred at t = 228.024: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #50 (Group #1000) occurred at t = 228.024: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #51 occurred at t = 240.025: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #52 (Group #1000) occurred at t = 240.025: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #53 (Group #1000) occurred at t = 240.025: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #54 occurred at t = 252.026: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #55 (Group #1000) occurred at t = 252.026: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #56 (Group #1000) occurred at t = 252.027: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #57 occurred at t = 264.028: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #58 (Group #1000) occurred at t = 264.028: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #59 (Group #1000) occurred at t = 264.029: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #60 occurred at t = 276.029: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #61 (Group #1000) occurred at t = 276.029: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #62 (Group #1000) occurred at t = 276.03: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #63 occurred at t = 288.031: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #64 (Group #1000) occurred at t = 288.031: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #65 (Group #1000) occurred at t = 288.031: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #66 occurred at t = 300.032: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #67 (Group #1000) occurred at t = 300.033: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #68 (Group #1000) occurred at t = 300.033: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #69 occurred at t = 312.034: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #70 (Group #1000) occurred at t = 312.034: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #71 (Group #1000) occurred at t = 312.034: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #72 occurred at t = 324.035: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #73 (Group #1000) occurred at t = 324.036: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #74 (Group #1000) occurred at t = 324.036: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #75 occurred at t = 336.036: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #76 (Group #1000) occurred at t = 336.037: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #77 (Group #1000) occurred at t = 336.038: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #78 occurred at t = 348.038: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #79 (Group #1000) occurred at t = 348.038: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_7d9ba007-156f-472b-a3fd-dc8d1c009641.par"
-Pending Event removed by command DELETE_EVENTS_ID: ID = 1000, ABS(ABS(AY) -AY_TARG) > AY_STEP
-Used Dataset: Events; { ISO Steady-State Circle Series } E. Write One Time Step
-
-Event #80 (Group #1000) occurred at t = 348.039: 1
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_bb33e2cb-6032-4786-bb5e-ad0d89fe9bdb.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } C. Go to Next Speed
-
-Event #81 occurred at t = 360.04: T_EVENT > T_WAIT
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_614fa500-1fd6-4f02-92f2-62ce41f91c79.par"
-Used Dataset: Events; { ISO Steady-State Circle Series } D. Check Lateral Acceleration
-
-Event #82 (Group #1000) occurred at t = 360.04: ABS(ABS(AY) -AY_TARG) > AY_STEP
-Include PARSFILE "D:\Product_Dev\Product_Checkouts\trunk\Image\TruckSim\Core\TruckSim_Data\Events\Events_6b337dcc-dfd9-44fd-94b2-6fae7ff1ff11.par"
-
-Run stopped at t = 360.04. VS Command STOP_RUN_NOW  due to lateral acceleration error
-Used Dataset: Events; { Stop Conditions } Stop Due to Lateral Acceleration Error
-
-Computational time ratio: RTIME = 0.172877 (real time)/(simulation time)
+Computational time ratio: RTIME = 0.111555 (real time)/(simulation time)
 

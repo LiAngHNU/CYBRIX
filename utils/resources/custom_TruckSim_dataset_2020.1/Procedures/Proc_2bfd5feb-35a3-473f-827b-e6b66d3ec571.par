@@ -1,0 +1,71 @@
+PARSFILE
+#FullDataName Procedures`#1002 Calibration: Longitudinal Characteristc`* * * CYBRIX: Procedures
+#CheckBox0 1    
+OPT_INIT_CONFIG 1
+#CheckBox1 1    
+OPT_INIT_PATH 1
+#CheckBox2 1    
+OPT_INIT_SPEED 1
+#CheckBox3 1    
+
+#RingCtrl0 5
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 50
+*TSTOP 100
+*TSTART 0
+*SSTART 0
+*SSTOP 2000
+
+OPT_SC 0
+PARSFILE Control\Driver\StrDM_3a1114a0-9ce1-4e94-b72c-12a72c154053.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`2s Preview` Constant Position: No Offset` , Steering`StrDM_3a1114a0-9ce1-4e94-b72c-12a72c154053
+
+PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
+#BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Throttle\Throttle_9806b7fc-5689-470e-baa1-fc3c03042895.par
+#BlueLink29 Control: Throttle (Open Loop)`Constant: 0.1` Constant` , Throttle`Throttle_9806b7fc-5689-470e-baa1-fc3c03042895
+
+PARSFILE Roads\3D_Road\Road_ed040cd3-af50-4189-a95a-5ddc13819823.par
+#BlueLink0 Road: 3D Surface (All Properties)`10 km x 10 km, Mu = 1.0, Flat` * * * CYBRIX: Standard Scenarios` , Miscellaneous`Road_ed040cd3-af50-4189-a95a-5ddc13819823
+
+PARSFILE Events\Events_a3545107-93a4-4a11-8fb0-05dc655423c4.par
+#BlueLink4 Events`Longitudinal Calibration: Stop Run @60 km/h` * * * CYBRIX: Events` , Miscellaneous`Events_a3545107-93a4-4a11-8fb0-05dc655423c4
+
+PARSFILE Plot\Setup\Plot_c0b9d813-2ebb-4850-bfae-222922b0cbf0.par
+#BlueLink9 Plot: Setup`Longitudinal Calibration: Ax vs. Vx` * * * CYBRIX: Plots` , Plot`Plot_c0b9d813-2ebb-4850-bfae-222922b0cbf0
+
+PARSFILE Plot\Setup\Plot_e7ebc6aa-3c30-4923-ac68-494d92a9af95.par
+#BlueLink10 Plot: Setup`Longitudinal Calibration: Kappa vs. Time` * * * CYBRIX: Plots` , Plot`Plot_e7ebc6aa-3c30-4923-ac68-494d92a9af95
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#This example is used in the TruckSim Quick Start Guide. Since the test duration is short (12 s or 300 m, whichever comes first) and the dynamic motions are easily visible in the animator, it is a test commonly used to evaluate different vehicle data.
+#
+#To see how the driver path was set up, click on the blue link "Double Lane Change" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 70 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { * * * CYBRIX: Procedures } #1002 Calibration: Longitudinal Characteristc
+#Library : Procedures
+#DataSet : #1002 Calibration: Longitudinal Characteristc
+#Category: * * * CYBRIX: Procedures
+#FileID  : Proc_2bfd5feb-35a3-473f-827b-e6b66d3ec571
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

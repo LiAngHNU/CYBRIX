@@ -3,10 +3,10 @@ PARSFILE
 ! Utility to calculate road and path coordinates for visualization
 ! Revision 143773, June 25, 2020
 
-TITLE Straight Path East <Straight>
+TITLE 1 km Square, Mu = 1.0 <Flat Test Pads>
 
 ! Echo: Roads\3D_Road\Road_3eb0268b-8183-49d8-8948-be107489f627_echo.par
-! This run was made 11:18 on June 29, 2020.
+! This run was made 09:30 on April 18, 2024.
 
 !------------------------------------------------------------------------------------
 ! SYSTEM PARAMETERS (SIMULATION OPTIONS)
@@ -17,13 +17,11 @@ TITLE Straight Path East <Straight>
 
 ID_EVENT            0 ; - ! ID number that can be assigned to the current event
 ID_RUN              0 ; - ! ID number that can be assigned to a simulation run
-IPRINT              1 ! Print interval: output time step TSTEP_WRITE = TSTEP*IPRINT;
-                      ! set IPRINT = 0 for debug (TSTEP_WRITE = T_DT) [L]
 NDIGITS_ECHO       10 ! [D] Max. no. of digits for printing floating-point numbers
 ! NIMPORT           0 ! Number of variables activated for import (read only)
-! NOUT_ANI_LIVE     3 ! Number of variables sent live to animators (read only)
+! NOUT_ANI_LIVE     0 ! Number of variables sent live to animators (read only)
 ! NOUT_EXPORT       0 ! Number of output variables activated for export (read only)
-! NOUT_WRITE        3 ! Number of output variables written to file (read only)
+! NOUT_WRITE        0 ! Number of output variables written to file (read only)
 OPT_ALL_WRITE       0 ! Write all outputs to file? 1 -> all, 0 -> only activated
                       ! outputs
 OPT_BUFFER_WRITE    0 ! [D] Retain output data in memory buffer until end of run? 0
@@ -33,10 +31,8 @@ OPT_CHECK_MATH      2 ! [D] Check for math exceptions? 2 -> as errors, 1 -> as
                       ! warnings, 0 -> no checks
 OPT_ECHO_ALL_PARS   0 ! [D] Echo all parameters in this VS Solver? 0 -> no, 1 -> yes
 OPT_ECHO_ALL_UNITS  0 ! [D] Echo list of units and scale factors? 0 -> no, 1 -> yes
-OPT_ECHO_ANI_LIVE   0 ! [D] Echo variables sent live to video? 0 -> no, 1 -> yes
 OPT_ECHO_ICS        0 ! [D] Echo initial conditions? 0 -> no, 1 -> yes
 OPT_ECHO_KEYWORDS_LC 0 ! [D] Echo all keywords in lowercase? 0 -> no, 1 -> yes
-OPT_ECHO_WRITE      0 ! [D] Echo written outputs? 0 -> no, 1 -> yes
 OPT_ERROR_DIALOG    0 ! Show pop-up dialog box if fatal error occurs: 1 -> yes
                       ! (normal use), 0 -> no (for batch runs)
 OPT_ERROR_DUP_DEF   0 ! [D] Handle case where DEFINE_IMPORT, DEFINE_OUTPUT,
@@ -53,7 +49,6 @@ OPT_LOG_WARNINGS    1 ! [D] Write warnings into log file? 1 -> yes, 0 -> no
 OPT_PAUSE           0 ! [D] Pause at end of run with window open? 0 -> no, 1 -> yes
 OPT_SKIP_INIT_DYN   0 ! [D] Skip initial dynamic calculations (for some RT systems)?
                       ! 0 -> no, 1 -> yes
-OPT_SORT_WRITE      1 ! [D] Sort written outputs? 1 -> alphabetical, 0 -> as entered
 OPT_STOP            0 ! [D] Option for stopping the run: 0 -> stop when T reaches
                       ! TSTOP; 1 -> stop when T reaches TSTOP or station reaches
                       ! SSTOP; -1 -> run until stopped using VS Commands or
@@ -66,7 +61,6 @@ TSTART          12.68 ; s ! Starting time for the simulation clock
 TSTART_T_EVENT      0 ; s ! [D] Event clock reset time: T_EVENT = T - TSTART_T_EVENT
 TSTART_WRITE        0 ; s ! [D] Start writing outputs when this time is reached
 TSTEP            0.04 ; s ! Time step for numerical integration [L]
-! TSTEP_WRITE    0.04 ; s ! CALC -- Time interval in output time-series file
 TSTOP         12.6796 ; s ! Stop when this time is reached
 ! T_DT           0.04 ; s ! CALC -- Time increment between calculations
 
@@ -121,7 +115,7 @@ SEGMENT_LENGTH(1,1) 100 ; m ! Segment length
 ! NROAD             1 ! Number of installed road surfaces (read only)
 NROAD_DZ            0 ! [D] Number of ROAD_DZ datasets
 DEFINE_ROADS        1 ! VS Command to define road surfaces
-CURRENT_ROAD_ID     1 ! ROAD_ID for the vehicle during initialization [I]
+CURRENT_ROAD_ID     1 ! [D] ROAD_ID for the vehicle during initialization [I]
 
 ROAD_ID(1)          1 ! [D] ID number for this road
 ROAD_PATH_ID(1)     1 ! PATH_ID of reference path used for this road [I]
@@ -192,7 +186,7 @@ ROAD_NEW_ID_OFFSET(1,2) 0 ; - ! Offset added (after gain) to get ID
 ! 200 datasets; if indices shown below are not used, e.g., (2), the current value of
 ! the index IROAD is used to identify the dataset when reading data.
 
-ROAD_ZS_CONSTANT(1) 0 ; m ! [D] Constant elevation
+ROAD_ZS_CONSTANT(1) 0 ; m ! Constant elevation
 ROAD_ZS_OFFSET(1)   0 ; m ! Offset added (after gain) to get elevation
 
 ! RR_SURF: Tire/road rolling resistance surface-effect coefficient. RR_SURF can be a

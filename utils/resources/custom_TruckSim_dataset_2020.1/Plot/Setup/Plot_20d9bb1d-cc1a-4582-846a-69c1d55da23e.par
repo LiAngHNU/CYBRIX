@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Plot: Setup`Static Calibration: Iz vs. Time`* * * CYBRIX: Plots
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS AAz/10000, Time, 1/Iz
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Static Calibration: Iz vs. Time
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The output variable Vxz_Fwd is what the TruckSim Closed-Loop Speed Controller uses.
+#
+#It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Static Calibration: Iz vs. Time
+#Library : Plot: Setup
+#DataSet : Static Calibration: Iz vs. Time
+#Category: * * * CYBRIX: Plots
+#FileID  : Plot_20d9bb1d-cc1a-4582-846a-69c1d55da23e
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

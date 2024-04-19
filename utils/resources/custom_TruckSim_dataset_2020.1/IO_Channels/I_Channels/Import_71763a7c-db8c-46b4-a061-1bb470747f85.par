@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName I/O Channels: Import`#1003 Calibration: Lateral Characteristc`* * * CYBRIX: Import Channels
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_21ca77e6-3acb-4d1b-af8f-444856af43ea\Run_imp_tab.txt
+
+#BlueLink0 TruckSim Run Control`#1003 Calibration: Lateral Characteristic` * * * CYBRIX: Run Controls` , example run`Run_21ca77e6-3acb-4d1b-af8f-444856af43ea
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for simple ABS example.
+#
+#This dataset specifies the import variables for the brake pressure at all four wheels. The import mode Replace is used to replace the internally calculated wheel brake pressure with data imported from an external model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { * * * CYBRIX: Import Channels } #1003 Calibration: Lateral Characteristc
+#Library : I/O Channels: Import
+#DataSet : #1003 Calibration: Lateral Characteristc
+#Category: * * * CYBRIX: Import Channels
+#FileID  : Import_71763a7c-db8c-46b4-a061-1bb470747f85
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

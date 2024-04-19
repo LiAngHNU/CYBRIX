@@ -2,10 +2,10 @@
   "VsChannelGroup" : {
     "Category" : "Simulink and LabVIEW",
     "Dataset" : "Live Video: ISO Steady-State Circle",
-    "Input File" : "D:\\Product_Dev\\Product_Checkouts\\trunk\\Image\\TruckSim\\Core\\TruckSim_Data\\Results\\Run_f1d0aff6-eeba-4bb9-b3b6-a501d7767cbc\\LastRun.vs",
+    "Input File" : "D:\\Project Files\\CYBRIX\\utils\\resources\\custom_TruckSim_dataset_2020.1\\Results\\Run_f1d0aff6-eeba-4bb9-b3b6-a501d7767cbc\\LastRun.vs",
     "Model" : "",
     "Product" : "TruckSim 2020.1",
-    "Timestamp" : "16:51 on June 29, 2020",
+    "Timestamp" : "14:20 on April 17, 2024",
     "Title" : "Live Video: ISO Steady-State Circle <Simulink and LabVIEW>",
     "Version" : 2,
     "XLabel" : "Time",

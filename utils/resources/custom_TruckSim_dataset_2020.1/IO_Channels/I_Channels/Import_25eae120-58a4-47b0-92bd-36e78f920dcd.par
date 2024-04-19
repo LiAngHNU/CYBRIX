@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName I/O Channels: Import`#0000 Tutorial: Manually Control`* * * CYBRIX: Import Channels
+#RingCtrl0 1
+#RingCtrl1 1
+*README_FILE Results\Run_3741e661-9ca7-4bfe-9786-a73ef5173d99\Run_imp_tab.txt
+
+#MiscYellow0
+IMP_SPEED Replace 0.0 ! 1
+IMP_STEER_SW Replace 0.0 ! 1
+#ENDMYellow
+
+#BlueLink0 TruckSim Run Control`#0000 Tutorial: Manually Control` * * * CYBRIX: Run Controls` , example run`Run_3741e661-9ca7-4bfe-9786-a73ef5173d99
+
+
+#EMBEDDED_NOTES
+#Import variables dataset for simple ABS example.
+#
+#This dataset specifies the import variables for the brake pressure at all four wheels. The import mode Replace is used to replace the internally calculated wheel brake pressure with data imported from an external model.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; { * * * CYBRIX: Import Channels } #0000 Tutorial: Manually Control
+#Library : I/O Channels: Import
+#DataSet : #0000 Tutorial: Manually Control
+#Category: * * * CYBRIX: Import Channels
+#FileID  : Import_25eae120-58a4-47b0-92bd-36e78f920dcd
+#Product : TruckSim 2020.1
+#VehCode Import Channels
+
+END

@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Procedures`#0000 Tutorial: Manually Control`* * * CYBRIX: Procedures
+#CheckBox3 0    
+
+#RingCtrl0 6
+#RingCtrl1 -1
+#RingCtrl2 0
+OPT_STOP -1
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+TSTOP -1
+*SPEED 20
+*TSTOP 100
+*TSTART 0
+*SSTART 0
+*SSTOP 2000
+
+PARSFILE Control\Driver\StrDM_3a1114a0-9ce1-4e94-b72c-12a72c154053.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`2s Preview` Constant Position: No Offset` , Steering`StrDM_3a1114a0-9ce1-4e94-b72c-12a72c154053
+
+PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
+
+PARSFILE Control\Speed_path\SpdPath_18c54863-3d80-415f-b505-bd47554822a1.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.7/0.3 G Max Ax/Ay, 90 km/h` Aggressive Driving` , Speed vs. station`SpdPath_18c54863-3d80-415f-b505-bd47554822a1
+
+PARSFILE Roads\3D_Road\Road_5595e2f4-f070-41c1-86ba-eaac93b88d08.par
+#BlueLink0 Road: 3D Surface (All Properties)`Handling Course` Self-Contained Scenes` , Miscellaneous`Road_5595e2f4-f070-41c1-86ba-eaac93b88d08
+
+PARSFILE Roads\Center_XY\PathXY_31d2e7da-3af1-4380-81ee-25eb4f63d8c6.par
+#BlueLink1 Path: X-Y Coordinates`Handling Course Race Line` Handling Course` , Miscellaneous`PathXY_31d2e7da-3af1-4380-81ee-25eb4f63d8c6
+
+PARSFILE Plot\Setup\Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b.par
+#BlueLink9 Plot: Setup`Longitudinal Speed (Vxz_Fwd) vs. Time` Vehicle Motion` , Plot`Plot_c57af236-73b8-4f4d-aa46-3d4f4c85076b
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#This example is used in the TruckSim Quick Start Guide. Since the test duration is short (12 s or 300 m, whichever comes first) and the dynamic motions are easily visible in the animator, it is a test commonly used to evaluate different vehicle data.
+#
+#To see how the driver path was set up, click on the blue link "Double Lane Change" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 70 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { * * * CYBRIX: Procedures } #0000 Tutorial: Manually Control
+#Library : Procedures
+#DataSet : #0000 Tutorial: Manually Control
+#Category: * * * CYBRIX: Procedures
+#FileID  : Proc_ea07a665-4ec6-4af7-9484-d871ebc24365
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

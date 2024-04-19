@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Procedures`#1001 Calibration: Static Characteristc`* * * CYBRIX: Procedures
+#CheckBox0 1    
+OPT_INIT_CONFIG 1
+#CheckBox1 1    
+OPT_INIT_PATH 1
+#CheckBox2 1    
+OPT_INIT_SPEED 1
+#CheckBox3 1    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_STOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = 0;
+TSTOP 50
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 50
+*TSTOP 50
+*TSTART 0
+*SSTART 0
+*SSTOP 2000
+
+PARSFILE Roads\3D_Road\Road_2016c64e-5f12-4516-9c00-81b4dbb0d4c4.par
+#BlueLink0 Road: 3D Surface (All Properties)`1 km Square, Mu = 0.0` Flat Test Pads` , Miscellaneous`Road_2016c64e-5f12-4516-9c00-81b4dbb0d4c4
+
+PARSFILE Plot\Setup\Plot_7dfd76ca-a7fe-46db-9919-a737d50e945b.par
+#BlueLink9 Plot: Setup`Static Calibration: Ms vs. Time` * * * CYBRIX: Plots` , Plot`Plot_7dfd76ca-a7fe-46db-9919-a737d50e945b
+
+PARSFILE Plot\Setup\Plot_20d9bb1d-cc1a-4582-846a-69c1d55da23e.par
+#BlueLink10 Plot: Setup`Static Calibration: Iz vs. Time` * * * CYBRIX: Plots` , Plot`Plot_20d9bb1d-cc1a-4582-846a-69c1d55da23e
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#This example is used in the TruckSim Quick Start Guide. Since the test duration is short (12 s or 300 m, whichever comes first) and the dynamic motions are easily visible in the animator, it is a test commonly used to evaluate different vehicle data.
+#
+#To see how the driver path was set up, click on the blue link "Double Lane Change" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 70 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { * * * CYBRIX: Procedures } #1001 Calibration: Static Characteristc
+#Library : Procedures
+#DataSet : #1001 Calibration: Static Characteristc
+#Category: * * * CYBRIX: Procedures
+#FileID  : Proc_fbc24cc0-7a34-4724-9e41-2f83dc48f967
+#Product : TruckSim 2020.1
+#VehCode Procedure
+
+END

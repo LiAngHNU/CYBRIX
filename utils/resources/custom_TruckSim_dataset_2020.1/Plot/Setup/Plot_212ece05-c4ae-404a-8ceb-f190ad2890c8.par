@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Calibration: Alpha vs. Steer_SW`* * * CYBRIX: Plots
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Alpha_L1i, Steer_SW
+PLOTCHANNELS Alpha_R1i, Steer_SW
+PLOTCHANNELS Alpha_L2i, Steer_SW
+PLOTCHANNELS Alpha_R2i, Steer_SW
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Lateral Calibration: Alpha vs. Steer_SW
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The output variable Vxz_Fwd is what the TruckSim Closed-Loop Speed Controller uses.
+#
+#It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Lateral Calibration: Alpha vs. Steer_SW
+#Library : Plot: Setup
+#DataSet : Lateral Calibration: Alpha vs. Steer_SW
+#Category: * * * CYBRIX: Plots
+#FileID  : Plot_212ece05-c4ae-404a-8ceb-f190ad2890c8
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END

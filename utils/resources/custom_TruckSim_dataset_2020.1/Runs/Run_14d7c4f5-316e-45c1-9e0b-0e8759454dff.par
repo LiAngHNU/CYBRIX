@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName TruckSim Run Control`#1001 Calibration: Static Characteristic`* * * CYBRIX: Run Controls
+#VEHICLECODE S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_14d7c4f5-316e-45c1-9e0b-0e8759454dff
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_aec7987e-0e1e-452b-afab-f8cc36caae90.par
+#BlueLink12 Models: Simulink`#1001 Calibration: Static Characteristc` * * * CYBRIX: Simulink Models` , Models`Simlink_aec7987e-0e1e-452b-afab-f8cc36caae90
+
+PARSFILE Animator\Cameras\Camera_293071ae-9194-4088-8862-92255ece0a0f.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_293071ae-9194-4088-8862-92255ece0a0f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0 0.8 0.8
+SET_RUN_COLOR 0 0.8 0.8
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_5ff664f4-8778-4dac-8b5f-a5a06835c035.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`Tractor: Type-M (Electric)` * * * CYBRIX: 2-Axle Vehicles` , Math Model`Lead2a_5ff664f4-8778-4dac-8b5f-a5a06835c035
+
+PARSFILE Procedures\Proc_fbc24cc0-7a34-4724-9e41-2f83dc48f967.par
+#BlueLink28 Procedures`#1001 Calibration: Static Characteristc` * * * CYBRIX: Procedures` , Procedure`Proc_fbc24cc0-7a34-4724-9e41-2f83dc48f967
+
+*TSTOP 1
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_ce6ae7f3-6533-49c9-b787-db926285b341.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title #1001 Calibration: Static Characteristic <* * * CYBRIX: Run Controls>
+CATEGORY * * * CYBRIX: Run Controls 
+DATASET_TITLE #1001 Calibration: Static Characteristic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This is a baseline example used in the TruckSim Demo Tutorial (see Help > Guides and Tutorials). It is similar to the example used in the TruckSim Quick Start Guide.
+#
+#The box is checked to "Write all outputs." This simplifies the use of this example as a reference for comparisons with other runs that might have different plot settings.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * * * CYBRIX: Run Controls } #1001 Calibration: Static Characteristic
+#Library : TruckSim Run Control
+#DataSet : #1001 Calibration: Static Characteristic
+#Category: * * * CYBRIX: Run Controls
+#FileID  : Run_14d7c4f5-316e-45c1-9e0b-0e8759454dff
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

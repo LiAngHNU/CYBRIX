@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Longitudinal Calibration: Kappa vs. Time`* * * CYBRIX: Plots
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
+#BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
+
+#CheckBox1 0    
+
+
+#MiscYellow0
+PLOTCHANNELS Kappa_L1i, Time
+PLOTCHANNELS Kappa_R1i, Time
+PLOTCHANNELS Kappa_L2i, Time
+PLOTCHANNELS Kappa_R2i, Time
+
+#ENDMYellow
+
+
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl8 1
+
+
+PTITLE Longitudinal Calibration: Kappa vs. Time
+
+END_ENTITY Plot
+
+
+#EMBEDDED_NOTES
+#The output variable Vxz_Fwd is what the TruckSim Closed-Loop Speed Controller uses.
+#
+#It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Longitudinal Calibration: Kappa vs. Time
+#Library : Plot: Setup
+#DataSet : Longitudinal Calibration: Kappa vs. Time
+#Category: * * * CYBRIX: Plots
+#FileID  : Plot_e7ebc6aa-3c30-4923-ac68-494d92a9af95
+#Product : TruckSim 2020.1
+#VehCode Plot Setup
+
+END
