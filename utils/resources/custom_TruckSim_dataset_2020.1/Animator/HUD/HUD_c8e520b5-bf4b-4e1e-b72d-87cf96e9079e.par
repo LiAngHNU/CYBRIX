@@ -1,0 +1,220 @@
+PARSFILE
+#FullDataName Animator: HUD`Standard Dashboard`* * * CYBRIX: Dashboards
+#CheckBox1 1    
+#CheckBox4 1    
+#CheckBox7 0    
+#CheckBox10 0    
+#CheckBox11 1    
+#CheckBox13 0    
+
+#RingCtrl0 5
+#RingCtrl1 15
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 3
+#RingCtrl5 17
+#RingCtrl6 1
+#RingCtrl7 2
+#RingCtrl8 3
+#RingCtrl9 8
+#RingCtrl10 1
+#RingCtrl11 2
+#RingCtrl12 1
+#RingCtrl13 5
+#RingCtrl14 1
+#RingCtrl15 2
+#RingCtrl16 0
+#RingCtrl17 12
+#RingCtrl18 1
+#RingCtrl19 0
+#RingCtrl20 2
+*LOCX_1 -7.5
+*LOCY_1 0
+*SCALE_1 1.125
+*VAR_NAME_1 Vx
+*COLOR_1 0 1 0
+*LOCX_2 +7.5
+*LOCY_2 0
+*SCALE_2 1.5
+*VAR_NAME_2 AV_Motor
+*COLOR_2 1 0 0
+*LOCX_3 0
+*LOCY_3 0
+*LOCX_4 0
+*LOCY_4 +12.5
+*COLOR_4 1 0 0
+*LOCX_5 0
+*LOCY_5 0
+
+
+#Selection 15 for Icon 0
+#Selection_1 15 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.125000 locX -186 locY 0
+#Selection_4 Fixed: 1 VarName: Vx  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Speedometer (RWD)
+location -186 0 225 225
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Dash_Gauges\SpeedKMH_MPH_0_100.dds
+END_ENTITY hud_image Speedometer (RWD)
+ANI_Vx
+WRT_Vx
+ADD_ENTITY hud_image Vx (Needle) (RWD)
+location -186 0 225 225
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+! Speed calculation for a RWD vehicle.
+rotate MAX(-((Vx)*1.875)+150,-150)
+image_file Resources\Animator\2D_HUD_Icons\Dash_Gauges\Needle.dds
+END_ENTITY hud_image Vx (Needle) (RWD)
+#Selection 17 for Icon 1
+#Selection_1 17 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.500000 locX 186 locY 0
+#Selection_4 Fixed: 1 VarName: AV_Motor  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Tach (BG)
+location 186 0 225 225
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Dash_Gauges\Tachometer.dds
+END_ENTITY hud_image Tach (BG)
+ANI_AV_Motor
+WRT_AV_Motor
+ADD_ENTITY hud_image Tachometer (Needle)
+location 186 0 225 225
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+rotate -(AV_Motor*0.03) + 150
+image_file Animator\2D_HUD_Icons\Dash_Gauges\Needle.dds
+image_file Resources\Animator\2D_HUD_Icons\Dash_Gauges\Needle.dds
+END_ENTITY hud_image Tachometer (Needle)
+#Selection 8 for Icon 2
+#Selection_1 8 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 1.000000 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: NULL  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+! G-G Diagram
+ADD_ENTITY hud_image GGDiagram (BG)
+location 0 0 150 150
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\G-G_Diagram\GGDiagram.png
+END_ENTITY hud_image GGDiagram (BG)
+ANI_Ax
+WRT_Ax
+ANI_Ay
+WRT_Ay
+ADD_ENTITY hud_image OrangeDOT (BG)
+location 0 0 150 150
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+center_location 0.0 0.0
+scale_x 0.075
+scale_y 0.075
+place_x Ay* (75.00000/4)
+place_y Ax* (75.00000/4)
+image_file Resources\Animator\2D_HUD_Icons\G-G_Diagram\OrangeDOT.dds
+END_ENTITY hud_image OrangeDOT (BG)
+#Selection 5 for Icon 3
+#Selection_1 5 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 0.666667 locX 0 locY 155
+#Selection_4 Fixed: 1 VarName: NULL  ColorStr: 1 0 0
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Brake Fill BG
+location 0 155 66 66
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_OFF.dds
+END_ENTITY hud_image Brake Fill BG
+ANI_Bk_Stat
+WRT_Bk_Stat
+ADD_ENTITY hud_image Brake Fill BG
+location 0 155 66 66
+red 1
+green 0
+blue 0
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+opacity Bk_Stat*0.65
+image_file Resources\Animator\2D_HUD_Icons\Indicator_Lamp\LIGHT_ON.dds
+END_ENTITY hud_image Brake Fill BG
+#Selection 12 for Icon 4
+#Selection_1 12 for Icon
+#Selection_2 Title:  AlX 1 AlY 0
+#Selection_3 Scale 1.333333 locX 0 locY 0
+#Selection_4 Fixed: 1 VarName: NULL  ColorStr: 0 0 0
+#Selection_5 ImgName: 
+! Rear view render area
+ADD_ENTITY hud_view Rear View Widget
+location 0 0 682 170
+align_x center
+align_y top
+size_mode absolute
+place_mode absolute
+cameraman_name HUD Rear View Camera
+flip_x on
+END_ENTITY hud_view Rear View Widget
+! Frame around the rear view render
+ADD_ENTITY hud_image Rear View Frame
+location -10 -4 709 184
+align_x center
+align_y top
+size_mode absolute
+place_mode absolute
+opacity 1
+image_file Resources\Animator\2D_HUD_Icons\RearView_Mirror\RearViewFrame.dds
+END_ENTITY hud_image Rear View Frame
+ADD_ENTITY Transform HUD GUI Rear View Mirror
+TRANSLATE_X -0.9590
+TRANSLATE_Y 0.0
+TRANSLATE_Z 1.3331
+ROTATE_PITCH 2.2222
+ROTATE_ROLL 0.0
+ROTATE_YAW 180
+END_ENTITY Transform HUD GUI Rear View Mirror
+ADD_ENTITY Cameraman fixed
+NAME HUD Rear View Camera
+BASE_REFERENCE_FRAME HUD GUI Rear View Mirror
+SET_FIELD_OF_VIEW 33
+END_ENTITY Cameraman fixed
+
+#EMBEDDED_NOTES
+#This dataset provides 5 common indicators for a Heads Up Display (HUD) in the VsVisualizer.
+#
+#Throttle
+#Brake
+#G-G
+#Speedometer w/Gear
+#Tachometer
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: HUD; { * * * CYBRIX: Dashboards } Standard Dashboard
+#Library : Animator: HUD
+#DataSet : Standard Dashboard
+#Category: * * * CYBRIX: Dashboards
+#FileID  : HUD_c8e520b5-bf4b-4e1e-b72d-87cf96e9079e
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END

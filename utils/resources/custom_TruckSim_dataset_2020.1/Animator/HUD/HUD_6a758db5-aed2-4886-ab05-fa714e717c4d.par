@@ -1,0 +1,190 @@
+PARSFILE
+#FullDataName Animator: HUD`Advanced Dashboard`* * * CYBRIX: Dashboards
+#CheckBox1 1    
+#CheckBox2 1    
+#CheckBox4 1    
+#CheckBox5 1    
+#CheckBox7 1    
+#CheckBox8 1    
+#CheckBox10 1    
+#CheckBox11 1    
+
+#RingCtrl0 4
+#RingCtrl1 19
+#RingCtrl2 1
+#RingCtrl3 2
+#RingCtrl4 0
+#RingCtrl5 19
+#RingCtrl6 1
+#RingCtrl7 2
+#RingCtrl8 0
+#RingCtrl9 19
+#RingCtrl10 1
+#RingCtrl11 2
+#RingCtrl12 0
+#RingCtrl13 19
+#RingCtrl14 1
+#RingCtrl15 2
+#RingCtrl16 0
+*LOCX_1 -15
+*LOCY_1 10
+*SCALE_1 1.125
+*VAR_NAME_1 My_Dr_L1/1000
+*COLOR_1 0 0 1
+*LOCX_2 +15
+*LOCY_2 10
+*SCALE_2 1.5
+*VAR_NAME_2 My_Dr_R1/1000
+*COLOR_2 0 0 1
+*LOCX_3 -15
+*LOCY_3 0
+*VAR_NAME_3 My_Dr_L2/1000
+*COLOR_3 0 0 1
+*LOCX_4 +15
+*LOCY_4 0
+*VAR_NAME_4 My_Dr_R2/1000
+*COLOR_4 0 0 1
+*LOCX_5 0
+*LOCY_5 0
+
+
+#Selection 19 for Icon 0
+#Selection_1 19 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 0.666667 locX -373 locY 124
+#Selection_4 Fixed: 1 VarName: My_Dr_L1/1000  ColorStr: 0 0 1
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Throttle Fill BG
+location -373 124 66 133
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
+END_ENTITY hud_image Throttle Fill BG
+ANI_My_Dr_L1/1000
+WRT_My_Dr_L1/1000
+ADD_ENTITY hud_image Throttle Fill Bar
+location -380 140 22 99
+red 0
+green 0
+blue 1
+opacity My_Dr_L1/1000
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+scale_y My_Dr_L1/1000
+center_location 0.0 -0.5
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
+END_ENTITY hud_image Throttle Fill Bar
+#Selection 19 for Icon 1
+#Selection_1 19 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 0.666667 locX 373 locY 124
+#Selection_4 Fixed: 1 VarName: My_Dr_R1/1000  ColorStr: 0 0 1
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Throttle Fill BG
+location 373 124 66 133
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
+END_ENTITY hud_image Throttle Fill BG
+ANI_My_Dr_R1/1000
+WRT_My_Dr_R1/1000
+ADD_ENTITY hud_image Throttle Fill Bar
+location 366 140 22 99
+red 0
+green 0
+blue 1
+opacity My_Dr_R1/1000
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+scale_y My_Dr_R1/1000
+center_location 0.0 -0.5
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
+END_ENTITY hud_image Throttle Fill Bar
+#Selection 19 for Icon 2
+#Selection_1 19 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 0.666667 locX -373 locY 0
+#Selection_4 Fixed: 1 VarName: My_Dr_L2/1000  ColorStr: 0 0 1
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Throttle Fill BG
+location -373 0 66 133
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
+END_ENTITY hud_image Throttle Fill BG
+ANI_My_Dr_L2/1000
+WRT_My_Dr_L2/1000
+ADD_ENTITY hud_image Throttle Fill Bar
+location -380 16 22 99
+red 0
+green 0
+blue 1
+opacity My_Dr_L2/1000
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+scale_y My_Dr_L2/1000
+center_location 0.0 -0.5
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
+END_ENTITY hud_image Throttle Fill Bar
+#Selection 19 for Icon 3
+#Selection_1 19 for Icon
+#Selection_2 Title:  AlX 1 AlY 2
+#Selection_3 Scale 0.666667 locX 373 locY 0
+#Selection_4 Fixed: 1 VarName: My_Dr_R2/1000  ColorStr: 0 0 1
+#Selection_5 ImgName: 
+ADD_ENTITY hud_image Throttle Fill BG
+location 373 0 66 133
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
+END_ENTITY hud_image Throttle Fill BG
+ANI_My_Dr_R2/1000
+WRT_My_Dr_R2/1000
+ADD_ENTITY hud_image Throttle Fill Bar
+location 366 16 22 99
+red 0
+green 0
+blue 1
+opacity My_Dr_R2/1000
+align_x center
+align_y bottom
+size_mode absolute
+place_mode absolute
+scale_y My_Dr_R2/1000
+center_location 0.0 -0.5
+image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
+END_ENTITY hud_image Throttle Fill Bar
+
+#EMBEDDED_NOTES
+#This dataset provides 5 common indicators for a Heads Up Display (HUD) in the VsVisualizer.
+#
+#Throttle
+#Brake
+#G-G
+#Speedometer w/Gear
+#Tachometer
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: HUD; { * * * CYBRIX: Dashboards } Advanced Dashboard
+#Library : Animator: HUD
+#DataSet : Advanced Dashboard
+#Category: * * * CYBRIX: Dashboards
+#FileID  : HUD_6a758db5-aed2-4886-ab05-fa714e717c4d
+#Product : TruckSim 2020.1
+#VehCode HUD
+
+END
