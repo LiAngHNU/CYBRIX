@@ -1,33 +1,33 @@
 PARSFILE
-#FullDataName Control: Steering (Open Loop)`Test Step: 540 deg`* * * CYBRIX: Calibration Signals
+#FullDataName Control: Steering (Open Loop)`Test Step:   90 deg @40 km/h`* * * CYBRIX: Calibration Signals
 OPT_DM 0
 OPT_STR_BY_TRQ 0
 #CheckBox0 0    
 
-#RingCtrl0 LINEAR_LOOP
+#RingCtrl0 LINEAR_FLAT
 #RadioCtrl0 0    
 
 #DiagramOne0
-STEER_SW_TABLE LINEAR_LOOP
+STEER_SW_TABLE LINEAR_FLAT
 0, 0
-2, 540
-3, 540
-5, 0
-7, -540
-8, -540
-10, 0
-12, -540
-13, -540
-15, 0
-17, 540
-18, 540
-20, 0
+0.4, 90
+0.6, 90
+1, 0
+1.4, -90
+1.6, -90
+2, 0
+2.4, -90
+2.6, -90
+3, 0
+3.4, 90
+3.6, 90
+4, 0
 ENDTABLE
 
 
-LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { * * * CYBRIX: Calibration Signals } Test Step: 540 deg
+LOG_ENTRY Used Dataset: Control: Steering (Open Loop); { * * * CYBRIX: Calibration Signals } Test Step:   90 deg @40 km/h
 #Library : Control: Steering (Open Loop)
-#DataSet : Test Step: 540 deg
+#DataSet : Test Step:   90 deg @40 km/h
 #Category: * * * CYBRIX: Calibration Signals
 #FileID  : StrSW_4b46cbfa-f2fc-4365-824e-f7925023b241
 #Product : TruckSim 2020.1
