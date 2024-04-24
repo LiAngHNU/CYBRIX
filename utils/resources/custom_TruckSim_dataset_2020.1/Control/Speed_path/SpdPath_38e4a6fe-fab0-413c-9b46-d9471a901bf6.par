@@ -1,10 +1,10 @@
 PARSFILE
-#FullDataName Control: Speed (Closed Loop) Using Path Preview`0.40/0.40 G Max Ax/Ay,   80 km/h`* * * CYBRIX: Driving Behaviors
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`0.60/0.60 G Max Ax/Ay, 120 km/h`* * * CYBRIX: Driving Behaviors
 INSTALL_SPEED_CONTROLLER
-SPEED_AX_THROTTLE_CONSTANT 0.40
-SPEED_AX_BRAKE_CONSTANT 0.40
-SPEED_AY_LEFT_CONSTANT 0.40
-SPEED_AY_RIGHT_CONSTANT 0.40
+SPEED_AX_THROTTLE_CONSTANT 0.60
+SPEED_AX_BRAKE_CONSTANT 0.60
+SPEED_AY_LEFT_CONSTANT 0.60
+SPEED_AY_RIGHT_CONSTANT 0.60
 #RingCtrl0 2
 OPT_SC_SKILL 2
 #RingCtrl1 1
@@ -16,8 +16,8 @@ OPT_SC_SKILL 2
 SET_ISPEED_FOR_ID 0
 SPEED_TARGET_COMBINE ADD
 SPEED_TARGET_S_CONSTANT 0
-set_description SPEED_TARGET_ID Path Preview: 0.40/0.40 G Max Ax/Ay,   80 km/h
-SPEED_TARGET_CONSTANT 80
+set_description SPEED_TARGET_ID Path Preview: 0.60/0.60 G Max Ax/Ay, 120 km/h
+SPEED_TARGET_CONSTANT 120
 SPEED_ID_SC = SPEED_TARGET_ID
 OPT_SC 4
 #CheckBox0 1    
@@ -39,11 +39,11 @@ SPEED_PREVIEW_START 0
 SPEED_PREVIEW 100
 PBK_CON_MAX_SC 10
 
-LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { * * * CYBRIX: Driving Behaviors } 0.40/0.40 G Max Ax/Ay,   80 km/h
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { * * * CYBRIX: Driving Behaviors } 0.60/0.60 G Max Ax/Ay, 120 km/h
 #Library : Control: Speed (Closed Loop) Using Path Preview
-#DataSet : 0.40/0.40 G Max Ax/Ay,   80 km/h
+#DataSet : 0.60/0.60 G Max Ax/Ay, 120 km/h
 #Category: * * * CYBRIX: Driving Behaviors
-#FileID  : SpdPath_be0b9a7b-64ae-4e76-8d8a-56994434be18
+#FileID  : SpdPath_38e4a6fe-fab0-413c-9b46-d9471a901bf6
 #Product : TruckSim 2020.1
 #VehCode Speed Using Path Preview
 
