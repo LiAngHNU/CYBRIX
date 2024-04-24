@@ -27,7 +27,7 @@ PARSFILE
 #RingCtrl17 12
 #RingCtrl18 1
 #RingCtrl19 0
-#RingCtrl20 2
+#RingCtrl20 1
 *LOCX_1 -7.5
 *LOCY_1 0
 *SCALE_1 1.125
@@ -45,6 +45,7 @@ PARSFILE
 *COLOR_4 1 0 0
 *LOCX_5 0
 *LOCY_5 0
+*SCALE_5 1
 
 
 #Selection 15 for Icon 0
@@ -162,12 +163,12 @@ END_ENTITY hud_image Brake Fill BG
 #Selection 12 for Icon 4
 #Selection_1 12 for Icon
 #Selection_2 Title:  AlX 1 AlY 0
-#Selection_3 Scale 1.333333 locX 0 locY 0
+#Selection_3 Scale 1.000000 locX 0 locY 0
 #Selection_4 Fixed: 1 VarName: NULL  ColorStr: 0 0 0
 #Selection_5 ImgName: 
 ! Rear view render area
 ADD_ENTITY hud_view Rear View Widget
-location 0 0 682 170
+location 0 0 512 128
 align_x center
 align_y top
 size_mode absolute
@@ -177,7 +178,7 @@ flip_x on
 END_ENTITY hud_view Rear View Widget
 ! Frame around the rear view render
 ADD_ENTITY hud_image Rear View Frame
-location -10 -4 709 184
+location -10 -4 532 138
 align_x center
 align_y top
 size_mode absolute

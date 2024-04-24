@@ -1,0 +1,114 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL_Groups\ShpGrp_a94c7090-0c3e-422d-a8eb-cbbff282377f.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 11:41 on April 23, 2024 by TruckSim 2020.1
+
+PRODUCT_NAME TruckSim
+MODEL_LAYOUT f_s_s
+
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_a94c7090-0c3e-422d-a8eb-cbbff282377f.par
+#FullDataName Animator: Shape Assembly`S Divider Posts N`Road Networks
+ENTER_PARSFILE Animator\STL\Shape_9a906c44-4824-478a-b30c-eb880229563f.par
+#FullDataName Animator: Shape File Link`Post 1 for Roundabout`Geometric Shapes
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+SET_COLOR 1 0 0
+SET_SCALE_X 0.3
+SET_SCALE_Y 0.3
+SET_SCALE_Z 1.5
+SET_OFFSET_Z 0.75
+set_lighting on
+set_fogging on
+set_transparency 1
+SET_SPECULAR 0.1 0.1 0.1
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Geometric Shapes } Post 1 for Roundabout
+EXIT_PARSFILE Animator\STL\Shape_9a906c44-4824-478a-b30c-eb880229563f.par
+
+set_angle_z 270
+set_offset_y 57
+ENTER_PARSFILE Animator\STL\Shape_611a46c2-2875-4331-ab58-4ecd7b0e7401.par
+#FullDataName Animator: Shape File Link`Post 2 for Roundabout`Geometric Shapes
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+SET_COLOR 1 0 0
+SET_SCALE_X 0.3
+SET_SCALE_Y 0.3
+SET_SCALE_Z 1.5
+SET_OFFSET_X 31
+SET_OFFSET_Y 9.5
+SET_OFFSET_Z 0.75
+set_lighting on
+set_fogging on
+set_transparency 1
+SET_SPECULAR 1 1 1
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Geometric Shapes } Post 2 for Roundabout
+EXIT_PARSFILE Animator\STL\Shape_611a46c2-2875-4331-ab58-4ecd7b0e7401.par
+
+set_angle_z 270
+set_offset_y 57
+ENTER_PARSFILE Animator\STL\Shape_e0c56a16-f2e4-4f07-92c1-515dbd70cbe6.par
+#FullDataName Animator: Shape File Link`Post 3 for Roundabout`Geometric Shapes
+add_obj Animator\3D_Shape_Files\Geometric_Shapes\Cylinders\cylinder_Zaxis_1m_diameter_1m_long.obj
+SET_COLOR 1 0 0.2
+SET_SCALE_X 0.3
+SET_SCALE_Y 0.3
+SET_SCALE_Z 1.5
+SET_OFFSET_X 31
+SET_OFFSET_Y -9.5
+SET_OFFSET_Z 0.75
+set_lighting on
+set_fogging on
+set_transparency 1
+SET_SPECULAR 1 1 1
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Geometric Shapes } Post 3 for Roundabout
+EXIT_PARSFILE Animator\STL\Shape_e0c56a16-f2e4-4f07-92c1-515dbd70cbe6.par
+
+set_angle_z 270
+set_offset_y 57
+ENTER_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#FullDataName Animator: Camera Setup`180 Azm, 5 El, 36.5 m`Road Reference
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_48d33de9-fe0b-47f9-955b-a8993fad62e6
+ENTER_PARSFILE Animator\Frames\Frame_48d33de9-fe0b-47f9-955b-a8993fad62e6.par
+#FullDataName Animator: Reference Frame`Camera Rear Point w/ Yaw`Tracking: Road
+ADD_REFERENCE_FRAME Frame_48d33de9-fe0b-47f9-955b-a8993fad62e6
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_camR
+SET_Y_NAME Y_camR
+SET_Z_NAME Z_camR
+SET_YAW_NAME Yaw_CamR
+INSTALL_CAMERA_OUTPUTS 1
+WRT_X_camR
+ANI_X_camR
+WRT_Y_camR
+ANI_Y_camR
+WRT_Z_camR
+ANI_Z_camR
+WRT_Yaw_CamR
+ANI_Yaw_CamR
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Tracking: Road } Camera Rear Point w/ Yaw
+EXIT_PARSFILE Animator\Frames\Frame_48d33de9-fe0b-47f9-955b-a8993fad62e6.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_48d33de9-fe0b-47f9-955b-a8993fad62e6
+SET_LOOKPOINT_X 5
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 1
+SET_AZIMUTH 180
+SET_ELEVATION 5
+SET_DISTANCE 36.5
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 30
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Road Reference } 180 Azm, 5 El, 36.5 m
+EXIT_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Road Networks } S Divider Posts N
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_a94c7090-0c3e-422d-a8eb-cbbff282377f.par
+
+
+
+END

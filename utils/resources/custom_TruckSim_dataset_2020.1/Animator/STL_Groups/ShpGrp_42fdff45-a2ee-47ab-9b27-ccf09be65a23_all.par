@@ -1,0 +1,118 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL_Groups\ShpGrp_42fdff45-a2ee-47ab-9b27-ccf09be65a23.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 11:39 on April 23, 2024 by TruckSim 2020.1
+
+PRODUCT_NAME TruckSim
+MODEL_LAYOUT f_s_s
+
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_42fdff45-a2ee-47ab-9b27-ccf09be65a23.par
+#FullDataName Animator: Shape Assembly`Generic LCF Truck Cab`Generic Truck
+ENTER_PARSFILE Animator\STL\Shape_94b03793-ccdd-4c6d-8394-caaeeb8d82f9.par
+#FullDataName Animator: Shape File Link`LCF Van: Cab Body`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\LCF_Cab\cab_body.obj
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.9
+set_lighting on
+set_fogging on
+USE_RUN_COLOR
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } LCF Van: Cab Body
+EXIT_PARSFILE Animator\STL\Shape_94b03793-ccdd-4c6d-8394-caaeeb8d82f9.par
+
+ENTER_PARSFILE Animator\STL\Shape_b43a5b02-05a8-4244-bec4-0eadd7ce3e0e.par
+#FullDataName Animator: Shape File Link`LCF Van: Cab Details`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\LCF_Cab\cab_details.obj
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.9
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } LCF Van: Cab Details
+EXIT_PARSFILE Animator\STL\Shape_b43a5b02-05a8-4244-bec4-0eadd7ce3e0e.par
+
+ENTER_PARSFILE Animator\STL\Shape_22962706-4ac9-4215-92e5-802e88f9cfe9.par
+#FullDataName Animator: Shape File Link`LCF Van: Driver (Caucasian Male)`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\LCF_Cab\Drivers\Caucasian_Male\Caucasian_Male.obj
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.9
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.75 0.75 0.75
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } LCF Van: Driver (Caucasian Male)
+EXIT_PARSFILE Animator\STL\Shape_22962706-4ac9-4215-92e5-802e88f9cfe9.par
+
+ENTER_PARSFILE Animator\STL\Shape_5a9965ed-2fe0-448d-ba67-38c316e19b18.par
+#FullDataName Animator: Shape File Link`LCF Van: Windows`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\LCF_Cab\windows.obj
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.9
+set_lighting on
+set_fogging on
+set_transparency 0.8
+SET_SPECULAR 1 1 1
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } LCF Van: Windows
+EXIT_PARSFILE Animator\STL\Shape_5a9965ed-2fe0-448d-ba67-38c316e19b18.par
+
+ENTER_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+ENTER_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview
+EXIT_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+EXIT_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Generic Truck } Generic LCF Truck Cab
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_42fdff45-a2ee-47ab-9b27-ccf09be65a23.par
+
+
+
+END

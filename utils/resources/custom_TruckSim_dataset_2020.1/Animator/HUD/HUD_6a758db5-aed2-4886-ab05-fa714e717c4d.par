@@ -1,5 +1,5 @@
 PARSFILE
-#FullDataName Animator: HUD`Advanced Dashboard`* * * CYBRIX: Dashboards
+#FullDataName Animator: HUD`Advanced Dashboard: Driving Torques`* * * CYBRIX: Dashboards
 #CheckBox1 1    
 #CheckBox2 1    
 #CheckBox4 1    
@@ -29,30 +29,31 @@ PARSFILE
 *LOCX_1 -15
 *LOCY_1 10
 *SCALE_1 1.125
-*VAR_NAME_1 My_Dr_L1/1000
-*COLOR_1 0 0 1
+*VAR_NAME_1 My_Dr_L1/(3050*3.92)
+*COLOR_1 0 1 0
 *LOCX_2 +15
 *LOCY_2 10
 *SCALE_2 1.5
-*VAR_NAME_2 My_Dr_R1/1000
-*COLOR_2 0 0 1
+*VAR_NAME_2 My_Dr_R1/(3050*3.92)
+*COLOR_2 0 1 0
 *LOCX_3 -15
 *LOCY_3 0
-*VAR_NAME_3 My_Dr_L2/1000
-*COLOR_3 0 0 1
+*VAR_NAME_3 My_Dr_L2/(3050*3.92)
+*COLOR_3 0 1 0
 *LOCX_4 +15
 *LOCY_4 0
-*VAR_NAME_4 My_Dr_R2/1000
-*COLOR_4 0 0 1
+*VAR_NAME_4 My_Dr_R2/(3050*3.92)
+*COLOR_4 0 1 0
 *LOCX_5 0
 *LOCY_5 0
+*VAR_NAME_5 ABS_L1
 
 
 #Selection 19 for Icon 0
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
 #Selection_3 Scale 0.666667 locX -373 locY 124
-#Selection_4 Fixed: 1 VarName: My_Dr_L1/1000  ColorStr: 0 0 1
+#Selection_4 Fixed: 1 VarName: My_Dr_L1/(3050*3.92)  ColorStr: 0 1 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
 location -373 124 66 133
@@ -62,19 +63,19 @@ size_mode absolute
 place_mode absolute
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
 END_ENTITY hud_image Throttle Fill BG
-ANI_My_Dr_L1/1000
-WRT_My_Dr_L1/1000
+ANI_My_Dr_L1/(3050*3.92)
+WRT_My_Dr_L1/(3050*3.92)
 ADD_ENTITY hud_image Throttle Fill Bar
 location -380 140 22 99
 red 0
-green 0
-blue 1
-opacity My_Dr_L1/1000
+green 1
+blue 0
+opacity My_Dr_L1/(3050*3.92)
 align_x center
 align_y bottom
 size_mode absolute
 place_mode absolute
-scale_y My_Dr_L1/1000
+scale_y My_Dr_L1/(3050*3.92)
 center_location 0.0 -0.5
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
 END_ENTITY hud_image Throttle Fill Bar
@@ -82,7 +83,7 @@ END_ENTITY hud_image Throttle Fill Bar
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
 #Selection_3 Scale 0.666667 locX 373 locY 124
-#Selection_4 Fixed: 1 VarName: My_Dr_R1/1000  ColorStr: 0 0 1
+#Selection_4 Fixed: 1 VarName: My_Dr_R1/(3050*3.92)  ColorStr: 0 1 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
 location 373 124 66 133
@@ -92,19 +93,19 @@ size_mode absolute
 place_mode absolute
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
 END_ENTITY hud_image Throttle Fill BG
-ANI_My_Dr_R1/1000
-WRT_My_Dr_R1/1000
+ANI_My_Dr_R1/(3050*3.92)
+WRT_My_Dr_R1/(3050*3.92)
 ADD_ENTITY hud_image Throttle Fill Bar
 location 366 140 22 99
 red 0
-green 0
-blue 1
-opacity My_Dr_R1/1000
+green 1
+blue 0
+opacity My_Dr_R1/(3050*3.92)
 align_x center
 align_y bottom
 size_mode absolute
 place_mode absolute
-scale_y My_Dr_R1/1000
+scale_y My_Dr_R1/(3050*3.92)
 center_location 0.0 -0.5
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
 END_ENTITY hud_image Throttle Fill Bar
@@ -112,7 +113,7 @@ END_ENTITY hud_image Throttle Fill Bar
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
 #Selection_3 Scale 0.666667 locX -373 locY 0
-#Selection_4 Fixed: 1 VarName: My_Dr_L2/1000  ColorStr: 0 0 1
+#Selection_4 Fixed: 1 VarName: My_Dr_L2/(3050*3.92)  ColorStr: 0 1 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
 location -373 0 66 133
@@ -122,19 +123,19 @@ size_mode absolute
 place_mode absolute
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
 END_ENTITY hud_image Throttle Fill BG
-ANI_My_Dr_L2/1000
-WRT_My_Dr_L2/1000
+ANI_My_Dr_L2/(3050*3.92)
+WRT_My_Dr_L2/(3050*3.92)
 ADD_ENTITY hud_image Throttle Fill Bar
 location -380 16 22 99
 red 0
-green 0
-blue 1
-opacity My_Dr_L2/1000
+green 1
+blue 0
+opacity My_Dr_L2/(3050*3.92)
 align_x center
 align_y bottom
 size_mode absolute
 place_mode absolute
-scale_y My_Dr_L2/1000
+scale_y My_Dr_L2/(3050*3.92)
 center_location 0.0 -0.5
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
 END_ENTITY hud_image Throttle Fill Bar
@@ -142,7 +143,7 @@ END_ENTITY hud_image Throttle Fill Bar
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
 #Selection_3 Scale 0.666667 locX 373 locY 0
-#Selection_4 Fixed: 1 VarName: My_Dr_R2/1000  ColorStr: 0 0 1
+#Selection_4 Fixed: 1 VarName: My_Dr_R2/(3050*3.92)  ColorStr: 0 1 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
 location 373 0 66 133
@@ -152,19 +153,19 @@ size_mode absolute
 place_mode absolute
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
 END_ENTITY hud_image Throttle Fill BG
-ANI_My_Dr_R2/1000
-WRT_My_Dr_R2/1000
+ANI_My_Dr_R2/(3050*3.92)
+WRT_My_Dr_R2/(3050*3.92)
 ADD_ENTITY hud_image Throttle Fill Bar
 location 366 16 22 99
 red 0
-green 0
-blue 1
-opacity My_Dr_R2/1000
+green 1
+blue 0
+opacity My_Dr_R2/(3050*3.92)
 align_x center
 align_y bottom
 size_mode absolute
 place_mode absolute
-scale_y My_Dr_R2/1000
+scale_y My_Dr_R2/(3050*3.92)
 center_location 0.0 -0.5
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
 END_ENTITY hud_image Throttle Fill Bar
@@ -179,9 +180,9 @@ END_ENTITY hud_image Throttle Fill Bar
 #Tachometer
 #END_EMBEDDED_NOTES
 
-LOG_ENTRY Used Dataset: Animator: HUD; { * * * CYBRIX: Dashboards } Advanced Dashboard
+LOG_ENTRY Used Dataset: Animator: HUD; { * * * CYBRIX: Dashboards } Advanced Dashboard: Driving Torques
 #Library : Animator: HUD
-#DataSet : Advanced Dashboard
+#DataSet : Advanced Dashboard: Driving Torques
 #Category: * * * CYBRIX: Dashboards
 #FileID  : HUD_6a758db5-aed2-4886-ab05-fa714e717c4d
 #Product : TruckSim 2020.1

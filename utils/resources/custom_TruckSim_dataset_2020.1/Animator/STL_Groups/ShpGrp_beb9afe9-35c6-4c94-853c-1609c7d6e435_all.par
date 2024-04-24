@@ -1,0 +1,84 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL_Groups\ShpGrp_beb9afe9-35c6-4c94-853c-1609c7d6e435.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 09:48 on April 22, 2024 by TruckSim 2020.1
+
+PRODUCT_NAME TruckSim
+MODEL_LAYOUT s_s
+
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_beb9afe9-35c6-4c94-853c-1609c7d6e435.par
+#FullDataName Animator: Shape Assembly`Guardrail w/ End Caps (Short)`Gates, Guardrails, and Dividers
+ENTER_PARSFILE Animator\STL\Shape_cead0958-6a58-4e26-aa70-f1327245ef79.par
+#FullDataName Animator: Shape File Link`Guard Rail: Start Cap`Environment: Props (1 of 2)
+add_obj Animator\3D_Shape_Files\Environment\Props\Guard_Rail\Guard_Rail_Start.obj
+SET_COLOR 1 1 1
+SET_OFFSET_X 1.762
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Props (1 of 2) } Guard Rail: Start Cap
+EXIT_PARSFILE Animator\STL\Shape_cead0958-6a58-4e26-aa70-f1327245ef79.par
+
+ENTER_PARSFILE Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+#FullDataName Animator: Shape File Link`Guard Rail: Repeatable Center Section`Environment: Props (1 of 2)
+add_obj Animator\3D_Shape_Files\Environment\Props\Guard_Rail\Guard_Rail.obj
+SET_COLOR 1 1 1
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Props (1 of 2) } Guard Rail: Repeatable Center Section
+EXIT_PARSFILE Animator\STL\Shape_a8297e79-58c8-4b47-9c43-83d6ed422353.par
+
+ENTER_PARSFILE Animator\STL\Shape_c789d70c-f844-45d9-b576-ced1158e8faa.par
+#FullDataName Animator: Shape File Link`Guard Rail: End Cap`Environment: Props (1 of 2)
+add_obj Animator\3D_Shape_Files\Environment\Props\Guard_Rail\Guard_Rail_End.obj
+SET_COLOR 1 1 1
+SET_OFFSET_X -1.762
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Environment: Props (1 of 2) } Guard Rail: End Cap
+EXIT_PARSFILE Animator\STL\Shape_c789d70c-f844-45d9-b576-ced1158e8faa.par
+
+ENTER_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+ENTER_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview
+EXIT_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+EXIT_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Gates, Guardrails, and Dividers } Guardrail w/ End Caps (Short)
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_beb9afe9-35c6-4c94-853c-1609c7d6e435.par
+
+
+
+END

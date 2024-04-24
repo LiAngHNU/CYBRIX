@@ -1,0 +1,152 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL_Groups\ShpGrp_6ff67e5c-8d69-48ee-bc79-e67820fac7cb.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 11:34 on April 23, 2024 by TruckSim 2020.1
+
+PRODUCT_NAME TruckSim
+MODEL_LAYOUT f_s_s
+
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_6ff67e5c-8d69-48ee-bc79-e67820fac7cb.par
+#FullDataName Animator: Shape Assembly`3A Sleeper (Non-scaled)`Cabs
+ENTER_PARSFILE Animator\STL\Shape_0497e9b7-7d15-459c-964d-5bb02760dd4c.par
+#FullDataName Animator: Shape File Link`Sleeper: Body`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Sleeper\body.obj
+SET_COLOR 0 0.2 0.4
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.4
+set_lighting on
+set_fogging on
+USE_RUN_COLOR
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Sleeper: Body
+EXIT_PARSFILE Animator\STL\Shape_0497e9b7-7d15-459c-964d-5bb02760dd4c.par
+
+ENTER_PARSFILE Animator\STL\Shape_044bdd87-083c-4a02-beaa-88c401c39e7e.par
+#FullDataName Animator: Shape File Link`Sleeper: Bumper`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Sleeper\bumper.obj
+SET_COLOR .3 .3 .3
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.4
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Sleeper: Bumper
+EXIT_PARSFILE Animator\STL\Shape_044bdd87-083c-4a02-beaa-88c401c39e7e.par
+
+ENTER_PARSFILE Animator\STL\Shape_844188e3-4f16-49f1-9566-0d813e75dd9d.par
+#FullDataName Animator: Shape File Link`Sleeper: Details`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Sleeper\details.obj
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.4
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Sleeper: Details
+EXIT_PARSFILE Animator\STL\Shape_844188e3-4f16-49f1-9566-0d813e75dd9d.par
+
+ENTER_PARSFILE Animator\STL\Shape_87989524-4e91-47c3-9e59-94c1af6b5859.par
+#FullDataName Animator: Shape File Link`Sleeper: Driver (Caucasian Male)`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Sleeper\Drivers\Caucasian_Male\Caucasian_Male.obj
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.4
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.75 0.75 0.75
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Sleeper: Driver (Caucasian Male)
+EXIT_PARSFILE Animator\STL\Shape_87989524-4e91-47c3-9e59-94c1af6b5859.par
+
+ENTER_PARSFILE Animator\STL\Shape_492c2686-9829-4db7-88ae-806bebcd23df.par
+#FullDataName Animator: Shape File Link`Sleeper: Steering Wheel`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Sleeper\steeringwheel.obj
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.4
+set_lighting on
+set_fogging on
+SET_SPECULAR 0 0 0
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Sleeper: Steering Wheel
+EXIT_PARSFILE Animator\STL\Shape_492c2686-9829-4db7-88ae-806bebcd23df.par
+
+ENTER_PARSFILE Animator\STL\Shape_214caab1-559b-487b-b3c5-04cfddb1ed4c.par
+#FullDataName Animator: Shape File Link`Sleeper: Windows`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\Sleeper\windows.obj
+SET_COLOR 0 0 0
+SET_SCALE_X 1
+SET_SCALE_Y 1.1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.4
+set_lighting on
+set_fogging on
+set_transparency 0.8
+SET_SPECULAR 1 1 1
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Sleeper: Windows
+EXIT_PARSFILE Animator\STL\Shape_214caab1-559b-487b-b3c5-04cfddb1ed4c.par
+
+ENTER_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+ENTER_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview
+EXIT_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+EXIT_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Cabs } 3A Sleeper (Non-scaled)
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_6ff67e5c-8d69-48ee-bc79-e67820fac7cb.par
+
+
+
+END

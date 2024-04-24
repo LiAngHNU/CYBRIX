@@ -1,0 +1,140 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL_Groups\ShpGrp_87015a1f-f9b8-4bac-bf5f-50c108d0bef4.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 14:12 on April 22, 2024 by TruckSim 2020.1
+
+PRODUCT_NAME TruckSim
+MODEL_LAYOUT f_s_s
+
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_87015a1f-f9b8-4bac-bf5f-50c108d0bef4.par
+#FullDataName Animator: Shape Assembly`LT-390E 4x2 Tractor: Chassis`* * * CYBRIX: Vehicle Shape File Groups
+ENTER_PARSFILE Animator\STL\Shape_499ea3d6-e199-43ce-846a-afb71f1615ba.par
+#FullDataName Animator: Shape File Link`Lead Unit: Frame Rails`Trucks: Chassis
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\Frame_Rails\Frame_Rails.osg
+SET_COLOR 1 1 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.755
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Frame Rails
+EXIT_PARSFILE Animator\STL\Shape_499ea3d6-e199-43ce-846a-afb71f1615ba.par
+
+set_offset_z -0.021
+ENTER_PARSFILE Animator\STL\Shape_3b9b2fae-e9a9-4e22-bd19-764164b5862f.par
+#FullDataName Animator: Shape File Link`Lead Unit: Mudflaps`Trucks: Chassis
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Mudflaps\mudflaps.obj
+SET_COLOR 1 1 1
+SET_OFFSET_X -4.15
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.075
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Mudflaps
+EXIT_PARSFILE Animator\STL\Shape_3b9b2fae-e9a9-4e22-bd19-764164b5862f.par
+
+set_offset_z -0.021
+ENTER_PARSFILE Animator\STL\Shape_3ba7d171-f0ed-4739-80fc-16432ea5940e.par
+#FullDataName Animator: Shape File Link`Lead Unit: Brake Lights (Off)`Trucks: Chassis
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\Frame_Brakes\brake_lights.osg
+SET_COLOR 1 1 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.755
+set_lighting on
+set_fogging on
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Brake Lights (Off)
+EXIT_PARSFILE Animator\STL\Shape_3ba7d171-f0ed-4739-80fc-16432ea5940e.par
+
+set_offset_z -0.021
+ENTER_PARSFILE Animator\STL\Shape_17effdbf-47df-4db7-b9c5-92cc4f871d57.par
+#FullDataName Animator: Shape File Link`LT-390E 4x2 Tractor: Bumper`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files_User\Vehicles\LT_390E_4x2_Tractor\bumper.obj
+SET_COLOR 0.314 0.314 0.314
+SET_OFFSET_X -0.1
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.6
+set_lighting on
+set_fogging on
+USE_RUN_COLOR
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Bumper
+EXIT_PARSFILE Animator\STL\Shape_17effdbf-47df-4db7-b9c5-92cc4f871d57.par
+
+set_offset_z -0.021
+ENTER_PARSFILE Animator\STL\Shape_21a1a64a-95b1-42bb-b8fa-1ad6f413e154.par
+#FullDataName Animator: Shape File Link`LT-390E 4x2 Tractor: Bumper Detail`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files_User\Vehicles\LT_390E_4x2_Tractor\bumper_detail.obj
+SET_COLOR 0.314 0.314 0.314
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.6
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Bumper Detail
+EXIT_PARSFILE Animator\STL\Shape_21a1a64a-95b1-42bb-b8fa-1ad6f413e154.par
+
+set_offset_z -0.021
+ENTER_PARSFILE Animator\STL\Shape_97c2673b-745a-4390-979c-0395768ecf39.par
+#FullDataName Animator: Shape File Link`LT-390E 4x2 Tractor: Fuel Tank`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files_User\Vehicles\LT_390E_4x2_Tractor\fuel_tank.obj
+SET_COLOR 0.314 0.314 0.314
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.6
+set_lighting on
+set_fogging on
+USE_RUN_COLOR
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Fuel Tank
+EXIT_PARSFILE Animator\STL\Shape_97c2673b-745a-4390-979c-0395768ecf39.par
+
+set_offset_z -0.021
+x_ref_length 3500
+ENTER_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+ENTER_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview
+EXIT_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+EXIT_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { * * * CYBRIX: Vehicle Shape File Groups } LT-390E 4x2 Tractor: Chassis
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_87015a1f-f9b8-4bac-bf5f-50c108d0bef4.par
+
+
+
+END
