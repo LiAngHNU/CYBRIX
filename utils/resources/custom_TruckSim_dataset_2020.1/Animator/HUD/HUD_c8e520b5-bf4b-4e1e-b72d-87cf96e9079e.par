@@ -166,40 +166,102 @@ END_ENTITY hud_image Brake Fill BG
 #Selection_3 Scale 1.000000 locX 0 locY 0
 #Selection_4 Fixed: 1 VarName: NULL  ColorStr: 0 0 0
 #Selection_5 ImgName: 
-! Rear view render area
-ADD_ENTITY hud_view Rear View Widget
-location 0 0 512 128
+! Medium Rear view camera
+ADD_ENTITY hud_view Rear View Widget Medium 
+location 0 0 640 256
 align_x center
 align_y top
 size_mode absolute
 place_mode absolute
-cameraman_name HUD Rear View Camera
+cameraman_name HUD Rear View Camera Medium
 flip_x on
-END_ENTITY hud_view Rear View Widget
-! Frame around the rear view render
-ADD_ENTITY hud_image Rear View Frame
-location -10 -4 532 138
+END_ENTITY hud_view Rear View Widget Medium
+ADD_ENTITY hud_image Rear View Frame Medium
+location 0 0 645 261
 align_x center
 align_y top
 size_mode absolute
 place_mode absolute
 opacity 1
 image_file Resources\Animator\2D_HUD_Icons\RearView_Mirror\RearViewFrame.dds
-END_ENTITY hud_image Rear View Frame
-ADD_ENTITY Transform HUD GUI Rear View Mirror
-TRANSLATE_X -0.9590
-TRANSLATE_Y 0.0
-TRANSLATE_Z 1.3331
-ROTATE_PITCH 2.2222
+END_ENTITY hud_image Rear View Frame Medium
+ADD_ENTITY Transform HUD GUI Rear View Mirror Medium
+TRANSLATE_X 3.0000
+TRANSLATE_Y 0.0000
+TRANSLATE_Z 4.0000
+ROTATE_PITCH 60.0000
 ROTATE_ROLL 0.0
 ROTATE_YAW 180
-END_ENTITY Transform HUD GUI Rear View Mirror
+END_ENTITY Transform HUD GUI Rear View Mirror Medium
 ADD_ENTITY Cameraman fixed
-NAME HUD Rear View Camera
-BASE_REFERENCE_FRAME HUD GUI Rear View Mirror
-SET_FIELD_OF_VIEW 33
+NAME HUD Rear View Camera Medium
+BASE_REFERENCE_FRAME HUD GUI Rear View Mirror Medium
+SET_FIELD_OF_VIEW 90
 END_ENTITY Cameraman fixed
-
+! Left Rear view camera
+ADD_ENTITY hud_view Rear View Widget Left
+location 0 0 256 256
+align_x left
+align_y top
+size_mode absolute
+place_mode absolute
+cameraman_name HUD Rear View Camera Left
+flip_x on
+END_ENTITY hud_view Rear View Widget Left
+ADD_ENTITY hud_image Rear View Frame Left
+location 0 0 256 256
+align_x left
+align_y top
+size_mode absolute
+place_mode absolute
+opacity 1
+image_file Resources\Animator\2D_HUD_Icons\RearView_Mirror\RearViewFrame.dds
+END_ENTITY hud_image Rear View Frame Right
+ADD_ENTITY Transform HUD GUI Rear View Mirror Left
+TRANSLATE_X 0.7500
+TRANSLATE_Y 2.0000
+TRANSLATE_Z 3.0000
+ROTATE_PITCH 0.0000
+ROTATE_ROLL 0.0
+ROTATE_YAW 180
+END_ENTITY Transform HUD GUI Rear View Mirror Left
+ADD_ENTITY Cameraman fixed
+NAME HUD Rear View Camera Left
+BASE_REFERENCE_FRAME HUD GUI Rear View Mirror Left
+SET_FIELD_OF_VIEW 90
+END_ENTITY Cameraman fixed
+! Right Rear view camera
+ADD_ENTITY hud_view Rear View Widget Right
+location 0 0 256 256
+align_x right
+align_y top
+size_mode absolute
+place_mode absolute
+cameraman_name HUD Rear View Camera Right
+flip_x on
+END_ENTITY hud_view Rear View Widget Right
+ADD_ENTITY hud_image Rear View Frame Right
+location 0 0 256 256
+align_x right
+align_y top
+size_mode absolute
+place_mode absolute
+opacity 1
+image_file Resources\Animator\2D_HUD_Icons\RearView_Mirror\RearViewFrame.dds
+END_ENTITY hud_image Rear View Frame Right
+ADD_ENTITY Transform HUD GUI Rear View Mirror Right
+TRANSLATE_X 0.7500
+TRANSLATE_Y -2.0000
+TRANSLATE_Z 3.0000
+ROTATE_PITCH 0.0000
+ROTATE_ROLL 0.0
+ROTATE_YAW 180
+END_ENTITY Transform HUD GUI Rear View Mirror Right
+ADD_ENTITY Cameraman fixed
+NAME HUD Rear View Camera Right
+BASE_REFERENCE_FRAME HUD GUI Rear View Mirror Right
+SET_FIELD_OF_VIEW 90
+END_ENTITY Cameraman fixed
 #EMBEDDED_NOTES
 #This dataset provides 5 common indicators for a Heads Up Display (HUD) in the VsVisualizer.
 #

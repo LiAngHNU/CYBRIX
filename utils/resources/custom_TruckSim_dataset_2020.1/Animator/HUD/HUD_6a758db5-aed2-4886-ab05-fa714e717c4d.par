@@ -38,11 +38,11 @@ PARSFILE
 *COLOR_2 0 1 0
 *LOCX_3 -15
 *LOCY_3 0
-*VAR_NAME_3 My_Dr_L2/(3050*3.92)
+*VAR_NAME_3 My_Dr_L2/(3050*3.92*0.5)
 *COLOR_3 0 1 0
 *LOCX_4 +15
 *LOCY_4 0
-*VAR_NAME_4 My_Dr_R2/(3050*3.92)
+*VAR_NAME_4 My_Dr_R2/(3050*3.92*0.5)
 *COLOR_4 0 1 0
 *LOCX_5 0
 *LOCY_5 0
@@ -70,7 +70,7 @@ location -380 140 22 99
 red 0
 green 1
 blue 0
-opacity My_Dr_L1/(3050*3.92)
+opacity 1
 align_x center
 align_y bottom
 size_mode absolute
@@ -100,7 +100,7 @@ location 366 140 22 99
 red 0
 green 1
 blue 0
-opacity My_Dr_R1/(3050*3.92)
+opacity 1
 align_x center
 align_y bottom
 size_mode absolute
@@ -113,7 +113,7 @@ END_ENTITY hud_image Throttle Fill Bar
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
 #Selection_3 Scale 0.666667 locX -373 locY 0
-#Selection_4 Fixed: 1 VarName: My_Dr_L2/(3050*3.92)  ColorStr: 0 1 0
+#Selection_4 Fixed: 1 VarName: My_Dr_L2/(3050*3.92*0.5)  ColorStr: 0 1 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
 location -373 0 66 133
@@ -123,19 +123,19 @@ size_mode absolute
 place_mode absolute
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
 END_ENTITY hud_image Throttle Fill BG
-ANI_My_Dr_L2/(3050*3.92)
-WRT_My_Dr_L2/(3050*3.92)
+ANI_My_Dr_L2/(3050*3.92*0.5)
+WRT_My_Dr_L2/(3050*3.92*0.5)
 ADD_ENTITY hud_image Throttle Fill Bar
 location -380 16 22 99
 red 0
 green 1
 blue 0
-opacity My_Dr_L2/(3050*3.92)
+opacity 1
 align_x center
 align_y bottom
 size_mode absolute
 place_mode absolute
-scale_y My_Dr_L2/(3050*3.92)
+scale_y My_Dr_L2/(3050*3.92*0.5)
 center_location 0.0 -0.5
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
 END_ENTITY hud_image Throttle Fill Bar
@@ -143,7 +143,7 @@ END_ENTITY hud_image Throttle Fill Bar
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
 #Selection_3 Scale 0.666667 locX 373 locY 0
-#Selection_4 Fixed: 1 VarName: My_Dr_R2/(3050*3.92)  ColorStr: 0 1 0
+#Selection_4 Fixed: 1 VarName: My_Dr_R2/(3050*3.92*0.5)  ColorStr: 0 1 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
 location 373 0 66 133
@@ -153,19 +153,19 @@ size_mode absolute
 place_mode absolute
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\0_100.dds
 END_ENTITY hud_image Throttle Fill BG
-ANI_My_Dr_R2/(3050*3.92)
-WRT_My_Dr_R2/(3050*3.92)
+ANI_My_Dr_R2/(3050*3.92*0.5)
+WRT_My_Dr_R2/(3050*3.92*0.5)
 ADD_ENTITY hud_image Throttle Fill Bar
 location 366 16 22 99
 red 0
 green 1
 blue 0
-opacity My_Dr_R2/(3050*3.92)
+opacity 1
 align_x center
 align_y bottom
 size_mode absolute
 place_mode absolute
-scale_y My_Dr_R2/(3050*3.92)
+scale_y My_Dr_R2/(3050*3.92*0.5)
 center_location 0.0 -0.5
 image_file Resources\Animator\2D_HUD_Icons\Throttle_Bar\Bar_Fade.dds
 END_ENTITY hud_image Throttle Fill Bar

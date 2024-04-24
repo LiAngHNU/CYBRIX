@@ -26,21 +26,21 @@ PARSFILE
 #RingCtrl14 1
 #RingCtrl15 2
 #RingCtrl16 0
-*LOCX_1 -20
+*LOCX_1 -17.5
 *LOCY_1 10
 *SCALE_1 1.125
 *VAR_NAME_1 PbkCh_L1
 *COLOR_1 1 0 0
-*LOCX_2 +20
+*LOCX_2 +17.5
 *LOCY_2 10
 *SCALE_2 1.5
 *VAR_NAME_2 PbkCh_R1
 *COLOR_2 1 0 0
-*LOCX_3 -20
+*LOCX_3 -17.5
 *LOCY_3 0
 *VAR_NAME_3 PbkCh_L2
 *COLOR_3 1 0 0
-*LOCX_4 +20
+*LOCX_4 +17.5
 *LOCY_4 0
 *VAR_NAME_4 PbkCh_R2
 *COLOR_4 1 0 0
@@ -52,11 +52,11 @@ PARSFILE
 #Selection 19 for Icon 0
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
-#Selection_3 Scale 0.666667 locX -498 locY 124
+#Selection_3 Scale 0.666667 locX -435 locY 124
 #Selection_4 Fixed: 1 VarName: PbkCh_L1  ColorStr: 1 0 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
-location -498 124 66 133
+location -435 124 66 133
 align_x center
 align_y bottom
 size_mode absolute
@@ -66,11 +66,11 @@ END_ENTITY hud_image Throttle Fill BG
 ANI_PbkCh_L1
 WRT_PbkCh_L1
 ADD_ENTITY hud_image Throttle Fill Bar
-location -505 140 22 99
+location -442 140 22 99
 red 1
 green 0
 blue 0
-opacity PbkCh_L1
+opacity 1
 align_x center
 align_y bottom
 size_mode absolute
@@ -82,11 +82,11 @@ END_ENTITY hud_image Throttle Fill Bar
 #Selection 19 for Icon 1
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
-#Selection_3 Scale 0.666667 locX 498 locY 124
+#Selection_3 Scale 0.666667 locX 435 locY 124
 #Selection_4 Fixed: 1 VarName: PbkCh_R1  ColorStr: 1 0 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
-location 498 124 66 133
+location 435 124 66 133
 align_x center
 align_y bottom
 size_mode absolute
@@ -96,11 +96,11 @@ END_ENTITY hud_image Throttle Fill BG
 ANI_PbkCh_R1
 WRT_PbkCh_R1
 ADD_ENTITY hud_image Throttle Fill Bar
-location 491 140 22 99
+location 428 140 22 99
 red 1
 green 0
 blue 0
-opacity PbkCh_R1
+opacity 1
 align_x center
 align_y bottom
 size_mode absolute
@@ -112,11 +112,11 @@ END_ENTITY hud_image Throttle Fill Bar
 #Selection 19 for Icon 2
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
-#Selection_3 Scale 0.666667 locX -498 locY 0
+#Selection_3 Scale 0.666667 locX -435 locY 0
 #Selection_4 Fixed: 1 VarName: PbkCh_L2  ColorStr: 1 0 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
-location -498 0 66 133
+location -435 0 66 133
 align_x center
 align_y bottom
 size_mode absolute
@@ -126,11 +126,11 @@ END_ENTITY hud_image Throttle Fill BG
 ANI_PbkCh_L2
 WRT_PbkCh_L2
 ADD_ENTITY hud_image Throttle Fill Bar
-location -505 16 22 99
+location -442 16 22 99
 red 1
 green 0
 blue 0
-opacity PbkCh_L2
+opacity 1
 align_x center
 align_y bottom
 size_mode absolute
@@ -142,11 +142,11 @@ END_ENTITY hud_image Throttle Fill Bar
 #Selection 19 for Icon 3
 #Selection_1 19 for Icon
 #Selection_2 Title:  AlX 1 AlY 2
-#Selection_3 Scale 0.666667 locX 498 locY 0
+#Selection_3 Scale 0.666667 locX 435 locY 0
 #Selection_4 Fixed: 1 VarName: PbkCh_R2  ColorStr: 1 0 0
 #Selection_5 ImgName: 
 ADD_ENTITY hud_image Throttle Fill BG
-location 498 0 66 133
+location 435 0 66 133
 align_x center
 align_y bottom
 size_mode absolute
@@ -156,11 +156,11 @@ END_ENTITY hud_image Throttle Fill BG
 ANI_PbkCh_R2
 WRT_PbkCh_R2
 ADD_ENTITY hud_image Throttle Fill Bar
-location 491 16 22 99
+location 428 16 22 99
 red 1
 green 0
 blue 0
-opacity PbkCh_R2
+opacity 1
 align_x center
 align_y bottom
 size_mode absolute
