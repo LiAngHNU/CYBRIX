@@ -1,29 +1,25 @@
 PARSFILE
-#FullDataName Plot: Setup`Lateral Calibration: AVz vs. Steer_SW`* * * CYBRIX: Plots
+#FullDataName Plot: Setup`Common: Yo vs. Xo`* * * CYBRIX: Plots
 
 ADD_ENTITY Plot
 
 PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
 #BlueLink0 Plot: Format`Line Plots, No Symbols` ` , Plot format`PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d
 
-#CheckBox1 0    
+#CheckBox1 1    
 
 
 #MiscYellow0
-PLOTCHANNELS AVz, Steer_SW, AVz_ref
-PLOTCHANNELS AVz_S1, Steer_SW, AVz_imu
+PLOTCHANNELS Yo, Xo
 
 #ENDMYellow
 
+ASPECTRATIO 1
 
-#RingCtrl2 Auto
-YMaxmin Auto
-#RingCtrl3 Auto
-XMaxmin Auto
 #RingCtrl8 1
 
 
-PTITLE Lateral Calibration: AVz vs. Steer_SW
+PTITLE Common: Yo vs. Xo
 
 END_ENTITY Plot
 
@@ -34,11 +30,11 @@ END_ENTITY Plot
 #It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
 #END_EMBEDDED_NOTES
 
-LOG_ENTRY Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Lateral Calibration: AVz vs. Steer_SW
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Common: Yo vs. Xo
 #Library : Plot: Setup
-#DataSet : Lateral Calibration: AVz vs. Steer_SW
+#DataSet : Common: Yo vs. Xo
 #Category: * * * CYBRIX: Plots
-#FileID  : Plot_2745e0ec-ea6c-4c63-9b23-f6328ebe82d8
+#FileID  : Plot_9ff909c6-1dba-4e3f-8bce-987aade9a335
 #Product : TruckSim 2020.1
 #VehCode Plot Setup
 

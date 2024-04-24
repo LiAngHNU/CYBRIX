@@ -1,5 +1,5 @@
 PARSFILE
-#FullDataName Plot: Setup`Lateral Calibration: Vx vs. Time`* * * CYBRIX: Plots
+#FullDataName Plot: Setup`Common: Vx vs. Time`* * * CYBRIX: Plots
 
 ADD_ENTITY Plot
 
@@ -25,7 +25,7 @@ XMaxmin Auto
 #RingCtrl8 1
 
 
-PTITLE Lateral Calibration: Vx vs. Time
+PTITLE Common: Vx vs. Time
 
 END_ENTITY Plot
 
@@ -36,9 +36,9 @@ END_ENTITY Plot
 #It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
 #END_EMBEDDED_NOTES
 
-LOG_ENTRY Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Lateral Calibration: Vx vs. Time
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Common: Vx vs. Time
 #Library : Plot: Setup
-#DataSet : Lateral Calibration: Vx vs. Time
+#DataSet : Common: Vx vs. Time
 #Category: * * * CYBRIX: Plots
 #FileID  : Plot_d4d3da01-c5b3-4983-95a5-e48368d79ce4
 #Product : TruckSim 2020.1
