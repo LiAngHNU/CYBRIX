@@ -1,0 +1,31 @@
+Run made by VS Road Calculator at 09:50 on April 23, 2024.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_3850b1b2-ea8e-46a2-9a15-4c1e128e36fa.par"
+Include PARSFILE "Roads\Center_XY\PathXY_a3313409-e843-4fc1-b1d9-5cf400059820.par"
+Used Dataset: Path: X-Y Coordinates; { Handling Course } Handling Course
+Include PARSFILE "Roads\Center_Z\RdRefZ_73e23a2d-f9bc-4437-8ac6-68064c5aad36.par"
+Used Dataset: Road: Reference Line Elevation; { Handling Course } Handling Course
+Include PARSFILE "Roads\dZ_Map\RdMapZ_1d94193c-cbe0-4ef9-807b-865eadf78afa.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Handling Course } Handling Course Camber
+Include PARSFILE "Roads\Friction\RdMu_ec730a7b-6605-468c-9810-842dc2bc5209.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Road Handling Course } 1.0 Asphalt, 1.1 Concrete, 0.75 Grass
+Include PARSFILE "Roads\Shapes\RdShape_fd732d47-09f3-4d86-961b-2da5134afc87.par"
+Used Dataset: Road: Animator Surface Shapes; No Machine-Generated Shapes
+Include PARSFILE "Roads\dZ_Map\RdMapZ_9334e93f-d95d-4a56-b74d-10b7ae6f400f.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Handling Course } Handling Course Curbing
+Include PARSFILE "Roads\RollingResistance\RdRr_e50e6f84-f1ce-4bde-b26b-7ac1a4a15091.par"
+Used Dataset: Road: Rolling Resistance Map, S-L Grid; { Handling Course } Handling Course Rolling Resistance
+ Test Race Track #001 <* * * CYBRIX: Race Track>
+Used Dataset: Road: 3D Surface (All Properties); { * * * CYBRIX: Race Track } Test Race Track #001
+
+Time to read input = 0.0022809
+
+Run stopped at t = 19.32. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_3850b1b2-ea8e-46a2-9a15-4c1e128e36fa.vsb
+Function ROAD_DZ_CARPET(2) extrapolated (out of range HIGH) for XCOL = 2.95 m at T = 19.32
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

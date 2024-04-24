@@ -1,0 +1,56 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Test Race Track #002`* * * CYBRIX: Race Track
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_7be5fba4-ebb7-4d36-83cf-4485fca54bc8.png
+#RingCtrl0 1
+#CheckBox0 1    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Test Race Track #002
+PARSFILE Roads\Center_XYZ\RoadXYZ_156e677d-43ff-4730-afc5-105d81e6de04.par
+#BlueLink0 Road: X-Y-Z Coordinates of Reference Line`Road Course` Road Course` , Reference Path`RoadXYZ_156e677d-43ff-4730-afc5-105d81e6de04
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Road Course
+PARSFILE Roads\dZ_Map\RdMapZ_2f45ffce-a7ec-49a1-b2e3-36084174ed44.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Flat` Flat` , Miscellaneous`RdMapZ_2f45ffce-a7ec-49a1-b2e3-36084174ed44
+
+PARSFILE Roads\Friction\RdMu_53ba8241-ce81-4256-a821-f3a1975c2fa5.par
+#BlueLink3 Road: Friction Map, S-L Grid`Road Course, 1.0 Surface, 0.75 Grass` Road Handling Course` , Friction`RdMu_53ba8241-ce81-4256-a821-f3a1975c2fa5
+
+PARSFILE Roads\Shapes\RdShape_f5984930-c6f4-4dc6-90b4-ff719bca03fe.par
+#BlueLink4 Road: Animator Surface Shapes`Road Handling Course` Stability Test Roads` , Road shape definitions`RdShape_f5984930-c6f4-4dc6-90b4-ff719bca03fe
+
+PARSFILE Roads\Profiles\Profile_1d146259-3f38-481d-8a95-3ddbbeffeb28.par
+#BlueLink10 Surface: Roughness Profiles`Bumpy` * * * CYBRIX: Road Roughnesses` , Miscellaneous`Profile_1d146259-3f38-481d-8a95-3ddbbeffeb28
+
+RR_SURF_CONSTANT 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+add_reference_frame road_stuff_7_Road_Course
+reference_frame_ghosts off
+PARSFILE Animator\STL_Groups\ShpGrp_422cb9ad-7aea-4d11-9675-075faf3857f7.par
+#BlueLink7 Animator: Shape Assembly`Road Course` Road Course` , 3D Shapes`ShpGrp_422cb9ad-7aea-4d11-9675-075faf3857f7
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_7be5fba4-ebb7-4d36-83cf-4485fca54bc8.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { * * * CYBRIX: Race Track } Test Race Track #002
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Test Race Track #002
+#Category: * * * CYBRIX: Race Track
+#FileID  : Road_7be5fba4-ebb7-4d36-83cf-4485fca54bc8
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

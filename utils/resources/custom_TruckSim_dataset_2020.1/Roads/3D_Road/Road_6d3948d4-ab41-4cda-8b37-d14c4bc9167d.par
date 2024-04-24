@@ -1,0 +1,63 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`5 km Straight, Mu = 1.0, Bumpy`* * * CYBRIX: Standard Scenarios
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_6d3948d4-ab41-4cda-8b37-d14c4bc9167d.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 5 km Straight, Mu = 1.0, Bumpy
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+PARSFILE Roads\Center_Z\RdRefZ_8d27a72d-e650-4be9-aa9e-cf221336a891.par
+#BlueLink1 Road: Reference Line Elevation`Flat` Flat` , Path Elevation`RdRefZ_8d27a72d-e650-4be9-aa9e-cf221336a891
+
+PARSFILE Roads\dZ_Map\RdMapZ_2f45ffce-a7ec-49a1-b2e3-36084174ed44.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Flat` Flat` , Miscellaneous`RdMapZ_2f45ffce-a7ec-49a1-b2e3-36084174ed44
+
+PARSFILE Roads\Friction\RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 1.0` Constant Mu` , Friction`RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e
+
+PARSFILE Roads\Shapes\RdShape_e011585d-4cca-4049-96ef-1bd9c237da67.par
+#BlueLink4 Road: Animator Surface Shapes`Braking Test Road` Roads` , Road shape definitions`RdShape_e011585d-4cca-4049-96ef-1bd9c237da67
+
+PARSFILE Roads\Profiles\Profile_1d146259-3f38-481d-8a95-3ddbbeffeb28.par
+#BlueLink10 Surface: Roughness Profiles`Bumpy` * * * CYBRIX: Road Roughnesses` , Miscellaneous`Profile_1d146259-3f38-481d-8a95-3ddbbeffeb28
+
+RR_SURF_CONSTANT 1
+*IMAGE_FIT_MODE 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Light_Grass
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_10482f47-24b8-42ea-ba5f-b20082d89b6f.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Light Grass` Environment Spheres` , 3D Shapes`Group_10482f47-24b8-42ea-ba5f-b20082d89b6f
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_6d3948d4-ab41-4cda-8b37-d14c4bc9167d.ani
+
+#EMBEDDED_NOTES
+#Brake distance test road.
+#
+#White line = 0 m
+#Yellow lines = 1 m
+#Red lines = 5 m
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { * * * CYBRIX: Standard Scenarios } 5 km Straight, Mu = 1.0, Bumpy
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 5 km Straight, Mu = 1.0, Bumpy
+#Category: * * * CYBRIX: Standard Scenarios
+#FileID  : Road_6d3948d4-ab41-4cda-8b37-d14c4bc9167d
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

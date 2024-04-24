@@ -1,0 +1,29 @@
+Run made by VS Road Calculator at 08:47 on April 24, 2024.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_6d3948d4-ab41-4cda-8b37-d14c4bc9167d.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par"
+ Straight Path East <Straight>
+Used Dataset: Path: Segment Builder; { Straight } Straight Path East
+Include PARSFILE "Roads\Center_Z\RdRefZ_8d27a72d-e650-4be9-aa9e-cf221336a891.par"
+Used Dataset: Road: Reference Line Elevation; { Flat } Flat
+Include PARSFILE "Roads\dZ_Map\RdMapZ_2f45ffce-a7ec-49a1-b2e3-36084174ed44.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Flat } Flat
+Include PARSFILE "Roads\Friction\RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 1.0
+Include PARSFILE "Roads\Shapes\RdShape_e011585d-4cca-4049-96ef-1bd9c237da67.par"
+Used Dataset: Road: Animator Surface Shapes; { Roads } Braking Test Road
+Include PARSFILE "Roads\Profiles\Profile_1d146259-3f38-481d-8a95-3ddbbeffeb28.par"
+Used Dataset: Surface: Roughness Profiles; { * * * CYBRIX: Road Roughnesses } Bumpy
+ 5 km Straight, Mu = 1.0, Bumpy <* * * CYBRIX: Standard Scenarios>
+Used Dataset: Road: 3D Surface (All Properties); { * * * CYBRIX: Standard Scenarios } 5 km Straight, Mu = 1.0, Bumpy
+
+Time to read input = 0.0010751
+
+Run stopped at t = 28.6. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_6d3948d4-ab41-4cda-8b37-d14c4bc9167d.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

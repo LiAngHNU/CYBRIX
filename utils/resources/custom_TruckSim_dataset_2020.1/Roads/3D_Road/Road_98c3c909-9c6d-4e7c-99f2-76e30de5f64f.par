@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`10 km x 10 km, Mu = 1.0, Bumpy`* * * CYBRIX: Standard Scenarios
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_98c3c909-9c6d-4e7c-99f2-76e30de5f64f.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id 10 km x 10 km, Mu = 1.0, Bumpy
+PARSFILE Roads\BuilderSegment\RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c.par
+#BlueLink0 Path: Segment Builder`Straight Path East` Straight` , Reference Path`RoadSeg_c3839dc3-d0f4-4bc7-a58a-300aeb335c8c
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Straight Path East
+PARSFILE Roads\Center_Z\RdRefZ_8d27a72d-e650-4be9-aa9e-cf221336a891.par
+#BlueLink1 Road: Reference Line Elevation`Flat` Flat` , Path Elevation`RdRefZ_8d27a72d-e650-4be9-aa9e-cf221336a891
+
+PARSFILE Roads\dZ_Map\RdMapZ_2f45ffce-a7ec-49a1-b2e3-36084174ed44.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Flat` Flat` , Miscellaneous`RdMapZ_2f45ffce-a7ec-49a1-b2e3-36084174ed44
+
+PARSFILE Roads\Friction\RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 1.0` Constant Mu` , Friction`RdMu_ba77e65b-ac24-44a0-ab4d-f600ab858c9e
+
+PARSFILE Roads\Shapes\RdShape_088136f1-b770-4485-b991-9569787be5bf.par
+#BlueLink4 Road: Animator Surface Shapes`10 km Square Checkerboard` Flat Test Pads` , Road shape definitions`RdShape_088136f1-b770-4485-b991-9569787be5bf
+
+PARSFILE Roads\Profiles\Profile_1d146259-3f38-481d-8a95-3ddbbeffeb28.par
+#BlueLink10 Surface: Roughness Profiles`Bumpy` * * * CYBRIX: Road Roughnesses` , Miscellaneous`Profile_1d146259-3f38-481d-8a95-3ddbbeffeb28
+
+RR_SURF_CONSTANT 1.0
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Partly_Cloudy_Sky_with_Desert
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_d26ad4ed-0f35-4fee-bdcc-cde69e6769a5.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky with Desert` Environment Spheres` , 3D Shapes`Group_d26ad4ed-0f35-4fee-bdcc-cde69e6769a5
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_265e38de-4bbf-46ee-bbc0-868db110b76d.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 3 El, 44 m` Road Reference` , Camera`Camera_265e38de-4bbf-46ee-bbc0-868db110b76d
+
+parsfile Roads\3D_Road\Road_98c3c909-9c6d-4e7c-99f2-76e30de5f64f.ani
+
+#EMBEDDED_NOTES
+#This is a flat level surface. A road is defined going east, such that global X = road station and global Y= road lateral coordinate L.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { * * * CYBRIX: Standard Scenarios } 10 km x 10 km, Mu = 1.0, Bumpy
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 10 km x 10 km, Mu = 1.0, Bumpy
+#Category: * * * CYBRIX: Standard Scenarios
+#FileID  : Road_98c3c909-9c6d-4e7c-99f2-76e30de5f64f
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END
