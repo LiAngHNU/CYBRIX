@@ -1,0 +1,56 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL\Shape_3113dd74-edae-4e1f-9d29-9d98d72d6d6c.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 17:10 on April 24, 2024 by TruckSim 2020.1
+
+PRODUCT_NAME TruckSim
+MODEL_LAYOUT f_s_s
+
+ENTER_PARSFILE Animator\STL\Shape_3113dd74-edae-4e1f-9d29-9d98d72d6d6c.par
+#FullDataName Animator: Shape File Link`LT-390E 4x2 Tractor: Brake Lights (On)`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\Frame_Brakes\brake_lightsOn.osg
+SET_COLOR 1 1 1
+SET_OFFSET_X -0.05
+SET_OFFSET_Z 0.734
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+ENTER_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+ENTER_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview
+EXIT_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+EXIT_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Brake Lights (On)
+EXIT_PARSFILE Animator\STL\Shape_3113dd74-edae-4e1f-9d29-9d98d72d6d6c.par
+
+
+
+END

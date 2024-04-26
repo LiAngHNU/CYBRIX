@@ -1,0 +1,82 @@
+PARSFILE
+#FullDataName TruckSim Run Control`#1004 Calibration: Vertical Characteristic`* * * CYBRIX: Run Controls
+#VEHICLECODE F_S_S
+symbol_push  <<vehicle>> 0
+symbol_push  <<unit>> 0
+symbol_push  <<axle>> 0
+symbol_push  <<s>> 0
+symbol_push  <<o>> 0
+symbol_push  <<id_run>> Run_d1ccf417-395a-4d42-bc2c-de42a2c8a7e0
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+IUNIT 0
+IVEHICLE 0
+OPT_INT_METHOD 0
+OPT_VS_FILETYPE 2
+PARSFILE Models\Simulink\Simlink_57989199-984c-48d9-8c24-b4028d93bd15.par
+#BlueLink12 Models: Simulink`#1003 Calibration: Lateral Characteristic` * * * CYBRIX: Simulink Models` , Models`Simlink_57989199-984c-48d9-8c24-b4028d93bd15
+
+PARSFILE Animator\Cameras\Camera_293071ae-9194-4088-8862-92255ece0a0f.par
+#BlueLink0 Animator: Camera Setup`13 Azm, 4.5 El, 48 m` Vehicle Reference` , Animator camera`Camera_293071ae-9194-4088-8862-92255ece0a0f
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+#CheckBox11 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+#RingCtrl7 -1
+*RUN_COLOR 0.69 0.69 0.69
+SET_RUN_COLOR 0.69 0.69 0.69
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+PARSFILE Vehicles\Lead_2a\Lead2a_5ff664f4-8778-4dac-8b5f-a5a06835c035.par
+#BlueLink2 Vehicle: Lead Unit with 2 Axles`LT-390E 4x2 Tractor` * * * CYBRIX: 2-Axle Vehicles` , Math Model`Lead2a_5ff664f4-8778-4dac-8b5f-a5a06835c035
+
+PARSFILE Procedures\Proc_18b2d970-6713-49b2-8b81-c4b0ac4c798b.par
+#BlueLink28 Procedures`#1003 Calibration: Lateral Characteristc` * * * CYBRIX: Procedures` , Procedure`Proc_18b2d970-6713-49b2-8b81-c4b0ac4c798b
+
+*TSTOP 1
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_3904231c-4c2d-4d42-bc74-69fe7106a546.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+Title #1004 Calibration: Vertical Characteristic <* * * CYBRIX: Run Controls>
+CATEGORY * * * CYBRIX: Run Controls 
+DATASET_TITLE #1004 Calibration: Vertical Characteristic
+#RingCtrl8 1
+NUM_CACHED_RUNS 1
+#RingCtrl9 
+
+#EMBEDDED_NOTES
+#This is a baseline example used in the TruckSim Demo Tutorial (see Help > Guides and Tutorials). It is similar to the example used in the TruckSim Quick Start Guide.
+#
+#The box is checked to "Write all outputs." This simplifies the use of this example as a reference for comparisons with other runs that might have different plot settings.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: TruckSim Run Control; { * * * CYBRIX: Run Controls } #1004 Calibration: Vertical Characteristic
+#Library : TruckSim Run Control
+#DataSet : #1004 Calibration: Vertical Characteristic
+#Category: * * * CYBRIX: Run Controls
+#FileID  : Run_d1ccf417-395a-4d42-bc2c-de42a2c8a7e0
+#Product : TruckSim 2020.1
+#VehCode Run
+
+END

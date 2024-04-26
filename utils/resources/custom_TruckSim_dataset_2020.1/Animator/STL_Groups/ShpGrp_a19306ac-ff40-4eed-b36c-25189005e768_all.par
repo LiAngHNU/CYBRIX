@@ -1,0 +1,164 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL_Groups\ShpGrp_a19306ac-ff40-4eed-b36c-25189005e768.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 17:55 on April 24, 2024 by TruckSim 2020.1
+
+PRODUCT_NAME TruckSim
+MODEL_LAYOUT f_ss_ss
+
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_a19306ac-ff40-4eed-b36c-25189005e768.par
+#FullDataName Animator: Shape Assembly`XT-390E 8x4 Truck: Chassis`* * * CYBRIX: Vehicle Shape File Groups
+ENTER_PARSFILE Animator\STL\Shape_942b5061-fccf-4745-af45-f308cc315d45.par
+#FullDataName Animator: Shape File Link`XT-390E 8x4 Truck: Bumper`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files_User\Vehicles\LT_390E_4x2_Tractor\bumper.obj
+SET_COLOR 1 1 1
+SET_SCALE_X 1.0
+SET_SCALE_Y 1.0
+SET_SCALE_Z 1.0
+SET_ANGLE_Z 0.0
+SET_ANGLE_Y 0.0
+SET_ANGLE_X 0.0
+SET_OFFSET_X -0.025
+SET_OFFSET_Y 0.0
+SET_OFFSET_Z 0.3
+set_lighting on
+set_fogging on
+USE_RUN_COLOR
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } XT-390E 8x4 Truck: Bumper
+EXIT_PARSFILE Animator\STL\Shape_942b5061-fccf-4745-af45-f308cc315d45.par
+
+set_offset_z 0.3
+ENTER_PARSFILE Animator\STL\Shape_6dd44dba-c9ed-4618-bf6c-8b972206dbc1.par
+#FullDataName Animator: Shape File Link`XT-390E 8x4 Truck: Bumper Detail`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files_User\Vehicles\LT_390E_4x2_Tractor\bumper_detail.obj
+SET_COLOR 0.376 0.376 0.376
+SET_SCALE_X 1.0
+SET_SCALE_Y 1.0
+SET_SCALE_Z 1.0
+SET_ANGLE_Z 0.0
+SET_ANGLE_Y 0.0
+SET_ANGLE_X 0.0
+SET_OFFSET_X -0.025
+SET_OFFSET_Y 0.0
+SET_OFFSET_Z 0.3
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } XT-390E 8x4 Truck: Bumper Detail
+EXIT_PARSFILE Animator\STL\Shape_6dd44dba-c9ed-4618-bf6c-8b972206dbc1.par
+
+set_offset_z 0.3
+ENTER_PARSFILE Animator\STL\Shape_a6c60ffd-395b-496b-aec3-b0de94d44703.par
+#FullDataName Animator: Shape File Link`XT-390E 8x4 Truck: Frame Rails`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\Frame_Rails\Frame_Rails.osg
+SET_COLOR 0.376 0.376 0.376
+SET_SCALE_X 1.5
+SET_SCALE_Y 1.0
+SET_SCALE_Z 1.6
+SET_OFFSET_X 0.1
+SET_OFFSET_Y 0.0
+SET_OFFSET_Z 0.5
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } XT-390E 8x4 Truck: Frame Rails
+EXIT_PARSFILE Animator\STL\Shape_a6c60ffd-395b-496b-aec3-b0de94d44703.par
+
+set_offset_z 0.3
+ENTER_PARSFILE Animator\STL\Shape_89fc6dfd-f566-4d63-8f1a-bc08f6573aca.par
+#FullDataName Animator: Shape File Link`XT-390E 8x4 Truck: Mudflaps`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Mudflaps\mudflaps.obj
+SET_COLOR 1 1 1
+SET_SCALE_X 1.0
+SET_SCALE_Y 1.0
+SET_SCALE_Z 1.0
+SET_OFFSET_X -6.3
+SET_OFFSET_Y 0.0
+SET_OFFSET_Z -0.2
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } XT-390E 8x4 Truck: Mudflaps
+EXIT_PARSFILE Animator\STL\Shape_89fc6dfd-f566-4d63-8f1a-bc08f6573aca.par
+
+set_offset_z 0.3
+ENTER_PARSFILE Animator\STL\Shape_03517ffe-06f5-48a0-8b2a-036abd112d26.par
+#FullDataName Animator: Shape File Link`XT-390E 8x4 Truck: Tail Light`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\Frame_Brakes\brake_lights.osg
+SET_COLOR 1 1 1
+SET_SCALE_X 1.0
+SET_SCALE_Y 1.0
+SET_SCALE_Z 1.0
+SET_OFFSET_X -2.2
+SET_OFFSET_Y 0.0
+SET_OFFSET_Z 0.5
+set_lighting on
+set_fogging on
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } XT-390E 8x4 Truck: Tail Light
+EXIT_PARSFILE Animator\STL\Shape_03517ffe-06f5-48a0-8b2a-036abd112d26.par
+
+set_offset_z 0.3
+ENTER_PARSFILE Animator\STL\Shape_6160d8dc-27db-4244-bc07-0ae3df44856e.par
+#FullDataName Animator: Shape File Link`Dump Truck: Dump Bed`Trucks: Vocational Bodies
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\Dump_Truck\dump_truck_bed.obj
+SET_COLOR 0.376 0.376 0.376
+SET_SCALE_X 1.95
+SET_SCALE_Y 1.215
+SET_SCALE_Z 1
+SET_OFFSET_X -1.64
+SET_OFFSET_Y 0
+SET_OFFSET_Z 1.15
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.5 0.5 0.5
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Vocational Bodies } Dump Truck: Dump Bed
+EXIT_PARSFILE Animator\STL\Shape_6160d8dc-27db-4244-bc07-0ae3df44856e.par
+
+set_offset_z 0.3
+x_ref_length 3900
+ENTER_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+ENTER_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview
+EXIT_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+EXIT_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { * * * CYBRIX: Vehicle Shape File Groups } XT-390E 8x4 Truck: Chassis
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_a19306ac-ff40-4eed-b36c-25189005e768.par
+
+
+
+END

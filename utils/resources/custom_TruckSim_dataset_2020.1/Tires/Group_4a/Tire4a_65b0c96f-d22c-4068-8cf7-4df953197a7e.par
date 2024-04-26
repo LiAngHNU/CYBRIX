@@ -1,0 +1,148 @@
+PARSFILE
+#FullDataName Tires: Vehicle Unit with 4 Axles`3000 kg Steer, 3000 kg Drive/HT`TS 4A Steer / Drive Tires
+
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox10 1    
+#CheckBox11 1    
+
+*LDUAL_2 310
+*LDUAL_3 335
+*LDUAL_4 335
+
+symbol_add  <<axle>> 1
+
+iaxle 1
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_2bb56a28-4f98-4301-94a0-ad34eafb8ac0.par
+#BlueLink1 Tire`538 mm Radius (Steer)` 3500 kg Rating` , Tires`Tire_2bb56a28-4f98-4301-94a0-ad34eafb8ac0
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_2bb56a28-4f98-4301-94a0-ad34eafb8ac0.par
+#BlueLink999 Tire`538 mm Radius (Steer)` 3500 kg Rating` , Tires`Tire_2bb56a28-4f98-4301-94a0-ad34eafb8ac0
+
+symbol_add  <<axle>> 1
+
+iaxle 2
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 0
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_2bb56a28-4f98-4301-94a0-ad34eafb8ac0.par
+#BlueLink5 Tire`538 mm Radius (Steer)` 3500 kg Rating` , Tires`Tire_2bb56a28-4f98-4301-94a0-ad34eafb8ac0
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.000000
+PARSFILE Tires\Tire\Tire_2bb56a28-4f98-4301-94a0-ad34eafb8ac0.par
+#BlueLink999 Tire`538 mm Radius (Steer)` 3500 kg Rating` , Tires`Tire_2bb56a28-4f98-4301-94a0-ad34eafb8ac0
+
+symbol_add  <<axle>> 1
+
+iaxle 3
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 335
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.167500
+PARSFILE Tires\Tire\Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6.par
+#BlueLink9 Tire`538 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.167500
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6.par
+#BlueLink999 Tire`538 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.167500
+PARSFILE Tires\Tire\Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6.par
+#BlueLink999 Tire`538 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.167500
+PARSFILE Tires\Tire\Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6.par
+#BlueLink999 Tire`538 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6
+
+symbol_add  <<axle>> 1
+
+iaxle 4
+iside 2
+itire 1
+symbol_push  <<whl>> R<<axle>>
+symbol_push  <<tire>> R<<axle>>i
+L_DUAL 335
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.167500
+PARSFILE Tires\Tire\Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6.par
+#BlueLink13 Tire`538 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6
+
+itire 2
+symbol_push  <<tire>> R<<axle>>o
+STORE_WHEEL_OFFSET 0.167500
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+PARSFILE Tires\Tire\Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6.par
+#BlueLink999 Tire`538 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6
+
+
+iside 1
+itire 1
+symbol_push  <<whl>> L<<axle>>
+symbol_push  <<tire>> L<<axle>>i
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+STORE_WHEEL_OFFSET 0.167500
+PARSFILE Tires\Tire\Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6.par
+#BlueLink999 Tire`538 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6
+
+itire 2
+symbol_push  <<tire>> L<<axle>>o
+WRITE_ADD_REFERENCE_FRAME_WHEEL_O
+STORE_WHEEL_OFFSET 0.167500
+PARSFILE Tires\Tire\Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6.par
+#BlueLink999 Tire`538 mm Radius (Drive)` 3500 kg Rating` , Tires`Tire_1a2abddc-bf38-46c0-8af3-aa460bcc39b6
+
+
+LOG_ENTRY Used Dataset: Tires: Vehicle Unit with 4 Axles; { TS 4A Steer / Drive Tires } 3000 kg Steer, 3000 kg Drive/HT
+#Library : Tires: Vehicle Unit with 4 Axles
+#DataSet : 3000 kg Steer, 3000 kg Drive/HT
+#Category: TS 4A Steer / Drive Tires
+#FileID  : Tire4a_65b0c96f-d22c-4068-8cf7-4df953197a7e
+#Product : TruckSim 2020.1
+#VehCode 4a Tire Group
+
+END

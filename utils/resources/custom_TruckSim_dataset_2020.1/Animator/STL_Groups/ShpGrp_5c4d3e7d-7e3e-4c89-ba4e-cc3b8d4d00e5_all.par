@@ -1,0 +1,132 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\STL_Groups\ShpGrp_5c4d3e7d-7e3e-4c89-ba4e-cc3b8d4d00e5.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 11:16 on April 25, 2024 by TruckSim 2020.1
+
+PRODUCT_NAME TruckSim
+MODEL_LAYOUT f_ss_ss
+
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_5c4d3e7d-7e3e-4c89-ba4e-cc3b8d4d00e5.par
+#FullDataName Animator: Shape Assembly`XT-390E 8x4 Truck: Cab`* * * CYBRIX: Vehicle Shape File Groups
+ENTER_PARSFILE Animator\STL\Shape_2d771a77-ad60-4f6a-8924-9d80775681eb.par
+#FullDataName Animator: Shape File Link`XT-390E 8x4 Truck: Cab`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files_User\Vehicles\XT_390E_8x4_Truck\cab.obj
+SET_COLOR 0 0.8 1
+SET_OFFSET_X 0.0
+SET_OFFSET_Y 0.0
+SET_OFFSET_Z 0.6
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } XT-390E 8x4 Truck: Cab
+EXIT_PARSFILE Animator\STL\Shape_2d771a77-ad60-4f6a-8924-9d80775681eb.par
+
+set_scale_x 1.0
+set_scale_y 1.0
+set_scale_z 0.95
+set_offset_x 0.02
+set_offset_y 0.0
+set_offset_z 0.15
+ENTER_PARSFILE Animator\STL\Shape_922876fc-8543-4446-a399-6a392446caf7.par
+#FullDataName Animator: Shape File Link`LT-390E 4x2 Tractor: Cab Detail`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files_User\Vehicles\LT_390E_4x2_Tractor\cab_detail.obj
+SET_COLOR 0.376 0.376 0.376
+SET_OFFSET_X 0.0
+SET_OFFSET_Y 0.0
+SET_OFFSET_Z 0.6
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Cab Detail
+EXIT_PARSFILE Animator\STL\Shape_922876fc-8543-4446-a399-6a392446caf7.par
+
+set_scale_x 1.0
+set_scale_y 1.0
+set_scale_z 0.95
+set_offset_x 0.02
+set_offset_y 0.0
+set_offset_z 0.15
+ENTER_PARSFILE Animator\STL\Shape_58c2767a-ca65-4f17-824f-27615c60d25e.par
+#FullDataName Animator: Shape File Link`LT-390E 4x2 Tractor: Windows`* * * CYBRIX: Shape Files
+add_obj Animator\3D_Shape_Files_User\Vehicles\LT_390E_4x2_Tractor\windows.obj
+SET_COLOR 0.314 0.314 0.314
+SET_SCALE_X 1.0
+SET_SCALE_Y 1.0
+SET_SCALE_Z 1.0
+SET_OFFSET_X 0.0
+SET_OFFSET_Y 0.0
+SET_OFFSET_Z 0.6
+set_lighting on
+set_fogging on
+set_transparency 0.3
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Windows
+EXIT_PARSFILE Animator\STL\Shape_58c2767a-ca65-4f17-824f-27615c60d25e.par
+
+set_scale_x 1.0
+set_scale_y 1.0
+set_scale_z 0.95
+set_offset_x 0.02
+set_offset_y 0.0
+set_offset_z 0.15
+ENTER_PARSFILE Animator\STL\Shape_4f9a7595-acdb-433b-b83a-b9a24fe92cfd.par
+#FullDataName Animator: Shape File Link`European Cab Over: Driver`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\European_Cab\Drivers\Caucasian_Male\Caucasian_Male.obj
+SET_COLOR 1 1 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0.6
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.75 0.75 0.75
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Driver
+EXIT_PARSFILE Animator\STL\Shape_4f9a7595-acdb-433b-b83a-b9a24fe92cfd.par
+
+set_scale_x 1.0
+set_scale_y 1.0
+set_scale_z 0.95
+set_offset_x 0.02
+set_offset_y 0.0
+set_offset_z 0.15
+ENTER_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+ENTER_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview
+EXIT_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+EXIT_PARSFILE Animator\Cameras\Camera_4f51a664-0690-47ba-aff2-3a5c29523a33.par
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { * * * CYBRIX: Vehicle Shape File Groups } XT-390E 8x4 Truck: Cab
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_5c4d3e7d-7e3e-4c89-ba4e-cc3b8d4d00e5.par
+
+
+
+END

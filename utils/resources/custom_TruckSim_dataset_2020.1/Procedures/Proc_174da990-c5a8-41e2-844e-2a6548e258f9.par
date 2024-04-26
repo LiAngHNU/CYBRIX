@@ -15,13 +15,13 @@ TSTART 0
 SSTART 0
 TSTART_WRITE = 0;
 TSTOP 300
-SSTOP 2270
+SSTOP 1000
 OPT_DIRECTION 0
 *SPEED 80
 *TSTOP 300
 *TSTART 0
 *SSTART 0
-*SSTOP 2270
+*SSTOP 1000
 
 PARSFILE Control\Driver\StrDM_bc14b97b-72c4-4e95-a3ab-a055a14bb58a.par
 #BlueLink27 Control: Steering by the Closed-loop Driver Model`1s Preview` Constant Position: No Offset` , Steering`StrDM_bc14b97b-72c4-4e95-a3ab-a055a14bb58a
@@ -32,11 +32,11 @@ PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
 PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
 #BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
 
-PARSFILE Control\Speed_path\SpdPath_be0b9a7b-64ae-4e76-8d8a-56994434be18.par
-#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.40/0.40 G Max Ax/Ay, 80 km/h` * * * CYBRIX: Driving Behaviors` , Speed vs. station`SpdPath_be0b9a7b-64ae-4e76-8d8a-56994434be18
+PARSFILE Control\Speed_path\SpdPath_0325d5c2-c43d-4eb0-bd96-48d81c1c0a51.par
+#BlueLink33 Control: Speed (Closed Loop) Using Path Preview`0.40/0.40 G Max Ax/Ay,   40 km/h` * * * CYBRIX: Driving Behaviors` , Speed vs. station`SpdPath_0325d5c2-c43d-4eb0-bd96-48d81c1c0a51
 
-PARSFILE Roads\3D_Road\Road_5595e2f4-f070-41c1-86ba-eaac93b88d08.par
-#BlueLink0 Road: 3D Surface (All Properties)`Handling Course` Self-Contained Scenes` , Miscellaneous`Road_5595e2f4-f070-41c1-86ba-eaac93b88d08
+PARSFILE Roads\3D_Road\Road_3850b1b2-ea8e-46a2-9a15-4c1e128e36fa.par
+#BlueLink0 Road: 3D Surface (All Properties)`Test Race Track #001` * * * CYBRIX: Race Track` , Miscellaneous`Road_3850b1b2-ea8e-46a2-9a15-4c1e128e36fa
 
 PARSFILE Roads\Center_XY\PathXY_31d2e7da-3af1-4380-81ee-25eb4f63d8c6.par
 #BlueLink1 Path: X-Y Coordinates`Handling Course Race Line` Handling Course` , Miscellaneous`PathXY_31d2e7da-3af1-4380-81ee-25eb4f63d8c6
@@ -66,7 +66,7 @@ PARSFILE Plot\Setup\Plot_a1361a9f-b35c-46ec-8dd2-78b0be045c2d.par
 #BlueLink16 Plot: Setup`Lateral Calibration: AVz vs. Vy` * * * CYBRIX: Plots` , Plot`Plot_a1361a9f-b35c-46ec-8dd2-78b0be045c2d
 
 PARSFILE Plot\Setup\Plot_d4d3da01-c5b3-4983-95a5-e48368d79ce4.par
-#BlueLink17 Plot: Setup`Lateral Calibration: Vx vs. Time` * * * CYBRIX: Plots` , Plot`Plot_d4d3da01-c5b3-4983-95a5-e48368d79ce4
+#BlueLink17 Plot: Setup`Common: Vx vs. Time` * * * CYBRIX: Plots` , Plot`Plot_d4d3da01-c5b3-4983-95a5-e48368d79ce4
 
 
 #EMBEDDED_NOTES

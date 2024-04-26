@@ -1,14 +1,14 @@
 PARSFILE
 ! TruckSim 2020.1
 ! Revision 143796, June 26, 2020
-MODEL_LAYOUT S_S
+MODEL_LAYOUT F_S_S
 
 DATASET_TITLE #1001 Calibration: Static Characteristic
 CATEGORY * * * CYBRIX: Run Controls
 TITLE #1001 Calibration: Static Characteristic <* * * CYBRIX: Run Controls>
 
 ! Echo: D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Results\Run_14d7c4f5-316e-45c1-9e0b-0e8759454dff\LastRun_echo.par
-! This run was made 15:49 on April 17, 2024.
+! This run was made 09:07 on April 23, 2024.
 
 !------------------------------------------------------------------------------------
 ! SYSTEM PARAMETERS (SIMULATION OPTIONS)
@@ -23,9 +23,9 @@ IPRINT             20 ! Print interval: output time step TSTEP_WRITE = TSTEP*IPR
                       ! set IPRINT = 0 for debug (TSTEP_WRITE = T_DT) [L]
 NDIGITS_ECHO       10 ! [D] Max. no. of digits for printing floating-point numbers
 ! NIMPORT           1 ! Number of variables activated for import (read only)
-! NOUT_ANI_LIVE   149 ! Number of variables sent live to animators (read only)
+! NOUT_ANI_LIVE   171 ! Number of variables sent live to animators (read only)
 ! NOUT_EXPORT       0 ! Number of output variables activated for export (read only)
-! NOUT_WRITE     1062 ! Number of output variables written to file (read only)
+! NOUT_WRITE     1150 ! Number of output variables written to file (read only)
 OPT_ALL_WRITE       1 ! Write all outputs to file? 1 -> all, 0 -> only activated
                       ! outputs
 OPT_BUFFER_WRITE    0 ! [D] Retain output data in memory buffer until end of run? 0
@@ -154,6 +154,48 @@ HT_SM            1500 ; mm ! [D] Reference height of sprung mass (maybe for targ
 LEN_SM           3900 ; mm ! Reference length of sprung mass (maybe for target)
 WID_SM           1600 ; mm ! [D] Reference width of sprung mass (maybe for target)
 LX_F_SM          1000 ; mm ! [D] Length from front to control pt (maybe for target)
+
+!------------------------------------------------------------------------------------
+! CHASSIS FRAME TWIST
+!------------------------------------------------------------------------------------
+C_FRAME           100 ; N-m-s/deg ! Torsional damping connecting rails
+H_NODE            520 ; mm ! Height of torsional node above origin [I]
+K_FRAME          1000 ; N-m/deg ! Torsional stiffness connecting rails
+L_FRAME          5000 ; mm ! Longitudinal distance between points used to measure
+                      ! stiffness [I]
+W_FRAME          1000 ; mm ! Lateral distance between points used to measure
+                      ! stiffness [I]
+X_ENG               0 ; mm ! X dist. engine is behind origin [I]
+X_NODE           3000 ; mm ! X dist. torsional node is behind origin [I]
+
+!------------------------------------------------------------------------------------
+! SUSPENDED CAB
+!------------------------------------------------------------------------------------
+! This model includes an optional cab that is suspended by 4 mounts. The mass and
+! inertia properties of the cab are subtracted from the sprung mass, such that the
+! same sprung mass datasets can be used with and without the suspended cab feature.
+! Forces from the mounts are handled with Configurable Functions FD_CAB_MT and
+! FD_CAB_MT.
+
+OPT_SUSP_CAB        1 ! Suspended cab? 0 -> No, 1 -> Yes [I]
+H_CAB_PITCH       875 ; mm ! Height (Z coord.) of cab pitch axis [I]
+H_CAB_ROLL        800 ; mm ! Height (Z coord.) of cab roll axis [I]
+H_CG_CAB         1800 ; mm ! Height (Z coord.) of CG of suspended cab [I]
+H_MOUNTS_F        750 ; mm ! Height (Z coord.) of front cab mounts [I]
+H_MOUNTS_R       1000 ; mm ! Height (Z coord.) of rear cab mounts [I]
+IXX_CAB           100 ; kg-m2 ! Roll moment of inertia of suspended cab [I]
+IYY_CAB           100 ; kg-m2 ! Pitch moment of inertia of suspended cab [I]
+LX_CAB_PITCH     -700 ; mm ! X distance cab pitch axis is behind vehicle origin [I]
+LX_CG_CAB        -500 ; mm ! X distance CG of suspended cab is behind vehicle origin
+                      ! [I]
+LX_MOUNTS_F     -1400 ; mm ! X distance front cab mounts are behind vehicle origin
+                      ! [I]
+LX_MOUNTS_R         0 ; mm ! X distance rear cab mounts are behind vehicle origin
+                      ! [I]
+LY_MOUNTS_F      1000 ; mm ! Lateral spacing between front cab mounts [I]
+LY_MOUNTS_R      1600 ; mm ! Lateral spacing between rear cab mounts [I]
+M_CAB            1000 ; kg ! Mass of suspended cab [I]
+Y_CG_CAB            0 ; mm ! Y coordinate of CG of suspended cab [I]
 
 !------------------------------------------------------------------------------------
 ! PAYLOADS
@@ -402,7 +444,7 @@ CS_MZ_ROD(1)   0.0006 ; deg/N/m ! Compliance: steer due to tie rod, axle 1
 CS_MZ_SHAFT(1) 0.0001 ; deg/N/m ! Compliance: steering shaft, axle 1
 C_WRAP(1)    0.000186 ; deg/N/m ! Wrap compliance: (rel. axle pitch) / (total wheel
                       ! spin torque), axle 1
-D_GEAR(1)           0 ; N-m-s/deg ! Steering gear viscous damping, axle 1
+D_GEAR(1)          10 ; N-m-s/deg ! Steering gear viscous damping, axle 1
 HYS_GEAR(1)         0 ; N-m ! Steering gear hysteresis, axle 1
 L_KPO(1,1)        100 ; mm ! Lateral kingpin offset to center of wheel L1 [I]
 L_KPO(1,2)        100 ; mm ! Lateral kingpin offset to center of wheel R1 [I]
@@ -859,7 +901,7 @@ A_YAW_S(1)          0 ; deg ! Local yaw of sensor (using 1-2-3 sequence) [I]
                       ! above)
 X_S(1)           -0.5 ; mm ! X coordinate of sensor
 Y_S(1)              0 ; mm ! Y coordinate of sensor
-Z_S(1)            0.5 ; mm ! Z coordinate of sensor
+Z_S(1)            1.2 ; mm ! Z coordinate of sensor
 
 MAKE_MOTION_SENSOR_OUTPUTS  ! VS Command to define up to 25 output variables for
                             ! each motion sensor, based on the current value of
@@ -868,7 +910,44 @@ MAKE_MOTION_SENSOR_OUTPUTS  ! VS Command to define up to 25 output variables for
 !------------------------------------------------------------------------------------
 ! REFERENCE POINTS AND IMPORTED FORCES
 !------------------------------------------------------------------------------------
-! NREF_PT           0 ! Number of installed reference points and forces (read only)
+! NREF_PT           5 ! Number of installed reference points and forces (read only)
+DEFINE_REFERENCE_POINTS 5 ! VS Command to add reference points with imported forces
+
+REFERENCE_POINT_NAME(1) 1 ; Point 1: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(1) 5 ! Type of body where point is located: 1 -> sprung mass, 5 ->
+                      ! suspended cab, 0 -> not used
+OPT_RP_FORCE_N(1)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(1)           500 ; mm ! X coordinate of reference point
+Y_RP(1)             0 ; mm ! Y coordinate of reference point
+Z_RP(1)          1800 ; mm ! Z coordinate of reference point
+
+REFERENCE_POINT_NAME(2) 2 ; Point 2: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(2) 5 ! Type of body where point is located
+OPT_RP_FORCE_N(2)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(2)          1400 ; mm ! X coordinate of reference point
+Y_RP(2)           500 ; mm ! Y coordinate of reference point
+Z_RP(2)           750 ; mm ! Z coordinate of reference point
+
+REFERENCE_POINT_NAME(3) 3 ; Point 3: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(3) 5 ! Type of body where point is located
+OPT_RP_FORCE_N(3)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(3)          1400 ; mm ! X coordinate of reference point
+Y_RP(3)          -500 ; mm ! Y coordinate of reference point
+Z_RP(3)           750 ; mm ! Z coordinate of reference point
+
+REFERENCE_POINT_NAME(4) 4 ; Point 4: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(4) 5 ! Type of body where point is located
+OPT_RP_FORCE_N(4)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(4)            -0 ; mm ! X coordinate of reference point
+Y_RP(4)           800 ; mm ! Y coordinate of reference point
+Z_RP(4)          1000 ; mm ! Z coordinate of reference point
+
+REFERENCE_POINT_NAME(5) 5 ; Point 5: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(5) 5 ! Type of body where point is located
+OPT_RP_FORCE_N(5)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(5)            -0 ; mm ! X coordinate of reference point
+Y_RP(5)          -800 ; mm ! Y coordinate of reference point
+Z_RP(5)          1000 ; mm ! Z coordinate of reference point
 
 !------------------------------------------------------------------------------------
 ! ABS CONTROLLER
@@ -1562,6 +1641,53 @@ FD_OFFSET(2,2)      0 ; N ! Offset added (after gain) to get damper force
 CMP_R_START_FD(2,2) 0 ; mm/s ! Offset subtracted from compression speed
 CMP_R_SCALE_FD(2,2) 1 ! Scale factor divided into (compression speed -
                       ! CMP_R_START_FD)
+
+! FD_CAB_MT: Cab mount damper vertical force. Damper force is a function of
+! compression rate (COEFFICIENT or TABLE). Alternatively, a custom equation can be
+! defined at runtime. Damper force from the calculation can be adjusted with
+! FD_CAB_MT_GAIN and FD_CAB_MT_OFFSET. Compression rate used in the calculation can
+! be adjusted with CMP_R_SCALE_FD_CAB_MT and CMP_R_START_FD_CAB_MT. This configurable
+! function supports 2 datasets; if indices shown below are not used, e.g., (2), the
+! current value of the index IMOUNTROW is used to identify the dataset when reading
+! data.
+
+FD_CAB_MT_COEFFICIENT(1) 30 ! Coefficient: damper force per unit compression rate
+                            ! (N/[mm/s])
+FD_CAB_MT_GAIN(1)   1 ! Gain multiplied with calculated value to get damper force
+FD_CAB_MT_OFFSET(1) 0 ; N ! Offset added (after gain) to get damper force
+CMP_R_START_FD_CAB_MT(1) 0 ; mm/s ! Offset subtracted from compression rate
+CMP_R_SCALE_FD_CAB_MT(1) 1 ! Scale factor divided into (compression rate -
+                           ! CMP_R_START_FD_CAB_MT)
+
+FD_CAB_MT_COEFFICIENT(2) 30 ! Coefficient: damper force per unit compression rate
+                            ! (N/[mm/s])
+FD_CAB_MT_GAIN(2)   1 ! Gain multiplied with calculated value to get damper force
+FD_CAB_MT_OFFSET(2) 0 ; N ! Offset added (after gain) to get damper force
+CMP_R_START_FD_CAB_MT(2) 0 ; mm/s ! Offset subtracted from compression rate
+CMP_R_SCALE_FD_CAB_MT(2) 1 ! Scale factor divided into (compression rate -
+                           ! CMP_R_START_FD_CAB_MT)
+
+! FS_CAB_MT: Cab mount spring vertical force. Spring force is a function of
+! compression (COEFFICIENT or TABLE). Spring force from the calculation can be
+! adjusted with FS_CAB_MT_GAIN and FS_CAB_MT_OFFSET. Compression used in the
+! calculation can be adjusted with CMP_SCALE_FS_CAB_MT and CMP_START_FS_CAB_MT. An
+! inverse version of this function is used internally. This configurable function
+! supports 2 datasets; if indices shown below are not used, e.g., (2), the current
+! value of the index IMOUNTROW is used to identify the dataset when reading data.
+
+FS_CAB_MT_COEFFICIENT(1) 200 ! Coefficient: spring force per unit compression (N/mm)
+FS_CAB_MT_GAIN(1)   1 ! Gain multiplied with calculated value to get spring force
+FS_CAB_MT_OFFSET(1) 0 ; N ! Offset added (after gain) to get spring force
+CMP_START_FS_CAB_MT(1) 0 ; mm ! Offset subtracted from compression
+CMP_SCALE_FS_CAB_MT(1) 1 ! Scale factor divided into (compression -
+                         ! CMP_START_FS_CAB_MT)
+
+FS_CAB_MT_COEFFICIENT(2) 200 ! Coefficient: spring force per unit compression (N/mm)
+FS_CAB_MT_GAIN(2)   1 ! Gain multiplied with calculated value to get spring force
+FS_CAB_MT_OFFSET(2) 0 ; N ! Offset added (after gain) to get spring force
+CMP_START_FS_CAB_MT(2) 0 ; mm ! Offset subtracted from compression
+CMP_SCALE_FS_CAB_MT(2) 1 ! Scale factor divided into (compression -
+                         ! CMP_START_FS_CAB_MT)
 
 ! FS_COMP: Compression (upper) envelope of suspension spring force (1 side). Spring
 ! force can be a nonlinear CARPET function of static spring force and spring

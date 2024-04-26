@@ -1,6 +1,6 @@
 PARSFILE
-#FullDataName Vehicle: Lead Unit with 2 Axles`Tractor: Type-M (Electric)`* * * CYBRIX: 2-Axle Vehicles
-#VehCode S_S
+#FullDataName Vehicle: Lead Unit with 2 Axles`LT-390E 4x2 Tractor`* * * CYBRIX: 2-Axle Vehicles
+#VehCode F_S_S
 IUNIT_INCREMENT
 IVEHICLE = IVEHICLE + 1
 symbol_add  <<unit>> 1
@@ -59,18 +59,18 @@ PARSFILE Brakes\2W_System\Brk2W_3e38a8a4-fda6-483f-8c08-941e067e6ca9.par
 
 
 WRITE_ADD_REFERENCE_FRAME_BODY
-PARSFILE Vehicles\Sprung_Mass\SprMass_5f3ae270-7ea8-451a-be9a-12e74514d0a6.par
-#BlueLink1 Vehicle: Lead Unit Sprung Mass`2A Cab-Over` Tractors` , Sprung Mass`SprMass_5f3ae270-7ea8-451a-be9a-12e74514d0a6
+PARSFILE Vehicles\Sprung_Mass\SprMass_94851486-d6a3-412c-b2eb-d6cfa9a8e72c.par
+#BlueLink1 Vehicle: Lead Unit Sprung Mass`Sprung Mass: LT-390E 4x2 Tractor` * * * CYBRIX: Sprung Masses` , Sprung Mass`SprMass_94851486-d6a3-412c-b2eb-d6cfa9a8e72c
 
-PARSFILE Aerodynamics\Aero_Main\Aero_88dd56dd-ef73-4549-9b47-1283376c29c6.par
-#BlueLink2 Aerodynamics: Basic`Cab-Over-Eng. w/o Fairings, 5 m Ref.` Cab-Over and Cab-Forward Tractors` , Aerodynamics`Aero_88dd56dd-ef73-4549-9b47-1283376c29c6
+PARSFILE Aerodynamics\Aero_Main\Aero_fe4086fd-3770-42fb-8bff-cb2e3f385399.par
+#BlueLink2 Aerodynamics: Basic`Aerodynamics: LT-390E 4x2 Tractor` * * * CYBRIX: Aerodynamic` , Aerodynamics`Aero_fe4086fd-3770-42fb-8bff-cb2e3f385399
 
 PARSFILE Powertrain\Rwd\RWD_daabc36f-8624-4076-bf43-5481678b8d56.par
-#BlueLink4 Powertrain: Rear-Wheel Drive`300 kW, Electric, 3.92 Ratio` Electric Powertrains` , Powertrain or dolly`RWD_daabc36f-8624-4076-bf43-5481678b8d56
+#BlueLink4 Powertrain: Rear-Wheel Drive`390 kW, Electric, 3.92 Ratio` Electric Powertrains` , Powertrain or dolly`RWD_daabc36f-8624-4076-bf43-5481678b8d56
 
 x_length 3900.000000
-PARSFILE Animator\Vehicles\AniVeh_ce6ae7f3-6533-49c9-b787-db926285b341.par
-#BlueLink0 Animator: Vehicles and Sensor Targets`2A European Cab Over` 2A Lead Units` , Animator Shape(s)`AniVeh_ce6ae7f3-6533-49c9-b787-db926285b341
+PARSFILE Animator\Vehicles\AniVeh_3904231c-4c2d-4d42-bc74-69fe7106a546.par
+#BlueLink0 Animator: Vehicles and Sensor Targets`Vehicle Shape: LT-390E 4x2 Tractor` * * * CYBRIX: Vehicle Shapes` , Animator Shape(s)`AniVeh_3904231c-4c2d-4d42-bc74-69fe7106a546
 
 PARSFILE Steering\Str_Wheel_Tq\TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6.par
 #BlueLink6 Steering Wheel Torque`Linear: 1/25 (Typical)` ` , Steering wheel torque`TqSW_d6d47246-525b-4b0f-ac45-246f340b90a6
@@ -88,19 +88,19 @@ PARSFILE Generic\Links\GenLink_1dce16f7-989d-4c54-a425-f8e49861dd1b.par
 #BlueLink27 Generic Group of Links`Assistant Plugins for 2-Axle Vehicles` * * * CYBRIX: Generic Group of Links` , Misc (whole unit)`GenLink_1dce16f7-989d-4c54-a425-f8e49861dd1b
 
 *IMAGE_TYPE PASS_THROUGH
-*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_ce6ae7f3-6533-49c9-b787-db926285b341.png
+*IMAGE_PASS_THROUGH Animator\Vehicles\AniVeh_3904231c-4c2d-4d42-bc74-69fe7106a546.png
 IOBJECT_RESTORE
 
 #EMBEDDED_NOTES
 #European style two axle cab over tractor.
 #END_EMBEDDED_NOTES
 
-LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { * * * CYBRIX: 2-Axle Vehicles } Tractor: Type-M (Electric)
+LOG_ENTRY Used Dataset: Vehicle: Lead Unit with 2 Axles; { * * * CYBRIX: 2-Axle Vehicles } LT-390E 4x2 Tractor
 #Library : Vehicle: Lead Unit with 2 Axles
-#DataSet : Tractor: Type-M (Electric)
+#DataSet : LT-390E 4x2 Tractor
 #Category: * * * CYBRIX: 2-Axle Vehicles
 #FileID  : Lead2a_5ff664f4-8778-4dac-8b5f-a5a06835c035
 #Product : TruckSim 2020.1
-#VehCode S_S
+#VehCode F_S_S
 
 END

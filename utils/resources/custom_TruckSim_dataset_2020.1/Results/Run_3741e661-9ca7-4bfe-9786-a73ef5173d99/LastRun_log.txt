@@ -1,9 +1,9 @@
-Run made by TruckSim 2020.1 at 17:49 on April 17, 2024.
+Run made by TruckSim 2020.1 at 13:56 on April 25, 2024.
 
 Started with simfile: simfile.sim
 
 Include PARSFILE "Results\Run_3741e661-9ca7-4bfe-9786-a73ef5173d99\Run_all.par"
-Installed keywords into VS Solver for MODEL_LAYOUT S_S
+Installed keywords into VS Solver for MODEL_LAYOUT F_S_S__SSS
 Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Vehicle X-Y-Z
 Used Dataset: Animator: Camera Setup; { Vehicle Reference } 13 Azm, 4.5 El, 48 m
 Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Steer
@@ -97,38 +97,62 @@ Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
 Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
 Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
 Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 10 kN-m Capacity, Air (2 ch. ABS)
-Used Dataset: Vehicle: Lead Unit Sprung Mass; { Tractors } 2A Cab-Over
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Suspended Cab
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Cab
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Cab Detail
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Windows
+Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Driver
+Used Dataset: Animator: Shape Assembly; { * * * CYBRIX: Vehicle Shape File Groups } LT-390E 4x2 Tractor: Cab
+Used Dataset: Animator: Group; { * * * CYBRIX: Suspended Cabs } LT-390E 4x2 Tractor
+Used Dataset: Positions, Velocities, and Accelerations; { Sprung Mass and Suspended Cab } Cab Sensor at Origin
+Used Dataset: Custom Forces and Reference Points; Cab RP at Cab CG and Mounts
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Cab Mount: LF
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double for Cab Mounts
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Cab Mount: RF
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double for Cab Mounts
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Cab Mount: LR
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double for Cab Mounts
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Cab Mount: RR
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double for Cab Mounts
+Used Dataset: Animator: Group; { Suspended Cab } Cab Mount Spring Force Arrows
+Used Dataset: Vehicle: Suspended Cab; { * * * CYBRIX: Suspended Cabs } LT-390E 4x2 Tractor
+Used Dataset: Vehicle: Lead Unit Sprung Mass; { * * * CYBRIX: Sprung Masses } Sprung Mass: LT-390E 4x2 Tractor
 Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; { Tractor } Cab-Over-Engine w/o Fairings
 Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; { Linear Interpolation } Linear: 0.082 1/deg.
 Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; { Spline Interpolation } Spline: -0.15 at 0 deg.
 Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.064 1/deg.
 Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.2 at 0 deg., 0.38 at 25 deg.
 Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; { Linear Interpolation } Linear: 0.012 1/deg.
-Used Dataset: Aerodynamics: Basic; { Cab-Over and Cab-Forward Tractors } Cab-Over-Eng. w/o Fairings, 5 m Ref.
+Used Dataset: Aerodynamics: Basic; { * * * CYBRIX: Aerodynamic } Aerodynamics: LT-390E 4x2 Tractor
 Used Dataset: Generic Table; { Powertrain (HEV) } Motor efficiency
-Used Dataset: Powertrain: Electric Motor Torque; { Electric Motor } Max. Output 3050 N-m
+Used Dataset: Powertrain: Electric Motor Torque; { Electric Motor } Max. Output 390 KW
 Used Dataset: Generic Table; { Powertrain (HEV) } Battery charged resistance
 Used Dataset: Generic Table; { Powertrain (HEV) } Battery discharged resistance
 Used Dataset: Generic Table; { Powertrain (HEV) } Battery Open-Circuit Voltage
 Used Dataset: Generic Table; { Powertrain (HEV) } Battery Max. Capacity
-Used Dataset: Powertrain: Hybrid/Electric System; Electric Powertrain Assembly, 300kW
-Used Dataset: Generic Table; { Powertrain (HEV) } Driver Demand Power: Full Load 300 kW
-Used Dataset: Powertrain: Hybrid/Electric Power Management Control; Power Management: Full Load 300kW
-Used Dataset: Powertrain: Limited Slip Differential (Front or Rear); { Differential Clutch } LSD: TBR 3:1, No Bias, No Preload
-Used Dataset: Powertrain: Rear Differential; { Limited Slip and Viscous Coupling } LSD: TBR 3:1, Gear Ratio 5:1
-Used Dataset: Powertrain: Rear-Wheel Drive; { Electric Powertrains } 300 kW, Electric, 3.92 Ratio
-Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Frame Rails
-Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Mudflaps
-Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Brake Lights (Off)
-Used Dataset: Animator: Shape Assembly; { Frame Rails } Lead Unit Frame Rails
-Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Brake Lights (On)
+Used Dataset: Powertrain: Hybrid/Electric System; Electric Powertrain Assembly, 390kW
+Used Dataset: Generic Table; { Powertrain (HEV) } Driver Demand Power: Full Load 390 kW
+Used Dataset: Powertrain: Hybrid/Electric Power Management Control; Power Management: Full Load 390kW
+Used Dataset: Powertrain: Rear Differential; { Limited Slip and Viscous Coupling } Viscous Coupling: Gear Ratio 3.92:1
+Used Dataset: Powertrain: Rear-Wheel Drive; { Electric Powertrains } 390 kW, Electric, 3.92 Ratio
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Bumper
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Bumper Detail
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Frame Rails
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Fuel Tank
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Mudflaps
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Tail Light
+Used Dataset: Animator: Shape Assembly; { * * * CYBRIX: Vehicle Shape File Groups } LT-390E 4x2 Tractor: Chassis
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Brake Lights (On)
 Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Reverse Lights (On)
-Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Body
-Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Details
-Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Windows
-Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Driver
-Used Dataset: Animator: Shape Assembly; { Cab Over } 2A Euro Cab Over (Non-scaled)
-Used Dataset: Animator: Vehicles and Sensor Targets; { 2A Lead Units } 2A European Cab Over
+Used Dataset: Animator: Vehicles and Sensor Targets; { * * * CYBRIX: Vehicle Shapes } Vehicle Shape: LT-390E 4x2 Tractor
 Used Dataset: Steering Wheel Torque; Linear: 1/25 (Typical)
 Used Dataset: Hitch: Roll Moment; 100 kN-m/deg (1 deg lash)
 Used Dataset: Hitch: Pitch Moment; 100 kN-m/deg (-11 to 7 deg Lash)
@@ -137,6 +161,8 @@ Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Hitches: 5th 
 Used Dataset: Hitch: Joint Assembly; { 5th Wheel Hitches } 5th Wheel
 Used Dataset: Positions, Velocities, and Accelerations; { * * * CYBRIX: Sensors } Combined Inertial Measurement Unit
 Used Dataset: Animator: HUD; { * * * CYBRIX: Dashboards } Standard Dashboard
+Used Dataset: Animator: HUD; { * * * CYBRIX: Dashboards } Advanced Dashboard: Driving Torques
+Used Dataset: Animator: HUD; { * * * CYBRIX: Dashboards } Advanced Dashboard: Braking Pressures
 Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
 Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
 Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
@@ -189,137 +215,262 @@ Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere 0.2 m (Gree
 Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere 0.2 m (Green)
 Used Dataset: Multiple Moving Objects; { Points of Interest } 10 Driver Preview Points, Set by DM
 Used Dataset: Generic Group of Links; { * * * CYBRIX: Generic Group of Links } Assistant Plugins for 2-Axle Vehicles
-Used Dataset: Vehicle: Lead Unit with 2 Axles; { * * * CYBRIX: 2-Axle Vehicles } Tractor: Type-M (Electric)
+Used Dataset: Vehicle: Lead Unit with 2 Axles; { * * * CYBRIX: 2-Axle Vehicles } LT-390E 4x2 Tractor
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Highway: Trailer
+Used Dataset: Animator: Shape Assembly; { Tires } Highway Trailer Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Lx Variable, Scaled to Tire
+Used Dataset: Generic Table; { Tire Relaxation Length } Ly Variable, Scaled to Tire
+Used Dataset: Tire: Aligning Moment; { Example Mz Data } Mz: 3000 kg Load Rating
+Used Dataset: Tire: Lateral Force; { Example Fy Data } Fy: 3000 kg Load Rating
+Used Dataset: Tire: Longitudinal Force; { Example Fx Data } Fx: 3000 kg Load Rating
+Used Dataset: Tire: Camber Thrust Coefficient; Linear Coefficient: -0.01
+Used Dataset: Tire; { 3000 kg Rating } 510 mm Radius (Trailer)
+Used Dataset: Tires: Vehicle Unit with 3 Axles; { 3A Trailer and Dolly Tires } 3000 kg Tridem, Duals
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Rear } Roll Center: 195 mm Above Axle
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Trailer Axle
+Used Dataset: Suspension: Solid Axle System Kinematics; { Trailer Axle } 18t Trailer, Dual Wheels
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 3000 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 18t Leaf: +100 mm, -60 mm Travel
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 10 kN-m Capacity, Air (2 ch. ABS)
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Rear } Roll Center: 195 mm Above Axle
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Trailer Axle
+Used Dataset: Suspension: Solid Axle System Kinematics; { Trailer Axle } 18t Trailer, Dual Wheels
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 3000 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 18t Leaf: +100 mm, -60 mm Travel
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 10 kN-m Capacity, Air (2 ch. ABS)
+Used Dataset: Suspension: Dive Angle (Caster Change); { Constant } Constant: Zero Dive Angle (deg)
+Used Dataset: Suspension: Longitudinal Movement; { Constant } Zero Forward X Movement
+Used Dataset: Suspension: Lateral Movement Due to Roll and Jounce; { Rear } Roll Center: 195 mm Above Axle
+Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Solid Axles: Trailer Axle
+Used Dataset: Suspension: Solid Axle System Kinematics; { Trailer Axle } 18t Trailer, Dual Wheels
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Shock Absorber; { Linear } Linear: 30 kN-s/m
+Used Dataset: Suspension: Jounce and Rebound Stops; { Jounce Range: 100 mm to 150 mm } +100 mm / -60 mm
+Used Dataset: Suspension: Auxiliary Roll Moment; { Linear } Linear: 3000 N-m/deg
+Used Dataset: Suspension: Solid Axle Compliance, Springs, and Dampers; { Leaf Springs } 18t Leaf: +100 mm, -60 mm Travel
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
+Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
+Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 10 kN-m Capacity, Air (2 ch. ABS)
+Used Dataset: Vehicle: Trailer Sprung Mass; { 3A Trailer } 3A European Trailer
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Euro Trailer
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Euro Trl: Landing Jacks
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Euro Trl: Hitch Pin
+Used Dataset: Animator: Shape Assembly; { Trailers } Trailer, European
+Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Euro Trl: Brake Lights
+Used Dataset: Animator: Vehicles and Sensor Targets; { Trailers: 3-axle } 3A European Trailer
+Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; CFx = 0
+Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; CFy = 0
+Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; CFz = 0
+Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; CMx = 0
+Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; CMy = 0
+Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; CMz = 0
+Used Dataset: Aerodynamics: Basic; No Aerodynamics
+Used Dataset: Vehicle: Trailer with 3 Axles; { * * * CYBRIX: 3-Axle Trailers } Standard Trailer
+Used Dataset: Vehicle: Loaded Combination; { * * * CYBRIX: Loaded Combinations } LT-390E 4x2 Tractor + Standard Trailer
 Used Dataset: Control: Steering by the Closed-loop Driver Model; { Constant Position: No Offset } 2s Preview
 Used Dataset: Control: Shifting (Closed Loop); { Closed-Loop Shifting } AT (All Available Gears)
-Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Aggressive Driving } 0.7/0.3 G Max Ax/Ay, 90 km/h
-Used Dataset: Path: X-Y Coordinates; { Handling Course } Handling Course
-Used Dataset: Road: Reference Line Elevation; { Handling Course } Handling Course
-Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Handling Course } Handling Course Camber
-Used Dataset: Road: Friction Map, S-L Grid; { Road Handling Course } 1.0 Asphalt, 1.1 Concrete, 0.75 Grass
-Used Dataset: Road: Animator Surface Shapes; No Machine-Generated Shapes
-Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { Handling Course } Handling Course Curbing
-Used Dataset: Road: Rolling Resistance Map, S-L Grid; { Handling Course } Handling Course Rolling Resistance
+Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { * * * CYBRIX: Driving Behaviors } 0.40/0.40 G Max Ax/Ay,   80 km/h
+Used Dataset: Scene: External Import; { VS Scene Builder } Mcity Scene Import
 Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Skybox (Vehicle X-Y-Z)
-Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Partly Cloudy Sky
+Used Dataset: Animator: Shape File Link; { Environment: Sky Boxes } Overcast Sky
 Used Dataset: Animator: Shape File Link; { Environment: Land Bowls } Light Grass
-Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Light Grass
-Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Handling Course: Road
-Used Dataset: Road: Animator Repeated Object; { Cones } Handling Course Cones
-Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Handling Course: Details
-Used Dataset: Animator: Shape File Link; { Self-Contained Scenes } Handling Course: Trees
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Animator: Shape File Link; { Environment: Props (2 of 2) } Traffic Cone
-Used Dataset: Road: 3D Surface (All Properties); { Self-Contained Scenes } Handling Course
-Used Dataset: Path: X-Y Coordinates; { Handling Course } Handling Course Race Line
+Used Dataset: Animator: Group; { Environment Spheres } Overcast Sky with Light Grass
+Used Dataset: Road: 3D Surface (All Properties); { VS Scene Builder } Mcity Scene
 Used Dataset: Plot: Format; Line Plots, No Symbols
 Used Dataset: Plot: Setup; { Vehicle Motion } Longitudinal Speed (Vxz_Fwd) vs. Time
 Used Dataset: Procedures; { * * * CYBRIX: Procedures } #0000 Tutorial: Manually Control
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
-Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fx Tire Force Arrows
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, XY-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (Y-Axis, YZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fy Double (Tail Origin)
-Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fy Tire Force Arrows
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
-Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
-Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double, Offset (Tail Origin)
-Used Dataset: Animator: Wheel Arrows and Other Indicators; { Tire Force Arrows (2 Axles) } 2A - Fz Tire Force Arrows
-Used Dataset: Generic Data Group; { Tire Force Arrows } 2 Axle - Fx, Fy, Fz
-Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere 0.2 m (Green)
-Used Dataset: Multiple Moving Objects; { Points of Interest } 1 Driver Preview Point, Set by DM
  #0000 Tutorial: Manually Control <* * * CYBRIX: Run Controls>
 Used Dataset: TruckSim Run Control; { * * * CYBRIX: Run Controls } #0000 Tutorial: Manually Control
 
-Time to read input = 0.0701949
+Time to read input = 0.106475
 Function MENGINE_CARPET extrapolated (out of range LOW) for X = 0 rpm at T = 0
-Function FS_EXT_CARPET(2,1) extrapolated (out of range LOW) for XCOL = 6217.23 N at T = 0
-Function FS_COMP_CARPET(2,1) extrapolated (out of range LOW) for XCOL = 6217.23 N at T = 0
-Function FS_EXT_CARPET(2,2) extrapolated (out of range LOW) for XCOL = 6217.23 N at T = 0
-Function FS_COMP_CARPET(2,2) extrapolated (out of range LOW) for XCOL = 6217.23 N at T = 0
 Function VOC_BATTERY_CARPET extrapolated (out of range HIGH) for XCOL = 40 C at T = 0
 Function R_DIS_BATTERY_CARPET extrapolated (out of range HIGH) for XCOL = 40 C at T = 0
-Function F_JNC_STOP_TABLE(1,1) extrapolated (out of range LOW) for X = -0.0012119 mm at T = 0
-Function F_REB_STOP_TABLE(1,1) extrapolated (out of range HIGH) for X = -0.0012119 mm at T = 0
-Function F_JNC_STOP_TABLE(1,2) extrapolated (out of range LOW) for X = 0.00121132 mm at T = 0
-Function F_REB_STOP_TABLE(1,2) extrapolated (out of range HIGH) for X = 0.00121132 mm at T = 0
-Function F_JNC_STOP_TABLE(2,1) extrapolated (out of range LOW) for X = 0 mm at T = 0
-Function F_REB_STOP_TABLE(2,1) extrapolated (out of range HIGH) for X = 0 mm at T = 0
-Function F_JNC_STOP_TABLE(2,2) extrapolated (out of range LOW) for X = 0 mm at T = 0
-Function F_REB_STOP_TABLE(2,2) extrapolated (out of range HIGH) for X = 0 mm at T = 0
+Function F_JNC_STOP_TABLE(2,1,1) extrapolated (out of range LOW) for X = 0 mm at T = 0
+Function F_REB_STOP_TABLE(2,1,1) extrapolated (out of range HIGH) for X = 0 mm at T = 0
+Function F_JNC_STOP_TABLE(2,1,2) extrapolated (out of range LOW) for X = 0 mm at T = 0
+Function F_REB_STOP_TABLE(2,1,2) extrapolated (out of range HIGH) for X = 0 mm at T = 0
+Function F_JNC_STOP_TABLE(2,2,1) extrapolated (out of range LOW) for X = 0 mm at T = 0
+Function F_REB_STOP_TABLE(2,2,1) extrapolated (out of range HIGH) for X = 0 mm at T = 0
+Function F_JNC_STOP_TABLE(2,2,2) extrapolated (out of range LOW) for X = 0 mm at T = 0
+Function F_REB_STOP_TABLE(2,2,2) extrapolated (out of range HIGH) for X = 0 mm at T = 0
+Function F_JNC_STOP_TABLE(2,3,1) extrapolated (out of range LOW) for X = 0 mm at T = 0
+Function F_REB_STOP_TABLE(2,3,1) extrapolated (out of range HIGH) for X = 0 mm at T = 0
+Function F_JNC_STOP_TABLE(2,3,2) extrapolated (out of range LOW) for X = 0 mm at T = 0
+Function F_REB_STOP_TABLE(2,3,2) extrapolated (out of range HIGH) for X = 0 mm at T = 0
+Function F_JNC_STOP_TABLE(1,1,1) extrapolated (out of range LOW) for X = -1.70534 mm at T = 0
+Function F_REB_STOP_TABLE(1,1,1) extrapolated (out of range HIGH) for X = -1.70534 mm at T = 0
+Function F_JNC_STOP_TABLE(1,1,2) extrapolated (out of range LOW) for X = -1.67551 mm at T = 0
+Function F_REB_STOP_TABLE(1,1,2) extrapolated (out of range HIGH) for X = -1.67551 mm at T = 0
+Function F_JNC_STOP_TABLE(1,2,1) extrapolated (out of range LOW) for X = -10.0373 mm at T = 0
+Function F_REB_STOP_TABLE(1,2,1) extrapolated (out of range HIGH) for X = -10.0373 mm at T = 0
+Function F_JNC_STOP_TABLE(1,2,2) extrapolated (out of range LOW) for X = -10.0373 mm at T = 0
+Function F_REB_STOP_TABLE(1,2,2) extrapolated (out of range HIGH) for X = -10.0373 mm at T = 0
 
 Run started: VS output file = Results\Run_3741e661-9ca7-4bfe-9786-a73ef5173d99\LastRun.vsb
-Function R_EFF_MOTOR_CARPET(1) extrapolated (out of range HIGH) for XCOL = 306.48 N-m at T = 0.036
-Function R_CHRG_BATTERY_CARPET extrapolated (out of range HIGH) for XCOL = 40 C at T = 1.196
-Function MY_BRAKE_TABLE(1,1) extrapolated (out of range HIGH) for X = 0.704913 MPa at T = 1.4325
-Function MY_BRAKE_TABLE(1,2) extrapolated (out of range HIGH) for X = 0.704913 MPa at T = 1.4325
-Function MY_BRAKE_TABLE(2,1) extrapolated (out of range HIGH) for X = 0.704913 MPa at T = 1.4325
-Function MY_BRAKE_TABLE(2,2) extrapolated (out of range HIGH) for X = 0.704913 MPa at T = 1.4325
-Function MMOTOR_MAX_TABLE(1) extrapolated (out of range LOW) for X = -2.55685 rpm at T = 1.5645
-Function FS_EXT_CARPET(1,1) extrapolated (out of range HIGH) for X = 100.029 mm at T = 1.91
-Function FS_COMP_CARPET(1,1) extrapolated (out of range HIGH) for X = 100.029 mm at T = 1.91
-Function L_RELAX_X_FZ_TABLE(1,1,1) extrapolated (out of range HIGH) for X = 1.00023 N at T = 3.598
-Function MZ_TIRE_CARPET(1,1,1) extrapolated (out of range HIGH) for XCOL = 46072.8 N at T = 20.8435
-Function L_RELAX_Y_FZ_TABLE(1,1,1) extrapolated (out of range HIGH) for X = 2.02749 N at T = 20.8455
-Function FY_TIRE_CARPET(1,1,1) extrapolated (out of range HIGH) for XCOL = 60824.7 N at T = 20.8455
-Function FX_TIRE_CARPET(1,1,1) extrapolated (out of range HIGH) for XCOL = 60824.7 N at T = 20.8455
-Function L_RELAX_X_FZ_TABLE(1,2,1) extrapolated (out of range HIGH) for X = 1.02448 N at T = 20.8535
-Function L_RELAX_X_FZ_TABLE(2,1,2) extrapolated (out of range HIGH) for X = 1.14024 N at T = 21.0205
-Function MZ_TIRE_CARPET(2,1,2) extrapolated (out of range HIGH) for XCOL = 43835.9 N at T = 21.0215
-Function L_RELAX_X_FZ_TABLE(2,1,1) extrapolated (out of range HIGH) for X = 1.01339 N at T = 21.4205
-Function FS_EXT_CARPET(1,2) extrapolated (out of range HIGH) for X = 100.003 mm at T = 22.098
-Function FS_COMP_CARPET(1,2) extrapolated (out of range HIGH) for X = 100.003 mm at T = 22.098
-Function MZ_TIRE_CARPET(1,2,1) extrapolated (out of range HIGH) for XCOL = 39314.4 N at T = 24.4645
-Function L_RELAX_X_FZ_TABLE(2,2,2) extrapolated (out of range HIGH) for X = 1.00163 N at T = 24.7625
-Function MZ_TIRE_CARPET(2,2,2) extrapolated (out of range HIGH) for XCOL = 39242.8 N at T = 24.7795
-Function MZ_TIRE_CARPET(2,1,1) extrapolated (out of range HIGH) for XCOL = 39713.1 N at T = 42.406
-Function FY_TIRE_CARPET(1,2,1) extrapolated (out of range HIGH) for XCOL = 59354.3 N at T = 65.3205
-Function FX_TIRE_CARPET(1,2,1) extrapolated (out of range HIGH) for XCOL = 59354.3 N at T = 65.3205
-Function L_RELAX_Y_FZ_TABLE(1,2,1) extrapolated (out of range HIGH) for X = 2.00156 N at T = 84.203
-Function FY_TIRE_CARPET(2,2,2) extrapolated (out of range HIGH) for XCOL = 58939.6 N at T = 84.53
-Function FX_TIRE_CARPET(2,2,2) extrapolated (out of range HIGH) for XCOL = 58939.6 N at T = 84.53
-Function L_RELAX_Y_FZ_TABLE(2,2,2) extrapolated (out of range HIGH) for X = 2.03009 N at T = 84.531
+Function R_EFF_MOTOR_CARPET(1) extrapolated (out of range HIGH) for XCOL = 311.594 N-m at T = 0.0065
+Function R_CHRG_BATTERY_CARPET extrapolated (out of range HIGH) for XCOL = 40 C at T = 0.0345
+Function L_RELAX_X_FZ_TABLE(1,1,1,1) extrapolated (out of range HIGH) for X = 1 N at T = 1.4245
+Function L_RELAX_X_FZ_TABLE(1,1,2,1) extrapolated (out of range HIGH) for X = 1.01487 N at T = 8.5435
+Function MZ_TIRE_CARPET(1,1,2,1) extrapolated (out of range HIGH) for XCOL = 39388.7 N at T = 8.558
+Function MZ_TIRE_CARPET(1,1,1,1) extrapolated (out of range HIGH) for XCOL = 39579.1 N at T = 8.565
+Function FY_TIRE_CARPET(1,1,2,1) extrapolated (out of range HIGH) for XCOL = 59100.6 N at T = 8.588
+Function FX_TIRE_CARPET(1,1,2,1) extrapolated (out of range HIGH) for XCOL = 59100.6 N at T = 8.588
+Function L_RELAX_Y_FZ_TABLE(1,1,2,1) extrapolated (out of range HIGH) for X = 2.00101 N at T = 8.5895
+Function FS_EXT_CARPET(1,1,2) extrapolated (out of range HIGH) for X = 100.027 mm at T = 8.623
+Function FS_COMP_CARPET(1,1,2) extrapolated (out of range HIGH) for X = 100.027 mm at T = 8.623
+Function L_RELAX_X_FZ_TABLE(1,2,2,2) extrapolated (out of range HIGH) for X = 1.02152 N at T = 8.8495
+Function MZ_TIRE_CARPET(1,2,2,2) extrapolated (out of range HIGH) for XCOL = 39853 N at T = 8.8565
+Function FY_TIRE_CARPET(1,2,2,2) extrapolated (out of range HIGH) for XCOL = 59316.9 N at T = 8.872
+Function FX_TIRE_CARPET(1,2,2,2) extrapolated (out of range HIGH) for XCOL = 59316.9 N at T = 8.872
+Function L_RELAX_Y_FZ_TABLE(1,2,2,2) extrapolated (out of range HIGH) for X = 2.00851 N at T = 8.8725
+Function L_RELAX_X_FZ_TABLE(1,2,1,2) extrapolated (out of range HIGH) for X = 1.00253 N at T = 8.8785
+Function L_RELAX_X_FZ_TABLE(2,1,2,2) extrapolated (out of range HIGH) for X = 1.00473 N at T = 9.42
+Function MZ_TIRE_CARPET(2,1,2,2) extrapolated (out of range HIGH) for XCOL = 39325.4 N at T = 9.426
+Function FY_TIRE_CARPET(2,1,2,2) extrapolated (out of range HIGH) for XCOL = 58865.5 N at T = 9.442
+Function FX_TIRE_CARPET(2,1,2,2) extrapolated (out of range HIGH) for XCOL = 58865.5 N at T = 9.442
+Function L_RELAX_Y_FZ_TABLE(2,1,2,2) extrapolated (out of range HIGH) for X = 2.01118 N at T = 9.4435
+Function L_RELAX_X_FZ_TABLE(2,1,1,2) extrapolated (out of range HIGH) for X = 1.00286 N at T = 9.4575
+Function L_RELAX_X_FZ_TABLE(2,2,2,2) extrapolated (out of range HIGH) for X = 1.01669 N at T = 9.5565
+Function MZ_TIRE_CARPET(2,2,2,2) extrapolated (out of range HIGH) for XCOL = 39847.2 N at T = 9.563
+Function FY_TIRE_CARPET(2,2,2,2) extrapolated (out of range HIGH) for XCOL = 59329.3 N at T = 9.576
+Function FX_TIRE_CARPET(2,2,2,2) extrapolated (out of range HIGH) for XCOL = 59329.3 N at T = 9.576
+Function L_RELAX_Y_FZ_TABLE(2,2,2,2) extrapolated (out of range HIGH) for X = 2.00208 N at T = 9.5765
+Function L_RELAX_X_FZ_TABLE(2,3,2,2) extrapolated (out of range HIGH) for X = 1.57089 N at T = 9.6725
+Function MZ_TIRE_CARPET(2,3,2,2) extrapolated (out of range HIGH) for XCOL = 47126.6 N at T = 9.6725
+Function L_RELAX_Y_FZ_TABLE(2,3,2,2) extrapolated (out of range HIGH) for X = 2.03148 N at T = 9.7085
+Function FY_TIRE_CARPET(2,3,2,2) extrapolated (out of range HIGH) for XCOL = 60944.3 N at T = 9.7085
+Function FX_TIRE_CARPET(2,3,2,2) extrapolated (out of range HIGH) for XCOL = 60944.3 N at T = 9.7085
+Function L_RELAX_X_FZ_TABLE(1,2,1,1) extrapolated (out of range HIGH) for X = 1.00348 N at T = 35.4
+Function FS_EXT_CARPET(1,2,1) extrapolated (out of range HIGH) for X = 100.054 mm at T = 35.5215
+Function FS_COMP_CARPET(1,2,1) extrapolated (out of range HIGH) for X = 100.054 mm at T = 35.5215
+Function L_RELAX_X_FZ_TABLE(2,3,2,1) extrapolated (out of range HIGH) for X = 1.01064 N at T = 35.54
+Function MZ_TIRE_CARPET(2,3,2,1) extrapolated (out of range HIGH) for XCOL = 39370.1 N at T = 35.5485
+Function L_RELAX_X_FZ_TABLE(2,3,1,2) extrapolated (out of range HIGH) for X = 1.00175 N at T = 82.9355
 
-Run stopped at t = 105.455. External control (manual or external model)
+Run stopped at t = 90.0315. External control (manual or external model)
 
-Computational time ratio: RTIME = 0.0837548 (real time)/(simulation time)
+Computational time ratio: RTIME = 0.218331 (real time)/(simulation time)
 

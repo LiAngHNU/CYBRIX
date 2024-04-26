@@ -1,9 +1,9 @@
-Run made by TruckSim 2020.1 at 15:49 on April 17, 2024.
+Run made by TruckSim 2020.1 at 09:07 on April 23, 2024.
 
 Started with simfile: simfile.sim
 
 Include PARSFILE "D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Results\Run_14d7c4f5-316e-45c1-9e0b-0e8759454dff\Run_all.par"
-Installed keywords into VS Solver for MODEL_LAYOUT S_S
+Installed keywords into VS Solver for MODEL_LAYOUT F_S_S
 Used Dataset: I/O Channels: Import; { * * * CYBRIX: Import Channels } #1001 Calibration: Static Characteristc
 Used Dataset: Models: Simulink; { * * * CYBRIX: Simulink Models } #1001 Calibration: Static Characteristc
 Used Dataset: Animator: Reference Frame; { Tracking: Vehicle } Vehicle X-Y-Z
@@ -99,14 +99,41 @@ Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
 Used Dataset: Brakes: Proportioning / Limiting Valve; { Linear } Linear: Unity Gain
 Used Dataset: Brakes: Torque; { Air Brakes } 10 kN-m, Air
 Used Dataset: Brakes: Two-Wheel System; { Air Brakes } 10 kN-m Capacity, Air (2 ch. ABS)
-Used Dataset: Vehicle: Lead Unit Sprung Mass; { Tractors } 2A Cab-Over
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Suspended Cab
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Cab
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Cab Detail
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Windows
+Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Driver
+Used Dataset: Animator: Shape Assembly; { * * * CYBRIX: Vehicle Shape File Groups } LT-390E 4x2 Tractor: Cab
+Used Dataset: Animator: Group; { * * * CYBRIX: Suspended Cabs } LT-390E 4x2 Tractor
+Used Dataset: Positions, Velocities, and Accelerations; { Sprung Mass and Suspended Cab } Cab Sensor at Origin
+Used Dataset: Custom Forces and Reference Points; Cab RP at Cab CG and Mounts
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Cab Mount: LF
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double for Cab Mounts
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Cab Mount: RF
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double for Cab Mounts
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Cab Mount: LR
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double for Cab Mounts
+Used Dataset: Animator: Reference Frame; { Suspended Cab } Cab Mount: RR
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, XZ-Plane)
+Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Tail Org (Z-Axis, YZ-Plane)
+Used Dataset: Animator: Shape Assembly; { Arrows } Fz Double for Cab Mounts
+Used Dataset: Animator: Group; { Suspended Cab } Cab Mount Spring Force Arrows
+Used Dataset: Vehicle: Suspended Cab; { * * * CYBRIX: Suspended Cabs } LT-390E 4x2 Tractor
+Used Dataset: Vehicle: Lead Unit Sprung Mass; { * * * CYBRIX: Sprung Masses } Sprung Mass: LT-390E 4x2 Tractor
 Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Aero Slip; { Tractor } Cab-Over-Engine w/o Fairings
 Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip; { Linear Interpolation } Linear: 0.082 1/deg.
 Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Aero Slip; { Spline Interpolation } Spline: -0.15 at 0 deg.
 Used Dataset: Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.064 1/deg.
 Used Dataset: Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip; { Spline Interpolation } Spline: 0.2 at 0 deg., 0.38 at 25 deg.
 Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip; { Linear Interpolation } Linear: 0.012 1/deg.
-Used Dataset: Aerodynamics: Basic; { Cab-Over and Cab-Forward Tractors } Cab-Over-Eng. w/o Fairings, 5 m Ref.
+Used Dataset: Aerodynamics: Basic; { * * * CYBRIX: Aerodynamic } Aerodynamics: LT-390E 4x2 Tractor
 Used Dataset: Generic Table; { Powertrain (HEV) } Motor efficiency
 Used Dataset: Powertrain: Electric Motor Torque; { Electric Motor } Max. Output 3050 N-m
 Used Dataset: Generic Table; { Powertrain (HEV) } Battery charged resistance
@@ -119,18 +146,16 @@ Used Dataset: Powertrain: Hybrid/Electric Power Management Control; Power Manage
 Used Dataset: Powertrain: Limited Slip Differential (Front or Rear); { Differential Clutch } LSD: TBR 3:1, No Bias, No Preload
 Used Dataset: Powertrain: Rear Differential; { Limited Slip and Viscous Coupling } LSD: TBR 3:1, Gear Ratio 5:1
 Used Dataset: Powertrain: Rear-Wheel Drive; { Electric Powertrains } 300 kW, Electric, 3.92 Ratio
-Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Frame Rails
-Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Mudflaps
-Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Brake Lights (Off)
-Used Dataset: Animator: Shape Assembly; { Frame Rails } Lead Unit Frame Rails
-Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Brake Lights (On)
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Bumper
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Bumper Detail
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Frame Rails
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Fuel Tank
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Mudflaps
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Tail Light
+Used Dataset: Animator: Shape Assembly; { * * * CYBRIX: Vehicle Shape File Groups } LT-390E 4x2 Tractor: Chassis
+Used Dataset: Animator: Shape File Link; { * * * CYBRIX: Shape Files } LT-390E 4x2 Tractor: Brake Lights (On)
 Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Lead Unit: Reverse Lights (On)
-Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Body
-Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Details
-Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Windows
-Used Dataset: Animator: Shape File Link; { Trucks: Cabs } European Cab Over: Driver
-Used Dataset: Animator: Shape Assembly; { Cab Over } 2A Euro Cab Over (Non-scaled)
-Used Dataset: Animator: Vehicles and Sensor Targets; { 2A Lead Units } 2A European Cab Over
+Used Dataset: Animator: Vehicles and Sensor Targets; { * * * CYBRIX: Vehicle Shapes } Vehicle Shape: LT-390E 4x2 Tractor
 Used Dataset: Steering Wheel Torque; Linear: 1/25 (Typical)
 Used Dataset: Hitch: Roll Moment; 100 kN-m/deg (1 deg lash)
 Used Dataset: Hitch: Pitch Moment; 100 kN-m/deg (-11 to 7 deg Lash)
@@ -139,6 +164,7 @@ Used Dataset: Animator: Shape File Link; { Common Vehicle Assets } Hitches: 5th 
 Used Dataset: Hitch: Joint Assembly; { 5th Wheel Hitches } 5th Wheel
 Used Dataset: Positions, Velocities, and Accelerations; { * * * CYBRIX: Sensors } Combined Inertial Measurement Unit
 Used Dataset: Animator: HUD; { * * * CYBRIX: Dashboards } Standard Dashboard
+Used Dataset: Animator: HUD; { * * * CYBRIX: Dashboards } Advanced Dashboard
 Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XY-Plane)
 Used Dataset: Animator: Shape File Link; { Geometric Shapes: Arrows } 2D: Point Org (X-Axis, XZ-Plane)
 Used Dataset: Animator: Shape Assembly; { Arrows } Fx Double (Tail Origin)
@@ -191,7 +217,7 @@ Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere 0.2 m (Gree
 Used Dataset: Animator: Shape File Link; { Geometric Shapes } Sphere 0.2 m (Green)
 Used Dataset: Multiple Moving Objects; { Points of Interest } 10 Driver Preview Points, Set by DM
 Used Dataset: Generic Group of Links; { * * * CYBRIX: Generic Group of Links } Assistant Plugins for 2-Axle Vehicles
-Used Dataset: Vehicle: Lead Unit with 2 Axles; { * * * CYBRIX: 2-Axle Vehicles } Tractor: Type-M (Electric)
+Used Dataset: Vehicle: Lead Unit with 2 Axles; { * * * CYBRIX: 2-Axle Vehicles } LT-390E 4x2 Tractor
  Straight Path East <Straight>
 Used Dataset: Path: Segment Builder; { Straight } Straight Path East
 Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.0
@@ -203,11 +229,13 @@ Used Dataset: Animator: Group; { Environment Spheres } Partly Cloudy Sky with Li
 Used Dataset: Road: 3D Surface (All Properties); { Flat Test Pads } 1 km Square, Mu = 0.0
 Used Dataset: Plot: Format; Line Plots, No Symbols
 Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Static Calibration: Ms vs. Time
+Used Dataset: Plot: Format; Line Plots, No Symbols
+Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Static Calibration: Iz vs. Time
 Used Dataset: Procedures; { * * * CYBRIX: Procedures } #1001 Calibration: Static Characteristc
  #1001 Calibration: Static Characteristic <* * * CYBRIX: Run Controls>
 Used Dataset: TruckSim Run Control; { * * * CYBRIX: Run Controls } #1001 Calibration: Static Characteristic
 
-Time to read input = 0.0625516
+Time to read input = 0.0953694
 Function MENGINE_CARPET extrapolated (out of range LOW) for X = 0 rpm at T = 0
 Function FS_EXT_CARPET(2,1) extrapolated (out of range LOW) for XCOL = 6217.23 N at T = 0
 Function FS_COMP_CARPET(2,1) extrapolated (out of range LOW) for XCOL = 6217.23 N at T = 0
@@ -225,9 +253,9 @@ Function F_JNC_STOP_TABLE(2,2) extrapolated (out of range LOW) for X = 0 mm at T
 Function F_REB_STOP_TABLE(2,2) extrapolated (out of range HIGH) for X = 0 mm at T = 0
 
 Run started: VS output file = D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Results\Run_14d7c4f5-316e-45c1-9e0b-0e8759454dff\LastRun.vsb
-Function MMOTOR_MAX_TABLE(1) extrapolated (out of range LOW) for X = -0.00155728 rpm at T = 0.0005
+Function MMOTOR_MAX_TABLE(1) extrapolated (out of range LOW) for X = -0.00156732 rpm at T = 0.0005
 
 Run stopped at t = 50. Stop time reached.
 
-Computational time ratio: RTIME = 0.172698 (real time)/(simulation time)
+Computational time ratio: RTIME = 0.189505 (real time)/(simulation time)
 

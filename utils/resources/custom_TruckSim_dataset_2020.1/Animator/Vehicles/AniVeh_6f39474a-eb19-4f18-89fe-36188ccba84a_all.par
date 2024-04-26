@@ -1,0 +1,300 @@
+PARSFILE
+
+! EXPANDED_PARSFILE for Math models and animator
+
+! This is an expansion of the Parsfile: "Animator\Vehicles\AniVeh_6f39474a-eb19-4f18-89fe-36188ccba84a.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" keyword.
+
+! File created: 13:45 on April 25, 2024 by TruckSim 2020.1
+
+PRODUCT_NAME TruckSim
+MODEL_LAYOUT ss_sss_ss_ss
+
+ENTER_PARSFILE Animator\Vehicles\AniVeh_6f39474a-eb19-4f18-89fe-36188ccba84a.par
+#FullDataName Animator: Vehicles and Sensor Targets`Mobile Crane Vehicle`Mobile Crane
+OBJ_X_LENGTH 5000
+OBJ_Y_LENGTH 2438
+OBJ_Z_LENGTH 1000
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+ADD_REFERENCE_FRAME object_-1
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_OFFSET_VAR_Z 0
+ENTER_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+#FullDataName Animator: Shape File Link`Blurred Tire: Truck`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\Blurred_Single_Truck\blurred_tire.obj
+SET_COLOR 1 1 1
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Blurred Tire: Truck
+EXIT_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.925
+SET_OFFSET_Z 0.4845
+ENTER_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+#FullDataName Animator: Shape File Link`Blurred Tire: Truck`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\Blurred_Single_Truck\blurred_tire.obj
+SET_COLOR 1 1 1
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Blurred Tire: Truck
+EXIT_PARSFILE Animator\STL\Shape_8cfa2bf0-2ea1-4443-9337-6857f91081aa.par
+
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.925
+SET_OFFSET_Z 0.4845
+ENTER_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+#FullDataName Animator: Shape File Link`Blurred Dual Tire: Truck`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\Blurred_Dual_Truck\blurred_dual_tire.obj
+SET_COLOR 1 1 1
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Blurred Dual Tire: Truck
+EXIT_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_OFFSET_X -5
+SET_OFFSET_Y 1.015
+SET_OFFSET_Z 0.4845
+ENTER_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+#FullDataName Animator: Shape File Link`Blurred Dual Tire: Truck`Common Vehicle Assets: Tires
+add_obj Animator\3D_Shape_Files\Common_Vehicle_Assets\Tires\Blurred_Dual_Truck\blurred_dual_tire.obj
+SET_COLOR 1 1 1
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Common Vehicle Assets: Tires } Blurred Dual Tire: Truck
+EXIT_PARSFILE Animator\STL\Shape_39bb88f2-61bd-4287-a6b0-816027b69b1a.par
+
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_X 180
+SET_OFFSET_X -5
+SET_OFFSET_Y -1.015
+SET_OFFSET_Z 0.4845
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+ADD_REFERENCE_FRAME object_-1a
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_OFFSET_VAR_Z 0
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_5464b03b-4d57-4c52-94ad-cdd589329441.par
+#FullDataName Animator: Shape Assembly`Mobile Crane Base`Mobile Crane
+ENTER_PARSFILE Animator\STL\Shape_bbeab6c8-7908-426c-96eb-78ebd94e26f4.par
+#FullDataName Animator: Shape File Link`Mobile Crane Base: Flatbed`Trailers (1 of 2)
+add_obj Animator\3D_Shape_Files\Trailers\Flatbed\frame.obj
+SET_COLOR 1 0.8 0
+SET_SCALE_Y 1.2
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.7 0.7 0.7
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trailers (1 of 2) } Mobile Crane Base: Flatbed
+EXIT_PARSFILE Animator\STL\Shape_bbeab6c8-7908-426c-96eb-78ebd94e26f4.par
+
+set_scale_x 2.1
+set_scale_z 0.3
+set_offset_x -1.5
+set_offset_y 0
+set_offset_z 0.27
+ENTER_PARSFILE Animator\STL\Shape_c59e6256-cf1a-4b31-a7b3-268a73b91cf9.par
+#FullDataName Animator: Shape File Link`Mobile Crane Base: Frame Rails`Trucks: Chassis
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\Frame_Rails_Long\framerails_long.osg
+SET_COLOR 1 1 1
+SET_SCALE_X 2.44
+SET_SCALE_Z 1.5
+SET_ANGLE_X 180
+SET_OFFSET_X 1.46
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.2 0.2 0.2
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Mobile Crane Base: Frame Rails
+EXIT_PARSFILE Animator\STL\Shape_c59e6256-cf1a-4b31-a7b3-268a73b91cf9.par
+
+set_scale_x 2.1
+set_scale_z 0.3
+set_offset_x -1.5
+set_offset_y 0
+set_offset_z 0.27
+ENTER_PARSFILE Animator\STL\Shape_ff700308-8f34-49a1-a510-fb17dd0c82aa.par
+#FullDataName Animator: Shape File Link`Mobile Crane Base: Brake Lights`Trucks: Chassis
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\Frame_Brakes\brake_lights.osg
+SET_OFFSET_X -8.51
+SET_OFFSET_Z -.25
+set_lighting on
+set_fogging on
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Mobile Crane Base: Brake Lights
+EXIT_PARSFILE Animator\STL\Shape_ff700308-8f34-49a1-a510-fb17dd0c82aa.par
+
+set_scale_x 2.1
+set_scale_z 0.3
+set_offset_x -1.5
+set_offset_y 0
+set_offset_z 0.27
+x_ref_length 11440
+y_ref_length 2438
+z_ref_length 180
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Mobile Crane } Mobile Crane Base
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_5464b03b-4d57-4c52-94ad-cdd589329441.par
+
+WRITE_REFERENCE_FRAME_SIZE
+X_LENGTH 5000
+Y_LENGTH 2438
+Z_LENGTH 1000
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+ADD_REFERENCE_FRAME object_-1b
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_FRAME_VISIBLE_NAME 0.0
+WRT_0.0
+ANI_0.0
+ENTER_PARSFILE Animator\STL\Shape_8241aeeb-4a44-4e74-9a4d-e33341d278a7.par
+#FullDataName Animator: Shape File Link`Mobile Crane: Brake Lights On`Trucks: Chassis
+add_obj Animator\3D_Shape_Files\Trucks\Chassis\Frame_Brakes\brake_lightsOn.osg
+SET_OFFSET_X -13.36
+SET_OFFSET_Z 0.9
+set_lighting on
+set_fogging on
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Chassis } Mobile Crane: Brake Lights On
+EXIT_PARSFILE Animator\STL\Shape_8241aeeb-4a44-4e74-9a4d-e33341d278a7.par
+
+set_lighting on
+set_fogging on
+WRITE_REFERENCE_FRAME_SIZE
+X_LENGTH 5000
+Y_LENGTH 2438
+Z_LENGTH 1000
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+ADD_REFERENCE_FRAME object_-1c
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_OFFSET_VAR_Z 0
+ENTER_PARSFILE Animator\STL_Groups\ShpGrp_20f885a3-8533-4eec-bc77-d59412cea63a.par
+#FullDataName Animator: Shape Assembly`Mobile Crane Cab`Mobile Crane
+ENTER_PARSFILE Animator\STL\Shape_638e9116-0312-403f-a2fd-014d413722f4.par
+#FullDataName Animator: Shape File Link`LCF Van: Cab Body (Scale: Y=1.3)`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\LCF_Cab\cab_body.obj
+SET_COLOR 1 0.8 0
+SET_SCALE_Y 1.3
+set_lighting on
+set_fogging on
+USE_RUN_COLOR
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } LCF Van: Cab Body (Scale: Y=1.3)
+EXIT_PARSFILE Animator\STL\Shape_638e9116-0312-403f-a2fd-014d413722f4.par
+
+set_scale_x 1
+set_scale_y 1
+set_scale_z 1
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.9
+ENTER_PARSFILE Animator\STL\Shape_f1d509b3-6256-4d31-aea4-5bab9d2ca3b6.par
+#FullDataName Animator: Shape File Link`LCF Van: Cab Details (Scale: Y=1.3)`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\LCF_Cab\cab_details.obj
+SET_COLOR 1 1 1
+SET_SCALE_Y 1.3
+set_lighting on
+set_fogging on
+SET_SPECULAR 1 1 1
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } LCF Van: Cab Details (Scale: Y=1.3)
+EXIT_PARSFILE Animator\STL\Shape_f1d509b3-6256-4d31-aea4-5bab9d2ca3b6.par
+
+set_scale_x 1
+set_scale_y 1
+set_scale_z 1
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.9
+ENTER_PARSFILE Animator\STL\Shape_7d1b5335-e467-4202-bb70-b24f0e9ff303.par
+#FullDataName Animator: Shape File Link`Mobile Crane: Driver (Caucasian Male)`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\LCF_Cab\Drivers\Caucasian_Male\Caucasian_Male.obj
+SET_COLOR 1 1 1
+SET_OFFSET_Y 0.15
+set_lighting on
+set_fogging on
+SET_SPECULAR 0.75 0.75 0.75
+vsv_enable_shadows_recursive
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } Mobile Crane: Driver (Caucasian Male)
+EXIT_PARSFILE Animator\STL\Shape_7d1b5335-e467-4202-bb70-b24f0e9ff303.par
+
+set_scale_x 1
+set_scale_y 1
+set_scale_z 1
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.9
+ENTER_PARSFILE Animator\STL\Shape_434cdd1f-274f-48bf-ae98-f2dab6e19f07.par
+#FullDataName Animator: Shape File Link`LCF Van: Windows (Scale: Y=1.3)`Trucks: Cabs
+add_obj Animator\3D_Shape_Files\Trucks\Cabs\LCF_Cab\windows.obj
+SET_COLOR 1 1 1
+SET_SCALE_Y 1.3
+set_lighting on
+set_fogging on
+set_transparency 0.8
+SET_SPECULAR 1 1 1
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Trucks: Cabs } LCF Van: Windows (Scale: Y=1.3)
+EXIT_PARSFILE Animator\STL\Shape_434cdd1f-274f-48bf-ae98-f2dab6e19f07.par
+
+set_scale_x 1
+set_scale_y 1
+set_scale_z 1
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.9
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Mobile Crane } Mobile Crane Cab
+EXIT_PARSFILE Animator\STL_Groups\ShpGrp_20f885a3-8533-4eec-bc77-d59412cea63a.par
+
+ENTER_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+#FullDataName Animator: Camera Setup`Vehicle Pictures`Shape Preview
+GHOST_COUNT 0
+SET_CAMERA_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+ENTER_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview`Shape Preview: Generic
+ADD_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview: Generic } Yaw for Shape Preview
+EXIT_PARSFILE Animator\Frames\Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd.par
+
+SET_LOOKPOINT_REFERENCE_FRAME Frame_92988492-4abd-4ea6-a4d7-80e0bed82cbd
+SET_LOOKPOINT_X 1
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0.5
+SET_AZIMUTH 230
+SET_ELEVATION 6
+SET_DISTANCE 12
+SET_CAMERAMAN_NAME External camera
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Vehicle Pictures
+EXIT_PARSFILE Animator\Cameras\Camera_2b20a371-b625-45b9-95c7-440e110c021a.par
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { Mobile Crane } Mobile Crane Vehicle
+EXIT_PARSFILE Animator\Vehicles\AniVeh_6f39474a-eb19-4f18-89fe-36188ccba84a.par
+
+
+
+END

@@ -3,14 +3,14 @@ PARSFILE
 NLANES 8
 OPTTHRESHOLD 1
 #MiscYellow0
-# 1 1 1, Road (One Lane), 1, 15, 1, -4, m, 4, m, , , -100, 1200, 5, , , Road
-# 1 1 1, Road Transition (Light), 1, 10, 0.969, 4, m, 7.1, m, , , -100, 1200, 5, , , Foliage
-# 1 1 1, Grass (Light), 1, 10, 9, -7.1, m, -100, m, , , -100, 1200, 5, , , Foliage
-# 1 1 1, Grass (Light), 1, 10, 9, 7.1, m, 100, m, , , -100, 1200, 5, , , Foliage
-# 1 1 1, Road Transition (Light), 1, 10, -0.969, -4, m, -7.1, m, , , -100, 1200, 5, , , Foliage
-# 1 1 0, Snow, 1, 10, 10, 3, m, 4, m, , , 0, 200, 0.2, 5, 0.01, Random
+# 1 1 1, Road (One Lane), 1, 15, 1, -4, m, 4, m, , , -100, 5000, 5, , , Road
+# 1 1 1, Road Transition (Light), 1, 10, 0.969, 4, m, 7.1, m, , , -100, 5000, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 9, -7.1, m, -100, m, , , -100, 5000, 5, , , Foliage
+# 1 1 1, Grass (Light), 1, 10, 9, 7.1, m, 100, m, , , -100, 5000, 5, , , Foliage
+# 1 1 1, Road Transition (Light), 1, 10, -0.969, -4, m, -7.1, m, , , -100, 5000, 5, , , Foliage
+# 1 1 0, Snow, 1, 10, 10, 3, m, 4, m, , , 0, 1000, 0.2, 5, 0.01, Random
 # 1 1 1, Snow, 1, 10, 10, -4, m, 4, m, , , 0, 0.2, , , 0.0075, Random
-# 1 0 0, Snow, 1, 10, 10, 2, m, 4, m, , , 0, 200, 0.2, 25, 0.015, Random
+# 1 0 0, Snow, 1, 10, 10, 2, m, 4, m, , , 0, 1000, 0.2, 25, 0.015, Random
 #ENDMYellow
 
 #CheckBox0 0    
@@ -26,7 +26,7 @@ LINUNITS(1) m
 LOUT(1) 4
 LOUTUNITS(1) m
 S_START(1) -100
-S_STOP(1) 1200
+S_STOP(1) 5000
 SINT(1) 5
 AUTODETAIL(1) Road
 COLOR(2) 1 1 1
@@ -39,7 +39,7 @@ LINUNITS(2) m
 LOUT(2) 7.1
 LOUTUNITS(2) m
 S_START(2) -100
-S_STOP(2) 1200
+S_STOP(2) 5000
 SINT(2) 5
 AUTODETAIL(2) Foliage
 COLOR(3) 1 1 1
@@ -52,7 +52,7 @@ LINUNITS(3) m
 LOUT(3) -100
 LOUTUNITS(3) m
 S_START(3) -100
-S_STOP(3) 1200
+S_STOP(3) 5000
 SINT(3) 5
 AUTODETAIL(3) Foliage
 COLOR(4) 1 1 1
@@ -65,7 +65,7 @@ LINUNITS(4) m
 LOUT(4) 100
 LOUTUNITS(4) m
 S_START(4) -100
-S_STOP(4) 1200
+S_STOP(4) 5000
 SINT(4) 5
 AUTODETAIL(4) Foliage
 COLOR(5) 1 1 1
@@ -78,7 +78,7 @@ LINUNITS(5) m
 LOUT(5) -7.1
 LOUTUNITS(5) m
 S_START(5) -100
-S_STOP(5) 1200
+S_STOP(5) 5000
 SINT(5) 5
 AUTODETAIL(5) Foliage
 COLOR(6) 1 1 0
@@ -91,7 +91,7 @@ LINUNITS(6) m
 LOUT(6) 4
 LOUTUNITS(6) m
 S_START(6) 0
-S_STOP(6) 200
+S_STOP(6) 1000
 SINT(6) 0.2
 IPRINT(6) 5
 DZ(6) 0.01
@@ -119,7 +119,7 @@ LINUNITS(8) m
 LOUT(8) 4
 LOUTUNITS(8) m
 S_START(8) 0
-S_STOP(8) 200
+S_STOP(8) 1000
 SINT(8) 0.2
 IPRINT(8) 25
 DZ(8) 0.015

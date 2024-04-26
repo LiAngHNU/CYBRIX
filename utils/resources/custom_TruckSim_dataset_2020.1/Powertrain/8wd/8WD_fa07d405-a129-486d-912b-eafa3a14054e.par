@@ -1,0 +1,92 @@
+PARSFILE
+#FullDataName Powertrain: 8-Wheel Drive`Electric Axle Motors`
+INSTALL_ENGINE
+
+OPT_PT 5
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 1
+#RingCtrl10 1
+#RingCtrl11 2
+OPT_HEV 2
+IDS_F 0.015
+IDS_R 0.015
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+OPT_ENGINE_INTERNAL 0
+OPT_PWR_CPL_INTERNAL 0
+OPT_TRANS_INTERNAL 0
+OPT_SHIFT_INTERNAL 0
+OPT_TR_GEAR_INTERNAL 0
+IDIFF 1
+OPT_DIFF_INTERNAL 1
+IDIFF 2
+OPT_DIFF_INTERNAL 1
+IDIFF 3
+OPT_DIFF_INTERNAL 1
+IDIFF 4
+OPT_DIFF_INTERNAL 1
+IDIFF 5
+OPT_DIFF_INTERNAL 1
+IDIFF 6
+OPT_DIFF_INTERNAL 1
+IDIFF 7
+OPT_DIFF_INTERNAL 1
+
+PARSFILE Powertrain\HEV_PMC\PMC_5816b48f-1118-4d22-ba34-d1dbdd427890.par
+#BlueLink14 Powertrain: Hybrid/Electric Power Management Control`Power Management: Full Load 390kW` ` , Hybrid power management control`PMC_5816b48f-1118-4d22-ba34-d1dbdd427890
+
+
+IDIFF 3
+IDS 0.015
+PARSFILE Powertrain\Centerdiff\XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990.par
+#BlueLink3 Powertrain: Transfer Case`Locked: 50/50, Gear Ratio 1:1` Locked` , Transfer case`XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\DiffF_087d9644-f7c4-4ac5-b0c7-0dc53e575bb3.par
+#BlueLink4 Powertrain: Front Differential`EV Open Diff.: Gear Ratio 3.92:1` Electric Motor Drive (20 kW)` , Differential front`DiffF_087d9644-f7c4-4ac5-b0c7-0dc53e575bb3
+
+
+IDIFF 2
+PARSFILE Powertrain\Reardiff\DiffR_46de437e-4d4f-4b09-99dc-206acd803fa4.par
+#BlueLink5 Powertrain: Rear Differential`EV Open Diff.: Gear Ratio 3.92:1` Electric Motor Drive (20 kW)` , Differential rear`DiffR_46de437e-4d4f-4b09-99dc-206acd803fa4
+
+
+IDIFF 6
+IDS 0.015
+PARSFILE Powertrain\Centerdiff\XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990.par
+#BlueLink6 Powertrain: Transfer Case`Locked: 50/50, Gear Ratio 1:1` Locked` , Transfer case`XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990
+
+
+IDIFF 4
+PARSFILE Powertrain\Frontdiff\DiffF_087d9644-f7c4-4ac5-b0c7-0dc53e575bb3.par
+#BlueLink7 Powertrain: Front Differential`EV Open Diff.: Gear Ratio 3.92:1` Electric Motor Drive (20 kW)` , Differential front`DiffF_087d9644-f7c4-4ac5-b0c7-0dc53e575bb3
+
+
+IDIFF 5
+PARSFILE Powertrain\Reardiff\DiffR_46de437e-4d4f-4b09-99dc-206acd803fa4.par
+#BlueLink8 Powertrain: Rear Differential`EV Open Diff.: Gear Ratio 3.92:1` Electric Motor Drive (20 kW)` , Differential rear`DiffR_46de437e-4d4f-4b09-99dc-206acd803fa4
+
+
+IDIFF 7
+PARSFILE Powertrain\Centerdiff\XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990.par
+#BlueLink9 Powertrain: Transfer Case`Locked: 50/50, Gear Ratio 1:1` Locked` , Transfer case`XC_d9f0b72e-5e3e-4a85-bfdd-9442e1fef990
+
+
+LOG_ENTRY Used Dataset: Powertrain: 8-Wheel Drive; Electric Axle Motors
+#Library : Powertrain: 8-Wheel Drive
+#DataSet : Electric Axle Motors
+#Category: 
+#FileID  : 8WD_fa07d405-a129-486d-912b-eafa3a14054e
+#Product : TruckSim 2020.1
+#VehCode 8WD
+
+END

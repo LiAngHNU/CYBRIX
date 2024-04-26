@@ -5,7 +5,7 @@
     "Input File" : "D:\\Project Files\\CYBRIX\\utils\\resources\\custom_TruckSim_dataset_2020.1\\Results\\Run_be54c7d5-79d5-468d-8ce8-9054adabce39\\LastRun.vs",
     "Model" : "",
     "Product" : "TruckSim 2020.1",
-    "Timestamp" : "09:38 on April 18, 2024",
+    "Timestamp" : "13:53 on April 26, 2024",
     "Title" : "#1002 Calibration: Longitudinal Characteristic <* * * CYBRIX: Run Controls>",
     "Version" : 2,
     "XLabel" : "Time",
@@ -20,10 +20,24 @@
         "Units" : "rad/s2",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "AAxCab" ],
+        "Generic Name" : "Angular accel",
+        "Long Name" : "Cab roll accel (body fixed)",
+        "Rigid Body" : "Suspended cab roll",
+        "Units" : "rad/s2",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "AAy" ],
         "Generic Name" : "Angular acceleration",
         "Long Name" : "Pitch acc. (body-fixed), vehicle",
         "Rigid Body" : "Vehicle pitch (body-fixed)",
+        "Units" : "rad/s2",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "AAyCab" ],
+        "Generic Name" : "Angular accel",
+        "Long Name" : "Cab pitch accel (body fixed)",
+        "Rigid Body" : "Suspended cab pitch",
         "Units" : "rad/s2",
         "Version" : 2
       }, {
@@ -81,6 +95,13 @@
         "Long Name" : "Roll accel. (Euler), vehicle",
         "Rigid Body" : "Vehicle roll (Euler)",
         "Units" : "rad/s2",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "AA_Tor1" ],
+        "Generic Name" : "Angular acceleration",
+        "Long Name" : "Twist acceleration, unit 1",
+        "Rigid Body" : "Unit 1",
+        "Units" : "deg/s2",
         "Version" : 2
       }, {
         "Name Aliases" : [ "AA_Y" ],
@@ -237,6 +258,13 @@
         "Units" : "deg/s",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "AVxCab" ],
+        "Generic Name" : "Angular rate",
+        "Long Name" : "Cab roll rate (body fixed)",
+        "Rigid Body" : "Suspended cab roll",
+        "Units" : "deg/s",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "AVx_L1" ],
         "Generic Name" : "Angular rate",
         "Long Name" : "Roll rate, wheel L1",
@@ -276,6 +304,13 @@
         "Generic Name" : "Angular rate",
         "Long Name" : "Pitch rate (body-fixed), vehicle",
         "Rigid Body" : "Vehicle pitch (body-fixed)",
+        "Units" : "deg/s",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "AVyCab" ],
+        "Generic Name" : "Angular rate",
+        "Long Name" : "Cab pitch rate (body fixed)",
+        "Rigid Body" : "Suspended cab pitch",
         "Units" : "deg/s",
         "Version" : 2
       }, {
@@ -482,6 +517,13 @@
         "Units" : "rpm",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "AV_Tor1" ],
+        "Generic Name" : "Angular rate",
+        "Long Name" : "Twist rate, unit 1",
+        "Rigid Body" : "Unit 1",
+        "Units" : "deg/s",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "AV_Trans" ],
         "Generic Name" : "Driveline speed",
         "Long Name" : "Trans. output shaft spin",
@@ -608,6 +650,13 @@
         "Units" : "g",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "AzNf_Cab" ],
+        "Generic Name" : "Vertical acceleration",
+        "Long Name" : "Az (global), suspended cab CG",
+        "Rigid Body" : "Z accel (global), susp. cab CG",
+        "Units" : "g",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "AzN_S1" ],
         "Generic Name" : "Acceleration",
         "Long Name" : "Global Z accel, sensor 1",
@@ -678,6 +727,20 @@
         "Units" : "deg",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "A_Tor1" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Torsional deflection, unit 1",
+        "Rigid Body" : "Unit 1",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "A_Warp1" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Warp deflection, unit 1",
+        "Rigid Body" : "Unit 1",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Beta" ],
         "Generic Name" : "Angle",
         "Long Name" : "Slip angle, vehicle",
@@ -718,76 +781,6 @@
         "Long Name" : "Brake booster displacement",
         "Rigid Body" : "Brake Booster",
         "Units" : "mm",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_1" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_10", "Bk_Obj10" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_2" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_3" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_4" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_5" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_6" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_7" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_8" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Bk_Obj_9" ],
-        "Generic Name" : "Braking status",
-        "Long Name" : "Braking status for object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "-",
         "Version" : 2
       }, {
         "Name Aliases" : [ "Bk_Pedal" ],
@@ -1133,6 +1126,62 @@
         "Units" : "mm",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "DDfMntLF" ],
+        "Generic Name" : "Deflection rate",
+        "Long Name" : "LF mount spring deflection rate",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "mm/s",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "DDfMntLR" ],
+        "Generic Name" : "Deflection rate",
+        "Long Name" : "LR mount spring deflection rate",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "mm/s",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "DDfMntRF" ],
+        "Generic Name" : "Deflection rate",
+        "Long Name" : "RF mount spring deflection rate",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "mm/s",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "DDfMntRR" ],
+        "Generic Name" : "Deflection rate",
+        "Long Name" : "RR mount spring deflection rate",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "mm/s",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "DefMntLF" ],
+        "Generic Name" : "Deflection",
+        "Long Name" : "LF mount spring deflection",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "mm",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "DefMntLR" ],
+        "Generic Name" : "Deflection",
+        "Long Name" : "LR mount spring deflection",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "mm",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "DefMntRF" ],
+        "Generic Name" : "Deflection",
+        "Long Name" : "RF mount spring deflection",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "mm",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "DefMntRR" ],
+        "Generic Name" : "Deflection",
+        "Long Name" : "RR mount spring deflection",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "mm",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Dive_L1" ],
         "Generic Name" : "Angle",
         "Long Name" : "Wheel L1 dive",
@@ -1322,6 +1371,34 @@
         "Units" : "N",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "FdMntLF" ],
+        "Generic Name" : "Force",
+        "Long Name" : "LF mount damper force",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "FdMntLR" ],
+        "Generic Name" : "Force",
+        "Long Name" : "LR mount damper force",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "FdMntRF" ],
+        "Generic Name" : "Force",
+        "Long Name" : "RF mount damper force",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "FdMntRR" ],
+        "Generic Name" : "Force",
+        "Long Name" : "RR mount damper force",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Fd_L1" ],
         "Generic Name" : "Force",
         "Long Name" : "Force (compressive), damper L1",
@@ -1431,6 +1508,34 @@
         "Generic Name" : "Force",
         "Long Name" : "Ext. spring force R2 (comp.)",
         "Rigid Body" : "Ext. spring R2 (comp.)",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "FsMntLF" ],
+        "Generic Name" : "Force",
+        "Long Name" : "LF mount spring force",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "FsMntLR" ],
+        "Generic Name" : "Force",
+        "Long Name" : "LR mount spring force",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "FsMntRF" ],
+        "Generic Name" : "Force",
+        "Long Name" : "RF mount spring force",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "FsMntRR" ],
+        "Generic Name" : "Force",
+        "Long Name" : "RR mount spring force",
+        "Rigid Body" : "Suspended cab",
         "Units" : "N",
         "Version" : 2
       }, {
@@ -1602,6 +1707,41 @@
         "Units" : "N",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "Fx_RP1" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fx, reference point 1",
+        "Rigid Body" : "Ref. point 1 Fx",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fx_RP2" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fx, reference point 2",
+        "Rigid Body" : "Ref. point 2 Fx",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fx_RP3" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fx, reference point 3",
+        "Rigid Body" : "Ref. point 3 Fx",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fx_RP4" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fx, reference point 4",
+        "Rigid Body" : "Ref. point 4 Fx",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fx_RP5" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fx, reference point 5",
+        "Rigid Body" : "Ref. point 5 Fx",
+        "Units" : "N",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Fx_WC_L1" ],
         "Generic Name" : "Force",
         "Long Name" : "Tire Fx at wheel center L1",
@@ -1760,6 +1900,41 @@
         "Generic Name" : "Force",
         "Long Name" : "Lateral force, tire R2o",
         "Rigid Body" : "Tire R2o lateral",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fy_RP1" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fy, reference point 1",
+        "Rigid Body" : "Ref. point 1 Fy",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fy_RP2" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fy, reference point 2",
+        "Rigid Body" : "Ref. point 2 Fy",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fy_RP3" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fy, reference point 3",
+        "Rigid Body" : "Ref. point 3 Fy",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fy_RP4" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fy, reference point 4",
+        "Rigid Body" : "Ref. point 4 Fy",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fy_RP5" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fy, reference point 5",
+        "Rigid Body" : "Ref. point 5 Fy",
         "Units" : "N",
         "Version" : 2
       }, {
@@ -1924,6 +2099,41 @@
         "Units" : "N",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "Fz_RP1" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fz, reference point 1",
+        "Rigid Body" : "Ref. point 1 Fz",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fz_RP2" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fz, reference point 2",
+        "Rigid Body" : "Ref. point 2 Fz",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fz_RP3" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fz, reference point 3",
+        "Rigid Body" : "Ref. point 3 Fz",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fz_RP4" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fz, reference point 4",
+        "Rigid Body" : "Ref. point 4 Fz",
+        "Units" : "N",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Fz_RP5" ],
+        "Generic Name" : "Force",
+        "Long Name" : "Fz, reference point 5",
+        "Rigid Body" : "Ref. point 5 Fz",
+        "Units" : "N",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Fz_WC_L1" ],
         "Generic Name" : "Force",
         "Long Name" : "Tire Fz at wheel center L1",
@@ -2078,150 +2288,10 @@
         "Units" : "deg",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "GPS_LatO_1", "GPS_Lat1" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LatO_10", "GPS_Lt10" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LatO_2", "GPS_Lat2" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LatO_3", "GPS_Lat3" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LatO_4", "GPS_Lat4" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LatO_5", "GPS_Lat5" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LatO_6", "GPS_Lat6" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LatO_7", "GPS_Lat7" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LatO_8", "GPS_Lat8" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LatO_9", "GPS_Lat9" ],
-        "Generic Name" : "GPS latitude",
-        "Long Name" : "GPS latitude, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "GPS_Long" ],
         "Generic Name" : "GPS longitude",
         "Long Name" : "GPS relative longitude",
         "Rigid Body" : "Vehicle",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_1", "GPS_Lng1" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_10", "GPS_Lg10" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_2", "GPS_Lng2" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_3", "GPS_Lng3" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_4", "GPS_Lng4" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_5", "GPS_Lng5" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_6", "GPS_Lng6" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_7", "GPS_Lng7" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_8", "GPS_Lng8" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "GPS_LongO_9", "GPS_Lng9" ],
-        "Generic Name" : "GPS longitude",
-        "Long Name" : "GPS longitude, object 9",
-        "Rigid Body" : "Object 9",
         "Units" : "deg",
         "Version" : 2
       }, {
@@ -2230,76 +2300,6 @@
         "Long Name" : "Height, inst. CG, vehicle",
         "Rigid Body" : "Instant CG, vehicle",
         "Units" : "mm",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_1" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_10" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_2" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_3" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_4" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_5" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_6" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_7" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_8" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "HeadO_9" ],
-        "Generic Name" : "Heading angle",
-        "Long Name" : "Heading angle, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "deg",
         "Version" : 2
       }, {
         "Name Aliases" : [ "ID_Event" ],
@@ -2575,76 +2575,6 @@
         "Units" : "Kinv",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "LatO_1" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "LatO_10" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "LatO_2" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "LatO_3" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "LatO_4" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "LatO_5" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "LatO_6" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "LatO_7" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "LatO_8" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "LatO_9" ],
-        "Generic Name" : "Lateral offset",
-        "Long Name" : "Lateral offset, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "Lat_Targ" ],
         "Generic Name" : "Lateral distance to path",
         "Long Name" : "Target lateral offset from path",
@@ -2691,76 +2621,6 @@
         "Generic Name" : "Transmission control mode",
         "Long Name" : "Transmission control mode",
         "Rigid Body" : "Transmission control mode",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_1" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_10", "MsgObj10" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_2" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_3" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_4" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_5" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_6" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_7" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_8" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "MsgObj_9" ],
-        "Generic Name" : "Message (code)",
-        "Long Name" : "Message from object 9",
-        "Rigid Body" : "Object 9",
         "Units" : "-",
         "Version" : 2
       }, {
@@ -2876,6 +2736,13 @@
         "Units" : "-",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "Mwarp_1" ],
+        "Generic Name" : "Moment",
+        "Long Name" : "Warp moment rails, unit 1",
+        "Rigid Body" : "Unit 1 warp moment",
+        "Units" : "N-m",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "MxExA1" ],
         "Generic Name" : "Moment",
         "Long Name" : "External Mx, axle 1",
@@ -2911,6 +2778,13 @@
         "Units" : "N-m",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "MxGExtC" ],
+        "Generic Name" : "Moment",
+        "Long Name" : "External MxG on cab",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N-m",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Mx_A1" ],
         "Generic Name" : "Moment",
         "Long Name" : "Auxiliary roll moment, axle 1",
@@ -2936,6 +2810,13 @@
         "Generic Name" : "Moment",
         "Long Name" : "External Mx on sprung mass",
         "Rigid Body" : "Sprung mass",
+        "Units" : "N-m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Mx_ExtC" ],
+        "Generic Name" : "Moment",
+        "Long Name" : "External Mx on cab",
+        "Rigid Body" : "Suspended cab",
         "Units" : "N-m",
         "Version" : 2
       }, {
@@ -3086,6 +2967,27 @@
         "Units" : "N-m",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "MyGExtC" ],
+        "Generic Name" : "Moment",
+        "Long Name" : "External MyG on cab",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N-m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "MyRl_L1" ],
+        "Generic Name" : "Moment",
+        "Long Name" : "My applied to left rail, SM 1",
+        "Rigid Body" : "Left rail, sprung mass 1",
+        "Units" : "N-m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "MyRl_R1" ],
+        "Generic Name" : "Moment",
+        "Long Name" : "My applied to right rail, SM 1",
+        "Rigid Body" : "Right rail, sprung mass 1",
+        "Units" : "N-m",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "MyRR_L1i" ],
         "Generic Name" : "Moment",
         "Long Name" : "Rolling resist moment, tire L1i",
@@ -3212,6 +3114,13 @@
         "Units" : "N-m",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "My_ExtC" ],
+        "Generic Name" : "Moment",
+        "Long Name" : "External My on cab",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N-m",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "My_RR_L1" ],
         "Generic Name" : "Moment",
         "Long Name" : "Rolling resist moment, wheel L1",
@@ -3331,6 +3240,13 @@
         "Units" : "N-m",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "MzGExtC" ],
+        "Generic Name" : "Moment",
+        "Long Name" : "External MzG on cab",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "N-m",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Mz_Air" ],
         "Generic Name" : "Moment",
         "Long Name" : "Aero Mz, vehicle",
@@ -3342,6 +3258,13 @@
         "Generic Name" : "Moment",
         "Long Name" : "External Mz on sprung mass",
         "Rigid Body" : "Sprung mass",
+        "Units" : "N-m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Mz_ExtC" ],
+        "Generic Name" : "Moment",
+        "Long Name" : "External Mz on cab",
+        "Rigid Body" : "Suspended cab",
         "Units" : "N-m",
         "Version" : 2
       }, {
@@ -3744,6 +3667,20 @@
         "Units" : "MPa",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "PchFrL_1" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Pitch, unit 1 left frame rail",
+        "Rigid Body" : "Unit 1 left frame rail",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "PchFrR_1" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Pitch, unit 1 right frame rail",
+        "Rigid Body" : "Unit 1 right frame rail",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Pctl_L1" ],
         "Generic Name" : "Pressure",
         "Long Name" : "Pressure from controller L1",
@@ -3779,6 +3716,13 @@
         "Units" : "deg",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "PitchCab" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Cab pitch angle rel. to frame",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "PitchGL1" ],
         "Generic Name" : "Angle",
         "Long Name" : "Pitch of ground, wheel L1",
@@ -3804,76 +3748,6 @@
         "Generic Name" : "Angle",
         "Long Name" : "Pitch of ground, wheel R2",
         "Rigid Body" : "Pitch of ground, wheel R2",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO1" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO10" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO2" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO3" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO4" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO5" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO6" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO7" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO8" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "PitchO9" ],
-        "Generic Name" : "Pitch angle",
-        "Long Name" : "Pitch angle of object 9",
-        "Rigid Body" : "Object 9",
         "Units" : "deg",
         "Version" : 2
       }, {
@@ -3923,6 +3797,13 @@
         "Generic Name" : "Angle",
         "Long Name" : "Pitch, wheel R2",
         "Rigid Body" : "Pitch, wheel R2",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "PtchECab" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Euler pitch of suspended cab",
+        "Rigid Body" : "Suspended cab",
         "Units" : "deg",
         "Version" : 2
       }, {
@@ -4143,10 +4024,38 @@
         "Units" : "deg/s2",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "RolFrL_1" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Roll, unit 1 left frame rail",
+        "Rigid Body" : "Unit 1 left frame rail",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "RolFrR_1" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Roll, unit 1 right frame rail",
+        "Rigid Body" : "Unit 1 right frame rail",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Roll" ],
         "Generic Name" : "Angle",
         "Long Name" : "Roll, vehicle",
         "Rigid Body" : "Vehicle roll",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "RollCab" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Cab roll angle rel. to frame",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "RollECab" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Euler roll of suspended cab",
+        "Rigid Body" : "Suspended cab",
         "Units" : "deg",
         "Version" : 2
       }, {
@@ -4182,76 +4091,6 @@
         "Generic Name" : "Angle",
         "Long Name" : "Roll of ground, wheel R2",
         "Rigid Body" : "Roll of ground, wheel R2",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_1" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_10" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_2" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_3" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_4" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_5" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_6" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_7" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_8" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "RollO_9" ],
-        "Generic Name" : "Roll angle",
-        "Long Name" : "Roll angle of object 9",
-        "Rigid Body" : "Object 9",
         "Units" : "deg",
         "Version" : 2
       }, {
@@ -4372,6 +4211,20 @@
         "Long Name" : "Axle 2 relative roll rate",
         "Rigid Body" : "Axle 2 relative roll",
         "Units" : "deg/s",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "RolT_A1" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Axle 1 corrected relative roll",
+        "Rigid Body" : "Axle 1",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "RolT_A2" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Axle 2 corrected relative roll",
+        "Rigid Body" : "Axle 2",
+        "Units" : "deg",
         "Version" : 2
       }, {
         "Name Aliases" : [ "RotTrans" ],
@@ -4766,146 +4619,6 @@
         "Units" : "mm",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "S_Obj_1" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_Obj_10" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_Obj_2" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_Obj_3" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_Obj_4" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_Obj_5" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_Obj_6" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_Obj_7" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_Obj_8" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_Obj_9" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station of object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_1" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_10" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_2" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_3" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_4" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_5" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_6" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_7" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_8" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "S_RdO_9" ],
-        "Generic Name" : "Station",
-        "Long Name" : "Station on road path, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "S_Rd_L1I" ],
         "Generic Name" : "Road Station",
         "Long Name" : "Road station for tire L1I",
@@ -5011,76 +4724,6 @@
         "Units" : "-",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "TypeO_1" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "TypeO_10" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "TypeO_2" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "TypeO_3" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "TypeO_4" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "TypeO_5" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "TypeO_6" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "TypeO_7" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "TypeO_8" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "TypeO_9" ],
-        "Generic Name" : "Type (code)",
-        "Long Name" : "Type of object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "-",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "T_Event" ],
         "Generic Name" : "Time",
         "Long Name" : "Time since event clock reset",
@@ -5142,76 +4785,6 @@
         "Long Name" : "Total brake corner volume",
         "Rigid Body" : "Brake system",
         "Units" : "mm3",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_1" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_10" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_2" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_3" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_4" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_5" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_6" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_7" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_8" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "-",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "VisO_9" ],
-        "Generic Name" : "Visibility",
-        "Long Name" : "Visibility of object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "-",
         "Version" : 2
       }, {
         "Name Aliases" : [ "VJStL1" ],
@@ -5613,6 +5186,13 @@
         "Units" : "km/h",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "VzNf_Cab" ],
+        "Generic Name" : "Vertical speed",
+        "Long Name" : "Vz (global), suspended cab CG",
+        "Rigid Body" : "Z vel (global), susp. cab CG",
+        "Units" : "m/s",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "VzN_S1" ],
         "Generic Name" : "Speed",
         "Long Name" : "Global Z speed, sensor 1",
@@ -5674,76 +5254,6 @@
         "Long Name" : "Battery output voltage",
         "Rigid Body" : "Electric battery output",
         "Units" : "V",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_1" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "km/h",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_10" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "km/h",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_2" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "km/h",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_3" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "km/h",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_4" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "km/h",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_5" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "km/h",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_6" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "km/h",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_7" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "km/h",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_8" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "km/h",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "V_Obj_9" ],
-        "Generic Name" : "Forward speed",
-        "Long Name" : "Speed of object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "km/h",
         "Version" : 2
       }, {
         "Name Aliases" : [ "V_S1" ],
@@ -5823,10 +5333,31 @@
         "Units" : "m",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "XFrL_1" ],
+        "Generic Name" : "Global X coordinate",
+        "Long Name" : "X coord, unit 1 left frame rail",
+        "Rigid Body" : "Unit 1 left frame rail",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "XFrR_1" ],
+        "Generic Name" : "Global X coordinate",
+        "Long Name" : "X coord, unit 1 right frame rail",
+        "Rigid Body" : "Unit 1 right frame rail",
+        "Units" : "m",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Xo" ],
         "Generic Name" : "Global X coordinate",
         "Long Name" : "X coordinate, vehicle origin",
         "Rigid Body" : "Vehicle",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Xo_Cab" ],
+        "Generic Name" : "Global X coordinate",
+        "Long Name" : "X coord, suspended cab",
+        "Rigid Body" : "Suspended cab",
         "Units" : "m",
         "Version" : 2
       }, {
@@ -5879,286 +5410,6 @@
         "Units" : "mm",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "Xv1_O_1" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv1_O_10" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv1_O_2" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv1_O_3" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv1_O_4" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv1_O_5" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv1_O_6" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv1_O_7" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv1_O_8" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv1_O_9" ],
-        "Generic Name" : "Xv1_ coordinate",
-        "Long Name" : "Xv1_ coordinate, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_1" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_10" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_2" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_3" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_4" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_5" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_6" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_7" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_8" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv2_O_9" ],
-        "Generic Name" : "Xv2_ coordinate",
-        "Long Name" : "Xv2_ coordinate, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_1" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_10" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_2" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_3" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_4" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_5" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_6" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_7" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_8" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv3_O_9" ],
-        "Generic Name" : "Xv3_ coordinate",
-        "Long Name" : "Xv3_ coordinate, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_1" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_10" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_2" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_3" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_4" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_5" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_6" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_7" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_8" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Xv4_O_9" ],
-        "Generic Name" : "Xv4_ coordinate",
-        "Long Name" : "Xv4_ coordinate, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "X_A1" ],
         "Generic Name" : "Global X coordinate",
         "Long Name" : "X coordinate, axle 1",
@@ -6180,76 +5431,6 @@
         "Units" : "m",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "X_DM_1" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 1",
-        "Rigid Body" : "Driver model preview pt 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_DM_10" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 10",
-        "Rigid Body" : "Driver model preview pt 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_DM_2" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 2",
-        "Rigid Body" : "Driver model preview pt 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_DM_3" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 3",
-        "Rigid Body" : "Driver model preview pt 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_DM_4" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 4",
-        "Rigid Body" : "Driver model preview pt 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_DM_5" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 5",
-        "Rigid Body" : "Driver model preview pt 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_DM_6" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 6",
-        "Rigid Body" : "Driver model preview pt 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_DM_7" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 7",
-        "Rigid Body" : "Driver model preview pt 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_DM_8" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 8",
-        "Rigid Body" : "Driver model preview pt 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_DM_9" ],
-        "Generic Name" : "Global X coordinate",
-        "Long Name" : "X coordinate of preview pt 9",
-        "Rigid Body" : "Driver model preview pt 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "X_L1" ],
         "Generic Name" : "Global X coordinate",
         "Long Name" : "X coordinate, wheel center L1",
@@ -6264,76 +5445,6 @@
         "Units" : "m",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "X_Obj_1" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_Obj_10" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_Obj_2" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_Obj_3" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_Obj_4" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_Obj_5" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_Obj_6" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_Obj_7" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_Obj_8" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "X_Obj_9" ],
-        "Generic Name" : "X coordinate",
-        "Long Name" : "X coordinate of object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "X_R1" ],
         "Generic Name" : "Global X coordinate",
         "Long Name" : "X coordinate, wheel center R1",
@@ -6345,6 +5456,41 @@
         "Generic Name" : "Global X coordinate",
         "Long Name" : "X coordinate, wheel center R2",
         "Rigid Body" : "Wheel center R2",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "X_RP1" ],
+        "Generic Name" : "Global X coordinate",
+        "Long Name" : "Global X, reference point 1",
+        "Rigid Body" : "Reference point 1 X",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "X_RP2" ],
+        "Generic Name" : "Global X coordinate",
+        "Long Name" : "Global X, reference point 2",
+        "Rigid Body" : "Reference point 2 X",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "X_RP3" ],
+        "Generic Name" : "Global X coordinate",
+        "Long Name" : "Global X, reference point 3",
+        "Rigid Body" : "Reference point 3 X",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "X_RP4" ],
+        "Generic Name" : "Global X coordinate",
+        "Long Name" : "Global X, reference point 4",
+        "Rigid Body" : "Reference point 4 X",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "X_RP5" ],
+        "Generic Name" : "Global X coordinate",
+        "Long Name" : "Global X, reference point 5",
+        "Rigid Body" : "Reference point 5 X",
         "Units" : "m",
         "Version" : 2
       }, {
@@ -6369,73 +5515,17 @@
         "Units" : "deg",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "YawO_1" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 1",
-        "Rigid Body" : "Object 1",
+        "Name Aliases" : [ "YawFrL_1" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Yaw, unit 1 left frame rail",
+        "Rigid Body" : "Unit 1 left frame rail",
         "Units" : "deg",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "YawO_10" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "YawO_2" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "YawO_3" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "YawO_4" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "YawO_5" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "YawO_6" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "YawO_7" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "YawO_8" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "deg",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "YawO_9" ],
-        "Generic Name" : "Yaw angle",
-        "Long Name" : "Yaw angle of object 9",
-        "Rigid Body" : "Object 9",
+        "Name Aliases" : [ "YawFrR_1" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Yaw, unit 1 right frame rail",
+        "Rigid Body" : "Unit 1 right frame rail",
         "Units" : "deg",
         "Version" : 2
       }, {
@@ -6464,6 +5554,13 @@
         "Generic Name" : "Angle",
         "Long Name" : "Yaw, wheel knuckle R2",
         "Rigid Body" : "Yaw, wheel knuckle R2",
+        "Units" : "deg",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Yaw_cab" ],
+        "Generic Name" : "Angle",
+        "Long Name" : "Yaw of suspended cab",
+        "Rigid Body" : "Suspended cab",
         "Units" : "deg",
         "Version" : 2
       }, {
@@ -6572,6 +5669,20 @@
         "Units" : "m",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "YFrL_1" ],
+        "Generic Name" : "Global Y coordinate",
+        "Long Name" : "Y coord, unit 1 left frame rail",
+        "Rigid Body" : "Unit 1 left frame rail",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "YFrR_1" ],
+        "Generic Name" : "Global Y coordinate",
+        "Long Name" : "Y coord, unit 1 right frame rail",
+        "Rigid Body" : "Unit 1 right frame rail",
+        "Units" : "m",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "YlcgTM" ],
         "Generic Name" : "Local Y coordinate",
         "Long Name" : "Local Y, inst. CG, vehicle",
@@ -6583,6 +5694,13 @@
         "Generic Name" : "Global Y coordinate",
         "Long Name" : "Y coordinate, vehicle origin",
         "Rigid Body" : "Vehicle",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Yo_Cab" ],
+        "Generic Name" : "Global Y coordinate",
+        "Long Name" : "Y coord, suspended cab",
+        "Rigid Body" : "Suspended cab",
         "Units" : "m",
         "Version" : 2
       }, {
@@ -6635,286 +5753,6 @@
         "Units" : "mm",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "Yv1_O_1" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv1_O_10" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv1_O_2" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv1_O_3" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv1_O_4" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv1_O_5" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv1_O_6" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv1_O_7" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv1_O_8" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv1_O_9" ],
-        "Generic Name" : "Yv1_ coordinate",
-        "Long Name" : "Yv1_ coordinate, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_1" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_10" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_2" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_3" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_4" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_5" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_6" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_7" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_8" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv2_O_9" ],
-        "Generic Name" : "Yv2_ coordinate",
-        "Long Name" : "Yv2_ coordinate, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_1" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_10" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_2" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_3" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_4" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_5" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_6" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_7" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_8" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv3_O_9" ],
-        "Generic Name" : "Yv3_ coordinate",
-        "Long Name" : "Yv3_ coordinate, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_1" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_10" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_2" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_3" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_4" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_5" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_6" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_7" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_8" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Yv4_O_9" ],
-        "Generic Name" : "Yv4_ coordinate",
-        "Long Name" : "Yv4_ coordinate, object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "Y_A1" ],
         "Generic Name" : "Global Y coordinate",
         "Long Name" : "Y coordinate, axle 1",
@@ -6936,76 +5774,6 @@
         "Units" : "m",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "Y_DM_1" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 1",
-        "Rigid Body" : "Driver model preview pt 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_DM_10" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 10",
-        "Rigid Body" : "Driver model preview pt 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_DM_2" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 2",
-        "Rigid Body" : "Driver model preview pt 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_DM_3" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 3",
-        "Rigid Body" : "Driver model preview pt 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_DM_4" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 4",
-        "Rigid Body" : "Driver model preview pt 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_DM_5" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 5",
-        "Rigid Body" : "Driver model preview pt 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_DM_6" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 6",
-        "Rigid Body" : "Driver model preview pt 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_DM_7" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 7",
-        "Rigid Body" : "Driver model preview pt 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_DM_8" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 8",
-        "Rigid Body" : "Driver model preview pt 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_DM_9" ],
-        "Generic Name" : "Global Y coordinate",
-        "Long Name" : "Y coordinate of preview pt 9",
-        "Rigid Body" : "Driver model preview pt 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "Y_L1" ],
         "Generic Name" : "Global Y coordinate",
         "Long Name" : "Y coordinate, wheel center L1",
@@ -7017,76 +5785,6 @@
         "Generic Name" : "Global Y coordinate",
         "Long Name" : "Y coordinate, wheel center L2",
         "Rigid Body" : "Wheel center L2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_1" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_10" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_2" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_3" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_4" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_5" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_6" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_7" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_8" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Y_Obj_9" ],
-        "Generic Name" : "Y coordinate",
-        "Long Name" : "Y coordinate of object 9",
-        "Rigid Body" : "Object 9",
         "Units" : "m",
         "Version" : 2
       }, {
@@ -7118,6 +5816,41 @@
         "Units" : "mm",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "Y_RP1" ],
+        "Generic Name" : "Global Y coordinate",
+        "Long Name" : "Global Y, reference point 1",
+        "Rigid Body" : "Reference point 1 Y",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Y_RP2" ],
+        "Generic Name" : "Global Y coordinate",
+        "Long Name" : "Global Y, reference point 2",
+        "Rigid Body" : "Reference point 2 Y",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Y_RP3" ],
+        "Generic Name" : "Global Y coordinate",
+        "Long Name" : "Global Y, reference point 3",
+        "Rigid Body" : "Reference point 3 Y",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Y_RP4" ],
+        "Generic Name" : "Global Y coordinate",
+        "Long Name" : "Global Y, reference point 4",
+        "Rigid Body" : "Reference point 4 Y",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Y_RP5" ],
+        "Generic Name" : "Global Y coordinate",
+        "Long Name" : "Global Y, reference point 5",
+        "Rigid Body" : "Reference point 5 Y",
+        "Units" : "m",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Y_S1" ],
         "Generic Name" : "Global Y coordinate",
         "Long Name" : "Global Y, sensor 1",
@@ -7143,6 +5876,20 @@
         "Generic Name" : "Global Z coordinate",
         "Long Name" : "Z coordinate, inst. CG, vehicle",
         "Rigid Body" : "Instant CG, vehicle",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "ZFrL_1" ],
+        "Generic Name" : "Global Z coordinate",
+        "Long Name" : "Z coord, unit 1 left frame rail",
+        "Rigid Body" : "Unit 1 left frame rail",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "ZFrR_1" ],
+        "Generic Name" : "Global Z coordinate",
+        "Long Name" : "Z coord, unit 1 right frame rail",
+        "Rigid Body" : "Unit 1 right frame rail",
         "Units" : "m",
         "Version" : 2
       }, {
@@ -7209,6 +5956,13 @@
         "Units" : "m",
         "Version" : 2
       }, {
+        "Name Aliases" : [ "Zo_Cab" ],
+        "Generic Name" : "Global Z coordinate",
+        "Long Name" : "Z coord, suspended cab",
+        "Rigid Body" : "Suspended cab",
+        "Units" : "m",
+        "Version" : 2
+      }, {
         "Name Aliases" : [ "Zrd_Air" ],
         "Generic Name" : "Global Z coordinate",
         "Long Name" : "Z coord. of road aero ref. 1",
@@ -7272,73 +6026,10 @@
         "Units" : "m",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "Z_DM_1" ],
+        "Name Aliases" : [ "Z_Cab" ],
         "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 1",
-        "Rigid Body" : "Driver model preview pt 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_DM_10" ],
-        "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 10",
-        "Rigid Body" : "Driver model preview pt 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_DM_2" ],
-        "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 2",
-        "Rigid Body" : "Driver model preview pt 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_DM_3" ],
-        "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 3",
-        "Rigid Body" : "Driver model preview pt 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_DM_4" ],
-        "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 4",
-        "Rigid Body" : "Driver model preview pt 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_DM_5" ],
-        "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 5",
-        "Rigid Body" : "Driver model preview pt 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_DM_6" ],
-        "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 6",
-        "Rigid Body" : "Driver model preview pt 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_DM_7" ],
-        "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 7",
-        "Rigid Body" : "Driver model preview pt 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_DM_8" ],
-        "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 8",
-        "Rigid Body" : "Driver model preview pt 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_DM_9" ],
-        "Generic Name" : "Global Z coordinate",
-        "Long Name" : "Z coordinate of preview pt 9",
-        "Rigid Body" : "Driver model preview pt 9",
+        "Long Name" : "Z coord, suspended cab CG",
+        "Rigid Body" : "Z coord (global), susp. cab CG",
         "Units" : "m",
         "Version" : 2
       }, {
@@ -7356,76 +6047,6 @@
         "Units" : "m",
         "Version" : 2
       }, {
-        "Name Aliases" : [ "Z_Obj_1" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 1",
-        "Rigid Body" : "Object 1",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_Obj_10" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 10",
-        "Rigid Body" : "Object 10",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_Obj_2" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 2",
-        "Rigid Body" : "Object 2",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_Obj_3" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 3",
-        "Rigid Body" : "Object 3",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_Obj_4" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 4",
-        "Rigid Body" : "Object 4",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_Obj_5" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 5",
-        "Rigid Body" : "Object 5",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_Obj_6" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 6",
-        "Rigid Body" : "Object 6",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_Obj_7" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 7",
-        "Rigid Body" : "Object 7",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_Obj_8" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 8",
-        "Rigid Body" : "Object 8",
-        "Units" : "m",
-        "Version" : 2
-      }, {
-        "Name Aliases" : [ "Z_Obj_9" ],
-        "Generic Name" : "Z coordinate",
-        "Long Name" : "Z coordinate of object 9",
-        "Rigid Body" : "Object 9",
-        "Units" : "m",
-        "Version" : 2
-      }, {
         "Name Aliases" : [ "Z_R1" ],
         "Generic Name" : "Global Z coordinate",
         "Long Name" : "Z coordinate, wheel center R1",
@@ -7437,6 +6058,41 @@
         "Generic Name" : "Global Z coordinate",
         "Long Name" : "Z coordinate, wheel center R2",
         "Rigid Body" : "Wheel center R2",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Z_RP1" ],
+        "Generic Name" : "Global Z coordinate",
+        "Long Name" : "Global Z, reference point 1",
+        "Rigid Body" : "Reference point 1 Z",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Z_RP2" ],
+        "Generic Name" : "Global Z coordinate",
+        "Long Name" : "Global Z, reference point 2",
+        "Rigid Body" : "Reference point 2 Z",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Z_RP3" ],
+        "Generic Name" : "Global Z coordinate",
+        "Long Name" : "Global Z, reference point 3",
+        "Rigid Body" : "Reference point 3 Z",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Z_RP4" ],
+        "Generic Name" : "Global Z coordinate",
+        "Long Name" : "Global Z, reference point 4",
+        "Rigid Body" : "Reference point 4 Z",
+        "Units" : "m",
+        "Version" : 2
+      }, {
+        "Name Aliases" : [ "Z_RP5" ],
+        "Generic Name" : "Global Z coordinate",
+        "Long Name" : "Global Z, reference point 5",
+        "Rigid Body" : "Reference point 5 Z",
         "Units" : "m",
         "Version" : 2
       }, {

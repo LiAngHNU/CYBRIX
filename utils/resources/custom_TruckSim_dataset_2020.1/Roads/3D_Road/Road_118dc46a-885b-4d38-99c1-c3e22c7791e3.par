@@ -1,0 +1,64 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Off-Road Trail #002`* * * CYBRIX: Off-Road
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road_118dc46a-885b-4d38-99c1-c3e22c7791e3.png
+#RingCtrl0 1
+#CheckBox0 0    
+
+SET_IROAD_FOR_ID 0
+CURRENT_ROAD_ID = ROAD_ID
+set_description road_id Off-Road Trail #002
+PARSFILE Roads\BuilderSegment\RoadSeg_d71c6bc9-5ef9-4252-96c0-daee4f198755.par
+#BlueLink0 Path: Segment Builder`Off-Road Trail #002` * * * CYBRIX: Segment Builder` , Reference Path`RoadSeg_d71c6bc9-5ef9-4252-96c0-daee4f198755
+
+ROAD_PATH_ID = PATH_ID
+
+set_description road_path_id PATH_ID for: Off-Road Trail #002
+PARSFILE Roads\Center_Z\RdRefZ_535bd10d-8e63-47ac-aff4-0ee32455646d.par
+#BlueLink1 Road: Reference Line Elevation`Off-Road Trail #002` * * * CYBRIX: Path Elevation` , Path Elevation`RdRefZ_535bd10d-8e63-47ac-aff4-0ee32455646d
+
+PARSFILE Roads\dZ_Map\RdMapZ_7120f40a-e2e0-4098-946d-0c5f0c1679b9.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Off-Road Trail #002` * * * CYBRIX: Path Off-Center Elevation` , Miscellaneous`RdMapZ_7120f40a-e2e0-4098-946d-0c5f0c1679b9
+
+PARSFILE Roads\Friction\RdMu_e7dab9d2-e6aa-4758-bc79-19823b5c238c.par
+#BlueLink3 Road: Friction Map, S-L Grid`Constant: 0.75` Constant Mu` , Friction`RdMu_e7dab9d2-e6aa-4758-bc79-19823b5c238c
+
+PARSFILE Roads\Shapes\RdShape_fd732d47-09f3-4d86-961b-2da5134afc87.par
+#BlueLink4 Road: Animator Surface Shapes`No Machine-Generated Shapes` ` , Road shape definitions`RdShape_fd732d47-09f3-4d86-961b-2da5134afc87
+
+PARSFILE Roads\dZ_Map\RdMapZ_b1a95856-7ca2-4485-93c8-c78df2f5c8d1.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`Off-Road Trail (Bank)` * * * CYBRIX: Path Off-Center Elevation` , Miscellaneous`RdMapZ_b1a95856-7ca2-4485-93c8-c78df2f5c8d1
+
+RR_SURF_CONSTANT 1.0
+*IMAGE_FIT_MODE 1
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+add_reference_frame road_stuff_6_Overcast_Sky_with_Desert
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_c9b144d3-0a79-47db-8b4a-942ac4ebcb6f.par
+#BlueLink6 Animator: Group`Overcast Sky with Desert` Environment Spheres` , 3D Shapes`Group_c9b144d3-0a79-47db-8b4a-942ac4ebcb6f
+
+add_reference_frame road_stuff_7_Environment_City_and_Off-Road
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group_e2871c69-f683-4a0c-9995-48864bb828e9.par
+#BlueLink7 Animator: Group`Environment City and Off-Road` Roads and Environment` , 3D Shapes`Group_e2871c69-f683-4a0c-9995-48864bb828e9
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da.par
+#BlueLink5 Animator: Camera Setup`180 Azm, 5 El, 36.5 m` Road Reference` , Camera`Camera_e4195516-c90a-4808-a6f8-aeae7e5c07da
+
+parsfile Roads\3D_Road\Road_118dc46a-885b-4d38-99c1-c3e22c7791e3.ani
+
+#EMBEDDED_NOTES
+#This example demonstrates the ability to create roads with spline-interpolated tables.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { * * * CYBRIX: Off-Road } Off-Road Trail #002
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Off-Road Trail #002
+#Category: * * * CYBRIX: Off-Road
+#FileID  : Road_118dc46a-885b-4d38-99c1-c3e22c7791e3
+#Product : TruckSim 2020.1
+#VehCode 3D Road
+
+END

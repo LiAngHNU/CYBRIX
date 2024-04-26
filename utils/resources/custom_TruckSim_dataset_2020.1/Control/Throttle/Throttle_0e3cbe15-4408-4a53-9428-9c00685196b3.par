@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Control: Throttle (Open Loop)`Step:   80% to   20%`* * * CYBRIX: Calibration Signals
+#CheckBox0 0    
+
+#RingCtrl0 STEP
+#RadioCtrl0 0    
+
+#DiagramOne0
+THROTTLE_ENGINE_TABLE STEP
+0, 0.8
+1, 0.6
+2, 0.4
+3, 0.2
+4, 0.2
+ENDTABLE
+*SCALAR 1.0
+
+
+LOG_ENTRY Used Dataset: Control: Throttle (Open Loop); { * * * CYBRIX: Calibration Signals } Step:   80% to   20%
+#Library : Control: Throttle (Open Loop)
+#DataSet : Step:   80% to   20%
+#Category: * * * CYBRIX: Calibration Signals
+#FileID  : Throttle_0e3cbe15-4408-4a53-9428-9c00685196b3
+#Product : TruckSim 2020.1
+#VehCode Open-loop Throttle
+
+END

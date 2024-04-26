@@ -1,0 +1,3435 @@
+MatrixTransform {
+  DataVariance STATIC
+  name "Scene Root"
+  nodeMask 0xffffffff
+  cullingActive TRUE
+  StateSet {
+    UniqueID StateSet_0
+    rendering_hint DEFAULT_BIN
+    renderBinMode INHERIT
+    GL_LIGHTING ON
+  }
+  referenceFrame RELATIVE
+  Matrix {
+    1 0 0 0
+    0 1 0 0
+    0 0 1 0
+    0 0 0 1
+  }
+  num_children 2
+  Billboard {
+    DataVariance STATIC
+    name "OSG_Billboard001"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    num_drawables 54
+    Geometry {
+      UniqueID Geometry_1
+      name "PalmA"
+      StateSet {
+        UniqueID StateSet_2
+        name "PalmA"
+        rendering_hint TRANSPARENT_BIN
+        renderBinMode USE
+        binNumber 10
+        binName DepthSortedBin
+        GL_CULL_FACE ON
+        GL_LIGHTING ON
+        GL_NORMALIZE ON
+        GL_BLEND ON
+        Material {
+          ColorMode OFF
+          ambientColor 0.901961 0.901961 0.901961 1
+          diffuseColor 1 1 1 1
+          specularColor 0.0036036 0.0036036 0.0036036 1
+          emissionColor 0 0 0 1
+          shininess 12.8
+        }
+        BlendFunc {
+          source SRC_ALPHA
+          destination ONE_MINUS_SRC_ALPHA
+        }
+        textureUnit 0 {
+          GL_TEXTURE_2D ON
+          Texture2D {
+            UniqueID Texture2D_3
+            file "images\PalmA_di.dds"
+            wrap_s REPEAT
+            wrap_t REPEAT
+            wrap_r CLAMP_TO_EDGE
+            min_filter LINEAR_MIPMAP_LINEAR
+            mag_filter LINEAR
+            maxAnisotropy 1
+            borderColor 0 0 0 0
+            borderWidth 0
+            useHardwareMipMapGeneration TRUE
+            unRefImageDataAfterApply FALSE
+            internalFormatMode USE_IMAGE_DATA_FORMAT
+            resizeNonPowerOfTwo FALSE
+            shadowComparison FALSE
+            shadowCompareFunc GL_LEQUAL
+            shadowTextureMode GL_LUMINANCE
+          }
+        }
+      }
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.16488 3.51826e-010 -0.00626197
+        2.16488 3.51826e-010 -0.00626197
+        2.16488 -7.56686e-007 9.62602
+        -2.16488 -7.56686e-007 9.62602
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_4
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.5 4.06288e-010 -0.00723132
+        2.5 4.06288e-010 -0.00723132
+        2.5 -8.73821e-007 11.1161
+        -2.5 -8.73821e-007 11.1161
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_5
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.93761 3.14891e-010 -0.00560459
+        1.93761 3.14891e-010 -0.00560459
+        1.93761 -6.7725e-007 8.61548
+        -1.93761 -6.7725e-007 8.61548
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_6
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.64513 4.29873e-010 -0.0076511
+        2.64513 4.29873e-010 -0.0076511
+        2.64513 -9.24547e-007 11.7614
+        -2.64513 -9.24547e-007 11.7614
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_7
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -3.39728 5.5211e-010 -0.00622536
+        3.39728 5.5211e-010 -0.00622536
+        3.39728 -1.18745e-006 9.56975
+        -3.39728 -1.18745e-006 9.56975
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.2406e-007
+        0 -1 -1.2406e-007
+        0 -1 -1.2406e-007
+        0 -1 -1.2406e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_8
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -3.90694 6.34938e-010 -0.00723132
+        3.90694 6.34938e-010 -0.00723132
+        3.90694 -1.36559e-006 11.1161
+        -3.90694 -1.36559e-006 11.1161
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.22825e-007
+        0 -1 -1.22825e-007
+        0 -1 -1.22825e-007
+        0 -1 -1.22825e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_9
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.86281 4.65251e-010 -0.00828077
+        2.86281 4.65251e-010 -0.00828077
+        2.86281 -1.00063e-006 12.7294
+        -2.86281 -1.00063e-006 12.7294
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_10
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.5 4.06288e-010 -0.00723132
+        2.5 4.06288e-010 -0.00723132
+        2.5 -8.73821e-007 11.1161
+        -2.5 -8.73821e-007 11.1161
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_11
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.90733 4.72486e-010 -0.00636868
+        2.90733 4.72486e-010 -0.00636868
+        2.90733 -1.0162e-006 9.79006
+        -2.90733 -1.0162e-006 9.79006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.03779e-007
+        0 -1 -1.03779e-007
+        0 -1 -1.03779e-007
+        0 -1 -1.03779e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_12
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -3.10982 5.05393e-010 -0.00543506
+        3.10982 5.05393e-010 -0.00543506
+        3.10982 -1.08697e-006 8.35488
+        -3.10982 -1.08697e-006 8.35488
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30076e-007
+        0 -1 -1.30076e-007
+        0 -1 -1.30076e-007
+        0 -1 -1.30076e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_13
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -4.02077 6.53436e-010 -0.00793095
+        4.02077 6.53436e-010 -0.00793095
+        4.02077 -1.40537e-006 12.1916
+        -4.02077 -1.40537e-006 12.1916
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.15252e-007
+        0 -1 -1.15252e-007
+        0 -1 -1.15252e-007
+        0 -1 -1.15252e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_14
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.5 4.06288e-010 -0.00604733
+        2.5 4.06288e-010 -0.00604733
+        2.5 -8.73821e-007 9.29608
+        -2.5 -8.73821e-007 9.29608
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -9.39815e-008
+        0 -1 -9.39815e-008
+        0 -1 -9.39815e-008
+        0 -1 -9.39815e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_15
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.887 4.69182e-010 -0.00835073
+        2.887 4.69182e-010 -0.00835073
+        2.887 -1.00909e-006 12.8369
+        -2.887 -1.00909e-006 12.8369
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_16
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.81444 4.57389e-010 -0.00738297
+        2.81444 4.57389e-010 -0.00738297
+        2.81444 -9.83726e-007 11.3492
+        -2.81444 -9.83726e-007 11.3492
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -8.66616e-008
+        0 -1 -8.66616e-008
+        0 -1 -8.66616e-008
+        0 -1 -8.66616e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_17
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.5 4.06288e-010 -0.00723132
+        2.5 4.06288e-010 -0.00723132
+        2.5 -8.73821e-007 11.1161
+        -2.5 -8.73821e-007 11.1161
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_18
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.87203 4.66749e-010 -0.00871224
+        2.87203 4.66749e-010 -0.00871224
+        2.87203 -1.00386e-006 13.3926
+        -2.87203 -1.00386e-006 13.3926
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.4942e-008
+        0 -1 -7.4942e-008
+        0 -1 -7.4942e-008
+        0 -1 -7.4942e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_19
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.52334 4.10081e-010 -0.0069273
+        2.52334 4.10081e-010 -0.0069273
+        2.52334 -8.8198e-007 10.6488
+        -2.52334 -8.8198e-007 10.6488
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -8.28091e-008
+        0 -1 -8.28091e-008
+        0 -1 -8.28091e-008
+        0 -1 -8.28091e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_20
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.5 4.06288e-010 -0.00588885
+        2.5 4.06288e-010 -0.00588885
+        2.5 -8.73821e-007 9.05245
+        -2.5 -8.73821e-007 9.05245
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -9.65108e-008
+        0 -1 -9.65108e-008
+        0 -1 -9.65108e-008
+        0 -1 -9.65108e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_21
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.36284 3.83997e-010 -0.00683457
+        2.36284 3.83997e-010 -0.00683457
+        2.36284 -8.25879e-007 10.5062
+        -2.36284 -8.25879e-007 10.5062
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_22
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.79025 4.53458e-010 -0.00807087
+        2.79025 4.53458e-010 -0.00807087
+        2.79025 -9.75272e-007 12.4067
+        -2.79025 -9.75272e-007 12.4067
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_23
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.5 4.06288e-010 -0.00568152
+        2.5 4.06288e-010 -0.00568152
+        2.5 -8.73821e-007 8.73374
+        -2.5 -8.73821e-007 8.73374
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.00033e-007
+        0 -1 -1.00033e-007
+        0 -1 -1.00033e-007
+        0 -1 -1.00033e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_24
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.02889 3.29726e-010 -0.00586862
+        2.02889 3.29726e-010 -0.00586862
+        2.02889 -7.09156e-007 9.02137
+        -2.02889 -7.09156e-007 9.02137
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_25
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -3.74843 6.09178e-010 -0.00636025
+        3.74843 6.09178e-010 -0.00636025
+        3.74843 -1.31018e-006 9.7771
+        -3.74843 -1.31018e-006 9.7771
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.33981e-007
+        0 -1 -1.33981e-007
+        0 -1 -1.33981e-007
+        0 -1 -1.33981e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_26
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.5 4.06288e-010 -0.00723132
+        2.5 4.06288e-010 -0.00723132
+        2.5 -8.73821e-007 11.1161
+        -2.5 -8.73821e-007 11.1161
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_27
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.22069 3.60897e-010 -0.00642341
+        2.22069 3.60897e-010 -0.00642341
+        2.22069 -7.76196e-007 9.8742
+        -2.22069 -7.76196e-007 9.8742
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_28
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.5 4.06288e-010 -0.00723132
+        2.5 4.06288e-010 -0.00723132
+        2.5 -8.73821e-007 11.1161
+        -2.5 -8.73821e-007 11.1161
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_29
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -3.05631 4.96698e-010 -0.00884047
+        3.05631 4.96698e-010 -0.00884047
+        3.05631 -1.06827e-006 13.5897
+        -3.05631 -1.06827e-006 13.5897
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_30
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.38464 3.87541e-010 -0.00689765
+        2.38464 3.87541e-010 -0.00689765
+        2.38464 -8.33501e-007 10.6032
+        -2.38464 -8.33501e-007 10.6032
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_31
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -3.03212 4.92767e-010 -0.00877051
+        3.03212 4.92767e-010 -0.00877051
+        3.03212 -1.05981e-006 13.4822
+        -3.03212 -1.05981e-006 13.4822
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_32
+      name "PalmA"
+      Use StateSet_2
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.5 4.06288e-010 -0.00723132
+        2.5 4.06288e-010 -0.00723132
+        2.5 -8.73821e-007 11.1161
+        -2.5 -8.73821e-007 11.1161
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+        0 -1 -7.85939e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_33
+      name "PalmB"
+      StateSet {
+        UniqueID StateSet_34
+        name "PalmB"
+        rendering_hint TRANSPARENT_BIN
+        renderBinMode USE
+        binNumber 10
+        binName DepthSortedBin
+        GL_CULL_FACE ON
+        GL_LIGHTING ON
+        GL_NORMALIZE ON
+        GL_BLEND ON
+        Material {
+          ColorMode OFF
+          ambientColor 0.901961 0.901961 0.901961 1
+          diffuseColor 1 1 1 1
+          specularColor 0.0036036 0.0036036 0.0036036 1
+          emissionColor 0 0 0 1
+          shininess 12.8
+        }
+        BlendFunc {
+          source SRC_ALPHA
+          destination ONE_MINUS_SRC_ALPHA
+        }
+        textureUnit 0 {
+          GL_TEXTURE_2D ON
+          Texture2D {
+            UniqueID Texture2D_35
+            file "images\PalmB_di.dds"
+            wrap_s REPEAT
+            wrap_t REPEAT
+            wrap_r CLAMP_TO_EDGE
+            min_filter LINEAR_MIPMAP_LINEAR
+            mag_filter LINEAR
+            maxAnisotropy 1
+            borderColor 0 0 0 0
+            borderWidth 0
+            useHardwareMipMapGeneration TRUE
+            unRefImageDataAfterApply FALSE
+            internalFormatMode USE_IMAGE_DATA_FORMAT
+            resizeNonPowerOfTwo FALSE
+            shadowComparison FALSE
+            shadowCompareFunc GL_LEQUAL
+            shadowTextureMode GL_LUMINANCE
+          }
+        }
+      }
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.78798 2.90574e-010 -0.00569652
+        1.78798 2.90574e-010 -0.00569652
+        1.78798 -6.2495e-007 8.7568
+        -1.78798 -6.2495e-007 8.7568
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -7.13541e-008
+        0 -1 -7.13541e-008
+        0 -1 -7.13541e-008
+        0 -1 -7.13541e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_36
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.92577 4.75483e-010 -0.00509734
+        2.92577 4.75483e-010 -0.00509734
+        2.92577 -1.02264e-006 7.83573
+        -2.92577 -1.02264e-006 7.83573
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_37
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.00538769
+        2.39322 3.88935e-010 -0.00538769
+        2.39322 -8.365e-007 8.28206
+        -2.39322 -8.365e-007 8.28206
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.00983e-007
+        0 -1 -1.00983e-007
+        0 -1 -1.00983e-007
+        0 -1 -1.00983e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_38
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.00416952
+        2.39322 3.88935e-010 -0.00416952
+        2.39322 -8.365e-007 6.40947
+        -2.39322 -8.365e-007 6.40947
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_39
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.97322 3.20679e-010 -0.00343779
+        1.97322 3.20679e-010 -0.00343779
+        1.97322 -6.89698e-007 5.28463
+        -1.97322 -6.89698e-007 5.28463
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_40
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.00416952
+        2.39322 3.88935e-010 -0.00416952
+        2.39322 -8.365e-007 6.40947
+        -2.39322 -8.365e-007 6.40947
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_41
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.10773 3.42539e-010 -0.00367213
+        2.10773 3.42539e-010 -0.00367213
+        2.10773 -7.36712e-007 5.64487
+        -2.10773 -7.36712e-007 5.64487
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_42
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.04729 3.32716e-010 -0.00535503
+        2.04729 3.32716e-010 -0.00535503
+        2.04729 -7.15587e-007 8.23186
+        -2.04729 -7.15587e-007 8.23186
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -8.69128e-008
+        0 -1 -8.69128e-008
+        0 -1 -8.69128e-008
+        0 -1 -8.69128e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_43
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.69423 4.37854e-010 -0.00469394
+        2.69423 4.37854e-010 -0.00469394
+        2.69423 -9.41711e-007 7.21562
+        -2.69423 -9.41711e-007 7.21562
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_44
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.59697 2.59532e-010 -0.00416952
+        1.59697 2.59532e-010 -0.00416952
+        1.59697 -5.58187e-007 6.40947
+        -1.59697 -5.58187e-007 6.40947
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -8.70718e-008
+        0 -1 -8.70718e-008
+        0 -1 -8.70718e-008
+        0 -1 -8.70718e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_45
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.00554591
+        2.39322 3.88935e-010 -0.00554591
+        2.39322 -8.365e-007 8.52528
+        -2.39322 -8.365e-007 8.52528
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -9.81017e-008
+        0 -1 -9.81017e-008
+        0 -1 -9.81017e-008
+        0 -1 -9.81017e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_46
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.00416952
+        2.39322 3.88935e-010 -0.00416952
+        2.39322 -8.365e-007 6.40947
+        -2.39322 -8.365e-007 6.40947
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_47
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.0053085
+        2.39322 3.88935e-010 -0.0053085
+        2.39322 -8.365e-007 8.16033
+        -2.39322 -8.365e-007 8.16033
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.02489e-007
+        0 -1 -1.02489e-007
+        0 -1 -1.02489e-007
+        0 -1 -1.02489e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_48
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.69423 4.37854e-010 -0.00469394
+        2.69423 4.37854e-010 -0.00469394
+        2.69423 -9.41711e-007 7.21562
+        -2.69423 -9.41711e-007 7.21562
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_49
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.00607464
+        2.39322 3.88935e-010 -0.00607464
+        2.39322 -8.365e-007 9.33806
+        -2.39322 -8.365e-007 9.33806
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -8.9563e-008
+        0 -1 -8.9563e-008
+        0 -1 -8.9563e-008
+        0 -1 -8.9563e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_50
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.41638 3.92698e-010 -0.00420986
+        2.41638 3.92698e-010 -0.00420986
+        2.41638 -8.44593e-007 6.47148
+        -2.41638 -8.44593e-007 6.47148
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_51
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.94893 4.79246e-010 -0.00513768
+        2.94893 4.79246e-010 -0.00513768
+        2.94893 -1.03074e-006 7.89775
+        -2.94893 -1.03074e-006 7.89775
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_52
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.0055274
+        2.39322 3.88935e-010 -0.0055274
+        2.39322 -8.365e-007 8.49682
+        -2.39322 -8.365e-007 8.49682
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -9.84303e-008
+        0 -1 -9.84303e-008
+        0 -1 -9.84303e-008
+        0 -1 -9.84303e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_53
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.00521 3.25878e-010 -0.00349352
+        2.00521 3.25878e-010 -0.00349352
+        2.00521 -7.0088e-007 5.37031
+        -2.00521 -7.0088e-007 5.37031
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_54
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.00416952
+        2.39322 3.88935e-010 -0.00416952
+        2.39322 -8.365e-007 6.40947
+        -2.39322 -8.365e-007 6.40947
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_55
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.00581804
+        2.39322 3.88935e-010 -0.00581804
+        2.39322 -8.365e-007 8.94361
+        -2.39322 -8.365e-007 8.94361
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -9.35131e-008
+        0 -1 -9.35131e-008
+        0 -1 -9.35131e-008
+        0 -1 -9.35131e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_56
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.39322 3.88935e-010 -0.00596883
+        2.39322 3.88935e-010 -0.00596883
+        2.39322 -8.365e-007 9.1754
+        -2.39322 -8.365e-007 9.1754
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -9.11507e-008
+        0 -1 -9.11507e-008
+        0 -1 -9.11507e-008
+        0 -1 -9.11507e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_57
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.95761 3.18141e-010 -0.00341058
+        1.95761 3.18141e-010 -0.00341058
+        1.95761 -6.84239e-007 5.24281
+        -1.95761 -6.84239e-007 5.24281
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_58
+      name "PalmB"
+      Use StateSet_34
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -2.76369 4.49143e-010 -0.00481496
+        2.76369 4.49143e-010 -0.00481496
+        2.76369 -9.6599e-007 7.40165
+        -2.76369 -9.6599e-007 7.40165
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+        0 -1 -1.30486e-007
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Mode AXIAL_ROT
+    Axis 0 0 1
+    Normal 0 -1 0
+    Positions {
+      178.018 -63.9531 4.57813
+      201.885 -79.4378 1.88965
+      203.825 -85.2712 1.88965
+      177.577 -133.19 3.86548
+      183.683 -136.722 4.80859
+      171.174 -143.402 5.97217
+      162.72 -88.5328 0.267822
+      164.047 -94.4861 0.927734
+      155.274 -96.055 1.76221
+      116.416 -153.411 8.42847
+      108.12 -156.148 10.6117
+      44.4826 -115.461 17.8788
+      51.1016 -116.837 17.8788
+      5.87916 -140.473 17.8788
+      -33.2633 -90.1842 8.96497
+      -22.9984 -91.9215 10.4962
+      -30.4487 -98.3439 9.50818
+      -23.4987 -95.9592 10.16
+      -151.065 -132.258 0.412231
+      -155.216 -125.32 -0.00274658
+      -161.203 -133.385 0.412231
+      -143.601 -127.322 0.412231
+      -205.246 -149.874 5.32202
+      -187.323 -110.892 0.99707
+      -218.101 -109.407 0.99707
+      -249.095 -136.592 5.32202
+      -247.465 -129.427 4.49536
+      -288.73 -75.5505 4.49536
+      -294.47 -63.6391 3.02759
+      -282.497 -37.9018 0.58252
+      185.628 -66.9754 3.72809
+      197.331 -91.7158 1.72284
+      165.596 -100.869 1.68353
+      167.928 -83.6721 1.94745
+      184.447 -127.028 4.68231
+      162.301 -146.521 6.88019
+      123.925 -155.026 8.68512
+      109.774 -162.795 11.0493
+      58.2871 -117.262 19.0223
+      41.4748 -120.468 19.0223
+      10.5036 -145.562 20.8731
+      2.38538 -134.835 19.581
+      -15.0175 -91.9772 11.6919
+      -41.2425 -92.4626 9.05054
+      -142.459 -121.541 0.959717
+      -168.366 -133.806 0.658813
+      -180.077 -101.277 0.598633
+      -181.768 -109.655 0.598633
+      -198.274 -149.698 5.12622
+      -223.251 -112.266 3.7688
+      -212.77 -107.877 3.7688
+      -241.134 -133.203 4.60913
+      -283.624 -79.2198 4.30359
+      -289.889 -49.6319 2.03015
+    }
+  }
+  Billboard {
+    DataVariance STATIC
+    name "OSG_Billboard002"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    num_drawables 34
+    Geometry {
+      UniqueID Geometry_59
+      name "ShrubA"
+      StateSet {
+        UniqueID StateSet_60
+        name "ShrubA"
+        rendering_hint TRANSPARENT_BIN
+        renderBinMode USE
+        binNumber 10
+        binName DepthSortedBin
+        GL_CULL_FACE ON
+        GL_LIGHTING ON
+        GL_NORMALIZE ON
+        GL_BLEND ON
+        Material {
+          ColorMode OFF
+          ambientColor 0.901961 0.901961 0.901961 1
+          diffuseColor 1 1 1 1
+          specularColor 0.0036036 0.0036036 0.0036036 1
+          emissionColor 0 0 0 1
+          shininess 12.8
+        }
+        BlendFunc {
+          source SRC_ALPHA
+          destination ONE_MINUS_SRC_ALPHA
+        }
+        textureUnit 0 {
+          GL_TEXTURE_2D ON
+          Texture2D {
+            UniqueID Texture2D_61
+            file "images\ShrubA_di.dds"
+            wrap_s REPEAT
+            wrap_t REPEAT
+            wrap_r CLAMP_TO_EDGE
+            min_filter LINEAR_MIPMAP_LINEAR
+            mag_filter LINEAR
+            maxAnisotropy 1
+            borderColor 0 0 0 0
+            borderWidth 0
+            useHardwareMipMapGeneration TRUE
+            unRefImageDataAfterApply FALSE
+            internalFormatMode USE_IMAGE_DATA_FORMAT
+            resizeNonPowerOfTwo FALSE
+            shadowComparison FALSE
+            shadowCompareFunc GL_LEQUAL
+            shadowTextureMode GL_LUMINANCE
+          }
+        }
+      }
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_62
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_63
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_64
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_65
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_66
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_67
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_68
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_69
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 0 -0.816521
+        1.48006 0 -0.816521
+        1.48006 0 0.816521
+        -1.48006 0 0.816521
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 0
+        0 -1 0
+        0 -1 0
+        0 -1 0
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_70
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_71
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_72
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_73
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_74
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_75
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_76
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_77
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_78
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_79
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_80
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_81
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_82
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_83
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_84
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_85
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_86
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_87
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_88
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_89
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_90
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_91
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_92
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_93
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Geometry {
+      UniqueID Geometry_94
+      name "ShrubA"
+      Use StateSet_60
+      useDisplayList TRUE
+      useVertexBufferObjects FALSE
+      PrimitiveSets 1
+      {
+        DrawElementsUShort TRIANGLE_STRIP 4
+        {
+          1 2 0 3 
+        }
+      }
+      VertexArray Vec3Array 4
+      {
+        -1.48006 1.30523e-010 -0.00298595
+        1.48006 1.30523e-010 -0.00298595
+        1.48006 -7.1252e-008 1.63006
+        -1.48006 -7.1252e-008 1.63006
+      }
+      NormalBinding PER_VERTEX
+      NormalArray Vec3Array 4
+      {
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+        0 -1 -4.37114e-008
+      }
+      TexCoordArray 0 Vec2Array 4
+      {
+        0 0
+        1 0
+        1 1
+        0 1
+      }
+    }
+    Mode AXIAL_ROT
+    Axis 0 0 1
+    Normal 0 -1 0
+    Positions {
+      157.225 -72.9866 4.52639
+      180.3 -69.3245 4.14236
+      173.042 -61.1249 4.51004
+      194.445 -76.9858 1.67526
+      192.465 -86.6096 1.32541
+      171.711 -87.0234 0.726894
+      171.916 -96.2305 1.16732
+      178.917 -123.728 3.85446
+      168.813 -136.277 5.52017
+      166.923 -147.869 6.76522
+      127.344 -152.587 7.82382
+      105.286 -148.396 10.8392
+      55.0202 -122.283 19.1964
+      46.1488 -123.306 18.6593
+      38.1609 -110.352 19.1259
+      16.7791 -144.408 20.7805
+      5.28944 -129.701 19.4564
+      -13.4019 -99.9151 12.5616
+      -26.415 -86.7687 9.15426
+      -44.8656 -87.6157 7.12216
+      -136.913 -124.385 1.8851
+      -147.582 -117.455 -0.167881
+      -164.197 -127.41 0.376308
+      -165.809 -137.843 0.916836
+      -174.893 -106.648 0.452236
+      -194.685 -112.002 2.24276
+      -196.793 -141.937 3.90121
+      -214.073 -144.829 4.83432
+      -211.081 -112.491 3.95956
+      -238.848 -127.744 4.82223
+      -256.546 -123.43 5.53622
+      -280.985 -72.8258 4.45053
+      -289.422 -66.8023 3.84726
+      -285.872 -54.368 2.65976
+    }
+  }
+}

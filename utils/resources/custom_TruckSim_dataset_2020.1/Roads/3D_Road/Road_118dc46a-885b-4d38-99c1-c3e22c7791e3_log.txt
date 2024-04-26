@@ -1,0 +1,32 @@
+Run made by VS Road Calculator at 11:09 on April 25, 2024.
+Utility to calculate road and path coordinates for visualization
+Started with simfile: Roads\3D_Road\simfile_road
+
+Include PARSFILE "Roads\3D_Road\Road_118dc46a-885b-4d38-99c1-c3e22c7791e3.par"
+Include PARSFILE "Roads\BuilderSegment\RoadSeg_d71c6bc9-5ef9-4252-96c0-daee4f198755.par"
+ Off-Road Trail #002 <* * * CYBRIX: Segment Builder>
+Used Dataset: Path: Segment Builder; { * * * CYBRIX: Segment Builder } Off-Road Trail #002
+Include PARSFILE "Roads\Center_Z\RdRefZ_535bd10d-8e63-47ac-aff4-0ee32455646d.par"
+Used Dataset: Road: Reference Line Elevation; { * * * CYBRIX: Path Elevation } Off-Road Trail #002
+Include PARSFILE "Roads\dZ_Map\RdMapZ_7120f40a-e2e0-4098-946d-0c5f0c1679b9.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { * * * CYBRIX: Path Off-Center Elevation } Off-Road Trail #002
+Include PARSFILE "Roads\Friction\RdMu_e7dab9d2-e6aa-4758-bc79-19823b5c238c.par"
+Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } Constant: 0.75
+Include PARSFILE "Roads\Shapes\RdShape_fd732d47-09f3-4d86-961b-2da5134afc87.par"
+Used Dataset: Road: Animator Surface Shapes; No Machine-Generated Shapes
+Include PARSFILE "Roads\dZ_Map\RdMapZ_b1a95856-7ca2-4485-93c8-c78df2f5c8d1.par"
+Used Dataset: Road: Off-Center Elevation Map, S-L Grid; { * * * CYBRIX: Path Off-Center Elevation } Off-Road Trail (Bank)
+ Off-Road Trail #002 <* * * CYBRIX: Off-Road>
+Used Dataset: Road: 3D Surface (All Properties); { * * * CYBRIX: Off-Road } Off-Road Trail #002
+
+Time to read input = 0.0022754
+Function ROAD_ZS_TABLE(1) extrapolated (out of range HIGH) for X = 1314.72 m at T = 14.52
+Function ROAD_DZ_CARPET(1) extrapolated (out of range LOW) for X = 0 m at T = 14.52
+Function ROAD_DZ_CARPET(2) extrapolated (out of range LOW) for X = 0 m at T = 14.52
+
+Run stopped at t = 14.52. Stop time reached.
+
+Run started: VS output file = Roads\3D_Road\Road_118dc46a-885b-4d38-99c1-c3e22c7791e3.vsb
+
+Computational time ratio: RTIME = inf (real time)/(simulation time)
+

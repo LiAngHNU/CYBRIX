@@ -1,5 +1,5 @@
 PARSFILE
-#FullDataName Plot: Setup`Longitudinal Calibration: Pbk vs. Time`* * * CYBRIX: Plots
+#FullDataName Plot: Setup`Longitudinal Calibration: Throttle & Pbk vs. Time`* * * CYBRIX: Plots
 
 ADD_ENTITY Plot
 
@@ -10,6 +10,7 @@ PARSFILE Plot\Format\PlotFmt_9c0da54c-ef5e-4a28-a4f7-2b9b79dcd98d.par
 
 
 #MiscYellow0
+PLOTCHANNELS Throttle, Time
 PLOTCHANNELS Pbk_Con, Time
 PLOTCHANNELS PbkCh_L1, Time
 PLOTCHANNELS PbkCh_R1, Time
@@ -26,7 +27,7 @@ XMaxmin Auto
 #RingCtrl8 1
 
 
-PTITLE Longitudinal Calibration: Pbk vs. Time
+PTITLE Longitudinal Calibration: Throttle & Pbk vs. Time
 
 END_ENTITY Plot
 
@@ -37,9 +38,9 @@ END_ENTITY Plot
 #It is fixed in the vehicle Sprung Mass and takes into account the Sprung Mass pitch angle by taking the vector sum of the Sprung Mass Velocity in the Sprung Mass Coordinate System X direction and the Sprung Mass Coordinate System Z direction, and then taking the square root of the sum of the squares.
 #END_EMBEDDED_NOTES
 
-LOG_ENTRY Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Longitudinal Calibration: Pbk vs. Time
+LOG_ENTRY Used Dataset: Plot: Setup; { * * * CYBRIX: Plots } Longitudinal Calibration: Throttle & Pbk vs. Time
 #Library : Plot: Setup
-#DataSet : Longitudinal Calibration: Pbk vs. Time
+#DataSet : Longitudinal Calibration: Throttle & Pbk vs. Time
 #Category: * * * CYBRIX: Plots
 #FileID  : Plot_1160a795-3128-40fc-84bb-149e5f1752be
 #Product : TruckSim 2020.1

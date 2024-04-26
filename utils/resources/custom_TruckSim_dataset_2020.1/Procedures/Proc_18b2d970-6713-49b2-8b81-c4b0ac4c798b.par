@@ -16,11 +16,11 @@ OPT_STOP 0
 TSTART 0
 SSTART 0
 TSTART_WRITE = 0;
-TSTOP 50
+TSTOP 20
 SSTOP =  SSTART + 1 ;
 OPT_DIRECTION 1
-*SPEED 80
-*TSTOP 50
+*SPEED 60
+*TSTOP 20
 *TSTART 0
 *SSTART 0
 *SSTOP 2000
@@ -34,10 +34,10 @@ SPEED_ID_SC = ISPEED
 SPEED_TARGET_COMBINE ADD
 SPEED_TARGET_S_CONSTANT 0
 set_description SPEED_TARGET_ID Procedure: #1003 Calibration: Lateral Characteristc
-SPEED_TARGET_CONSTANT 80
+SPEED_TARGET_CONSTANT 60
 OPT_SC_ENGINE_BRAKING 1
-PARSFILE Control\Steer\StrSW_61423ec6-5cab-4cd3-bb70-dbf2de3c314d.par
-#BlueLink27 Control: Steering (Open Loop)`Sine: 0.1 Hz, 540 deg @10 km/h` * * * CYBRIX: Calibration Signals` , Steering`StrSW_61423ec6-5cab-4cd3-bb70-dbf2de3c314d
+PARSFILE Control\Steer\StrSW_d65afb90-a830-4c1b-be3d-14bd16598b48.par
+#BlueLink27 Control: Steering (Open Loop)`Test Sine @60 km/h: 0.5 Hz,   30 deg` * * * CYBRIX: Calibration Signals` , Steering`StrSW_d65afb90-a830-4c1b-be3d-14bd16598b48
 
 PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
 #BlueLink28 Control: Braking MC Pressure (Open Loop)`Constant: 0 MPa` Constant` , Braking`PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047
@@ -45,8 +45,11 @@ PARSFILE Control\Braking\PbkCon_8621b5c9-f12a-4359-b6c7-9702b0bb4047.par
 PARSFILE Control\Gear_at\GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86.par
 #BlueLink30 Control: Shifting (Closed Loop)`AT (All Available Gears)` Closed-Loop Shifting` , Shifting Control`GearCL_3f60e7d2-b8c4-4d68-a9c4-d897bb3e2a86
 
-PARSFILE Roads\3D_Road\Road_ed040cd3-af50-4189-a95a-5ddc13819823.par
-#BlueLink0 Road: 3D Surface (All Properties)`10 km x 10 km, Mu = 1.0, Flat` * * * CYBRIX: Standard Scenarios` , Miscellaneous`Road_ed040cd3-af50-4189-a95a-5ddc13819823
+PARSFILE Roads\3D_Road\Road_6d3948d4-ab41-4cda-8b37-d14c4bc9167d.par
+#BlueLink0 Road: 3D Surface (All Properties)`5 km Straight, Mu = 1.0, Bumpy` * * * CYBRIX: Standard Scenarios` , Miscellaneous`Road_6d3948d4-ab41-4cda-8b37-d14c4bc9167d
+
+PARSFILE Plot\Setup\Plot_9ff909c6-1dba-4e3f-8bce-987aade9a335.par
+#BlueLink8 Plot: Setup`Common: Yo vs. Xo` * * * CYBRIX: Plots` , Plot`Plot_9ff909c6-1dba-4e3f-8bce-987aade9a335
 
 PARSFILE Plot\Setup\Plot_885095ce-47d9-484b-bef5-a767ed614fe9.par
 #BlueLink9 Plot: Setup`Lateral Calibration: Vy vs. Steer_SW` * * * CYBRIX: Plots` , Plot`Plot_885095ce-47d9-484b-bef5-a767ed614fe9
@@ -73,7 +76,7 @@ PARSFILE Plot\Setup\Plot_a1361a9f-b35c-46ec-8dd2-78b0be045c2d.par
 #BlueLink16 Plot: Setup`Lateral Calibration: AVz vs. Vy` * * * CYBRIX: Plots` , Plot`Plot_a1361a9f-b35c-46ec-8dd2-78b0be045c2d
 
 PARSFILE Plot\Setup\Plot_d4d3da01-c5b3-4983-95a5-e48368d79ce4.par
-#BlueLink17 Plot: Setup`Lateral Calibration: Vx vs. Time` * * * CYBRIX: Plots` , Plot`Plot_d4d3da01-c5b3-4983-95a5-e48368d79ce4
+#BlueLink17 Plot: Setup`Common: Vx vs. Time` * * * CYBRIX: Plots` , Plot`Plot_d4d3da01-c5b3-4983-95a5-e48368d79ce4
 
 
 #EMBEDDED_NOTES

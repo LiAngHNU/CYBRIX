@@ -1,14 +1,14 @@
 PARSFILE
 ! TruckSim 2020.1
 ! Revision 143796, June 26, 2020
-MODEL_LAYOUT S_S
+MODEL_LAYOUT F_S_S
 
 DATASET_TITLE #1002 Calibration: Longitudinal Characteristic
 CATEGORY * * * CYBRIX: Run Controls
 TITLE #1002 Calibration: Longitudinal Characteristic <* * * CYBRIX: Run Controls>
 
 ! Echo: D:\Project Files\CYBRIX\utils\resources\custom_TruckSim_dataset_2020.1\Results\Run_be54c7d5-79d5-468d-8ce8-9054adabce39\LastRun_echo.par
-! This run was made 09:38 on April 18, 2024.
+! This run was made 13:53 on April 26, 2024.
 
 !------------------------------------------------------------------------------------
 ! SYSTEM PARAMETERS (SIMULATION OPTIONS)
@@ -23,9 +23,9 @@ IPRINT             20 ! Print interval: output time step TSTEP_WRITE = TSTEP*IPR
                       ! set IPRINT = 0 for debug (TSTEP_WRITE = T_DT) [L]
 NDIGITS_ECHO       10 ! [D] Max. no. of digits for printing floating-point numbers
 ! NIMPORT           0 ! Number of variables activated for import (read only)
-! NOUT_ANI_LIVE   149 ! Number of variables sent live to animators (read only)
-! NOUT_EXPORT       0 ! Number of output variables activated for export (read only)
-! NOUT_WRITE     1062 ! Number of output variables written to file (read only)
+! NOUT_ANI_LIVE   105 ! Number of variables sent live to animators (read only)
+! NOUT_EXPORT       3 ! Number of output variables activated for export (read only)
+! NOUT_WRITE      870 ! Number of output variables written to file (read only)
 OPT_ALL_WRITE       1 ! Write all outputs to file? 1 -> all, 0 -> only activated
                       ! outputs
 OPT_BUFFER_WRITE    0 ! [D] Retain output data in memory buffer until end of run? 0
@@ -66,19 +66,20 @@ OPT_PAUSE           0 ! [D] Pause at end of run with window open? 0 -> no, 1 -> 
 OPT_SKIP_INIT_DYN   0 ! [D] Skip initial dynamic calculations (for some RT systems)?
                       ! 0 -> no, 1 -> yes
 OPT_SORT_WRITE      1 ! [D] Sort written outputs? 1 -> alphabetical, 0 -> as entered
-OPT_STOP           -1 ! Option for stopping the run: 0 -> stop when T reaches TSTOP;
+OPT_STOP            1 ! Option for stopping the run: 0 -> stop when T reaches TSTOP;
                       ! 1 -> stop when T reaches TSTOP or station reaches SSTOP; -1
                       ! -> run until stopped using VS Commands or external control
 OPT_VS_FILETYPE     2 ! Type of output file: 1-> 64-bit VS, 2-> 32-bit VS, 3 ->
                       ! 32-bit ERD, 4 -> text CSV (no binary), 0 -> no output file
 OPT_WRITE           1 ; - ! [D] Write outputs when T > TSTART_WRITE? 1 -> write, 0
                       ! -> don't write; change this using VS Commands or Events
-! RTIME  0.1762774274 ; - ! CALC -- Computational efficiency (sec/sim. sec)
-TSTART       43.29925 ; s ! Starting time for the simulation clock
+! RTIME  0.1819337227 ; - ! CALC -- Computational efficiency (sec/sim. sec)
+TSTART       12.79925 ; s ! Starting time for the simulation clock
 TSTART_T_EVENT      0 ; s ! [D] Event clock reset time: T_EVENT = T - TSTART_T_EVENT
-TSTART_WRITE 43.29925 ; s ! Start writing outputs when this time is reached
+TSTART_WRITE 12.79925 ; s ! Start writing outputs when this time is reached
 TSTEP          0.0005 ; s ! Time step for numerical integration [L]
 ! TSTEP_WRITE    0.01 ; s ! CALC -- Time interval in output time-series file
+TSTOP             100 ; s ! Stop when this time is reached
 ! T_DT        0.00025 ; s ! CALC -- Time increment between calculations
 
 !------------------------------------------------------------------------------------
@@ -119,13 +120,13 @@ VLOW_STOP        -100 ; km/h ! Minimum allowed absolute speed: stop the run if
 ! Vz, Ax, Ay, and Az are based on the motion of this instant CG for the total laden
 ! (TL) unit.
 
-! H_CG_TL 1004.597479 ; mm ! CALC -- Height of TL CG
-! LX_CG_TL 1491.683217 ; mm ! CALC -- X distance TL CG is behind origin
-! Y_CG_TL -0.007038685298 ; mm ! CALC -- Y coordinate of TL CG
+! H_CG_TL 1007.958682 ; mm ! CALC -- Height of TL CG
+! LX_CG_TL 2044.083085 ; mm ! CALC -- X distance TL CG is behind origin
+! Y_CG_TL -0.06809123033 ; mm ! CALC -- Y coordinate of TL CG
 ! M_TL           6042 ; kg ! CALC -- TL mass
-! IXX_TL  3247.145962 ; kg-m2 ! CALC -- TL roll inertia moment
-! IYY_TL  44949.86992 ; kg-m2 ! CALC -- TL pitch inertia moment
-! IZZ_TL  43886.71593 ; kg-m2 ! CALC -- TL yaw inertia moment
+! IXX_TL  3219.655531 ; kg-m2 ! CALC -- TL roll inertia moment
+! IYY_TL  74197.54417 ; kg-m2 ! CALC -- TL pitch inertia moment
+! IZZ_TL  73162.30536 ; kg-m2 ! CALC -- TL yaw inertia moment
 
 !------------------------------------------------------------------------------------
 ! SPRUNG MASS
@@ -152,6 +153,48 @@ HT_SM            1500 ; mm ! [D] Reference height of sprung mass (maybe for targ
 LEN_SM           3900 ; mm ! Reference length of sprung mass (maybe for target)
 WID_SM           1600 ; mm ! [D] Reference width of sprung mass (maybe for target)
 LX_F_SM          1000 ; mm ! [D] Length from front to control pt (maybe for target)
+
+!------------------------------------------------------------------------------------
+! CHASSIS FRAME TWIST
+!------------------------------------------------------------------------------------
+C_FRAME           100 ; N-m-s/deg ! Torsional damping connecting rails
+H_NODE            520 ; mm ! Height of torsional node above origin [I]
+K_FRAME          1000 ; N-m/deg ! Torsional stiffness connecting rails
+L_FRAME          5000 ; mm ! Longitudinal distance between points used to measure
+                      ! stiffness [I]
+W_FRAME          1000 ; mm ! Lateral distance between points used to measure
+                      ! stiffness [I]
+X_ENG               0 ; mm ! X dist. engine is behind origin [I]
+X_NODE           3000 ; mm ! X dist. torsional node is behind origin [I]
+
+!------------------------------------------------------------------------------------
+! SUSPENDED CAB
+!------------------------------------------------------------------------------------
+! This model includes an optional cab that is suspended by 4 mounts. The mass and
+! inertia properties of the cab are subtracted from the sprung mass, such that the
+! same sprung mass datasets can be used with and without the suspended cab feature.
+! Forces from the mounts are handled with Configurable Functions FD_CAB_MT and
+! FD_CAB_MT.
+
+OPT_SUSP_CAB        1 ! Suspended cab? 0 -> No, 1 -> Yes [I]
+H_CAB_PITCH       875 ; mm ! Height (Z coord.) of cab pitch axis [I]
+H_CAB_ROLL        800 ; mm ! Height (Z coord.) of cab roll axis [I]
+H_CG_CAB         1800 ; mm ! Height (Z coord.) of CG of suspended cab [I]
+H_MOUNTS_F        750 ; mm ! Height (Z coord.) of front cab mounts [I]
+H_MOUNTS_R       1000 ; mm ! Height (Z coord.) of rear cab mounts [I]
+IXX_CAB           500 ; kg-m2 ! Roll moment of inertia of suspended cab [I]
+IYY_CAB           500 ; kg-m2 ! Pitch moment of inertia of suspended cab [I]
+LX_CAB_PITCH     -700 ; mm ! X distance cab pitch axis is behind vehicle origin [I]
+LX_CG_CAB        -500 ; mm ! X distance CG of suspended cab is behind vehicle origin
+                      ! [I]
+LX_MOUNTS_F     -1400 ; mm ! X distance front cab mounts are behind vehicle origin
+                      ! [I]
+LX_MOUNTS_R         0 ; mm ! X distance rear cab mounts are behind vehicle origin
+                      ! [I]
+LY_MOUNTS_F      1000 ; mm ! Lateral spacing between front cab mounts [I]
+LY_MOUNTS_R      1600 ; mm ! Lateral spacing between rear cab mounts [I]
+M_CAB            1000 ; kg ! Mass of suspended cab [I]
+Y_CG_CAB            0 ; mm ! Y coordinate of CG of suspended cab [I]
 
 !------------------------------------------------------------------------------------
 ! PAYLOADS
@@ -239,7 +282,7 @@ IW_XXZZ(2,2)        0 ; kg-m2 ! IXX/IZZ inertia for wheel R2 [I]
 JNC_DESIGN(2,1)     0 ; mm ! Jounce when center of wheel L2 is at H_WC [I]
 JNC_DESIGN(2,2)     0 ; mm ! Jounce when center of wheel R2 is at H_WC [I]
 L_TRACK(2)       1863 ; mm ! Track width, wheel-center to wheel-center, axle 2 [I]
-LX_AXLE(2)       3900 ; mm ! X dist. axle 2 is behind the sprung-mass origin [I]
+LX_AXLE(2)       7100 ; mm ! X dist. axle 2 is behind the sprung-mass origin [I]
 M_US_AXLE(2)      679 ; kg ! Unsteered mass for axle 2 [I]
 M_US_STR(2,1)       0 ; kg ! Steered mass for wheel L2 [I]
 M_US_STR(2,2)       0 ; kg ! Steered mass for wheel R2 [I]
@@ -270,8 +313,8 @@ OPT_SUSP_COMPLIANCE_METHOD(1) 1 ! [D] Subtract offset from each compliance table
                                 ! table as is [I]
 CMP_OFFSET(1,1)     0 ; mm ! Initial compression of external spring L1 [I]
 CMP_OFFSET(1,2)     0 ; mm ! Initial compression of external spring R1 [I]
-! CMP_DESIGN(1,1) 12.54787032 ; mm ! CALC -- Compression at design load, spring L1
-! CMP_DESIGN(1,2) 12.54787032 ; mm ! CALC -- Compression at design load, spring R1
+! CMP_DESIGN(1,1) 11.17290269 ; mm ! CALC -- Compression at design load, spring L1
+! CMP_DESIGN(1,2) 11.17290269 ; mm ! CALC -- Compression at design load, spring R1
 DAUX(1)             0 ; N-m-s/deg ! Auxiliary roll damping, axle 1
 DMP_AX(1,1)         0 ; deg ! [D] Front-view inclination angle for damper L1 [I]
 DMP_AX(1,2)         0 ; deg ! [D] Front-view inclination angle for damper R1 [I]
@@ -285,17 +328,17 @@ SPG_AY(1,1)         0 ; deg ! [D] Side-view inclination angle for spring L1 [I]
 SPG_AY(1,2)         0 ; deg ! [D] Side-view inclination angle for spring R1 [I]
 SPG_LEN(1,1)        0 ; mm ! [D] Length at design for spring L1 [I]
 SPG_LEN(1,2)        0 ; mm ! [D] Length at design for spring R1 [I]
-! FSA_DESIGN(1) 31254.17073 ; N ! CALC -- Design Load (susp., unladen), axle 1
-! FSA_L(1) 31254.17073 ; N ! CALC -- Static suspension load, laden, axle  1
+! FSA_DESIGN(1) 36858.43215 ; N ! CALC -- Design Load (susp., unladen), axle 1
+! FSA_L(1) 36858.43215 ; N ! CALC -- Static suspension load, laden, axle  1
 FS_OFFSET(1,1)      0 ; N ! Force offset subtracted from built-in spring L1 [I]
 FS_OFFSET(1,2)      0 ; N ! Force offset subtracted from built-in spring R1 [I]
-! FS_STATIC(1,1) 15627.08536 ; N ! CALC -- Static spring force, laden, spring L1
-! FS_STATIC(1,2) 15627.08536 ; N ! CALC -- Static spring force, laden, spring R1
-! FZA_L(1) 36588.98833 ; N ! CALC -- Static ground load, laden, axle 1
-! FZA_UL(1) 36588.98833 ; N ! CALC -- Static ground load, unladen, axle 1
-! FZ_STATIC(1,1) 18294.49416 ; N ! CALC -- Static ground force, laden, wheel L1
-! FZ_STATIC(1,2) 18294.49416 ; N ! CALC -- Static ground force, laden, wheel R1
-! KA_ROLL(1) 3695.468318 ; N-m/deg ! CALC -- Total roll stiffness, axle 1
+! FS_STATIC(1,1) 18429.21607 ; N ! CALC -- Static spring force, laden, spring L1
+! FS_STATIC(1,2) 18429.21607 ; N ! CALC -- Static spring force, laden, spring R1
+! FZA_L(1) 42193.24975 ; N ! CALC -- Static ground load, laden, axle 1
+! FZA_UL(1) 42193.24975 ; N ! CALC -- Static ground load, unladen, axle 1
+! FZ_STATIC(1,1) 21096.62487 ; N ! CALC -- Static ground force, laden, wheel L1
+! FZ_STATIC(1,2) 21096.62487 ; N ! CALC -- Static ground force, laden, wheel R1
+! KA_ROLL(1) 3781.05453 ; N-m/deg ! CALC -- Total roll stiffness, axle 1
 L_DAMPERS(1)     1000 ; mm ! Distance between dampers on axle 1 [I]
 Y_DAMPERS(1)        0 ; mm ! [D] Lateral (left) offset of dampers on axle 1 [I]
 L_JNC_STOPS(1)   1000 ; mm ! Distance between jounce stops on axle 1 [I]
@@ -319,8 +362,8 @@ OPT_SUSP_COMPLIANCE_METHOD(2) 1 ! [D] Adjust compliance tables to avoid
                                 ! double-counting? 1 -> Adjust, 0 -> No [I]
 CMP_OFFSET(2,1)     0 ; mm ! Initial compression of external spring L2 [I]
 CMP_OFFSET(2,2)     0 ; mm ! Initial compression of external spring R2 [I]
-! CMP_DESIGN(2,1) 21.38566432 ; mm ! CALC -- Compression at design load, spring L2
-! CMP_DESIGN(2,2) 21.38566432 ; mm ! CALC -- Compression at design load, spring R2
+! CMP_DESIGN(2,1) 27.06152037 ; mm ! CALC -- Compression at design load, spring L2
+! CMP_DESIGN(2,2) 27.06152037 ; mm ! CALC -- Compression at design load, spring R2
 DAUX(2)             0 ; N-m-s/deg ! Auxiliary roll damping, axle 2
 DMP_AX(2,1)         0 ; deg ! [D] Front-view inclination angle for damper L2 [I]
 DMP_AX(2,2)         0 ; deg ! [D] Front-view inclination angle for damper R2 [I]
@@ -334,17 +377,17 @@ SPG_AY(2,1)         0 ; deg ! [D] Side-view inclination angle for spring L2 [I]
 SPG_AY(2,2)         0 ; deg ! [D] Side-view inclination angle for spring R2 [I]
 SPG_LEN(2,1)        0 ; mm ! [D] Length at design for spring L2 [I]
 SPG_LEN(2,2)        0 ; mm ! [D] Length at design for spring R2 [I]
-! FSA_DESIGN(2) 12434.45502 ; N ! CALC -- Design Load (susp., unladen), axle 2
-! FSA_L(2) 12434.45502 ; N ! CALC -- Static suspension load, laden, axle  2
+! FSA_DESIGN(2) 6830.193603 ; N ! CALC -- Design Load (susp., unladen), axle 2
+! FSA_L(2) 6830.193603 ; N ! CALC -- Static suspension load, laden, axle  2
 FS_OFFSET(2,1)      0 ; N ! Force offset subtracted from built-in spring L2 [I]
 FS_OFFSET(2,2)      0 ; N ! Force offset subtracted from built-in spring R2 [I]
-! FS_STATIC(2,1) 6217.227511 ; N ! CALC -- Static spring force, laden, spring L2
-! FS_STATIC(2,2) 6217.227511 ; N ! CALC -- Static spring force, laden, spring R2
-! FZA_L(2) 22662.79097 ; N ! CALC -- Static ground load, laden, axle 2
-! FZA_UL(2) 22662.79097 ; N ! CALC -- Static ground load, unladen, axle 2
-! FZ_STATIC(2,1) 11331.39549 ; N ! CALC -- Static ground force, laden, wheel L2
-! FZ_STATIC(2,2) 11331.39549 ; N ! CALC -- Static ground force, laden, wheel R2
-! KA_ROLL(2) 8908.060565 ; N-m/deg ! CALC -- Total roll stiffness, axle 2
+! FS_STATIC(2,1) 3415.096802 ; N ! CALC -- Static spring force, laden, spring L2
+! FS_STATIC(2,2) 3415.096802 ; N ! CALC -- Static spring force, laden, spring R2
+! FZA_L(2) 17058.52955 ; N ! CALC -- Static ground load, laden, axle 2
+! FZA_UL(2) 17058.52955 ; N ! CALC -- Static ground load, unladen, axle 2
+! FZ_STATIC(2,1) 8529.264777 ; N ! CALC -- Static ground force, laden, wheel L2
+! FZ_STATIC(2,2) 8529.264777 ; N ! CALC -- Static ground force, laden, wheel R2
+! KA_ROLL(2) 8822.474353 ; N-m/deg ! CALC -- Total roll stiffness, axle 2
 L_DAMPERS(2)     1000 ; mm ! Distance between dampers on axle 2 [I]
 Y_DAMPERS(2)        0 ; mm ! [D] Lateral (left) offset of dampers on axle 2 [I]
 L_JNC_STOPS(2)   1000 ; mm ! Distance between jounce stops on axle 2 [I]
@@ -400,7 +443,7 @@ CS_MZ_ROD(1)   0.0006 ; deg/N/m ! Compliance: steer due to tie rod, axle 1
 CS_MZ_SHAFT(1) 0.0001 ; deg/N/m ! Compliance: steering shaft, axle 1
 C_WRAP(1)    0.000186 ; deg/N/m ! Wrap compliance: (rel. axle pitch) / (total wheel
                       ! spin torque), axle 1
-D_GEAR(1)           0 ; N-m-s/deg ! Steering gear viscous damping, axle 1
+D_GEAR(1)          10 ; N-m-s/deg ! Steering gear viscous damping, axle 1
 HYS_GEAR(1)         0 ; N-m ! Steering gear hysteresis, axle 1
 L_KPO(1,1)        100 ; mm ! Lateral kingpin offset to center of wheel L1 [I]
 L_KPO(1,2)        100 ; mm ! Lateral kingpin offset to center of wheel R1 [I]
@@ -649,22 +692,15 @@ LOCKED_DIFF_K(2)   80 ; N-m/deg ! Torsional spring rate for locked 2nd drive axl
                       ! diff [I]
 R_EFF_F_DIFF(2)  0.99 ; - ! Forward efficiency of 2nd drive axle diff [I]
 R_EFF_R_DIFF(2)  0.99 ; - ! Reverse efficiency of 2nd drive axle diff [I]
-R_GEAR_DIFF(2)      5 ; - ! Gear ratio of 2nd drive axle diff [I]
+R_GEAR_DIFF(2)   3.92 ; - ! Gear ratio of 2nd drive axle diff [I]
 IDS(2)          0.013 ; kg-m2 ! Spin inertia of 2nd drive axle diff input shaft [I]
 IHS_L(2)        0.009 ; kg-m2 ! Spin inertia of left half shaft, 2nd drive axle diff
                       ! [I]
 IHS_R(2)        0.009 ; kg-m2 ! Spin inertia of right half shaft, 2nd drive axle
                       ! diff [I]
-OPT_CLUTCH_DIFF(2)  1 ! Clutch control for 2nd drive axle diff: 0 -> table lookup or
-                      ! external, 1 -> Torsen parameters, 2 -> yaw control [I]
-OPT_TORSEN(2)       0 ! Torsen logic for 2nd drive axle diff clutch: 0 -> add
-                      ! initial and sensing torque, 1-> use max of initial and
-                      ! sensing torque [I]
-M_BIAS_DIFF(2)      0 ; - ! Initial torque bias at 2nd drive axle diff [I]
-R_TB_F(2)           3 ; - ! Ratio: torque bias at 2nd drive axle diff. (positive
-                      ! torque input) [I]
-R_TB_R(2)           3 ; - ! Ratio: torque bias at 2nd drive axle diff. (negative
-                      ! torque input) [I]
+OPT_CLUTCH_DIFF(2)  0 ! [D] Clutch control for 2nd drive axle diff: 0 -> table
+                      ! lookup or external, 1 -> Torsen parameters, 2 -> yaw
+                      ! control [I]
 OPT_TWIN_CLUTCH(2)  0 ! [D] Twin clutches on 2nd drive axle diff? 0 -> no, 1 -> yes
                       ! [I]
 
@@ -683,8 +719,8 @@ V_BATTERY_MAX       9 ; V ! Maximum voltage per battery pack [I]
 
 ! The hybrid/electric power management control parameters.
 
-PWR_EV_MODE       300 ; kW ! Maximum power allowance operated with EV mode [I]
-PWR_HEV_DRV_MAX   300 ; kW ! Maximum power available with HEV system (used by speed
+PWR_EV_MODE       390 ; kW ! Maximum power allowance operated with EV mode [I]
+PWR_HEV_DRV_MAX   390 ; kW ! Maximum power available with HEV system (used by speed
                       ! control only) [I]
 KPW_PBK_HEV        16 ; kW/MPa ! Brake power demand per master cylinder control
                       ! pressure [I]
@@ -768,7 +804,7 @@ NROAD_DZ            1 ! Number of ROAD_DZ datasets
 DEFINE_ROADS        1 ! VS Command to define road surfaces
 CURRENT_ROAD_ID     1 ! ROAD_ID during initialization [I]
 
-ROAD_ID(1)          1 ; 10 km x 10 km, Mu = 1.0, Flat
+ROAD_ID(1)          1 ; 5 km Straight, Mu = 1.0, Grade 1
 ROAD_PATH_ID(1)     1 ; PATH_ID for: Straight Path East
 ROAD_SMAX_NEW_ID(1) 0 ! [D] 0 -> No SMAX limit, -1 -> stop if S > ROAD_SMAX, > 0 ->
                       ! switch to road with this ID if S > ROAD_SMAX
@@ -794,6 +830,8 @@ OPT_INIT_PATH       0 ! Set Xo, Yo, and Yaw to match path PATH_ID_DM and LTARG_I
 OPT_DIRECTION       1 ! Travel direction along path PATH_ID_DM: 0 -> set to 1 or -1
                       ! using SSTART and SSTOP values (legacy); 1 -> increasing
                       ! station, -1 -> decreasing station [I]
+SSTOP     1183.739925 ; m ! Use to set OPT_DIRECTION (if OPT_DIRECTION = 0); stop
+                      ! when the vehicle reaches this station (if OPT_STOP = 1)
 
 OPT_DM              1 ! Driver model option: 0 -> no driver model; 1 -> use linear
                       ! dynamic model and 10 preview points; 2 -> same as 1, but
@@ -809,14 +847,13 @@ AV_SW_MAX_DM     1200 ; deg/s ! Limit steering wheel rate for DM
 TLAG_DM             0 ; s ! Lag time in steer controller [I]
 VLOW_DM            10 ; km/h ! Minimum speed for preview dist = V*TPREV
 ! XREF_DM          -0 ; mm ! CALC -- Local X coordinate of DM reference point
-! C_F_DM  5838.161064 ; N/deg ! CALC -- total cornering stiffness, all front tires
-! C_R_DM   3861.99216 ; N/deg ! CALC -- total cornering stiffness, all rear tires
-! IZZ_DM  21705.55708 ; kg-m2 ! CALC -- yaw moment of inertia assumed by DM
-! LX_CG_DM 1491.683217 ; mm ! CALC -- distance between front axle(s) and mass center
-! LX_WB_DM       3900 ; mm ! CALC -- wheelbase
+! C_F_DM  6622.681492 ; N/deg ! CALC -- total cornering stiffness, all front tires
+! C_R_DM  2906.963555 ; N/deg ! CALC -- total cornering stiffness, all rear tires
+! IZZ_DM  62442.34347 ; kg-m2 ! CALC -- yaw moment of inertia assumed by DM
+! LX_CG_DM 2044.083085 ; mm ! CALC -- distance between front axle(s) and mass center
+! LX_WB_DM       7100 ; mm ! CALC -- wheelbase
 ! M_DM           6042 ; kg ! CALC -- mass assumed by DM (total static loads)
 
-INSTALL_DM_OUTPUTS    ! VS Command to install XYZ outputs DM preview point(s)
 ! NPREVIEW          0 ! No. of installed preview sensors for external DM (read only)
 
 !------------------------------------------------------------------------------------
@@ -879,7 +916,44 @@ MAKE_MOTION_SENSOR_OUTPUTS  ! VS Command to define up to 25 output variables for
 !------------------------------------------------------------------------------------
 ! REFERENCE POINTS AND IMPORTED FORCES
 !------------------------------------------------------------------------------------
-! NREF_PT           0 ! Number of installed reference points and forces (read only)
+! NREF_PT           5 ! Number of installed reference points and forces (read only)
+DEFINE_REFERENCE_POINTS 5 ! VS Command to add reference points with imported forces
+
+REFERENCE_POINT_NAME(1) 1 ; Point 1: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(1) 5 ! Type of body where point is located: 1 -> sprung mass, 5 ->
+                      ! suspended cab, 0 -> not used
+OPT_RP_FORCE_N(1)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(1)           500 ; mm ! X coordinate of reference point
+Y_RP(1)             0 ; mm ! Y coordinate of reference point
+Z_RP(1)          1800 ; mm ! Z coordinate of reference point
+
+REFERENCE_POINT_NAME(2) 2 ; Point 2: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(2) 5 ! Type of body where point is located
+OPT_RP_FORCE_N(2)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(2)          1400 ; mm ! X coordinate of reference point
+Y_RP(2)           500 ; mm ! Y coordinate of reference point
+Z_RP(2)           750 ; mm ! Z coordinate of reference point
+
+REFERENCE_POINT_NAME(3) 3 ; Point 3: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(3) 5 ! Type of body where point is located
+OPT_RP_FORCE_N(3)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(3)          1400 ; mm ! X coordinate of reference point
+Y_RP(3)          -500 ; mm ! Y coordinate of reference point
+Z_RP(3)           750 ; mm ! Z coordinate of reference point
+
+REFERENCE_POINT_NAME(4) 4 ; Point 4: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(4) 5 ! Type of body where point is located
+OPT_RP_FORCE_N(4)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(4)            -0 ; mm ! X coordinate of reference point
+Y_RP(4)           800 ; mm ! Y coordinate of reference point
+Z_RP(4)          1000 ; mm ! Z coordinate of reference point
+
+REFERENCE_POINT_NAME(5) 5 ; Point 5: Cab RP at Cab CG and Mounts
+OPT_RP_BODY_TYPE(5) 5 ! Type of body where point is located
+OPT_RP_FORCE_N(5)   0 ! Axes for imported Fx, Fy, Fz: 0 -> body, 1 -> N
+X_RP(5)            -0 ; mm ! X coordinate of reference point
+Y_RP(5)          -800 ; mm ! Y coordinate of reference point
+Z_RP(5)          1000 ; mm ! Z coordinate of reference point
 
 !------------------------------------------------------------------------------------
 ! ABS CONTROLLER
@@ -897,174 +971,6 @@ OPT_ABS_CTRL(2)     2 ! ABS control option, axle 2
 ABS_SLIP_ON(2)    0.1 ; - ! ABS: allow braking for slip below this limit
 ABS_SLIP_OFF(2)   0.2 ; - ! ABS: release brake for slip above this limit
 ABS_VMIN(2)         6 ; km/h ! Disable ABS for speed below this limit
-
-!------------------------------------------------------------------------------------
-! MOVING OBJECTS
-!------------------------------------------------------------------------------------
-! Up to 200 moving objects can be installed to provide more detailed animations
-! and/or targets for ADAS Range and Detection sensors. The locations and
-! orientations of these objects can be controlled with variables imported from
-! external software or with VS Commands, using either global X-Y-Z coordinates or
-! path/road S and L coordinates. If indices shown below are not used, e.g., (2),
-! the current value of the index IOBJECT is used to identify the object associated
-! with the parameter when reading data. If polygonal vertices are used, the vertex
-! coordinates are provided with POLY_SHAPE_TABLE datasets.
-
-! NOBJECT          10 ! Number of installed moving objects (read only)
-DEFINE_MOVING_OBJECTS 10 ! VS Command to define moving objects
-
-OBJECT_NAME(1)      1 ; 10 Driver Preview Points, Set by DM, Object #1
-IUNIT_OBJ(1)        0 ! [D] Attach object to sprung mass of this vehicle unit, or 0
-                      ! -> don't attach to a sprung mass [I]
-PATH_ID_OBJ(1)      0 ! PATH_ID used to define location with S, L, Hdg; or 0 ->
-                      ! define with global X, Y, Yaw [I]
-ROAD_ID_OBJ(1)      1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(1)   1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(1)    1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(1)    0 ! Does this object have a target shape, even though there are
-                      ! no sensors? 1 -> yes, 0 -> no
-MsgObj_1            0 ; - ! Output: User-defined Message (code) for object
-S_RdO_1   518.6003366 ; m ! Output: Station of object on road path
-TypeO_1             0 ; - ! Output: User-defined Type (code) for object
-V_Obj_1             0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_1   518.6003366 ; m ! Output: X coordinate of object 1
-Y_Obj_1             0 ; m ! Output: Y coordinate of object 1
-YawO_1              0 ; deg ! Output and possibly ODE SV: Yaw angle of object
-
-OBJECT_NAME(2)      2 ; 10 Driver Preview Points, Set by DM, Object #2
-IUNIT_OBJ(2)        0 ! [D] Attach to current SM, or 0 -> don't attach to an SM [I]
-PATH_ID_OBJ(2)      0 ! PATH_ID used to define location, or 0 -> global X-Y-Yaw [I]
-ROAD_ID_OBJ(2)      1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(2)   1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(2)    1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(2)    0 ! Is there a target shape? 1 -> yes, 0 -> no
-MsgObj_2            0 ; - ! Output: User-defined Message (code) for object
-S_RdO_2   521.9336855 ; m ! Output: Station of object on road path
-TypeO_2             0 ; - ! Output: User-defined Type (code) for object
-V_Obj_2             0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_2   521.9336855 ; m ! Output: X coordinate of object 2
-Y_Obj_2             0 ; m ! Output: Y coordinate of object 2
-YawO_2              0 ; deg ! Output and possibly ODE SV: Yaw angle of object
-
-OBJECT_NAME(3)      3 ; 10 Driver Preview Points, Set by DM, Object #3
-IUNIT_OBJ(3)        0 ! [D] Attach to current SM, or 0 -> don't attach to an SM [I]
-PATH_ID_OBJ(3)      0 ! PATH_ID used to define location, or 0 -> global X-Y-Yaw [I]
-ROAD_ID_OBJ(3)      1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(3)   1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(3)    1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(3)    0 ! Is there a target shape? 1 -> yes, 0 -> no
-MsgObj_3            0 ; - ! Output: User-defined Message (code) for object
-S_RdO_3   525.2670345 ; m ! Output: Station of object on road path
-TypeO_3             0 ; - ! Output: User-defined Type (code) for object
-V_Obj_3             0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_3   525.2670345 ; m ! Output: X coordinate of object 3
-Y_Obj_3             0 ; m ! Output: Y coordinate of object 3
-YawO_3              0 ; deg ! Output and possibly ODE SV: Yaw angle of object
-
-OBJECT_NAME(4)      4 ; 10 Driver Preview Points, Set by DM, Object #4
-IUNIT_OBJ(4)        0 ! [D] Attach to current SM, or 0 -> don't attach to an SM [I]
-PATH_ID_OBJ(4)      0 ! PATH_ID used to define location, or 0 -> global X-Y-Yaw [I]
-ROAD_ID_OBJ(4)      1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(4)   1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(4)    1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(4)    0 ! Is there a target shape? 1 -> yes, 0 -> no
-MsgObj_4            0 ; - ! Output: User-defined Message (code) for object
-S_RdO_4   528.6003834 ; m ! Output: Station of object on road path
-TypeO_4             0 ; - ! Output: User-defined Type (code) for object
-V_Obj_4             0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_4   528.6003834 ; m ! Output: X coordinate of object 4
-Y_Obj_4             0 ; m ! Output: Y coordinate of object 4
-YawO_4              0 ; deg ! Output and possibly ODE SV: Yaw angle of object
-
-OBJECT_NAME(5)      5 ; 10 Driver Preview Points, Set by DM, Object #5
-IUNIT_OBJ(5)        0 ! [D] Attach to current SM, or 0 -> don't attach to an SM [I]
-PATH_ID_OBJ(5)      0 ! PATH_ID used to define location, or 0 -> global X-Y-Yaw [I]
-ROAD_ID_OBJ(5)      1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(5)   1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(5)    1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(5)    0 ! Is there a target shape? 1 -> yes, 0 -> no
-MsgObj_5            0 ; - ! Output: User-defined Message (code) for object
-S_RdO_5   531.9337323 ; m ! Output: Station of object on road path
-TypeO_5             0 ; - ! Output: User-defined Type (code) for object
-V_Obj_5             0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_5   531.9337323 ; m ! Output: X coordinate of object 5
-Y_Obj_5             0 ; m ! Output: Y coordinate of object 5
-YawO_5              0 ; deg ! Output and possibly ODE SV: Yaw angle of object
-
-OBJECT_NAME(6)      6 ; 10 Driver Preview Points, Set by DM, Object #6
-IUNIT_OBJ(6)        0 ! [D] Attach to current SM, or 0 -> don't attach to an SM [I]
-PATH_ID_OBJ(6)      0 ! PATH_ID used to define location, or 0 -> global X-Y-Yaw [I]
-ROAD_ID_OBJ(6)      1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(6)   1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(6)    1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(6)    0 ! Is there a target shape? 1 -> yes, 0 -> no
-MsgObj_6            0 ; - ! Output: User-defined Message (code) for object
-S_RdO_6   535.2670812 ; m ! Output: Station of object on road path
-TypeO_6             0 ; - ! Output: User-defined Type (code) for object
-V_Obj_6             0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_6   535.2670812 ; m ! Output: X coordinate of object 6
-Y_Obj_6             0 ; m ! Output: Y coordinate of object 6
-YawO_6              0 ; deg ! Output and possibly ODE SV: Yaw angle of object
-
-OBJECT_NAME(7)      7 ; 10 Driver Preview Points, Set by DM, Object #7
-IUNIT_OBJ(7)        0 ! [D] Attach to current SM, or 0 -> don't attach to an SM [I]
-PATH_ID_OBJ(7)      0 ! PATH_ID used to define location, or 0 -> global X-Y-Yaw [I]
-ROAD_ID_OBJ(7)      1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(7)   1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(7)    1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(7)    0 ! Is there a target shape? 1 -> yes, 0 -> no
-MsgObj_7            0 ; - ! Output: User-defined Message (code) for object
-S_RdO_7   538.6004302 ; m ! Output: Station of object on road path
-TypeO_7             0 ; - ! Output: User-defined Type (code) for object
-V_Obj_7             0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_7   538.6004302 ; m ! Output: X coordinate of object 7
-Y_Obj_7             0 ; m ! Output: Y coordinate of object 7
-YawO_7              0 ; deg ! Output and possibly ODE SV: Yaw angle of object
-
-OBJECT_NAME(8)      8 ; 10 Driver Preview Points, Set by DM, Object #8
-IUNIT_OBJ(8)        0 ! [D] Attach to current SM, or 0 -> don't attach to an SM [I]
-PATH_ID_OBJ(8)      0 ! PATH_ID used to define location, or 0 -> global X-Y-Yaw [I]
-ROAD_ID_OBJ(8)      1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(8)   1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(8)    1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(8)    0 ! Is there a target shape? 1 -> yes, 0 -> no
-MsgObj_8            0 ; - ! Output: User-defined Message (code) for object
-S_RdO_8   541.9337791 ; m ! Output: Station of object on road path
-TypeO_8             0 ; - ! Output: User-defined Type (code) for object
-V_Obj_8             0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_8   541.9337791 ; m ! Output: X coordinate of object 8
-Y_Obj_8             0 ; m ! Output: Y coordinate of object 8
-YawO_8              0 ; deg ! Output and possibly ODE SV: Yaw angle of object
-
-OBJECT_NAME(9)      9 ; 10 Driver Preview Points, Set by DM, Object #9
-IUNIT_OBJ(9)        0 ! [D] Attach to current SM, or 0 -> don't attach to an SM [I]
-PATH_ID_OBJ(9)      0 ! PATH_ID used to define location, or 0 -> global X-Y-Yaw [I]
-ROAD_ID_OBJ(9)      1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(9)   1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(9)    1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(9)    0 ! Is there a target shape? 1 -> yes, 0 -> no
-MsgObj_9            0 ; - ! Output: User-defined Message (code) for object
-S_RdO_9    545.267128 ; m ! Output: Station of object on road path
-TypeO_9             0 ; - ! Output: User-defined Type (code) for object
-V_Obj_9             0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_9    545.267128 ; m ! Output: X coordinate of object 9
-Y_Obj_9             0 ; m ! Output: Y coordinate of object 9
-YawO_9              0 ; deg ! Output and possibly ODE SV: Yaw angle of object
-
-OBJECT_NAME(10)    10 ; 10 Driver Preview Points, Set by DM, Object #10
-IUNIT_OBJ(10)       0 ! [D] Attach to current SM, or 0 -> don't attach to an SM [I]
-PATH_ID_OBJ(10)     0 ! PATH_ID used to define location, or 0 -> global X-Y-Yaw [I]
-ROAD_ID_OBJ(10)     1 ! ROAD_ID of road surface, or 0 -> set Z, pitch, roll [I]
-OPT_ROAD_PITCH(10)  1 ! [D] Get pitch from road? 1 -> yes, 0 -> no
-OPT_ROAD_ROLL(10)   1 ! [D] Get roll from road? 1 -> yes, 0 -> no
-OPT_SHAPE_OBJ(10)   0 ! Is there a target shape? 1 -> yes, 0 -> no
-MsgObj_10           0 ; - ! Output: User-defined Message (code) for object
-S_RdO_10  548.6004769 ; m ! Output: Station of object on road path
-TypeO_10            0 ; - ! Output: User-defined Type (code) for object
-V_Obj_10            0 ; km/h ! Output and possibly ODE SV: Speed of object
-X_Obj_10  548.6004769 ; m ! Output: X coordinate of object 10
-Y_Obj_10            0 ; m ! Output: Y coordinate of object 10
-YawO_10             0 ; deg ! Output and possibly ODE SV: Yaw angle of object
 
 !------------------------------------------------------------------------------------
 ! CONFIGURABLE FUNCTIONS
@@ -1194,6 +1100,37 @@ CI_MZ_OFFSET(2,2)   0 ; deg ! Offset added (after gain) to get inclination
                       ! displacement
 M_START_CI_MZ(2,2)  0 ; N-m ! Offset subtracted from moment
 M_SCALE_CI_MZ(2,2)  1 ! Scale factor divided into (moment - M_START_CI_MZ)
+
+! CLUTCH_CONTROL_DIFF: Differential clutch control input based on total torque
+! applied to both output shafts. Normalized clutch input is a function of torque
+! (CONSTANT, COEFFICIENT, or TABLE). Alternatively, a custom equation can be defined
+! at runtime. Normalized clutch input from the calculation can be adjusted with
+! CLUTCH_CONTROL_DIFF_GAIN and CLUTCH_CONTROL_DIFF_OFFSET. Torque used in the
+! calculation can be adjusted with M_SCALE_CL_CON_DIFF and M_START_CL_CON_DIFF. This
+! configurable function supports 9 datasets; if indices shown below are not used,
+! e.g., (2), the current value of the index IDIFF is used to identify the dataset
+! when reading data.
+
+CLUTCH_CONTROL_DIFF_CONSTANT(2) 1 ; - ! [D] Constant normalized clutch input, 2nd
+                                  ! drive axle diff
+CLUTCH_CONTROL_DIFF_GAIN(2) 1 ! Gain multiplied with calculated value to get
+                              ! normalized clutch input
+CLUTCH_CONTROL_DIFF_OFFSET(2) 0 ; - ! Offset added (after gain) to get normalized
+                                ! clutch input
+
+! CLUTCH_TORQUE_DIFF: Available torque for differential clutch. Available torque is
+! a function of normalized clutch input (CONSTANT, COEFFICIENT, or TABLE).
+! Alternatively, a custom equation can be defined at runtime. Available torque from
+! the calculation can be adjusted with CLUTCH_TORQUE_DIFF_GAIN and
+! CLUTCH_TORQUE_DIFF_OFFSET. Normalized clutch input used in the calculation can be
+! adjusted with CON_SCALE_CL_TORQ_DIFF and CON_START_CL_TORQ_DIFF. This configurable
+! function supports 9 datasets; if indices shown below are not used, e.g., (2), the
+! current value of the index IDIFF is used to identify the dataset when reading data.
+
+CLUTCH_TORQUE_DIFF_CONSTANT(2) 0 ; N-m ! [D] Constant available torque, 2nd drive
+                                 ! axle diff
+CLUTCH_TORQUE_DIFF_OFFSET(2) 0 ; N-m ! Offset added (after gain) to get available
+                               ! torque
 
 ! CMP_DAMP: Damper compression. Damper compression is a function of jounce at wheel
 ! (CONSTANT, COEFFICIENT, or TABLE). Damper compression from the calculation can be
@@ -1573,6 +1510,53 @@ FD_OFFSET(2,2)      0 ; N ! Offset added (after gain) to get damper force
 CMP_R_START_FD(2,2) 0 ; mm/s ! Offset subtracted from compression speed
 CMP_R_SCALE_FD(2,2) 1 ! Scale factor divided into (compression speed -
                       ! CMP_R_START_FD)
+
+! FD_CAB_MT: Cab mount damper vertical force. Damper force is a function of
+! compression rate (COEFFICIENT or TABLE). Alternatively, a custom equation can be
+! defined at runtime. Damper force from the calculation can be adjusted with
+! FD_CAB_MT_GAIN and FD_CAB_MT_OFFSET. Compression rate used in the calculation can
+! be adjusted with CMP_R_SCALE_FD_CAB_MT and CMP_R_START_FD_CAB_MT. This configurable
+! function supports 2 datasets; if indices shown below are not used, e.g., (2), the
+! current value of the index IMOUNTROW is used to identify the dataset when reading
+! data.
+
+FD_CAB_MT_COEFFICIENT(1) 100 ! Coefficient: damper force per unit compression rate
+                             ! (N/[mm/s])
+FD_CAB_MT_GAIN(1)   1 ! Gain multiplied with calculated value to get damper force
+FD_CAB_MT_OFFSET(1) 0 ; N ! Offset added (after gain) to get damper force
+CMP_R_START_FD_CAB_MT(1) 0 ; mm/s ! Offset subtracted from compression rate
+CMP_R_SCALE_FD_CAB_MT(1) 1 ! Scale factor divided into (compression rate -
+                           ! CMP_R_START_FD_CAB_MT)
+
+FD_CAB_MT_COEFFICIENT(2) 100 ! Coefficient: damper force per unit compression rate
+                             ! (N/[mm/s])
+FD_CAB_MT_GAIN(2)   1 ! Gain multiplied with calculated value to get damper force
+FD_CAB_MT_OFFSET(2) 0 ; N ! Offset added (after gain) to get damper force
+CMP_R_START_FD_CAB_MT(2) 0 ; mm/s ! Offset subtracted from compression rate
+CMP_R_SCALE_FD_CAB_MT(2) 1 ! Scale factor divided into (compression rate -
+                           ! CMP_R_START_FD_CAB_MT)
+
+! FS_CAB_MT: Cab mount spring vertical force. Spring force is a function of
+! compression (COEFFICIENT or TABLE). Spring force from the calculation can be
+! adjusted with FS_CAB_MT_GAIN and FS_CAB_MT_OFFSET. Compression used in the
+! calculation can be adjusted with CMP_SCALE_FS_CAB_MT and CMP_START_FS_CAB_MT. An
+! inverse version of this function is used internally. This configurable function
+! supports 2 datasets; if indices shown below are not used, e.g., (2), the current
+! value of the index IMOUNTROW is used to identify the dataset when reading data.
+
+FS_CAB_MT_COEFFICIENT(1) 100 ! Coefficient: spring force per unit compression (N/mm)
+FS_CAB_MT_GAIN(1)   1 ! Gain multiplied with calculated value to get spring force
+FS_CAB_MT_OFFSET(1) 0 ; N ! Offset added (after gain) to get spring force
+CMP_START_FS_CAB_MT(1) 0 ; mm ! Offset subtracted from compression
+CMP_SCALE_FS_CAB_MT(1) 1 ! Scale factor divided into (compression -
+                         ! CMP_START_FS_CAB_MT)
+
+FS_CAB_MT_COEFFICIENT(2) 100 ! Coefficient: spring force per unit compression (N/mm)
+FS_CAB_MT_GAIN(2)   1 ! Gain multiplied with calculated value to get spring force
+FS_CAB_MT_OFFSET(2) 0 ; N ! Offset added (after gain) to get spring force
+CMP_START_FS_CAB_MT(2) 0 ; mm ! Offset subtracted from compression
+CMP_SCALE_FS_CAB_MT(2) 1 ! Scale factor divided into (compression -
+                         ! CMP_START_FS_CAB_MT)
 
 ! FS_COMP: Compression (upper) envelope of suspension spring force (1 side). Spring
 ! force can be a nonlinear CARPET function of static spring force and spring
@@ -3336,17 +3320,17 @@ FZ_SCALE_L_RELAX_Y(2,2,2) 30000 ! Scale factor divided into Fz
 
 ! 1D table: col 1 = motor speed (rpm), col 2 = Motor full torque (N-m)
 MMOTOR_MAX_TABLE(1) LINEAR ! linear interpolation and extrapolation
- 0, 3050
- 500, 3050
- 1000, 2894.3
- 1500, 1921.9
- 2000, 1438.7
- 2500, 1149.1
- 3000, 956.49
- 3500, 819.17
- 4000, 717.15
- 4500, 647.34
- 6000, 477
+ 0, 3965
+ 500, 3965
+ 1000, 3762.6
+ 1500, 2498.5
+ 2000, 1870.3
+ 2500, 1493.8
+ 3000, 1243.4
+ 3500, 1064.9
+ 4000, 932.29
+ 4500, 841.54
+ 6000, 620.1
 ENDTABLE
 MMOTOR_MAX_GAIN(1)  1 ! Gain multiplied with calculated value to get Motor full
                       ! torque
@@ -3844,10 +3828,47 @@ FZ_SCALE_MZ_TIRE(2,2,2) 1 ! Scale factor divided into (Fz - FZ_START_MZ_TIRE)
 ! supports 9 datasets; if indices shown below are not used, e.g., (2), the current
 ! value of the index IDIFF is used to identify the dataset when reading data.
 
-M_DIFF_VISC_CONSTANT(2) 0 ; N-m ! Constant this torque difference, 2nd drive axle
-                          ! diff
+! 1D table: col 1 = speed difference (rpm), col 2 = this torque difference (N-m)
+M_DIFF_VISC_TABLE(2) SPLINE ! 2nd drive axle diff
+ -1200, 402.88
+ -1080, 382.21
+ -960, 360.35
+ -840, 337.07
+ -720, 312.07
+ -600, 284.88
+ -540, 270.26
+ -480, 254.8
+ -420, 238.35
+ -360, 220.67
+ -300, 201.44
+ -240, 180.17
+ -180, 156.03
+ -120, 127.4
+ -60, 90.09
+ 0, 0
+ 60, -90.09
+ 120, -127.4
+ 180, -156.03
+ 240, -180.17
+ 300, -201.44
+ 360, -220.67
+ 420, -238.35
+ 480, -254.8
+ 540, -270.26
+ 600, -284.88
+ 720, -312.07
+ 840, -337.07
+ 960, -360.35
+ 1080, -382.21
+ 1200, -402.88
+ENDTABLE
+M_DIFF_VISC_GAIN(2) 1 ! Gain multiplied with calculated value to get this torque
+                      ! difference
 M_DIFF_VISC_OFFSET(2) 0 ; N-m ! Offset added (after gain) to get this torque
                         ! difference
+DSPIN_START_M_DIFF_VISC(2) 0 ; rpm ! Offset subtracted from speed difference
+DSPIN_SCALE_M_DIFF_VISC(2) 1 ! Scale factor divided into (speed difference -
+                             ! DSPIN_START_M_DIFF_VISC)
 
 ! M_SW: Steering wheel torque. Torque at steering wheel can be a nonlinear CARPET
 ! function of vehicle speed and total steering torque about kingpin axes of both
@@ -3949,7 +3970,7 @@ PBK_DL_FZ_CONSTANT(2,2) 0 ; MPa ! Constant delivery pressure component due to
 ! SPIN_SCALE_PWR_DRV_THRT and SPIN_START_PWR_DRV_THRT. An inverse version of this
 ! function is used internally.
 
-PWR_DRV_THROTTLE_COEFFICIENT 300 ! Coefficient: Driving power per unit Throttle
+PWR_DRV_THROTTLE_COEFFICIENT 390 ! Coefficient: Driving power per unit Throttle
                                  ! pedal position (kW/-)
 PWR_DRV_THROTTLE_GAIN 1 ! Gain multiplied with calculated value to get Driving power
 PWR_DRV_THROTTLE_OFFSET 0 ; kW ! Offset added (after gain) to get Driving power
@@ -4429,7 +4450,7 @@ SUSP_LAT_AXLE_JOUNCE_CONSTANT(2) 0 ; mm ! Constant Y movement component due to
 ! can be adjusted with THROTTLE_ENGINE_GAIN and THROTTLE_ENGINE_OFFSET. Time used in
 ! the calculation can be adjusted with TSCALE_THROTTLE and TSTART_THROTTLE.
 
-THROTTLE_ENGINE_CONSTANT 0.1 ; - ! Constant normalized throttle input
+THROTTLE_ENGINE_CONSTANT 1 ; - ! Constant normalized throttle input
 THROTTLE_ENGINE_GAIN 1 ! Gain multiplied with calculated value to get normalized
                        ! throttle input
 THROTTLE_ENGINE_OFFSET 0 ; - ! Offset added (after gain) to get normalized throttle
@@ -4524,904 +4545,1007 @@ WIND_SPEED_S_CONSTANT 1 ; - ! [D] Constant wind speed component due to station
 
 ! 1D table: col 1 = distance travelled (m), col 2 = elevation increment (mm)
 Z_PROFILE_TABLE(1) LINEAR_LOOP ! linear interpolation, repeat in loop
- 0.3048, 0.406
- 0.4572, 0.1777932488
- 0.6096, 0.07527383606
- 0.762, 0.3543091085
- 0.9144, 0.5548917594
- 1.0668, 0.2760328901
- 1.2192, 0.04920215595
- 1.3716, 0.1694384089
- 1.524, 0.2638413752
- 1.6764, 0.2128593832
- 1.8288, 0.5081367103
- 1.9812, 0.7304598902
- 2.1336, 0.7343670472
- 2.286, 0.9388870937
- 2.4384, 1.226505963
- 2.5908, 1.616167638
- 2.7432, 1.622565394
- 2.8956, 1.622660925
- 3.048, 1.274036457
- 3.2004, 1.047215781
- 3.3528, 0.9901105665
- 3.5052, 0.7573987463
- 3.6576, 0.7724207273
- 3.81, 1.073428591
- 3.9624, 1.184961263
- 4.1148, 1.168616576
- 4.2672, 0.6909445938
- 4.4196, 0.2269598207
- 4.572, 0.7783336652
- 4.7244, 1.2112894
- 4.8768, 1.203259069
- 5.0292, 1.299808156
- 5.1816, 1.333754339
- 5.334, 1.661730022
- 5.4864, 1.962461733
- 5.6388, 1.837505987
- 5.7912, 1.78166573
- 5.9436, 1.71065893
- 6.096, 1.75927
- 6.2484, 1.937334976
- 6.4008, 2.046223645
- 6.5532, 1.917907756
- 6.7056, 1.645969557
- 6.858, 1.726746108
- 7.0104, 1.916448633
- 7.1628, 1.736204534
- 7.3152, 1.324034563
- 7.4676, 1.389517558
- 7.62, 1.726510286
- 7.7724, 1.597634024
- 7.9248, 1.867
- 8.0772, 1.85237681
- 8.2296, 1.378362951
- 8.382, 1.683189227
- 8.5344, 1.71617606
- 8.6868, 1.511630467
- 8.8392, 1.505139788
- 8.9916, 1.241593257
- 9.144, 1.283756282
- 9.2964, 1.62302305
- 9.4488, 1.512896788
- 9.6012, 1.234419158
- 9.7536, 1.482887176
- 9.906, 2.00909162
- 10.0584, 2.100822241
- 10.2108, 1.669565226
- 10.3632, 1.298274075
- 10.5156, 1.316914058
- 10.668, 1.899527178
- 10.8204, 2.109922945
- 10.9728, 1.863006661
- 11.1252, 1.429455307
- 11.2776, 1.330986345
- 11.43, 1.584439731
- 11.5824, 1.76249986
- 11.7348, 1.47181672
- 11.8872, 1.086197418
- 12.0396, 1.044361403
- 12.192, 0.8528349156
- 12.3444, 0.516151261
- 12.4968, 0.2354709497
- 12.6492, 0.4034833501
- 12.8016, 0.4388037629
- 12.954, 0.1234489217
- 13.1064, -0.3025635775
- 13.2588, -0.3714315235
- 13.4112, -0.1404149842
- 13.5636, 0.2567709559
- 13.716, 0.740740004
- 13.8684, 0.3609511459
- 14.0208, 0.03312550827
- 14.1732, 0.1442099265
- 14.3256, 0.2244681715
- 14.478, 0.7551980841
- 14.6304, 0.3120038467
- 14.7828, -0.5159717995
- 14.9352, -0.5135078811
- 15.0876, -0.1541435711
- 15.24, -0.1787518165
- 15.3924, -0.203269418
- 15.5448, -0.076
- 15.6972, -0.356
- 15.8496, -0.229
- 16.002, -0.178
- 16.1544, 0.152
- 16.3068, 0.203
- 16.4592, -0.229
- 16.6116, 0.279
- 16.764, 1.016
- 16.9164, 0.584
- 17.0688, -0.127
- 17.2212, 0.076
- 17.3736, 0.838
- 17.526, 1.372
- 17.6784, 0.991
- 17.8308, 0.406
- 17.9832, 0.254
- 18.1356, 0.559
- 18.288, 0.229
- 18.4404, 0.102
- 18.5928, 0.076
- 18.7452, -0.406
- 18.8976, 0.152
- 19.05, 0.051
- 19.2024, -0.686
- 19.3548, -0.838
- 19.5072, -0.991
- 19.6596, -1.346
- 19.812, -1.372
- 19.9644, -1.803
- 20.1168, -2.591
- 20.2692, -2.616
- 20.4216, -2.261
- 20.574, -1.981
- 20.7264, -2.083
- 20.8788, -2.083
- 21.0312, -2.235
- 21.1836, -2.286
- 21.336, -2.489
- 21.4884, -2.642
- 21.6408, -2.464
- 21.7932, -2.413
- 21.9456, -2.337
- 22.098, -2.134
- 22.2504, -1.93
- 22.4028, -2.337
- 22.5552, -2.464
- 22.7076, -2.362
- 22.86, -2.591
- 23.0124, -2.692
- 23.1648, -2.413
- 23.3172, -2.235
- 23.4696, -2.159
- 23.622, -2.438
- 23.7744, -2.718
- 23.9268, -2.794
- 24.0792, -3.048
- 24.2316, -2.743
- 24.384, -2.388
- 24.5364, -2.21
- 24.6888, -2.311
- 24.8412, -2.311
- 24.9936, -1.905
- 25.146, -1.854
- 25.2984, -2.362
- 25.4508, -2.184
- 25.6032, -2.083
- 25.7556, -2.438
- 25.908, -2.184
- 26.0604, -1.93
- 26.2128, -1.829
- 26.3652, -2.057
- 26.5176, -2.413
- 26.67, -2.057
- 26.8224, -2.057
- 26.9748, -2.438
- 27.1272, -1.854
- 27.2796, -1.346
- 27.432, -1.778
- 27.5844, -2.261
- 27.7368, -1.981
- 27.8892, -1.524
- 28.0416, -1.499
- 28.194, -1.727
- 28.3464, -1.981
- 28.4988, -1.956
- 28.6512, -1.956
- 28.8036, -1.676
- 28.956, -1.168
- 29.1084, -1.448
- 29.2608, -1.88
- 29.4132, -1.753
- 29.5656, -1.981
- 29.718, -2.21
- 29.8704, -2.159
- 30.0228, -2.337
- 30.1752, -2.286
- 30.3276, -2.083
- 30.48, -2.54
- 30.6324, -2.87
- 30.7848, -2.464
- 30.9372, -2.286
- 31.0896, -2.083
- 31.242, -1.905
- 31.3944, -2.413
- 31.5468, -2.819
- 31.6992, -2.489
- 31.8516, -2.311
- 32.004, -2.718
- 32.1564, -2.997
- 32.3088, -2.997
- 32.4612, -2.489
- 32.6136, -2.235
- 32.766, -2.743
- 32.9184, -2.997
- 33.0708, -2.769
- 33.2232, -2.083
- 33.3756, -2.413
- 33.528, -2.388
- 33.6804, -1.956
- 33.8328, -2.286
- 33.9852, -2.057
- 34.1376, -1.88
- 34.29, -1.499
- 34.4424, -1.372
- 34.5948, -1.448
- 34.7472, -0.991
- 34.8996, -0.762
- 35.052, -0.737
- 35.2044, -0.559
- 35.3568, -0.813
- 35.5092, -0.737
- 35.6616, -0.152
- 35.814, 0.025
- 35.9664, 0
- 36.1188, -0.178
- 36.2712, 0.025
- 36.4236, 0.483
- 36.576, 0.533
- 36.7284, 0.711
- 36.8808, 1.092
- 37.0332, 1.016
- 37.1856, 0.914
- 37.338, 0.889
- 37.4904, 1.321
- 37.6428, 1.829
- 37.7952, 1.854
- 37.9476, 1.981
- 38.1, 2.362
- 38.2524, 2.769
- 38.4048, 2.438
- 38.5572, 2.083
- 38.7096, 2.134
- 38.862, 2.108
- 39.0144, 2.515
- 39.1668, 2.337
- 39.3192, 2.159
- 39.4716, 2.235
- 39.624, 1.6
- 39.7764, 1.067
- 39.9288, 1.143
- 40.0812, 0.991
- 40.2336, 0.432
- 40.386, 0.076
- 40.5384, 0
- 40.6908, -0.051
- 40.8432, -0.381
- 40.9956, -0.635
- 41.148, -0.838
- 41.3004, -1.346
- 41.4528, -1.422
- 41.6052, -1.651
- 41.7576, -2.235
- 41.91, -2.362
- 42.0624, -2.87
- 42.2148, -3.073
- 42.3672, -3.2
- 42.5196, -3.607
- 42.672, -3.353
- 42.8244, -3.073
- 42.9768, -3.048
- 43.1292, -3.226
- 43.2816, -3.531
- 43.434, -3.124
- 43.5864, -2.591
- 43.7388, -2.489
- 43.8912, -2.261
- 44.0436, -2.261
- 44.196, -2.388
- 44.3484, -2.464
- 44.5008, -2.184
- 44.6532, -1.778
- 44.8056, -1.956
- 44.958, -1.956
- 45.1104, -1.626
- 45.2628, -1.6
- 45.4152, -1.753
- 45.5676, -1.626
- 45.72, -1.321
- 45.8724, -1.321
- 46.0248, -1.245
- 46.1772, -0.864
- 46.3296, -0.838
- 46.482, -1.041
- 46.6344, -0.914
- 46.7868, -0.838
- 46.9392, -0.66
- 47.0916, -0.787
- 47.244, -1.143
- 47.3964, -0.762
- 47.5488, -0.635
- 47.7012, -0.483
- 47.8536, -0.152
- 48.006, 0.025
- 48.1584, -0.102
- 48.3108, -0.203
- 48.4632, 0.127
- 48.6156, 0.584
- 48.768, 0.584
- 48.9204, 0.508
- 49.0728, 1.219
- 49.2252, 1.956
- 49.3776, 2.489
- 49.53, 2.489
- 49.6824, 2.261
- 49.8348, 2.642
- 49.9872, 2.692
- 50.1396, 2.489
- 50.292, 2.489
- 50.4444, 2.083
- 50.5968, 2.362
- 50.7492, 2.921
- 50.9016, 2.718
- 51.054, 2.108
- 51.2064, 2.007
- 51.3588, 1.803
- 51.5112, 0.991
- 51.6636, 0.584
- 51.816, 0.279
- 51.9684, -0.076
- 52.1208, 0.025
- 52.2732, 0.406
- 52.4256, -0.025
- 52.578, -0.838
- 52.7304, -1.346
- 52.8828, -1.372
- 53.0352, -1.016
- 53.1876, -0.508
- 53.34, -0.533
- 53.4924, -0.762
- 53.6448, -0.254
- 53.7972, -0.432
- 53.9496, -0.762
- 54.102, -0.686
- 54.2544, -0.813
- 54.4068, -0.66
- 54.5592, -0.483
- 54.7116, -0.686
- 54.864, -1.016
- 55.0164, -0.584
- 55.1688, 0.279
- 55.3212, 0.127
- 55.4736, 0.279
- 55.626, 0.305
- 55.7784, 0.025
- 55.9308, 0.991
- 56.0832, 0.991
- 56.2356, 0.559
- 56.388, 1.067
- 56.5404, 1.194
- 56.6928, 0.914
- 56.8452, 0.864
- 56.9976, 1.168
- 57.15, 1.092
- 57.3024, 1.041
- 57.4548, 1.321
- 57.6072, 1.473
- 57.7596, 1.6
- 57.912, 1.829
- 58.0644, 2.083
- 58.2168, 2.54
- 58.3692, 2.515
- 58.5216, 2.362
- 58.674, 2.794
- 58.8264, 3.073
- 58.9788, 3.226
- 59.1312, 3.175
- 59.2836, 3.15
- 59.436, 2.972
- 59.5884, 2.946
- 59.7408, 3.2
- 59.8932, 2.819
- 60.0456, 2.438
- 60.198, 2.54
- 60.3504, 2.667
- 60.5028, 2.286
- 60.6552, 1.854
- 60.8076, 1.981
- 60.96, 1.93
- 61.1124, 1.753
- 61.2648, 2.159
- 61.4172, 2.489
- 61.5696, 2.565
- 61.722, 2.057
- 61.8744, 1.575
- 62.0268, 2.057
- 62.1792, 2.438
- 62.3316, 2.54
- 62.484, 2.413
- 62.6364, 2.007
- 62.7888, 2.21
- 62.9412, 2.388
- 63.0936, 2.134
- 63.246, 2.007
- 63.3984, 1.956
- 63.5508, 1.753
- 63.7032, 1.702
- 63.8556, 1.829
- 64.008, 1.753
- 64.1604, 1.473
- 64.3128, 1.549
- 64.4652, 1.397
- 64.6176, 1.397
- 64.77, 1.397
- 64.9224, 1.041
- 65.0748, 1.321
- 65.2272, 1.854
- 65.3796, 1.6
- 65.532, 1.168
- 65.6844, 1.27
- 65.8368, 1.143
- 65.9892, 1.016
- 66.1416, 1.118
- 66.294, 1.422
- 66.4464, 1.6
- 66.5988, 1.473
- 66.7512, 1.194
- 66.9036, 1.041
- 67.056, 1.143
- 67.2084, 1.143
- 67.3608, 1.524
- 67.5132, 2.032
- 67.6656, 1.88
- 67.818, 1.397
- 67.9704, 1.956
- 68.1228, 2.388
- 68.2752, 2.413
- 68.4276, 2.565
- 68.58, 2.565
- 68.7324, 2.997
- 68.8848, 2.591
- 69.0372, 2.692
- 69.1896, 3.124
- 69.342, 2.896
- 69.4944, 3.353
- 69.6468, 3.759
- 69.7992, 3.353
- 69.9516, 3.327
- 70.104, 3.886
- 70.2564, 3.962
- 70.4088, 3.785
- 70.5612, 3.912
- 70.7136, 3.607
- 70.866, 3.581
- 71.0184, 4.166
- 71.1708, 4.318
- 71.3232, 4.166
- 71.4756, 4.064
- 71.628, 3.962
- 71.7804, 3.886
- 71.9328, 4.166
- 72.0852, 4.343
- 72.2376, 4.242
- 72.39, 4.521
- 72.5424, 4.775
- 72.6948, 4.547
- 72.8472, 4.445
- 72.9996, 4.623
- 73.152, 4.724
- 73.3044, 4.496
- 73.4568, 3.759
- 73.6092, 3.023
- 73.7616, 2.438
- 73.914, 2.007
- 74.0664, 2.616
- 74.2188, 2.692
- 74.3712, 2.286
- 74.5236, 2.591
- 74.676, 2.642
- 74.8284, 2.794
- 74.9808, 2.718
- 75.1332, 2.438
- 75.2856, 2.286
- 75.438, 2.108
- 75.5904, 2.286
- 75.7428, 2.464
- 75.8952, 2.311
- 76.0476, 2.134
- 76.2, 2.032
- 76.3524, 2.438
- 76.5048, 2.616
- 76.6572, 2.057
- 76.8096, 1.6
- 76.962, 1.168
- 77.1144, 1.473
- 77.2668, 1.422
- 77.4192, 0.635
- 77.5716, 0.711
- 77.724, 0.889
- 77.8764, 1.346
- 78.0288, 1.067
- 78.1812, 0.229
- 78.3336, 0.432
- 78.486, 0.889
- 78.6384, 1.448
- 78.7908, 1.168
- 78.9432, 0.178
- 79.0956, -0.305
- 79.248, -0.737
- 79.4004, -0.432
- 79.5528, -0.127
- 79.7052, -0.584
- 79.8576, -0.94
- 80.01, -0.864
- 80.1624, -0.711
- 80.3148, -1.016
- 80.4672, -1.143
- 80.6196, -0.914
- 80.772, -0.61
- 80.9244, -0.406
- 81.0768, -0.635
- 81.2292, -0.965
- 81.3816, -1.295
- 81.534, -1.245
- 81.6864, -0.838
- 81.8388, -1.321
- 81.9912, -1.422
- 82.1436, -0.838
- 82.296, -0.406
- 82.4484, -0.483
- 82.6008, -0.813
- 82.7532, -0.991
- 82.9056, -0.914
- 83.058, -0.305
- 83.2104, -0.051
- 83.3628, -0.61
- 83.5152, -0.914
- 83.6676, -0.864
- 83.82, -0.305
- 83.9724, 0.279
- 84.1248, -0.102
- 84.2772, -0.356
- 84.4296, -0.533
- 84.582, -0.483
- 84.7344, 0.203
- 84.8868, 0.076
- 85.0392, -0.457
- 85.1916, -0.178
- 85.344, 0.508
- 85.4964, 0.889
- 85.6488, 0.66
- 85.8012, 0.635
- 85.9536, 0.787
- 86.106, 0.813
- 86.2584, 1.118
- 86.4108, 0.889
- 86.5632, 0.051
- 86.7156, -0.356
- 86.868, -0.279
- 87.0204, 0.025
- 87.1728, 0.406
- 87.3252, 0.508
- 87.4776, 0.33
- 87.63, 0.051
- 87.7824, 0.076
- 87.9348, 0.508
- 88.0872, 0.483
- 88.2396, 0.152
- 88.392, 0.33
- 88.5444, 0.838
- 88.6968, 0.991
- 88.8492, 0.737
- 89.0016, 0.635
- 89.154, 0.584
- 89.3064, 0.635
- 89.4588, 1.118
- 89.6112, 1.702
- 89.7636, 1.473
- 89.916, 1.27
- 90.0684, 1.473
- 90.2208, 1.448
- 90.3732, 1.702
- 90.5256, 1.829
- 90.678, 2.134
- 90.8304, 2.489
- 90.9828, 1.854
- 91.1352, 1.499
- 91.2876, 2.007
- 91.44, 2.489
- 91.5924, 2.616
- 91.7448, 2.337
- 91.8972, 2.057
- 92.0496, 2.159
- 92.202, 2.235
- 92.3544, 2.159
- 92.5068, 2.007
- 92.6592, 1.168
- 92.8116, 0.152
- 92.964, -0.508
- 93.1164, -0.864
- 93.2688, -1.067
- 93.4212, -1.422
- 93.5736, -1.753
- 93.726, -1.346
- 93.8784, -0.889
- 94.0308, -0.94
- 94.1832, -1.295
- 94.3356, -1.372
- 94.488, -0.965
- 94.6404, -1.092
- 94.7928, -1.524
- 94.9452, -1.473
- 95.0976, -1.143
- 95.25, -1.27
- 95.4024, -1.727
- 95.5548, -1.803
- 95.7072, -1.854
- 95.8596, -2.108
- 96.012, -1.803
- 96.1644, -1.245
- 96.3168, -1.372
- 96.4692, -1.422
- 96.6216, -1.092
- 96.774, -0.889
- 96.9264, -0.711
- 97.0788, -0.66
- 97.2312, -0.889
- 97.3836, -0.711
- 97.536, -0.711
- 97.6884, -1.219
- 97.8408, -1.092
- 97.9932, -0.762
- 98.1456, -0.61
- 98.298, -0.203
- 98.4504, 0
- 98.6028, 0.152
- 98.7552, 0
- 98.9076, -0.152
- 99.06, 0.127
- 99.2124, 0.406
- 99.3648, 0.559
- 99.5172, 0.66
- 99.6696, 0.838
- 99.822, 0.711
- 99.9744, 0.762
- 100.1268, 0.889
- 100.2792, 0.381
- 100.4316, 0.279
- 100.584, 0.483
- 100.7364, 0.178
- 100.8888, 0
- 101.0412, -0.076
- 101.1936, -0.533
- 101.346, -1.067
- 101.4984, -1.168
- 101.6508, -0.965
- 101.8032, -1.245
- 101.9556, -1.549
- 102.108, -1.321
- 102.2604, -1.422
- 102.4128, -1.245
- 102.5652, -0.914
- 102.7176, -0.991
- 102.87, -1.041
- 103.0224, -0.94
- 103.1748, -0.864
- 103.3272, -0.94
- 103.4796, -0.813
- 103.632, -0.762
- 103.7844, -0.483
- 103.9368, -0.178
- 104.0892, -0.406
- 104.2416, -0.508
- 104.394, -0.076
- 104.5464, -0.025
- 104.6988, -0.076
- 104.8512, 0.305
- 105.0036, 0.711
- 105.156, 1.473
- 105.3084, 1.422
- 105.4608, 1.168
- 105.6132, 1.422
- 105.7656, 2.007
- 105.918, 1.956
- 106.0704, 1.194
- 106.2228, 1.219
- 106.3752, 1.651
- 106.5276, 1.803
- 106.68, 1.27
- 106.8324, 1.041
- 106.9848, 1.194
- 107.1372, 0.914
- 107.2896, 1.753
- 107.442, 2.083
- 107.5944, 1.372
- 107.7468, 1.27
- 107.8992, 1.194
- 108.0516, 1.346
- 108.204, 1.499
- 108.3564, 1.524
- 108.5088, 1.549
- 108.6612, 1.473
- 108.8136, 1.727
- 108.966, 1.829
- 109.1184, 1.422
- 109.2708, 1.041
- 109.4232, 1.118
- 109.5756, 1.245
- 109.728, 1.27
- 109.8804, 1.6
- 110.0328, 1.524
- 110.1852, 0.787
- 110.3376, 1.041
- 110.49, 1.753
- 110.6424, 1.702
- 110.7948, 0.94
- 110.9472, 0.406
- 111.0996, 0.533
- 111.252, 0.533
- 111.4044, 0.305
- 111.5568, 0.203
- 111.7092, 0.178
- 111.8616, 0.102
- 112.014, 0.178
- 112.1664, 0.229
- 112.3188, -0.076
- 112.4712, -0.127
- 112.6236, 0.152
- 112.776, -0.102
- 112.9284, -0.381
- 113.0808, -0.432
- 113.2332, -0.432
- 113.3856, -0.508
- 113.538, -1.168
- 113.6904, -1.676
- 113.8428, -0.991
- 113.9952, -0.305
- 114.1476, -0.864
- 114.3, -1.905
- 114.4524, -2.438
- 114.6048, -2.769
- 114.7572, -2.692
- 114.9096, -2.413
- 115.062, -2.642
- 115.2144, -3.073
- 115.3668, -3.327
- 115.5192, -2.819
- 115.6716, -2.718
- 115.824, -3.353
- 115.9764, -3.556
- 116.1288, -3.327
- 116.2812, -2.921
- 116.4336, -3.378
- 116.586, -3.683
- 116.7384, -3.708
- 116.8908, -4.039
- 117.0432, -4.343
- 117.1956, -4.699
- 117.348, -4.597
- 117.5004, -4.801
- 117.6528, -5.207
- 117.8052, -5.283
- 117.9576, -5.461
- 118.11, -5.639
- 118.2624, -5.613
- 118.4148, -5.69
- 118.5672, -5.867
- 118.7196, -5.715
- 118.872, -5.613
- 119.0244, -5.283
- 119.1768, -5.385
- 119.3292, -5.41
- 119.4816, -5.08
- 119.634, -5.258
- 119.7864, -5.512
- 119.9388, -5.283
- 120.0912, -5.055
- 120.2436, -5.258
- 120.396, -5.156
- 120.5484, -5.207
- 120.7008, -5.385
- 120.8532, -5.385
- 121.0056, -5.537
- 121.158, -5.385
- 121.3104, -5.41
- 121.4628, -5.639
- 121.6152, -5.258
- 121.7676, -5.283
- 121.92, -5.563
- 122.0724, -5.613
- 122.2248, -5.613
- 122.3772, -4.674
- 122.5296, -5.182
- 122.682, -6.223
- 122.8344, -5.766
- 122.9868, -5.74
- 123.1392, -5.334
- 123.2916, -5.334
- 123.444, -5.867
- 123.5964, -5.994
- 123.7488, -5.867
- 123.9012, -5.131
- 124.0536, -4.597
- 124.206, -4.699
- 124.3584, -5.055
- 124.5108, -5.385
- 124.6632, -5.359
- 124.8156, -5.055
- 124.968, -4.826
- 125.1204, -4.724
- 125.2728, -4.394
- 125.4252, -4.191
- 125.5776, -4.394
- 125.73, -4.42
- 125.8824, -4.013
- 126.0348, -3.912
- 126.1872, -4.013
- 126.3396, -3.988
- 126.492, -3.962
- 126.6444, -4.039
- 126.7968, -3.861
- 126.9492, -3.277
- 127.1016, -3.15
- 127.254, -3.404
- 127.4064, -3.632
- 127.5588, -3.835
- 127.7112, -3.886
- 127.8636, -3.81
- 128.016, -3.785
- 128.1684, -4.013
- 128.3208, -3.759
- 128.4732, -2.616
- 128.6256, -2.946
- 128.778, -3.785
- 128.9304, -3.404
- 129.0828, -3.048
- 129.2352, -2.692
- 129.3876, -2.642
- 129.54, -2.921
- 129.6924, -3.226
- 129.8448, -3.404
- 129.9972, -2.87
- 130.1496, -2.743
- 130.302, -3.124
- 130.4544, -3.048
- 130.6068, -3.023
- 130.7592, -2.642
- 130.9116, -2.692
- 131.064, -3.048
- 131.2164, -3.15
- 131.3688, -3.581
- 131.5212, -4.166
- 131.6736, -4.597
- 131.826, -4.47
- 131.9784, -4.115
- 132.1308, -3.988
- 132.2832, -3.607
- 132.4356, -3.15
- 132.588, -3.327
- 132.7404, -3.302
- 132.8928, -2.565
- 133.0452, -1.778
- 133.1976, -2.007
- 133.35, -2.464
- 133.5024, -2.311
- 133.6548, -1.829
- 133.8072, -1.676
- 133.9596, -1.372
- 134.112, -0.914
- 134.2644, -0.813
- 134.4168, -0.559
- 134.5692, -0.254
- 134.7216, -0.66
- 134.874, -1.067
- 135.0264, -0.457
- 135.1788, 0.178
- 135.3312, -0.025
- 135.4836, -0.305
- 135.636, -0.61
- 135.7884, -0.991
- 135.9408, -0.66
- 136.0932, -0.025
- 136.2456, -0.051
- 136.398, 0.025
- 136.5504, 0.051
- 136.7028, -0.076
- 136.8552, 0.229
- 137.0076, 0.406
+ 0, -0.13815
+ 0.1, -0.523
+ 0.2, 1.0199
+ 0.3, 0.0809
+ 0.4, -0.36713
+ 0.5, -0.12901
+ 0.6, -0.25523
+ 0.7, -0.19884
+ 0.8, 0.25443
+ 0.9, 0.5425
+ 1, 0.30092
+ 1.1, -1.1494
+ 1.2, 0.26779
+ 1.3, -0.52305
+ 1.4, -0.95995
+ 1.5, 1.2838
+ 1.6, -0.012146
+ 1.7, 0.8497
+ 1.8, -0.6095
+ 1.9, 0.17547
+ 2, 0.76275
+ 2.1, -0.6035
+ 2.2, -0.872
+ 2.3, -0.34569
+ 2.4, 0.28077
+ 2.5, 0.32798
+ 2.6, -0.36814
+ 2.7, 0.45033
+ 2.8, -0.908
+ 2.9, -0.5243
+ 3, 0.16048
+ 3.1, -0.28596
+ 3.2, 0.11799
+ 3.3, -0.80735
+ 3.4, 0.71735
+ 3.5, 0.19489
+ 3.6, -0.18726
+ 3.7, 0.5639
+ 3.8, -0.087295
+ 3.9, 0.042635
+ 4, 0.598
+ 4.1, -0.14791
+ 4.2, 0.63955
+ 4.3, -0.46086
+ 4.4, -0.10326
+ 4.5, -0.52295
+ 4.6, -0.36214
+ 4.7, -0.35112
+ 4.8, -0.019883
+ 4.9, -0.22451
+ 5, -0.76745
+ 5.1, -0.14014
+ 5.2, -0.39836
+ 5.3, 0.5537
+ 5.4, -0.37176
+ 5.5, -0.10283
+ 5.6, 0.031922
+ 5.7, 0.33021
+ 5.8, 0.34385
+ 5.9, 0.39117
+ 6, 0.47118
+ 6.1, 0.08774
+ 6.2, 0.03602
+ 6.3, 0.094065
+ 6.4, -0.073185
+ 6.5, 0.25844
+ 6.6, -0.17349
+ 6.7, -0.24684
+ 6.8, 0.40049
+ 6.9, -0.6859
+ 7, 0.48532
+ 7.1, 0.33154
+ 7.2, 0.22673
+ 7.3, -0.10336
+ 7.4, 0.48283
+ 7.5, -0.39779
+ 7.6, -0.42762
+ 7.7, -0.40699
+ 7.8, -0.21643
+ 7.9, -0.62065
+ 8, -0.04893
+ 8.1, 0.45748
+ 8.2, 0.19645
+ 8.3, 0.081995
+ 8.4, 0.26717
+ 8.5, -0.18954
+ 8.6, -0.41
+ 8.7, -0.72765
+ 8.8, -0.11694
+ 8.9, 0.94365
+ 9, -0.3262
+ 9.1, -1.5168
+ 9.2, -0.31551
+ 9.3, -0.25318
+ 9.4, -0.23767
+ 9.5, -0.21907
+ 9.6, -1.0692
+ 9.7, -0.38327
+ 9.8, -0.1304
+ 9.9, 0.086005
+ 10, -0.37345
+ 10.1, 0.497
+ 10.2, -0.092385
+ 10.3, 1.0268
+ 10.4, 0.19004
+ 10.5, -0.58725
+ 10.6, 0.29317
+ 10.7, -0.1695
+ 10.8, 0.6207
+ 10.9, -0.55005
+ 11, -0.22951
+ 11.1, -0.37304
+ 11.2, 0.0011676
+ 11.3, 0.22076
+ 11.4, 0.10758
+ 11.5, -0.37605
+ 11.6, 0.13756
+ 11.7, 0.1463
+ 11.8, 0.38659
+ 11.9, 0.06783
+ 12, 0.30443
+ 12.1, 0.2448
+ 12.2, -0.875
+ 12.3, -0.23224
+ 12.4, 0.25487
+ 12.5, 0.30462
+ 12.6, -0.28025
+ 12.7, 0.59235
+ 12.8, -0.6096
+ 12.9, -0.10146
+ 13, -0.17304
+ 13.1, -0.038168
+ 13.2, -0.67725
+ 13.3, 0.73445
+ 13.4, -0.30356
+ 13.5, 0.025623
+ 13.6, 0.3049
+ 13.7, 0.21771
+ 13.8, -0.43685
+ 13.9, 0.29528
+ 14, -0.83415
+ 14.1, -0.29367
+ 14.2, 0.024059
+ 14.3, 0.05984
+ 14.4, 0.42097
+ 14.5, 0.29309
+ 14.6, 0.79615
+ 14.7, 1.4392
+ 14.8, 0.5355
+ 14.9, 0.7272
+ 15, 0.48727
+ 15.1, -0.17213
+ 15.2, 0.15286
+ 15.3, -0.080435
+ 15.4, 0.49129
+ 15.5, -0.14895
+ 15.6, 0.16019
+ 15.7, 0.13023
+ 15.8, 0.07201
+ 15.9, 0.1455
+ 16, 0.16615
+ 16.1, 0.21421
+ 16.2, 0.093565
+ 16.3, -1.8482
+ 16.4, -0.37935
+ 16.5, 0.09542
+ 16.6, 0.4143
+ 16.7, 0.52345
+ 16.8, 0.034717
+ 16.9, 0.13154
+ 17, 0.76705
+ 17.1, 0.13778
+ 17.2, -0.040092
+ 17.3, -0.15651
+ 17.4, 1.171
+ 17.5, 1.1973
+ 17.6, 0.5474
+ 17.7, 0.017826
+ 17.8, -0.14955
+ 17.9, 0.44589
+ 18, 0.043683
+ 18.1, 0.71715
+ 18.2, 0.12001
+ 18.3, 0.17205
+ 18.4, 0.22556
+ 18.5, -0.39272
+ 18.6, 0.91835
+ 18.7, 0.19901
+ 18.8, 0.3636
+ 18.9, -0.47396
+ 19, -0.29023
+ 19.1, -0.6164
+ 19.2, -0.30222
+ 19.3, 0.09407
+ 19.4, -0.24127
+ 19.5, -0.54105
+ 19.6, 0.70425
+ 19.7, 0.34228
+ 19.8, 0.074655
+ 19.9, -0.11254
+ 20, 0.22576
+ 20.1, 0.07554
+ 20.2, 0.21488
+ 20.3, 0.12142
+ 20.4, -0.10729
+ 20.5, 0.194
+ 20.6, -0.606
+ 20.7, 0.8222
+ 20.8, -0.25413
+ 20.9, -0.6346
+ 21, -0.35318
+ 21.1, 0.26339
+ 21.2, 0.41611
+ 21.3, -0.30602
+ 21.4, -0.16098
+ 21.5, -0.41762
+ 21.6, -0.30896
+ 21.7, -0.05329
+ 21.8, -0.6495
+ 21.9, -0.58995
+ 22, 0.5165
+ 22.1, 0.20371
+ 22.2, 1.5437
+ 22.3, -1.1804
+ 22.4, 0.9978
+ 22.5, 0.46962
+ 22.6, -0.31291
+ 22.7, 0.59975
+ 22.8, 1.5373
+ 22.9, -0.3915
+ 23, 0.61845
+ 23.1, 1.1421
+ 23.2, 0.53495
+ 23.3, 0.4052
+ 23.4, -0.17408
+ 23.5, -0.7264
+ 23.6, 0.17824
+ 23.7, 0.3547
+ 23.8, -0.40059
+ 23.9, 0.43862
+ 24, 0.45426
+ 24.1, 0.4332
+ 24.2, -0.29413
+ 24.3, 0.14495
+ 24.4, 0.09129
+ 24.5, 0.05386
+ 24.6, -0.5055
+ 24.7, -0.36317
+ 24.8, -0.5996
+ 24.9, -0.94035
+ 25, -0.15079
+ 25.1, 0.45945
+ 25.2, -0.14761
+ 25.3, -0.53865
+ 25.4, -0.25027
+ 25.5, 1.6604
+ 25.6, 0.045402
+ 25.7, -0.69245
+ 25.8, 0.665
+ 25.9, 0.09727
+ 26, 0.32437
+ 26.1, -0.3181
+ 26.2, 0.049895
+ 26.3, -0.07718
+ 26.4, 0.29184
+ 26.5, -0.07032
+ 26.6, -1.1021
+ 26.7, 0.1009
+ 26.8, -1.2011
+ 26.9, -0.6782
+ 27, 0.259
+ 27.1, 0.26172
+ 27.2, 0.35741
+ 27.3, -0.25574
+ 27.4, -0.26404
+ 27.5, 0.18991
+ 27.6, 0.85165
+ 27.7, -0.9834
+ 27.8, -0.18774
+ 27.9, 0.72165
+ 28, -0.15207
+ 28.1, 0.12909
+ 28.2, 0.37018
+ 28.3, -0.12899
+ 28.4, -0.44853
+ 28.5, 1.1933
+ 28.6, -0.09872
+ 28.7, -0.28106
+ 28.8, -0.35873
+ 28.9, 0.38781
+ 29, 0.07497
+ 29.1, 0.12983
+ 29.2, 0.88465
+ 29.3, -0.8655
+ 29.4, -0.31005
+ 29.5, -0.72095
+ 29.6, 0.27105
+ 29.7, 0.32853
+ 29.8, -0.40987
+ 29.9, -0.5647
+ 30, -0.17366
+ 30.1, -0.7981
+ 30.2, 0.16212
+ 30.3, 0.033159
+ 30.4, -0.064585
+ 30.5, 0.28095
+ 30.6, 1.1105
+ 30.7, 0.061925
+ 30.8, -0.75425
+ 30.9, -0.31755
+ 31, -0.14927
+ 31.1, 1.1164
+ 31.2, -0.029797
+ 31.3, 0.05549
+ 31.4, 0.3284
+ 31.5, 0.08506
+ 31.6, -0.35331
+ 31.7, 0.054185
+ 31.8, 0.10713
+ 31.9, 0.29957
+ 32, -0.40779
+ 32.1, 0.8562
+ 32.2, 0.3605
+ 32.3, -0.80575
+ 32.4, -0.1808
+ 32.5, -0.60455
+ 32.6, -0.054385
+ 32.7, 0.5924
+ 32.8, -0.1696
+ 32.9, -0.043881
+ 33, 0.5434
+ 33.1, -0.35209
+ 33.2, 0.24749
+ 33.3, 0.12579
+ 33.4, 0.24144
+ 33.5, 0.31007
+ 33.6, 0.6496
+ 33.7, 0.11422
+ 33.8, -0.26202
+ 33.9, 0.15212
+ 34, 0.26816
+ 34.1, -0.24341
+ 34.2, -0.075325
+ 34.3, 0.15974
+ 34.4, 0.33241
+ 34.5, -0.59545
+ 34.6, -0.34685
+ 34.7, -0.82765
+ 34.8, -0.2345
+ 34.9, -0.12254
+ 35, 0.25877
+ 35.1, -0.08846
+ 35.2, 0.40074
+ 35.3, -0.49604
+ 35.4, 0.013544
+ 35.5, 0.16995
+ 35.6, -0.13393
+ 35.7, 0.25223
+ 35.8, -0.31278
+ 35.9, -0.16997
+ 36, 0.9777
+ 36.1, -0.5227
+ 36.2, -0.23336
+ 36.3, -0.046101
+ 36.4, -0.5957
+ 36.5, 0.46265
+ 36.6, 0.22843
+ 36.7, -0.20669
+ 36.8, -0.6488
+ 36.9, -0.7813
+ 37, -0.16398
+ 37.1, 0.12434
+ 37.2, -0.45166
+ 37.3, -0.47522
+ 37.4, -0.10731
+ 37.5, 0.086125
+ 37.6, -0.011656
+ 37.7, 0.10891
+ 37.8, -0.29671
+ 37.9, -0.8614
+ 38, -0.44311
+ 38.1, -0.0026064
+ 38.2, -0.50615
+ 38.3, -0.14309
+ 38.4, -0.16267
+ 38.5, 0.092215
+ 38.6, -0.47078
+ 38.7, 0.33053
+ 38.8, -0.12689
+ 38.9, 0.67855
+ 39, 0.16536
+ 39.1, 0.035449
+ 39.2, 0.43234
+ 39.3, -0.47923
+ 39.4, -0.092655
+ 39.5, -0.1965
+ 39.6, 0.45298
+ 39.7, 0.13786
+ 39.8, 0.89
+ 39.9, 0.30471
+ 40, 0.038331
+ 40.1, -0.14143
+ 40.2, 0.8511
+ 40.3, -0.025623
+ 40.4, 0.29928
+ 40.5, -0.27871
+ 40.6, -0.5071
+ 40.7, 0.12301
+ 40.8, -0.34699
+ 40.9, 0.37306
+ 41, -0.35799
+ 41.1, -0.20191
+ 41.2, -0.3985
+ 41.3, -0.13557
+ 41.4, -0.6454
+ 41.5, 0.033628
+ 41.6, -0.87085
+ 41.7, -0.44891
+ 41.8, 0.48662
+ 41.9, 0.14594
+ 42, -0.26587
+ 42.1, -0.2456
+ 42.2, 0.30494
+ 42.3, 0.37458
+ 42.4, -0.89195
+ 42.5, 0.6151
+ 42.6, 0.29106
+ 42.7, 0.23459
+ 42.8, 1.4688
+ 42.9, 0.13679
+ 43, 0.10658
+ 43.1, 0.41948
+ 43.2, -0.069045
+ 43.3, 0.44598
+ 43.4, -0.5845
+ 43.5, -0.029322
+ 43.6, 0.25133
+ 43.7, 1.0857
+ 43.8, -0.5686
+ 43.9, -0.094175
+ 44, 0.45395
+ 44.1, -0.37637
+ 44.2, -0.7028
+ 44.3, -0.29694
+ 44.4, 1.0883
+ 44.5, -0.042451
+ 44.6, -0.15534
+ 44.7, 0.20714
+ 44.8, -0.11621
+ 44.9, -0.16632
+ 45, -0.73215
+ 45.1, 0.4291
+ 45.2, -0.016171
+ 45.3, -0.14542
+ 45.4, -0.5285
+ 45.5, 0.23525
+ 45.6, 0.77915
+ 45.7, 0.19537
+ 45.8, -0.30567
+ 45.9, 0.90325
+ 46, -0.18957
+ 46.1, 0.70955
+ 46.2, -0.28875
+ 46.3, -0.16643
+ 46.4, 0.2706
+ 46.5, -0.22971
+ 46.6, -0.5612
+ 46.7, 0.66705
+ 46.8, 0.44194
+ 46.9, -0.07311
+ 47, -0.8092
+ 47.1, -0.5823
+ 47.2, 0.016053
+ 47.3, 0.67465
+ 47.4, 0.11352
+ 47.5, 0.6349
+ 47.6, -0.15504
+ 47.7, -0.1795
+ 47.8, 0.12412
+ 47.9, 0.6628
+ 48, 0.043511
+ 48.1, -0.49411
+ 48.2, -0.27683
+ 48.3, -0.13345
+ 48.4, -0.31854
+ 48.5, 0.56595
+ 48.6, -0.8526
+ 48.7, 0.95845
+ 48.8, -0.12004
+ 48.9, 0.010149
+ 49, -0.8503
+ 49.1, -0.5651
+ 49.2, -0.33205
+ 49.3, -0.5008
+ 49.4, 0.54625
+ 49.5, 0.024968
+ 49.6, 0.35193
+ 49.7, -0.038622
+ 49.8, 0.22712
+ 49.9, 0.1733
+ 50, -0.0555
+ 50.1, 0.034565
+ 50.2, -0.85545
+ 50.3, -0.54355
+ 50.4, 0.28908
+ 50.5, 0.06708
+ 50.6, -0.36533
+ 50.7, 0.35222
+ 50.8, 0.21605
+ 50.9, 0.4338
+ 51, -0.40026
+ 51.1, 0.37337
+ 51.2, 0.18536
+ 51.3, -0.090915
+ 51.4, -0.6083
+ 51.5, 0.33645
+ 51.6, -0.05445
+ 51.7, 0.16354
+ 51.8, 0.38218
+ 51.9, 1.0109
+ 52, 0.32641
+ 52.1, 0.6604
+ 52.2, -0.24619
+ 52.3, 0.51155
+ 52.4, 0.22479
+ 52.5, 0.29989
+ 52.6, 0.30521
+ 52.7, -0.12287
+ 52.8, 0.504
+ 52.9, -0.11044
+ 53, -0.8799
+ 53.1, 0.47659
+ 53.2, -0.3425
+ 53.3, 0.37934
+ 53.4, 0.012431
+ 53.5, -0.066755
+ 53.6, -0.20804
+ 53.7, -0.26942
+ 53.8, 0.4128
+ 53.9, -0.21696
+ 54, 0.42606
+ 54.1, -0.05739
+ 54.2, 0.078755
+ 54.3, -0.40742
+ 54.4, -0.78675
+ 54.5, -0.5516
+ 54.6, -1.11
+ 54.7, -0.13351
+ 54.8, -0.0046565
+ 54.9, -0.70875
+ 55, -0.12648
+ 55.1, -0.10176
+ 55.2, -0.51735
+ 55.3, -0.29809
+ 55.4, 0.26902
+ 55.5, -0.40453
+ 55.6, 0.55355
+ 55.7, -0.34403
+ 55.8, 0.19018
+ 55.9, -0.58305
+ 56, -0.8938
+ 56.1, -0.77865
+ 56.2, 0.09719
+ 56.3, -0.81295
+ 56.4, -0.68065
+ 56.5, -0.26742
+ 56.6, 0.036316
+ 56.7, -0.080695
+ 56.8, 0.46435
+ 56.9, 0.14519
+ 57, -0.019556
+ 57.1, 0.06316
+ 57.2, -0.25836
+ 57.3, 0.17197
+ 57.4, -0.25489
+ 57.5, -0.07873
+ 57.6, -0.032336
+ 57.7, -0.36457
+ 57.8, 0.77015
+ 57.9, -0.090145
+ 58, -0.14475
+ 58.1, -0.34259
+ 58.2, -0.15114
+ 58.3, -0.42777
+ 58.4, -0.017931
+ 58.5, -0.13639
+ 58.6, 0.14812
+ 58.7, -0.08877
+ 58.8, 0.12859
+ 58.9, -0.014827
+ 59, 0.19968
+ 59.1, 0.97895
+ 59.2, 0.32689
+ 59.3, -0.40809
+ 59.4, 0.4672
+ 59.5, 0.042165
+ 59.6, 0.037936
+ 59.7, 0.41906
+ 59.8, 1.1676
+ 59.9, -0.08602
+ 60, 0.98335
+ 60.1, -0.40799
+ 60.2, 0.5889
+ 60.3, -0.017143
+ 60.4, 0.6854
+ 60.5, 0.52415
+ 60.6, -0.26235
+ 60.7, -0.21598
+ 60.8, -0.28754
+ 60.9, -0.14364
+ 61, 1.317
+ 61.1, 0.14484
+ 61.2, -0.080595
+ 61.3, 0.5193
+ 61.4, -0.36065
+ 61.5, -0.41878
+ 61.6, -0.23086
+ 61.7, 0.017239
+ 61.8, 0.82995
+ 61.9, 0.4456
+ 62, -0.75255
+ 62.1, 0.042194
+ 62.2, 0.08816
+ 62.3, -0.20674
+ 62.4, 0.064815
+ 62.5, 0.5425
+ 62.6, -0.23938
+ 62.7, 0.066785
+ 62.8, -0.6115
+ 62.9, -0.38372
+ 63, -0.6203
+ 63.1, 0.23578
+ 63.2, 0.47021
+ 63.3, -0.385
+ 63.4, -0.7886
+ 63.5, 0.15009
+ 63.6, -0.4661
+ 63.7, -0.08461
+ 63.8, -0.7733
+ 63.9, -0.6303
+ 64, 0.57735
+ 64.1, 0.34404
+ 64.2, 0.18039
+ 64.3, 0.05001
+ 64.4, 0.19002
+ 64.5, -0.9342
+ 64.6, 0.3907
+ 64.7, -0.1366
+ 64.8, -0.042445
+ 64.9, -0.21407
+ 65, 0.37561
+ 65.1, -0.52335
+ 65.2, -0.8306
+ 65.3, -0.099195
+ 65.4, 0.73315
+ 65.5, -1.2431
+ 65.6, -0.75445
+ 65.7, -0.9661
+ 65.8, 0.8842
+ 65.9, 0.024414
+ 66, -0.023592
+ 66.1, 0.42939
+ 66.2, -0.18674
+ 66.3, 0.25996
+ 66.4, -0.029452
+ 66.5, 0.042927
+ 66.6, -0.69035
+ 66.7, 0.18235
+ 66.8, -0.50245
+ 66.9, -0.11628
+ 67, -0.9007
+ 67.1, 0.1748
+ 67.2, -0.44748
+ 67.3, -0.13917
+ 67.4, 0.74695
+ 67.5, -0.19565
+ 67.6, -0.12469
+ 67.7, -0.19173
+ 67.8, 1.0039
+ 67.9, 0.5182
+ 68, -0.42517
+ 68.1, 0.43545
+ 68.2, -0.017805
+ 68.3, 0.060995
+ 68.4, -0.46203
+ 68.5, 0.39735
+ 68.6, -0.3605
+ 68.7, 0.7296
+ 68.8, 0.27107
+ 68.9, -0.7393
+ 69, 0.15349
+ 69.1, -0.025939
+ 69.2, 0.19026
+ 69.3, 0.17872
+ 69.4, -0.12768
+ 69.5, 0.7337
+ 69.6, -0.6831
+ 69.7, 0.031777
+ 69.8, 0.36368
+ 69.9, 0.2102
+ 70, -0.85075
+ 70.1, 0.45455
+ 70.2, 0.16121
+ 70.3, -0.38771
+ 70.4, -0.68805
+ 70.5, -0.27622
+ 70.6, -0.14865
+ 70.7, -0.09604
+ 70.8, -0.48738
+ 70.9, 0.016606
+ 71, -0.010751
+ 71.1, -0.5171
+ 71.2, -0.34477
+ 71.3, -0.5011
+ 71.4, 0.49696
+ 71.5, 0.28985
+ 71.6, 0.31359
+ 71.7, 0.10338
+ 71.8, 0.75815
+ 71.9, -0.44365
+ 72, -0.38428
+ 72.1, 0.06438
+ 72.2, 0.38445
+ 72.3, -0.6697
+ 72.4, -0.35719
+ 72.5, 0.67725
+ 72.6, 0.7737
+ 72.7, -0.12955
+ 72.8, 0.33975
+ 72.9, 0.32114
+ 73, 0.06435
+ 73.1, 0.38947
+ 73.2, -0.37045
+ 73.3, -0.7563
+ 73.4, -0.49014
+ 73.5, 0.65355
+ 73.6, -1.6722
+ 73.7, 0.47686
+ 73.8, -0.37046
+ 73.9, -0.013175
+ 74, -0.39462
+ 74.1, -0.14841
+ 74.2, 0.06496
+ 74.3, -0.35684
+ 74.4, -0.30189
+ 74.5, -0.16141
+ 74.6, -0.12573
+ 74.7, 0.32145
+ 74.8, -0.521
+ 74.9, -0.15768
+ 75, -0.8386
+ 75.1, -0.31095
+ 75.2, 0.31914
+ 75.3, -0.5832
+ 75.4, 1.2754
+ 75.5, 0.21205
+ 75.6, -0.49124
+ 75.7, 0.5317
+ 75.8, -0.17903
+ 75.9, -0.89445
+ 76, 0.48932
+ 76.1, 0.72095
+ 76.2, 0.28458
+ 76.3, 0.49056
+ 76.4, 0.27964
+ 76.5, 0.16428
+ 76.6, 0.49014
+ 76.7, -0.09495
+ 76.8, -0.09503
+ 76.9, -0.312
+ 77, 0.50075
+ 77.1, 0.4109
+ 77.2, 0.15196
+ 77.3, 0.38743
+ 77.4, 0.70145
+ 77.5, -0.1609
+ 77.6, -0.11636
+ 77.7, -0.24013
+ 77.8, -0.05676
+ 77.9, 0.5955
+ 78, -0.7679
+ 78.1, 0.046603
+ 78.2, 0.35278
+ 78.3, 0.89675
+ 78.4, 0.29362
+ 78.5, 0.57635
+ 78.6, 0.7019
+ 78.7, 0.23924
+ 78.8, -0.42006
+ 78.9, 0.33235
+ 79, 0.15095
+ 79.1, -0.72785
+ 79.2, -0.82345
+ 79.3, 0.66145
+ 79.4, -0.10669
+ 79.5, 0.031846
+ 79.6, -0.29233
+ 79.7, -1.3753
+ 79.8, 0.42982
+ 79.9, -0.5592
+ 80, 0.086375
+ 80.1, 0.27002
+ 80.2, 0.48314
+ 80.3, 0.5536
+ 80.4, 0.7946
+ 80.5, -0.0006371
+ 80.6, -0.48497
+ 80.7, -0.24576
+ 80.8, -0.20567
+ 80.9, -0.60835
+ 81, -0.0094125
+ 81.1, 0.036527
+ 81.2, -0.9553
+ 81.3, -0.92585
+ 81.4, 0.24839
+ 81.5, -0.55415
+ 81.6, -0.25733
+ 81.7, -0.37378
+ 81.8, 0.36674
+ 81.9, 1.2893
+ 82, -0.20031
+ 82.1, 0.061455
+ 82.2, 0.19642
+ 82.3, 0.2107
+ 82.4, -0.12677
+ 82.5, 0.32684
+ 82.6, 0.31885
+ 82.7, -0.9204
+ 82.8, -0.0081155
+ 82.9, 0.30858
+ 83, -0.018228
+ 83.1, -0.1306
+ 83.2, -0.21593
+ 83.3, -0.30309
+ 83.4, -0.56625
+ 83.5, -0.3131
+ 83.6, 0.41801
+ 83.7, -0.3493
+ 83.8, 0.5044
+ 83.9, 0.056415
+ 84, 0.27291
+ 84.1, -0.16778
+ 84.2, -0.61185
+ 84.3, -0.74935
+ 84.4, -0.25859
+ 84.5, 0.31687
+ 84.6, -0.6306
+ 84.7, 0.59985
+ 84.8, 0.36568
+ 84.9, -0.35558
+ 85, -0.31176
+ 85.1, 0.83565
+ 85.2, -0.31909
+ 85.3, 0.23551
+ 85.4, 0.6657
+ 85.5, -0.49103
+ 85.6, -0.6979
+ 85.7, -0.582
+ 85.8, -0.50575
+ 85.9, 0.26728
+ 86, 0.13454
+ 86.1, 0.065795
+ 86.2, -0.3104
+ 86.3, 0.25731
+ 86.4, -0.13396
+ 86.5, 0.5705
+ 86.6, 0.8372
+ 86.7, 0.7502
+ 86.8, 0.15798
+ 86.9, -0.43596
+ 87, 0.51115
+ 87.1, -0.47687
+ 87.2, 0.10948
+ 87.3, -0.027446
+ 87.4, 0.06044
+ 87.5, 0.35676
+ 87.6, 1.2095
+ 87.7, -0.48575
+ 87.8, -0.45003
+ 87.9, -0.6858
+ 88, 0.83455
+ 88.1, -0.5599
+ 88.2, 0.35158
+ 88.3, -0.13822
+ 88.4, -0.07599
+ 88.5, -0.32318
+ 88.6, -0.44478
+ 88.7, -0.90845
+ 88.8, -0.18682
+ 88.9, 0.49717
+ 89, 0.23297
+ 89.1, 0.20509
+ 89.2, -0.5602
+ 89.3, -0.89145
+ 89.4, -0.48946
+ 89.5, 0.212
+ 89.6, 0.06093
+ 89.7, 0.32447
+ 89.8, 0.78395
+ 89.9, 0.6992
+ 90, 0.5263
+ 90.1, 0.044991
+ 90.2, 0.6226
+ 90.3, -0.01903
+ 90.4, 0.8601
+ 90.5, 0.047474
+ 90.6, 0.025989
+ 90.7, 0.15674
+ 90.8, -0.56495
+ 90.9, -0.39702
+ 91, -0.038102
+ 91.1, 0.22516
+ 91.2, 0.13262
+ 91.3, 0.7045
+ 91.4, -0.83055
+ 91.5, -0.016504
+ 91.6, -0.07361
+ 91.7, 1.1889
+ 91.8, 0.2472
+ 91.9, -0.7951
+ 92, 0.64025
+ 92.1, -0.0038229
+ 92.2, 0.22151
+ 92.3, 0.20762
+ 92.4, -0.027206
+ 92.5, -0.9984
+ 92.6, 0.16833
+ 92.7, 0.23039
+ 92.8, -0.062245
+ 92.9, 0.35367
+ 93, -0.16487
+ 93.1, 0.45693
+ 93.2, -0.34603
+ 93.3, -0.014139
+ 93.4, 0.7362
+ 93.5, 0.41361
+ 93.6, -0.38305
+ 93.7, -0.39533
+ 93.8, 0.956
+ 93.9, 0.6325
+ 94, 0.09011
+ 94.1, 0.2177
+ 94.2, -0.036007
+ 94.3, 0.13942
+ 94.4, 0.19584
+ 94.5, 0.98645
+ 94.6, -0.88725
+ 94.7, 0.56805
+ 94.8, 1.293
+ 94.9, 0.32643
+ 95, 0.14899
+ 95.1, 0.069465
+ 95.2, 0.013697
+ 95.3, -0.040927
+ 95.4, -0.56825
+ 95.5, -0.82335
+ 95.6, -0.12155
+ 95.7, -0.6294
+ 95.8, 0.13703
+ 95.9, 0.19401
+ 96, -0.43652
+ 96.1, -0.40319
+ 96.2, 0.06143
+ 96.3, 0.40714
+ 96.4, 0.095265
+ 96.5, 1.1329
+ 96.6, -0.22387
+ 96.7, -0.4612
+ 96.8, -0.56795
+ 96.9, 0.37329
+ 97, -0.6818
+ 97.1, -0.5372
+ 97.2, 0.27393
+ 97.3, -0.010975
+ 97.4, -0.3424
+ 97.5, 0.98995
+ 97.6, 0.055905
+ 97.7, -0.31434
+ 97.8, -0.22828
+ 97.9, 0.78815
+ 98, -0.10977
+ 98.1, 0.51445
+ 98.2, 0.7674
+ 98.3, -0.6042
+ 98.4, 0.017839
+ 98.5, -0.44584
+ 98.6, -0.5521
+ 98.7, 0.378
+ 98.8, 0.14575
+ 98.9, 0.27009
+ 99, 0.44375
+ 99.1, -0.6456
+ 99.2, 0.64815
+ 99.3, -0.07016
+ 99.4, 0.0137
+ 99.5, -0.35676
+ 99.6, 0.014451
+ 99.7, -0.42851
+ 99.8, -0.67275
+ 99.9, 0.6981
+ 100, -0.13815
 ENDTABLE
 Z_PROFILE_GAIN(1)   1 ! Gain multiplied with calculated value to get elevation
                       ! increment
@@ -5432,904 +5556,1007 @@ SSCALE_Z_PROFILE(1) 1 ! Scale factor divided into (distance travelled -
 
 ! 1D table: col 1 = distance travelled (m), col 2 = elevation increment (mm)
 Z_PROFILE_TABLE(2) LINEAR_LOOP ! linear interpolation, repeat in loop
- 0.3048, -1.829
- 0.4572, -1.523887249
- 0.6096, -1.54867441
- 0.762, -1.852084988
- 0.9144, -2.101991402
- 1.0668, -2.075182096
- 1.2192, -1.953520215
- 1.3716, -1.350900939
- 1.524, -0.690382649
- 1.6764, -0.5446140969
- 1.8288, -0.2856909057
- 1.9812, -0.6855395078
- 2.1336, -1.40858688
- 2.286, -0.8776833931
- 2.4384, -0.3083913395
- 2.5908, 0.0452143991
- 2.7432, 0.443507883
- 2.8956, 0.6803567807
- 3.048, 0.4265230646
- 3.2004, -0.01625251362
- 3.3528, 0.1723359914
- 3.5052, 0.626447806
- 3.6576, 0.9022824482
- 3.81, 0.946121288
- 3.9624, 1.14198128
- 4.1148, 0.7270242597
- 4.2672, 0.3328934337
- 4.4196, 0.3888962492
- 4.572, 0.2652221116
- 4.7244, 0.403905511
- 4.8768, 0.2148385434
- 5.0292, 0.5423973527
- 5.1816, 1.414763619
- 5.334, 1.397130858
- 5.4864, 1.10847301
- 5.6388, 1.179352471
- 5.7912, 1.756877016
- 5.9436, 2.039691746
- 6.096, 1.908488375
- 6.2484, 1.733921525
- 6.4008, 1.592946924
- 6.5532, 2.068727525
- 6.7056, 2.419471251
- 6.858, 2.162802396
- 7.0104, 2.120379416
- 7.1628, 2.043167943
- 7.3152, 1.562221323
- 7.4676, 1.344903512
- 7.62, 1.574461594
- 7.7724, 2.14374139
- 7.9248, 2.54
- 8.0772, 2.481785694
- 8.2296, 1.874179228
- 8.382, 1.443668855
- 8.5344, 1.633237337
- 8.6868, 1.819677392
- 8.8392, 1.93280386
- 8.9916, 1.954647904
- 9.144, 2.009291808
- 9.2964, 2.104203324
- 9.4488, 1.8271398
- 9.6012, 1.549872041
- 9.7536, 1.91261646
- 9.906, 2.317588206
- 10.0584, 2.668621579
- 10.2108, 3.338469811
- 10.3632, 3.663101241
- 10.5156, 3.255177912
- 10.668, 2.823038605
- 10.8204, 2.676204608
- 10.9728, 2.7419537
- 11.1252, 2.925262294
- 11.2776, 3.007487643
- 11.43, 3.131489909
- 11.5824, 3.167543908
- 11.7348, 3.243482936
- 11.8872, 3.081020018
- 12.0396, 2.511205359
- 12.192, 2.484848318
- 12.3444, 2.450997279
- 12.4968, 2.210848187
- 12.6492, 2.478948212
- 12.8016, 3.138743039
- 12.954, 3.295179553
- 13.1064, 2.88089987
- 13.2588, 2.276167638
- 13.4112, 1.918501859
- 13.5636, 2.220247417
- 13.716, 2.269989468
- 13.8684, 2.108689534
- 14.0208, 1.941233419
- 14.1732, 2.011332863
- 14.3256, 2.092040246
- 14.478, 1.818596041
- 14.6304, 1.444174046
- 14.7828, 1.240463154
- 14.9352, 1.088794626
- 15.0876, 0.8374363695
- 15.24, 0.6101746345
- 15.3924, 0.8381191657
- 15.5448, 1.295
- 15.6972, 1.626
- 15.8496, 1.219
- 16.002, 1.27
- 16.1544, 1.727
- 16.3068, 1.422
- 16.4592, 1.245
- 16.6116, 1.702
- 16.764, 2.311
- 16.9164, 1.93
- 17.0688, 0.965
- 17.2212, 0.356
- 17.3736, 0.178
- 17.526, 0.737
- 17.6784, 1.118
- 17.8308, 0.737
- 17.9832, 0.457
- 18.1356, 0.127
- 18.288, -0.178
- 18.4404, 0.229
- 18.5928, 0.965
- 18.7452, 1.219
- 18.8976, 0.787
- 19.05, 0.229
- 19.2024, -0.051
- 19.3548, -0.457
- 19.5072, -0.635
- 19.6596, -1.016
- 19.812, -1.676
- 19.9644, -1.626
- 20.1168, -1.346
- 20.2692, -1.422
- 20.4216, -2.083
- 20.574, -2.692
- 20.7264, -3.175
- 20.8788, -3.505
- 21.0312, -3.15
- 21.1836, -2.667
- 21.336, -2.591
- 21.4884, -2.667
- 21.6408, -2.616
- 21.7932, -2.667
- 21.9456, -2.769
- 22.098, -2.388
- 22.2504, -1.88
- 22.4028, -2.083
- 22.5552, -2.819
- 22.7076, -3.454
- 22.86, -3.505
- 23.0124, -3.099
- 23.1648, -2.54
- 23.3172, -2.007
- 23.4696, -2.464
- 23.622, -3.48
- 23.7744, -3.785
- 23.9268, -2.921
- 24.0792, -2.032
- 24.2316, -2.007
- 24.384, -1.956
- 24.5364, -2.261
- 24.6888, -2.667
- 24.8412, -2.464
- 24.9936, -2.235
- 25.146, -2.083
- 25.2984, -1.854
- 25.4508, -1.702
- 25.6032, -1.702
- 25.7556, -1.702
- 25.908, -2.134
- 26.0604, -2.235
- 26.2128, -1.829
- 26.3652, -1.651
- 26.5176, -1.524
- 26.67, -1.372
- 26.8224, -1.397
- 26.9748, -1.651
- 27.1272, -1.702
- 27.2796, -1.397
- 27.432, -1.219
- 27.5844, -1.702
- 27.7368, -1.092
- 27.8892, -0.584
- 28.0416, -1.499
- 28.194, -1.88
- 28.3464, -1.854
- 28.4988, -1.727
- 28.6512, -1.575
- 28.8036, -1.651
- 28.956, -2.007
- 29.1084, -2.311
- 29.2608, -2.057
- 29.4132, -1.702
- 29.5656, -1.676
- 29.718, -1.651
- 29.8704, -1.524
- 30.0228, -1.575
- 30.1752, -1.88
- 30.3276, -2.108
- 30.48, -2.311
- 30.6324, -2.438
- 30.7848, -2.591
- 30.9372, -2.819
- 31.0896, -2.718
- 31.242, -2.667
- 31.3944, -2.769
- 31.5468, -2.616
- 31.6992, -2.464
- 31.8516, -2.337
- 32.004, -2.515
- 32.1564, -3.226
- 32.3088, -4.013
- 32.4612, -4.293
- 32.6136, -3.658
- 32.766, -2.896
- 32.9184, -2.819
- 33.0708, -2.667
- 33.2232, -2.743
- 33.3756, -2.743
- 33.528, -2.54
- 33.6804, -2.642
- 33.8328, -2.362
- 33.9852, -2.235
- 34.1376, -2.489
- 34.29, -2.489
- 34.4424, -2.286
- 34.5948, -2.032
- 34.7472, -1.321
- 34.8996, -1.041
- 35.052, -1.905
- 35.2044, -1.676
- 35.3568, -0.737
- 35.5092, -0.737
- 35.6616, -0.762
- 35.814, -0.406
- 35.9664, -0.102
- 36.1188, -0.457
- 36.2712, -1.067
- 36.4236, -1.168
- 36.576, -0.965
- 36.7284, -0.559
- 36.8808, -0.508
- 37.0332, -0.737
- 37.1856, -0.635
- 37.338, -0.279
- 37.4904, -0.254
- 37.6428, -0.305
- 37.7952, 0.381
- 37.9476, 0.559
- 38.1, -0.025
- 38.2524, 0.305
- 38.4048, 1.245
- 38.5572, 1.245
- 38.7096, 0.762
- 38.862, 0.61
- 39.0144, 0.483
- 39.1668, 0.457
- 39.3192, 0.61
- 39.4716, 1.016
- 39.624, 0.61
- 39.7764, 0.127
- 39.9288, 0.229
- 40.0812, -0.051
- 40.2336, -0.61
- 40.386, -0.965
- 40.5384, -0.737
- 40.6908, -0.762
- 40.8432, -0.711
- 40.9956, -0.61
- 41.148, -0.965
- 41.3004, -1.88
- 41.4528, -2.184
- 41.6052, -1.549
- 41.7576, -1.067
- 41.91, -1.905
- 42.0624, -2.997
- 42.2148, -3.099
- 42.3672, -3.404
- 42.5196, -3.099
- 42.672, -2.819
- 42.8244, -3.048
- 42.9768, -3.2
- 43.1292, -2.87
- 43.2816, -2.362
- 43.434, -2.286
- 43.5864, -1.524
- 43.7388, -0.889
- 43.8912, -1.499
- 44.0436, -2.362
- 44.196, -2.388
- 44.3484, -1.854
- 44.5008, -1.727
- 44.6532, -1.549
- 44.8056, -1.397
- 44.958, -1.626
- 45.1104, -1.727
- 45.2628, -1.397
- 45.4152, -0.965
- 45.5676, -0.584
- 45.72, -0.508
- 45.8724, -0.686
- 46.0248, -0.635
- 46.1772, -0.432
- 46.3296, -0.203
- 46.482, -0.102
- 46.6344, 0.076
- 46.7868, 0.127
- 46.9392, -0.025
- 47.0916, -0.229
- 47.244, -0.381
- 47.3964, 0.229
- 47.5488, 0.94
- 47.7012, 0.864
- 47.8536, 0.838
- 48.006, 0.965
- 48.1584, 0.635
- 48.3108, 0.508
- 48.4632, 1.245
- 48.6156, 1.981
- 48.768, 2.032
- 48.9204, 1.905
- 49.0728, 2.057
- 49.2252, 1.93
- 49.3776, 1.041
- 49.53, 0.61
- 49.6824, 1.041
- 49.8348, 1.448
- 49.9872, 1.626
- 50.1396, 1.778
- 50.292, 1.803
- 50.4444, 1.829
- 50.5968, 1.981
- 50.7492, 2.032
- 50.9016, 2.083
- 51.054, 2.21
- 51.2064, 2.337
- 51.3588, 2.438
- 51.5112, 1.93
- 51.6636, 0.762
- 51.816, -0.432
- 51.9684, -1.041
- 52.1208, -0.991
- 52.2732, -0.432
- 52.4256, -0.127
- 52.578, -0.686
- 52.7304, -1.6
- 52.8828, -1.803
- 53.0352, -1.727
- 53.1876, -2.159
- 53.34, -2.413
- 53.4924, -2.388
- 53.6448, -1.549
- 53.7972, -0.483
- 53.9496, 0.152
- 54.102, 0.508
- 54.2544, 0.305
- 54.4068, 0.025
- 54.5592, -0.279
- 54.7116, -0.533
- 54.864, -0.305
- 55.0164, 0.381
- 55.1688, 0.559
- 55.3212, 0.457
- 55.4736, 0.762
- 55.626, 1.143
- 55.7784, 0.889
- 55.9308, 0.838
- 56.0832, 1.118
- 56.2356, 0.965
- 56.388, 1.346
- 56.5404, 1.6
- 56.6928, 1.422
- 56.8452, 1.422
- 56.9976, 1.6
- 57.15, 1.956
- 57.3024, 2.108
- 57.4548, 2.083
- 57.6072, 2.261
- 57.7596, 2.515
- 57.912, 2.692
- 58.0644, 2.743
- 58.2168, 2.692
- 58.3692, 3.251
- 58.5216, 3.2
- 58.674, 2.388
- 58.8264, 2.921
- 58.9788, 3.683
- 59.1312, 3.912
- 59.2836, 4.166
- 59.436, 4.369
- 59.5884, 3.683
- 59.7408, 2.946
- 59.8932, 2.667
- 60.0456, 2.286
- 60.198, 2.21
- 60.3504, 2.235
- 60.5028, 2.083
- 60.6552, 2.515
- 60.8076, 3.251
- 60.96, 2.896
- 61.1124, 2.565
- 61.2648, 2.184
- 61.4172, 1.956
- 61.5696, 2.464
- 61.722, 3.099
- 61.8744, 3.48
- 62.0268, 3.15
- 62.1792, 2.769
- 62.3316, 2.261
- 62.484, 2.21
- 62.6364, 3.658
- 62.7888, 4.14
- 62.9412, 3.099
- 63.0936, 2.921
- 63.246, 2.87
- 63.3984, 2.184
- 63.5508, 2.032
- 63.7032, 2.184
- 63.8556, 2.184
- 64.008, 2.311
- 64.1604, 1.829
- 64.3128, 1.702
- 64.4652, 1.956
- 64.6176, 1.473
- 64.77, 1.041
- 64.9224, 0.94
- 65.0748, 1.118
- 65.2272, 1.219
- 65.3796, 1.473
- 65.532, 1.753
- 65.6844, 1.727
- 65.8368, 1.651
- 65.9892, 1.422
- 66.1416, 1.27
- 66.294, 1.829
- 66.4464, 2.286
- 66.5988, 1.803
- 66.7512, 1.397
- 66.9036, 1.448
- 67.056, 2.438
- 67.2084, 3.404
- 67.3608, 3.429
- 67.5132, 3.378
- 67.6656, 3.556
- 67.818, 3.531
- 67.9704, 3.353
- 68.1228, 3.404
- 68.2752, 3.277
- 68.4276, 3.429
- 68.58, 3.861
- 68.7324, 3.912
- 68.8848, 3.785
- 69.0372, 3.581
- 69.1896, 3.835
- 69.342, 4.521
- 69.4944, 4.953
- 69.6468, 4.877
- 69.7992, 4.013
- 69.9516, 3.454
- 70.104, 3.632
- 70.2564, 3.886
- 70.4088, 4.445
- 70.5612, 5.105
- 70.7136, 4.877
- 70.866, 4.521
- 71.0184, 4.699
- 71.1708, 4.293
- 71.3232, 3.81
- 71.4756, 3.886
- 71.628, 4.039
- 71.7804, 3.835
- 71.9328, 3.581
- 72.0852, 3.734
- 72.2376, 4.369
- 72.39, 4.877
- 72.5424, 5.004
- 72.6948, 4.902
- 72.8472, 4.572
- 72.9996, 4.699
- 73.152, 4.674
- 73.3044, 4.369
- 73.4568, 4.75
- 73.6092, 5.055
- 73.7616, 4.623
- 73.914, 4.318
- 74.0664, 4.318
- 74.2188, 4.597
- 74.3712, 4.648
- 74.5236, 4.445
- 74.676, 4.547
- 74.8284, 4.47
- 74.9808, 3.937
- 75.1332, 3.429
- 75.2856, 3.327
- 75.438, 3.251
- 75.5904, 3.531
- 75.7428, 3.556
- 75.8952, 3.505
- 76.0476, 3.886
- 76.2, 3.734
- 76.3524, 3.15
- 76.5048, 3.404
- 76.6572, 3.454
- 76.8096, 3.251
- 76.962, 3.581
- 77.1144, 2.896
- 77.2668, 2.21
- 77.4192, 2.438
- 77.5716, 2.946
- 77.724, 2.667
- 77.8764, 2.134
- 78.0288, 1.905
- 78.1812, 1.676
- 78.3336, 1.575
- 78.486, 1.448
- 78.6384, 1.626
- 78.7908, 1.981
- 78.9432, 1.626
- 79.0956, 0.457
- 79.248, 0.33
- 79.4004, 0.914
- 79.5528, 0.66
- 79.7052, 0.076
- 79.8576, -0.305
- 80.01, -0.254
- 80.1624, 0.102
- 80.3148, 0.076
- 80.4672, -0.178
- 80.6196, 0.025
- 80.772, 0.025
- 80.9244, 0.152
- 81.0768, 0.559
- 81.2292, 0.584
- 81.3816, 0.279
- 81.534, -0.152
- 81.6864, -0.33
- 81.8388, -0.254
- 81.9912, -0.229
- 82.1436, -0.432
- 82.296, -0.864
- 82.4484, -1.092
- 82.6008, -1.041
- 82.7532, -1.067
- 82.9056, -1.524
- 83.058, -1.397
- 83.2104, -1.041
- 83.3628, -1.219
- 83.5152, -1.041
- 83.6676, -0.838
- 83.82, -1.067
- 83.9724, -1.397
- 84.1248, -0.965
- 84.2772, -1.067
- 84.4296, -1.753
- 84.582, -1.6
- 84.7344, -0.991
- 84.8868, -0.686
- 85.0392, -0.686
- 85.1916, -0.533
- 85.344, -0.076
- 85.4964, 0.229
- 85.6488, 0.457
- 85.8012, 0.864
- 85.9536, 0.838
- 86.106, 0.406
- 86.2584, -0.178
- 86.4108, -0.279
- 86.5632, -0.457
- 86.7156, -0.737
- 86.868, -0.66
- 87.0204, -0.203
- 87.1728, -0.076
- 87.3252, -0.356
- 87.4776, 0.127
- 87.63, 0.025
- 87.7824, -0.584
- 87.9348, -0.686
- 88.0872, -0.94
- 88.2396, -1.092
- 88.392, -0.991
- 88.5444, -0.508
- 88.6968, -0.076
- 88.8492, -0.381
- 89.0016, -0.66
- 89.154, -0.533
- 89.3064, -0.305
- 89.4588, -0.152
- 89.6112, 0.127
- 89.7636, 0.381
- 89.916, 0.356
- 90.0684, 0.356
- 90.2208, 1.168
- 90.3732, 1.803
- 90.5256, 1.753
- 90.678, 1.803
- 90.8304, 1.702
- 90.9828, 1.727
- 91.1352, 2.286
- 91.2876, 2.845
- 91.44, 3.023
- 91.5924, 2.972
- 91.7448, 2.667
- 91.8972, 2.54
- 92.0496, 2.743
- 92.202, 2.616
- 92.3544, 2.362
- 92.5068, 2.032
- 92.6592, 0.965
- 92.8116, 0.381
- 92.964, 0.584
- 93.1164, 0.66
- 93.2688, 0.076
- 93.4212, -0.965
- 93.5736, -1.575
- 93.726, -1.727
- 93.8784, -1.676
- 94.0308, -1.829
- 94.1832, -1.829
- 94.3356, -1.727
- 94.488, -1.829
- 94.6404, -1.575
- 94.7928, -1.651
- 94.9452, -1.168
- 95.0976, -0.254
- 95.25, -0.965
- 95.4024, -1.981
- 95.5548, -2.261
- 95.7072, -2.362
- 95.8596, -1.981
- 96.012, -1.778
- 96.1644, -2.464
- 96.3168, -3.099
- 96.4692, -3.175
- 96.6216, -2.692
- 96.774, -2.565
- 96.9264, -2.489
- 97.0788, -2.235
- 97.2312, -1.651
- 97.3836, -0.864
- 97.536, -1.092
- 97.6884, -1.549
- 97.8408, -1.245
- 97.9932, -0.965
- 98.1456, -1.041
- 98.298, -0.965
- 98.4504, -0.762
- 98.6028, -0.635
- 98.7552, -0.686
- 98.9076, -0.737
- 99.06, -0.737
- 99.2124, -0.61
- 99.3648, -0.787
- 99.5172, -0.864
- 99.6696, -0.991
- 99.822, -0.864
- 99.9744, -0.533
- 100.1268, -1.346
- 100.2792, -1.448
- 100.4316, -0.406
- 100.584, -0.127
- 100.7364, -0.457
- 100.8888, -0.711
- 101.0412, -0.965
- 101.1936, -1.219
- 101.346, -1.219
- 101.4984, -1.27
- 101.6508, -2.591
- 101.8032, -3.759
- 101.9556, -3.378
- 102.108, -2.896
- 102.2604, -2.743
- 102.4128, -2.845
- 102.5652, -3.2
- 102.7176, -3.226
- 102.87, -2.769
- 103.0224, -1.905
- 103.1748, -1.473
- 103.3272, -2.057
- 103.4796, -2.667
- 103.632, -2.845
- 103.7844, -2.642
- 103.9368, -2.718
- 104.0892, -2.769
- 104.2416, -2.438
- 104.394, -2.362
- 104.5464, -2.362
- 104.6988, -2.337
- 104.8512, -2.007
- 105.0036, -1.778
- 105.156, -1.88
- 105.3084, -2.388
- 105.4608, -2.845
- 105.6132, -2.819
- 105.7656, -2.642
- 105.918, -2.515
- 106.0704, -2.489
- 106.2228, -2.489
- 106.3752, -2.515
- 106.5276, -2.159
- 106.68, -1.168
- 106.8324, -0.508
- 106.9848, -0.838
- 107.1372, -1.143
- 107.2896, -1.143
- 107.442, -0.762
- 107.5944, -0.127
- 107.7468, 0.305
- 107.8992, 0.762
- 108.0516, 0.94
- 108.204, 0.533
- 108.3564, 0.305
- 108.5088, 0.152
- 108.6612, 0.152
- 108.8136, 0.152
- 108.966, 0.152
- 109.1184, 0.635
- 109.2708, 0.991
- 109.4232, 0.965
- 109.5756, 1.194
- 109.728, 1.346
- 109.8804, 0.965
- 110.0328, 0.61
- 110.1852, 0.61
- 110.3376, 0.737
- 110.49, 0.889
- 110.6424, 1.016
- 110.7948, 1.448
- 110.9472, 1.651
- 111.0996, 1.092
- 111.252, 0.584
- 111.4044, 0.406
- 111.5568, 1.041
- 111.7092, 1.473
- 111.8616, 1.067
- 112.014, 0.914
- 112.1664, 1.092
- 112.3188, 1.143
- 112.4712, 0.737
- 112.6236, 0.508
- 112.776, 0.33
- 112.9284, 0.025
- 113.0808, 0.127
- 113.2332, -0.203
- 113.3856, -0.838
- 113.538, -1.092
- 113.6904, -1.422
- 113.8428, -1.067
- 113.9952, -0.483
- 114.1476, -0.965
- 114.3, -1.524
- 114.4524, -1.321
- 114.6048, -1.092
- 114.7572, -1.397
- 114.9096, -1.626
- 115.062, -1.524
- 115.2144, -1.372
- 115.3668, -1.727
- 115.5192, -1.93
- 115.6716, -1.524
- 115.824, -1.702
- 115.9764, -2.362
- 116.1288, -2.464
- 116.2812, -2.235
- 116.4336, -2.159
- 116.586, -2.565
- 116.7384, -3.226
- 116.8908, -3.378
- 117.0432, -3.048
- 117.1956, -3.404
- 117.348, -4.064
- 117.5004, -4.318
- 117.6528, -4.496
- 117.8052, -3.912
- 117.9576, -3.683
- 118.11, -4.039
- 118.2624, -3.962
- 118.4148, -4.064
- 118.5672, -4.191
- 118.7196, -4.166
- 118.872, -3.937
- 119.0244, -3.785
- 119.1768, -4.394
- 119.3292, -4.42
- 119.4816, -4.42
- 119.634, -5.08
- 119.7864, -5.055
- 119.9388, -4.521
- 120.0912, -3.556
- 120.2436, -3.886
- 120.396, -4.547
- 120.5484, -4.293
- 120.7008, -4.089
- 120.8532, -4.318
- 121.0056, -4.597
- 121.158, -4.369
- 121.3104, -4.064
- 121.4628, -3.81
- 121.6152, -3.48
- 121.7676, -3.505
- 121.92, -3.81
- 122.0724, -3.835
- 122.2248, -4.115
- 122.3772, -4.318
- 122.5296, -4.166
- 122.682, -3.658
- 122.8344, -3.48
- 122.9868, -3.581
- 123.1392, -3.099
- 123.2916, -3.15
- 123.444, -3.835
- 123.5964, -4.369
- 123.7488, -4.039
- 123.9012, -4.089
- 124.0536, -4.242
- 124.206, -3.937
- 124.3584, -4.242
- 124.5108, -4.166
- 124.6632, -4.242
- 124.8156, -4.47
- 124.968, -4.445
- 125.1204, -3.785
- 125.2728, -2.87
- 125.4252, -2.972
- 125.5776, -3.505
- 125.73, -3.937
- 125.8824, -4.191
- 126.0348, -4.242
- 126.1872, -4.394
- 126.3396, -4.267
- 126.492, -3.937
- 126.6444, -3.861
- 126.7968, -3.962
- 126.9492, -4.191
- 127.1016, -4.47
- 127.254, -4.623
- 127.4064, -4.674
- 127.5588, -4.826
- 127.7112, -4.851
- 127.8636, -4.75
- 128.016, -4.699
- 128.1684, -4.572
- 128.3208, -4.293
- 128.4732, -4.216
- 128.6256, -4.267
- 128.778, -4.242
- 128.9304, -4.242
- 129.0828, -3.81
- 129.2352, -3.785
- 129.3876, -4.394
- 129.54, -4.877
- 129.6924, -5.105
- 129.8448, -5.258
- 129.9972, -5.131
- 130.1496, -4.851
- 130.302, -5.156
- 130.4544, -4.724
- 130.6068, -4.115
- 130.7592, -3.861
- 130.9116, -3.962
- 131.064, -4.877
- 131.2164, -5.156
- 131.3688, -4.216
- 131.5212, -4.013
- 131.6736, -4.674
- 131.826, -4.547
- 131.9784, -3.81
- 132.1308, -3.556
- 132.2832, -4.267
- 132.4356, -4.42
- 132.588, -4.166
- 132.7404, -4.166
- 132.8928, -4.293
- 133.0452, -4.699
- 133.1976, -4.826
- 133.35, -4.75
- 133.5024, -4.801
- 133.6548, -4.242
- 133.8072, -3.759
- 133.9596, -3.607
- 134.112, -3.277
- 134.2644, -2.997
- 134.4168, -2.718
- 134.5692, -2.591
- 134.7216, -2.057
- 134.874, -1.092
- 135.0264, -0.737
- 135.1788, -1.092
- 135.3312, -1.346
- 135.4836, -1.803
- 135.636, -2.667
- 135.7884, -2.87
- 135.9408, -2.692
- 136.0932, -2.616
- 136.2456, -2.616
- 136.398, -2.54
- 136.5504, -2.362
- 136.7028, -2.184
- 136.8552, -2.108
- 137.0076, -1.829
+ 0, -0.49739
+ 0.1, -0.00066585
+ 0.2, 0.4322
+ 0.3, -0.9007
+ 0.4, -0.49049
+ 0.5, 0.097275
+ 0.6, -0.61455
+ 0.7, -0.40394
+ 0.8, -0.35605
+ 0.9, -0.48822
+ 1, 0.15957
+ 1.1, 0.48007
+ 1.2, 0.84375
+ 1.3, -0.34051
+ 1.4, -0.5283
+ 1.5, 0.765
+ 1.6, 0.06757
+ 1.7, 0.6361
+ 1.8, -0.24865
+ 1.9, -0.17861
+ 2, -0.064495
+ 2.1, -0.6563
+ 2.2, 0.33085
+ 2.3, -0.60685
+ 2.4, -1.1239
+ 2.5, 0.12793
+ 2.6, 0.7562
+ 2.7, -0.067705
+ 2.8, -0.37667
+ 2.9, 0.63655
+ 3, -0.12788
+ 3.1, -0.098435
+ 3.2, 0.12551
+ 3.3, 0.81335
+ 3.4, 0.2375
+ 3.5, -0.24606
+ 3.6, -0.16101
+ 3.7, 0.050795
+ 3.8, 0.026124
+ 3.9, 0.39337
+ 4, 0.070835
+ 4.1, 0.031414
+ 4.2, 0.38643
+ 4.3, -0.41481
+ 4.4, 0.2212
+ 4.5, -0.5057
+ 4.6, 0.11958
+ 4.7, -1.1162
+ 4.8, -0.6167
+ 4.9, 0.60415
+ 5, -0.080485
+ 5.1, 0.34923
+ 5.2, -0.34071
+ 5.3, 0.38053
+ 5.4, -0.023675
+ 5.5, -0.006864
+ 5.6, 0.49219
+ 5.7, 0.41985
+ 5.8, -0.10257
+ 5.9, -1.0034
+ 6, -0.49774
+ 6.1, -0.10849
+ 6.2, 0.22822
+ 6.3, 0.11963
+ 6.4, -1.0314
+ 6.5, -0.29449
+ 6.6, 0.45043
+ 6.7, -0.17722
+ 6.8, 0.17799
+ 6.9, -0.070945
+ 7, -0.16991
+ 7.1, -0.5576
+ 7.2, -0.47363
+ 7.3, 0.026275
+ 7.4, 0.10492
+ 7.5, -0.49719
+ 7.6, 0.23308
+ 7.7, 0.27524
+ 7.8, 0.20005
+ 7.9, -0.22653
+ 8, 0.80255
+ 8.1, -0.16703
+ 8.2, 0.22068
+ 8.3, -0.33655
+ 8.4, -0.30583
+ 8.5, 0.15328
+ 8.6, 0.28736
+ 8.7, 0.54505
+ 8.8, 0.12226
+ 8.9, -0.6341
+ 9, 0.8023
+ 9.1, -0.61365
+ 9.2, -0.092395
+ 9.3, 0.26659
+ 9.4, 0.16543
+ 9.5, 0.54385
+ 9.6, -0.738
+ 9.7, 0.22715
+ 9.8, 0.37906
+ 9.9, -0.45031
+ 10, 0.18835
+ 10.1, -1.0622
+ 10.2, 0.26932
+ 10.3, 1.1782
+ 10.4, 0.14901
+ 10.5, -0.696
+ 10.6, 0.25281
+ 10.7, -0.19906
+ 10.8, -0.07754
+ 10.9, 1.2716
+ 11, -1.0747
+ 11.1, -0.54465
+ 11.2, -1.2824
+ 11.3, -0.30569
+ 11.4, 0.5365
+ 11.5, 0.1912
+ 11.6, -0.40085
+ 11.7, 0.09928
+ 11.8, -0.59545
+ 11.9, 0.07851
+ 12, -0.6024
+ 12.1, 0.12463
+ 12.2, 0.058445
+ 12.3, 0.45303
+ 12.4, 0.2595
+ 12.5, -0.072675
+ 12.6, 0.39359
+ 12.7, 0.43505
+ 12.8, -0.49597
+ 12.9, 0.13919
+ 13, 0.17663
+ 13.1, 0.31574
+ 13.2, 0.47869
+ 13.3, -1.0792
+ 13.4, -0.20681
+ 13.5, -0.23085
+ 13.6, -0.52415
+ 13.7, -0.8896
+ 13.8, -0.010708
+ 13.9, 0.12995
+ 14, -0.6911
+ 14.1, 0.6321
+ 14.2, 0.65905
+ 14.3, -0.68865
+ 14.4, 0.96485
+ 14.5, -1.1899
+ 14.6, -1.1944
+ 14.7, 0.19595
+ 14.8, 0.11937
+ 14.9, 0.21449
+ 15, -0.16966
+ 15.1, -0.64825
+ 15.2, -0.26813
+ 15.3, 0.32899
+ 15.4, -0.21326
+ 15.5, 0.5714
+ 15.6, -0.6912
+ 15.7, -0.41527
+ 15.8, 0.28293
+ 15.9, 1.0877
+ 16, -0.37942
+ 16.1, -0.8619
+ 16.2, -0.29639
+ 16.3, 0.028687
+ 16.4, -0.93375
+ 16.5, 0.84825
+ 16.6, 0.31448
+ 16.7, -1.095
+ 16.8, -0.51045
+ 16.9, 0.015658
+ 17, -0.29309
+ 17.1, -0.23196
+ 17.2, 0.37799
+ 17.3, 0.13306
+ 17.4, 0.94665
+ 17.5, 0.29819
+ 17.6, 0.65015
+ 17.7, 0.29355
+ 17.8, -0.058505
+ 17.9, 0.39184
+ 18, 0.12057
+ 18.1, -0.11463
+ 18.2, 0.27593
+ 18.3, -0.67835
+ 18.4, -0.33331
+ 18.5, 1.3202
+ 18.6, 1.5167
+ 18.7, -0.6117
+ 18.8, -0.7155
+ 18.9, -0.20553
+ 19, -0.22841
+ 19.1, 0.44653
+ 19.2, 0.10429
+ 19.3, -0.065575
+ 19.4, 0.71425
+ 19.5, 0.1594
+ 19.6, -0.62135
+ 19.7, -0.44769
+ 19.8, 0.40991
+ 19.9, 0.078725
+ 20, 0.45272
+ 20.1, 0.41325
+ 20.2, -0.34274
+ 20.3, -0.40408
+ 20.4, 0.24107
+ 20.5, 0.095565
+ 20.6, -0.051875
+ 20.7, -0.1257
+ 20.8, 0.68595
+ 20.9, 0.28066
+ 21, 0.30641
+ 21.1, -0.22533
+ 21.2, 0.42048
+ 21.3, 0.37161
+ 21.4, -1.1119
+ 21.5, -0.011199
+ 21.6, 0.49623
+ 21.7, 0.53215
+ 21.8, -0.31644
+ 21.9, -0.34014
+ 22, 0.43527
+ 22.1, 1.0685
+ 22.2, 0.06515
+ 22.3, 0.34099
+ 22.4, 1.1677
+ 22.5, 0.017483
+ 22.6, 0.8128
+ 22.7, -0.18654
+ 22.8, -1.0347
+ 22.9, -1.0572
+ 23, -0.35146
+ 23.1, 1.0639
+ 23.2, 0.03897
+ 23.3, 0.25401
+ 23.4, 0.57805
+ 23.5, 0.30656
+ 23.6, -0.19371
+ 23.7, 0.9171
+ 23.8, -0.2285
+ 23.9, 0.16804
+ 24, -0.90265
+ 24.1, -0.6038
+ 24.2, 1.3203
+ 24.3, 0.55315
+ 24.4, 0.28672
+ 24.5, 0.3429
+ 24.6, -1.1299
+ 24.7, -0.54325
+ 24.8, 0.37946
+ 24.9, 0.69295
+ 25, -0.48127
+ 25.1, -0.46539
+ 25.2, 0.15857
+ 25.3, -0.35537
+ 25.4, 0.61535
+ 25.5, 0.52165
+ 25.6, 0.045881
+ 25.7, -0.3296
+ 25.8, -0.14028
+ 25.9, -0.43533
+ 26, 0.05104
+ 26.1, -0.3993
+ 26.2, -0.9169
+ 26.3, -0.14343
+ 26.4, -0.93655
+ 26.5, -0.51455
+ 26.6, 0.04429
+ 26.7, -0.47642
+ 26.8, -0.0036835
+ 26.9, -0.52505
+ 27, -0.07917
+ 27.1, 0.5411
+ 27.2, -0.21264
+ 27.3, -0.7387
+ 27.4, 0.27852
+ 27.5, -0.41635
+ 27.6, -0.21191
+ 27.7, 0.14372
+ 27.8, 0.55855
+ 27.9, -0.31606
+ 28, -0.26332
+ 28.1, -0.26667
+ 28.2, 0.58965
+ 28.3, -0.43532
+ 28.4, 0.063575
+ 28.5, -0.52885
+ 28.6, -0.041271
+ 28.7, -0.13083
+ 28.8, 0.39293
+ 28.9, -0.12387
+ 29, -0.32414
+ 29.1, -0.079585
+ 29.2, -0.31194
+ 29.3, -0.32589
+ 29.4, 0.24348
+ 29.5, -0.24359
+ 29.6, 0.22234
+ 29.7, -0.38573
+ 29.8, 0.10432
+ 29.9, -0.2348
+ 30, 0.49915
+ 30.1, 0.78435
+ 30.2, 0.06489
+ 30.3, -0.54635
+ 30.4, -0.22434
+ 30.5, 0.17169
+ 30.6, -0.23472
+ 30.7, 0.2841
+ 30.8, 0.10046
+ 30.9, 0.021195
+ 31, -0.24254
+ 31.1, -0.044316
+ 31.2, 0.033042
+ 31.3, -0.083985
+ 31.4, -0.15255
+ 31.5, 0.71875
+ 31.6, -0.6248
+ 31.7, 0.22998
+ 31.8, 0.13129
+ 31.9, 0.19425
+ 32, 0.26465
+ 32.1, 0.95385
+ 32.2, 0.29698
+ 32.3, -0.0705
+ 32.4, 0.037705
+ 32.5, 0.70505
+ 32.6, 0.14463
+ 32.7, 0.5459
+ 32.8, -0.21521
+ 32.9, 0.33581
+ 33, 0.16081
+ 33.1, -0.018239
+ 33.2, 0.68875
+ 33.3, -0.15469
+ 33.4, -0.8789
+ 33.5, 0.48315
+ 33.6, -0.16722
+ 33.7, 0.42464
+ 33.8, -0.09789
+ 33.9, -0.23159
+ 34, 0.0013686
+ 34.1, -0.9342
+ 34.2, 0.0046872
+ 34.3, -0.099815
+ 34.4, -0.6329
+ 34.5, 0.21586
+ 34.6, 0.8174
+ 34.7, 0.5021
+ 34.8, -0.066695
+ 34.9, 0.5871
+ 35, -0.42833
+ 35.1, 0.5942
+ 35.2, 0.14566
+ 35.3, -0.55325
+ 35.4, 0.13331
+ 35.5, -0.10867
+ 35.6, 0.28929
+ 35.7, -0.22431
+ 35.8, 0.44282
+ 35.9, 0.7842
+ 36, 0.3641
+ 36.1, 0.17413
+ 36.2, 1.0478
+ 36.3, 1.1088
+ 36.4, 0.68665
+ 36.5, -0.24612
+ 36.6, -0.035629
+ 36.7, 0.15429
+ 36.8, -0.3498
+ 36.9, -0.039477
+ 37, 0.7162
+ 37.1, 0.12369
+ 37.2, 0.30894
+ 37.3, 0.21662
+ 37.4, 0.67085
+ 37.5, 0.08438
+ 37.6, 0.18463
+ 37.7, 0.12727
+ 37.8, -0.05404
+ 37.9, -0.219
+ 38, 0.067
+ 38.1, -0.86225
+ 38.2, 0.73375
+ 38.3, 0.31065
+ 38.4, 0.10174
+ 38.5, -0.27965
+ 38.6, 0.48652
+ 38.7, -1.3125
+ 38.8, 0.33837
+ 38.9, -0.103
+ 39, -0.40095
+ 39.1, -0.7131
+ 39.2, -0.502
+ 39.3, 0.54755
+ 39.4, 0.31204
+ 39.5, -0.14389
+ 39.6, -0.81485
+ 39.7, -0.56815
+ 39.8, 0.098805
+ 39.9, 1.0112
+ 40, -0.9329
+ 40.1, -0.018165
+ 40.2, -0.82475
+ 40.3, 0.51185
+ 40.4, 0.22265
+ 40.5, 0.5424
+ 40.6, 0.48164
+ 40.7, 0.00070145
+ 40.8, -0.51185
+ 40.9, -0.42921
+ 41, -0.34308
+ 41.1, 0.49155
+ 41.2, 0.14785
+ 41.3, 0.68935
+ 41.4, 0.2001
+ 41.5, -0.026521
+ 41.6, 0.73515
+ 41.7, -0.6613
+ 41.8, -0.1811
+ 41.9, 0.94645
+ 42, 0.036268
+ 42.1, 0.27992
+ 42.2, -0.22827
+ 42.3, -0.26681
+ 42.4, 0.071895
+ 42.5, 0.019437
+ 42.6, 1.1235
+ 42.7, 0.5411
+ 42.8, 0.575
+ 42.9, 0.8707
+ 43, -0.22348
+ 43.1, -0.46381
+ 43.2, 0.018648
+ 43.3, -0.59985
+ 43.4, -0.49485
+ 43.5, 0.8692
+ 43.6, -0.064515
+ 43.7, -0.27198
+ 43.8, 0.10445
+ 43.9, 0.21927
+ 44, -0.9876
+ 44.1, 0.11
+ 44.2, -0.33864
+ 44.3, -0.7338
+ 44.4, -0.62385
+ 44.5, -0.1705
+ 44.6, 0.7338
+ 44.7, 0.48399
+ 44.8, 0.54935
+ 44.9, -0.22031
+ 45, -0.1785
+ 45.1, -0.1488
+ 45.2, -0.78255
+ 45.3, 0.11929
+ 45.4, -0.68555
+ 45.5, -0.12413
+ 45.6, -0.045884
+ 45.7, -1.1803
+ 45.8, 0.6475
+ 45.9, -0.081365
+ 46, -0.5432
+ 46.1, -0.3532
+ 46.2, 0.15476
+ 46.3, 0.23669
+ 46.4, 0.44487
+ 46.5, 0.51425
+ 46.6, 0.8447
+ 46.7, -0.47419
+ 46.8, 0.19287
+ 46.9, -0.12227
+ 47, -0.1141
+ 47.1, 0.12585
+ 47.2, 0.28058
+ 47.3, -0.11669
+ 47.4, 0.6867
+ 47.5, -0.055485
+ 47.6, 0.033573
+ 47.7, -0.20048
+ 47.8, 0.26398
+ 47.9, -0.43668
+ 48, 0.051705
+ 48.1, -0.18393
+ 48.2, 0.23153
+ 48.3, -0.23341
+ 48.4, -0.036097
+ 48.5, 0.1644
+ 48.6, 0.08554
+ 48.7, -0.075015
+ 48.8, 0.33625
+ 48.9, 0.5311
+ 49, -0.12783
+ 49.1, -0.533
+ 49.2, -0.37785
+ 49.3, 0.24846
+ 49.4, -0.11649
+ 49.5, 0.28583
+ 49.6, -0.33367
+ 49.7, 0.15088
+ 49.8, 0.6695
+ 49.9, 0.46897
+ 50, -0.20175
+ 50.1, 0.103
+ 50.2, 0.989
+ 50.3, 0.15593
+ 50.4, -0.14757
+ 50.5, -0.7156
+ 50.6, 0.2824
+ 50.7, 0.42941
+ 50.8, -0.50255
+ 50.9, -0.67715
+ 51, -0.752
+ 51.1, 0.1279
+ 51.2, 0.1577
+ 51.3, -0.43529
+ 51.4, 0.6455
+ 51.5, -0.08219
+ 51.6, 0.0144
+ 51.7, -0.06015
+ 51.8, -0.27948
+ 51.9, 0.31341
+ 52, -1.1027
+ 52.1, -1.2074
+ 52.2, -0.43046
+ 52.3, -0.36207
+ 52.4, -0.093815
+ 52.5, 0.74265
+ 52.6, -0.3263
+ 52.7, -0.4274
+ 52.8, -0.24304
+ 52.9, 0.062495
+ 53, 0.4439
+ 53.1, 0.36484
+ 53.2, 0.42696
+ 53.3, -0.19886
+ 53.4, -0.13767
+ 53.5, -0.7566
+ 53.6, 0.69115
+ 53.7, -0.32843
+ 53.8, 0.25189
+ 53.9, 0.9653
+ 54, 0.09914
+ 54.1, -0.88565
+ 54.2, 0.20711
+ 54.3, -0.298
+ 54.4, -0.23684
+ 54.5, -0.77675
+ 54.6, 0.13793
+ 54.7, -1.1034
+ 54.8, 0.18469
+ 54.9, -0.12754
+ 55, 0.21488
+ 55.1, 0.6736
+ 55.2, 0.28353
+ 55.3, 0.16723
+ 55.4, 0.5039
+ 55.5, 0.7406
+ 55.6, 0.31137
+ 55.7, -0.33078
+ 55.8, -0.6334
+ 55.9, 0.5227
+ 56, -0.6102
+ 56.1, 0.025249
+ 56.2, -0.135
+ 56.3, 0.029632
+ 56.4, -0.36392
+ 56.5, -0.23672
+ 56.6, 0.6428
+ 56.7, -0.236
+ 56.8, -0.76235
+ 56.9, -0.14117
+ 57, -0.15052
+ 57.1, 0.3626
+ 57.2, 0.5826
+ 57.3, 0.53295
+ 57.4, 0.53685
+ 57.5, -0.027616
+ 57.6, -0.8702
+ 57.7, 0.027629
+ 57.8, -0.6342
+ 57.9, -1.1491
+ 58, -0.269
+ 58.1, 0.20148
+ 58.2, 0.7738
+ 58.3, -0.20644
+ 58.4, 0.6341
+ 58.5, -0.34442
+ 58.6, 0.71185
+ 58.7, -0.5
+ 58.8, -0.27842
+ 58.9, 0.19395
+ 59, -0.5435
+ 59.1, -0.025954
+ 59.2, -0.90665
+ 59.3, -0.21221
+ 59.4, -0.49394
+ 59.5, 0.16721
+ 59.6, 0.23603
+ 59.7, 0.49748
+ 59.8, -0.05518
+ 59.9, -0.072675
+ 60, 0.17635
+ 60.1, 0.2685
+ 60.2, -0.80625
+ 60.3, 0.40674
+ 60.4, -0.48805
+ 60.5, 0.33764
+ 60.6, -0.30613
+ 60.7, -0.49291
+ 60.8, -0.21171
+ 60.9, 0.45943
+ 61, 0.7834
+ 61.1, 0.67085
+ 61.2, -0.78715
+ 61.3, -0.49578
+ 61.4, 0.038795
+ 61.5, -0.959
+ 61.6, 0.15651
+ 61.7, 0.24294
+ 61.8, -0.010946
+ 61.9, 0.82315
+ 62, -1.19
+ 62.1, -0.8443
+ 62.2, -0.3211
+ 62.3, -0.34173
+ 62.4, 0.63
+ 62.5, -0.64955
+ 62.6, -1.1723
+ 62.7, -0.069375
+ 62.8, 0.40282
+ 62.9, -0.16857
+ 63, 0.27381
+ 63.1, -0.43913
+ 63.2, 0.27311
+ 63.3, -0.13923
+ 63.4, -0.16775
+ 63.5, -1.1157
+ 63.6, -1.0125
+ 63.7, 0.40435
+ 63.8, -0.78445
+ 63.9, 0.22023
+ 64, 0.6359
+ 64.1, 0.5037
+ 64.2, -0.17858
+ 64.3, -0.38904
+ 64.4, 0.5041
+ 64.5, -0.21707
+ 64.6, -0.64145
+ 64.7, 0.088875
+ 64.8, 0.19669
+ 64.9, 0.8782
+ 65, 1.3379
+ 65.1, -0.2569
+ 65.2, 0.38385
+ 65.3, 0.48236
+ 65.4, 0.43052
+ 65.5, 0.44522
+ 65.6, -0.025263
+ 65.7, -0.22504
+ 65.8, 0.07697
+ 65.9, -0.025796
+ 66, 0.72565
+ 66.1, -0.44494
+ 66.2, -0.7898
+ 66.3, -0.072335
+ 66.4, -0.28916
+ 66.5, 0.048663
+ 66.6, -0.7664
+ 66.7, 0.84905
+ 66.8, -0.009649
+ 66.9, 0.15882
+ 67, -0.49173
+ 67.1, 0.36842
+ 67.2, 0.70175
+ 67.3, 0.054445
+ 67.4, -0.29579
+ 67.5, 0.83015
+ 67.6, 0.30406
+ 67.7, 0.32422
+ 67.8, -0.078535
+ 67.9, -0.8047
+ 68, 0.049055
+ 68.1, 0.33018
+ 68.2, -0.5332
+ 68.3, 0.502
+ 68.4, -0.21005
+ 68.5, 1.2526
+ 68.6, -0.023948
+ 68.7, -0.42896
+ 68.8, -0.25897
+ 68.9, -0.22563
+ 69, -0.44061
+ 69.1, 0.078555
+ 69.2, -0.42908
+ 69.3, 0.68655
+ 69.4, -0.10115
+ 69.5, -0.29555
+ 69.6, -0.71
+ 69.7, 0.38144
+ 69.8, -1.0289
+ 69.9, 0.21154
+ 70, -0.11786
+ 70.1, 0.42737
+ 70.2, 0.5831
+ 70.3, 0.49158
+ 70.4, -0.19498
+ 70.5, 0.36271
+ 70.6, -0.39604
+ 70.7, -0.4962
+ 70.8, -0.31867
+ 70.9, 0.8904
+ 71, -0.30203
+ 71.1, 0.8498
+ 71.2, -0.068045
+ 71.3, 0.37626
+ 71.4, 0.04716
+ 71.5, -0.23169
+ 71.6, 0.066315
+ 71.7, 0.11522
+ 71.8, 0.16544
+ 71.9, 0.29906
+ 72, -0.079435
+ 72.1, 0.14656
+ 72.2, -0.52425
+ 72.3, 0.53435
+ 72.4, -0.47885
+ 72.5, -0.012906
+ 72.6, 0.089515
+ 72.7, 0.89105
+ 72.8, -0.16559
+ 72.9, 0.4185
+ 73, 0.47185
+ 73.1, -0.08972
+ 73.2, -0.07394
+ 73.3, 0.2601
+ 73.4, 0.24511
+ 73.5, -0.10566
+ 73.6, 0.20346
+ 73.7, -0.6654
+ 73.8, 0.48442
+ 73.9, 0.9653
+ 74, -0.069275
+ 74.1, -0.12019
+ 74.2, 0.27707
+ 74.3, 0.27902
+ 74.4, -0.67855
+ 74.5, -0.12275
+ 74.6, 0.056195
+ 74.7, 0.028321
+ 74.8, -0.29132
+ 74.9, 0.21255
+ 75, 0.07586
+ 75.1, -0.4711
+ 75.2, 0.40614
+ 75.3, -0.10569
+ 75.4, -0.48793
+ 75.5, 0.073405
+ 75.6, 0.13384
+ 75.7, 0.035369
+ 75.8, -0.7238
+ 75.9, -0.3547
+ 76, 0.45575
+ 76.1, 0.094965
+ 76.2, 0.5697
+ 76.3, 0.8094
+ 76.4, 0.80925
+ 76.5, -0.6008
+ 76.6, 0.052925
+ 76.7, -0.669
+ 76.8, -0.47448
+ 76.9, -0.51595
+ 77, -0.081105
+ 77.1, -0.32991
+ 77.2, 0.08888
+ 77.3, -0.3734
+ 77.4, 0.17369
+ 77.5, 0.15762
+ 77.6, -0.18707
+ 77.7, 1.1022
+ 77.8, 0.5158
+ 77.9, 0.128
+ 78, 0.16886
+ 78.1, -1.4142
+ 78.2, 0.46951
+ 78.3, -0.34396
+ 78.4, 0.038843
+ 78.5, -0.17456
+ 78.6, 0.36618
+ 78.7, -0.08711
+ 78.8, -0.12098
+ 78.9, 0.33891
+ 79, 0.43167
+ 79.1, -0.6206
+ 79.2, 0.41235
+ 79.3, 0.23233
+ 79.4, -0.16575
+ 79.5, -0.43667
+ 79.6, -0.6796
+ 79.7, -0.10941
+ 79.8, -0.38509
+ 79.9, -0.060295
+ 80, 0.29734
+ 80.1, 0.055765
+ 80.2, -0.35176
+ 80.3, -0.48377
+ 80.4, 0.040926
+ 80.5, 0.7437
+ 80.6, -0.4257
+ 80.7, -0.024578
+ 80.8, 0.016369
+ 80.9, 0.15488
+ 81, 0.16814
+ 81.1, -0.9004
+ 81.2, 0.28225
+ 81.3, 0.32095
+ 81.4, 0.59015
+ 81.5, 0.30437
+ 81.6, -0.39559
+ 81.7, 0.017921
+ 81.8, 1.0849
+ 81.9, -0.36157
+ 82, -0.5514
+ 82.1, 0.39131
+ 82.2, 0.045533
+ 82.3, 0.075415
+ 82.4, -0.10417
+ 82.5, 0.95
+ 82.6, -0.18845
+ 82.7, 0.20586
+ 82.8, 0.008424
+ 82.9, 0.24269
+ 83, -0.83545
+ 83.1, -0.5022
+ 83.2, -0.20456
+ 83.3, 1.282
+ 83.4, -0.1712
+ 83.5, -0.24027
+ 83.6, -0.6551
+ 83.7, -0.4592
+ 83.8, 0.25482
+ 83.9, 0.8674
+ 84, 0.7044
+ 84.1, -0.13675
+ 84.2, -0.20261
+ 84.3, 0.38947
+ 84.4, 0.17707
+ 84.5, 1.7557
+ 84.6, 0.3957
+ 84.7, 0.86285
+ 84.8, 1.1079
+ 84.9, 0.07613
+ 85, -0.084835
+ 85.1, -0.24785
+ 85.2, -1.4792
+ 85.3, -1.0724
+ 85.4, 0.4729
+ 85.5, 0.93345
+ 85.6, -0.30373
+ 85.7, -0.17281
+ 85.8, 0.6217
+ 85.9, -0.9156
+ 86, 0.14358
+ 86.1, -0.19442
+ 86.2, 0.61855
+ 86.3, -0.025968
+ 86.4, -0.0034476
+ 86.5, -0.48366
+ 86.6, -1.175
+ 86.7, -0.21078
+ 86.8, -0.16954
+ 86.9, -0.49756
+ 87, -1.0787
+ 87.1, -0.18282
+ 87.2, -0.5535
+ 87.3, 0.36858
+ 87.4, -0.5557
+ 87.5, -0.23171
+ 87.6, -0.48211
+ 87.7, -0.7446
+ 87.8, 0.60625
+ 87.9, 0.6878
+ 88, -0.005131
+ 88.1, -0.044057
+ 88.2, 0.28241
+ 88.3, -0.24984
+ 88.4, 0.5107
+ 88.5, -0.20253
+ 88.6, -0.43026
+ 88.7, -0.48028
+ 88.8, -1.0807
+ 88.9, 0.05465
+ 89, 0.13952
+ 89.1, -0.48827
+ 89.2, -0.031905
+ 89.3, -0.1539
+ 89.4, 0.88085
+ 89.5, 0.50705
+ 89.6, -0.38449
+ 89.7, 0.32399
+ 89.8, 0.664
+ 89.9, -0.36702
+ 90, 0.6693
+ 90.1, 0.14054
+ 90.2, 0.056275
+ 90.3, 0.34715
+ 90.4, 0.85665
+ 90.5, -0.38612
+ 90.6, 0.62205
+ 90.7, -0.11545
+ 90.8, 0.28428
+ 90.9, -0.063675
+ 91, -0.11161
+ 91.1, 0.63575
+ 91.2, 0.26992
+ 91.3, 0.41212
+ 91.4, 0.37078
+ 91.5, 0.06158
+ 91.6, 0.45646
+ 91.7, -0.2165
+ 91.8, 0.07773
+ 91.9, -0.35381
+ 92, 0.09921
+ 92.1, -0.26872
+ 92.2, -0.6444
+ 92.3, -1.1187
+ 92.4, 0.45823
+ 92.5, -0.9213
+ 92.6, 0.86395
+ 92.7, -0.20323
+ 92.8, 0.9583
+ 92.9, -0.66085
+ 93, -0.37762
+ 93.1, -0.18284
+ 93.2, 0.21014
+ 93.3, 2.0263
+ 93.4, -0.19729
+ 93.5, 0.40057
+ 93.6, 0.24505
+ 93.7, -0.22681
+ 93.8, 0.22432
+ 93.9, -0.25226
+ 94, 0.26748
+ 94.1, 0.59045
+ 94.2, -1.4268
+ 94.3, 0.90755
+ 94.4, -0.27917
+ 94.5, -0.36417
+ 94.6, 0.8151
+ 94.7, -0.020691
+ 94.8, -0.6965
+ 94.9, -0.45075
+ 95, -0.28934
+ 95.1, 0.22618
+ 95.2, -0.10657
+ 95.3, 0.28065
+ 95.4, -1.041
+ 95.5, 0.13911
+ 95.6, 0.12283
+ 95.7, 0.813
+ 95.8, -0.012611
+ 95.9, -0.51345
+ 96, 0.081875
+ 96.1, -0.091285
+ 96.2, 0.15352
+ 96.3, 0.13676
+ 96.4, 0.31368
+ 96.5, 0.48668
+ 96.6, 0.32414
+ 96.7, 0.5723
+ 96.8, -0.16345
+ 96.9, 0.5028
+ 97, -0.0061725
+ 97.1, -0.32203
+ 97.2, 0.5078
+ 97.3, 0.34898
+ 97.4, -0.45602
+ 97.5, 0.16371
+ 97.6, 0.21477
+ 97.7, -1.0351
+ 97.8, -0.47597
+ 97.9, -0.39245
+ 98, -0.10496
+ 98.1, -0.30621
+ 98.2, 0.66695
+ 98.3, 0.5751
+ 98.4, -0.015183
+ 98.5, -0.13672
+ 98.6, -0.29248
+ 98.7, 0.11966
+ 98.8, 0.056055
+ 98.9, -0.8317
+ 99, 0.17512
+ 99.1, 1.4262
+ 99.2, 0.41756
+ 99.3, 0.6789
+ 99.4, 0.11645
+ 99.5, -0.037989
+ 99.6, -0.038497
+ 99.7, -0.45951
+ 99.8, 0.07429
+ 99.9, 0.7458
+ 100, -0.49739
 ENDTABLE
 Z_PROFILE_GAIN(2)   1 ! Gain multiplied with calculated value to get elevation
                       ! increment
@@ -6339,30 +6566,6 @@ SSCALE_Z_PROFILE(2) 1 ! Scale factor divided into (distance travelled -
                       ! SSTART_Z_PROFILE)
 
 !------------------------------------------------------------------------------------
-! EQUATIONS OUT (AT THE END OF EVERY TIME STEP)
-!------------------------------------------------------------------------------------
-EQ_OUT X_OBJ_1 = X_DM_1;
-EQ_OUT Y_OBJ_1 = Y_DM_1;
-EQ_OUT X_OBJ_2 = X_DM_2;
-EQ_OUT Y_OBJ_2 = Y_DM_2;
-EQ_OUT X_OBJ_3 = X_DM_3;
-EQ_OUT Y_OBJ_3 = Y_DM_3;
-EQ_OUT X_OBJ_4 = X_DM_4;
-EQ_OUT Y_OBJ_4 = Y_DM_4;
-EQ_OUT X_OBJ_5 = X_DM_5;
-EQ_OUT Y_OBJ_5 = Y_DM_5;
-EQ_OUT X_OBJ_6 = X_DM_6;
-EQ_OUT Y_OBJ_6 = Y_DM_6;
-EQ_OUT X_OBJ_7 = X_DM_7;
-EQ_OUT Y_OBJ_7 = Y_DM_7;
-EQ_OUT X_OBJ_8 = X_DM_8;
-EQ_OUT Y_OBJ_8 = Y_DM_8;
-EQ_OUT X_OBJ_9 = X_DM_9;
-EQ_OUT Y_OBJ_9 = Y_DM_9;
-EQ_OUT X_OBJ_10 = X_DM_10;
-EQ_OUT Y_OBJ_10 = Y_DM_10;
-
-!------------------------------------------------------------------------------------
 ! STATE VARIABLES (NEEDED FOR RESTART)
 !------------------------------------------------------------------------------------
 SV_ABS_ON_OFF_L1    1 ; - ! ABS state: 1 -> apply brake, 0 -> release, wheel L1
@@ -6370,35 +6573,39 @@ SV_ABS_ON_OFF_L2    1 ; - ! ABS state: 1 -> apply brake, 0 -> release, wheel L2
 SV_ABS_ON_OFF_R1    1 ; - ! ABS state: 1 -> apply brake, 0 -> release, wheel L1
 SV_ABS_ON_OFF_R2    1 ; - ! ABS state: 1 -> apply brake, 0 -> release, wheel L2
 SV_AERO_ROAD_ID_1   1 ; - ! Road surface ID for tracked aero road point
-SV_AERO_ROAD_STA_1 512.7670082 ; m ! Road path station for tracked aero road point
+SV_AERO_ROAD_STA_1 181.2399732 ; m ! Road path station for tracked aero road point
 SV_AT_LOCKED        0 ; - ! Lock state of automatic transmission
-SV_AVX   0.1054680511 ; deg/s ! ODE: Body-X roll rate of sprung-mass {AVx}
-SV_AVX_A1 2.786920306 ; deg/s ! ODE: Roll rate of axle 1
-SV_AVX_A2 -1.034676038 ; deg/s ! ODE: Roll rate of axle 2
-SV_AVY 0.007611524887 ; deg/s ! ODE: Body-Y pitch rate of sprung-mass {AVy}
-SV_AVY_L1 311.8877204 ; rpm ! ODE: Spin of wheel L1 {AVy_L1}
-SV_AVY_L1_OLD 311.8848726 ; rpm ! Spin of wheel L1 (previous time step)
-SV_AVY_L2 314.0232742 ; rpm ! ODE: Spin of wheel L2 {AVy_L2}
-SV_AVY_L2_OLD 314.0149133 ; rpm ! Spin of wheel L2 (previous time step)
-SV_AVY_R1 311.8893046 ; rpm ! ODE: Spin of wheel R1 {AVy_R1}
-SV_AVY_R1_OLD 311.8866126 ; rpm ! Spin of wheel R1 (previous time step)
-SV_AVY_R2 313.9133306 ; rpm ! ODE: Spin of wheel R2 {AVy_R2}
-SV_AVY_R2_OLD 313.9107303 ; rpm ! Spin of wheel R2 (previous time step)
-SV_AVZ -0.01556669067 ; deg/s ! ODE: Body-Z yaw rate of sprung-mass {AVz}
+SV_AVX -0.07927078211 ; deg/s ! ODE: Body-X roll rate of sprung-mass {AVx}
+SV_AVX_A1 3.767899284 ; deg/s ! ODE: Roll rate of axle 1
+SV_AVX_A2 1.272787493 ; deg/s ! ODE: Roll rate of axle 2
+SV_AVX_CAB 0.1021672868 ; deg/s ! ODE: Roll rate of cab relative to pitched position
+SV_AVY    0.199672898 ; deg/s ! ODE: Body-Y pitch rate of sprung-mass {AVy}
+SV_AVY_CAB 0.05711002064 ; deg/s ! ODE: Pitch rate of cab relative to sprung mass
+SV_AVY_FRAME_L -0.01420006034 ; deg/s ! ODE: Pitch rate of left frame relative to
+                              ! sprung mass
+SV_AVY_L1 519.5709728 ; rpm ! ODE: Spin of wheel L1 {AVy_L1}
+SV_AVY_L1_OLD 519.5578767 ; rpm ! Spin of wheel L1 (previous time step)
+SV_AVY_L2 553.0275626 ; rpm ! ODE: Spin of wheel L2 {AVy_L2}
+SV_AVY_L2_OLD 552.9937375 ; rpm ! Spin of wheel L2 (previous time step)
+SV_AVY_R1 519.5166609 ; rpm ! ODE: Spin of wheel R1 {AVy_R1}
+SV_AVY_R1_OLD 519.5008178 ; rpm ! Spin of wheel R1 (previous time step)
+SV_AVY_R2 547.0342332 ; rpm ! ODE: Spin of wheel R2 {AVy_R2}
+SV_AVY_R2_OLD 546.9478012 ; rpm ! Spin of wheel R2 (previous time step)
+SV_AVZ -0.01381051972 ; deg/s ! ODE: Body-Z yaw rate of sprung-mass {AVz}
 SV_AV_CL            0 ; rpm ! Clutch relative spin
 SV_AV_COL_CONTROL   0 ; deg/s ! ODE: Steering wheel angular rate
 SV_AV_ENG           0 ; rpm ! ODE: Engine crankshaft spin {AV_Eng}
-SV_AV_SHAFT_L_D2 314.0149133 ; rpm ! ODE: Diff2 Left (first) output shaft speed
-SV_AV_SHAFT_R_D2 313.9107303 ; rpm ! ODE: Diff2 Right (second) output shaft speed
-SV_AV_SW -0.9869627558 ; deg/s ! ODE: Steering wheel angular rate {StrAV_SW}
+SV_AV_SHAFT_L_D2 552.9937375 ; rpm ! ODE: Diff2 Left (first) output shaft speed
+SV_AV_SHAFT_R_D2 546.9478012 ; rpm ! ODE: Diff2 Right (second) output shaft speed
+SV_AV_SW -2.312902738 ; deg/s ! ODE: Steering wheel angular rate {StrAV_SW}
 SV_AV_TC            0 ; rpm ! ODE: Torque coupling output shaft spin
-SV_AV_TR_OUT 1569.814109 ; rpm ! ODE: Transmission output shaft spin
+SV_AV_TR_OUT 2155.885416 ; rpm ! ODE: Transmission output shaft spin
 SV_A_CONTROL        0 ; deg ! ODE: Str whl angle from driver model in torque control
-SV_BATTERY_CHARGED 0.4730125145 ; - ! Electric battery state of charge {SocBttry}
-SV_BATTERY_DIS_CAP 3.161933552 ; A-h ! ODE: Electric battery discharged capacity
+SV_BATTERY_CHARGED 0.6372935523 ; - ! Electric battery state of charge {SocBttry}
+SV_BATTERY_DIS_CAP 2.176229854 ; A-h ! ODE: Electric battery discharged capacity
                                ! {CapBtrDs}
-SV_BETA -0.007692531334 ; deg ! Sideslip (ISO)
-SV_BETA_RD -0.007692531334 ; deg ! Sideslip using road axes
+SV_BETA -0.001822188248 ; deg ! Sideslip (ISO)
+SV_BETA_RD -0.001822188248 ; deg ! Sideslip using road axes
 SV_BRAKE_STATE      0 ; - ! Braking state, used for clutch control
 SV_BTR_CHRG_CUTOFF  0 ; - ! Battery charging cut-off by speed
 SV_BTR_CHRG_ON_OFF  0 ; - ! Battery charging on/off old
@@ -6406,27 +6613,26 @@ SV_CL_2ND_DIFF_LOCKED_2 0 ; - ! 2nd Clutch lock state for 2nd drive axle diff
 SV_CL_2ND_DIFF_SLIP_REF_2 0 ; deg ! 2nd Clutch ref. angle for 2nd drive axle diff
 SV_CL_2ND_DIFF_SPIN_2 0 ; rpm ! 2nd Clutch rel. spin for 2nd drive axle diff
 SV_CL_ACCEL_SHIFT   0 ; - ! Is clutch in auto control for low-speed accel?
-SV_CL_DIFF_LOCKED_2 1 ; - ! Clutch lock state for 2nd drive axle diff
-SV_CL_DIFF_SLIP_REF_2 -0.0006956964204 ; deg ! Clutch ref. angle for 2nd drive axle
-                                       ! diff
-SV_CL_DIFF_SPIN_2 0.1041830384 ; rpm ! Clutch rel. spin for 2nd drive axle diff
+SV_CL_DIFF_LOCKED_2 0 ; - ! Clutch lock state for 2nd drive axle diff
+SV_CL_DIFF_SLIP_REF_2 0 ; deg ! Clutch ref. angle for 2nd drive axle diff
+SV_CL_DIFF_SPIN_2 6.045936324 ; rpm ! Clutch rel. spin for 2nd drive axle diff
 SV_CL_LOCKED        1 ; - ! Clutch lockup state
 SV_CL_TWIN_LOCKED_LR 0 ; - ! Lock state of LR twin clutch
 SV_CL_TWIN_LOCKED_RR 0 ; - ! Lock state of RR twin clutch
 SV_CL_TWIN_SPIN_LR  0 ; rpm ! Rel. spin of LR twin clutch
 SV_CL_TWIN_SPIN_RR  0 ; rpm ! Rel. spin of RR twin clutch
-SV_CMP_S_L1 9.722237747 ; mm ! Compression of ride spring L1
-SV_CMP_S_L2 27.64389125 ; mm ! Compression of ride spring L2
-SV_CMP_S_R1 9.199159232 ; mm ! Compression of ride spring R1
-SV_CMP_S_R2 27.78782564 ; mm ! Compression of ride spring R2
-SV_CMP_T_L1I 19.97812966 ; mm ! Tire L1i compression
+SV_CMP_S_L1 5.134195027 ; mm ! Compression of ride spring L1
+SV_CMP_S_L2 56.75093939 ; mm ! Compression of ride spring L2
+SV_CMP_S_R1 -3.786330323 ; mm ! Compression of ride spring R1
+SV_CMP_S_R2 56.70630479 ; mm ! Compression of ride spring R2
+SV_CMP_T_L1I 21.92878933 ; mm ! Tire L1i compression
 SV_CMP_T_L1O        0 ; mm ! Tire L1o compression
-SV_CMP_T_L2I 4.952245537 ; mm ! Tire L2i compression
-SV_CMP_T_L2O 4.752206257 ; mm ! Tire L2o compression
-SV_CMP_T_R1I 19.28174101 ; mm ! Tire R1i compression
+SV_CMP_T_L2I 4.519166463 ; mm ! Tire L2i compression
+SV_CMP_T_L2O 4.388805626 ; mm ! Tire L2o compression
+SV_CMP_T_R1I 19.36313993 ; mm ! Tire R1i compression
 SV_CMP_T_R1O        0 ; mm ! Tire R1o compression
-SV_CMP_T_R2I 5.496956885 ; mm ! Tire R2i compression
-SV_CMP_T_R2O 5.696994936 ; mm ! Tire R2o compression
+SV_CMP_T_R2I 4.688019151 ; mm ! Tire R2i compression
+SV_CMP_T_R2O 4.818381154 ; mm ! Tire R2o compression
 SV_CONTACT_ID_L1I   1 ; - ! Road surface ID for tire contact {RdID_L1I}
 SV_CONTACT_ID_L1O   1 ; - ! Road surface ID for tire contact {RdID_L1O}
 SV_CONTACT_ID_L2I   1 ; - ! Road surface ID for tire contact {RdID_L2I}
@@ -6435,34 +6641,34 @@ SV_CONTACT_ID_R1I   1 ; - ! Road surface ID for tire contact {RdID_R1I}
 SV_CONTACT_ID_R1O   1 ; - ! Road surface ID for tire contact {RdID_R1O}
 SV_CONTACT_ID_R2I   1 ; - ! Road surface ID for tire contact {RdID_R2I}
 SV_CONTACT_ID_R2O   1 ; - ! Road surface ID for tire contact {RdID_R2O}
-SV_CONTACT_STA_L1I 515.2648351 ; m ! Road path station for tire contact {S_Rd_L1I}
-SV_CONTACT_STA_L1O -1.580987839e-05 ; m ! Road path station for tire contact
+SV_CONTACT_STA_L1I 183.740588 ; m ! Road path station for tire contact {S_Rd_L1I}
+SV_CONTACT_STA_L1O -4.585698233e-06 ; m ! Road path station for tire contact
                                     ! {S_Rd_L1O}
-SV_CONTACT_STA_L2I 511.3630416 ; m ! Road path station for tire contact {S_Rd_L2I}
-SV_CONTACT_STA_L2O 511.36304 ; m ! Road path station for tire contact {S_Rd_L2O}
-SV_CONTACT_STA_R1I 515.2633322 ; m ! Road path station for tire contact {S_Rd_R1I}
-SV_CONTACT_STA_R1O -1.580987839e-05 ; m ! Road path station for tire contact
+SV_CONTACT_STA_L2I 176.6331064 ; m ! Road path station for tire contact {S_Rd_L2I}
+SV_CONTACT_STA_L2O 176.6329145 ; m ! Road path station for tire contact {S_Rd_L2O}
+SV_CONTACT_STA_R1I 183.7409775 ; m ! Road path station for tire contact {S_Rd_R1I}
+SV_CONTACT_STA_R1O -4.585698233e-06 ; m ! Road path station for tire contact
                                     ! {S_Rd_R1O}
-SV_CONTACT_STA_R2I 511.364851 ; m ! Road path station for tire contact {S_Rd_R2I}
-SV_CONTACT_STA_R2O 511.3648519 ; m ! Road path station for tire contact {S_Rd_R2O}
+SV_CONTACT_STA_R2I 176.6333595 ; m ! Road path station for tire contact {S_Rd_R2I}
+SV_CONTACT_STA_R2O 176.6335515 ; m ! Road path station for tire contact {S_Rd_R2O}
 SV_DZDX_GND         0 ; - ! dZ/dX of ground at vehicle aero ref. pt
-SV_DZDX_L1I -0.0003346455826 ; - ! Ground X slope under tire L1i
-SV_DZDX_L1O -0.0003346455826 ; - ! Ground X slope under tire L1o
-SV_DZDX_L2I -0.003503937008 ; - ! Ground X slope under tire L2i
-SV_DZDX_L2O -0.003503937008 ; - ! Ground X slope under tire L2o
-SV_DZDX_R1I -0.00333333273 ; - ! Ground X slope under tire R1i
-SV_DZDX_R1O -0.00333333273 ; - ! Ground X slope under tire R1o
-SV_DZDX_R2I         0 ; - ! Ground X slope under tire R2i
-SV_DZDX_R2O         0 ; - ! Ground X slope under tire R2o
+SV_DZDX_L1I 0.008536998742 ; - ! Ground X slope under tire L1i
+SV_DZDX_L1O 0.008536998742 ; - ! Ground X slope under tire L1o
+SV_DZDX_L2I -0.005850898898 ; - ! Ground X slope under tire L2i
+SV_DZDX_L2O -0.005850898898 ; - ! Ground X slope under tire L2o
+SV_DZDX_R1I 0.007140199946 ; - ! Ground X slope under tire R1i
+SV_DZDX_R1O 0.007140199946 ; - ! Ground X slope under tire R1o
+SV_DZDX_R2I -0.00721924864 ; - ! Ground X slope under tire R2i
+SV_DZDX_R2O -0.00721924864 ; - ! Ground X slope under tire R2o
 SV_DZDY_GND         0 ; - ! dZ/dY of ground at vehicle aero ref. pt
-SV_DZDY_L1I 2.408858335e-07 ; - ! Ground Y slope under tire L1i
-SV_DZDY_L1O 2.408858335e-07 ; - ! Ground Y slope under tire L1o
-SV_DZDY_L2I -1.380611291e-09 ; - ! Ground Y slope under tire L2i
-SV_DZDY_L2O -1.380611291e-09 ; - ! Ground Y slope under tire L2o
-SV_DZDY_R1I -2.005384458e-06 ; - ! Ground Y slope under tire R1i
-SV_DZDY_R1O -2.005384458e-06 ; - ! Ground Y slope under tire R1o
-SV_DZDY_R2I         0 ; - ! Ground Y slope under tire R2i
-SV_DZDY_R2O         0 ; - ! Ground Y slope under tire R2o
+SV_DZDY_L1I -4.633744306e-06 ; - ! Ground Y slope under tire L1i
+SV_DZDY_L1O -4.633744306e-06 ; - ! Ground Y slope under tire L1o
+SV_DZDY_L2I -3.591263707e-06 ; - ! Ground Y slope under tire L2i
+SV_DZDY_L2O -3.591263707e-06 ; - ! Ground Y slope under tire L2o
+SV_DZDY_R1I 8.801635273e-07 ; - ! Ground Y slope under tire R1i
+SV_DZDY_R1O 8.801635273e-07 ; - ! Ground Y slope under tire R1o
+SV_DZDY_R2I -4.43115256e-06 ; - ! Ground Y slope under tire R2i
+SV_DZDY_R2O -4.43115256e-06 ; - ! Ground Y slope under tire R2o
 SV_D_ALPHA_L1I      0 ; - ! Delta Alpha (Fy 0-crossing), tire L1i
 SV_D_ALPHA_L1O      0 ; - ! Delta Alpha (Fy 0-crossing), tire L1o
 SV_D_ALPHA_L2I      0 ; - ! Delta Alpha (Fy 0-crossing), tire L2i
@@ -6501,47 +6707,47 @@ SV_ESC_STATE        0 ; - ! State of ESC engine torque control
 SV_EV_MODE_ON_OFF   0 ; - ! EV mode on/off old
 SV_FBK              0 ; N ! ODE: Instant boost force (above input force)
 SV_FBOOST           0 ; N ! ODE: Delayed boost force {F_boost}
-SV_FS_L1  16086.86715 ; N ! Force from ride spring L1
-SV_FS_L2  6220.442385 ; N ! Force from ride spring L2
-SV_FS_R1  15978.71861 ; N ! Force from ride spring R1
-SV_FS_R2  6280.966322 ; N ! Force from ride spring R2
+SV_FS_L1  17813.67081 ; N ! Force from ride spring L1
+SV_FS_L2  4602.376533 ; N ! Force from ride spring L2
+SV_FS_R1  17167.71338 ; N ! Force from ride spring R1
+SV_FS_R2  4657.763194 ; N ! Force from ride spring R2
 SV_FUEL             0 ; kg ! ODE: Mass of fuel consumed {Mfuel}
-SV_FX_SM_L1 -38.26648114 ; N ! Tire force [sx] component, wheel L1
-SV_FX_SM_L2 804.4624262 ; N ! Tire force [sx] component, wheel L2
-SV_FX_SM_R1 20.35620952 ; N ! Tire force [sx] component, wheel R1
-SV_FX_SM_R2 849.2294751 ; N ! Tire force [sx] component, wheel R2
-SV_FY_SM_L1 -146.8268545 ; N ! Tire force [sy] component, wheel L1
-SV_FY_SM_L2 -5.058760521 ; N ! Tire force [sy] component, wheel L2
-SV_FY_SM_R1 105.725249 ; N ! Tire force [sy] component, wheel R1
-SV_FY_SM_R2 -8.099927983 ; N ! Tire force [sy] component, wheel R2
-SV_FZ_SM_L1 19579.04474 ; N ! Tire force force [sz] component, wheel L1
-SV_FZ_SM_L2 9504.565585 ; N ! Tire force force [sz] component, wheel L2
-SV_FZ_SM_R1 18896.39297 ; N ! Tire force force [sz] component, wheel R1
-SV_FZ_SM_R2 10966.7348 ; N ! Tire force force [sz] component, wheel R2
+SV_FX_SM_L1 -276.2720058 ; N ! Tire force [sx] component, wheel L1
+SV_FX_SM_L2 6198.405773 ; N ! Tire force [sx] component, wheel L2
+SV_FX_SM_R1 -243.4490923 ; N ! Tire force [sx] component, wheel R1
+SV_FX_SM_R2 5595.041583 ; N ! Tire force [sx] component, wheel R2
+SV_FY_SM_L1 -260.0414765 ; N ! Tire force [sy] component, wheel L1
+SV_FY_SM_L2 -47.90801759 ; N ! Tire force [sy] component, wheel L2
+SV_FY_SM_R1 13.98886263 ; N ! Tire force [sy] component, wheel R1
+SV_FY_SM_R2 -52.22646565 ; N ! Tire force [sy] component, wheel R2
+SV_FZ_SM_L1 21488.49254 ; N ! Tire force force [sz] component, wheel L1
+SV_FZ_SM_L2 8655.732939 ; N ! Tire force force [sz] component, wheel L2
+SV_FZ_SM_R1 18976.038 ; N ! Tire force force [sz] component, wheel R1
+SV_FZ_SM_R2 9241.984855 ; N ! Tire force force [sz] component, wheel R2
 SV_F_HYS_RACK_A1    0 ; N ! Friction force at rack
 SV_F_HYS_RACK_A2    0 ; N ! Friction force at rack
 SV_HEV_DRV_OR_BRK   1 ; - ! HEV drive or brake mode
 SV_HYBRID_MODE      1 ; - ! Hybrid/Electric powertrain mode
 SV_IAVERR_GNR       0 ; deg ! ODE: Generator speed control integral error
 SV_IVERR            0 ; m ! ODE: Integral of SC speed error {Vx_IErr}
-SV_JNCR_A1 0.03022584918 ; m/s ! ODE: Jounce rate of axle 1
-SV_JNCR_A2 -0.01901850491 ; m/s ! ODE: Jounce rate of axle 2
-SV_JNC_A1 -0.003072214649 ; m ! ODE: Jounce of axle 1
-SV_JNC_A2 0.006320829032 ; m ! ODE: Jounce of axle 2
+SV_JNCR_A1 -0.007611044838 ; m/s ! ODE: Jounce rate of axle 1
+SV_JNCR_A2 -0.005237437514 ; m/s ! ODE: Jounce rate of axle 2
+SV_JNC_A1 -0.01050305929 ; m ! ODE: Jounce of axle 1
+SV_JNC_A2 0.02966536908 ; m ! ODE: Jounce of axle 2
 SV_LK_WHL_L1        0 ; - ! Lockup state for wheel L1
 SV_LK_WHL_L2        0 ; - ! Lockup state for wheel L2
 SV_LK_WHL_R1        0 ; - ! Lockup state for wheel R1
 SV_LK_WHL_R2        0 ; - ! Lockup state for wheel R2
 SV_LOCKED_CLUTCH_NEUTRAL 1 ; - ! Is clutch locked while in neutral?
 SV_MBOOST           0 ; N-m ! ODE: Delayed boost torque {M_boost}
-SV_MY_BRK_L1 7.000438724 ; N-m ! Spin moment, wheel L1
-SV_MY_BRK_L2 -400.9938744 ; N-m ! Spin moment, wheel L2
-SV_MY_BRK_R1 6.440156081 ; N-m ! Spin moment, wheel R1
-SV_MY_BRK_R2 -441.9942742 ; N-m ! Spin moment, wheel R2
-SV_MZ_WHEEL_L1 12.4788867 ; N-m ! Tire Mz, wheel L1
-SV_MZ_WHEEL_L2 0.5622347293 ; N-m ! Tire Mz, wheel L2
-SV_MZ_WHEEL_R1 -7.036293945 ; N-m ! Tire Mz, wheel R1
-SV_MZ_WHEEL_R2 0.7682488419 ; N-m ! Tire Mz, wheel R2
+SV_MY_BRK_L1 42.03444738 ; N-m ! Spin moment, wheel L1
+SV_MY_BRK_L2 -3137.438302 ; N-m ! Spin moment, wheel L2
+SV_MY_BRK_R1 50.47973553 ; N-m ! Spin moment, wheel R1
+SV_MY_BRK_R2 -2821.646856 ; N-m ! Spin moment, wheel R2
+SV_MZ_WHEEL_L1 10.78319686 ; N-m ! Tire Mz, wheel L1
+SV_MZ_WHEEL_L2 -0.07456052292 ; N-m ! Tire Mz, wheel L2
+SV_MZ_WHEEL_R1 -8.978391855 ; N-m ! Tire Mz, wheel R1
+SV_MZ_WHEEL_R2 -0.03772295816 ; N-m ! Tire Mz, wheel R2
 SV_M_CL2_CAP_RD_DYN 0 ; N-m ! ODE: 2nd Clutch capacity for 2nd drive axle diff
 SV_M_CL_CAP_RD_DYN  0 ; N-m ! ODE: Clutch capacity for 2nd drive axle diff
 SV_M_CL_LR_CAP_DYN  0 ; N-m ! ODE: Left twin clutch capacity for 2nd drive axle diff
@@ -6552,11 +6758,11 @@ SV_M_ENG_ESC_ERROR  0 ; N-m-s ! ODE: Integral of error from ESC request
 SV_M_HYS_COL        0 ; N-m ! Steering column friction
 SV_M_HYS_GEAR_A1    0 ; N-m ! Friction torque for recirculating ball
 SV_M_HYS_GEAR_A2    0 ; N-m ! Friction torque for recirculating ball
-SV_M_KP_L1 -156.240949 ; N-m ! Kingpin moment, wheel L1
+SV_M_KP_L1 -154.2343848 ; N-m ! Kingpin moment, wheel L1
 SV_M_KP_L2          0 ; N-m ! Kingpin moment, wheel L2
-SV_M_KP_R1 126.2858474 ; N-m ! Kingpin moment, wheel R1
+SV_M_KP_R1 63.6991325 ; N-m ! Kingpin moment, wheel R1
 SV_M_KP_R2          0 ; N-m ! Kingpin moment, wheel R2
-SV_M_MOTOR 182.6592195 ; N-m ! ODE: Electric motor torque
+SV_M_MOTOR 1730.832056 ; N-m ! ODE: Electric motor torque
 SV_M_PARK_L1        0 ; N-m ! Kingpin steer park torque, wheel L1
 SV_M_PARK_L2        0 ; N-m ! Kingpin steer park torque, wheel L2
 SV_M_PARK_R1        0 ; N-m ! Kingpin steer park torque, wheel R1
@@ -6567,97 +6773,93 @@ SV_PBK_L1           0 ; MPa ! ODE: Brake actuator pressure for wheel L1
 SV_PBK_L2           0 ; MPa ! ODE: Brake actuator pressure for wheel L2
 SV_PBK_R1           0 ; MPa ! ODE: Brake actuator pressure for wheel R1
 SV_PBK_R2           0 ; MPa ! ODE: Brake actuator pressure for wheel R2
-SV_PITCH -0.2319246461 ; deg ! ODE: Pitch of sprung mass {Pitch}
-SV_PW_AV_HYBRID 300000 ; - ! ODE: Time delayed hybrid/electric system available
-                       ! power
+SV_PITCH -0.3540209685 ; deg ! ODE: Pitch of sprung mass {Pitch}
+SV_PITCH_CAB -0.5523477897 ; deg ! ODE: Pitch of cab relative to sprung mass
+SV_PITCH_FRAME_L 0.04234029355 ; deg ! ODE: Pitch of left frame relative to sprung
+                               ! mass
+SV_PW_AV_HYBRID 389999.9561 ; - ! ODE: Time delayed hybrid/electric system available
+                            ! power
 SV_REGEN_SOC_ON_OFF 1 ; - ! Regenerative SOC condition on/off old
 SV_REGEN_W_ON_OFF   1 ; - ! Regenerative speed condition on/off old
-SV_ROLL 0.04527122472 ; deg ! ODE: Roll (Euler) of sprung mass {Roll_E}
-SV_ROLL_A1 0.03131018429 ; deg ! ODE: Roll of axle 1
-SV_ROLL_A2 -0.008712859423 ; deg ! ODE: Roll of axle 2
-SV_ROT_L1 160.7106248 ; rev ! ODE: Rotation of wheel L1
-SV_ROT_L2 162.0630502 ; rev ! ODE: Rotation of wheel L2
-SV_ROT_LK_L1 3.980082161e-07 ; rev ! Rotation reference of wheel L1 in "locked" mode
-SV_ROT_LK_L2 0.00043693513 ; rev ! Rotation reference of wheel L2 in "locked" mode
-SV_ROT_LK_R1 1.35034025e-09 ; rev ! Rotation reference of wheel R1 in "locked" mode
-SV_ROT_LK_R2 0.0003651084564 ; rev ! Rotation reference of wheel R2 in "locked" mode
-SV_ROT_R1 160.7106462 ; rev ! ODE: Rotation of wheel R1
-SV_ROT_R2  162.062977 ; rev ! ODE: Rotation of wheel R2
-SV_ROT_SHAFT_2 810.3150682 ; rev ! ODE: 2nd drive axle diff input shaft rotation
-SV_ROT_SHAFT_L_D2 162.0630502 ; rev ! ODE: Diff2 Left (first) output shaft rotation
-SV_ROT_SHAFT_R_D2 162.062977 ; rev ! ODE: Diff2 Right (second) output shaft rotation
+SV_ROLL -0.3257608346 ; deg ! ODE: Roll (Euler) of sprung mass {Roll_E}
+SV_ROLL_A1 0.2588499252 ; deg ! ODE: Roll of axle 1
+SV_ROLL_A2 0.3504001416 ; deg ! ODE: Roll of axle 2
+SV_ROLL_CAB -0.3224985211 ; deg ! ODE: Roll of cab after pitch
+SV_ROT_L1 57.28234812 ; rev ! ODE: Rotation of wheel L1
+SV_ROT_L2 142.6770048 ; rev ! ODE: Rotation of wheel L2
+SV_ROT_LK_L1 -2.313615519e-06 ; rev ! Rotation reference of wheel L1 in "locked"
+                              ! mode
+SV_ROT_LK_L2        0 ; rev ! Rotation reference of wheel L2 in "locked" mode
+SV_ROT_LK_R1 -2.518621656e-08 ; rev ! Rotation reference of wheel R1 in "locked"
+                              ! mode
+SV_ROT_LK_R2 0.0003581792177 ; rev ! Rotation reference of wheel R2 in "locked" mode
+SV_ROT_R1 57.28021398 ; rev ! ODE: Rotation of wheel R1
+SV_ROT_R2  66.9809792 ; rev ! ODE: Rotation of wheel R2
+SV_ROT_SHAFT_2 410.9296486 ; rev ! ODE: 2nd drive axle diff input shaft rotation
+SV_ROT_SHAFT_L_D2 142.6770048 ; rev ! ODE: Diff2 Left (first) output shaft rotation
+SV_ROT_SHAFT_R_D2 66.9809792 ; rev ! ODE: Diff2 Right (second) output shaft rotation
 SV_ROT_TC           0 ; rev ! ODE: Torque coupling output shaft rotation
-SV_ROT_TR_OUT 810.3150682 ; rev ! ODE: Transmission output shaft rotation
+SV_ROT_TR_OUT 410.9296486 ; rev ! ODE: Transmission output shaft rotation
 SV_R_GEAR_TOTAL_SC  0 ; - ! Driveline total gear ratio for speed controller
-SV_R_KP_GND_L1 -1.012035523 ; - ! Kingpin steer / ground steer (-1 for vertical KP)
+SV_R_KP_GND_L1 -1.011995851 ; - ! Kingpin steer / ground steer (-1 for vertical KP)
 SV_R_KP_GND_L2      0 ; - ! Kingpin steer / ground steer (-1 for vertical KP)
-SV_R_KP_GND_R1 -1.012037038 ; - ! Kingpin steer / ground steer (-1 for vertical KP)
+SV_R_KP_GND_R1 -1.012015489 ; - ! Kingpin steer / ground steer (-1 for vertical KP)
 SV_R_KP_GND_R2      0 ; - ! Kingpin steer / ground steer (-1 for vertical KP)
-SV_R_L1I 0.5000218703 ; m ! Deflected radius for tire L1i
-SV_R_L1O 0.5000218703 ; m ! Deflected radius for tire L1o
-SV_R_L2I 0.5150477545 ; m ! Deflected radius for tire L2i
-SV_R_L2O 0.5152477937 ; m ! Deflected radius for tire L2o
-SV_R_R1I  0.500718259 ; m ! Deflected radius for tire R1i
-SV_R_R1O  0.500718259 ; m ! Deflected radius for tire R1o
-SV_R_R2I 0.5145030431 ; m ! Deflected radius for tire R2i
-SV_R_R2O 0.5143030051 ; m ! Deflected radius for tire R2o
-SV_SLIP_LAT_L1I 0.0008228201134 ; - ! ODE: Lagged tan of lateral slip, tire L1i
+SV_R_L1I 0.4980712107 ; m ! Deflected radius for tire L1i
+SV_R_L1O 0.4980712107 ; m ! Deflected radius for tire L1o
+SV_R_L2I 0.5154808335 ; m ! Deflected radius for tire L2i
+SV_R_L2O 0.5156111944 ; m ! Deflected radius for tire L2o
+SV_R_R1I 0.5006368601 ; m ! Deflected radius for tire R1i
+SV_R_R1O 0.5006368601 ; m ! Deflected radius for tire R1o
+SV_R_R2I 0.5153119808 ; m ! Deflected radius for tire R2i
+SV_R_R2O 0.5151816188 ; m ! Deflected radius for tire R2o
+SV_SLIP_LAT_L1I 0.00078029188 ; - ! ODE: Lagged tan of lateral slip, tire L1i
 SV_SLIP_LAT_L1O     0 ; - ! ODE: Lagged tan of lateral slip, tire L1o
-SV_SLIP_LAT_L2I 6.654560298e-05 ; - ! ODE: Lagged tan of lateral slip, tire L2i
-SV_SLIP_LAT_L2O 6.551860964e-05 ; - ! ODE: Lagged tan of lateral slip, tire L2o
-SV_SLIP_LAT_R1I -0.0005740190134 ; - ! ODE: Lagged tan of lateral slip, tire R1i
+SV_SLIP_LAT_L2I -1.241824698e-05 ; - ! ODE: Lagged tan of lateral slip, tire L2i
+SV_SLIP_LAT_L2O -1.183673161e-05 ; - ! ODE: Lagged tan of lateral slip, tire L2o
+SV_SLIP_LAT_R1I -0.0005611313633 ; - ! ODE: Lagged tan of lateral slip, tire R1i
 SV_SLIP_LAT_R1O     0 ; - ! ODE: Lagged tan of lateral slip, tire R1o
-SV_SLIP_LAT_R2I 8.717908403e-05 ; - ! ODE: Lagged tan of lateral slip, tire R2i
-SV_SLIP_LAT_R2O 8.756449691e-05 ; - ! ODE: Lagged tan of lateral slip, tire R2o
-SV_SLIP_LONG_L1I -0.0005746899795 ; - ! ODE: Lagged long. slip, tire L1i
+SV_SLIP_LAT_R2I -1.632517537e-06 ; - ! ODE: Lagged tan of lateral slip, tire R2i
+SV_SLIP_LAT_R2O -2.06542097e-06 ; - ! ODE: Lagged tan of lateral slip, tire R2o
+SV_SLIP_LONG_L1I -0.0009417113544 ; - ! ODE: Lagged long. slip, tire L1i
 SV_SLIP_LONG_L1O    0 ; - ! ODE: Lagged long. slip, tire L1o
-SV_SLIP_LONG_L2I 0.006225108923 ; - ! ODE: Lagged long. slip, tire L2i
-SV_SLIP_LONG_L2O 0.006218799971 ; - ! ODE: Lagged long. slip, tire L2o
-SV_SLIP_LONG_R1I -0.0005605640869 ; - ! ODE: Lagged long. slip, tire R1i
+SV_SLIP_LONG_L2I 0.06334544354 ; - ! ODE: Lagged long. slip, tire L2i
+SV_SLIP_LONG_L2O 0.06334490931 ; - ! ODE: Lagged long. slip, tire L2o
+SV_SLIP_LONG_R1I -0.001049452213 ; - ! ODE: Lagged long. slip, tire R1i
 SV_SLIP_LONG_R1O    0 ; - ! ODE: Lagged long. slip, tire R1o
-SV_SLIP_LONG_R2I 0.005924696541 ; - ! ODE: Lagged long. slip, tire R2i
-SV_SLIP_LONG_R2O 0.005930379558 ; - ! ODE: Lagged long. slip, tire R2o
-SV_SO_DIST 515.2746677 ; m ! ODE: Distance  used for tire "wandering profiles"
+SV_SLIP_LONG_R2I 0.05173212369 ; - ! ODE: Lagged long. slip, tire R2i
+SV_SLIP_LONG_R2O 0.05173234635 ; - ! ODE: Lagged long. slip, tire R2o
+SV_SO_DIST 183.7448625 ; m ! ODE: Distance  used for tire "wandering profiles"
                        ! {Sta_Prof}
 SV_SPEED_DVDS       0 ; - ! dVdS derivative for speed control
 SV_SPEED_PREVIEW_SSTART 0 ; m ! Start station in path preview array
 SV_SPEED_PREVIEW_V_TARGET 0 ; km/h ! Initial target speed in preview array
-SV_STATION 515.2669877 ; m ! Station of vehicle on driver path PATH_ID_DM {Station}
-SV_STA_ROAD 515.2669877 ; m ! Vehicle station on road CURRENT_ROAD_ID {Sta_Road}
-SV_STR_DM -0.02614419358 ; deg ! Road-wheel steer from driver model
-SV_STR_DM_OLD -0.02614419358 ; deg ! Road-wheel steer from driver model (prev. time
+SV_STATION 183.739925 ; m ! Station of vehicle on driver path PATH_ID_DM {Station}
+SV_STA_ROAD 183.739925 ; m ! Vehicle station on road CURRENT_ROAD_ID {Sta_Road}
+SV_STR_DM -0.01717694034 ; deg ! Road-wheel steer from driver model
+SV_STR_DM_OLD -0.01717694034 ; deg ! Road-wheel steer from driver model (prev. time
                              ! step)
-SV_STR_IN_DGR_A1 -0.01722574968 ; - ! ODE: Steering gear input rate, axle 1
+SV_STR_IN_DGR_A1 -0.04036776805 ; - ! ODE: Steering gear input rate, axle 1
 SV_STR_IN_DGR_A2    0 ; - ! ODE: Steering gear input rate, axle 2
-SV_STR_IN_GR_A1 -0.01141151407 ; - ! ODE: Steering gear input position, axle 1
-                               ! {A_StrIn1}
+SV_STR_IN_GR_A1 -0.007496277946 ; - ! ODE: Steering gear input position, axle 1
+                                ! {A_StrIn1}
 SV_STR_IN_GR_A2     0 ; - ! ODE: Steering gear input position, axle 2 {A_StrIn2}
-SV_STR_KP_L1 -0.04177273776 ; deg ! Kingpin steer angle, wheel L1
-SV_STR_KP_L1_OLD -0.04177273776 ; deg ! Kingpin steer angle, wheel L1 (previous time
+SV_STR_KP_L1 -0.06703384319 ; deg ! Kingpin steer angle, wheel L1
+SV_STR_KP_L1_OLD -0.06703384319 ; deg ! Kingpin steer angle, wheel L1 (previous time
                                 ! step)
 SV_STR_KP_L2_OLD    0 ; deg ! Kingpin steer angle, wheel L2 (previous time step)
-SV_STR_KP_R1 0.03485325575 ; deg ! Kingpin steer angle, wheel R1
-SV_STR_KP_R1_OLD 0.03485325575 ; deg ! Kingpin steer angle, wheel R1 (previous time
-                               ! step)
+SV_STR_KP_R1 -0.02842657656 ; deg ! Kingpin steer angle, wheel R1
+SV_STR_KP_R1_OLD -0.02842657656 ; deg ! Kingpin steer angle, wheel R1 (previous time
+                                ! step)
 SV_STR_KP_R2_OLD    0 ; deg ! Kingpin steer angle, wheel R2 (previous time step)
-SV_STR_OUT_GR_A1 -0.0004562873546 ; - ! Steering gear output
+SV_STR_OUT_GR_A1 -0.0002997622818 ; - ! Steering gear output
 SV_STR_OUT_GR_A2    0 ; - ! Steering gear output
-SV_SWA  -0.6538315941 ; deg ! ODE: Steering wheel angle
-SV_SWA_DM -0.6535834915 ; deg ! Steering wheel angle from DM
+SV_SWA  -0.4295050884 ; deg ! ODE: Steering wheel angle
+SV_SWA_DM -0.42937784 ; deg ! Steering wheel angle from DM
 SV_SWA_OL           0 ; deg ! Steering wheel angle from open loop control
-SV_SWA_OLD -0.6535834915 ; deg ! Steering wheel angle (previous time step)
-SV_S_RDO_1          0 ; m ! Station of object 1 on road path {S_RdO_1}
-SV_S_RDO_10         0 ; m ! Station of object 10 on road path {S_RdO_10}
-SV_S_RDO_2          0 ; m ! Station of object 2 on road path {S_RdO_2}
-SV_S_RDO_3          0 ; m ! Station of object 3 on road path {S_RdO_3}
-SV_S_RDO_4          0 ; m ! Station of object 4 on road path {S_RdO_4}
-SV_S_RDO_5          0 ; m ! Station of object 5 on road path {S_RdO_5}
-SV_S_RDO_6          0 ; m ! Station of object 6 on road path {S_RdO_6}
-SV_S_RDO_7          0 ; m ! Station of object 7 on road path {S_RdO_7}
-SV_S_RDO_8          0 ; m ! Station of object 8 on road path {S_RdO_8}
-SV_S_RDO_9          0 ; m ! Station of object 9 on road path {S_RdO_9}
-SV_THROTTLE       0.1 ; - ! ODE: Time delayed engine throttle
-SV_THR_REQ        0.1 ; - ! Requested Throttle
+SV_SWA_OLD -0.42937784 ; deg ! Steering wheel angle (previous time step)
+SV_THROTTLE         1 ; - ! ODE: Time delayed engine throttle
+SV_THR_REQ          1 ; - ! Requested Throttle
 SV_TROT_L1          0 ; C ! ODE: Brake rotor L1 temperature {T_Rtr_L1}
 SV_TROT_L2          0 ; C ! ODE: Brake rotor L2 temperature {T_Rtr_L2}
 SV_TROT_R1          0 ; C ! ODE: Brake rotor R1 temperature {T_Rtr_R1}
@@ -6670,24 +6872,33 @@ SV_VBK_L2           0 ; mm3 ! ODE: Brake caliper L2 volume
 SV_VBK_R1           0 ; mm3 ! ODE: Brake caliper R1 volume
 SV_VBK_R2           0 ; mm3 ! ODE: Brake caliper R2 volume
 SV_VERR_OLD         0 ; km/h ! Speed controller error at previous time step
-SV_VXS    59.99986896 ; km/h ! ODE: Body-X speed of laden sprung-mass CG
-SV_VYS -0.001910463579 ; m/s ! ODE: Body-Y speed of laden sprung-mass CG
-SV_VZS -0.07303296684 ; m/s ! ODE: Body-Z speed of laden sprung-mass CG
-SV_XO     515.2753209 ; m ! ODE: Global X coord. of sprung-mass origin {Xo}
-SV_X_GND  512.7670082 ; m ! X coord, ground, vehicle aero ref. pt
-SV_YAW 1.530161643e-05 ; deg ! ODE: Yaw of sprung mass {Yaw}
-SV_YO   0.03039157731 ; m ! ODE: Global Y coord. of sprung-mass origin {Yo}
-SV_Y_GND 0.03039061449 ; m ! Y coord, ground, vehicle aero ref. pt
-SV_ZO -0.006756517188 ; m ! ODE: Global Z coord. of sprung-mass origin {Zo}
-SV_Z_CTC_L1I 0.001472352669 ; m ! Center of tire contact L1i {Zgnd_L1i}
-SV_Z_CTC_L1O 0.001472352669 ; m ! Center of tire contact L1o {Zgnd_L1o}
-SV_Z_CTC_L2I -0.0007584235936 ; m ! Center of tire contact L2i {Zgnd_L2i}
-SV_Z_CTC_L2O -0.0007584235936 ; m ! Center of tire contact L2o {Zgnd_L2o}
-SV_Z_CTC_R1I -0.00188644788 ; m ! Center of tire contact R1i {Zgnd_R1i}
-SV_Z_CTC_R1O -0.00188644788 ; m ! Center of tire contact R1o {Zgnd_R1o}
-SV_Z_CTC_R2I -0.001219 ; m ! Center of tire contact R2i {Zgnd_R2i}
-SV_Z_CTC_R2O -0.001219 ; m ! Center of tire contact R2o {Zgnd_R2o}
+SV_VXS    100.0051572 ; km/h ! ODE: Body-X speed of laden sprung-mass CG
+SV_VYS -0.000344090456 ; m/s ! ODE: Body-Y speed of laden sprung-mass CG
+SV_VZS  -0.1687009673 ; m/s ! ODE: Body-Z speed of laden sprung-mass CG
+SV_VZ_CAB 0.0002150993757 ; m/s ! ODE: Z translation speed of cab after roll
+SV_XO     183.7538124 ; m ! ODE: Global X coord. of sprung-mass origin {Xo}
+SV_X_GND  181.2399732 ; m ! X coord, ground, vehicle aero ref. pt
+SV_YAW  0.03516011811 ; deg ! ODE: Yaw of sprung mass {Yaw}
+SV_YO    0.0366194617 ; m ! ODE: Global Y coord. of sprung-mass origin {Yo}
+SV_Y_GND 0.03507814406 ; m ! Y coord, ground, vehicle aero ref. pt
+SV_ZO -0.0003126887166 ; m ! ODE: Global Z coord. of sprung-mass origin {Zo}
+SV_Z_CAB 8.719513514e-05 ; m ! ODE: Z translation of cab after roll
+SV_Z_CTC_L1I -8.488312515e-05 ; m ! Center of tire contact L1i {Zgnd_L1i}
+SV_Z_CTC_L1O -8.488312515e-05 ; m ! Center of tire contact L1o {Zgnd_L1o}
+SV_Z_CTC_L2I 0.0003089198196 ; m ! Center of tire contact L2i {Zgnd_L2i}
+SV_Z_CTC_L2O 0.0003089198196 ; m ! Center of tire contact L2o {Zgnd_L2o}
+SV_Z_CTC_R1I -0.000238046279 ; m ! Center of tire contact R1i {Zgnd_R1i}
+SV_Z_CTC_R1O -0.000238046279 ; m ! Center of tire contact R1o {Zgnd_R1o}
+SV_Z_CTC_R2I -0.0001706771444 ; m ! Center of tire contact R2i {Zgnd_R2i}
+SV_Z_CTC_R2O -0.0001706771444 ; m ! Center of tire contact R2o {Zgnd_R2o}
 SV_Z_GND            0 ; m ! Z coord, ground, vehicle aero ref. pt
+
+!------------------------------------------------------------------------------------
+! EXPORTED VARIABLES
+!------------------------------------------------------------------------------------
+EXPORT THROTTLE     1 ! #1. Normalized throttle at Pedal (-)
+EXPORT VX_S1 99.98778929 ! #2. Longitudinal speed, sensor 1 (km/h)
+EXPORT AX_S1 0.1495906065 ! #3. Longitudinal accel, sensor 1 (g)
 
 
 END
